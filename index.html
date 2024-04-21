@@ -1,0 +1,6040 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+
+	<title>CONSOLE</title>
+ 
+<style>
+
+body { 
+ font-family: Verdana, sans-serif;
+ background: var(--my-background-color);
+}
+
+f {
+ color: red;
+}
+
+.FNA {
+  margin-top:15px;
+}
+
+.textareamain {
+  padding: 10px;
+  left: 0px;
+  top: 0px;
+  width: 330px;
+  height: 125px;  
+} 
+
+.textspace {
+  font-size: 14px;
+  padding: 10px;
+  top: 545px;
+  left: 0;
+  width: 400px;
+  height: 375px;
+}
+
+
+.hideME {
+  outline: none;
+  left: 10px;
+  top: 10px;
+  width: 1px;
+  height: 1px;
+  z-index: -1;
+  display: inline-block;
+}
+
+#NUMBERS {
+  text-align: center;
+  position: absolute;
+  display: inline-block;
+  color: black;
+  font-size: 18px; 
+  text-shadow: 
+    1px 1px var(--glow-outline-color), 
+   -1px -1px var(--glow-outline-color), 
+   -1px 1px var(--glow-outline-color),  
+    1px -1px var(--glow-outline-color);
+  top: 555px;
+  left: 665px;
+}
+
+
+#div6 {
+  font-size: 16px; 
+  top: 60px;
+  left: 420px;
+  position: absolute;
+  display: none;
+  z-index: 5;
+  padding: 15px;
+  margin: 10px;
+}
+
+.astext {
+  font-family: arial, sans-serif;
+  font-size: 15px;
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  text-decoration:none;
+  box-shadow: none;
+  text-shadow: none;
+}
+
+.astext:active {
+  box-shadow: none;
+  text-shadow: 1px 1px 2px red;
+}
+
+#Snippings {
+  padding: 10px;
+  width: 320px;
+  height: 160px;
+  top: -15px;
+  left: 135px;
+}
+
+.IBOBC {
+  display: inline-block;
+  position: absolute;
+  margin: 0px; 
+  font-size: 14px; 
+} 
+
+.RFinboundDIV {
+  display: inline-block;
+  position: absolute;
+  left: 350px;
+  top: 5px;
+}
+
+.CHoutboundDIV {
+  display: inline-block;
+  position: absolute;
+  left: 350px;
+  top: 5px;
+}
+
+#RFIBDH {
+  height: 65px;
+  width: 120px;
+  top: 0px;
+  left: 130px;
+}
+
+#PNLCBTN {
+  height: 65px;
+  width: 120px;
+  top: 0px;
+  left: 260px;
+}
+
+#TOTALBTN {
+  height: 65px;
+  width: 120px;
+  top: 80px;
+  left: 130px;
+}
+
+#RFAUTHBTN {
+  height: 65px;
+  width: 120px;
+  top: 80px;
+  left: 260px;
+}
+
+#RFIBND {
+  height: 65px;
+  width: 120px; 
+  top: 0px;
+  left: 130px;
+}
+
+#RFIBNE {
+  height: 65px;
+  width: 120px;
+  top: 0px;
+  left: 260px;
+}
+
+#RFIBNF {
+  height: 65px;
+  width: 120px;
+  top: 80px;
+  left: 130px;
+}
+
+#RFIBNV {
+  height: 65px;
+  width: 120px;
+  top: 80px;
+  left: 260px;
+}
+
+#TGAFOBTN {
+  display: inline-block;
+  position: absolute;
+  height: 40px;
+  width: 100px;
+  top: 0px;
+  left: 135px;
+}
+
+#TGAFSBTN {
+  height: 40px;
+  width: 100px;
+  top: 52px;
+  left: 135px;
+}
+
+#TGAFBBTN {
+  height: 40px;
+  width: 100px;
+  top: 105px;
+  left: 135px;
+}
+
+#NALVM {
+  top: 20px;
+  left: 270px;
+  height: 50px;
+  width: 120px;
+}
+
+#NANVM {
+  top: 80px;
+  left: 270px;
+  height: 50px;
+  width: 120px;
+}
+
+#TGAFOABTN {
+  height: 40px;
+  width: 120px;
+  top: 0px;
+  left: 135px;
+}
+
+#TGAFODBTN {
+  height: 40px;
+  width: 120px;
+  top: 105px;
+  left: 135px;
+}
+
+#TGAFOCBTN {
+  height: 50px;
+  width: 120px;
+  top: 48px;
+  left: 135px;
+}
+
+#TGAFSABTN {
+  height: 40px;
+  width: 120px;
+  top: 0px;
+  left: 135px;
+}
+
+#TGAFSDBTN {
+  height: 40px;
+  width: 120px;
+  top: 105px;
+  left: 135px;
+}
+
+#TGAFSCBTN {
+  height: 50px;
+  width: 120px;
+  top: 48px;
+  left: 135px;
+}
+
+#TGAFOSABTN {
+  height: 65px;
+  width: 120px;
+  top: 0px;
+  left: 135px;
+}
+
+#TGAFOSDSBTN {
+  height: 65px;
+  width: 120px;
+  font-size: 12px;
+  top: 0px;
+  left: 270px;
+}
+
+#TGAFOSDBBTN {
+  height: 65px;
+  width: 120px;
+  top: 80px;
+  left: 135px;
+}
+
+#TGAFOSCBTN {
+  height: 65px;
+  width: 120px;
+  top: 80px;
+  left: 270px;
+}
+
+#TGAFBTN {
+  height: 65px;
+  width: 120px;
+  top: 80px;
+  left: 0px;
+}
+
+#RFIBBTN {
+  letter-spacing: 2px;
+  height: 65px;
+  width: 120px;
+  top: 0px;
+  left: 0px;
+  font-size: 17px; 
+}
+
+#RESET {
+  top: 160px;
+  left: -5px;
+  width: 60px;
+  height: 35px;
+  font-size: 11px; 
+}
+
+#COPY {
+  top: 160px;
+  left: 65px;
+  width: 60px;
+  height: 35px;
+  font-size: 11px; 
+}
+
+.A{
+  position: absolute;
+  box-sizing: border-box;
+}
+
+#CopyZipBTN {
+  top: 61px;
+  left: 20px;
+  z-index: 2;
+}
+
+#CopyMileBTN {
+  top: 81px;
+  left: 20px;
+  z-index: 2;
+}
+
+#CopyPaymentBTN{
+  top: 42px;
+  left: 20px;
+  z-index: 2;
+}
+
+#custBtns {
+  position: absolute;
+  display: inline-block;
+  top: 10px;
+  left: 10px;
+}
+
+#infoDiv1 {
+  font-size: 14px;
+  top: 150px;
+  left: 200px;
+  height: 450px;
+  width: 530px;
+  position: absolute;
+  display: inline-block;
+  border-radius: 5px;
+  padding: 10px;
+  z-index: 5;
+}
+
+#infoDiv2 {
+  font-size: 14px;
+  top: 150px;
+  left: 200px;
+  height: 450px;
+  width: 530px;
+  position: absolute;
+  display: inline-block;
+  border-radius: 5px;
+  padding: 10px;
+  z-index: 5;
+}
+
+#infoDone {
+  width: 120px;
+  height: 60px;
+  bottom: 15px;
+  right:  15px;
+}
+
+#infoDone2 {
+  width: 120px;
+  height: 60px;
+  bottom: 15px;
+  right:  15px;
+}
+
+#infoCancel {
+  width: 80px;
+  height: 40px;
+  bottom: 15px;
+  right:  145px;
+}
+
+#infoCancel2 {
+  width: 80px;
+  height: 40px;
+  bottom: 15px;
+  right:  145px;
+}
+
+.custom0 {
+  position: absolute;
+  display: inline-block;
+  top: 10px;
+  left: 10px;
+  height: 60px;
+  width: 150px;
+}
+
+#custBtn0 {
+  position: absolute;
+  display: inline-block;
+}
+
+#buttonSpot {
+  position:absolute;
+  display:inline-block;
+  bottom:100px;
+  right: 250px;
+}
+
+#BtnDisplay {
+  top: 180px;
+  left: 80px;
+  padding: 10px;
+}
+
+#BtnContent {
+  top: 230px;
+  left: 80px;
+  padding: 10px;
+}
+
+#radioLine {
+  position:absolute;
+  display:inline-block;
+  left: 100px;
+}
+
+
+.custom0 {
+  position: ABSOLUTE;
+  display: inline-block;
+}
+
+#picR {
+  font-size: 16px;
+  width: 130px;
+  height: 70px;
+  left: 0px;
+  top: 0px;
+}
+
+#recR {
+  font-size: 16px;
+  width: 130px;
+  height: 70px;
+  left: 0px;
+  top: 90px;
+}
+
+#noansR {
+  font-size: 15px;
+  width: 130px;
+  height: 70px;
+  left: 0px;
+  top: 180px;
+}
+
+#R6 {
+  font-size: 15px;
+  width: 130px;
+  height: 70px;
+  left: 145px;
+  top: 0px;
+}
+
+#R7 {
+  font-size: 15px;
+  width: 130px;
+  height: 70px;
+  left: 145px;
+  top: 90px;
+}
+
+#T0{
+  font-size: 15px;
+  width: 130px;
+  height: 70px;
+  left: 145px;
+  top: 180px;
+}
+
+#statNote {
+  position: absolute;
+  display: inline-block;
+  padding: 15px;
+  z-index: 5;
+  font-size: 14px;
+  text-shadow: 0px 0px 1px;
+  top: 100px;
+  left: 55px;
+  width: 800px;
+  height: 600px;
+}
+
+#statusNote {
+  font-size: 22px;
+  top: 110px;
+  left: 380px;
+  width: 150px;
+  height: 80px;
+}
+
+#submitStat {
+  height: 60px;
+  width: 140px;
+  bottom: 15px;
+  right: 15px;
+}
+
+#cancelStat {
+  height: 40px;
+  width: 80px;
+  bottom: 85px;
+  right: 15px;
+}
+
+#transferTemplate {
+  position: absolute;
+  display: inline-block;
+  padding: 30px;
+  z-index: 5;
+  font-size: 14px;
+  text-shadow: 0px 0px 1px;
+  top: 20px;
+  left: 35px;
+  width:820px;
+  height: 860px;
+}
+
+#submitTemp {
+  position: absolute;
+  display: inline-block;
+  height: 60px;
+  width: 140px;
+  bottom: 15px;
+  right: 15px;
+}
+
+#cancelPT {
+  position: absolute;
+  display: inline-block;
+  height: 40px;
+  width: 80px;
+  bottom: 85px;
+  right: 15px;
+}
+
+#T1 {
+  font-size: 15px;
+  width: 240px;
+  height: 50px;
+  left: 0px;
+  top: 170px;
+}
+
+#T2 {
+  font-size: 15px;
+  width: 240px;
+  height: 50px;
+  left: 0px;
+  top: 230px;
+}
+
+#T3 {
+  font-size: 15px;
+  width: 240px;
+  height: 50px;
+  left: 0px;
+  top: 290px;
+}
+
+#T4 {
+  font-size: 15px;
+  width: 240px;
+  height: 50px;
+  left: 0px;
+  top: 350px;
+}
+
+#custBtn0 {
+  display: none;
+}
+
+#custBtn1 {
+  display: none;
+}
+
+#custBtn2 {
+  display: none;
+}
+
+#custBtn3 {
+  display: none;
+}
+
+#custBtn4 {
+  display: none;
+}
+
+#custBtn5 {
+  display: none;
+}
+
+#custBtn6 {
+  display: none;
+}
+
+#custBtn7 {
+  display: none;
+}
+
+#custBtn8 {
+  display: none;
+}
+
+#custBtn9 {
+  display: none;
+}
+
+.Submitbtn {
+  display: inline-block;
+  height: 60px;
+  width: 140px;
+  margin-top:15px;
+}
+
+.Cancelbtn {
+  display: inline-block;
+  height: 40px;
+  width: 80px;
+  margin-left: 150px;
+  margin-top:15px;
+}
+
+#newAuthstyle {
+  position: absolute;
+  display: inline-block;
+  padding: 15px;
+  top: 150px;
+  left: 40px;
+  height: 420px;
+  width: 830px;
+  z-index: 6;
+}
+
+#authParts {
+  width: 100%;
+}
+
+#authRequests {
+  width: 100%;
+}
+
+#authOopcs {
+  width: 100%;
+}
+
+#newAuthstarter {
+  position: absolute;
+  display: inline-block;
+  font-size: 22px;
+  height: 80px;
+  width: 150px;
+  top: 15px;
+  left: 380px;
+}
+
+input.MCheckbox {
+  width: 14px;
+  height: 14px;
+}
+
+input.largerCheckbox {
+  width: 18px;
+  height: 18px;
+}
+
+input.largerRadio {
+  width: 18px;
+  height: 18px;
+  border-radius: 9px
+}
+
+.TheGang {
+  left: 15px;
+  top: 140px;
+  display: inline-block;
+  position: absolute;
+  color: #324350;
+  overflow: visible;
+}
+
+#LOCK1 {
+  font-weight: 700;
+  font-size: 12px;
+  width: 180px;
+  height: 20px;
+  left: 0px;
+  top: 20px;
+  transition: all 0.4s ease;
+  z-index: 5;
+  color: var(--glow-txt-color);
+  text-shadow: 
+    1px 1px 1px var(--glow-outline-color), 
+   -1px -1px 1px var(--glow-outline-color), 
+   -1px 1px 1px var(--glow-outline-color),  
+    1px -1px 1px var(--glow-outline-color), 
+    0px 0px 8px var(--my-glow-color), 
+    0px 0px 11px var(--my-glow-color), 
+    0px 0px 14px var(--my-glow-color), 
+    0px 0px 17px var(--my-glow-color), 
+    0px 0px 20px var(--my-glow-color), 
+    0px 0px 23px var(--my-glow-color), 
+    0px 0px 26px var(--my-glow-color);
+  overflow: visible;
+}
+
+#appearance {
+  font-weight: 700;
+  font-size: 12px;
+  left: 0px;
+  top: 20px;
+  width: 180px;
+  height: 20px;
+  transition: all .1s ease;
+  color: var(--my-background-color);
+  overflow: visible;
+}
+
+#BtnBuilder {
+  font-weight: 700;
+  font-size: 12px;
+  left: 0px;
+  top: 20px;
+  width: 180px;
+  height: 20px;
+  transition: all .2s ease;
+  color: var(--my-background-color);
+  overflow: visible;
+}
+
+#buttonMaker {
+  font-weight: 700;
+  font-size: 12px;
+  left: 0px;
+  top: 20px;
+  width: 180px;
+  height: 20px;
+  transition: all .3s ease;
+  color: var(--my-background-color);
+  overflow: visible;
+}
+
+#PHONE {
+  font-weight: 700;
+  font-size: 12px;
+  left: 0px;
+  top: 20px;
+  width: 180px;
+  height: 20px;
+  transition: all .4s ease;
+  color: var(--my-background-color);
+  overflow: visible;
+}
+
+.intakeboxes {
+  font-size: 14px;
+  overflow: hidden;
+  padding: 1px;
+  padding-left: 10px;
+  width: 120px;
+  height: 30px;
+  line-height: 30px;
+  resize: none;
+}
+
+#partname7 {
+  top: -260px;
+  left: -10px;
+  width: 195px;
+  display: none;
+}
+
+#partname6 {
+  top: -220px;
+  left: -10px;
+  width: 195px;
+  display: none;
+}
+
+#partname5 {
+  top: -180px;
+  left: -10px;
+  width: 195px;
+  display: none;
+}
+
+#partname4 {
+  top: -140px;
+  left: -10px;
+  width: 195px;
+  display: none;
+}
+
+#partname3 {
+  top: -100px;
+  left: -10px;
+  width: 195px;
+  display: none;
+}
+
+#partname2 {
+  top: -60px;
+  left: -10px;
+  width: 195px;
+  display: none;
+}
+
+#partname1 {
+  top: -10px;
+  left: -10px;
+  width: 200px;
+}
+
+#partnum {
+ top: -10px; 
+ left: 205px;
+}
+
+#rfprice {
+  top: 30px;
+  left: -10px;
+}
+
+#msrp {
+ top: 70px;
+ left: -10px;
+}
+
+.senditnow {
+  font-size: 15px;
+  WIDTH: 65px;
+  height: 70px;
+}
+
+#SENDPART {
+  letter-spacing: .06em;
+  top: 40px;
+  left: 140px;
+}
+
+#SENDLABOR {
+  top: 40px;
+  left: 210px;
+}
+
+#SENDDIAG {
+  top: 40px;
+  left: 280px;
+}
+
+#DJKahlid {
+ top: -90px;
+ left: 280px;
+}
+
+#MTVsNEXT {
+ top: -90px;
+ left: 210px;
+}
+
+.ERASEME {
+ top: 65px;
+ left: 245px;
+ WIDTH: 30px;
+ height: 60px;
+}
+
+#R2 {
+  font-size: 17px;
+  width: 120px;
+  height: 50px;
+  left: 40px;
+  top: -40px;
+}
+
+#R15 {
+  font-size: 17px;
+  top: 275px;
+  left: 40px;
+  WIDTH: 120px;
+  height: 50px;
+}
+
+#R8 {
+  font-size: 18px; 
+  top: 20px;
+  left: 10px;
+  width: 80px;
+  height: 50px;
+}
+
+#R9 {
+  font-size: 18px;
+  top: 80px;
+  left: 10px;
+  width: 80px;
+  height: 50px;
+}
+
+#R10 {
+  font-size: 14px;
+  top: 20px;
+  left: 100px;
+  width: 80px;
+  height: 50px;
+}
+
+#R11 {
+  font-size: 19px;
+  top: 80px;
+  left: 100px;
+  width: 80px;
+  height: 50px;
+}
+
+#R12 {
+  font-size: 17px;
+  top: 155px;
+  left: 100px;
+  width: 80px;
+  height: 50px;
+}
+
+#R13 {
+  font-size: 17px;
+  top: 215px;
+  left: 100px;
+  width: 80px;
+  height: 50px;
+}
+
+#fluid {
+  font-size: 24px;
+  top: 90px;
+  left: 190px;
+  text-shadow: 
+    1px 1px 1px var(--glow-outline-color), 
+   -1px -1px 1px var(--glow-outline-color), 
+   -1px 1px 1px var(--glow-outline-color),  
+    1px -1px 1px var(--glow-outline-color); 
+}
+
+#R16 {
+  font-size: 17px; 
+  top: 155px;
+  left: 10px;
+  width: 80px;
+  height: 50px;
+}
+
+#R17 {
+  font-size: 17px;
+  top: 215px;
+  left: 10px;
+  width: 80px;
+  height: 50px;
+}
+
+#toggleMaster {
+  top: 550px;
+  left: 0px;
+  height: 400px;
+  width: 430px;
+  position: absolute;
+  display: inline-block;
+  background: white;
+  border-radius: 5px;
+  z-index: 5;
+  box-shadow:
+  inset -1px -1px 2px #595959,    
+  inset -3px -3px 2px #ffffff,   
+  inset 1px 1px 2px #ffffff,
+  inset 3px 3px 2px #333333,
+  3px 3px 7px black;
+  text-shadow: 0px 0px 1px;
+  overflow: auto;
+}
+
+#switchdivIndiv {
+  font-size: 14px;
+  white-space: nowrap;
+  position: absolute;
+  display: inline-block;
+  top: 20px;
+  left: 50px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 29px;
+  height: 15px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 13px;
+  width: 13px;
+  left: 1px;
+  bottom: 1px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(13px);
+  -ms-transform: translateX(13px);
+  transform: translateX(13px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 13px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+#switchs9 {
+position: absolute;
+display: inline-block;
+top: 0px;
+right: 5px;
+}
+
+
+#switchs1 {
+position: absolute;
+display: inline-block;
+top: 25px;
+right: 5px;
+}
+
+#switchs2 {
+position: absolute;
+display: inline-block;
+top: 50px;
+right: 5px;
+}
+
+#switchs3 {
+position: absolute;
+display: inline-block;
+top: 75px;
+right: 5px;
+}
+
+#switchs4 {
+position: absolute;
+display: inline-block;
+top: 100px;
+right: 5px;
+}
+
+#switchs5 {
+position: absolute;
+display: inline-block;
+top: 125px;
+right: 5px;
+}
+
+#switchs6 {
+position: absolute;
+display: inline-block;
+top: 150px;
+right: 5px;
+}
+
+#switchs7 {
+position: absolute;
+display: inline-block;
+top: 175px;
+right: 5px;
+}
+
+#switchs8 {
+position: absolute;
+display: inline-block;
+top: 200px;
+right: 5px;
+}
+
+#switchs0 {
+position: absolute;
+display: inline-block;
+top: 225px;
+right: 5px;
+}
+
+
+
+#switcha0 {
+position: absolute;
+display: inline-block;
+top: 250px;
+right: 5px;
+}
+
+#switcha1 {
+position: absolute;
+display: inline-block;
+top: 275px;
+right: 5px;
+}
+
+#switcha2 {
+position: absolute;
+display: inline-block;
+top: 300px;
+right: 5px;
+}
+
+#switcha3 {
+position: absolute;
+display: inline-block;
+top: 325px;
+right: 5px;
+}
+
+#switcha4 {
+position: absolute;
+display: inline-block;
+top: 350px;
+right: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+#switchf0 {
+position: absolute;
+display: inline-block;
+top: 375px;
+right: 5px;
+}
+
+#switchf1 {
+position: absolute;
+display: inline-block;
+top: 400px;
+right: 5px;
+}
+
+#switchf2 {
+position: absolute;
+display: inline-block;
+top: 425px;
+right: 5px;
+}
+
+#switchf3 {
+position: absolute;
+display: inline-block;
+top: 450px;
+right: 5px;
+}
+
+#switchf4 {
+position: absolute;
+display: inline-block;
+top: 475px;
+right: 5px;;
+}
+
+#switchf5 {
+position: absolute;
+display: inline-block;
+top: 500px;
+right: 5px;
+}
+
+#switchf6 {
+position: absolute;
+display: inline-block;
+top: 525px;
+right: 5px;
+}
+
+#switchf7 {
+position: absolute;
+display: inline-block;
+top: 550px;
+right: 5px;
+}
+
+#switchf8 {
+position: absolute;
+display: inline-block;
+top: 575px;
+right: 5px;
+}
+
+#switchf9 {
+position: absolute;
+display: inline-block;
+top: 600px;
+right: 5px;
+}
+
+
+#switchp3 {
+position: absolute;
+display: inline-block;
+height: 10px;
+top: 625px;
+right: 5px;
+}
+
+
+#context-menu {
+  position: fixed;
+  z-index: 15;
+  width: 180px;
+  background: #1b1a1a;
+  border-radius: 5px;
+  transform: scale(0);
+  transform-origin: top left;
+  box-shadow:none;
+}
+
+#context-menu.visible {
+  transform: scale(1);
+  transition: transform 200ms ease-in-out;
+}
+
+#context-menu .item {
+  box-shadow:none;
+  background: #1b1a1a;
+  padding: 8px 10px;
+  font-size: 15px;
+  color: #eee;
+  cursor: pointer;
+  border-radius: inherit;
+}
+
+#context-menu .item:hover {
+  background: #343434;
+  box-shadow:none;
+}
+
+.CMeditDIV {
+  z-index: 9;
+
+}
+
+#contEdit {
+  position: absolute;
+  display: inline-block;
+  top: 200px;
+  left: 120px;
+  height: 400px;
+  width: 700px;
+}
+
+#sizeEdit {
+  position: absolute;
+  display: inline-block;
+  top: 300px;
+  left: 230px;
+  height: 300px;
+  width: 500px;
+}
+
+
+#widthMod {
+  top: -10px;
+  left: 215px;
+  position: absolute;
+  display: inline-block;
+}
+
+#heightMod {
+  top: 80px;
+  left: 10px;
+  position: absolute;
+  display: inline-block;
+}
+
+
+#hplus {
+  position: relative;
+  transform: rotate(-90deg);
+}
+
+#hminus {
+  position: relative;
+  transform: rotate(-90deg);
+}
+
+#wplus {
+  top: 20px;
+  left: 30px;
+  height: 35px;
+  width: 35px;
+  position: absolute;
+  display: inline-block;
+}
+
+#wminus {
+  top: 20px;
+  left: -25px;
+  height: 35px;
+  width: 35px;
+  position: absolute;
+  display: inline-block;
+}
+
+#sizeSubmit {
+  position: absolute;
+  display: inline-block;
+  height: 60px;
+  width: 140px;
+  bottom: 15px;
+  right: 15px;
+}
+
+#sizeCancel {
+  position: absolute;
+  display: inline-block;
+  height: 40px;
+  width: 80px;
+  bottom: 85px;
+  right: 15px;
+}
+
+#sizeDefault {
+  position: absolute;
+  display: inline-block;
+  height: 40px;
+  width: 80px;
+  bottom: 135px;
+  right: 15px;
+}
+
+
+#sizeShow {
+  left: 130px;
+  cursor: text;
+  overflow: hidden;
+  overflow-wrap: normal;
+  line-break: auto;
+  text-align: center;
+  box-sizing: border-box;
+  position: absolute;
+  display: inline-block;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+  color: black; 
+  margin: 0px;
+  color: black;
+}
+
+#sizeShow:active {
+  transform: translateY(0px);
+}
+
+
+#disEdit {
+  position: absolute;
+  display: inline-block;
+  top: 200px;
+  left: 120px;
+  height: 400px;
+  width: 700px;
+}
+
+#TitleDisplay {
+  position: absolute;
+  display: inline-block;
+  left: 125px;
+  top: 25px;
+  height: 35px;
+  width: 450px;
+}
+
+#Instruction {
+  position: absolute;
+  display: inline-block;
+  left: 120px;
+  top: 70px;
+  height: 35px;
+  width: 450px;
+}
+
+#ContentEditor {
+  position: absolute;
+  display: inline-block;
+  left: 150px;
+  top: 80px;
+  height: 200px;
+  width: 380px;
+  padding: 10px;
+  text-align: left;
+}
+
+#dispSubmit {
+  position: absolute;
+  display: inline-block;
+  height: 60px;
+  width: 140px;
+  bottom: 15px;
+  right: 15px;
+}
+#dispCancel {
+  position: absolute;
+  display: inline-block;
+  height: 40px;
+  width: 80px;
+  bottom: 85px;
+  right: 15px;
+}
+
+#dispDefault {
+  position: absolute;
+  display: inline-block;
+  height: 40px;
+  width: 80px;
+  bottom: 135px;
+  right: 15px;
+}
+
+#contSubmit {
+  position: absolute;
+  display: inline-block;
+  height: 60px;
+  width: 140px;
+  bottom: 15px;
+  right: 15px;
+}
+
+#contCancel {
+  position: absolute;
+  display: inline-block;
+  height: 40px;
+  width: 80px;
+  bottom: 85px;
+  right: 15px;
+}
+
+
+
+#contDefault {
+  position: absolute;
+  display: inline-block;
+  height: 40px;
+  width: 80px;
+  bottom: 135px;
+  right: 15px;
+}
+
+#mimic {
+  top: 250px;
+  left: 230px;
+  cursor: text;
+  overflow: hidden;
+  overflow-wrap: normal;
+  line-break: auto;
+  text-align: center;
+  box-sizing: border-box;
+  position: absolute;
+  display: inline-block;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+  color: black; 
+  margin: 10px;
+  color: black;
+  text-shadow: 0px 0px 1px;
+
+}
+
+#mimic:active {
+  transform: translateY(0px);
+}
+
+#bold {
+  position: absolute;
+  display: inline-block;
+  top: 140px;
+  left: 160px;
+  height: 35px;
+  width: 150px;
+}
+
+#color {
+  position: absolute;
+  display: inline-block;
+  left: 160px;
+  top: 185px;
+  height: 35px;
+  width: 150px;
+}
+
+#fontSizer {
+  position: absolute;
+  display: inline-block;
+  left: 360px;
+  top: 150px;
+  height: 45px;
+  width: 150px;
+}
+
+#plus {
+  position: absolute;
+  display: inline-block;
+  left: 445px;
+  top: 180px;
+  height: 35px;
+  width: 35px;
+  text-shadow: none;
+}
+
+#minus {
+  font-size: 16px;
+  position: absolute;
+  display: inline-block;
+  left: 385px;
+  top: 180px;
+  height: 35px;
+  width: 35px;
+  text-shadow: none;
+}
+
+#posSubmit {
+  position: absolute;
+  display: inline-block;
+  font-size: 22px;
+  font-weight: 800;
+  height: 40px;
+  width: 95px;
+  bottom: 75px;
+  left: 55px
+}
+
+#posDefault {
+  position: absolute;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 800;
+  height: 40px;
+  width: 95px;
+  bottom: 35px;
+  left: 55px
+}
+
+
+#posCancel {
+  position: absolute;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 800;
+  height: 40px;
+  width: 95px;
+  bottom: 5px;
+  left: 55px
+}
+
+.moveBTNS {
+  outline: none;
+  background: none;
+  border: none;
+  position: absolute;
+  display: inline-block;
+  text-shadow: none;
+  box-shadow: none;
+  color: black;
+  font-size: 23px;
+  margin: 0px;
+  padding: 0px;
+  border-radius: 0px;
+  width: 25px;
+  height: 35px;
+}
+
+.moveBTNS:active {
+  transform: translateY(0px);
+  box-shadow: none;
+}
+
+#posEdit {
+  top: 600px;
+  left: 70px;
+  height: 220px;
+  width: 205px;
+  border-radius: 8px;
+  position: absolute;
+  display: inline-block;
+}
+
+#upBTN {
+  border-right: solid 2px red;
+  transform: rotate(-90deg);
+  top: 10px;
+  left: 90px;
+}
+
+#downBTN {
+  border-left: solid 2px red;
+  transform: rotate(-90deg);
+  top: 50px;
+  left: 90px;
+}
+
+#leftBTN {
+  border-left: solid 2px red;
+  top: 30px;
+  left: 40px;
+
+}
+
+#rightBTN {
+  border-right: solid 2px red;
+  top: 30px;
+  right: 40px;
+}
+
+.shiny {
+animation: moveShine 5s infinite linear;
+}
+
+@keyframes moveShine {
+
+  0% {
+  box-shadow:   
+    1px 1px 1px red, 
+   -1px -1px 1px red, 
+   -1px 1px 1px red, 
+    1px -1px 1px red;
+  }
+
+  25% {
+  box-shadow:   
+    1px 1px 1px red, 
+   -1px -1px 1px red, 
+   -1px 1px 1px red, 
+    1px -1px 1px red,
+    0px 0px 10px red,
+    0px 0px 15px red,
+    0px 0px 30px red;
+  }
+
+  50% {
+  box-shadow:   
+    1px 1px 1px red, 
+   -1px -1px 1px red, 
+   -1px 1px 1px red, 
+    1px -1px 1px red;
+  }
+
+  100% {
+  box-shadow:   
+    1px 1px 1px red, 
+   -1px -1px 1px red, 
+   -1px 1px 1px red, 
+    1px -1px 1px red;
+  }
+}
+
+div {
+  background: white;
+  background: linear-gradient(35deg, 
+    var(--my-accent-color) 0%, 
+    white 30%, 
+    white 70%,
+    var(--my-accent-color) 100%);
+  border-radius: 5px;
+  box-shadow:
+  inset 0px 0px 10px 4px var(--my-shadow-color2),
+  0px 12px 70px 14px black;
+}
+
+textarea { 
+ font-family: arial, sans-serif;
+ line-height: 1.3;
+ margin: 10px;
+ border-radius: 5px;
+ font-size: 15px;
+ outline: none;
+ border: none;
+ display: inline-block;
+ position: absolute;
+ resize: vertical;
+  box-shadow:
+  inset -1px -1px 2px var(--my-shadow-color2),
+  inset -3px -3px 2px var(--my-shadow-color1), 
+  inset 1px 1px 2px var(--my-shadow-color2),
+  inset 3px 3px 2px var(--my-shadow-color1),  
+  3px 3px 7px black;
+}
+
+button {
+  overflow: hidden;
+  overflow-wrap: normal;
+  font-size: 17px;
+  cursor: pointer;
+  transition: all 0.1s ease;
+  position: ABSOLUTE;
+  display: inline-block;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+  color: black; 
+  margin: 0px;
+  color: black;
+  background: linear-gradient(155deg, 
+    var(--my-accent-color) 0%, 
+    white 30%, 
+    white 70%,
+    var(--my-accent-color) 100%);
+  text-shadow: 0px 0px 1px;
+  box-shadow:
+  inset -1px -1px 2px black,
+  inset -3px -3px 2px white, 
+  inset 1px 1px 2px var(--my-shadow-color1),
+  inset 3px 3px 2px var(--my-shadow-color2),  
+  3px 3px 7px black;
+}
+
+button:active {
+  transform: translateY(1px);
+  box-shadow:
+  inset -1px -1px 2px black,
+  inset -3px -3px 2px white, 
+  inset 1px 1px 2px var(--my-shadow-color1),
+  inset 3px 3px 2px var(--my-shadow-color2), 
+  2px 2px 2px black;
+}
+
+.noShow {
+  box-shadow: none;
+  background: none;
+}
+
+#glowDiv {
+  font-family: 'Brush Script MT', cursive;
+  font-weight: 700;
+  bottom: 25px;
+  right: 140px;
+  position: absolute;
+  display: inline-block;
+  font-size: 30px;
+  color: var(--glow-txt-color);
+  text-shadow:   
+    1px 1px 1px var(--glow-outline-color), 
+   -1px -1px 1px var(--glow-outline-color), 
+   -1px 1px 1px var(--glow-outline-color), 
+    1px -1px 1px var(--glow-outline-color),
+    0px 0px 10px var(--my-glow-color),
+    0px 0px 15px var(--my-glow-color),
+    0px 0px 30px var(--my-glow-color);
+  animation: Shine 7s infinite linear;
+}
+
+@keyframes Shine {
+  0% {
+  text-shadow:   
+    1px 1px 1px var(--glow-outline-color), 
+   -1px -1px 1px var(--glow-outline-color), 
+   -1px 1px 1px var(--glow-outline-color), 
+    1px -1px 1px var(--glow-outline-color),
+    0px 0px 10px var(--my-glow-color),
+    0px 0px 15px var(--my-glow-color),
+    0px 0px 30px var(--my-glow-color);
+  }
+
+  50% {
+  text-shadow:   
+    1px 1px 1px var(--glow-outline-color), 
+   -1px -1px 1px var(--glow-outline-color), 
+   -1px 1px 1px var(--glow-outline-color), 
+    1px -1px 1px var(--glow-outline-color),
+    0px 0px 10px var(--my-glow-color),
+    0px 0px 17px var(--my-glow-color),
+    0px 0px 27px var(--my-glow-color),
+    0px 0px 40px var(--my-glow-color),
+    0px 0px 60px var(--my-glow-color);
+
+  }
+}
+
+input[type="color"] {
+  margin-top: 10px;
+}
+
+#userName {
+  margin-top: 10px;
+}
+
+.picker {
+  font-size: 16px;
+  height: 35px;
+  width: 100px;
+}
+
+#setColors{
+  position: absolute;
+  display: inline-block;
+  bottom: 15px;
+  right:15px;
+  height: 50px;
+  width: 120px;
+}
+
+#exitColor {
+  position: absolute;
+  display: inline-block;
+  bottom: 15px;
+  left: 15px;
+}
+
+#defaultColors {
+  position: absolute;
+  display: inline-block;
+  top: 380px;
+  left: 100px;
+  width: 130px;
+}
+
+#presetBlue {
+  position: absolute;
+  display: inline-block;
+  top: 430px;
+  left: 100px;
+  width: 130px;
+}
+
+#presetRed {
+  position: absolute;
+  display: inline-block;
+  top: 480px;
+  left: 100px;
+  width: 130px;
+}
+
+#presetGreen {
+  position: absolute;
+  display: inline-block;
+  top: 530px;
+  left: 100px;
+  width: 130px;
+}
+
+#appearDiv {
+  font-size: 18px;
+  top: 100px;
+  left: 150px;
+  height: 600px;
+  width: 600px;
+  position: absolute;
+  display: inline-block;
+  padding: 15px;
+  z-index: 9;
+}
+
+#BGpick {
+  position: absolute;
+  display: inline-block;
+  margin: 0px;
+  top: 25px;
+  left: 10px;
+  width: 300px;
+  text-align: center;
+}
+
+#ACpick {
+  position: absolute;
+  display: inline-block;
+  margin: 0px;
+  top: 110px;
+  left: 10px;
+  width: 300px;
+  text-align: center;
+}
+
+#shad1Pick {
+  position: absolute;
+  display: inline-block;
+  margin: 0px;
+  top: 195px;
+  left: 10px;
+  width: 300px;
+  text-align: center;
+}
+
+#shad2Pick {
+  position: absolute;
+  display: inline-block;
+  margin: 0px;
+  top: 280px;
+  left: 10px;
+  width: 300px;
+  text-align: center;
+}
+
+#nameLabelDiv {
+  position: absolute;
+  display: inline-block;
+  margin: 0px;
+  width: 300px;
+  top: 25px;
+  right: 10px;
+  text-align: center;
+}
+
+#namecolorLabelDiv {
+  position: absolute;
+  display: inline-block;
+  margin: 0px;
+  top: 110px;
+  right: 10px;
+  width: 300px;
+  text-align: center;
+}
+
+#nameOutlineDiv {
+  position: absolute;
+  display: inline-block;
+  margin: 0px;
+  top: 195px;
+  right: 10px;
+  width: 300px;
+  text-align: center;
+}
+
+#glowLabelDiv {
+  position: absolute;
+  display: inline-block;
+  margin: 0px;
+  top: 280px;
+  right: 10px;
+  width: 300px;
+  text-align: center;
+}
+
+.overlay {
+  height: 100%;
+  width: 0%;
+  position: fixed;
+  z-index: 10;
+  top: 0px;
+  left: 0px;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  background: none;
+  height: 90%;
+  width: 100%;
+  text-align: center;
+  overflow-x: hidden;
+  color: white;
+  transition: 0.5s;
+}
+
+
+
+
+.overlay-content.appearTut {
+  width: 100%;
+  margin-top: 25px;
+  transition: 0.5s;
+}
+
+
+.overlay-content.appearTut.Low {
+  position: absolute;
+  width: 100%;
+  bottom: 300px;
+  transition: 0.5s;
+}
+
+.overlay-content.appearTut.X {
+  width: 100%;
+  margin-top: 225px;
+  transition: 0.5s;
+}
+
+
+
+#tutHolder {
+  color: white;
+  transition: 0.5s;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.MainTutbtn{
+  position: relative;
+  display: block;
+  font-size: 25px;
+  color: white;
+  z-index: 10000;
+  text-decoration-line: none;
+}
+
+.overlay-content#myNavHead {
+  font-size: 25px;
+  height: 5%;
+
+}
+
+
+.overlay-content#myNavHead1 {
+  height: 20%;
+}
+
+.TutChoice:hover {
+ font-weight: 1000;
+
+}
+
+.overlay-content.authTut {
+  width: 100%;
+  margin-top: 35px;
+  transition: 0.5s;
+  font-size: 18px;
+}
+
+.overlay-content.authTut.X {
+  width: 70%;
+  margin-left: 30%;
+}
+
+#newItems {
+Auth note - add noncovered components question
+clarify oopc with or without ded
+SHORT BOLD labels followed by description for auth note selections
+
+
+
+}
+
+
+
+.overlay-content.rightsec {
+  height: 17%;
+  width: 100%;
+  text-align: left;
+  margin-left: 400px;
+  transition: 0.5s;
+}
+
+.overlay-content.leftsec {
+  height: 17%;
+  width: 100%;
+  text-align: left;
+  margin-left: 20px;
+  transition: 0.5s;
+}
+
+.overlay-content.leftsec.short {
+  height: 8%;
+
+}
+
+.overlay-content.rightsec.slim {
+  height: 14%;
+  margin-left: 460px;
+}
+
+.overlay-content.rightsec.short {
+  height: 8%;
+  margin-left: 460px;
+}
+
+.overlay-content.hide {
+  height: 30%;
+  width: 0%;
+  text-align: left;
+  transition: 0.5s;
+}
+
+.overlay .nextbtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 20px;
+  color: white;
+  z-index: 10000;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  bottom: 20px;
+  right: 45px;
+  font-size: 20px;
+  color: white;
+  z-index: 10000;
+}
+
+.none {
+  left:0px;
+  width: 0px;
+  height: 0px;
+  display: none;
+}
+
+#areaOne {
+  position:absolute;
+  display:inline-block;
+  top: 0px;
+  left:0px;
+  transition: 0.5s;
+}
+
+#myNav2 {
+  text-align: center;
+}
+
+
+#comingSoon {
+  position: absolute;
+  display: inline-block;
+  top: 200px;
+}
+
+#ITSBRITTNEY {
+ top: 430px;
+ left: 10px;
+ display: inline-block;
+ position: absolute;
+}
+
+#hlc {
+ display: inline-block;
+ position: absolute;
+ top: 600px;
+ left: 440px;
+}
+
+#Request {
+  left: 550px;
+  top: 15px;
+  position: ABSOLUTE;
+  display: inline-block;
+}
+
+#TPDiv {
+ display: inline-block;
+ position: absolute;
+  left: 570px;
+  top: 130px;
+}
+
+#snipbox {
+ padding: 0px;
+ top: 310px;
+ left: 60px;
+ display: inline-block;
+ position: absolute;
+}
+
+:root {
+  --my-background-color: #4f4f4f;
+  --my-accent-color: #707070;
+  --my-shadow-color1: #cecece;
+  --my-shadow-color2: #141414;
+  --my-glow-color: #ffffff;
+  --glow-txt-color: #000000;
+  --glow-outline-color: #ffffff;
+}
+
+</style>
+</head>
+<body>
+<div id="pdiv" class="noShow"><p></div>
+<div id="Mystery" class="TheGang noShow">
+  <button id="LOCK1" style="color: black;" class="astext" onclick="MENU()">&#x2666; Settings &#x2666;</button>
+  <button id="appearance" class="astext" onclick="personalize()">&#x2666; Appearance &#x2666;</button>
+  <button id="BtnBuilder" class="astext" onclick="BuilderShow()">&#x2666; Toggle On/Off &#x2666;</button>
+  <button id="buttonMaker" class="astext" onclick="showCustom()" >&#x2666; New Button &#x2666;</button>
+  <button id="PHONE" class="astext" onclick="SHOWNUMS()">&#x2666; Phone and Fax &#x2666;</button>
+</div>
+<div id="appearDiv" style="display:none;">
+  <div id="BGpick" class="noShow">
+    <label for="background-picker">Page Background color:</label><br>
+    <input id="background-picker" type="color" value="#4f4f4f">
+  </div>
+  <div id="ACpick" class="noShow">
+   <label for="accent-picker">Page Accent Color:</label><br>
+    <input id="accent-picker" type="color" value="#707070">
+  </div>
+  <div id="shad1Pick" class="noShow">
+    <label for="shad1-picker">Light Shadow:</label><br>
+    <input id="shad1-picker" type="color" value="#cecece">
+  </div>
+  <div id="shad2Pick" class="noShow">
+   <label for="shad2-picker">Dark Shadow:</label><br>
+    <input id="shad2-picker" type="color" value="#141414">
+  </div>
+  <div id="nameLabelDiv" class="noShow">
+    <label for="userName">Your Name:</label><br>
+    <input type="text" id="userName"><br>
+  </div>
+  <div id="namecolorLabelDiv" class="noShow">
+    <label for="nameColor">Name Color:</label><br>
+    <input id="nameColor" type="color" value="#000000">
+  </div>
+  <div id="nameOutlineDiv" class="noShow">
+    <label for="outlineColor">Outline Color:</label><br>
+    <input id="outlineColor" type="color" value="#ffffff">
+  </div>
+  <div id="glowLabelDiv" class="noShow">
+    <label for="nameGlow">Glow Color:</label><br>
+    <input id="nameGlow" type="color" value="#ffffff">
+  </div>
+  <button id="setColors" class="picker" onclick="saveColors()">Save and Exit</button>
+  <button id="exitColor" class="picker" onclick="exitColor()">Cancel</button>
+  <button id="defaultColors" class="picker" onclick="setColor('default')">Default Preset</button>
+  <button id="presetBlue" class="picker" onclick="setColor('blue')">Blue Preset</button>
+  <button id="presetRed" class="picker" onclick="setColor('red')">Red Preset</button>
+  <button id="presetGreen" class="picker" onclick="setColor('green')">Green Preset</button>
+</div>
+<div id="ITSBRITTNEY" class="ONEMORETIME noShow a0dispStat" style="display: inline-block">
+  <textarea autocomplete="off" id="partname7" class="intakeboxes" name="name" placeholder="Part Name" wrap="off"></textarea>
+  <textarea autocomplete="off" id="partname6" class="intakeboxes" name="name" placeholder="Part Name" wrap="off"></textarea>
+  <textarea autocomplete="off" id="partname5" class="intakeboxes" name="name" placeholder="Part Name" wrap="off"></textarea>
+  <textarea autocomplete="off" id="partname4" class="intakeboxes" name="name" placeholder="Part Name" wrap="off"></textarea>
+  <textarea autocomplete="off" id="partname3" class="intakeboxes" name="name" placeholder="Part Name" wrap="off"></textarea>
+  <textarea autocomplete="off" id="partname2" class="intakeboxes" name="name" placeholder="Part Name" wrap="off"></textarea>
+  <textarea autocomplete="off" id="partname1" class="intakeboxes" name="name" placeholder="Part Name" wrap="off"></textarea>
+  <textarea autocomplete="off" id="partnum" class="intakeboxes" name="name" placeholder="Part Number" wrap="off"></textarea>
+  <textarea autocomplete="off" id="rfprice" class="intakeboxes" name="name" placeholder="RF Price" wrap="off"></textarea>
+  <textarea autocomplete="off" id="msrp" class="intakeboxes" name="name" placeholder="OEM MSRP" wrap="off"></textarea>
+  <button id="SENDPART" class="senditnow D R P" oncontextmenu="customMenu(this.id, event)" onclick="FormToTA()">SEND PART</button>
+  <button id="SENDLABOR" class="senditnow D R P" oncontextmenu="customMenu(this.id, event)" onclick="SENDLABOR1()">LABOR</button>
+  <button id="SENDDIAG" class="senditnow D R P" oncontextmenu="customMenu(this.id, event)" onclick="SENDDIAG1()">DIAG</button> 
+  <button id="DJKahlid" class="senditnow D R P" oncontextmenu="customMenu(this.id, event)" onclick="AnotherOne()">NEW PART</button>
+  <button id="MTVsNEXT" class="senditnow D R P" oncontextmenu="customMenu(this.id, event)" onclick="NextPart()">NEXT PART</button> 
+</div>
+<div id="Request" class="REQUESTDIV noShow">
+  <div id="RQ1" class="noShow">
+    <button id="picR" class="PictureReqBTN D R P C s1dispStat" oncontextmenu="customMenu(this.id, event)" onclick="PICREQ(this.id)"><b>PICTURE</b> REQUEST</button>
+  </div>
+  <div id="RQ2" class="noShow">
+    <button id="recR" class="RecordsRequestBTN D R P C s2dispStat" oncontextmenu="customMenu(this.id, event)" onclick="RECREQ(this.id)"><b>RECORDS</b> REQUEST</button>
+  </div>
+  <div id="RQ3" class="noShow">
+    <button id="noansR" class="RecordsReqNoAnsBTN D R P C s3dispStat" oncontextmenu="customMenu(this.id, event)" onclick="NOANSREC(this.id)">RECDS REQST <b>NO ANSWER</b></button>
+  </div>
+  <div id="O1" class="noShow">
+    <button id="R6" class="OOPCallNoAnsBTN D R P C s4dispStat" oncontextmenu="customMenu(this.id, event)"  onclick="CALLNOANS(this.id)"><f>OOPC CALL</f> <b>NO ANSWER</b></button>
+  </div>
+  <div id="O2" class="noShow">
+    <button id="R7" class="CHAuthedOOPCBTN D R P C s5dispStat" oncontextmenu="customMenu(this.id, event)" onclick="AUTHOOPC(this.id)"><b>CH AUTHED</b> OOPC</button>
+  </div>
+  <div id="T10" class="noShow">
+    <button id="T0" class="Template D R P s6dispStat" oncontextmenu="customMenu(this.id, event)" onclick="ShowTemps()"><b>TEMPLATES</b></button>
+  </div>
+</div>
+<div id="TPDiv" class="noShow" style="display: none">
+  <div id="T20" class="noShow">
+    <button id="T1" class="PTXferTempBTN D R P" oncontextmenu="customMenu(this.id, event)" name="name" onclick="PTXFER()"><b>PT TRANSFER</b> TEMPLATE</button>
+  </div>
+  <div id="T30" class="noShow">
+    <button id="T2" class="CHStatementBTN D R P C" oncontextmenu="customMenu(this.id, event)" onclick="STMTTEMP(this.id)">CH <b>STATEMENT</b> QUESTIONS</button>
+  </div>
+  <div id="T40" class="noShow">
+    <button id="T3" class="ReviewNoteBTN D R P C" oncontextmenu="customMenu(this.id, event)" onclick="REVIEW(this.id)">INPS/PIC <b>REVIEW</b> NOTE</button>
+  </div>
+  <div id="T50" class="noShow">
+    <button id="T4" class="InspectionTempBTN D R P C" oncontextmenu="customMenu(this.id, event)" onclick="INSPTEMP(this.id)"><b>INSPECTION</b> TEMPLATE</button>
+  </div>
+</div>
+<div id="transferTemplate" style="display: none;">
+    <div id="quest1" class="noShow">
+      <b>Is the repair facility able to diagnose to cause of failure and overhaul if needed?</b>
+      <input type="radio" style="float:right; margin-right: 60px;" id="no1" name="ans1" value="NO"><label for="no1" style="float:right;">&nbsp&nbsp&nbspNO</label>    
+      <input type="radio" style="float:right;" id="yes1" name="ans1" value="YES"><label for="yes1" style="float:right;">YES</label><BR>
+      The repair facility can either be able to meet this requirement or the contract holder<br>
+      will be required to move the vehicle to another repair facility.<br>
+      CVT transmissions are exempt from this requirement.<br><br>
+    </div>
+    <div id="quest2" class="noShow">
+      <b>Has the repair facility ever serviced the vehicle before?</b>
+      <input type="radio" style="float:right; margin-right: 60px;" id="no2" name="ans2" value="NO"><label for="no2" style="float:right;">&nbsp&nbsp&nbspNO</label>
+      <input type="radio" style="float:right;" id="yes2" name="ans2" value="YES"><label for="yes2" style="float:right;">YES</label><BR>
+      If so, have the repair facility submit the service records for review.<br><br>   
+    </div>
+    <div id="quest3" class="noShow">
+      <b>Can a test drive be performed if needed?</b>
+      <input type="radio" style="float:right; margin-right: 60px;" id="no3" name="ans3" value="NO"><label for="no3" style="float:right;">&nbsp&nbsp&nbspNO</label>
+      <input type="radio" style="float:right;" id="yes3" name="ans3" value="YES"><label for="yes3" style="float:right;">&nbsp&nbsp&nbspYES</label>
+      <input type="radio" style="float:right;" id="nr3" name="ans3" value="NOT RECOMMENDED"><label for="nr3" style="float:right;">NOT RECOMMENDED</label><BR><BR>
+    </div>
+    <div id="q3ansN" class="noShow">  
+      <textarea id="q3ansExplain" placeholder="Brief explanation..." rows="1" cols="35" style="right:60px;box-shadow:none;border:2px solid black;resize:none;"></textarea>
+      Has there been teardown that would prevent a test <br> drive or is the vehicle inoperable due to failure?
+      <br><br>
+    </div>
+    <div id="quest4" class="noShow">   
+      <b>Did the repair facility tow the vehicle?</b>
+      <input type="radio" style="float:right; margin-right: 60px;" id="no4" name="ans4" value="NO"><label for="no4" style="float:right;">&nbsp&nbsp&nbspNO</label>
+      <input type="radio" style="float:right;" id="yes4" name="ans4" value="YES"> <label for="yes4" style="float:right;">&nbsp&nbsp&nbspYES</label>   
+      <input type="radio" style="float:right;" id="na4" name="ans4" value="NA"><label for="na4" style="float:right;">NA</label><BR>
+      If so, have the repair facility submit the invoice for review.<br><br>
+    </div>
+    <div id="quest5" class="noShow"> 
+      <b>Has the cause of failure been identified?</b>
+      <input type="radio" style="float:right; margin-right: 60px;" id="no5" name="ans5" value="NO"><label for="no5" style="float:right;">&nbsp&nbsp&nbspNO</label>
+      <input type="radio" style="float:right;" id="yes5" name="ans5" value="YES"><label for="yes5" style="float:right;">YES</label><br><br><br>
+    </div>
+    <div id="quest6" class="noShow"> 
+      <b>Does the repair facility have an itemized estimate available?</b>
+      <input type="radio" style="float:right; margin-right: 60px;" id="no6" name="ans6" value="NO"><label for="no6" style="float:right;">&nbsp&nbsp&nbspNO</label>
+      <input type="radio" style="float:right;" id="yes6" name="ans6" value="YES"><label for="yes6" style="float:right;">YES</label><BR>
+      If so, have the repair facility submit the estimate for review.<br><br>
+    </div>
+    <div id="quest7" class="noShow"> 
+      <b>Has the repair facility's info and contact info been verified?</b>
+      <input type="radio" style="float:right; margin-right: 60px;" id="no7" name="ans7" value="NO"><label for="no7" style="float:right;">&nbsp&nbsp&nbspNO</label>
+      <input type="radio" style="float:right;" id="yes7" name="ans7" value="YES"><label for="yes7" style="float:right;">YES</label><BR>  
+      Please verify their information in order to proceed.<br><br>
+    </div>
+    <div id="quest8" class="noShow">
+      <b>What is the preferred method of contact?</b>
+      <input type="radio" style="float:right; margin-right: 60px;" id="either" name="ans8" value="EITHER"><label for="either" style="float:right;">&nbsp&nbsp&nbspEither</label>
+      <input type="radio" style="float:right;" id="email" name="ans8" value="EMAIL" autocomplete="off"><label for="email" style="float:right;">&nbsp&nbsp&nbspE-mail</label>
+      <input type="radio" style="float:right;" id="phone" name="ans8" value="PHONE" autocomplete="off"><label for="phone" style="float:right;">Phone</label><BR>
+      <textarea id="contact1" placeholder="Contact Name" rows="1" cols="25" style="right:60px;box-shadow:none;border:2px solid black;resize:none;"></textarea><br><br>
+      <textarea id="contact2" placeholder="E-mail, phone, etc" rows="1" cols="25" style="right:60px;box-shadow:none;border:2px solid black;resize:none;"></textarea><br><br><br><br>
+    </div>
+    <div id="quest9" class="noShow">
+      <b>Have the PT claim expectations been reviewed with the repair facility contact?</b>
+      <input type="radio" style="float:right; margin-right: 60px;" id="no9" name="ans9" value="NO"><label for="no9" style="float:right;">&nbsp&nbsp&nbspNO</label>
+      <input type="radio" style="float:right;" id="yes9" name="ans9" value="YES"><label for="yes9" style="float:right;">YES</label><BR> 
+      If not, this should be discussed with the repair facility prior to ending the call.<br><br>
+    </div>
+    <div id="quest10" class="noShow">      
+      <b>Have you provided the repair facility with the assigned</b>
+      <input type="radio" style="float:right; margin-right: 60px;" id="no10" name="ans10" value="NO"><label for="no10" style="float:right;">&nbsp&nbsp&nbspNO</label>
+      <input type="radio" style="float:right;" id="yes10" name="ans10" value="YES"><label for="yes10" style="float:right;">YES</label><BR>
+      <b>adjusters name, direct extension, and e-mail?</b><br><br>
+    </div>
+    <div id="quest11" class="noShow">
+      <b>Is there any other relevant info that will assist the adjuster?</b>
+      <input type="radio" style="float:right; margin-right: 60px;" id="no11" name="ans11" value="NO"><label for="no11" style="float:right;">&nbsp&nbsp&nbspNO</label>
+      <input type="radio" style="float:right;" id="yes11" name="ans11" value="YES"><label for="yes11" style="float:right;">&nbsp&nbsp&nbspYES</label><br>
+    </div>
+    <div id="q11ansY" class="noShow">  
+      <textarea id="q11ansExplain" placeholder="Additional Information" rows="5" cols="40" style="left:20px;box-shadow:none;border:2px solid black;resize:none;"></textarea><br><br><br><br>
+    </div>
+    <div id="questBTNs" class="noShow"> 
+      <button id="submitTemp" onclick="submitTEMP()">Submit</button>
+      <button id="cancelPT" onclick="cancelPT()">Cancel</button>
+    </div>
+  </div>
+ <button id="statusNote" class="D R P s8dispStat" oncontextmenu="customMenu(this.id, event)" onclick="statNOTE()"><b>Status</b> Note</button>
+  <div id="statNote" style="display: none">
+    <div id="stat0" style="text-align:center;width:100%;font-size:18px;" class="noShow"><b>Status Note</b></div><br>
+    <div id="stat1" class="noShow">  
+      <b>Is anything required from the repair facility or contract holder?</b>
+      <input type="radio" style="float:right; margin-right: 60px;" id="no1a" name="stat1a" value="NO"><label for="no1a" style="float:right;">&nbsp&nbsp&nbspNO</label>
+      <input type="radio" style="float:right;" id="yes1a" name="stat1a" value="YES"><label for="yes1a" style="float:right;">YES</label><br>
+       Photos, records, etc...
+      <textarea id="stat1explain" placeholder="If yes, describe" rows="2" cols="35" style="right:60px;box-shadow:none;border:2px solid black;resize:none;"></textarea>
+    </div><br><br><br><br><br>
+    <div id="stat2" class="noShow">  
+      <b>If so, are they aware of the requirements and how to accomplish?</b>
+      <input type="radio" style="float:right; margin-right: 60px;" id="no2a" name="stat2a" value="NO"><label for="no2a" style="float:right;">&nbsp&nbsp&nbspNO</label>
+      <input type="radio" style="float:right;" id="yes2a" name="stat2a" value="YES"> <label for="yes2a" style="float:right;">&nbsp&nbsp&nbspYES</label>   
+      <input type="radio" style="float:right;" id="na2a" name="stat2a" value="NA"><label for="na2a" style="float:right;">NA</label><br><br><br><br><br>
+    </div>
+    <div id="stat3" class="noShow">  
+      <textarea id="stat3explain" placeholder="Next steps..." rows="2" cols="35" style="right:60px;box-shadow:none;border:2px solid black;resize:none;"></textarea>
+      <b>What are the next steps in the claim process?</b><br>
+      Be clear and specific so the next <br>adjuster can complete the claim.<br>
+    </div><br><br><br><br>
+    <div id="stat4" class="noShow">  
+      <b>Are there any special conversations that need to</b>
+      <input type="radio" style="float:right; margin-right: 60px;" id="no4a" name="stat4a" value="NO"><label for="no4a" style="float:right;">&nbsp&nbsp&nbspNO</label>
+      <input type="radio" style="float:right;" id="yes4a" name="stat4a" value="YES"><label for="yes4a" style="float:right;">YES</label><br>
+      <b>happen with either the repair facility or contract holder?</b><br>
+      Parts/Labor difference, OOPC, Parts decisions, etc...
+      <textarea id="stat4explain" placeholder="If yes, describe" rows="2" cols="35" style="right:60px;box-shadow:none;border:2px solid black;resize:none;"></textarea>
+      <br><br>
+    </div>
+    <button id="submitStat" onclick="submitStat()">Submit</button>
+    <button id="cancelStat" onclick="cancelStat()">Cancel</button>
+  </div>
+ <button id="newAuthstarter" class="D R P s7dispStat" oncontextmenu="customMenu(this.id, event)" onclick="showAuth()"><b>Authorize</b> Claim</button>
+  <div id="newAuthstyle" style="display:none;">
+    <div id="authParts" class="noShow" style="display:inline-block;font-size:16px;">
+      <b>Who's parts at what pricing?</b><br>
+      Select all that apply...<br><br>
+      <input type="checkbox" id="auth1" name="authparts" class="FNA MCheckbox"><label for="auth1"> <b>OEM Under 250</b><br>&nbsp&nbsp&nbsp&nbsp&nbspUsing RF's OEM parts at or under $250.00.</label><br>
+      <input type="checkbox" id="auth2" name="authparts" class="FNA MCheckbox"><label for="auth2"> <b>RF Parts at MCE</b><br>&nbsp&nbsp&nbsp&nbsp&nbspUsing RF's parts at or under sourcing MCE.</label><br>
+      <input type="checkbox" id="auth3" name="authparts" class="FNA MCheckbox"><label for="auth3"> <b>Sourcing MCE as Credit</b><br>&nbsp&nbsp&nbsp&nbsp&nbspUsing sourcing MCE as a credit toward repair facility parts. Shipping is not an option.</label><br>
+      <input type="checkbox" id="auth4" name="authparts" class="FNA MCheckbox"><label for="auth4"> <b>MCE as Credit or Shipped</b><br>&nbsp&nbsp&nbsp&nbsp&nbspUsing sourcing MCE as a credit toward repair facility parts or shipping in.</label><br>
+      <input type="checkbox" id="auth5" name="authparts" class="FNA MCheckbox"><label for="auth5"> <b>Negotiated for No OOPC</b><br>&nbsp&nbsp&nbsp&nbsp&nbspUsing RF's parts. Adjusted price to reasonable amount near MCE.</label><br>
+      <button id="cancelNewauth" class="Cancelbtn" onclick="cancelNewauth()">Cancel</button>
+      <button id="authMove" class="Submitbtn" onclick="moveAuth()">Continue</button>
+    </div>
+    <div id="authRequests" class="noShow" style="display:none;font-size:18px;">
+      <b>Did you request an inspection, photos, records, or a statement?</b><br>
+      Select all that apply...<br><br>
+      <input type="checkbox" id="auth6" name="authreqs" class="FNA"><label for="auth6"><b>Inspection</b></label><br>
+      <input type="checkbox" id="auth7" name="authreqs" class="FNA"><label for="auth7"><b>Photos</b></label><br>
+      <input type="checkbox" id="auth8" name="authreqs" class="FNA"><label for="auth8"><b>Records</b></label><br><br>
+      <input type="checkbox" id="auth9" name="authreqs" class="FNA largerCheckbox" onclick="moveAuth2()"><label for="auth9" style="font-size:20px;"><b>No Requests</b></label><br>
+      <button id="cancelNewauth" class="Cancelbtn" onclick="cancelNewauth()">Cancel</button>
+      <button id="authMove2" class="Submitbtn" onclick="moveAuth2()">Continue</button>
+    </div>
+    <div id="authOopcs" class="noShow" style="display:none;font-size:18px;">
+      <div class="noShow" style="width:50%;left:15px;top:15px;position:absolute;font-size:18px;">
+        <b>Is OOPC or shipping a concern?</b><br>
+        <input type="radio" id="auth10" name="authoops" class="FNA" onclick="showOOPopt()"><label for="auth10"><b>OOPC</b></label><br>
+        <input type="radio" id="auth11" name="authoops" class="FNA"><label for="auth11"><b>Shipping</b></label><br>
+        <input type="radio" id="auth12" name="authoops" class="FNA" onclick="showOOPopt()"><label for="auth12"><b>Both</b></label><br><br>
+        <input type="radio" id="auth13" name="authoops" class="FNA largerRadio" onclick="newAuth()"><label for="auth13"><b>No Concerns</b></label><br><br>
+      </div>
+      <div class="noShow" style="width:50%;left:15px;top:220px;position:absolute;font-size:18px;margin-top:15px;">
+        <b>Any non-covered components?</b><br>
+        <input type="radio" id="auth18" name="authoops3" class="FNA"><label for="auth18"><b>Yes</b></label><br>
+        <input type="radio" id="auth19" name="authoops3" class="FNA"><label for="auth19"><b>No</b></label>
+      </div>
+      <div id="OOPoptDiv" class="noShow" style="display:none;width:50%;right:15px;top:15px;position:absolute;font-size:18px;">
+      <b>What is the cause of OOPC?</b><br>
+        <input type="radio" id="auth14" name="authoops2" class="FNA"><label for="auth14"><b>Parts</b></label><br>
+        <input type="radio" id="auth15" name="authoops2" class="FNA"><label for="auth15"><b>Labor</b></label><br>
+        <input type="radio" id="auth16" name="authoops2" class="FNA"><label for="auth16"><b>Both</b></label><br><br>
+        <label for="auth17"><b>Amount of OOPC<br>&nbsp&nbsp&nbspInclude DED</b></label><br><input type="number" style="padding:5px;" id="auth17" name="authoops" class="FNA" step="0.01"><br>
+      </div>
+      <div class="noShow" style="bottom:0px;left:15px;height:50%;position:absolute;">
+        <button id="cancelNewauth" style="bottom:45px;" class="Cancelbtn" onclick="cancelNewauth()">Cancel</button>
+        <button id="finishAuth" style="bottom:45px;" class="Submitbtn" onclick="newAuth()">Finish</button>
+      </div>
+    </div>
+  </div>
+<div id="hlc" class="HardLaborCamp noShow">
+  <div id="C1" class="noShow">
+    <button id="R2" class="PartsAndLabor D R P a1dispStat" oncontextmenu="customMenu(this.id, event)" onclick="COPYNOTE()">Copy P&L</button>
+  </div>
+  <div id="L8" class="noShow">
+    <button id="R15" class="Reset D R P a4dispStat" oncontextmenu="customMenu(this.id, event)" style="display: inline-block" onclick="RESET()"><f>RESET</f></button>
+  </div>
+  <div id="subPL2" class="noShow a2dispStat">
+  <div id="L1" class="noShow">
+    <button id="R8" class="D R P" oncontextmenu="customMenu(this.id, event)" style="display: inline-block" onclick="NEWOEM('9')"><f>OEM</f></button>
+  </div>
+  <div id="L2" class="noShow">
+    <button id="R9" class="D R P" oncontextmenu="customMenu(this.id, event)" style="display: inline-block" onclick="NEWAM('9')"><f>AM</f></button>
+  </div>
+  <div id="L3" class="noShow">
+    <button id="R10" class="D R P" oncontextmenu="customMenu(this.id, event)" style="display: inline-block" onclick="OEMOVER()">Over 250</button>
+  </div>
+  <div id="L4" class="noShow">
+    <button id="R11" class="D R P" oncontextmenu="customMenu(this.id, event)" style="display: inline-block" name="edit" onclick="BULK(this.id)">BULK</button>
+  </div>
+  <div id="L7" class="noShow">
+    <button id="fluid" class="P astext" oncontextmenu="customMenu(this.id, event)" style="display: inline-block" onclick="FLUIDLEAK()">$</button>
+  </div>
+  </div>
+  <div id="subPL1" class="noShow a3dispStat">
+  <div id="L5" class="noShow">
+    <button id="R12" class="D R P C" oncontextmenu="customMenu(this.id, event)" style="display: inline-block" name="edit" onclick="EVACRECH(this.id)">EVAC</button>
+  </div>
+  <div id="L6" class="noShow">
+    <button id="R13" class="D R P C" oncontextmenu="customMenu(this.id, event)" style="display: inline-block" name="edit" onclick="ALIGNMENT(this.id)">ALIGN</button>
+  </div>
+  <div id="L9" class="noShow">
+    <button id="R16" class="D R P" oncontextmenu="customMenu(this.id, event)" style="display: inline-block" onclick="LABOR('9')">LABOR</button>
+  </div>
+  <div id="L10" class="noShow">
+    <button id="R17" class="D R P" oncontextmenu="customMenu(this.id, event)" style="display: inline-block" onclick="DIAG('9')">DIAG</button>
+  </div>
+  </div>
+</div>
+<div id="snipbox" class="SnipDiv noShow s0dispStat">
+  <div id="rfibcall" class="RFinboundDIV  noShow">
+    <div id="textpreview" class="noShow">
+       <textarea autocomplete="off" title="Snips Appear Here" id="Snippings" class="SnipArea" name="name" style="display: none" oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'></textarea>
+    </div>
+    <div id="RFone noShow">
+      <button id="RFIBBTN" class="IBOBC R D P" oncontextmenu="customMenu(this.id, event)" onclick="RFIB()"><f>RF</f><br><b>INBOUND</b></button>
+      <button id="TGAFBTN" class="IBOBC R D P" oncontextmenu="customMenu(this.id, event)" onclick="TGAF()"><f>CALLED CH</f> <b>TO GET AUTH FOR</b></button>
+      <button id="RESET" class="IBOBC R D P" oncontextmenu="customMenu(this.id, event)" onclick="RESETNOTE()">RESET</button>
+      <button id="COPY" class="IBOBC R D P" oncontextmenu="customMenu(this.id, event)" onclick="COPYIt()">COPY</button>
+    </div>
+  </div>
+  <div id="chobcall" class="CHoutboundDIV noShow">
+    <div id="RFtwo" class="noShow">
+     <button id="RFIBDH" class="IBOBC D R P" oncontextmenu="customMenu(this.id, event)" onclick="RFIBDH()" style="display: none;">DIDN'T HAVE</button>
+     <button id="PNLCBTN" class="IBOBC D R P C" oncontextmenu="customMenu(this.id, event)" onclick="PNLC(this.id)" style="display: none">CHECK COVERAGE <br>ADV PNLC</button>
+     <button id="TOTALBTN" class="IBOBC D R P C" oncontextmenu="customMenu(this.id, event)" onclick="TOTAL(this.id)" style="display: none">TO GET <br>TOTALS</button>
+     <button id="RFAUTHBTN" class="IBOBC D R P C" oncontextmenu="customMenu(this.id, event)" onclick="GAR(this.id)" style="display: none">TO GET <br>AUTH</button>
+    </div>
+    <div id="RFthree" class="noShow">
+      <button id="RFIBND" class="IBOBC D R P C" oncontextmenu="customMenu(this.id, event)" onclick="RFIBND(this.id)" style="display: none">DIAGNOSTIC</button>
+      <button id="RFIBNE" class="IBOBC D R P C" oncontextmenu="customMenu(this.id, event)" onclick="RFIBNE(this.id)" style="display: none">ESTIMATE</button>
+      <button id="RFIBNF" class="IBOBC D R P C" oncontextmenu="customMenu(this.id, event)" onclick="RFIBNF(this.id)" style="display: none">FAILURE</button>
+      <button id="RFIBNV" class="IBOBC D R P C" oncontextmenu="customMenu(this.id, event)" onclick="RFIBNV(this.id)" style="display: none">THE VEHICLE</button>
+    </div>
+    <div id="CHtwo" class="noShow">
+      <button id="TGAFOBTN" class="IBOBC D R P" oncontextmenu="customMenu(this.id, event)" none" onclick="TGAFO(this.id)" style="display: none">OOPC</button>
+      <button id="TGAFSBTN" class="IBOBC D R P" oncontextmenu="customMenu(this.id, event)" none" onclick="TGAFS(this.id)" style="display: none">SHIPPING</button>
+      <button id="TGAFBBTN" class="IBOBC D R P" oncontextmenu="customMenu(this.id, event)" none" onclick="TGAFB(this.id)" style="display: none">BOTH</button>
+    </div> 
+    <div id="CHthree" class="noShow">
+      <button id="TGAFOABTN" class="IBOBC D R P C" oncontextmenu="customMenu(this.id, event)" none" onclick="TGAFOA(this.id)" style="display: none">AUTHED</button>
+      <button id="TGAFODBTN" class="IBOBC D R P C" oncontextmenu="customMenu(this.id, event)" onclick="TGAFOD(this.id)" style="display: none">DECLINED</button>
+      <button id="TGAFOCBTN" class="IBOBC D R P C" oncontextmenu="customMenu(this.id, event)" onclick="TGAFOC(this.id)" style="display: none">CH WILL CALL BACK</button>
+    </div> 
+    <div id="CHfour" class="noShow">
+      <button id="TGAFSABTN" class="IBOBC D R P C" oncontextmenu="customMenu(this.id, event)" onclick="TGAFSA(this.id)" style="display: none">AUTHED</button>
+      <button id="TGAFSDBTN" class="IBOBC D R P C" oncontextmenu="customMenu(this.id, event)" onclick="TGAFSD(this.id)" style="display: none">DECLINED</button>
+      <button id="TGAFSCBTN" class="IBOBC D R P C" oncontextmenu="customMenu(this.id, event)" onclick="TGAFSC(this.id)" style="display: none">CH WILL CALL BACK</button>
+    </div> 
+    <div id="CHfive" class="noShow">
+      <button id="TGAFOSABTN" class="IBOBC D R P C" oncontextmenu="customMenu(this.id, event)" onclick="TGAFOSA(this.id)" style="display: none">AUTHED BOTH</button>
+      <button id="TGAFOSDSBTN" class="IBOBC D R P C" oncontextmenu="customMenu(this.id, event)" onclick="TGAFOSDS(this.id)" style="display: none">DECLINED SHIPPING <br>APPROVED OOP</button>
+      <button id="TGAFOSDBBTN" class="IBOBC D R P C" oncontextmenu="customMenu(this.id, event)" onclick="TGAFOSDB(this.id)" style="display: none">DECLINED REPAIRS</button>
+      <button id="TGAFOSCBTN" class="IBOBC D R P C" oncontextmenu="customMenu(this.id, event)" onclick="TGAFOSC(this.id)" style="display: none">CH WILL CALL BACK</button>
+    </div> 
+    <div id="NoAnsDiv" class="noShow">
+      <button id="NALVM" class="IBOBC D R P" oncontextmenu="customMenu(this.id, event)" onclick="NAV()" style="display: none">NO ANS<br>LEFT VM</button>
+      <button id="NANVM" class="IBOBC D R P" oncontextmenu="customMenu(this.id, event)" onclick="NAN()" style="display: none">NO ANS<br>NO VM</button>
+    </div> 
+  </div>
+</div>
+  <div id="context-menu">
+    <div class="item" onclick="editDisplay()">Display</div>
+    <div class="item" onclick="editContent()">Content</div>
+    <div class="item" onclick="editSize()">Size</div>
+    <div class="item" onclick="editPos()">Position</div>
+    <div class="item" onclick="showCustom()">New Button</div>
+    <div class="item" onclick="BuilderShow('o')">Toggle List</div>
+    <div class="item" onclick="tutorial()">Tutorial</div>
+  </div>
+<div class="CMeditDIV" id="disEdit" style="display:none; text-align: center;">
+  <div id="TitleDisplay" class="noShow"><b>Edit Display</b>
+  </div>
+  <div id="Instruction" class="noShow"> Highlight the text you would like to modify.<br>
+    Press the button to apply the effect<br>
+    Change the font size using the + and - buttons<br><br>
+  </div>
+  <button id="color" onclick="submitDisp('c')">Color Change</button>
+  <button id="bold" onclick="submitDisp('b')">Toggle Bold</button>
+  <button id="mimic" contenteditable></button>
+  <div id="fontSizer" class="noShow"></div>
+  <button id="plus" onclick="fontChange('1')"> <b>+</b> </button>
+  <button id="minus" onclick="fontChange('-1')"> <b>-</b> </button>
+  <button id="dispCancel" onclick="submitDisp('s')">Exit</button>
+  <button id="dispSubmit" onclick="submitDisp('s')">Submit</button>
+  <button id="dispDefault" onclick="submitDisp('d')">Default</button>
+</div>
+<div class="CMeditDIV" id="contEdit" style="display:none; text-align: center;">
+  <div id="ContentDisplay" class="noShow"><br><br><b>Edit Content</b></div>
+  <div id="ContentEditor" style="box-shadow:none; border:3px dashed var(--my-background-color); background:white;" contenteditable></div>
+  <button id="contSubmit" onclick="submitCont()">Submit</button>
+  <button id="contCancel" onclick="cancelCont()">Exit</button>
+  <button id="contDefault" onclick="defaultCont()">Default</button>
+</div>
+<div class="CMeditDIV" id="sizeEdit" style="display:none; text-align: center;">
+  <div id="heightMod" class="noShow" style="text-align: center;">
+    <button id="hplus" class="moveBTNS" onclick="heightChange('5')">&#x2B9E;</button><br><br>
+    <button id="hminus" class="moveBTNS" onclick="heightChange('-5')">&#x2B9C;</button>
+  </div>
+  <div id="widthMod" class="noShow" style="text-align: center;">
+    <button  id="wplus" class="moveBTNS" onclick="widthChange('5')">&#x2B9E;</button>
+    <button  id="wminus" class="moveBTNS" onclick="widthChange('-5')">&#x2B9C;</button>
+  </div>
+    <button id="sizeShow"></button>
+    <button id="sizeSubmit" onclick="sizeSubmit('s')">Submit</button>
+    <button id="sizeDefault" onclick="sizeSubmit('d')">Default</button>
+  <button id="sizeCancel" onclick="sizeSubmit()">Exit</button>
+</div>
+<div class="CMeditDIV" id="posEdit" style="display:none">
+  <button class="moveBTNS" id="upBTN" onclick="udMove('-5')">&#x2B9E;</button>
+  <button class="moveBTNS" id="downBTN" onclick="udMove('5')">&#x2B9C;</button>
+  <button class="moveBTNS" id="leftBTN" onclick="lrMove('-5')">&#x2B9C;</button>
+  <button class="moveBTNS" id="rightBTN" onclick="lrMove('5')">&#x2B9E;</button>
+  <button id="posSubmit" class="astext" onclick="posSubmit('s')">Submit</button>
+  <button id="posDefault" class="astext" onclick="posSubmit('d')">Default</button>
+  <button id="posCancel" class="astext" onclick="posSubmit('s')">Exit</button>
+</div>
+<div id="toggleMaster" style="display: none" class="noShow">
+ <div id="switchdivIndiv" class="noShow">
+  <div id="switchdivs9" class="noShow">
+    <label id="switchs9" class="switch"><input type="checkbox" id="s9" onclick="toggleConductor(this.id)"><span class="slider round"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspAll Buttons
+  </div>
+  <div id="switchdivs1" class="noShow">
+    <label id="switchs1" class="switch"><input type="checkbox" id="s1" onclick="toggleConductor(this.id)"><span class="slider round"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspPicture Request
+  </div>
+  <div id="switchdivs2" class="noShow">
+    <label id="switchs2" class="switch"><input type="checkbox" id="s2" onclick="toggleConductor(this.id)"><span class="slider round"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspRecords Request
+  </div>
+  <div id="switchdivs3" class="noShow">
+    <label id="switchs3" class="switch"><input type="checkbox" id="s3" onclick="toggleConductor(this.id)"><span class="slider round"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspRecds Req No Ansr
+  </div>
+  <div id="switchdivs4" class="noShow">
+    <label id="switchs4" class="switch"><input type="checkbox" id="s4" onclick="toggleConductor(this.id)"><span class="slider round"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspOOP Call No Ansr
+  </div>
+  <div id="switchdivs5" class="noShow">
+    <label id="switchs5" class="switch"><input type="checkbox" id="s5" onclick="toggleConductor(this.id)"><span class="slider round"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspCH Authed OOPC
+  </div>
+  <div id="switchdivs6" class="noShow">
+    <label id="switchs6" class="switch"><input type="checkbox" id="s6" onclick="toggleConductor(this.id)"><span class="slider round"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspTemplates
+  </div>
+  <div id="switchdivs7" class="noShow">
+    <label id="switchs7" class="switch"><input type="checkbox" id="s7" onclick="toggleConductor(this.id)"><span class="slider round"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspAuth Claim
+  </div>
+  <div id="switchdivs8" class="noShow">
+    <label id="switchs8" class="switch"><input type="checkbox" id="s8" onclick="toggleConductor(this.id)"><span class="slider round"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspStatus Note
+  </div>
+  <div id="switchdivs0" class="noShow">
+    <label id="switchs0" class="switch"><input type="checkbox" id="s0" onclick="toggleConductor(this.id)"><span class="slider round"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspGeneral Notes
+  </div>
+  <div id="switchdiva0" class="noShow">
+    <label id="switcha0" class="switch"><input type="checkbox" id="a0" onclick="toggleConductor(this.id)"><span class="slider round"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspParts Intake
+  </div>
+  <div id="switchdiva1" class="noShow">
+    <label id="switcha1" class="switch"><input type="checkbox" id="a1" onclick="toggleConductor(this.id)"><span class="slider round"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspCopy P&L
+  </div>
+  <div id="switchdiva2" class="noShow">
+    <label id="switcha2" class="switch"><input type="checkbox" id="a2" onclick="toggleConductor(this.id)"><span class="slider round"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspParts Buttons
+  </div>
+  <div id="switchdiva3" class="noShow">
+    <label id="switcha3" class="switch"><input type="checkbox" id="a3" onclick="toggleConductor(this.id)"><span class="slider round"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspLabor Buttons
+  </div>
+  <div id="switchdiva4" class="noShow">
+    <label id="switcha4" class="switch"><input type="checkbox" id="a4" onclick="toggleConductor(this.id)"><span class="slider round"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspReset
+  </div>
+  <div id="switchdivf0" class="noShow">
+    <label id="switchf0" class="switch"><input type="checkbox" id="u0" onclick="toggleConductor(this.id)"><span class="slider round"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspCUSTOM0
+  </div>
+  <div id="switchdivf1" class="noShow">
+    <label id="switchf1" class="switch"><input type="checkbox" id="u1" onclick="toggleConductor(this.id)"><span class="slider round"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspCUSTOM1
+  </div>
+  <div id="switchdivf2" class="noShow">
+    <label id="switchf2" class="switch"><input type="checkbox" id="u2" onclick="toggleConductor(this.id)"><span class="slider round"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspCUSTOM2
+  </div>
+  <div id="switchdivf3" class="noShow">
+    <label id="switchf3" class="switch"><input type="checkbox" id="u3" onclick="toggleConductor(this.id)"><span class="slider round"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspCUSTOM3
+  </div>
+  <div id="switchdivf4" class="noShow">
+    <label id="switchf4" class="switch"><input type="checkbox" id="u4" onclick="toggleConductor(this.id)"><span class="slider round"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspCUSTOM4
+  </div>
+  <div id="switchdivf5" class="noShow">
+    <label id="switchf5" class="switch"><input type="checkbox" id="u5" onclick="toggleConductor(this.id)"><span class="slider round"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspCUSTOM5
+  </div>
+  <div id="switchdivf6" class="noShow">
+    <label id="switchf6" class="switch"><input type="checkbox" id="u6" onclick="toggleConductor(this.id)"><span class="slider round"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspCUSTOM6
+  </div>
+  <div id="switchdivf7" class="noShow">
+    <label id="switchf7" class="switch"><input type="checkbox" id="u7" onclick="toggleConductor(this.id)"><span class="slider round"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspCUSTOM7
+  </div>
+  <div id="switchdivf8" class="noShow">
+    <label id="switchf8" class="switch"><input type="checkbox" id="u8" onclick="toggleConductor(this.id)"><span class="slider round"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspCUSTOM8
+  </div>
+  <div id="switchdivf9" class="noShow">
+    <label id="switchf9" class="switch"><input type="checkbox" id="u9" onclick="toggleConductor(this.id)"><span class="slider round"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspCUSTOM9
+  </div>
+  <div id="switchp3" class="noShow"> &nbsp</div>
+ </div>
+</div>
+<div id="custBtns" class="noShow">
+  <div id="custBtn0" class="noShow u0dispStat">
+    <button id="cust0" class="custom0 D R P C X"  oncontextmenu="customMenu(this.id, event)" onclick="conjunctionJunction(this.id)">CUSTOM0</button>
+  </div>
+  <div id="custBtn1" class="noShow u1dispStat">
+    <button id="cust1" class="custom0 D R P C X" oncontextmenu="customMenu(this.id, event)" onclick="conjunctionJunction(this.id)">CUSTOM1</button>
+  </div>
+  <div id="custBtn2" class="noShow u2dispStat">
+    <button id="cust2" class="custom0 D R P C X" oncontextmenu="customMenu(this.id, event)" onclick="conjunctionJunction(this.id)">CUSTOM2</button>
+  </div>
+  <div id="custBtn3" class="noShow u3dispStat">
+    <button id="cust3" class="custom0 D R P C X" oncontextmenu="customMenu(this.id, event)" onclick="conjunctionJunction(this.id)">CUSTOM3</button>
+  </div>
+  <div id="custBtn4" class="noShow u4dispStat">
+    <button id="cust4" class="custom0 D R P C X" oncontextmenu="customMenu(this.id, event)" onclick="conjunctionJunction(this.id)">CUSTOM4</button>
+  </div>
+  <div id="custBtn5" class="noShow u5dispStat">
+    <button id="cust5" class="custom0 D R P C X" oncontextmenu="customMenu(this.id, event)" onclick="conjunctionJunction(this.id)">CUSTOM5</button>
+  </div>
+  <div id="custBtn6" class="noShow u6dispStat">
+    <button id="cust6" class="custom0 D R P C X" oncontextmenu="customMenu(this.id, event)" onclick="conjunctionJunction(this.id)">CUSTOM6</button>
+  </div>
+  <div id="custBtn7" class="noShow u7dispStat">
+    <button id="cust7" class="custom0 D R P C X" oncontextmenu="customMenu(this.id, event)" onclick="conjunctionJunction(this.id)">CUSTOM7</button>
+  </div>
+  <div id="custBtn8" class="noShow u8dispStat">
+    <button id="cust8" class="custom0 D R P C X" oncontextmenu="customMenu(this.id, event)" onclick="conjunctionJunction(this.id)">CUSTOM8</button>
+  </div>
+  <div id="custBtn9" class="noShow u9dispStat">
+    <button id="cust9" class="custom0 D R P C X" oncontextmenu="customMenu(this.id, event)" onclick="conjunctionJunction(this.id)">CUSTOM9</button>
+  </div>
+</div>
+<div id="buttonSpot" class="noShow"></div>
+  <div id="infoDiv1" style="display: none">
+    <b>Button Types:</b><br><br>
+    <b>Solo Note:</b> This is for adding text to the text area.<br>
+    This will not clear the text area or copy to the clipboard.<br>
+    There will be space before and after the inserted text.<br><br>
+    <b>Send Directly to Clipboard:</b> This will send your designated<br>
+    text to the clipboard. It will not display anything or affect <br>
+    any other text.<br><br><br>
+    <b>Note Chains</b><br><br>
+    <b>Primary Note</b>: This is for a starting a Chain Note that you can build upon<br>
+    This will clear the text area and insert your text but not copy it.<br><br>
+    <b>Link Note:</b> This is for a note used to continue the Chain.<br>
+    This will add text to the end of a Starter Note or another Link Note.<br><br>
+    <b>End Note:</b> This is for the last note in a Chain. This will add text<br>
+    to the existing note and copy all of it to the clipboard.<br>
+    <button id="infoDone" class="infoBtn" onclick="infoDone()">Ready</button>
+    <button id="infoCancel" class="infoBtn" onclick="infoCancel()">Cancel</button>
+  </div>
+  <div id="infoDiv2" style="display: none"><br><br>
+    <div id="radioLine" class="noShow">
+      <b>Select the Button Type</b><br><br>
+      <input type="radio" id="SOLO" name="buttonType" value="SOLO">
+      <label for="SOLO">Solo Note</label><br>
+      <input type="radio" id="STCB" name="buttonType" value="STCB">
+      <label for="STCB">Send Directly to Clipboard</label><br>
+      <input type="radio" id="PRIN" name="buttonType" value="PRIN">
+      <label for="PRIN">Primary Note</label><br>
+      <input type="radio" id="LINK" name="buttonType" value="LINK">
+      <label for="LINK">Link Note</label><br>
+      <input type="radio" id="ENDN" name="buttonType" value="ENDN">
+      <label for="ENDN">End Note</label><br>
+   </div>
+    <p><textarea id="BtnDisplay" placeholder="Button Display..." name="btnDisplay" rows="1" cols="35"></textarea></p>
+    <p><textarea id="BtnContent" placeholder="Note Content..." name="btnContent" rows="5" cols="35"></textarea></p>
+    <button id="infoCancel2" class="infoBtn" onclick="infoCancel2()">Cancel</button>
+    <button id="infoDone2" class="infoBtn" onclick="infoDone2()">Done</button>
+  </div>
+</div>
+<div id="areaOne">
+<textarea autocomplete="off" id="textarea1" class="textareamain" name="name" wrap="off">CONTACT:&nbsp&nbsp
+PAYMENT:&nbsp&nbsp
+ZIPCODE:&nbsp&nbsp
+MILEAGE:&nbsp&nbsp
+DISTANCE:&nbsp&nbsp
+TIME:&nbsp&nbsp</textarea>
+<button id="CopyPaymentBTN" class="astext" onclick="CopyIntakeForm('1')">PAYMENT: </button>
+<button id="CopyZipBTN" class="astext" onclick="CopyIntakeForm('2')">ZIPCODE: </button>
+<button id="CopyMileBTN" class="astext" onclick="CopyIntakeForm('3')">MILEAGE: </button>
+</div>
+<textarea autocomplete="off" id="textarea2" class="textspace" name="name"></textarea>
+<textarea autocomplete="off" id="textarea3" class="hideME noShow" name="name"></textarea>
+<textarea autocomplete="off" id="textarea4" class="hideME noShow"name="name"></textarea>
+<textarea autocomplete="off" id="textarea5" class="hideME noShow" name="name"></textarea>
+<textarea autocomplete="off" id="textareadata" class="hideME noShow" name="name"></textarea>
+<textarea style="display: none;" id="EDITarea"></textarea>
+<div id="div6" class="div6" style="display: none">    
+  REG OIL: 7.13<br>
+  SYN OIL: 11.89<br><br>
+
+  DEX III: 11.68<br>
+  ATF+4: 11.99<br>
+  DEX VI/SYN: 12.82<br>
+  MERC V: 13.16<br>
+  CVT: 14.10<br>
+  REG GEAR OIL: 12.91<br>
+  SYN GEAR OIL: 18.66<br>
+  FRIC MODIFIER: 10.59<br><br>
+
+  PS FLUID: 9.16</b><br><br>
+
+  DOT 3: 6.82 PER 12 OZ</b><br>
+  DOT 4: 7.32 PER 12 OZ<br><br>
+
+  REG COOLANT: 17.82<br>
+  LONG LIFE COOLANT: 20.49<br><br>
+
+  R134A: 16.38/LB 1.02/OZ<br>
+  R1234YF: 100.33/LB 6.27/OZ<br>
+  PAG OIL: 13.91/OZ<br>
+  AC UV DYE: 11.71/OZ<br>
+  FLUSH SOLVANT: 7.66/OZ<br><br>
+
+  ENG/TRANS DYE: 12.49/OZ<br>
+  SEALANT/RTV: 13.37 PER 3.5OZ<br>
+</div>
+<div id="NUMBERS" class="div4 noShow"><b>PAYMENTS FAX<br>303-456-1039<br><br>
+ RECORDS FAX<br>303-420-4722<br><br>
+ CAR SHIELD<br>800-430-1705<br><br>
+ ROADSIDE ASSITANCE<br>866-222-7869<br><br>
+ GENERAL<br>800-531-1925</b>
+</div>
+<div id="glowDiv" class="noShow" oncontextmenu="customMenu(this.id, event)"></div>
+<div id="myNav0" class="overlay noShow">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">Exit</a>
+  <div id="myNavHead" class="overlay-content noShow" style="margin-top:30px;">Welcome to the Tutorials!<br></div>
+  <div id="myNavHead1" class="overlay-content noShow" style="margin-top:10px;">Click a Tutorial to Get Started.</div>
+ <div id="tutHolder" class="overlay-content noShow">
+    <a href="javascript:void(0)" class="MainTutbtn" onclick="nextNav('myNav1')"><span class="TutChoice">&#11214 Parts and Labor Intake &#11214</span></a><br><br>
+    <a href="javascript:void(0)" class="MainTutbtn" onclick="nextNav('myNav2')"><span class="TutChoice">&#11214 Main Buttons and Templates &#11214</span></a><br><br>
+    <a href="javascript:void(0)" class="MainTutbtn" onclick="nextNav('myNav3')"><span class="TutChoice">&#11214 Appearance and Customization &#11214</span></a>
+  </div>
+</div>
+<div id="myNav1" class="overlay noShow">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">Exit</a>
+  <a href="javascript:void(0)" class="nextbtn" onclick="nextNav('myNav1')">Next</a>
+  <div id="nav1in0" class="overlay-content rightsec noShow" style="margin-top:30px; height:20%;">
+      <b>New claims</b><br><br>
+      When a repair facility calls in to start a claim, enter<br>
+      the information as it becomes available into the top left<br>
+      text area.<br><br>
+      The words PAYMENT, ZIP CODE, and MILEAGE are bold.<br><br>
+      If you click on them, the text next to it will be copied<br><br>
+      Use CRTL+V to paste wherever<br>
+  </div>
+  <div id="nav1in1" class="overlay-content rightsec noShow" style="height:8%;display: none;">
+    <b>Parts Intake</b><br><br>
+    Under that is the parts intake section.<br><br>
+  </div>
+  <div id="nav1in2" class="overlay-content rightsec noShow" style="height:16%;display: none;">
+    For multiple failures, click the NEW PART button.<br><br>
+    This will add another part name box.<br>
+    There can be up to 7 at once.<br><br>
+    Use the additional boxes for failed components or<br>
+    for additional related items like gaskets and seals.
+  </div>
+  <div id="nav1in3" class="overlay-content rightsec slim noShow" style="display: none;">
+    ***FOR AM PARTS, LEAVE MSRP BLANK***<br><br>
+    For AM parts, once you have the part name,<br>
+    number, and RF price entered, click SEND PART.<br>
+    This will send an AM part template to the lower<br>
+    text area.
+  </div>
+  <div id="nav1in4" class="overlay-content rightsec short noShow" style="height:6%;display: none;">
+    If you enter OEM MSRP, it will send 
+    <br>a completed OEM template.
+  </div>
+  <div id="nav1in5" class="overlay-content rightsec short noShow" style="display: none;">
+    If the OEM MSRP is over $250.00, it will<br>
+    automatically add a PA sourcing template<br>
+    to the end of the OEM template.
+  </div>
+  <div id="nav1in6" class="overlay-content rightsec short noShow" style="display: none;">
+    The LABOR and DIAG buttons will send a template<br>
+    with the part name filled out. If they are clicked<br>
+    with no name entered, they will send a blank template.<br>
+  </div>
+  <div id="nav1in7" class="overlay-content rightsec short noShow" style="display: none;">
+    The NEXT PART button will shift the parts in the list<br>
+    down, discard the now unused part box, and clear the<br>
+    template boxes.
+  </div>
+  <div id="nav1in8" class="overlay-content leftsec short noShow" style="display: none;">
+    And of course, if that sounds like it won't work<br>
+    with your style, the buttons to the right send blank<br>
+    templates, among other things.
+  </div>
+  <div id="nav1in9" class="overlay-content rightsec noShow" style="display: none;">
+    The RESET button will set all templates and text<br>
+    boxes in the entire program back to starting<br>
+    positions. The Copy P&L button copies the contents<br>
+    of the lower text area. The $ button shows the<br>
+    current fluid prices for bulk fluids approved by<br>
+    AAS. Press it again to hide the list. Feel free to<br>
+    test those now, if you like.
+  </div>
+</div>
+<div id="myNav2" class="overlay noShow">
+  <a href="javascript:void(0)" class="nextbtn" onclick="nextNav('myNav2')">Next</a>
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav('myNav2')">Exit</a>
+  <div id="nav2in0" class="overlay-content authTut noShow" style="display:none;margin-top:25px;margin-left:15px;text-align:left;">
+    When the time comes in your<br>
+    procedure for the auth note, <br>
+    click Authorize Claim
+  </div>
+  <div id="nav2in1" class="overlay-content authTut noShow" style="display: none;">
+    Select all options that apply to your claim.
+  </div>
+  <div id="nav2in2" class="overlay-content authTut noShow" style="display: none;">
+    Indicate whether or not anything was requested. <br>
+  </div>
+  <div id="nav2in3" class="overlay-content authTut noShow" style="display: none;">
+    Indicate if there were any concerns involving<br>
+    shipping, OOPC, or any non-covered components.
+  </div>
+  <div id="nav2in4" class="overlay-content authTut noShow" style="display: none;">
+    If there is OOPC involved, select if the OOPC is from<br>
+    parts, labor, or both and enter the OOPC amount.<br>
+  </div>
+  <div id="nav2in5" class="overlay-content authTut noShow" style="display: none;">
+    A note detailing all relevant information including OOPC,<br>
+    repair facility payment info, verifications, and more<br>
+    is compiled, copied, and ready to be pasted into your CMS note.<br>
+  </div>
+  <div id="nav2in6" class="overlay-content authTut noShow" style="display: none;">
+    Status Note<br>
+    To generate a status note, click Status Note,<br>
+  </div>
+  <div id="nav2in7" class="overlay-content authTut noShow" style="display: none;">
+    Enter the information and click Submit.<br>
+    Paste the note into CMS.
+  </div>
+  <div id="nav2in8" class="overlay-content authTutLeft noShow" style="display: none; margin-top:325px;">
+    The other buttons are very simple.<br>
+    When clicked, they send predefined text<br>
+    directly to the clipboard, ready to be pasted.<br>
+    Feel free to give them a try using the text area below.
+  </div>
+  <div id="nav2in9" class="overlay-content authTut noShow" style="display: none;">
+    The TEMPLATES button shows 4 more buttons.<br><br>
+    The Statement Questions, Review Note, <br>
+    and Inspection template send a template<br>
+    to your clipboard which you paste and edit<br>
+    to tailor to your claim.<br><br>
+    The PT Transfer button is a little more<br>
+    involved. Clicking Next will show an already<br>
+    complete template. Click 'Submit' once in<br>
+    the template to continue the tutorial.
+  </div>
+  <div id="nav2in10" class="overlay-content authTut noShow" style="display:none;">
+     After entering the information and clicking<br>
+     'Submit', a completed PT Transfer template will<br>
+     be ready to paste to your notes. To see the one<br>
+     that was just submitted, paste to the text area.
+  </div>
+  <div id="nav2in11" class="overlay-content authTut noShow" style="display: none;">
+    These buttons are used to build dynamic notes<br>
+    based on the selections made. They cover the<br>
+    most common scenarios which primarily consist<br>
+    of repair facility inbound calls and outbound<br>
+    calls to the CH for auth.
+  </div>
+  <div id="nav2in12" class="overlay-content authTut X noShow" style="display: none;text-align:left;">
+    For example,<br>
+    If you called the CH to get auth for<br>
+  </div>
+  <div id="nav2in15" class="overlay-content authTut noShow" style="display: none;">
+    The sequences essentialy read like a sentence <br>
+    missing a few words here and there.<br><br>
+    The notes produced have most if not all of the<br>
+    relevant info so they can be put directly into<br>
+    CMS or easily edited prior to saving.
+  </div>
+</div>
+<div id="myNav3" class="overlay noShow">
+  <a href="javascript:void(0)" class="nextbtn" onclick="nextNav('myNav3')">Next</a>
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav('myNav3')">Exit</a>
+  <div id="nav3in0" class="overlay-content appearTut noShow" style="display: none;">
+    All buttons can have their size, position, and<br>
+    display(the text on the front of the button)<br>
+    changed and many can have their content (what the<br>
+    text output is) changed as well.<br><br>
+    When you want to change the display, content, size, or position,<br>
+    right click on the button and select the attribute to modify.
+  </div>
+  <div id="nav3in1" class="overlay-content appearTut noShow" style="display: none;">
+    <b>Display</b><br><br>
+    You can change the size, boldness, color, and the text itself.<br>
+    The preview will show your changes as you make them.<br><br>
+    The default button will change the text back to the original.
+  </div>
+  <div id="nav3in2" class="overlay-content appearTut noShow" style="display: none;">
+    <b>Content</b><br><br>
+    Editing the content is fairly self-explanitory<br>
+    It will output everything entered including spaces and carriage returns.<br>
+    Keep this in mind when editing. Also, avoid special characters as they may <br>
+    result in unintended operations or output.
+  </div>
+  <div id="nav3in3" class="overlay-content appearTut noShow" style="display: none;">
+    <b>Size</b><br><br>
+    The arrows near the top change width and<br>
+    the arrows to the left change height.<br>
+    Default will make the button the original size.
+  </div>
+  <div id="nav3in4" class="overlay-content appearTut X noShow" style="display: none;">
+    <b>Position</b><br><br>
+    Use the arrows on the controller to<br>
+    position the button wherever you like.<br>
+    The button actively being moved will glow red.<br>
+    The default selection will place the button<br>
+    back to its default location.
+  </div>
+  <div id="nav3in5" class="overlay-content appearTut noShow" style="display: none;">
+    <b>New Buttons</b><br><br>
+    There are 10 slots available for custom buttons<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    To create one, select New Button from the<br>
+    right click menu or the Settings Menu<br><br>
+  </div>
+  <div id="nav3in6" class="overlay-content appearTut noShow" style="display: none;">
+    There are 5 types of buttons you can create<br><br>
+    Their descriptions explain how they work
+  </div>
+  <div id="nav3in7" class="overlay-content appearTut noShow" style="display: none;">
+    Select the type of button you would like to create<br>
+    enter the display and content, and select Done<br><br>
+ </div>
+  <div id="nav3in7a" class="overlay-content appearTut Low noShow" style="display: none;">
+    All of the attributes can be modified using the right click menu.<br>
+    The only option that can't be changed once selected is the type of button.
+  </div>
+  <div id="nav3in8" class="overlay-content appearTut X noShow" style="display: none;">
+    If you want to make certain buttons or button<br>
+    groups invisible, select Toggle List from<br>
+    the right click menu or the Settings Menu.
+  </div>
+  <div id="nav3in9" class="overlay-content appearTut noShow" style="display: none;">
+    Appearance Options<br><br>
+    Open the Settings Menu and select Appearance.<br><br>
+    Select your own custom colors using the color selector<br>
+    tool or use one of the Presets provided.<br><br>
+    Page Background is the color behind everything<br><br>
+    Page Accent is the color of the gradient in the corners of the buttons and displays.<br><br>
+    Light Shadow appears in the upper left hand corner of the buttons as a highlight and<br> 
+    appears near the fringes of all items to provide smoother shadow transitions<br><br>
+    Dark Shadow also appears in the upper left hand corner of buttons<br>
+    and acts as the base for the shadow gradient of all items.<br><br>
+    Entering your name will display it in the bottom right corner of the page.<br><br>
+    Name Color is the color of the text that your name will appear.<br><br>
+    Outline Color is the color that will immediatley surround your name.<br><br>
+    Glow color is the color that will emanate from your name.<br><br>
+  </div>
+  <div id="nav3in10" class="overlay-content appearTut noShow" style="display: none;">
+  </div>
+</div>
+
+<script>
+var newauthLine1 = "Verified failures using RF diagnostic.";
+var newauthLine2 = "Contract has coverage for failed components.";
+var newauthLine3 = "Verified OEM parts using Forte and AM parts using PA.";
+var newauthLine4 = "Verified labor using Pro Demand.";
+var newauthLine5 = "Verified payment info with repair facility at: ";
+
+document.getElementById("auth1").value = "Using repair facility OEM parts at or under $250.00.";
+document.getElementById("auth2").value = "Using repair facility parts at or under sourcing MCE.";
+document.getElementById("auth3").value = "Using sourcing MCE as a credit toward repair facility parts.";
+document.getElementById("auth4").value = "Using sourcing MCE as a credit toward repair facility parts or shipping in.";
+document.getElementById("auth5").value = "Adjusted price to reasonable amount near MCE.\rThis was done considering all factors including claim delays,\rshipping costs, liability for future failures, time and mileage\rin coverage, number of prior claims and their cost, etc.";
+
+var inspAuth1 = "No inspection needed as RF diagnostic matches CH concern.";
+var inspAuth2 = "Sent inspection to verify failures.\rReviewed report and inspection photos.\rInspection review note is completed.";
+var inspAuth3 = "Requested and reviewed photos from repair facility.\rPhoto review note is completed.";
+var recordsAuth1 = "No records requested as history will not change claim decision.\rVehicle is not in waiting period.\rConcern is not maintenance related.\rNo prior related claims.\rNo recalls, TSBs, or mileage concerns.";
+var recordsAuth2 = "Requested and reviewed records and statement.\rRecord review note is completed.";
+var requestedAuth1 = "After reviewing all relevant documentation, we are moving forward with verified failures.";
+
+var oopcsAuth1 = "Need to review OOPC of $";
+var oopcsAuth2a = " with contract holder.";
+var oopcsAuth2b = " and shipping option with contract holder.";
+var oopcsAuth2c = "OOPC is due to differences in ";
+
+var oopcsAuth3 = "Need to review shipping option with contract holder.";
+var oopcsAuth3a = "Have not given authorization info to RF at this time.";
+
+var oopcsAuth4 = "Contract holder has no OOPC besides deductible.";
+var oopcsAuth4a = "Gave authorization info and payment instructions to RF.";
+
+var noncovAuth1 = "Will inform CH of non-covered components";
+
+
+
+
+
+var PicturesReuest = "Requesting photos from RF to verify failure and avoid inspection delay.\rInforming RF to include pics of all 4 corners of the vehicle, VIN plate, odometer, and pictures of the failure.\rSent request via SRS action button.";
+var RecordsRequested = "Requesting CH statement regarding issues.\rRequesting past 12 months of service records from CH.\rSent records request using SRS action button.\rWill call CH to inform.";
+var InspectionTemplate = "Please verify all failures.\rPlease contact 1-2 hours prior to arrival.\rContact:   \rPhone:   \rEmail:   ";
+var StatementTemplate = "What happened:   \rWhen did the issue first occur:   \rHad the issue occurred before:   \rIf yes, when:   \rAny warning lights:   \rAny noise, smoke, or smell:   \rHow long has the CH owned the vehicle:   \rApproximate mileage when CH purchased:   \rWas vehicle towed to RF:   \rFrom where and by whom:   \r";
+var ReviewNote = "Reviewed inspection photos and report.\rReviewed photos sent by repair facility.\rVerified vin.\rVerified mileage.\rNo indication of commercial use.\rNo indication of modification.\r\r"
+var PtTransfer1 = "Is the repair facility able to diagnose to cause of failure and overhaul if needed?   ";
+var PtTransfer2 = "Has the repair facility ever serviced the vehicle before?   ";
+var PtTransfer3 = "Can a test drive be performed if needed?   ";
+var PtTransfer4 = "Did the repair facility tow the vehicle?   ";
+var PtTransfer5 = "Has the cause of failure been identified?   ";
+var PtTransfer6 = "Does the repair facility have an itemized estimate available?   ";
+var PtTransfer7 = "Has the repair facility's info and contact info been verified?   ";
+var PtTransfer8 = "What is the preferred method of contact?   ";
+var PtTransfer9 = "Have the PT claim expectations been reviewed with the repair facility contact?   ";
+var PtTransfer10 = "Have you provided the repair facility with the assigned adjusters name, direct extension, and e-mail?   ";
+var PtTransfer11 = "Is there any other relevant info that will assist the adjuster?   ";
+var NoAnswerOOPC = "Called CH for OOPC auth.\rNo answer – left voicemail.\rTasked to CS callbacks.";
+var ChAuthedOOPC = "Called CH for OOPC and shipping auth.\rCH has approved OOPC.\rCH has approved shipping.";
+var NoAnsRecdsRqst = "Called CH to request records.\rCalled CH to request statement.\rNo answer – left voicemail.\rTasked to CS callbacks.";
+var NewOEMpart = "Verified OEM PN:   \rVerified MSRP:   \rRF Price:   \r\r";
+var OemOver250 = "PA PN:   \rPA List:   \rPA Cost:   \rCore: NA\r\r";
+var NewAMpart = "RF AM PN:   \rRF Price:   \rPA PN:   \rPA List:   \rPA Cost:   \rCore: NA\r\r";
+var BulkFluid = "BULK:   \rRF Price:   \rFPS Allows:   \r\r";
+var Labor = "RF Asking:   \rPD Approved:   \r\r";
+var Diag = "Diag\rRF Asking:   \rPD Approved:   \r\r";
+var EvacRechrge = "Evac and Recharge\rRF Asking:   \rPD Approved:   1.4\r\r";
+var Alignment = "Alignment\rRF Asking:   \rPD Approved:   \r\r";
+var NoPAIHSourcing = "Nothing available in PA.\rSent to in house sourcing.\r\r";
+var ToEdit;
+var ButDidYouDie = "no";
+var IDset = [];
+var imBusy = "false";
+
+
+  var resizeNode = document.querySelectorAll(".R");
+  var displayNode = document.querySelectorAll(".D");
+  var moveNode = document.querySelectorAll(".P");
+  var contentNode = document.querySelectorAll(".C");
+
+
+  var buttonNode = document.querySelectorAll("button");
+  var idNode = document.querySelectorAll('*[id]');
+  var divNode = document.getElementsByTagName("div");
+  var menuNode = document.querySelectorAll(".CMeditDIV");
+  var showNode = document.querySelectorAll('[class$="dispStat"]');
+
+  var menuList = Array.from(menuNode);
+  var showList = Array.from(showNode);
+  var divList = Array.from(divNode);
+  var idList =  Array.from(idNode);
+  var buttonList = Array.from(buttonNode);
+  var moveList = Array.from(moveNode);
+  var resizeList = Array.from(resizeNode);
+  var displayList = Array.from(displayNode);
+  var contentList = Array.from(contentNode);
+
+  var theMenu = document.getElementById("LOCK1");
+  var ETPHONEHOME = document.getElementById("PHONE");
+  var BtnBuilder = document.getElementById("BtnBuilder");
+  var buttonMaker = document.getElementById("buttonMaker");
+
+var AUTHFOR = document.getElementById("TGAFBTN");
+var AUTHFORO = document.getElementById("TGAFOBTN");
+var AUTHFORS = document.getElementById("TGAFSBTN");
+var AUTHFORB = document.getElementById("TGAFBBTN");
+var OOPAUTHED = document.getElementById("TGAFOABTN");
+var OOPDENY = document.getElementById("TGAFODBTN");
+var OOPCB = document.getElementById("TGAFOCBTN");
+var SHIPAUTHED = document.getElementById("TGAFSABTN");
+var SHIPDENY = document.getElementById("TGAFSDBTN");
+var SHIPCB = document.getElementById("TGAFSCBTN");
+var OASAUTHED = document.getElementById("TGAFOSABTN");
+var OASDENYSHIP = document.getElementById("TGAFOSDSBTN");
+var OASDENYBOTH = document.getElementById("TGAFOSDBBTN");
+var OASCB = document.getElementById("TGAFOSCBTN");
+var LEFTVM = document.getElementById("NALVM");
+var NOVM = document.getElementById("NANVM");
+var VMREASON = "TempString";
+var other = document.getElementById("other");
+var RFINBOUND = document.getElementById("RFIBBTN");
+var CHOUTBOUND = document.getElementById("CHOBBTN");
+var DIDNTHAVE = document.getElementById("RFIBDH");
+var DIAGNOSTIC = document.getElementById("RFIBND");
+var ESTIMATE = document.getElementById("RFIBNE");
+var FAILURE = document.getElementById("RFIBNF");
+var VEHICLE = document.getElementById("RFIBNV");
+var RFPNLC = document.getElementById("PNLCBTN");
+var RFTOTALS = document.getElementById("TOTALBTN");
+var RFAUTH = document.getElementById("RFAUTHBTN");
+var DaddySaysSo = false;
+var SNIPPETAREA = document.getElementById("Snippings");
+var SNIPPETDIV = document.getElementById("snipbox");
+
+function RESET(){
+  document.getElementById("textarea3").value = document.getElementById("textarea1").value + "\r\r" + document.getElementById("textarea3").value;
+  document.getElementById("textarea3").value += document.getElementById("textarea2").value;
+  document.getElementById("textareadata").value = document.getElementById("textareadata").value + "\r\r" + document.getElementById("textarea3").value;
+  let textarea = document.getElementById("textarea3");
+  textarea.select();
+  document.execCommand("copy");
+  document.getElementById("textarea3").value = "";
+  document.getElementById("textarea2").value = "";
+  document.getElementById("textarea1").value = "CONTACT:   \rPAYMENT:   \rZIPCODE:   \rMILEAGE:   \rDISTANCE:   \rTIME:   ";
+  document.getElementById("partname1").value = "";
+  document.getElementById("partname2").value = "";
+  document.getElementById("partname3").value = "";
+  document.getElementById("partname4").value = "";
+  document.getElementById("partname5").value = "";
+  document.getElementById("partname6").value = "";
+  document.getElementById("partname7").value = "";
+  document.getElementById("partnum").value = "";
+  document.getElementById("rfprice").value = "";
+  document.getElementById("msrp").value = "";
+  document.getElementById("partname2").style.display = "none";
+  document.getElementById("partname3").style.display = "none";
+  document.getElementById("partname4").style.display = "none";
+  document.getElementById("partname5").style.display = "none";
+  document.getElementById("partname6").style.display = "none";
+  document.getElementById("partname7").style.display = "none";
+  RFINBOUND.style.display = "inline-block";
+  AUTHFOR.style.display = "inline-block";
+  DIDNTHAVE.style.display = "none";
+  DIAGNOSTIC.style.display = "none";
+  ESTIMATE.style.display = "none";
+  FAILURE.style.display = "none";
+  VEHICLE.style.display = "none";
+  RFPNLC.style.display = "none";
+  RFTOTALS.style.display = "none";
+  RFAUTH.style.display = "none";
+  AUTHFORO.style.display = "none";
+  AUTHFORS.style.display = "none";
+  AUTHFORB.style.display = "none";
+  OOPAUTHED.style.display = "none";
+  OOPDENY.style.display = "none";
+  OOPCB.style.display = "none";
+  SHIPAUTHED.style.display = "none";
+  SHIPDENY.style.display = "none";
+  SHIPCB.style.display = "none";
+  OASAUTHED.style.display = "none";
+  OASDENYSHIP.style.display = "none";
+  OASDENYBOTH.style.display = "none";
+  OASCB.style.display = "none";
+  SNIPPETAREA.style.display = "none";
+  document.getElementById("Snippings").value = "";
+  newpartcount = 2;
+  document.getElementById("transferTemplate").style.display = "none";
+  document.getElementById("statNote").style.display = "none";
+  document.getElementById("newAuthstyle").style.display = "none";
+  document.getElementById("TPDiv").style.display = "none";
+}
+
+  let newpartcount = 2;
+  var menuOpen = false;
+
+function checkOpen() {
+  var TPDiv = document.getElementById("TPDiv");
+  var statNote = document.getElementById("statNote");
+  var Snippings = document.getElementById("Snippings");
+  var RFIBDH = document.getElementById("RFIBDH");
+  var RFIBND = document.getElementById("RFIBND");
+  var TGAFOBTN = document.getElementById("TGAFOBTN");
+  var TGAFOABTN = document.getElementById("TGAFOABTN");
+  var TGAFSABTN = document.getElementById("TGAFSABTN");
+  var TGAFOSABTN = document.getElementById("TGAFOSABTN");
+  var newAuthstyle =   document.getElementById("newAuthstyle");
+
+  if (Snippings.style.display == "inline-block") {
+    return true;
+  } else if (RFIBDH.style.display == "inline-block") {
+    return true;
+  } else if (TGAFOSABTN.style.display == "inline-block") {
+    return true;
+  } else if (RFIBND.style.display == "inline-block") {
+    return true;
+  } else if (TGAFOBTN.style.display == "inline-block") {
+    return true;
+  } else if (TGAFOABTN.style.display == "inline-block") {
+    return true;
+  } else if (TGAFSABTN.style.display == "inline-block") {
+    return true;
+  } else if (statNote.style.display == "inline-block") {
+    return true;
+  } else if (newAuthstyle.style.display == "inline-block") {
+    return true;
+  } else if (TPDiv.style.display == "inline-block") {
+    return true;
+  } else {
+  return false;
+  }
+}
+
+function ShowTemps() {
+  var TPDiv = document.getElementById("TPDiv");
+  var isOpen = checkOpen();
+  if (TPDiv.style.display == "inline-block" || isOpen) {
+    TPDiv.style.display = "none";
+    return;
+  }
+  TPDiv.style.display = "inline-block";
+}
+
+function MENU() {
+  document.getElementById("EDITarea").value = "";
+  if (!menuOpen) {
+    theMenu.innerText = "\u2666 Close \u2666";
+
+    appearance.style.top = "45px";
+    appearance.style.color = "black";
+    appearance.style.textShadow = "1px 1px 1px var(--glow-outline-color), -1px -1px 1px var(--glow-outline-color), -1px 1px 1px var(--glow-outline-color),  1px -1px 1px var(--glow-outline-color), 0px 0px 8px var(--my-glow-color), 0px 0px 11px var(--my-glow-color), 0px 0px 14px var(--my-glow-color), 0px 0px 17px var(--my-glow-color), 0px 0px 20px var(--my-glow-color), 0px 0px 23px var(--my-glow-color), 0px 0px 26px var(--my-glow-color)";
+
+    BtnBuilder.style.top = "70px";
+    BtnBuilder.style.color = "black";
+    BtnBuilder.style.textShadow = "1px 1px 1px var(--glow-outline-color), -1px -1px 1px var(--glow-outline-color), -1px 1px 1px var(--glow-outline-color),  1px -1px 1px var(--glow-outline-color), 0px 0px 8px var(--my-glow-color), 0px 0px 11px var(--my-glow-color), 0px 0px 14px var(--my-glow-color), 0px 0px 17px var(--my-glow-color), 0px 0px 20px var(--my-glow-color), 0px 0px 23px var(--my-glow-color), 0px 0px 26px var(--my-glow-color)";
+    
+    buttonMaker.style.top = "95px";
+    buttonMaker.style.color = "black";
+    buttonMaker.style.textShadow = "1px 1px 1px var(--glow-outline-color), -1px -1px 1px var(--glow-outline-color), -1px 1px 1px var(--glow-outline-color),  1px -1px 1px var(--glow-outline-color), 0px 0px 8px var(--my-glow-color), 0px 0px 11px var(--my-glow-color), 0px 0px 14px var(--my-glow-color), 0px 0px 17px var(--my-glow-color), 0px 0px 20px var(--my-glow-color), 0px 0px 23px var(--my-glow-color), 0px 0px 26px var(--my-glow-color)";
+
+    menuOpen = true;
+  } else {
+
+    BtnBuilder.style.top = "20px";
+    BtnBuilder.style.color = "var(--my-background-color)";
+    BtnBuilder.style.textShadow = "none";
+
+    appearance.style.top = "20px";    
+    appearance.style.color = "var(--my-background-color)";
+    appearance.style.textShadow = "none";
+
+    buttonMaker.style.top = "20px";
+    buttonMaker.style.color = "var(--my-background-color)";
+    buttonMaker.style.textShadow = "none";
+
+    theMenu.innerText = "\u2666 Settings \u2666";
+    menuOpen = false;
+  }
+}
+
+function statNOTE() {
+  var statNote = document.getElementById("statNote");
+  var isOpen = checkOpen();
+  if (statNote.style.display == "inline-block" || isOpen) {
+    statNote.style.display = "none";
+    return;
+  }
+  statNote.style.display = "inline-block";
+}
+
+
+function cancelStat() {
+  var statNote = document.getElementById("statNote");
+  statNote.style.display = "none";
+}
+
+function submitStat() {
+  var statNote = document.getElementById("statNote");
+  var q1 = document.getElementsByName("stat1a");
+  var stat1explain = document.getElementById("stat1explain").value;
+  var q2 = document.getElementsByName("stat2a");
+  var stat3explain = document.getElementById("stat3explain").value;
+  var q4 = document.getElementsByName("stat4a");
+  var stat4explain = document.getElementById("stat4explain").value;
+  var ansTotal = 0;
+  var checkedArr = [];
+  for (i = 0; i < q1.length; i++) {
+    if (q1[i].checked) {
+      var ans1 = q1[i].value;
+      ansTotal = ansTotal + 1;
+      checkedArr.push(q1[i]);
+    }
+  }
+  if (ans1 == "YES" && stat1explain == null) {
+    alert("Please describe what is needed and by whom.");
+    return;
+  }
+  for (i = 0; i < q2.length; i++) {
+    if (q2[i].checked) {
+      var ans2 = q2[i].value;
+      ansTotal = ansTotal + 1;
+      checkedArr.push(q2[i]);
+    }
+  }
+  if (stat3explain == null) {
+    alert("Please describe the next steps in the claim.");
+    return;
+  } else {
+    ansTotal = ansTotal + 1;
+  }
+  for (i = 0; i < q4.length; i++) {
+    if (q4[i].checked) {
+      var ans4 = q4[i].value;
+      ansTotal = ansTotal + 1;
+      checkedArr.push(q4[i]);
+    }
+  }
+  if (ans4 == "YES" && stat1explain == null) {
+    alert("Please describe what conversations need to happen.");
+    return;
+  }
+  if(ansTotal < 4) {
+    alert("Please answer all questions");
+  } else {
+    for (i = 0; i < checkedArr.length; i++) {
+      checkedArr[i].checked = false;
+    }
+    document.getElementById("textarea5").value = "Is anything required from the repair facility or contract holder?   " + ans1 + "\r";  
+    if (ans1 == "YES"){
+      document.getElementById("textarea5").value += stat1explain + "\r\r";
+    } else {
+      document.getElementById("textarea5").value +=  "\r";
+    }
+    document.getElementById("textarea5").value += "If so, are they aware of the requirements and how to accomplish?   " + ans2 + "\r\r";
+    document.getElementById("textarea5").value += "What are the next steps in the claim process?   \r";
+    document.getElementById("textarea5").value += stat3explain + "\r\r";
+    document.getElementById("textarea5").value += "Are there any special conversations that need to\rhappen with either the repair facility or contract holder?   " + ans4 + "\r";
+    if (ans4 == "YES"){
+      document.getElementById("textarea5").value += stat4explain;
+    } 
+    let textarea = document.getElementById("textarea5");
+    textarea.select();
+    document.execCommand("copy");
+    document.getElementById("stat4explain").value = "";
+    document.getElementById("stat3explain").value = "";
+    document.getElementById("stat1explain").value = "";
+    statNote.style.display = "none";
+  }
+}
+
+
+
+function showAuth() {
+  var newAuthstyle = document.getElementById("newAuthstyle");
+  var isOpen = checkOpen();
+  if (newAuthstyle.style.display == "inline-block" || isOpen) {
+    newAuthstyle.style.display = "none";
+    return;
+  }
+  newAuthstyle.style.display = "inline-block";
+}
+
+function moveAuth() {
+  document.getElementById("authParts").style.display = "none";
+  document.getElementById("authRequests").style.display = "inline-block";
+}
+
+function moveAuth2() {
+  document.getElementById("authRequests").style.display = "none";
+  document.getElementById("authOopcs").style.display = "inline-block";
+}
+
+
+function cancelNewauth() {
+  document.getElementById("authParts").style.display = "inline-block";
+  document.getElementById("authRequests").style.display = "none";
+  document.getElementById("authOopcs").style.display = "none";
+  document.getElementById("newAuthstyle").style.display = "none";
+  document.getElementById("OOPoptDiv").style.display = "none";
+  var boxes = document.querySelectorAll(".FNA");
+  for (i = 0; i < boxes.length; i++) {
+    boxes[i].checked = false;
+  }
+}
+
+function newAuth() {
+  document.getElementById("authParts").style.display = "inline-block";
+  document.getElementById("authRequests").style.display = "none";
+  document.getElementById("authOopcs").style.display = "none";
+  document.getElementById("newAuthstyle").style.display = "none";
+  var stage = document.getElementById("textarea2");
+
+  var textarea = document.getElementById('textarea1');
+  var lines = textarea.value.split('\n');
+  var lineIndex = 1;
+  var start = lines.slice(0, lineIndex).reduce((acc, curr) => acc + curr.length + 1, 0);
+  var end = start + lines[lineIndex].length;
+  textarea.focus();
+  textarea.setSelectionRange(start, end);
+  var tempStr = window.getSelection();
+  document.getElementById("textarea4").value = tempStr;
+  var fullString = document.getElementById("textarea4").value;
+  var contactString = fullString.slice(11);
+  var bananaMilkshake = contactString.trim();
+
+  stage.value = newauthLine1 + "\r" + newauthLine2 + "\r" + newauthLine3 + "\r" + newauthLine4  + "\r" + newauthLine5 + bananaMilkshake + "\r";
+
+  partsOptions(stage);
+}
+
+function partsOptions(stage) {
+  var partOpts = document.getElementsByName("authparts");
+  for (i = 0; i < partOpts.length; i++) {
+    if (partOpts[i].checked == true) {
+      stage.value += partOpts[i].value + "\r";
+    }
+  }
+  requestOptions(stage);
+}
+    
+
+function requestOptions(stage) {
+  if (document.getElementById("auth9").checked == true) {
+    stage.value += inspAuth1 + "\r" + recordsAuth1 + "\r";
+    issuesOptions(stage);
+    return;
+  }
+  if (document.getElementById("auth6").checked == true) {
+    stage.value += inspAuth2 + "\r";
+  }
+  if (document.getElementById("auth7").checked == true) {
+    stage.value += inspAuth3 + "\r";
+  }
+  if (document.getElementById("auth8").checked == true) {
+    stage.value += recordsAuth2 + "\r";
+  }
+  stage.value += requestedAuth1 + "\r";
+  issuesOptions(stage);
+}
+
+
+function issuesOptions(stage) {
+  if (document.getElementById("auth13").checked == true) {
+    stage.value += oopcsAuth4 + "\r" + oopcsAuth4a;
+    finishAuth(stage);
+    return;
+  }
+  if (document.getElementById("auth11").checked == true) {
+    stage.value += oopcsAuth3 + "\r" + oopcsAuth3a;
+    finishAuth(stage);
+    return;
+  }
+  if (document.getElementById("auth10").checked == true || document.getElementById("auth12").checked == true) {
+    var oopcCausep = document.getElementById("auth14");
+    var oopcCausel = document.getElementById("auth15");
+    var oopcCauseb = document.getElementById("auth16");
+    var oopcAmt1 = document.getElementById("auth17").value;
+    document.getElementById("auth17").value = "";
+    var num = parseInt(oopcAmt1);
+    var oopcAmt2 = num.toFixed(2);
+    var oopcAmt = oopcAmt2.toString();
+    var oopcCausedBy;
+    if (oopcCauseb.checked == true) { oopcCausedBy = "parts and labor."; } 
+    if (oopcCausel.checked == true) { oopcCausedBy = "labor."; } 
+    if (oopcCausep.checked == true) { oopcCausedBy = "parts."; } 
+    if (oopcAmt == null) { alert("Please enter the amount of OOPC"); return; }
+
+    stage.value += oopcsAuth1 + oopcAmt;
+    if (document.getElementById("auth12").checked == true) {
+      stage.value += oopcsAuth2b + "\r" + oopcsAuth2c + oopcCausedBy + "\r" + oopcsAuth3a + "\r";
+    } else {
+      stage.value += oopcsAuth2a + "\r" + oopcsAuth2c + oopcCausedBy + "\r" + oopcsAuth3a + "\r";
+    }
+    finishAuth(stage);
+    return;
+  }
+}
+  
+function showOOPopt() {
+  document.getElementById("OOPoptDiv").style.display = "inline-block";
+}
+
+function finishAuth(stage) {
+  var noncovComps = document.getElementById("auth18");
+  if (noncovComps.checked) { stage.value += noncovAuth1; }
+  stage.select();
+  document.execCommand("copy");
+  var boxes = document.querySelectorAll(".FNA");
+  for (i = 0; i < boxes.length; i++) {
+    boxes[i].checked = false;
+  }
+}
+
+
+function EVACRECH(btnID){
+  var Check = localStorage.getItem(btnID + "EDIT");
+  if (Check == null) {
+    document.getElementById("textarea2").value += EvacRechrge;
+    document.getElementById("EDITarea").value = EvacRechrge;
+  } else {
+    document.getElementById("textarea2").value += Check;
+    document.getElementById("EDITarea").value = Check;
+}
+}
+
+
+function ALIGNMENT(btnID){
+  var Check = localStorage.getItem(btnID + "EDIT");
+  if (Check == null) {
+   document.getElementById("textarea2").value += Alignment;
+   document.getElementById("EDITarea").value = Alignment;
+  } else {
+    document.getElementById("textarea2").value += Check;
+    document.getElementById("EDITarea").value = Check;
+  }
+}
+
+
+function DIAG(boxNum){
+if (boxNum === "9") {
+document.getElementById("textarea2").value += "Diag \r";
+document.getElementById("textarea2").value += Labor;
+}
+else
+{
+let partName = document.getElementById("part" + boxNum).value;
+document.getElementById("textarea2").value += "Diag for ";
+document.getElementById("textarea2").value += partName + "\r";
+document.getElementById("textarea2").value += Labor;
+}
+}
+
+
+function LABOR(boxNum){
+if (boxNum === "9") {
+document.getElementById("textarea2").value += "R/R \r";
+document.getElementById("textarea2").value += Labor;
+}
+else
+{
+let partName = document.getElementById("part" + boxNum).value;
+document.getElementById("textarea2").value += "R/R ";
+document.getElementById("textarea2").value += partName + "\r";
+document.getElementById("textarea2").value += Labor;
+}
+}
+
+
+function BULK(btnID){
+  var Check = localStorage.getItem(btnID + "EDIT");
+  if (Check == null) {
+    document.getElementById("textarea2").value += BulkFluid;
+    document.getElementById("EDITarea").value = BulkFluid;
+  } else {
+    document.getElementById("textarea2").value += Check;
+    document.getElementById("EDITarea").value = Check;
+  }
+}
+
+
+
+
+function OEMOVER(){
+var textarea = document.getElementById("textarea2").value;
+textarea = textarea.slice(0,-1);
+document.getElementById("textarea2").value = textarea;
+document.getElementById("textarea2").value += OemOver250;
+}
+
+
+function NEWAM(boxNum) {
+if (boxNum === "9") {
+document.getElementById("textarea2").value += NewAMpart;
+}
+else
+{
+let partName = document.getElementById("part" + boxNum).value;
+document.getElementById("textarea2").value += "Part:   ";
+document.getElementById("textarea2").value += partName + "\r";
+document.getElementById("textarea2").value += NewAMpart;
+}
+}
+
+
+function NEWOEM(boxNum) {
+  if (boxNum === "9") {
+    document.getElementById("textarea2").value += NewOEMpart;
+  } else {
+    let partName = document.getElementById("part" + boxNum).value;
+    document.getElementById("textarea2").value += "Part:   ";
+    document.getElementById("textarea2").value += partName + "\r";
+    document.getElementById("textarea2").value += NewOEMpart;
+  }
+}
+
+function CALLNOANS(btnID){
+  var Check = localStorage.getItem(btnID + "EDIT");
+  if (Check == null) {
+    document.getElementById("textarea5").value = NoAnswerOOPC;
+    document.getElementById("EDITarea").value = NoAnswerOOPC;
+  } else {
+    document.getElementById("textarea5").value = Check;
+    document.getElementById("EDITarea").value = Check;
+  }
+    let textarea = document.getElementById("textarea5");
+    textarea.select();
+    document.execCommand("copy");
+}
+
+function AUTHOOPC(btnID){
+var Check = localStorage.getItem(btnID + "EDIT");
+  if (Check == null) {
+    document.getElementById("textarea5").value = ChAuthedOOPC;
+    document.getElementById("EDITarea").value = ChAuthedOOPC;
+  } else {
+    document.getElementById("textarea5").value = Check;
+    document.getElementById("EDITarea").value = Check;
+  }
+  let textarea = document.getElementById("textarea5");
+  textarea.select();
+  document.execCommand("copy");
+}
+
+function STMTTEMP(btnID){
+  var Check = localStorage.getItem(btnID + "EDIT");
+  if (Check == null) {
+    document.getElementById("textarea5").value = StatementTemplate;
+    document.getElementById("EDITarea").value = StatementTemplate;
+  } else {
+    document.getElementById("textarea5").value = Check;
+    document.getElementById("EDITarea").value = Check;
+  }
+  let textarea = document.getElementById("textarea5");
+  textarea.select();
+  document.execCommand("copy");
+  ShowTemps();
+  imBusy = "false";
+}
+
+function REVIEW(btnID){
+  var Check = localStorage.getItem(btnID + "EDIT");
+  if (Check == null) {
+    document.getElementById("textarea5").value = ReviewNote;
+    document.getElementById("EDITarea").value = ReviewNote;
+  } else {
+    document.getElementById("textarea5").value = Check;
+    document.getElementById("EDITarea").value = Check;
+  }
+  let textarea = document.getElementById("textarea5");
+  textarea.select();
+  document.execCommand("copy");
+  ShowTemps();
+  imBusy = "false";
+}
+
+
+
+function RECREQ(btnID){
+  var Check = localStorage.getItem(btnID + "EDIT");
+  if (Check == null) {
+    document.getElementById("textarea5").value = RecordsRequested;
+    document.getElementById("EDITarea").value = RecordsRequested;
+  } else {
+    document.getElementById("textarea5").value = Check;
+    document.getElementById("EDITarea").value = Check;
+  }
+  let textarea = document.getElementById("textarea5");
+  textarea.select();
+  document.execCommand("copy");
+}
+
+
+
+function NOANSREC(btnID){
+  var Check = localStorage.getItem(btnID + "EDIT");
+  if (Check == null) {
+    document.getElementById("textarea5").value = NoAnsRecdsRqst;
+    document.getElementById("EDITarea").value = NoAnsRecdsRqst;
+  } else {
+    document.getElementById("textarea5").value = Check;
+    document.getElementById("EDITarea").value = Check;
+  }
+  let textarea = document.getElementById("textarea5");
+  textarea.select();
+  document.execCommand("copy");
+}
+
+
+function INSPTEMP(btnID){
+  var Check = localStorage.getItem(btnID + "EDIT");
+  if (Check == null) {
+    document.getElementById("textarea5").value = InspectionTemplate;
+   document.getElementById("EDITarea").value = InspectionTemplate;
+  } else {
+    document.getElementById("textarea5").value = Check;
+   document.getElementById("EDITarea").value = Check;
+  }
+  let textarea = document.getElementById("textarea5");
+  textarea.select();
+  document.execCommand("copy");
+  ShowTemps();
+  imBusy = "false";
+}
+
+function PTXFER(){
+  var showTemp = document.getElementById("transferTemplate");
+  showTemp.style.display = "inline-block";
+}
+
+function submitTEMP() {
+  var q1 = document.getElementsByName("ans1");
+  var q2 = document.getElementsByName("ans2");
+  var q3 = document.getElementsByName("ans3");
+  var q4 = document.getElementsByName("ans4");
+  var q5 = document.getElementsByName("ans5");
+  var q6 = document.getElementsByName("ans6");
+  var q7 = document.getElementsByName("ans7");
+  var q8 = document.getElementsByName("ans8");
+  var q9 = document.getElementsByName("ans9");
+  var q10 = document.getElementsByName("ans10");
+  var q11 = document.getElementsByName("ans11");
+  var ans1;
+  var ans7;
+  var ansTotal = 0;
+  var checkedArr = [];
+  for (i = 0; i < q1.length; i++) {
+    if (q1[i].checked) {
+      ans1 = q1[i].value;
+      ansTotal = ansTotal + 1;
+      checkedArr.push(q1[i]);
+    }
+  }
+  for (i = 0; i < q2.length; i++) {
+    if (q2[i].checked) {
+      var ans2 = q2[i].value;
+      ansTotal = ansTotal + 1;
+      checkedArr.push(q2[i]);
+    }
+  }
+  for (i = 0; i < q3.length; i++) {
+    if (q3[i].checked) {
+      var ans3 = q3[i].value;
+      ansTotal = ansTotal + 1;
+      checkedArr.push(q3[i]);
+    }
+  }
+  for (i = 0; i < q4.length; i++) {
+    if (q4[i].checked) {
+      var ans4 = q4[i].value;
+      ansTotal = ansTotal + 1;
+      checkedArr.push(q4[i]);
+    }
+  }
+  for (i = 0; i < q5.length; i++) {
+    if (q5[i].checked) {
+      var ans5 = q5[i].value;
+      ansTotal = ansTotal + 1;
+      checkedArr.push(q5[i]);
+    }
+  }
+  for (i = 0; i < q6.length; i++) {
+    if (q6[i].checked) {
+      var ans6 = q6[i].value;
+      ansTotal = ansTotal + 1;
+      checkedArr.push(q6[i]);
+    }
+  }
+  for (i = 0; i < q7.length; i++) {
+    if (q7[i].checked) {
+      ans7 = q7[i].value;
+      ansTotal = ansTotal + 1;
+      checkedArr.push(q7[i]);
+    }
+  }
+  for (i = 0; i < q8.length; i++) {
+    if (q8[i].checked) {
+      var ans8 = q8[i].value;
+      ansTotal = ansTotal + 1;
+      checkedArr.push(q8[i]);
+    }
+  }
+  for (i = 0; i < q9.length; i++) {
+    if (q9[i].checked) {
+      var ans9 = q9[i].value;
+      ansTotal = ansTotal + 1;
+      checkedArr.push(q9[i]);
+    }
+  }
+  for (i = 0; i < q10.length; i++) {
+    if (q10[i].checked) {
+      var ans10 = q10[i].value;
+      ansTotal = ansTotal + 1;
+      checkedArr.push(q10[i]);
+    }
+  }
+  for (i = 0; i < q11.length; i++) {
+    if (q11[i].checked) {
+      var ans11 = q11[i].value;
+      ansTotal = ansTotal + 1;
+      checkedArr.push(q11[i]);
+    }
+  }
+  if (ans1 == "NO"){
+    alert("The repair facility must be willing and able or the CH vehicle MUST be moved");
+    return;
+  }
+  if (ans7 == "NO"){
+    alert("Please verify their information in order to proceed.");
+    return;
+  }
+  var q11ansExplain = document.getElementById("q11ansExplain").value;
+  var q3ansExplain = document.getElementById("q3ansExplain").value;
+  var contact1 = "Contact Name: " + document.getElementById("contact1").value;
+  var contact2 = "Contact Info: " + document.getElementById("contact2").value;
+  if(ansTotal < 11) {
+    alert("Please answer all questions");
+  } else {
+    for (i = 0; i < checkedArr.length; i++) {
+      checkedArr[i].checked = false;
+    }
+    document.getElementById("textarea5").value = PtTransfer1 + ans1 + "\r\r" +  PtTransfer2 + ans2 + "\r\r" + PtTransfer3 + ans3 + "\r";  
+    if (ans3 != "YES"){
+      document.getElementById("textarea5").value += q3ansExplain + "\r\r";
+    } else {
+      document.getElementById("textarea5").value +=  "\r";
+    }
+    document.getElementById("textarea5").value += PtTransfer4 + ans4 + "\r\r" +  PtTransfer5 + ans5 + "\r\r" +  PtTransfer6 + ans6 + "\r\r" +  PtTransfer7 + ans7 + "\r\r" +  PtTransfer8 + ans8 + "\r" + contact1 + "\r" + contact2 + "\r\r" + PtTransfer9 + ans9 + "\r\r" + PtTransfer10 + ans10 + "\r\r" + PtTransfer11 + ans11 + "\r";
+    if (ans11 == "YES"){
+      document.getElementById("textarea5").value += q11ansExplain;
+    }
+    let textarea = document.getElementById("textarea5");
+    textarea.select();
+    document.execCommand("copy");
+    document.getElementById("q3ansExplain").value = "";
+    document.getElementById("q11ansExplain").value = "";
+    document.getElementById("contact1").value = "";
+    document.getElementById("contact2").value = "";
+    var showTemp = document.getElementById("transferTemplate");
+    showTemp.style.display = "none";
+  }
+}
+
+function cancelPT() {
+  var showTemp = document.getElementById("transferTemplate");
+  showTemp.style.display = "none";
+}
+
+function PICREQ(btnID){
+  var Check = localStorage.getItem(btnID + "EDIT");
+  if (Check == null) {
+    document.getElementById("textarea5").value = PicturesReuest;
+   document.getElementById("EDITarea").value = PicturesReuest;
+  } else {
+    document.getElementById("textarea5").value = Check;
+   document.getElementById("EDITarea").value = Check;
+  }
+  let textarea = document.getElementById("textarea5");
+  textarea.select();
+  document.execCommand("copy");
+}
+
+
+function FLUIDLEAK() {
+  var fluids = document.getElementById("div6");
+  if (fluids.style.display != "none") {
+        fluids.style.display = "none";
+    document.getElementById("fluid").textContent = "$";
+  } else {
+fluids.style.display = "inline-block";
+    document.getElementById("fluid").textContent = "X";
+  }
+}
+
+function CopyIntakeForm(index){
+  var textarea = document.getElementById('textarea1');
+  var lines = textarea.value.split('\n');
+  var lineIndex = parseInt(index);
+  var start = lines.slice(0, lineIndex).reduce((acc, curr) => acc + curr.length + 1, 0);
+  var end = start + lines[lineIndex].length;
+  textarea.focus();
+  textarea.setSelectionRange(start, end);
+  var tempStr = window.getSelection();
+  document.getElementById("textarea4").value = tempStr;
+  var fullString = document.getElementById("textarea4").value;
+  var contactString = fullString.slice(9);
+  document.getElementById("textarea4").value = contactString.trim();
+  let extra = document.getElementById("textarea4");
+  extra.select();
+  document.execCommand("copy");
+}
+
+function CopyForm(index){
+  let textarea = document.getElementById(index);
+  textarea.select();
+  document.execCommand("copy");
+}
+
+function FormToTA(){
+  var partname = document.getElementById('partname1').value;
+  var partnum = document.getElementById('partnum').value;
+  var rfprice = document.getElementById('rfprice').value;
+  var msrp = document.getElementById('msrp').value;
+  if (msrp) {
+    var overCheck = parseInt(msrp);
+    document.getElementById("textarea2").value += "Part: ";
+    document.getElementById("textarea2").value += partname + "\r";
+    document.getElementById("textarea2").value += "Verified OEM PN: ";
+    document.getElementById("textarea2").value += partnum + "\r";
+    document.getElementById("textarea2").value += "Verified MSRP: ";
+    document.getElementById("textarea2").value += msrp + "\r";
+    document.getElementById("textarea2").value += "RF Price: ";
+    document.getElementById("textarea2").value += rfprice + "\r";
+    if (overCheck > 250) {
+      document.getElementById("textarea2").value += OemOver250;
+      } else {
+        document.getElementById("textarea2").value += "\r";
+      }
+  } else {
+    document.getElementById("textarea2").value += "Part: ";
+    document.getElementById("textarea2").value += partname + "\r";
+    document.getElementById("textarea2").value += "RF AM PN:  ";
+    document.getElementById("textarea2").value += partnum + "\r";
+    document.getElementById("textarea2").value += "RF Price: ";
+    document.getElementById("textarea2").value += rfprice + "\r";
+    document.getElementById("textarea2").value += OemOver250;
+  }
+}
+
+function AnotherOne() {
+  if (newpartcount < 8){
+    document.getElementById("partname" + newpartcount).style.display = "inline-block";
+    newpartcount++;
+    console.log(newpartcount);
+  }
+}
+
+function NextPart() {  
+  document.getElementById('partnum').value = "";
+  document.getElementById('rfprice').value = "";
+  document.getElementById('msrp').value = "";
+  partMover = newpartcount - 1;
+  for (var i = 1; i < partMover; i++) {
+    var d = i + 1;
+    var upper = document.getElementById("partname" + d);
+    var lower = document.getElementById("partname" + i);
+    lower.value = upper.value;
+  }
+  if (newpartcount > 2) {
+    newpartcount = newpartcount - 1;
+    document.getElementById("partname" + partMover).value = "";
+    document.getElementById("partname" + partMover).style.display = "none";
+  }
+}
+
+function SENDLABOR1(){
+  var partname = document.getElementById('partname1').value;
+  document.getElementById("textarea2").value += "R/R ";
+  document.getElementById("textarea2").value += partname + "\r";
+  document.getElementById("textarea2").value += Labor;
+}
+
+function SENDDIAG1(){
+  var partname = document.getElementById('partname1').value;
+  document.getElementById("textarea2").value += "Diag on ";
+  document.getElementById("textarea2").value += partname + "\r";
+  document.getElementById("textarea2").value += Labor;
+}
+
+function SWIFTY(){
+  document.getElementById("partname1").value = "";
+  document.getElementById("partnum").value = "";
+  document.getElementById("rfprice").value = "";
+}
+
+function COPYNOTE(){
+  document.getElementById("textarea3").value = document.getElementById("textarea2").value;
+  let textarea = document.getElementById("textarea2");
+  textarea.select();
+  document.execCommand("copy");
+}
+
+const downloadFile = () => {
+  const date = new Date();
+  var stamp = date.toDateString();
+  const link = document.createElement("a");
+  const content = document.getElementById("textareadata").value;
+  const file = new Blob([content], { type: 'text/plain' });
+  link.href = URL.createObjectURL(file);
+  link.download = stamp + ".txt";
+  link.click();
+  URL.revokeObjectURL(link.href);
+};
+
+function toggleConductor(boxId) {
+  var checkBox = document.getElementById(boxId);
+  if (boxId == "s9") {
+    for (i = 0; i < showList.length; i++) {
+      var affectedElem = showList[i];
+      var affectedId = showList[i].id;
+      if (checkBox.checked == true) {
+        affectedElem.style.display = "inline-block";
+        localStorage.setItem(affectedId + "SHOW", "inline-block");
+        localStorage.setItem("allBTN", "inline-block");
+      } else {
+        affectedElem.style.display = "none";
+        localStorage.setItem(affectedId + "SHOW", "none");
+        localStorage.setItem("allBTN", "none");
+      }
+    }
+  return;
+  } else {
+    var displayElemNode = document.getElementsByClassName(boxId + "dispStat"); 
+    var affectedElem = displayElemNode[0];
+    var affectedId = displayElemNode[0].id; 
+    if (checkBox.checked == true){
+      affectedElem.style.display = "inline-block";
+      localStorage.setItem(affectedId + "SHOW", "inline-block");
+    } else {
+      affectedElem.style.display = "none";
+      localStorage.setItem(affectedId + "SHOW", "none");
+    }
+  }
+}
+
+
+
+
+var STCBCount = 0;
+var PRINCount = 0;
+var LINKCount = 0;
+var ENDNCount = 0;
+var SOLOCount = 0;
+var buttonCount = 0;
+
+window.onload = function PutItBack() { 
+  var selected = "holder1";
+  var selectedElem = document.getElementById(selected);
+  var didItRun = localStorage.getItem("Im The Boss");
+  if (didItRun == null) {
+    localStorage.setItem("Im The Boss", "It's Been Done");
+    localStorage.setItem(selected + "STCB", '0');
+    localStorage.setItem(selected + "PRIN", '0');
+    localStorage.setItem(selected + "LINK", '0');
+    localStorage.setItem(selected + "ENDN", '0');
+    localStorage.setItem(selected + "SOLO", '0');
+    localStorage.setItem(selected + "Count", '0');
+  }
+  var STt = localStorage.getItem(selected + "STCB");
+  var PRt = localStorage.getItem(selected + "PRIN");
+  var LIt = localStorage.getItem(selected + "LINK");
+  var ENt = localStorage.getItem(selected + "ENDN");
+  var SOt = localStorage.getItem(selected + "SOLO");
+  var but = localStorage.getItem(selected + "Count");
+  STCBCount = parseInt(STt);
+  PRINCount = parseInt(PRt);
+  LINKCount = parseInt(LIt);
+  ENDNCount = parseInt(ENt);
+  SOLOCount = parseInt(SOt);
+  buttonCount = parseInt(but);
+  for (i = 0; i < buttonCount; i++) {
+    var count = i.toString();
+    var currID = "cust" + count;
+    var newID = localStorage.getItem(currID);
+    var currdivID = "custBtn" + count;
+    var buttonX = document.getElementById(currID)
+    buttonX.id = newID;
+    idList.push(buttonX);
+    contentList.push(buttonX);
+    resizeList.push(buttonX);
+    displayList.push(buttonX);
+    buttonList.push(buttonX);
+  }
+  for (i = 0; i < 10; i++) {
+    var count = i.toString();
+    var curdivID = "custBtn" + count;
+    var thsDisp = localStorage.getItem(curdivID + "SHOW");
+    if (thsDisp == null) {
+      localStorage.setItem(curdivID + "SHOW", "none");
+    }
+  }
+  for (i = 0; i < idList.length; i++) {
+    var selectedID = idList[i].id;
+    var selectedElem = document.getElementById(selectedID);
+    if (localStorage.getItem(selectedID + "Font") != null) {
+      var fSize = localStorage.getItem(selectedID + "Font");
+      selectedElem.style.fontSize = fSize;
+    }
+    if (localStorage.getItem(selectedID + "top") != null) {
+      var top = localStorage.getItem(selectedID + "top");
+      var left = localStorage.getItem(selectedID + "left");
+      selectedElem.style.left = left;
+      selectedElem.style.top = top;
+    }
+    if (localStorage.getItem(selectedID + "Width") != null) {
+      var setWidth = localStorage.getItem(selectedID + "Width");
+      var setHeight = localStorage.getItem(selectedID + "Height");
+      selectedElem.style.width = setWidth;
+      selectedElem.style.height = setHeight;
+    }
+    if (localStorage.getItem(selectedID + "Display") != null) {
+      var setTEXT = localStorage.getItem(selectedID + "Display");
+      selectedElem.innerHTML = setTEXT;
+    }
+  }
+  for (i = 0; i < showList.length; i++) {
+    var selectedID = showList[i].id;
+    var selectedElem = document.getElementById(selectedID);
+    var elemClass = selectedElem.className;
+    var boxId = elemClass.substr(-10, 2);
+    var checkBox = document.getElementById(boxId);
+    var currDisp = selectedElem.style.display;
+    var setDisp = localStorage.getItem(selectedID + "SHOW");
+    if (setDisp == null || setDisp == "inline-block") { 
+      checkBox.checked = true;
+      selectedElem.style.display = "inline-block";
+    } else {
+      checkBox.checked = false;
+      selectedElem.style.display = "none";
+    }
+  }
+  var mainDisp = localStorage.getItem("allBTN");
+  var checkbox = document.getElementById("s9")
+  if (mainDisp == "inline-block" || mainDisp == null) {
+    checkbox.checked = true;
+  } else {
+    checkbox.checked = false;
+  }
+  localStorage.setItem("pageNum", "0");
+  resetColors();
+}
+
+function resetColors() {
+  var bgClr = localStorage.getItem("myBackgroundcolor");
+  var acClr = localStorage.getItem("myAccentcolor");
+  var shad1Clr = localStorage.getItem("shadow1color");
+  var shad2Clr = localStorage.getItem("shadow2color");
+  var userName = localStorage.getItem("userName");
+  var glowClr = localStorage.getItem("myGlowcolor");
+  var txtClr = localStorage.getItem("glowTxtcolor");
+  var outlineClr  = localStorage.getItem("outlineClr");
+
+  var bgClrelem = document.getElementById("background-picker");
+  var acClrelem = document.getElementById("accent-picker");
+  var shad1elem = document.getElementById("shad1-picker");
+  var shad2elem = document.getElementById("shad2-picker");
+  var userNameelem = document.getElementById("userName");
+  var glowClrelem = document.getElementById("nameGlow");
+  var txtClrelem = document.getElementById("nameColor");
+  var outlineClrelem = document.getElementById("outlineColor");
+
+  if (bgClr != null) {
+    document.documentElement.style.setProperty('--my-background-color', bgClr);
+    bgClrelem.value = bgClr;
+  }
+  if (acClr != null) {
+    document.documentElement.style.setProperty('--my-accent-color', acClr);
+    acClrelem.value = acClr;
+  }
+  if (shad1Clr != null) {
+    document.documentElement.style.setProperty('--my-shadow-color1', shad1Clr);
+    shad1elem.value = shad1Clr;
+  }
+  if (shad2Clr != null) {
+    document.documentElement.style.setProperty('--my-shadow-color2', shad2Clr);
+    shad2elem.value = shad2Clr;
+  }
+  if (userName != null) {
+    var glowDiv = document.getElementById("glowDiv");
+    glowDiv.innerHTML = userName;
+    userNameelem.value = userName;
+  }
+  if (glowClr != null) {
+    document.documentElement.style.setProperty('--my-glow-color', glowClr);
+    glowClrelem.value = glowClr;
+  }
+  if (txtClr != null) {
+    document.documentElement.style.setProperty('--glow-txt-color', txtClr);
+    txtClrelem.value = txtClr;
+  }
+  if (outlineClr != null) {
+    document.documentElement.style.setProperty('--glow-outline-color', outlineClr);
+    outlineClrelem.value = outlineClr;
+  }
+}
+
+function personalize() {
+  MENU();
+  var appearDiv = document.getElementById("appearDiv");
+  appearDiv.style.display = "inline-block";
+}
+
+function exitColor() {
+  var appearDiv = document.getElementById("appearDiv");
+  appearDiv.style.display = "none";
+  location.reload();
+}
+
+function saveColors() {
+
+  var bgClrelem = document.getElementById("background-picker");
+  var acClrelem = document.getElementById("accent-picker");
+  var shad1elem = document.getElementById("shad1-picker");
+  var shad2elem = document.getElementById("shad2-picker");
+  var glowClrelem = document.getElementById("nameGlow");
+  var txtClrelem = document.getElementById("nameColor");
+  var userNameelem = document.getElementById("userName");
+  var outlineClrelem = document.getElementById("outlineColor");
+  var glowDiv = document.getElementById("glowDiv");
+
+  var bgClr = bgClrelem.value;
+  var acClr = acClrelem.value;
+  var shad1Clr = shad1elem.value;
+  var shad2Clr = shad2elem.value;
+  var glowClr = glowClrelem.value;
+  var txtClr = txtClrelem.value;
+  var userName = userNameelem.value;
+  var outlineClr = outlineClrelem.value;
+  glowDiv.innerHTML = userName;
+
+  document.documentElement.style.setProperty('--my-background-color', bgClr);
+  document.documentElement.style.setProperty('--my-accent-color', acClr);
+  document.documentElement.style.setProperty('--my-shadow-color1', shad1Clr);
+  document.documentElement.style.setProperty('--my-shadow-color2', shad2Clr);
+  document.documentElement.style.setProperty('--my-glow-color', glowClr);
+  document.documentElement.style.setProperty('--glow-txt-color', txtClr);
+  document.documentElement.style.setProperty('--glow-outline-color', outlineClr);
+
+  localStorage.setItem("myBackgroundcolor", bgClr);
+  localStorage.setItem("myAccentcolor", acClr);
+  localStorage.setItem("shadow1color", shad1Clr);
+  localStorage.setItem("shadow2color", shad2Clr);
+  localStorage.setItem("myGlowcolor", glowClr);
+  localStorage.setItem("glowTxtcolor", txtClr);
+  localStorage.setItem("userName", userName);
+  localStorage.setItem("outlineClr", outlineClr);
+  exitColor();
+}
+
+function setColor(colorSet) {
+  var tempClr1; //background
+  var tempClr2; //accent
+  var tempClr3; //shad1
+  var tempClr4; //shad2
+  var tempClr5; //glow color
+  var tempClr6; //text color
+  var tempClr7; //outline
+
+  switch(colorSet) {
+  case "default":
+    tempClr1 = "#4f4f4f";
+    tempClr2 = "#707070";
+    tempClr3 = "#cecece";
+    tempClr4 = "#141414";
+    tempClr5 = "#ffffff";
+    tempClr6 = "#000000";
+    tempClr7 = "#ffffff";
+    break;
+  case "blue":
+    tempClr1 = "#324350";
+    tempClr2 = "#7C878F";
+    tempClr3 = "#D4D7DA";
+    tempClr4 = "#1A2229";
+    tempClr5 = "#ffffff";
+    tempClr6 = "#503f32";
+    tempClr7 = "#ffffff";
+    break;
+  case "red":
+    tempClr1 = "#622823";
+    tempClr2 = "#81524E";
+    tempClr3 = "#CFBEBD";
+    tempClr4 = "#130807";
+    tempClr5 = "#ffffff";
+    tempClr6 = "#236228";
+    tempClr7 = "#ffffff";
+    break;
+  case "green":
+    tempClr1 = "#2f9844";
+    tempClr2 = "#58ac69";
+    tempClr3 = "#c0e0c6";
+    tempClr4 = "#040f06";
+    tempClr5 = "#ffffff";
+    tempClr6 = "#98422f";
+    tempClr7 = "#ffffff";
+    break;
+  case "4":
+    tempClr1 = "#4f4f4f";
+    tempClr2 = "#707070";
+    tempClr3 = "#ffffff";
+    tempClr4 = "#000000";
+    tempClr5 = "#cecece";
+    tempClr6 = "#141414";
+    tempClr7 = "#ffffff";
+    break;
+  }
+
+  var bgClrelem = document.getElementById("background-picker");
+  bgClrelem.value = tempClr1;
+
+  var acClrelem = document.getElementById("accent-picker");
+  acClrelem.value = tempClr2;
+
+  var shad1elem = document.getElementById("shad1-picker");
+  shad1elem.value = tempClr3;
+
+  var shad2elem = document.getElementById("shad2-picker");
+  shad2elem.value = tempClr4;
+
+  var glowClrelem = document.getElementById("nameGlow");
+  glowClrelem.value = tempClr5;
+
+  var txtClrelem = document.getElementById("nameColor");
+  txtClrelem.value = tempClr6;
+
+  var outlineClrelem = document.getElementById("outlineColor");
+  outlineClrelem.value = tempClr7;
+
+  document.documentElement.style.setProperty('--my-background-color', tempClr1);
+  document.documentElement.style.setProperty('--my-accent-color', tempClr2);
+  document.documentElement.style.setProperty('--my-shadow-color1', tempClr3);
+  document.documentElement.style.setProperty('--my-shadow-color2', tempClr4);
+  document.documentElement.style.setProperty('--my-glow-color', tempClr5);
+  document.documentElement.style.setProperty('--glow-txt-color', tempClr6);
+  document.documentElement.style.setProperty('--glow-outline-color', tempClr7);
+}
+
+function CloseIt(){
+  SNIPPETDIV.style.display = "none";
+}
+
+function ClearText(){
+  document.getElementById("Snippings").value = "";
+}
+
+function COPYIt(){
+  let textarea = document.getElementById("Snippings");
+  textarea.select();
+  document.execCommand("copy");
+  RESETNOTE();
+}
+
+function TGAF(){
+  if (checkOpen()) { return; }
+  document.getElementById("Snippings").value = "";
+  SNIPPETAREA.style.display = "none";
+  AUTHFORO.style.display = "inline-block";
+  AUTHFORS.style.display = "inline-block";
+  AUTHFORB.style.display = "inline-block";
+}
+
+function TGAFO(){
+  OOPAUTHED.style.display = "inline-block";
+  OOPDENY.style.display = "inline-block"; 
+  OOPCB.style.display = "inline-block"; 
+  LEFTVM.style.display = "inline-block";
+  NOVM.style.display = "inline-block";
+  AUTHFORO.style.display = "none";
+  AUTHFORS.style.display = "none";
+  AUTHFORB.style.display = "none";
+  VMREASON = "Called CH to get auth for OOPC.\r";
+}
+
+function TGAFS(){
+  SHIPAUTHED.style.display = "inline-block";
+  SHIPDENY.style.display = "inline-block"; 
+  SHIPCB.style.display = "inline-block"; 
+  LEFTVM.style.display = "inline-block";
+  NOVM.style.display = "inline-block";
+  AUTHFORO.style.display = "none";
+  AUTHFORS.style.display = "none";
+  AUTHFORB.style.display = "none";
+  VMREASON = "Called CH to get auth for shipping.\r";
+}
+
+function TGAFB(){
+  LEFTVM.style.left = "400px";
+  NOVM.style.left = "400px";
+  OASAUTHED.style.display = "inline-block";
+  OASDENYSHIP.style.display = "inline-block";
+  OASDENYBOTH.style.display = "inline-block";
+  OASCB.style.display = "inline-block";
+  LEFTVM.style.display = "inline-block";
+  NOVM.style.display = "inline-block";
+  AUTHFORO.style.display = "none";
+  AUTHFORS.style.display = "none";
+  AUTHFORB.style.display = "none";
+  VMREASON = "Called CH to get auth for OOPC and shipping.\r";
+}
+
+function TGAFOA(btnID){
+  var Check = localStorage.getItem(btnID + "EDIT");
+  SNIPPETAREA.style.display = "inline-block";
+  if (Check == null) {
+    document.getElementById("Snippings").value = "Called CH to get auth for OOPC.\rCH approved OOPC.\rWill call RF to give auth info\r";
+    document.getElementById("EDITarea").value = document.getElementById("Snippings").value;
+  } else {
+    document.getElementById("Snippings").value = Check;
+    document.getElementById("EDITarea").value = Check;
+  }
+  let textarea = document.getElementById("Snippings");
+  textarea.select();
+  document.execCommand("copy");
+  OOPAUTHED.style.display = "none";
+  OOPDENY.style.display = "none";
+  OOPCB.style.display = "none";
+  LEFTVM.style.display = "none";
+  NOVM.style.display = "none";
+}
+
+function TGAFOD(btnID){
+  var Check = localStorage.getItem(btnID + "EDIT");
+  SNIPPETAREA.style.display = "inline-block";
+  if (Check == null) {
+    document.getElementById("Snippings").value = "Called CH to get auth for OOPC.\rCH declined repairs at this time.\r";
+    document.getElementById("EDITarea").value = document.getElementById("Snippings").value;
+  } else {
+    document.getElementById("Snippings").value = Check;
+    document.getElementById("EDITarea").value = Check;
+  }
+  let textarea = document.getElementById("Snippings");
+  textarea.select();
+  document.execCommand("copy");
+  OOPAUTHED.style.display = "none";
+  OOPDENY.style.display = "none";
+  OOPCB.style.display = "none";
+  LEFTVM.style.display = "none";
+  NOVM.style.display = "none";
+}
+
+function TGAFOC(btnID){
+  var Check = localStorage.getItem(btnID + "EDIT");
+  SNIPPETAREA.style.display = "inline-block";
+  if (Check == null) {
+    document.getElementById("Snippings").value = "Called CH to get auth for OOPC.\rCH will call back with decision.\r";
+    document.getElementById("EDITarea").value = document.getElementById("Snippings").value;
+  } else {
+    document.getElementById("Snippings").value = Check;
+    document.getElementById("EDITarea").value = Check;
+  }
+  let textarea = document.getElementById("Snippings");
+  textarea.select();
+  document.execCommand("copy");
+  OOPAUTHED.style.display = "none";
+  OOPDENY.style.display = "none";
+  OOPCB.style.display = "none";
+  LEFTVM.style.display = "none";
+  NOVM.style.display = "none";
+}
+
+function TGAFSA(btnID){
+  var Check = localStorage.getItem(btnID + "EDIT");
+  SNIPPETAREA.style.display = "inline-block";
+  if (Check == null) {
+    document.getElementById("Snippings").value = "Called CH to get auth for shipping.\rCH approved shipping.\rWill call RF to inform and order part\r";
+    document.getElementById("EDITarea").value = document.getElementById("Snippings").value;
+  } else {
+    document.getElementById("Snippings").value = Check;
+    document.getElementById("EDITarea").value = Check;
+  }
+  let textarea = document.getElementById("Snippings");
+  textarea.select();
+  document.execCommand("copy");
+  SHIPAUTHED.style.display = "none";
+  SHIPDENY.style.display = "none";
+  SHIPCB.style.display = "none";
+  LEFTVM.style.display = "none";
+  NOVM.style.display = "none";
+}
+
+function TGAFSD(btnID){
+  var Check = localStorage.getItem(btnID + "EDIT");
+  SNIPPETAREA.style.display = "inline-block";
+  if (Check == null) {
+    document.getElementById("Snippings").value = "Called CH to get auth for shipping.\rCH declined shipping and will use RF parts.\rCH has agreed to the OOPC.\rWill call RF to inform and give auth";
+    document.getElementById("EDITarea").value = document.getElementById("Snippings").value;
+  } else {
+  document.getElementById("Snippings").value = Check;
+  document.getElementById("EDITarea").value = Check;
+  }
+  let textarea = document.getElementById("Snippings");
+  textarea.select();
+  document.execCommand("copy");
+  SHIPAUTHED.style.display = "none";
+  SHIPDENY.style.display = "none";
+  SHIPCB.style.display = "none";
+  LEFTVM.style.display = "none";
+  NOVM.style.display = "none";
+}
+
+function TGAFSC(btnID){
+  var Check = localStorage.getItem(btnID + "EDIT");
+  SNIPPETAREA.style.display = "inline-block";
+  if (Check == null) {
+    document.getElementById("Snippings").value = "Called CH to get auth for shipping.\rCH will call back with decision\r";
+    document.getElementById("EDITarea").value = document.getElementById("Snippings").value;
+  } else {
+    document.getElementById("Snippings").value = Check;
+    document.getElementById("EDITarea").value = Check;
+  }
+  let textarea = document.getElementById("Snippings");
+  textarea.select();
+  document.execCommand("copy");
+  SHIPAUTHED.style.display = "none";
+  SHIPDENY.style.display = "none";
+  SHIPCB.style.display = "none";
+  LEFTVM.style.display = "none";
+  NOVM.style.display = "none";
+}
+
+function TGAFOSA(btnID){
+ var Check = localStorage.getItem(btnID + "EDIT");
+ SNIPPETAREA.style.display = "inline-block";
+ if (Check == null) {
+ document.getElementById("Snippings").value = "Called CH to get auth for OOPC and shipping.\rCH approved OOPC and shipping.\rWill call RF to inform and order parts.\r";
+ document.getElementById("EDITarea").value = document.getElementById("Snippings").value;
+ } else {
+ document.getElementById("Snippings").value = Check;
+ document.getElementById("EDITarea").value = Check;
+ }
+ let textarea = document.getElementById("Snippings");
+ textarea.select();
+ document.execCommand("copy");
+ OASAUTHED.style.display = "none";
+ OASDENYSHIP.style.display = "none";
+ OASDENYBOTH.style.display = "none";
+ OASCB.style.display = "none";
+ LEFTVM.style.display = "none";
+ NOVM.style.display = "none";
+ LEFTVM.style.left = "270px";
+ NOVM.style.left = "270px";
+}
+
+function TGAFOSDS(btnID){
+  var Check = localStorage.getItem(btnID + "EDIT");
+  SNIPPETAREA.style.display = "inline-block";
+  if (Check == null) {
+    document.getElementById("Snippings").value = "Called CH to get auth for OOPC and shipping.\rCH declined shipping and will use RF parts.\rCH has agreed to the OOPC.\rWill call RF to inform and give auth";
+    document.getElementById("EDITarea").value = document.getElementById("Snippings").value;
+  } else {
+    document.getElementById("Snippings").value = Check;
+    document.getElementById("EDITarea").value = Check;
+  }
+  let textarea = document.getElementById("Snippings");
+  textarea.select();
+  document.execCommand("copy");
+  OASAUTHED.style.display = "none";
+  OASDENYSHIP.style.display = "none";
+  OASDENYBOTH.style.display = "none";
+  OASCB.style.display = "none";
+  LEFTVM.style.display = "none";
+  NOVM.style.display = "none";
+  LEFTVM.style.left = "270px";
+  NOVM.style.left = "270px";
+}
+
+function TGAFOSDB(btnID){
+  var Check = localStorage.getItem(btnID + "EDIT");
+  SNIPPETAREA.style.display = "inline-block";
+  if (Check == null) {
+    document.getElementById("Snippings").value = "Called CH to get auth for OOPC and shipping.\rCH declined repairs at  this time.\r";
+   document.getElementById("EDITarea").value = document.getElementById("Snippings").value;
+  } else {
+    document.getElementById("Snippings").value = Check;
+    document.getElementById("EDITarea").value = Check;
+  }
+  let textarea = document.getElementById("Snippings");
+  textarea.select();
+  document.execCommand("copy");
+  OASAUTHED.style.display = "none";
+  OASDENYSHIP.style.display = "none";
+  OASDENYBOTH.style.display = "none";
+  OASCB.style.display = "none";
+  LEFTVM.style.display = "none";
+  NOVM.style.display = "none";
+  LEFTVM.style.left = "270px";
+  NOVM.style.left = "270px";
+}
+
+function TGAFOSC(btnID){
+  var Check = localStorage.getItem(btnID + "EDIT");
+  SNIPPETAREA.style.display = "inline-block";
+  if (Check == null) {
+    document.getElementById("Snippings").value = "Called CH to get auth for OOPC and shipping.\rCH will call back with decision.\r";
+    document.getElementById("EDITarea").value = document.getElementById("Snippings").value;
+  } else {
+    document.getElementById("Snippings").value = Check;
+    document.getElementById("EDITarea").value = Check;
+  }
+  let textarea = document.getElementById("Snippings");
+  textarea.select();
+  document.execCommand("copy");
+  OASAUTHED.style.display = "none";
+  OASDENYSHIP.style.display = "none";
+  OASDENYBOTH.style.display = "none";
+  OASCB.style.display = "none";
+  LEFTVM.style.display = "none";
+  NOVM.style.display = "none";
+  LEFTVM.style.left = "270px";
+  NOVM.style.left = "270px";
+}
+
+function RFIB(){
+  if (checkOpen()) { return; }
+  document.getElementById("Snippings").value = "";
+  SNIPPETAREA.style.display = "none";
+  RFAUTH.style.display = "inline-block";
+  RFTOTALS.style.display = "inline-block";
+  RFPNLC.style.display = "inline-block";
+  DIDNTHAVE.style.display = "inline-block";
+}
+
+function RFIBDH(){
+ DIAGNOSTIC.style.display = "inline-block";
+ ESTIMATE.style.display = "inline-block";
+ FAILURE.style.display = "inline-block";
+ VEHICLE.style.display = "inline-block";
+ RFAUTH.style.display = "none";
+ RFTOTALS.style.display = "none";
+ RFPNLC.style.display = "none";
+ DIDNTHAVE.style.display = "none";
+}
+
+function RFIBND(btnID){
+  var Check = localStorage.getItem(btnID + "EDIT");
+  SNIPPETAREA.style.display = "inline-block";
+  if (Check === null) {
+    document.getElementById("Snippings").value = "RF called in to start a claim.\rRF doesn't have a complete diagnostic\rADV RF of requirements to open claim\rRF understood and will call back when diag is complete\r";
+  } else {
+    document.getElementById("Snippings").value = Check;
+  }
+  document.getElementById("EDITarea").value = document.getElementById("Snippings").value;
+  let textarea = document.getElementById("Snippings");
+  textarea.select();
+  document.execCommand("copy");
+  DIAGNOSTIC.style.display = "none";
+  ESTIMATE.style.display = "none";
+  FAILURE.style.display = "none";
+  VEHICLE.style.display = "none";
+}
+
+function RFIBNE(btnID){
+  var Check = localStorage.getItem(btnID + "EDIT");
+  SNIPPETAREA.style.display = "inline-block";
+  if (Check == null) {
+    document.getElementById("Snippings").value = "RF called in to start a claim.\rRF doesn't have estimate ready\rADV RF of requirements to open claim\rRF understood and will call back with estimate\r";
+  } else {
+    document.getElementById("Snippings").value = Check;
+  }
+  document.getElementById("EDITarea").value = document.getElementById("Snippings").value;
+  let textarea = document.getElementById("Snippings");
+  textarea.select();
+  document.execCommand("copy");
+  DIAGNOSTIC.style.display = "none";
+  ESTIMATE.style.display = "none";
+  FAILURE.style.display = "none";
+  VEHICLE.style.display = "none";
+}
+
+function RFIBNF(btnID){
+  var Check = localStorage.getItem(btnID + "EDIT");
+  SNIPPETAREA.style.display = "inline-block";
+  if (Check == null) {
+    document.getElementById("Snippings").value = "RF called in to start a claim.\rRF doesn't have verified cause of failure\rADV RF of requirements to open claim\rRF understood and will call back when ready\r";
+  } else {
+    document.getElementById("Snippings").value = Check;
+  }
+  document.getElementById("EDITarea").value = document.getElementById("Snippings").value;
+  let textarea = document.getElementById("Snippings");
+  textarea.select();
+  document.execCommand("copy");
+  DIAGNOSTIC.style.display = "none";
+  ESTIMATE.style.display = "none";
+  FAILURE.style.display = "none";
+  VEHICLE.style.display = "none";
+}
+
+function RFIBNV(btnID){
+  var Check = localStorage.getItem(btnID + "EDIT");
+  SNIPPETAREA.style.display = "inline-block";
+  if (Check == null) {
+    document.getElementById("Snippings").value = "RF called in to start a claim.\rCH vehicle is not at RF\rADV RF of requirements to open claim\rRF understood and will call back when vehicle has returned\r";
+  } else {
+    document.getElementById("Snippings").value = Check;
+  }
+  document.getElementById("EDITarea").value = document.getElementById("Snippings").value;
+  let textarea = document.getElementById("Snippings");
+  textarea.select();
+  document.execCommand("copy");
+  DIAGNOSTIC.style.display = "none";
+  ESTIMATE.style.display = "none";
+  FAILURE.style.display = "none";
+  VEHICLE.style.display = "none";
+}
+
+function PNLC(btnID){
+  var Check = localStorage.getItem(btnID + "EDIT");
+  SNIPPETAREA.style.display = "inline-block";
+  if (Check == null) {
+    document.getElementById("Snippings").value = "RF called in with the following concerns:\r\rADV PNLC";
+  } else {
+    document.getElementById("Snippings").value = Check;
+  }
+  document.getElementById("EDITarea").value = document.getElementById("Snippings").value;
+  RFAUTH.style.display = "none";
+  RFTOTALS.style.display = "none";
+  RFPNLC.style.display = "none";
+  DIDNTHAVE.style.display = "none";
+}
+
+function TOTAL(btnID){
+  var Check = localStorage.getItem(btnID + "EDIT");
+  SNIPPETAREA.style.display = "inline-block";
+  if (Check == null) {
+   document.getElementById("Snippings").value = "RF called in to go over totals.\rADV RF of totals. RF understood.";
+  } else {
+    document.getElementById("Snippings").value = Check;
+  }
+  document.getElementById("EDITarea").value = document.getElementById("Snippings").value;
+  let textarea = document.getElementById("Snippings");
+  textarea.select();
+  document.execCommand("copy");
+  RFAUTH.style.display = "none";
+  RFTOTALS.style.display = "none";
+  RFPNLC.style.display = "none";
+  DIDNTHAVE.style.display = "none";
+}
+
+function GAR(btnID){
+  var Check = localStorage.getItem(btnID + "EDIT");
+  SNIPPETAREA.style.display = "inline-block";
+  if (Check == null) {
+    document.getElementById("Snippings").value = "RF called in to get auth info.\rVerified OOPC was authed via notes.\rGave RF auth and payment details.";
+  } else {
+    document.getElementById("Snippings").value = Check;
+  }
+  document.getElementById("EDITarea").value = document.getElementById("Snippings").value;
+  let textarea = document.getElementById("Snippings");
+  textarea.select();
+  document.execCommand("copy");
+  RFAUTH.style.display = "none";
+  RFTOTALS.style.display = "none";
+  RFPNLC.style.display = "none";
+  DIDNTHAVE.style.display = "none";
+}
+
+function NAV(){
+  SNIPPETAREA.style.display = "inline-block";
+  document.getElementById("Snippings").value = VMREASON;
+  document.getElementById("Snippings").value += "No answer - Left voicemail\rTasked to CS callbacks\r";
+  let textarea = document.getElementById("Snippings");
+  textarea.select();
+  document.execCommand("copy");
+  OOPAUTHED.style.display = "none";
+  OOPDENY.style.display = "none";
+  OOPCB.style.display = "none";
+  SHIPAUTHED.style.display = "none";
+  SHIPDENY.style.display = "none";
+  SHIPCB.style.display = "none";
+  OASAUTHED.style.display = "none";
+  OASDENYSHIP.style.display = "none";
+  OASDENYBOTH.style.display = "none";
+  OASCB.style.display = "none";
+  LEFTVM.style.display = "none";
+  NOVM.style.display = "none";
+  LEFTVM.style.left = "270px";
+  NOVM.style.left = "270px";
+}
+
+function NAN(){
+  SNIPPETAREA.style.display = "inline-block";
+  document.getElementById("Snippings").value = VMREASON;
+  document.getElementById("Snippings").value += "No answer - No voicemail available\rTasked to CS callbacks\r";
+  let textarea = document.getElementById("Snippings");
+  textarea.select();
+  document.execCommand("copy");
+  OOPAUTHED.style.display = "none";
+  OOPDENY.style.display = "none";
+  OOPCB.style.display = "none";
+  SHIPAUTHED.style.display = "none";
+  SHIPDENY.style.display = "none";
+  SHIPCB.style.display = "none";
+  OASAUTHED.style.display = "none";
+  OASDENYSHIP.style.display = "none";
+  OASDENYBOTH.style.display = "none";
+  OASCB.style.display = "none";
+  LEFTVM.style.display = "none";
+  NOVM.style.display = "none";
+  LEFTVM.style.left = "270px";
+  NOVM.style.left = "270px";
+}
+
+function RESETNOTE(){
+  RFINBOUND.style.display = "inline-block";
+  AUTHFOR.style.display = "inline-block";
+  DIDNTHAVE.style.display = "none";
+  DIAGNOSTIC.style.display = "none";
+  ESTIMATE.style.display = "none";
+  FAILURE.style.display = "none";
+  VEHICLE.style.display = "none";
+  RFPNLC.style.display = "none";
+  RFTOTALS.style.display = "none";
+  RFAUTH.style.display = "none";
+  AUTHFORO.style.display = "none";
+  AUTHFORS.style.display = "none";
+  AUTHFORB.style.display = "none";
+  OOPAUTHED.style.display = "none";
+  OOPDENY.style.display = "none";
+  OOPCB.style.display = "none";
+  SHIPAUTHED.style.display = "none";
+  SHIPDENY.style.display = "none";
+  SHIPCB.style.display = "none";
+  OASAUTHED.style.display = "none";
+  OASDENYSHIP.style.display = "none";
+  OASDENYBOTH.style.display = "none";
+  OASCB.style.display = "none";
+  SNIPPETAREA.style.display = "none";
+  LEFTVM.style.display = "none";
+  NOVM.style.display = "none";
+  document.getElementById("Snippings").value = "";
+  LEFTVM.style.left = "270px";
+  NOVM.style.left = "270px";
+}
+
+const menu = document.getElementById("context-menu");
+var menuState = 0;
+var colorState = "0";
+var contextMenuActive = "block";
+
+function customMenu(sentID, event) {
+  event.preventDefault();
+  for (i = 0; i < menuList.length; i++) {
+    if (menuList[i].style.display != "none") {
+      console.log("issue");
+      return;
+    }
+  }
+  toggleMenuOn();
+  positionMenu(event);
+  localStorage.setItem("lastCalled", sentID);
+}
+
+function toggleMenuOn() {
+  if (menuState !== 1) {
+    menuState = 1;
+    menu.classList.add("visible");
+  }
+}
+
+function toggleMenuOff() {
+  if (menuState !== 0) {
+    menuState = 0;
+    menu.classList.remove("visible");
+  }
+}
+
+
+function getPosition(e) {
+  var posx = 0;
+  var posy = 0;
+  if (!e) var e = window.event;
+  if (e.pageX || e.pageY) {
+    posx = e.pageX;
+    posy = e.pageY;
+  } else if (e.clientX || e.clientY) {
+    posx =
+      e.clientX +
+      document.body.scrollLeft +
+      document.documentElement.scrollLeft;
+    posy =
+      e.clientY + document.body.scrollTop + document.documentElement.scrollTop;
+  }
+  return {
+    x: posx,
+    y: posy
+  };
+}
+
+
+function positionMenu(e) {
+  let clickCoords = getPosition(e);
+  let clickCoordsX = clickCoords.x;
+  let clickCoordsY = clickCoords.y;
+
+  let menuWidth = menu.offsetWidth + 4;
+  let menuHeight = menu.offsetHeight + 4;
+
+  let windowWidth = window.innerWidth;
+  let windowHeight = window.innerHeight;
+
+  if (windowWidth - clickCoordsX < menuWidth) {
+    menu.style.left = windowWidth - menuWidth + "px";
+  } else {
+    menu.style.left = clickCoordsX + "px";
+  }
+  if (windowHeight - clickCoordsY < menuHeight) {
+    menu.style.top = windowHeight - menuHeight + "px";
+  } else {
+    menu.style.top = clickCoordsY + "px";
+  }
+}
+
+document.addEventListener("click", (e) => {
+  var button = e.which || e.button;
+  if (button === 1) {
+    toggleMenuOff();
+  }
+});
+
+window.onkeyup = function (e) {
+  if (e.keyCode === 27) {
+    toggleMenuOff();
+  }
+};
+
+
+function editDisplay() {
+  var lastID = localStorage.getItem("lastCalled");
+  var selectedButton = document.getElementById(lastID);
+  if (!selectedButton.classList.contains('D')) {
+    alert("That function is not available on this button");
+    localStorage.setItem("lastCalled", "noError");
+    return;
+  }
+  localStorage.setItem("verifyCalled", lastID);
+  var disEdit = document.getElementById("disEdit");
+  disEdit.style.display = "inline-block";
+  var mimic = document.getElementById("mimic");
+  var lHeight = window.getComputedStyle(selectedButton).lineHeight;
+  mimic.style.lineHeight = lHeight
+  if (displayList.includes(selectedButton)) {
+    var currentDisplay = localStorage.getItem(lastID + "Display");
+    if (currentDisplay == null) {
+      mimic.innerHTML = document.getElementById(lastID).innerHTML;
+    } else {
+      mimic.innerHTML = currentDisplay;
+    }
+  }
+  var fontSize = window.getComputedStyle(selectedButton).fontSize;
+
+  document.getElementById("fontSizer").innerText = "Font Size: " + fontSize;
+  selectedButton.style.fontSize = fontSize;
+  mimic.style.fontSize = fontSize;
+  var cHeight = window.getComputedStyle(selectedButton).height;
+  var cWidth = window.getComputedStyle(selectedButton).width;
+  mimic.style.width = cWidth;
+  mimic.style.height = cHeight;
+  divWidth = disEdit.offsetWidth;
+  disWidth = parseInt(divWidth);
+  cisWidth = parseInt(cWidth);
+  mimic.style.left = (((disWidth - cisWidth) / 2) - 20) + "px";
+}
+
+function submitDisp(x) {
+  var mimic = document.getElementById("mimic");
+  var verifiedID = localStorage.getItem("verifyCalled");
+  if (x == 'd') {
+    mimic.innerHTML = "";
+    localStorage.removeItem(verifiedID + "Display");
+    localStorage.removeItem(verifiedID + "Font");
+    var disEdit = document.getElementById("disEdit");
+    disEdit.style.display = "none";
+    location.reload();
+    return;
+  }
+  if (x == 'b') {
+    document.execCommand('bold',false,null);
+  }
+  if (x == 'c') {
+    if (colorState == "0") {
+      document.execCommand('foreColor', false, '#FF0000');
+      colorState = "1";
+    } else {
+      document.execCommand('foreColor', false, '#000000');
+      colorState = "0";
+    } 
+  }
+
+  var newDisplay = mimic.innerHTML;
+  var selectedButton = document.getElementById(verifiedID);
+  selectedButton.innerHTML = newDisplay;
+  localStorage.setItem(verifiedID + "Display", newDisplay);
+
+  if (x == "s") {
+    var disEdit = document.getElementById("disEdit");
+    disEdit.style.display = "none";
+    mimic.innerHTML = "";
+  localStorage.setItem("verifyCalled", "noError");
+  localStorage.setItem("lastCalled", "noError");
+  }
+}
+
+
+
+function editContent() {
+  var lastID = localStorage.getItem("lastCalled");
+  var selectedButton = document.getElementById(lastID);
+console.log(lastID);
+  if (!selectedButton.classList.contains('C')) {
+    alert("That function is not available on this button");
+    localStorage.setItem("lastCalled", "noError");
+    return;
+  }
+  localStorage.setItem("verifyCalled", lastID);
+  var contEdit = document.getElementById("contEdit");
+  contEdit.style.display = "inline-block";
+
+  var currentNote = localStorage.getItem(lastID + "EDIT");
+  console.log(currentNote);
+  if (currentNote != null) {
+    document.getElementById("ContentEditor").innerText = currentNote;
+  } else {
+    selectedButton.onclick();
+    var text = document.getElementById("EDITarea").value;
+    document.getElementById("ContentEditor").innerText = text;
+  }
+}
+
+
+function cancelCont() {
+  var contEdit = document.getElementById("contEdit");
+  document.getElementById("ContentEditor").innerText = "";
+  contEdit.style.display = "none"
+}
+
+function submitCont() {
+  var contEdit = document.getElementById("contEdit");
+  var verifiedID = localStorage.getItem("verifyCalled");
+  var newContent = document.getElementById("ContentEditor").innerText;
+  localStorage.setItem(verifiedID + "EDIT", newContent);
+  contEdit.style.display = "none";
+  localStorage.setItem("verifyCalled", "noError");
+  localStorage.setItem("lastCalled", "noError");
+}
+
+function defaultCont() {
+  var contEdit = document.getElementById("contEdit");
+  var verifiedID = localStorage.getItem("verifyCalled");
+  document.getElementById("ContentEditor").innerText = "";
+  localStorage.removeItem(verifiedID + "EDIT");
+  contEdit.style.display = "none";
+  location.reload();
+}
+
+function fontChange(x) {
+  var bigorSmoll = parseInt(x);
+  var verifiedID = localStorage.getItem("verifyCalled");
+  var selectedButton = document.getElementById(verifiedID);
+  var mimic = document.getElementById("mimic");
+  var fontS = window.getComputedStyle(selectedButton).fontSize;
+  var fontInt = parseInt(fontS);
+  fontInt = fontInt + bigorSmoll;
+  var tempFont = fontInt.toString(); 
+  var newFont = tempFont + "px";
+  selectedButton.style.fontSize = newFont;
+  mimic.style.fontSize = newFont;
+  selectedButton.innerHTML = mimic.innerHTML;
+  document.getElementById("fontSizer").innerText = "Font Size: " + newFont;
+  localStorage.setItem(verifiedID + "Font", newFont);
+}
+
+function editSize() {
+  var lastID = localStorage.getItem("lastCalled");
+  var selectedButton = document.getElementById(lastID);
+
+  if (!selectedButton.classList.contains('R')) {
+    alert("That function is not available on this button");
+    localStorage.setItem("lastCalled", "noError");
+    return;
+  }
+
+  localStorage.setItem("verifyCalled", lastID);
+  var sizeEdit = document.getElementById("sizeEdit");
+  sizeEdit.style.display = "inline-block";
+  var sizeShow = document.getElementById("sizeShow");
+  var lHeight = window.getComputedStyle(selectedButton).lineHeight;
+  sizeShow.style.lineHeight = lHeight
+  var fontSize = window.getComputedStyle(selectedButton).fontSize;
+  sizeShow.style.fontSize = fontSize;
+  var currentDisplay = localStorage.getItem(lastID + "Display");
+    if (currentDisplay == null) {
+      sizeShow.innerHTML = document.getElementById(lastID).innerHTML;
+    } else {
+      sizeShow.innerHTML = currentDisplay;
+    }
+
+  var curWidth = selectedButton.offsetWidth;
+  var curHeight = selectedButton.offsetHeight;
+
+  sizeShow.style.height = curHeight + "px";
+  sizeShow.style.width = curWidth + "px";
+
+
+  var showLeft = (475 - curWidth) / 2;
+  var showTop = (270 - curHeight) / 2;
+  sizeShow.style.top = showTop + "px";
+  sizeShow.style.left = showLeft + "px";
+}
+
+function heightChange(x) {
+  var bigorSmoll = parseInt(x);
+  var verifiedID = localStorage.getItem("verifyCalled");
+  var selectedButton = document.getElementById(verifiedID);
+  var sizeShow = document.getElementById("sizeShow");
+  var curHeight = selectedButton.offsetHeight;
+  var newHeight = curHeight + bigorSmoll; 
+  selectedButton.style.height = newHeight + "px";
+  sizeShow.style.height = newHeight + "px";
+  localStorage.setItem(verifiedID + "Height", newHeight + "px");
+
+  var showTop = (270 - newHeight) / 2;
+  sizeShow.style.top = showTop + "px";
+}
+
+function widthChange(x) {
+  var bigorSmoll = parseInt(x);
+  var verifiedID = localStorage.getItem("verifyCalled");
+  var selectedButton = document.getElementById(verifiedID);
+  var sizeShow = document.getElementById("sizeShow");
+  var curWidth = selectedButton.offsetWidth;
+  newWidth = curWidth + bigorSmoll; 
+  selectedButton.style.width = newWidth + "px";
+  sizeShow.style.width = newWidth + "px";
+  localStorage.setItem(verifiedID + "Width", newWidth + "px");
+
+  var showLeft = (475 - newWidth) / 2;
+  sizeShow.style.left = showLeft + "px";
+}
+
+function sizeSubmit(x) {
+  var sizeEdit = document.getElementById("sizeEdit");
+  var verifiedID = localStorage.getItem("verifyCalled");
+  localStorage.setItem("verifyCalled", "noError");
+  localStorage.setItem("lastCalled", "noError");
+  sizeEdit.style.display = "none";
+
+  if (x == "d") {
+    localStorage.removeItem(verifiedID + "Width");
+    localStorage.removeItem(verifiedID + "Height");
+    location.reload();
+  }
+}
+
+function editPos() {
+  var lastID = localStorage.getItem("lastCalled");
+  var selectedButton = document.getElementById(lastID);
+
+  if (!selectedButton.classList.contains('P')) {
+    alert("That function is not available on this button");
+    localStorage.setItem("lastCalled", "noError");
+    return;
+  }
+
+  localStorage.setItem("verifyCalled", lastID);
+  var cacheIndex = window.getComputedStyle(selectedButton).getPropertyValue("z-index");
+  localStorage.setItem(lastID + "zIndex", cacheIndex);
+  selectedButton.style.zIndex = "99";
+  selectedButton.classList.add("shiny");
+  var upBTN = document.getElementById("upBTN");
+  var downBTN = document.getElementById("downBTN");
+  var leftBTN = document.getElementById("leftBTN");
+  var rightBTN = document.getElementById("rightBTN");
+  var posSubmit = document.getElementById("posSubmit");
+  var posEdit = document.getElementById("posEdit");
+
+  upBTN.style.display = "inline-block";
+  downBTN.style.display = "inline-block";
+  leftBTN.style.display = "inline-block";
+  rightBTN.style.display = "inline-block";
+  posSubmit.style.display = "inline-block";
+  posEdit.style.display = "inline-block";
+}
+
+
+function lMove() {
+  var verifiedID = localStorage.getItem("verifyCalled");
+  var selectedButton = document.getElementById(verifiedID);
+
+  var currentLeft = selectedButton.offsetLeft;
+  var leftInt = parseInt(currentLeft);
+  var newLeft = leftInt + 5;
+  selectedButton.style.left = newLeft + "px";
+  localStorage.setItem(verifiedID + "left", newLeft + "px");
+}
+
+function lrMove(x) {
+  var verifiedID = localStorage.getItem("verifyCalled");
+  var selectedButton = document.getElementById(verifiedID);
+
+  var currentLeft = selectedButton.offsetLeft;
+  var leftInt = parseInt(currentLeft);
+  var direction = parseInt(x);
+  var newLeft = leftInt + direction;
+  selectedButton.style.left = newLeft + "px";
+  localStorage.setItem(verifiedID + "left", newLeft + "px");
+}
+
+function udMove(x) {
+  var verifiedID = localStorage.getItem("verifyCalled");
+  var selectedButton = document.getElementById(verifiedID);
+  var currentTop = selectedButton.offsetTop;
+  var topInt = parseInt(currentTop);
+  var direction = parseInt(x);
+  var newTop = topInt + direction;
+  selectedButton.style.top = newTop + "px";
+  localStorage.setItem(verifiedID + "top", newTop + "px");
+}
+
+function dMove() {
+  var verifiedID = localStorage.getItem("verifyCalled");
+  var selectedButton = document.getElementById(verifiedID);
+  var currentTop = selectedButton.offsetTop;
+  var topInt = parseInt(currentTop);
+  var newTop = topInt + 5;
+  selectedButton.style.top = newTop + "px";
+  localStorage.setItem(verifiedID + "top", newTop + "px");
+}
+
+
+function posSubmit(x) {
+  var upBTN = document.getElementById("upBTN");
+  var downBTN = document.getElementById("downBTN");
+  var leftBTN = document.getElementById("leftBTN");
+  var rightBTN = document.getElementById("rightBTN");
+  var posSubmit = document.getElementById("posSubmit");
+  var posEdit = document.getElementById("posEdit");
+  var verifiedID = localStorage.getItem("verifyCalled");
+  var selectedButton = document.getElementById(verifiedID);
+  var returnZindex = localStorage.getItem(verifiedID + "zIndex");
+  selectedButton.style.zIndex = returnZindex;
+  selectedButton.classList.remove("shiny");
+
+  upBTN.style.display = "none";
+  downBTN.style.display = "none";
+  leftBTN.style.display = "none";
+  rightBTN.style.display = "none";
+  posEdit.style.display = "none";
+
+  localStorage.setItem("verifyCalled", "noError");
+  localStorage.setItem("lastCalled", "noError");
+  if (x == "d") {
+    localStorage.removeItem(verifiedID + "top");
+    localStorage.removeItem(verifiedID + "left");
+    location.reload();
+  }
+}
+
+function BuilderShow() {
+  var toggleMaster = document.getElementById("toggleMaster");
+  var BtnBuilder = document.getElementById("BtnBuilder");
+  if (toggleMaster.style.display == "none") {
+    toggleMaster.style.display = "inline-block";
+    BtnBuilder.innerText = "\u2666 Hide Toggle \u2666";
+  } else {
+    toggleMaster.style.display = "none";
+    BtnBuilder.innerText = "\u2666 Toggle On/Off \u2666";
+    if (menuOpen){
+      MENU();
+    }
+  }
+}
+
+function infoCancel() {
+  var infoDiv1 = document.getElementById("infoDiv1");
+  infoDiv1.style.display = "none";
+}
+
+function infoCancel2() {
+  var infoDiv2 = document.getElementById("infoDiv2");
+  infoDiv2.style.display = "none";
+}
+
+function showCustom() {
+  var infoDiv1 = document.getElementById("infoDiv1");
+  infoDiv1.style.display = "inline-block";
+}
+
+function infoDone() {
+  infoDiv1.style.display = "none";
+  infoDiv2.style.display = "inline-block";
+}
+
+function infoDone1() {
+  var typeFinder = document.getElementsByName('buttonType');
+  var btnType;
+  for(i = 0; i < typeFinder.length; i++){
+    if(typeFinder[i].checked){
+      btnType = typeFinder[i].value;
+      localStorage.setItem("type", btnType);
+    }
+  }
+  infoDiv2.style.display = "none";
+  infoDiv3.style.display = "inline-block";
+}
+
+var customIDs = [];
+function infoDone2() {
+  infoDiv2.style.display = "none";
+  var typeFinder = document.getElementsByName('buttonType');
+  var btnType;
+
+  for(i = 0; i < typeFinder.length; i++){
+    if(typeFinder[i].checked){
+      btnType = typeFinder[i].value;
+      localStorage.setItem("type", btnType);
+    }
+  }
+
+  var selectedID = "holder1";
+  var baseKey;
+  var STt = localStorage.getItem(selectedID + "STCB");
+  var PRt = localStorage.getItem(selectedID + "PRIN");
+  var LIt = localStorage.getItem(selectedID + "LINK");
+  var ENt = localStorage.getItem(selectedID + "ENDN");
+  var SOt = localStorage.getItem(selectedID + "SOLO");
+  var but = localStorage.getItem(selectedID + "Count");
+  var STCBCount = parseInt(STt);
+  var PRINCount = parseInt(PRt);
+  var LINKCount = parseInt(LIt);
+  var ENDNCount = parseInt(ENt);
+  var SOLOCount = parseInt(SOt);
+  var buttonCount = parseInt(but);
+
+  var currID = "cust" + but;
+  var newButton = document.getElementById(currID);
+
+  var BtnDisplay = document.getElementById("BtnDisplay").value;
+  var BtnContent = document.getElementById("BtnContent").value;
+
+  if (BtnDisplay == null || BtnContent == null) {
+  alert("You must pick a button display and content value");
+  return;
+  }
+  switch(btnType) {
+  case "STCB":
+    baseKey = "STCB" + STCBCount;
+    STCBCount = STCBCount + 1;
+    localStorage.setItem(selectedID + "STCB", STCBCount);
+    break;
+  case "PRIN":
+    baseKey = "PRIN" + PRINCount;
+    PRINCount = PRINCount + 1;
+    localStorage.setItem(selectedID + "PRIN", PRINCount);
+    break;
+  case "LINK":
+    baseKey = "LINK" + LINKCount;
+    LINKCount = LINKCount + 1;
+    localStorage.setItem(selectedID + "LINK", LINKCount);
+    break;
+  case "ENDN":
+    baseKey = "ENDN" + ENDNCount;
+    ENDNCount = ENDNCount + 1;
+    localStorage.setItem(selectedID + "ENDN", ENDNCount);
+    break;
+  case "SOLO":
+    baseKey = "SOLO" + SOLOCount;
+    SOLOCount = SOLOCount + 1;
+    localStorage.setItem(selectedID + "SOLO", SOLOCount);
+    break;
+  default:
+    alert("You must pick a button type");
+    return;
+  }
+
+
+
+
+  newButton.innerHTML = BtnDisplay;
+  newButton.id = baseKey;
+
+  var currdivID = "custBtn" + but;
+  var newButtonDiv = document.getElementById(currdivID);
+  newButtonDiv.style.display = "inline-block";
+ 
+  var curWidth = newButton.offsetWidth;
+  var curHeight = newButton.offsetHeight;
+
+
+  newButtonDiv.style.left = "20px";
+  newButtonDiv.style.top = "200px";
+
+
+
+  localStorage.setItem(currdivID + "SHOW", "inline-block");
+  localStorage.setItem(currID, baseKey);
+  localStorage.setItem(baseKey + "Display", BtnDisplay);
+  localStorage.setItem(baseKey + "EDIT", BtnContent);
+  localStorage.setItem(baseKey + "Height", curHeight);
+  localStorage.setItem(baseKey + "Width", curWidth);
+  localStorage.setItem(currdivID + "top", "200px");
+  localStorage.setItem(currdivID + "left", "20px");
+
+  idList.push(newButton);
+  idList.push(newButtonDiv);
+  contentList.push(newButton);
+  moveList.push(newButtonDiv);
+  resizeList.push(newButton);
+  displayList.push(newButton);
+  showList.push(newButtonDiv);
+  buttonList.push(newButton);
+  divList.push(newButtonDiv);
+
+  buttonCount = buttonCount + 1;
+  localStorage.setItem(selectedID + "Count", buttonCount);
+  SALTANDPEPA('0');
+}
+
+function conjunctionJunction(buttonID) {
+  var funct = buttonID.slice(0, 4);
+  var note = localStorage.getItem(buttonID + "EDIT");
+
+  if (note == null) {
+    alert("No note currently defined");
+    return false;
+  }
+  document.getElementById("EDITarea").value = note;
+  switch(funct) {
+  case "STCB":
+    document.getElementById("textarea5").value = note;
+    let textareaFive = document.getElementById("textarea5");
+    textareaFive.select();
+    document.execCommand("copy");
+    break;
+  case "PRIN":
+    document.getElementById("textarea2").value = note;
+    document.getElementById("textarea2").value =  "\r";
+    break;
+  case "LINK":
+    document.getElementById("textarea2").value += note;
+    document.getElementById("textarea2").value += "\r";
+    break;
+  case "ENDN":
+    document.getElementById("textarea2").value += note;
+    let textarea = document.getElementById("textarea2");
+    textarea.select();
+    document.execCommand("copy");
+    break;
+  case "SOLO":
+    document.getElementById("textarea2").value += note;
+    document.getElementById("textarea2").value += "\r\r";
+    break;
+  }
+}
+
+
+function tutorial() {
+  localStorage.setItem("pageNum", "0");
+  document.getElementById("myNav0").style.width = "100%";
+}
+
+function swapClassNav1a(page,mod) {
+  var id = "nav1in" + page;
+  var elem = document.getElementById(id);
+  elem.style.display = "inherit";
+  var pagenum = parseInt(page) + 1;
+  localStorage.setItem("pageNum", pagenum);
+}
+
+function nextNav(inner) {
+  var pageStr = localStorage.getItem("pageNum");
+  if (inner == "myNav1") {
+    switch(pageStr) {
+  case "0":
+    document.getElementById("myNav0").style.display = "none";
+    document.getElementById("myNav1").style.width = "100%";
+    saveIndex("areaOne");
+    document.getElementById("textarea1").value = "CONTACT:  The RF service advisor name.\rPAYMENT:  Where RF payment will be sent.\rZIPCODE:  The RF zip code.\rMILEAGE:  Current CH mileage\rDISTANCE:  CH miles in coverage.\rTIME:  CH days in coverage";
+    swapClassNav1a(pageStr);
+    break;   
+  case "1":
+    saveIndex("ITSBRITTNEY");
+    swapClassNav1a(pageStr);
+    break;
+  case "2":
+    AnotherOne();
+    AnotherOne();
+    AnotherOne();
+    document.getElementById("partname3").value = "Blower Motor";
+    document.getElementById("partname2").value = "Starter";
+    document.getElementById("partname1").value = "Window Motor";
+    swapClassNav1a(pageStr);
+    break;
+  case "3":
+    saveIndex("textarea2");
+    document.getElementById("rfprice").value = "199.99";
+    document.getElementById("partnum").value = "123456";
+    FormToTA();
+    swapClassNav1a(pageStr);
+    break;
+  case "4":
+    document.getElementById("msrp").value = "199.99";
+    FormToTA();
+    swapClassNav1a(pageStr);
+    break;
+  case "5":
+    document.getElementById("textarea2").value = "";
+    document.getElementById("msrp").value = "279.99";
+   FormToTA();
+    swapClassNav1a(pageStr);
+    break;
+  case "6":
+    SENDLABOR1();
+    SENDDIAG1();
+    swapClassNav1a(pageStr);
+    break;
+  case "7":
+    NextPart();
+    swapClassNav1a(pageStr);
+    break;
+  case "8":
+    saveIndex("hlc");
+    recallIndex("ITSBRITTNEY");
+    document.getElementById("nav1in0").style.display = "initial";
+    document.getElementById("nav1in0").style.visibility = "hidden";
+    document.getElementById("nav1in1").style.display = "none";
+    document.getElementById("nav1in2").style.display = "none";
+    document.getElementById("nav1in3").style.display = "none";
+    document.getElementById("nav1in4").style.display = "none";
+    document.getElementById("nav1in5").style.display = "none";
+    document.getElementById("nav1in6").style.display = "none";
+    document.getElementById("nav1in7").style.display = "none";
+    swapClassNav1a(pageStr);
+    break; 
+  case "9":
+    RESET();
+    document.getElementById("div6").style.zIndex = 10000;
+    swapClassNav1a(pageStr);
+    break;
+  case "10":
+    recallIndex("areaOne");
+    recallIndex("hlc");
+    recallIndex("textarea2");
+    document.getElementById("myNav0").style.display = "initial";
+    document.getElementById("myNav0").style.width = "100%";
+    document.getElementById("myNav1").style.display = "none";
+    localStorage.setItem("pageNum", "0");
+    }
+  }
+
+  if (inner == "myNav2") {
+    switch(pageStr) {
+  case "0":
+    myNav0 = document.getElementById("myNav0");
+    myNav0.style.display = "none";
+    document.getElementById("myNav2").style.width = "100%";
+    saveIndex("newAuthstarter");
+    swapClassNav2(pageStr);
+    break;
+  case "1":
+    recallIndex("newAuthstarter");
+    showAuth();
+    document.getElementById("auth4").checked = true;
+    saveIndex("newAuthstyle");
+    swapClassNav2(pageStr);
+    break;
+  case "2":
+    moveAuth();
+    document.getElementById("auth7").checked = true;
+    swapClassNav2(pageStr);
+    break;
+  case "3":
+    moveAuth2();
+    document.getElementById("auth10").checked = true;
+    document.getElementById("auth18").checked = true;
+    swapClassNav2(pageStr);
+    break;
+  case "4":
+    showOOPopt();
+    document.getElementById("auth14").checked = true;
+    document.getElementById("auth17").value = "159.34";
+    swapClassNav2(pageStr);
+    break;
+  case "5":
+    document.getElementById("textarea1").value = "CONTACT:\rPAYMENT: some_Guy@shop-email.com\rZIPCODE:\rMILEAGE:\rDISTANCE:\rTIME:";
+    newAuth();
+    recallIndex("newAuthstyle");
+    saveIndex("textarea2");
+    swapClassNav2(pageStr);
+    document.getElementById("textarea1").value = "CONTACT:\rPAYMENT:\rZIPCODE:\rMILEAGE:\rDISTANCE:\rTIME:";
+    break;
+  case "6":
+    recallIndex("textarea2");
+    RESET();
+    saveIndex("statusNote");
+    swapClassNav2(pageStr);
+    break;
+  case "7":
+    recallIndex("statusNote");
+    document.getElementById("statNote").style.display = "inline-block";
+    saveIndex("statNote");
+    document.getElementById("yes1a").checked = true;
+    document.getElementById("stat1explain").value = "12 months srs from CH";
+    document.getElementById("yes2a").checked = true;
+    document.getElementById("stat3explain").value = "Review srs to determine prex. Make claim decision";
+    document.getElementById("no4a").checked = true;
+    swapClassNav2(pageStr);
+    break;
+  case "8":
+    cancelStat();
+    recallIndex("statNote");
+    document.getElementById("statNote").style.display = "none";
+    saveIndex("textarea2");
+    saveIndex("picR");
+    saveIndex("recR");
+    saveIndex("noansR");
+    saveIndex("R7");
+    saveIndex("R6");
+    swapClassNav2(pageStr);
+    break;
+  case "9":
+    saveIndex("T0");
+    ShowTemps();
+    saveIndex("TPDiv");
+    recallIndex("picR");
+    recallIndex("recR");
+    recallIndex("noansR");
+    recallIndex("R7");
+    recallIndex("R6");
+    recallIndex("textarea2");
+    swapClassNav2(pageStr);
+    break;
+  case "10":
+    recallIndex("T0");
+    recallIndex("TPDiv");
+    document.getElementById("TPDiv").style.display = "none";
+    document.getElementById("transferTemplate").style.display = "inline-block";
+    saveIndex("transferTemplate");
+    document.getElementById("textarea2").style.zIndex = 16;
+    document.getElementById("yes1").checked = true;
+    document.getElementById("no2").checked = true;
+    document.getElementById("yes3").checked = true;
+    document.getElementById("no4").checked = true;
+    document.getElementById("yes5").checked = true;
+    document.getElementById("yes6").checked = true;
+    document.getElementById("yes7").checked = true;
+    document.getElementById("email").checked = true;
+    document.getElementById("contact1").value = "Guy Shopworker";
+    document.getElementById("contact2").value = "some_Guy@shop-email.com";
+    document.getElementById("yes9").checked = true;
+    document.getElementById("yes10").checked = true;
+    document.getElementById("no11").checked = true;
+    swapClassNav2(pageStr);
+    break;
+  case "11":
+    RESET();
+    saveIndex("transferTemplate");
+    document.getElementById("textarea2").style.zIndex = 5;
+    saveIndex("snipbox");
+    swapClassNav2(pageStr);
+    break;
+  case "12":
+    recallIndex("transferTemplate");
+    RESET();
+    saveIndex("TGAFBTN");
+    document.getElementById("TGAFOBTN").style.display = "inline-block";
+    document.getElementById("TGAFSBTN").style.display = "inline-block";
+    document.getElementById("TGAFBBTN").style.display = "inline-block";
+    swapClassNav2(pageStr);
+    break;
+  case "13":
+    document.getElementById("nav2in12").innerText += " OOPC and shipping";
+    document.getElementById("TGAFOBTN").style.display = "none";
+    document.getElementById("TGAFSBTN").style.display = "none";
+    document.getElementById("TGAFBBTN").style.display = "none";
+    document.getElementById("TGAFOSABTN").style.display = "inline-block";
+    document.getElementById("TGAFOSDSBTN").style.display = "inline-block";
+    document.getElementById("TGAFOSDBBTN").style.display = "inline-block";
+    document.getElementById("TGAFOSCBTN").style.display = "inline-block";
+    document.getElementById("NALVM").style.display = "inline-block";
+    document.getElementById("NANVM").style.display = "inline-block";
+    document.getElementById("NANVM").style.left = "400px";
+    document.getElementById("NALVM").style.left = "400px";
+    swapClassNav13(pageStr);
+    break;
+  case "14":
+    document.getElementById("nav2in12").innerText += " and the CH approved both,\rthe note is built and copied for you.";
+    document.getElementById("TGAFOSABTN").style.display = "none";
+    document.getElementById("TGAFOSDSBTN").style.display = "none";
+    document.getElementById("TGAFOSDBBTN").style.display = "none";
+    document.getElementById("TGAFOSCBTN").style.display = "none";
+    document.getElementById("NALVM").style.display = "none";
+    document.getElementById("NANVM").style.display = "none";
+    document.getElementById("Snippings").style.display = "inline-block";
+    document.getElementById("Snippings").value = "Called CH to get auth for OOPC and shipping.\rCH approved OOPC and shipping.\rWill call RF to inform and order parts.\r";
+    let textarea = document.getElementById("Snippings");
+    textarea.select();
+    document.execCommand("copy");
+    swapClassNav13(pageStr);
+    break;
+  case "15":
+    document.getElementById("NANVM").style.left = "270px";
+    document.getElementById("NALVM").style.left = "270px";
+    document.getElementById("TGAFOSABTN").style.display = "none";
+    document.getElementById("TGAFOSDSBTN").style.display = "none";
+    document.getElementById("TGAFOSDBBTN").style.display = "none";
+    document.getElementById("TGAFOSCBTN").style.display = "none";
+    document.getElementById("NALVM").style.display = "none";
+    document.getElementById("NANVM").style.display = "none";
+    swapClassNav2(pageStr);
+    break;
+  case "16":
+    RESETNOTE();
+    console.log("here");
+    recallIndex("snipbox");
+    recallIndex("TGAFBTN");
+    document.getElementById("myNav2").style.display = "none";
+    document.getElementById("myNav0").style.display = "inherit";
+    document.getElementById("myNav0").style.width = "100%";
+    localStorage.setItem("pageNum", "0");
+    break;
+    }
+  }
+  if (inner == "myNav3") {
+    switch(pageStr) {
+  case "0":
+    document.getElementById("myNav0").style.display = "none";
+    document.getElementById("myNav3").style.width = "100%";
+    swapClassNav3(pageStr);
+    break;
+  case "1":
+    localStorage.setItem("lastCalled", "picR");
+    editDisplay();
+    saveIndex("disEdit");
+    swapClassNav3(pageStr);
+    break;
+  case "2":
+    recallIndex("disEdit");
+    document.getElementById("disEdit").style.display = "none";
+    localStorage.setItem("lastCalled", "picR");
+    editContent();
+    saveIndex("contEdit");
+    swapClassNav3(pageStr);
+    break;
+  case "3":
+    cancelCont();
+    recallIndex("contEdit");
+    localStorage.setItem("lastCalled", "picR");
+    editSize();
+    saveIndex("sizeEdit");
+    swapClassNav3(pageStr);
+    break;  
+  case "4":
+    sizeSubmit();
+    recallIndex("sizeEdit");
+    localStorage.setItem("lastCalled", "picR");
+    editPos();
+    saveIndex("posEdit");
+    swapClassNav3(pageStr);
+    break;
+  case "5":
+    posSubmit('s');
+    recallIndex("sizeEdit");
+    showCustom();
+    saveIndex("infoDiv1");
+    swapClassNav3(pageStr);
+    break;
+  case "6":
+    swapClassNav3(pageStr);
+    break;
+  case "7":
+    infoDone();
+    saveIndex("infoDiv2");
+    swapClassNav3(pageStr);
+    break;
+  case "8":
+    infoCancel2();
+    recallIndex("infoDiv1");
+    recallIndex("infoDiv2");
+    BuilderShow();
+    saveIndex("toggleMaster");
+    swapClassNav3(pageStr);
+    break;
+  case "9":
+    BuilderShow();
+    recallIndex("toggleMaster");
+    swapClassNav3(pageStr);
+    break;
+  case "10":
+    personalize();
+    saveIndex("appearDiv")
+    swapClassNav3(pageStr);
+    break;
+  case "11":
+    recallIndex("appearDiv")
+    exitColor();
+    document.getElementById("myNav0").style.display = "inherit";
+    document.getElementById("myNav1").style.display = "0%";
+    document.getElementById("myNav2").style.display = "0%";
+    document.getElementById("myNav3").style.width = "0%";
+    localStorage.setItem("pageNum", "0");
+    break;
+
+
+    }
+  }
+}
+
+    
+
+function swapClassNav3(page) {
+
+  if (page != "0") {
+    var prevPage = parseInt(page) - 1;
+    var previd = "nav3in" + prevPage;
+    var prevelem = document.getElementById(previd);
+    prevelem.style.display = "none";
+  }
+  var id = "nav3in" + page;
+  var elem = document.getElementById(id);
+  elem.style.display = "inherit";
+  if (page == "7") {
+    document.getElementById("nav3in7a").style.display = "inherit";
+  }
+  var pagenum = parseInt(page) + 1;
+  localStorage.setItem("pageNum", pagenum);
+}
+
+
+function swapClassNav13(page) {
+  var pagenum = parseInt(page) + 1;
+  localStorage.setItem("pageNum", pagenum);
+}
+
+function swapClassNav2(page) {
+  if (page == "15") {
+  document.getElementById("nav2in12").style.display = "none";
+  document.getElementById("nav2in15").style.display = "inherit";
+  var pagenum = parseInt(page) + 1;
+  localStorage.setItem("pageNum", pagenum);
+  return;
+  }
+  if (page != "0") {
+    var prevPage = parseInt(page) - 1;
+    var previd = "nav2in" + prevPage;
+    var prevelem = document.getElementById(previd);
+    prevelem.style.display = "none";
+  }
+  var id = "nav2in" + page;
+  var elem = document.getElementById(id);
+  elem.style.display = "inherit";
+  var pagenum = parseInt(page) + 1;
+  localStorage.setItem("pageNum", pagenum);
+}
+
+function saveIndex(elementID) {
+  var element = document.getElementById(elementID);
+  var x = window.getComputedStyle(element).zIndex;
+  if (!Number.isInteger(x)) {
+    x = 5;
+  }
+  localStorage.setItem(elementID + "saveIndex", x);
+  element.style.zIndex = 110;
+}
+
+function recallIndex(elementID) {
+  var element = document.getElementById(elementID);
+  var previndexNum = localStorage.getItem(elementID + "saveIndex");
+  element.style.zIndex = previndexNum;
+}
+
+function closeNav() {
+location.reload();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
