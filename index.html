@@ -9,7 +9,6 @@
 	<title>CONSOLE</title>
  
 <style>
-
 body { 
  font-family: Verdana, sans-serif;
  background: var(--my-background-color);
@@ -1164,14 +1163,6 @@ right: 5px;
 }
 
 
-
-
-
-
-
-
-
-
 #switchf0 {
 position: absolute;
 display: inline-block;
@@ -1250,7 +1241,6 @@ height: 10px;
 top: 625px;
 right: 5px;
 }
-
 
 #context-menu {
   position: fixed;
@@ -2141,7 +2131,6 @@ input[type="color"] {
 }
 
 
-
 .tab {
   overflow: hidden;
   border: none;
@@ -2158,7 +2147,7 @@ input[type="color"] {
   border-right: 2px solid var(--my-accent-color);
   outline: none;
   cursor: pointer;
-  padding: 10px 12px;
+  padding: 14px 18px;
   transition: 0.5s;
   font-size: 17px;
   text-shadow: none;
@@ -2166,12 +2155,15 @@ input[type="color"] {
   position: initial;
   display: initial;
   border-radius: 5px;
-  width: 115px;
+  width: calc(850px / 6);
+}
+
+#edgeButton {
+    border-right: none;
 }
 
 .wefwefwef {
   border-top: 2px solid var(--my-accent-color);
-  border-left: 2px solid var(--my-accent-color);
   background: none;
   outline: none;
   cursor: pointer;
@@ -2186,41 +2178,62 @@ input[type="color"] {
   width: 170px;
 }
 
-
-
-.innerLeft {
-  background: none;
-  box-shadow: none;
-  float: left;
-  width: 50%;
+#exitRec {
+  left: 5px;
+  bottom: 5px;
+  border-right: 2px solid var(--my-accent-color);
+  width: 120px;
+  padding: 14px 10px;
 }
 
-.innerRight {
-  background: none;
-  box-shadow: none;
-  float: right;
-  width: 50%;
-}
-
-
-
-#resetRep {
+#inceptEst {
+  border-left: 2px solid var(--my-accent-color);
   right: 175px;
   bottom: 5px;
 }
 
+#resetRep {
+  border-left: 2px solid var(--my-accent-color);
+  right: 345px;
+  bottom: 5px;
+}
+
 #genRep {
+  border-left: 2px solid var(--my-accent-color);
   right: 5px;
   bottom: 5px;
 }
 
-
 .tab button:hover {
-  background: rgba(0, 0, 0, .1);
+  background: var(--hover-color);
 }
 
 .tab button.active {
-  background: rgba(0, 0, 0, .3);
+  background: var(--active-color);
+}
+
+.tab button:active {
+  background: var(--active-color);
+  box-shadow: none;
+  transform: translateY(0px);
+}
+
+.wefwefwef:hover {
+  background: var(--active-color);
+}
+.wefwefwef:active {
+  background: var(--active-color);
+  box-shadow: none;
+  transform: translateY(0px);
+}
+
+#trackerMsg {
+  background: none;
+  box-shadow: none;
+  outline: none;
+  color: red;
+  font-weight: 850;
+  font-size: 18px;
 }
 
 .tabcontent {
@@ -2265,12 +2278,11 @@ input[type="color"] {
    0px 12px 70px 14px black;
 }  
 
-table {
-
+.tabcontent table {
   width: 95%;
 }
 
-th, td {
+.inptTbl {
   text-align: center;
   border: 1px solid black;
   padding: 5px;
@@ -2292,7 +2304,6 @@ th, td {
   bottom: 10px;
   margin: 5px;
   padding: 5px;
-
 }
 
 .min {
@@ -2311,8 +2322,6 @@ th, td {
   border: none;
   outline: none;
 }
-
-
 
 #reportData {
   display: inline-block;
@@ -2353,17 +2362,14 @@ th, td {
   margin-top: 30px;
 }
 
-
 input.tracker[type="number"] {
   width: 100px;
 }
-
 
 #infoDispDiv {
   bottom:15px;
   left: 15px;
 }
-
 
 .output {
   display: inline-block;
@@ -2384,29 +2390,77 @@ input.tracker[type="number"] {
   width: initial;
 }
 
-
-#outputTable0 {
-  display: inline-block;
+#outputDiv {
+  z-index: 6;
   position: absolute;
+  display: inline-block;
+  height: 700px;
+  width: 800px;
+  top: 100px;
   left: 50px;
-  bottom: 85px;
+  background: white;
+  display: none;
+  border-radius: 5px;
+  padding: 25px;
+  box-shadow:
+   inset 0px 0px 10px 4px var(--my-shadow-color2),
+   0px 12px 70px 14px black;
 }
 
-#outputTable1 {
+#msgDiv {
+  padding: 25px;
   display: inline-block;
   position: absolute;
-  left: 225px;
-  bottom: 85px;
+  bottom: 50px;
+  opacity: 0;
 }
 
-
-#outputTable2 {
-  display: inline-block;
-  position: absolute;
-  left: 400px;
-  bottom: 85px;
+.innerLeft {
+  background: none;
+  box-shadow: none;
+  float: left;
+  width: 50%;
 }
 
+.innerRight {
+  background: none;
+  box-shadow: none;
+  float: right;
+  width: 50%;
+}
+
+#alertDiv  {
+  text-align: center;
+  color: red;
+}
+
+#closeOutput {
+  right: 5px;
+  bottom: 5px;
+  border-left: 2px solid var(--my-accent-color);
+}
+
+.TheOutputtable {
+  width: 95%;
+  
+  border: none;
+  outline: none;
+  text-align: center;
+}
+
+.headit  {
+  border: none;
+  outline: none;
+}
+
+.rowit td {
+  border-top: 1px solid black;
+  outline: none;
+}
+
+.headit td {
+  border-top: none;
+}
 
 #ITSBRITTNEY {
  top: 430px;
@@ -2424,7 +2478,7 @@ input.tracker[type="number"] {
 }
 
 #Request {
-  left: 550px;
+  left: 560px;
   top: 15px;
   position: ABSOLUTE;
   display: inline-block;
@@ -2453,6 +2507,8 @@ input.tracker[type="number"] {
   --my-glow-color: #ffffff;
   --glow-txt-color: #000000;
   --glow-outline-color: #ffffff;
+  --hover-color: #70707016;
+  --hover-color: #70707048;
 }
 
 </style>
@@ -2724,7 +2780,7 @@ input.tracker[type="number"] {
         <input type="radio" id="auth10" name="authoops" class="FNA" onclick="showOOPopt()"><label for="auth10"><b>OOPC</b></label><br>
         <input type="radio" id="auth11" name="authoops" class="FNA"><label for="auth11"><b>Shipping</b></label><br>
         <input type="radio" id="auth12" name="authoops" class="FNA" onclick="showOOPopt()"><label for="auth12"><b>Both</b></label><br><br>
-        <input type="radio" id="auth13" name="authoops" class="FNA largerRadio"><label for="auth13"><b>No Concerns</b></label><br><br>
+        <input type="radio" id="auth13" name="authoops" class="FNA largerRadio" onclick="newAuth()"><label for="auth13"><b>No Concerns</b></label><br><br>
       </div>
 
       <div class="noShow" style="width:50%;left:15px;top:220px;position:absolute;font-size:18px;margin-top:15px;">
@@ -3110,6 +3166,7 @@ TIME:&nbsp&nbsp</textarea>
  ROADSIDE ASSITANCE<br>866-222-7869<br><br>
  GENERAL<br>800-531-1925</b>
 </div>
+<div id="myInfo" class="infoOfme" style="display:none;">Created By Jesse Williams - 2024</div>
 
 <div id="glowDiv" class="neon noShow P" oncontextmenu="customMenu(this.id, event)"></div>
 
@@ -3390,17 +3447,17 @@ TIME:&nbsp&nbsp</textarea>
 </div>
 
 <button id="SOPs" class="R P D" onclick="resrcCenter()">Resources</button>
-<div id="resrcDiv" style="display:none">
+
+<div id="resrcDiv" style="display: none;">
   <div class="tab">
     <button class="tablinks" onclick="openInfo(event, 'MBIClaims')">MBI</button>
     <button class="tablinks" onclick="openInfo(event, 'IsItPT')">Is It PT</button>
     <button class="tablinks" onclick="openInfo(event, 'xfer2790')">2790</button>
     <button class="tablinks" onclick="openInfo(event, 'DoNotUse')">Do Not Use</button>
     <button class="tablinks" onclick="openInfo(event, 'Diagnostic')">Diag Times</button>
-    <button class="tablinks" onclick="openInfo(event, 'trackerTool')">Tracker</button>
-    <button class="tablinks" onclick="closeResource()">Close</button>
-  </div>
+    <button class="tablinks" onclick="openInfo(event, 'trackerTool')" id="edgeButton">Tracker</button>
 
+  </div>
 
   <div id="Diagnostic" class="tabcontent">
     <h3 class="headerTab">Common Diagnostic Times</h3>
@@ -3453,22 +3510,122 @@ TIME:&nbsp&nbsp</textarea>
       </div>
   </div>
 
-<div id="trackerTool" class="tabcontent">
-<h3 class="headerTab">Coming Soon</h3>
-<p class="bodyTab">Uses, available functions, data output, and report generation.</p>
-<p class="bodyTab">Will be useful for investigation regarding inception mileage, HMPD,<br>
-determining waiting period or prex, CARFAX reviews, and more.</p>
-<p class="bodyTab">Functions and output include auto-sort by date upon output, auto-flagging of<br>
-mileage discrepancies and waiting period when 'verified failure' is active, <br>
-calculates average miles per day travelled, determines amount of time in days <br>
-until/since inception, calculates mileage until/since inception.</p>
-<p class="bodyTab">When all data is entered, a report can be requested. The report<br>
-will list all calculations made and display in a format that useful.</p>
-<p class="bodyTab">There will, also, be an option to compile the data in a review note<br>
-format with relevant note addendums and pre-set text selections.<p/>
 
 
+
+  <div id="trackerTool" class="tabcontent">
+  <table id="inputTable" class="inputClass">
+    <tr>
+      <td class="inptTbl"></td>
+      <th class="inptTbl">Date</th>
+      <th class="inptTbl">Mileage</th>
+      <th class="inptTbl">&imacr;</th>
+      <th class="inptTbl">Notes</th>
+      <td class="lastCell"></td>
+      <td class="lastCell"></td>
+    </tr>
+    <tr id="incTab">
+      <th class="inptTbl" class="inptTbl" style="width:100px">Inception</th>
+      <td class="inptTbl"><input type="date" id="incDate" class="tracker inc" style="font-size:14px;" value="2023-09-27"></td>
+      <td class="inptTbl"><input type="number" id="incMile" class="tracker inc"></td>
+      <td class="inptTbl"><input type="radio" id="incC" class="tracker rec" style="visibility:hidden"></td>
+      <td class="inptTbl"><input type="text" id="incNote" class="tracker inc"></td>
+      <td class="lastCell"><button id="incS" class="min inc" onclick="saveRecord(this.id)">Save</button></td>
+      <td class="lastCell"><button id="incD" class="min inc" onclick="delRecord(this.id)">Del</button></td>
+    </tr>
+
+    <tr id="serTab">
+      <th class="inptTbl">Service</th>
+      <td class="inptTbl"><input type="date" id="serDate" class="tracker ser" style="font-size:14px;"></td>
+      <td class="inptTbl"><input type="number" id="serMile" class="tracker ser"></td>
+      <td class="inptTbl"><input type="radio" id="serC" class="tracker rec" style="visibility:hidden"></td>
+      <td class="inptTbl"><input type="text" id="serNote" class="tracker ser"></td>
+      <td class="lastCell"><button id="serS" class="min ser" onclick="saveRecord(this.id)">Save</button></td>
+      <td class="lastCell"><button id="serD" class="min ser" onclick="delRecord(this.id)">Del</button></td>
+    </tr>
+
+    <tr id="recTab0">
+      <th class="inptTbl">Record</th>
+      <td class="inptTbl"><input type="date" id="rec0Date" class="tracker rec" style="font-size:14px;"></td>
+      <td class="inptTbl"><input type="number" id="rec0Mile" class="tracker rec"></td>
+      <td class="inptTbl"><input type="radio" id="rec0C" class="tracker rec" name="jeff"></td>
+      <td class="inptTbl"><input type="text" id="rec0Note" class="tracker rec"></td>
+      <td class="lastCell"><button id="rec0S" class="min rec" onclick="saveRecord(this.id)">Save</button></td>
+      <td class="lastCell"><button id="rec0D" class="min rec" onclick="delRecord(this.id)">Del</button></td>
+    </tr>
+
+    <tr id="recTab1" style="visibility:hidden;">
+      <th class="inptTbl">Record</th>
+      <td class="inptTbl"><input type="date" id="rec1Date" class="tracker rec" style="font-size:14px;"></td>
+      <td class="inptTbl"><input type="number" id="rec1Mile" class="tracker rec"></td>
+      <td class="inptTbl"><input type="radio" id="rec1C" class="tracker rec" name="jeff"></td>
+      <td class="inptTbl"><input type="text" id="rec1Note" class="tracker rec"></td>
+      <td class="lastCell"><button id="rec1" class="min rec" onclick="addLine(this.id)" style="visibility:visible">Add Line</button>
+        <button id="rec1S" class="min rec" onclick="saveRecord(this.id)" style="display:none;">Save</button></td>
+      <td class="lastCell"><button id="rec1D" class="min rec" onclick="delRecord(this.id)" style="display:none;">Del</button></td>
+    </tr>
+
+    <tr id="recTab2" style="visibility:hidden;">
+      <th class="inptTbl">Record</th>
+      <td class="inptTbl"><input type="date" id="rec2Date" class="tracker" style="font-size:14px;"></td>
+      <td class="inptTbl"><input type="number" id="rec2Mile" class="tracker rec"></td>
+      <td class="inptTbl"><input type="radio" id="rec2C" class="tracker rec" name="jeff"></td>
+      <td class="inptTbl"><input type="text" id="rec2Note" class="tracker rec"></td>
+      <td class="lastCell"><button id="rec2" class="min rec" onclick="addLine(this.id)">Add Line</button>
+        <button id="rec2S" class="min rec" onclick="saveRecord(this.id)" style="display:none;">Save</button></td>
+      <td class="lastCell"><button id="rec2D" class="min rec" onclick="delRecord(this.id)" style="display:none;">Del</button></td>
+    </tr>
+
+    <tr id="recTab3" style="visibility:hidden;">
+      <th class="inptTbl">Record</th>
+      <td class="inptTbl"><input type="date" id="rec3Date" class="tracker rec" style="font-size:14px;"></td>
+      <td class="inptTbl"><input type="number" id="rec3Mile" class="tracker rec"></td>
+      <td class="inptTbl"><input type="radio" id="rec3C" class="tracker rec" name="jeff"></td>
+      <td class="inptTbl"><input type="text" id="rec3Note" class="tracker rec"></td>
+      <td class="lastCell"><button id="rec3" class="min rec" onclick="addLine(this.id)">Add Line</button>
+        <button id="rec3S" class="min rec" onclick="saveRecord(this.id)" style="display:none;">Save</button></td>
+      <td class="lastCell"><button id="rec3D" class="min rec" onclick="delRecord(this.id)" style="display:none;">Del</button></td>
+    </tr>
+    <tr id="recTab4" style="visibility:hidden;">
+      <th class="inptTbl">Record</th>
+      <td class="inptTbl"><input type="date" id="rec4Date" class="tracker rec" style="font-size:14px;"></td>
+      <td class="inptTbl"><input type="number" id="rec4Mile" class="tracker rec"></td>
+      <td class="inptTbl"><input type="radio" id="rec4C" class="tracker rec" name="jeff"></td>
+      <td class="inptTbl"><input type="text" id="rec4Note" class="tracker rec"></td>
+      <td class="lastCell"><button id="rec4" class="min rec" onclick="addLine(this.id)">Add Line</button>
+        <button id="rec4S" class="min rec" onclick="saveRecord(this.id)" style="display:none;">Save</button></td>
+      <td class="lastCell"><button id="rec4D" class="min rec" onclick="delRecord(this.id)" style="display:none;">Del</button></td>
+    </tr>
+
+    <tr id="recTab5" style="visibility:hidden;">
+      <th class="inptTbl">Record</th>
+      <td class="inptTbl"><input type="date" id="rec5Date" class="tracker rec" style="font-size:14px;"></td>
+      <td class="inptTbl"><input type="number" id="rec5Mile" class="tracker rec"></td>
+      <td class="inptTbl"><input type="radio" id="rec5C" class="tracker rec" name="jeff"></td>
+      <td class="inptTbl"><input type="text" id="rec5Note" class="tracker rec"></td>
+      <td class="lastCell"><button id="rec5" class="min rec" onclick="addLine(this.id)">Add Line</button>
+        <button id="rec5S" class="min rec" onclick="saveRecord(this.id)" style="display:none;">Save</button></td>
+      <td class="lastCell"><button id="rec5D" class="min rec" onclick="delRecord(this.id)" style="display:none;">Del</button></td>
+    </tr>
+   
+    <tr id="recTab6" style="visibility:hidden;">
+      <td class="inptTbl"></td>
+      <td class="inptTbl"></td>
+      <td class="inptTbl"></td>
+      <td class="inptTbl"></td>
+      <td class="inptTbl"></td>
+      <td class="lastCell"><button id="rec6" class="min rec" onclick="addLine(this.id)">Add Line</button></td>
+      <td class="lastCell"></td>
+    </tr>
+   </table>
+
+
+  <button id="inceptEst" class="wefwefwef" onclick="inceptEst()">Inc Mlg Est</button>
+  <button id="genRep" class="wefwefwef" onclick="comsoCompan()">Generate Report</button>
+  <button id="resetRep" class="wefwefwef" onclick="resetReport()">Reset Template</button>
+  <div id="trackerMsg" class="noShow"></div>
 </div>
+
 
   <div id="DoNotUse" class="tabcontent">
     <h3 class="headerTab">Do Not Use vs STOP-NO CLAIMS ALLOWED</h3>
@@ -3486,6 +3643,7 @@ format with relevant note addendums and pre-set text selections.<p/>
     <p class="bodyTab">Do not share any details or speculation about the RF to the CH or anyone from the RF.</p>
 
     <p class="bodyTab">Document all actions taken in the notes.</p>
+
   </div>
 
 
@@ -3500,6 +3658,7 @@ format with relevant note addendums and pre-set text selections.<p/>
     you should task the assigned ADJ with updates or actions needed.</p>
 
     <p class="bodyTab">And of course, if you are not sure of what steps you should take, reach out to your TL.</p>
+
   </div>
 
 
@@ -3522,6 +3681,7 @@ format with relevant note addendums and pre-set text selections.<p/>
     Electrical concerns<br>
     Engine Cooling Concerns<br>
     A/C Concerns</p>
+
   </div>
 
 
@@ -3544,12 +3704,17 @@ format with relevant note addendums and pre-set text selections.<p/>
     button in the actions tab of CMS. Once it has reassigned to an MBI<br>
     adjuster, task that adjuster. Tell the RF that the claim is under<br>
     review and that an adjuster will reach out to them within 24 hours.</p>
+
   </div>
+  <button id="exitRec" class="wefwefwef" onclick="closeResource()">Exit</button>
 </div>
+  <div id="outputDiv" class="noShow TheOutput">
+    <div id="alertDiv" class="noShow" onclick="showMsg()"></div>
+    <div id="msgDiv" class="noShow"></div>
+    <button id="closeOutput" class="wefwefwef" onclick="closeOutput()">close</button>
+  </div>
 
-
-
-
+<div class="noShow" id="reportData" style="display:none;"></div>
 
 <script>
 
@@ -4239,6 +4404,7 @@ document.onkeyup = function(e) {
       document.getElementById('myInfo').style.display = "none";
   }
 };
+
 
   let newpartcount = 2;
   var menuOpen = false;
@@ -5204,14 +5370,35 @@ window.onload = function PutItBack() {
   }
   localStorage.setItem("pageNum", "0");
   resetColors();
+
   const recordArr = [];
   localStorage.setItem("recordArr", JSON.stringify(recordArr));
+
   const objectArr = [];
   localStorage.setItem("objectArr", JSON.stringify(objectArr));
 
   localStorage.setItem("addLineCount", "0"); 
-  localStorage.setItem("savedRecs", "0"); 
+  localStorage.setItem("savedRecs", "0");
+  localStorage.removeItem("serRcrdspot");
+  localStorage.removeItem("incRcrdspot");
+  localStorage.removeItem("rec0Rcrdspot");
+  localStorage.removeItem("rec1Rcrdspot");
+  localStorage.removeItem("rec2Rcrdspot");
+  localStorage.removeItem("rec3Rcrdspot");
+  localStorage.removeItem("rec4Rcrdspot");
+  localStorage.removeItem("rec5Rcrdspot");
+  localStorage.removeItem("InceptionMiles");
+  localStorage.removeItem("InceptionDate");
+  localStorage.removeItem("sermileage");
+  localStorage.removeItem("serdate");
+  localStorage.removeItem("rec0mileage");
+  localStorage.removeItem("rec0date");
+
+
+
 }
+
+
 
 function resetColors() {
 
@@ -5222,7 +5409,9 @@ function resetColors() {
   var userName = localStorage.getItem("userName");
   var glowClr = localStorage.getItem("myGlowcolor");
   var txtClr = localStorage.getItem("glowTxtcolor");
-  var outlineClr  = localStorage.getItem("outlineClr");
+  var outlineClr = localStorage.getItem("outlineClr");
+  var hoverClr = localStorage.getItem("hoverClr");
+  var activeClr = localStorage.getItem("activeClr");
 
   var bgClrelem = document.getElementById("background-picker");
   var acClrelem = document.getElementById("accent-picker");
@@ -5240,6 +5429,8 @@ function resetColors() {
   if (acClr != null) {
     document.documentElement.style.setProperty('--my-accent-color', acClr);
     acClrelem.value = acClr;
+    document.documentElement.style.setProperty('--hover-color', hoverClr);
+    document.documentElement.style.setProperty('--active-color', activeClr);
   }
   if (shad1Clr != null) {
     document.documentElement.style.setProperty('--my-shadow-color1', shad1Clr);
@@ -5266,6 +5457,9 @@ function resetColors() {
     document.documentElement.style.setProperty('--glow-outline-color', outlineClr);
     outlineClrelem.value = outlineClr;
   }
+
+
+  
 }
 
 function personalize() {
@@ -5302,6 +5496,8 @@ function saveColors() {
   var txtClr = txtClrelem.value;
   var userName = userNameelem.value;
   var outlineClr = outlineClrelem.value;
+  var hoverClr = acClr + "32";
+  var activeClr = acClr + "94";
   glowDiv.innerHTML = userName;
 
 
@@ -5312,6 +5508,8 @@ function saveColors() {
   document.documentElement.style.setProperty('--my-glow-color', glowClr);
   document.documentElement.style.setProperty('--glow-txt-color', txtClr);
   document.documentElement.style.setProperty('--glow-outline-color', outlineClr);
+  document.documentElement.style.setProperty('--hover-color', hoverClr);
+  document.documentElement.style.setProperty('--active-color', activeClr);
 
   localStorage.setItem("myBackgroundcolor", bgClr);
   localStorage.setItem("myAccentcolor", acClr);
@@ -5321,6 +5519,8 @@ function saveColors() {
   localStorage.setItem("glowTxtcolor", txtClr);
   localStorage.setItem("userName", userName);
   localStorage.setItem("outlineClr", outlineClr);
+  localStorage.setItem("hoverClr", hoverClr);
+  localStorage.setItem("activeClr", activeClr);
   exitColor();
 }
 
@@ -5404,6 +5604,9 @@ function setColor(colorSet) {
   var outlineClrelem = document.getElementById("outlineColor");
   outlineClrelem.value = tempClr7;
 
+  var hoverClr = tempClr2 + "32";
+  var activeClr = tempClr2 + "94";
+
 
   document.documentElement.style.setProperty('--my-background-color', tempClr1);
   document.documentElement.style.setProperty('--my-accent-color', tempClr2);
@@ -5412,6 +5615,9 @@ function setColor(colorSet) {
   document.documentElement.style.setProperty('--my-glow-color', tempClr5);
   document.documentElement.style.setProperty('--glow-txt-color', tempClr6);
   document.documentElement.style.setProperty('--glow-outline-color', tempClr7);
+  document.documentElement.style.setProperty('--hover-color', hoverClr);
+  document.documentElement.style.setProperty('--active-color', activeClr);
+
 }
 
 const menu = document.getElementById("context-menu");
@@ -6451,6 +6657,7 @@ location.reload();
 }
 
 
+
 function openInfo(evt, cityName) {
   var i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");
@@ -6475,13 +6682,13 @@ function openInfo(evt, cityName) {
 //  document.getElementById("incDate").value = today;
 //  document.getElementById("rec0Date").value = today;
 
-  document.getElementById("incDate").value = "2023-09-27";
-  document.getElementById("serDate").value = "2023-12-01";
-  document.getElementById("rec0Date").value = "2024-03-15";
+  document.getElementById("incDate").value = "2024-01-31";
+  document.getElementById("serDate").value = "2024-03-01";
+  document.getElementById("rec0Date").value = "2024-01-01";
 
-  document.getElementById("incMile").value = "120000";
-  document.getElementById("serMile").value = "120247";
-  document.getElementById("rec0Mile").value = "124000";
+  document.getElementById("incMile").value = "104000";
+  document.getElementById("serMile").value = "110000";
+  document.getElementById("rec0Mile").value = "100000";
 }
 
 function closeResource() {
@@ -6494,20 +6701,23 @@ function closeResource() {
   for (i = 0; i < tablinks.length; i++) {
     tablinks[i].className = tablinks[i].className.replace(" active", "");
   }
+  document.getElementById('trackerMsg').innerText = "";
   resrcCenter();
 }
 
 function resrcCenter() {
   var resrcDiv = document.getElementById("resrcDiv");
   var isOpen = checkOpen();
-  if (resrcDiv.style.display == "inline-block" || isOpen) {
-    resrcDiv.style.display = "none";
+  if (resrcDiv.style.display == "none" && !isOpen) {
+    resrcDiv.style.display = "inline-block";
+    document.getElementById('trackerMsg').innerText = "";
     return;
   }
-  resrcDiv.style.display = "inline-block";
+  resrcDiv.style.display = "none";
 }
 
 function addLine(lineId) {
+  document.getElementById('trackerMsg').innerText = "";
   var addLineCount = localStorage.getItem("addLineCount");
   var lineNum = parseInt(addLineCount) + 1;
   var nextlineNum = lineNum + 1;
@@ -6525,6 +6735,7 @@ function addLine(lineId) {
 }
 
 function resetReport() {
+  document.getElementById('trackerMsg').innerText = "";
   var addLineCount = localStorage.getItem("addLineCount");
   var LineCount = parseInt(addLineCount);
   var inputElems = document.querySelectorAll(".tracker");
@@ -6545,9 +6756,7 @@ function resetReport() {
     document.getElementById(buttonId).style.display = "none";
   }
 
-  document.getElementById("rec0S").style.display = "none";
-  document.getElementById("incFail").checked = true;
-  document.getElementById("serFail").checked = true;
+
   localStorage.setItem("addLineCount", "0");
   localStorage.setItem("savedRecs", "0");
 }
@@ -6568,14 +6777,17 @@ function Record() {
   this.mileage = 0;
   this.notes = "";
   this.isInception = false;
-  this.verifiedFailure = false;
+  this.correction = false;
   this.daysfrom = 0;
   this.milesfrom = 0;
   this.discrepancy = false;
   this.waitperiod = false;
+  this.isService = false;
+  this.isPrior = false;
 }
 
 function saveRecord(elemId) {
+  document.getElementById('trackerMsg').innerText = "";
   var record = new Record();
   var indexF = elemId.length - 1;
   var newelemId = elemId.slice(0, indexF);
@@ -6589,14 +6801,22 @@ function saveRecord(elemId) {
 
   record.date = document.getElementById(newelemId + "Date").value;
   record.mileage = document.getElementById(newelemId + "Mile").value;
-  record.note = document.getElementById(newelemId + "Note").value;
+  record.notes = document.getElementById(newelemId + "Note").value;
 
-  if (document.getElementById(newelemId + "Fail").checked) {
-    record.verifiedFailure = true;
+  if (document.getElementById(newelemId + "C").checked && newelemId != "ser") {
+    localStorage.setItem("IDforCor", newelemId);
+    localStorage.setItem(newelemId + "mileage", record.mileage);
+    localStorage.setItem(newelemId + "date", record.date);
+  }
+  if (newelemId == "ser") {
+    record.isService = true;
+    localStorage.setItem("sermileage", record.mileage);
+    localStorage.setItem("serdate", record.date);
   }
 
   if (newelemId == "inc") {
     record.isInception = true;
+    record.correction = false;
     record.daysfrom = 0;
     record.milesfrom = 0;
     localStorage.setItem("InceptionMiles", record.mileage);
@@ -6606,29 +6826,30 @@ function saveRecord(elemId) {
 
   if (newelemId != "inc") {
     var inceptStr = localStorage.getItem("InceptionMiles");
+    if (inceptStr == null) { 
+      document.getElementById('trackerMsg').innerText += "Start with Inception Info.";
+      return;
+    }
     var inceptMiles = parseInt(inceptStr);
     var tempMil = record.mileage - inceptMiles;
     if (tempMil < 0) { tempMil = tempMil * -1; }
     record.milesfrom = tempMil;
     var inceptDate = localStorage.getItem("InceptionDate");
     tempdayfr = dayCalc(inceptDate, record.date);
-    if (tempdayfr < 0) { tempdayfr = tempdayfr * -1; }
+    if (tempdayfr < 0) { tempdayfr = tempdayfr * -1; record.isPrior = true;}
     record.daysfrom = tempdayfr;
-    if (record.daysfrom < 26) {
-      record.waitperiod = true;
-    }
-    if (record.milesfrom < 250) {
-      record.waitperiod = true;
-    }
-
-    if (record.daysfrom > 26) {
-      if (record.daysfrom < 41 && record.milesfrom < 500) {
+    if (record.isService) {
+      if (record.daysfrom < 26) {
         record.waitperiod = true;
       }
-    }  
+      if (record.milesfrom < 250) {
+        record.waitperiod = true;
+      }
+      if (record.daysfrom < 41 && record.milesfrom < 500) {
+        record.waitperiod = true;
+      } 
+    }
   }
-
-
   var recordArr = [];
   recordArr = JSON.parse(localStorage.getItem("recordArr"));
 
@@ -6647,6 +6868,7 @@ function saveRecord(elemId) {
     } else {
       var indexA = objectArr.indexOf("empty");
       objectArr.splice(indexA, 0, record); 
+      recIndex = indexA;
     }
     recordArr.push(recName);
     localStorage.setItem(recName + "spot", recIndex);
@@ -6671,6 +6893,7 @@ function delRecord(elemId) {
       localStorage.removeItem("InceptionDate");
     }
     objectArr.splice(objectIndex, 0, "empty");
+    localStorage.setItem("objectArr", JSON.stringify(objectArr));
     var savedRecs = localStorage.getItem("savedRecs");
     var newCount = parseInt(savedRecs) - 1;
     localStorage.setItem("savedRecs", newCount);
@@ -6696,13 +6919,20 @@ function delRecord(elemId) {
 //all base vars listed as well
 
 
-//this is to compile, sort, compare and analyze
+
+//this is to compile, sort, 
 
 function comsoCompan() {
   var savedRecs = localStorage.getItem("savedRecs");
   var recCount = parseInt(savedRecs);
+  if (recCount < 3) {
+    document.getElementById('trackerMsg').innerText += "Enter at least 3 records to generate a report.";
+    return;
+  }
+
   const objectArr = JSON.parse(localStorage.getItem("objectArr"));
   objectArr.sort(compare);
+
   var looped = objectArr.length - 1;
   for (i = 0; i < looped; i++) {
     var x = i + 1;
@@ -6710,10 +6940,12 @@ function comsoCompan() {
     var secDate = objectArr[x].date;
     if (isitOlder(firDate, secDate)) {
       objectArr[i].discrepancy = true;
+      objectArr[x].discrepancy = true;
       console.log(objectArr[i].mileage);
     }
   }
-displayRecs(objectArr);
+  localStorage.setItem("objectArr", JSON.stringify(objectArr));
+  displayRecs();
 }
 
 function isitOlder(isOlder, thanThis) {
@@ -6730,76 +6962,195 @@ function compare (rec1, rec2) {
   return rec1.mileage - rec2.mileage;
 }
 
+//this is to compare and analyze
 
-function displayRecs(recordArr) {
-  for (i = 0; i < recordArr.length; i++) {
-    var tempRec = recordArr[i];
+function displayRecs() {
+
+  const objectArr = JSON.parse(localStorage.getItem("objectArr"));
+  
+  const table = document.createElement('table');
+  table.classList.add('TheOutputtable');
+  const header = table.createTHead().insertRow();
+  header.classList.add('headit');
+
+  header.insertCell(0).innerText = "Date";
+  header.insertCell(1).innerText = "Mileage";
+  header.insertCell(2).innerText = "Miles";
+  header.insertCell(3).innerText = "Days";
+  header.insertCell(4).innerText = "M/D";
+  header.insertCell(5).innerText = "WP";
+  header.insertCell(6).innerText = "DIS";
+  header.insertCell(7).innerText = "Notes";
+
+  const body = document.createElement('tbody');
+  table.appendChild(body);
+
+
+  for (i = 0; i < objectArr.length; i++) {
+    const row = body.insertRow();
+    row.classList.add('rowit');
+
+    var tempRec = objectArr[i];
     var dateStr = tempRec.date;
     var year = dateStr.substr(0,4);
     var month = dateStr.substr(5,2);
     var day = dateStr.substr(8,2);
+    var milesper;
+    var distance;
+    var overTime;
     var outputDate = month + "-" + day + "-" + year;
-    document.getElementById("innerDiv1").innerHTML = outputDate + "<br>";
-    document.getElementById("innerDiv1").innerHTML = tempRec.mileage + "<br>";
-    document.getElementById("innerDiv1").innerHTML = tempRec.notes + "<br>";
-    document.getElementById("innerDiv1").innerHTML = tempRec.verifiedFailure + "<br>";
-    document.getElementById("innerDiv1").innerHTML = tempRec.milesfrom + "<br>";
-    document.getElementById("innerDiv1").innerHTML = tempRec.daysfrom + "<br>";
+
     if (!tempRec.isInception) {
-    document.getElementById("innerDiv1").innerHTML = tempRec.averagemiles;
+      distance = parseInt(tempRec.milesfrom);
+      overTime = parseInt(tempRec.daysfrom);
+      milesper = Math.round(distance / overTime);
     } else {
-    document.getElementById("innerDiv").innerHTML = "0"
+      milesper = 0;
     }
-    document.getElementById("innerDiv1").innerHTML = "Date<br>mile<br>notes<br>VF<br>MF<br>DF<br>AVG";
+    row.insertCell(0).innerText = outputDate;
+    row.insertCell(1).innerText = tempRec.mileage;
+    row.insertCell(2).innerText = tempRec.milesfrom;
+    row.insertCell(3).innerText = tempRec.daysfrom;
+    row.insertCell(4).innerText = milesper;
+
+    if (tempRec.waitperiod) {
+      row.insertCell(5).innerText = "\u26D4";
+    } else { 
+      row.insertCell(5).innerText = "\u2714";
+    }
+
+    if (tempRec.discrepancy) {
+      row.insertCell(6).innerText = "\u26D4";
+    } else {
+      row.insertCell(6).innerText = "\u2714";
+    }
+    row.insertCell(7).innerText = tempRec.notes;
+
+    document.getElementById('outputDiv').appendChild(table);
+
+  var hasMessage = false;
+    if (tempRec.isService) {
+      if (overTime < 90) {
+        document.getElementById('msgDiv').innerText += "This vehicle has less than 90 days in coverage\r\r"; 
+        document.getElementById('alertDiv').innerText += "\u2757 ALERT: EARLY IN COVERAGE \u2757\r";
+        hasMessage = true;
+      }
+      if (distance < 700) {
+        document.getElementById('msgDiv').innerText += "This vehicle is within 700 miles of the inception mileage\r\r"; 
+        document.getElementById('alertDiv').innerText += "\u2757 ALERT: EARLY IN COVERAGE \u2757\r";
+        hasMessage = true;
+      }
+    }
+    if (tempRec.waitperiod) {
+      document.getElementById('msgDiv').innerText += "The failure dated " + outputDate + " was on day " + overTime + " of coverage.\rThe vehicle travelled " + distance + " since inception before failure.\r\r";
+      document.getElementById('alertDiv').innerText += "\u2757 ALERT: WAITING PERIOD \u2757\r";
+        hasMessage = true;
+    }
+    if (tempRec.discrepancy) {
+      document.getElementById('msgDiv').innerText += "Review The dates and mileages of the surrounding records for any discrepancies.\r\r";
+      document.getElementById('alertDiv').innerText += "\u2757 ALERT: MILEAGE DISCREPANCY \u2757\r";
+        hasMessage = true;
+    }
+    if (milesper > 200) {
+      document.getElementById('msgDiv').innerText += "This vehicle has travelled " + milesper + " miles per day.\r"; 
+      document.getElementById('alertDiv').innerText += "\u2757 ALERT: HMPD \u2757\r"; 
+      hasMessage = true;
+      if (overTime < 90) {
+        document.getElementById('msgDiv').innerText += "Since they are on day " + overTime + " of coverage, please review the HMPD SOP.\r\r";         
+      } else if (overTime > 89) {
+        document.getElementById('msgDiv').innerText += "Since they are on day " + overTime + " of coverage, Continue the claim as normal.\r\r";
+      }
+    }
+    document.getElementById('outputDiv').style.display = "inline-block";
+    if (hasMessage) {
+      document.getElementById('alertDiv').innerText += "\u2757 CLICK TO SHOW MESSAGES \u2757";
+    }
+  }
+  var allCells = document.getElementsByTagName("td");
+  for (i = 0; i < allCells.length; i++) {
+    if (allCells[i].innerText == "\u2714") {
+      allCells[i].style.color = "green";
+    }
+  }
+ priorMileage();
+}
+
+function priorMileage() {
+  const table = document.querySelector(".TheOutputtable");
+  const objectArr = JSON.parse(localStorage.getItem("objectArr"));
+
+  for (i = 0; i < objectArr.length; i++) {
+    if(objectArr[i].isPrior) {
+      var x = i + 1;
+      table.rows[x].cells[2].style.color = "red";
+      table.rows[x].cells[3].style.color = "red";
+    }
   }
 }
 
 
+function showMsg() {
+  document.getElementById('msgDiv').style.opacity = 1;
+}
 
 
+function closeOutput() {
+  document.getElementById('msgDiv').innerText = "";
+  document.getElementById('alertDiv').innerText = "";
+  document.getElementById('msgDiv').style.opacity = 0;
+  document.getElementById('outputDiv').style.display = "none";
+}
 
 
+function inceptEst() {
+  document.getElementById('trackerMsg').innerText = "";
+  var elemId = localStorage.getItem("IDforCor");
 
+  var recMileage1 = localStorage.getItem(elemId + "mileage");
+  var recDate = localStorage.getItem(elemId + "date");
 
+  var serMileage1 = localStorage.getItem("sermileage");
+  var serDate = localStorage.getItem("serdate");
 
+  var incMileage1 = localStorage.getItem("InceptionMiles");
+  var incDate = localStorage.getItem("InceptionDate");
 
+  if (elemId == null || recMileage1 == null || recDate == null || serMileage1 == null || serDate == null || incMileage1 == null || incDate == null) {
+    document.getElementById('trackerMsg').innerText = "Information is incomplete. Try Again";
+    return;
+  } 
 
+  var recMileage = parseInt(recMileage1);
+  var serMileage = parseInt(serMileage1);
+  var incMileage = parseInt(incMileage1);
+   
 
+  var daysBtwnRecs = dayCalc(recDate, serDate);
+  var daysfromInc = dayCalc(incDate, serDate);
 
+  var milesBtwnRecs = serMileage - recMileage;
+  
+  var milesperday = milesBtwnRecs / daysBtwnRecs;
 
+  var milesTravelled = daysfromInc * milesperday;
+  var mileVariation = milesperday * .2;
 
+  var minMilesTravelled = daysfromInc * (milesperday - mileVariation);
+  var maxMilesTravelled = daysfromInc * (milesperday + mileVariation);
 
+  var minMiles = recMileage + minMilesTravelled;
+  var maxMiles = recMileage + maxMilesTravelled;
 
+  var estimatedInception = serMileage - milesTravelled;
+  console.log(milesperday,mileVariation,minMilesTravelled,maxMilesTravelled,estimatedInception);
 
+  document.getElementById('trackerMsg').innerText = "The estimated inception mileage is " + estimatedInception;
+  if (estimatedInception < minMiles || estimatedInception > maxMiles) {
+    document.getElementById('trackerMsg').innerText += "\r\rThe reported inception mileage varies by\rmore than 20% of the estimated inception mileage";
+  }
+  document.getElementById('trackerMsg').innerText += "\r\rThis is NOT a substitute for a performing an inception mileage\rcalculation per SOP using the official method and documentation.";
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
 
 </script>
 </body>
