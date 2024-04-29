@@ -4,11 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
 
-
-
 	<title>CONSOLE</title>
  
 <style>
+
 body { 
  font-family: Verdana, sans-serif;
  background: var(--my-background-color);
@@ -440,8 +439,6 @@ width: 120px;
   display:inline-block;
   left: 100px;
 }
-
-
 .custom0 {
   position: ABSOLUTE;
   display: inline-block;
@@ -695,10 +692,7 @@ input.largerRadio {
   width: 18px;
   height: 18px;
   border-radius: 9px
-}
-
-
-.TheGang {
+}.TheGang {
   left: 15px;
   top: 140px;
   display: inline-block;
@@ -963,8 +957,6 @@ input.largerRadio {
  width: 80px;
  height: 50px;
 }
-
-
 #toggleMaster {
   top: 550px;
   left: 0px;
@@ -1163,6 +1155,14 @@ right: 5px;
 }
 
 
+
+
+
+
+
+
+
+
 #switchf0 {
 position: absolute;
 display: inline-block;
@@ -1240,9 +1240,7 @@ display: inline-block;
 height: 10px;
 top: 625px;
 right: 5px;
-}
-
-#context-menu {
+}#context-menu {
   position: fixed;
   z-index: 15;
   width: 180px;
@@ -1697,6 +1695,8 @@ animation: moveShine 5s infinite linear;
 }
 
 
+
+
 div {
   background: white;
   background: linear-gradient(35deg, 
@@ -1972,6 +1972,12 @@ input[type="color"] {
   text-align: center;
 }
 
+
+
+
+
+
+
 .overlay {
   height: 100%;
   width: 0%;
@@ -2131,6 +2137,17 @@ input[type="color"] {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
 .tab {
   overflow: hidden;
   border: none;
@@ -2147,7 +2164,7 @@ input[type="color"] {
   border-right: 2px solid var(--my-accent-color);
   outline: none;
   cursor: pointer;
-  padding: 14px 18px;
+  padding: 10px 14px;
   transition: 0.5s;
   font-size: 17px;
   text-shadow: none;
@@ -2155,11 +2172,19 @@ input[type="color"] {
   position: initial;
   display: initial;
   border-radius: 5px;
-  width: calc(850px / 6);
+  width: calc(850px / 4);
 }
 
-#edgeButton {
+.tablinks.edgeButton {
     border-right: none;
+}
+
+.authGuideradio {
+  float: right;
+  margin-right: 60px;
+  margin-left: 10px;
+  margin-top:5px;
+  padding: 5px;
 }
 
 .wefwefwef {
@@ -2176,6 +2201,14 @@ input[type="color"] {
   display: inline-block;
   border-radius: 5px;
   width: 170px;
+}
+
+#resetPA {
+  right: 5px;
+  bottom: 5px;
+  border-left: 2px solid var(--my-accent-color);
+  width: 120px;
+  padding: 14px 10px;
 }
 
 #exitRec {
@@ -2249,10 +2282,16 @@ input[type="color"] {
   line-height: 1.5;
 }
 
+.bodyTab2 {
+  margin-left: 50px;
+  line-height: 1.5;
+}
+
 .headerTab {
   text-align: center;
   font-weight: bold;
   font-size: 20px;
+  margin: 0px;
 }
 
 #SOPs {
@@ -2262,6 +2301,10 @@ input[type="color"] {
   width: 150px;
   font-size: 22px;
   color:red;
+}
+
+.authGuide {
+  width: 100%;
 }
 
 #resrcDiv {
@@ -2286,6 +2329,7 @@ input[type="color"] {
   text-align: center;
   border: 1px solid black;
   padding: 5px;
+  text-align: center;
 }
 
 #inputTable {
@@ -2295,6 +2339,7 @@ input[type="color"] {
 .lastCell {
   border: none;
   outline: none;
+  text-align: center;
 }
 
 #infosetDiv {
@@ -2461,6 +2506,10 @@ input.tracker[type="number"] {
 .headit td {
   border-top: none;
 }
+
+
+
+
 
 #ITSBRITTNEY {
  top: 430px;
@@ -3453,65 +3502,204 @@ TIME:&nbsp&nbsp</textarea>
     <button class="tablinks" onclick="openInfo(event, 'MBIClaims')">MBI</button>
     <button class="tablinks" onclick="openInfo(event, 'IsItPT')">Is It PT</button>
     <button class="tablinks" onclick="openInfo(event, 'xfer2790')">2790</button>
-    <button class="tablinks" onclick="openInfo(event, 'DoNotUse')">Do Not Use</button>
+    <button class="tablinks edgeButton" onclick="openInfo(event, 'DoNotUse')">Do Not Use</button>
+    <button class="tablinks" onclick="openInfo(event, 'PANoOrder')">Do Not Order</button>
+    <button class="tablinks" onclick="openInfo(event, 'PAPrice')">Parts Pricing</button>
     <button class="tablinks" onclick="openInfo(event, 'Diagnostic')">Diag Times</button>
-    <button class="tablinks" onclick="openInfo(event, 'trackerTool')" id="edgeButton">Tracker</button>
+    <button class="tablinks edgeButton" onclick="openInfo(event, 'trackerTool')">Tracker</button>
+  </div>
 
+  <div id="PAPrice" class="tabcontent">
+    <h3 class="headerTab">Parts Pricing - PA and Sourcing</h3>
+    <div id="authGuide1" class="authGuide noShow"> 
+      <p class="bodyTab"><b>Is the Repair Facility part OEM or AM?</b>
+        <input type="radio" onclick="goGuide('am',this.name)" class="authGuideradio" id="AM1" name="guide1" value="AM"><label for="AM1" style="float:right;"><b>AM</b></label><br>
+        <input type="radio" onclick="goGuide('oe',this.name)" class="authGuideradio" id="OE1" name="guide1" value="OE"><label for="OE1" style="float:right;"><b>OEM</b></label></p>
+      <div id="authGuideOE" class="authGuide noShow" style="display:none;"> 
+        <p class="bodyTab"><b>Is the MSRP over $250.00?</b>
+          <input type="radio" onclick="goGuide('oeover',this.name)" class="authGuideradio" id="over1" name="guide2" value="over"><label for="over1" style="float:right;"><b>Yes</b></label><br>
+          <input type="radio" onclick="goGuide('oeunder',this.name)" class="authGuideradio" id="under1" name="guide2" value="under"><label for="under1" style="float:right;"><b>No</b></label></p>
+         <div id="oeunder" class="authGuide noShow" style="display:none"> 
+          <p class="bodyTab"><b>Is the RF charging more than OEM MSRP?</b>
+          <input type="radio" onclick="goGuide('rfovrmsrp',this.name)" class="authGuideradio" id="rfovli34" name="gui"><label for="rfovli34" style="float:right;"><b>Yes</b></label><br>
+          <input type="radio" onclick="goGuide('rfundmsrp',this.name)" class="authGuideradio" id="rfundli34" name="gui"><label for="rfundli34" style="float:right;"><b>No</b></label></p>
+         <div id="rfovrmsrp" class="authGuide noShow" style="display:none"> 
+          <p class="bodyTab"><b>If the RF won't match, is shipping an option?</b>
+          <input type="radio" onclick="goGuide('mayship3',this.name)" class="authGuideradio" id="yyyship" name="guid234" value="yes"><label for="yship" style="float:right;"><b>Yes</b></label><br>
+          <input type="radio" onclick="goGuide('noship3',this.name)" class="authGuideradio" id="nnnship" name="guid234" value="no"><label for="nship" style="float:right;"><b>No</b></label></p>
+          </div>
+      </div>
+      </div>
+    </div>
+    <div id="authGuideAM" class="authGuide noShow" style="display:none"> 
+      <p><b>PA Sourcing</b></p>
+      <p class="bodyTab">Enter the CH VIN into PA<br>
+        If the RF is using OEM, search using the OEM part number<br>
+        If the RF is using AM, seach using the part name<br><br>
+        Filter results to show only <b>BETTER</b> or above Quality Rating.<br>
+        Sort by clicking 'price' near the top-right of the screen.<br><br>
+        First option will be any results that have an OES or OEM tag.<br>
+        If there are no parts with an OEM or OES tag, filter results to<br>
+        show only <b>BEST</b> or above Quality Rating.<br><br>
+        <b>Remember:</b><br>
+        Sort by price again after changing any filter options.<br>
+        We can only use pricing from parts that are in stock.<br>
+        If RF is using OEM and there are no options searching by<br>
+        the OEM part number, search again using part name<p>
+      <p class="bodyTab"><b>Does PA have options?</b>
+        <input type="radio" onclick="goGuide('pricing',this.name)" class="authGuideradio" id="paopt1" name="guide3" value="yespa"><label for="paopt1" style="float:right;"><b>Yes</b></label><br>
+        <input type="radio" onclick="goGuide('sourcing',this.name)" class="authGuideradio" id="noopt1" name="guide3" value="nopa"><label for="noopt1" style="float:right;"><b>No</b></label></p>
+    </div>
+    <div id="paGuide" class="authGuide noShow" style="display:none"> 
+      <p><b>PA Pricing</b></p>
+      <p class="bodyTab"><b>Is the PA LIST price over $250.00?</b>
+        <input type="radio" onclick="goGuide('listover',this.name)" class="authGuideradio" id="listov" name="guide4" value="over"><label for="listov" style="float:right;"><b>Yes</b></label><br>
+        <input type="radio" onclick="goGuide('listunder',this.name)" class="authGuideradio" id="listund" name="guide4" value="under"><label for="listund" style="float:right;"><b>No</b></label></p>
+      <div id="listUnder" class="noShow authGuide" style="display:none">
+        <p class="bodyTab2"><b>This is your part.</b><br>- PA List is your MSRP.</p>
+        <p class="bodyTab"><b>Is the RF charging more than PA List?</b>
+        <input type="radio" onclick="goGuide('rfovrlist',this.name)" class="authGuideradio" id="rfovli" name="guide5" value="over"><label for="rfovli" style="float:right;"><b>Yes</b></label><br>
+        <input type="radio" onclick="goGuide('rfundlist',this.name)" class="authGuideradio" id="rfundli" name="guide5" value="under"><label for="rfundli" style="float:right;"><b>No</b></label></p>
+        <div id="rfovrlist" class="noShow authGuide" style="display:none">
+          <p class="bodyTab"><b>If the RF won't match, is shipping an option?</b>
+          <input type="radio" onclick="goGuide('mayship',this.name)" class="authGuideradio" id="yship" name="guide6" value="yes"><label for="yship" style="float:right;"><b>Yes</b></label><br>
+          <input type="radio" onclick="goGuide('noship',this.name)" class="authGuideradio" id="nship" name="guide6" value="no"><label for="nship" style="float:right;"><b>No</b></label></p>
+        </div>
+      </div>
+      <div id="listOver" class="noShow authGuide" style="display:none">
+        <p class="bodyTab"><b>Is PA cost over $250.00?</b>
+        <input type="radio" onclick="goGuide('sourcing',this.name)" class="authGuideradio" id="costo" name="guide7" value="over"><label for="costovr" style="float:right;"><b>Yes</b></label><br>
+        <input type="radio" onclick="goGuide('costund',this.name)" class="authGuideradio" id="costu" name="guide7" value="under"><label for="costund" style="float:right;"><b>No</b></label></p>
+        <div id="costund" class="noShow authGuide" style="display:none">
+          <p class="bodyTab2"><b>This is your part.</b><br>- PA List is your MSRP.<br>- PA Cost is MCE.</p>
+          <p class="bodyTab"><b>Is RF charging more than PA Cost</b>
+          <input type="radio" onclick="goGuide('rfovrcost',this.name)" class="authGuideradio" id="rfovco" name="guide8" value="over"><label for="rfovco" style="float:right;"><b>Yes</b></label><br>
+          <input type="radio" onclick="goGuide('rfundcost',this.name)" class="authGuideradio" id="rfundco" name="guide8" value="under"><label for="rfundco" style="float:right;"><b>No</b></label></p>
+        <div id="rfovrcost" class="noShow authGuide" style="display:none">
+          <p class="bodyTab"><b>If the RF won't match, is shipping an option?</b>
+          <input type="radio" onclick="goGuide('mayship2',this.name)" class="authGuideradio" id="yship2" name="guide9" value="yes"><label for="yship2" style="float:right;"><b>Yes</b></label><br>
+          <input type="radio" onclick="goGuide('noship2',this.name)" class="authGuideradio" id="nship2" name="guide9" value="no"><label for="nship2" style="float:right;"><b>No</b></label></p>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div id="IHSourcing" class="noShow authGuide" style="display:none">
+      <p><b>In House Sourcing</b></p>
+      <p class="bodyTab">
+        First, key in the MCE part from PA and source using the 'Parts Authority' button in CMS.<br><br>
+        <b>AM</b> - Obtain the OEM part number from ProDemand, PA, or Forte.<br>
+        Key in another instance of the part using the OEM PN as the RF part number.<br>
+        <b>OEM and AM</b> - Go to the estimate page and select the part.<br>
+        Click the 'Source Parts' button<br><br>
+        On the Estimate Adjudication page, click the down arrow next to the sourced part.<br>
+        Select Choose Source.<br>
+        On the right side, the column listed under 'Total' will show the total cost of each source.<br><br>
+        MCE is the best pricing available from all vendors.<br>
+        If MCE is over $1000.00, allow 2 hours for sourcing to complete.<br>
+        If there are no PA options and nothing returns from in house, auth MSRP.<br><br>
+        Before shippping or calling the CH for OOPC, always give the RF a chance to match</p>
+    </div>
+  <button id="resetPA" class="wefwefwef" onclick="resetGuide()">Reset</button>
+  </div>
+<div style="display:none">
+      <p class="bodyTab">
+        This is a direct COPY AND PASTE from the AAS SOP:<br>
+        Important!<br>
+        Keep in mind if there is a small difference in price<br>
+        between the best option from Parts Authority and the<br>
+        repair facility’s part, move forward with the repair<br>
+        facility’s part.</p></div>
+  <div id="PANoOrder" class="tabcontent">
+  <h3 class="headerTab">Do Not Order These Parts From PA</h3>
+    <div class="innerLeft">
+    <p><b>Engine and Internals</b></p>
+    <p class="bodyTab">Rocker Arm<br>
+    Camshaft<br>
+    Crankshaft<br>
+    Lifer<br>
+    Balance Shaft<br>
+    Piston<br>
+    Valve Spring<br>
+    Push Rod<br>
+    Cylinder Head<br>
+    Cam Rocker<br>
+    Block<br>
+    Oil Pump<br>
+    Timing Components<br> -Except Timing Chain Kits</p>
+  </div>
+
+  <div class="innerRight">
+    <p><b>Transmission and Other DriveTrain</b></p>
+    <p class="bodyTab">Torque Converter<br>
+    Valve Body<br>
+    Shift Solenoid<br>
+    4x4 Switch<br>
+    Clutch<br>
+    Gears<br>
+    Shafts<br>
+    Differentials<br>
+    Transfer Case (Including Internals)<br>
+    ISM (Shift Module on Certain Transmissions)</p>
+
+    <p><b>General</b></p>
+    <p class="bodyTab">Turbocharger<br>
+    Harmonic Balancer<br>
+    Radiators that begin with <b>"OR"</b><br>
+    LCD Screens and Radios<br>
+    Drive Shafts</p>
+    </div>
   </div>
 
   <div id="Diagnostic" class="tabcontent">
     <h3 class="headerTab">Common Diagnostic Times</h3>
       
       <div class="innerLeft">
-      <p class="bodyTab"><b>Air Conditioning</b></p>
-      Evac and Recharge: <b>1.4</b><br>
+      <p><b>Air Conditioning</b></p>
+      <p class="bodyTab">Evac and Recharge: <b>1.4</b><br>
       Partial Recharge: <b>.6</b><br>
       Dye Test: <b>.6</b><br>
       Pressure Test: <b>.3</b><br>
       Sniffer Test: <b>.6</b><br>
-      Blend Door Actuator Test: <b>.3</b><br><br>
+      Blend Door Actuator Test: <b>.3</b></p>
 
-      <p class="bodyTab"><b>Electrical</b></p>
-      Electrical Test: <b>.3</b><br>
+      <p><b>Electrical</b></p>
+      <p class="bodyTab">Electrical Test: <b>.3</b><br>
       Code Pull: <b>.3</b><br>
       With Live Data Monitoring: add <b>.2</b><br>
       Electronics Reset: <b>.3</b><br>
       Wire Repair: <b>.2</b> per wire, Max <b>2</b> hours<br>
       Alternator Diag: <b>.6</b><br>
-      Pin Point Test: <b>.4</b><br><br>
+      Pin Point Test: <b>.4</b></p>
 
-      <p class="bodyTab"><b>Fuel</b></p>
-      Fuel Pressure Test: <b>.5</b><br>
+      <p><b>Fuel</b></p>
+      <p class="bodyTab">Fuel Pressure Test: <b>.5</b><br>
       Injector Node Test: <b>.5</b><br>
-      Drain and Fill Fuel Tank: <b>.5</b>
+      Drain and Fill Fuel Tank: <b>.5</b></p>
       </div>
 
       <div class="innerRight">
-      <p class="bodyTab"><b>Cooling</b></p>
-      Pressure Test: <b>.4</b><br>
+      <p><b>Cooling</b></p>
+      <p class="bodyTab">Pressure Test: <b>.4</b><br>
       Flush: <b>.5 - .7</b><br>
-      Radiator Drain and Flush: <b>1.4</b><br><br>
+      Radiator Drain and Flush: <b>1.4</b></p>
 
-      <p class="bodyTab"><b>Misc</b></p>
-      Smoke Test - Emissions: <b>.6</b><br>
+      <p><b>Misc</b></p>
+      <p class="bodyTab">Smoke Test - Emissions: <b>.6</b><br>
       Chassis Ears Noise Isolation: <b>.3</b><br>
       Vacuum Test 4WD actuators: <b>.5</b><br>
       Bleeding Lines: <b>.7</b><br>
       Dye Test for Engine: <b>.5</b> - <b>1</b><br>
-      Cleaning: <b>.2 - .4</b> if covered by contract<br><br>
+      Cleaning: <b>.2 - .4</b> if covered by contract</p>
       
-      <p class="bodyTab"><b>Additional Info</b></p>
-      Coolant flushes after water pump replacement are to be 
+      <p><b>Additional Info</b></p>
+      <p class="bodyTab">Coolant flushes after water pump replacement are to be 
       used only if there is contamination in the system from a covered 
       failure.<br><br>
       Swapping ignition coils is 100% a valid diag. We can auth the
       labor time to swap the coil as diag and again as an R/R procedure.<br><br>
-      Always check ProDemand FIRST.
+      Always check ProDemand FIRST.</p>
       </div>
   </div>
-
-
-
 
   <div id="trackerTool" class="tabcontent">
   <table id="inputTable" class="inputClass">
@@ -3649,7 +3837,7 @@ TIME:&nbsp&nbsp</textarea>
 
   <div id="xfer2790" class="tabcontent">
     <h3 class="headerTab">2790</h3>
-    <p class="bodyTab">Don't let the big red banner scare you off.</p>
+    <p><b>Don't let the big red banner scare you off.</b></p>
 
     <p class="bodyTab">A transfer to 2790 is only required in order to start a new claim.<br>
     If they already have a claim, read the notes.</p>
@@ -3717,7 +3905,6 @@ TIME:&nbsp&nbsp</textarea>
 <div class="noShow" id="reportData" style="display:none;"></div>
 
 <script>
-
 var newauthLine1 = "Verified failures using RF diagnostic.";
 var newauthLine2 = "Contract has coverage for failed components.";
 var newauthLine3 = "Verified OEM parts using Forte and AM parts using PA.";
@@ -4404,8 +4591,6 @@ document.onkeyup = function(e) {
       document.getElementById('myInfo').style.display = "none";
   }
 };
-
-
   let newpartcount = 2;
   var menuOpen = false;
 
@@ -5399,7 +5584,6 @@ window.onload = function PutItBack() {
 }
 
 
-
 function resetColors() {
 
   var bgClr = localStorage.getItem("myBackgroundcolor");
@@ -5619,6 +5803,13 @@ function setColor(colorSet) {
   document.documentElement.style.setProperty('--active-color', activeClr);
 
 }
+
+
+
+
+
+
+
 
 const menu = document.getElementById("context-menu");
 var menuState = 0;
@@ -6242,6 +6433,7 @@ function conjunctionJunction(buttonID) {
 
 
 
+
 function tutorial() {
   if (menuOpen) { MENU(); }
   localStorage.setItem("pageNum", "0");
@@ -6702,6 +6894,7 @@ function closeResource() {
     tablinks[i].className = tablinks[i].className.replace(" active", "");
   }
   document.getElementById('trackerMsg').innerText = "";
+  resetGuide();
   resrcCenter();
 }
 
@@ -7151,6 +7344,154 @@ function inceptEst() {
   document.getElementById('trackerMsg').innerText += "\r\rThis is NOT a substitute for a performing an inception mileage\rcalculation per SOP using the official method and documentation.";
 
 }
+
+
+
+function resetGuide() {
+  const radioBtns = document.getElementsByClassName("authGuideradio");
+  for (i = 0; i < radioBtns.length; i++) {
+    radioBtns[i].checked = false;
+    radioBtns[i].disabled = false;
+  }
+  document.getElementById('authGuide1').style.display = "inline-block";
+  document.getElementById('authGuideAM').style.display = "none";
+  document.getElementById('rfovrmsrp').style.display = "none";
+  document.getElementById('oeunder').style.display = "none";
+  document.getElementById('authGuideOE').style.display = "none";
+  document.getElementById('paGuide').style.display = "none";
+  document.getElementById('listUnder').style.display = "none";
+  document.getElementById('rfovrlist').style.display = "none";
+  document.getElementById('listOver').style.display = "none";
+  document.getElementById('costund').style.display = "none";
+  document.getElementById('rfovrcost').style.display = "none";
+  document.getElementById('IHSourcing').style.display = "none";
+}
+
+
+
+
+function goGuide(option,name) {
+  var usedBtn = document.getElementsByName(name);
+  for (i = 0; i < usedBtn.length; i++) {
+    usedBtn[i].disabled = true;
+  }
+
+  switch(option) {
+  case "oeover":
+  case "am":
+    document.getElementById('authGuide1').style.display = "none";
+    document.getElementById('authGuideAM').style.display = "inline-block";
+    break;
+  case "oe":
+    document.getElementById('authGuideOE').style.display = "inline-block";
+    break;
+  case "oeunder":
+    document.getElementById('oeunder').style.display = "inline-block";
+    break;
+  case "rfovrmsrp":
+    document.getElementById('rfovrmsrp').style.display = "inline-block";
+    break;
+  case "noship3":
+    const pElem43 = document.createElement("p");
+    pElem43.classList.add("bodyTab2");
+    const textNode43 = document.createTextNode("Auth MSRP. CH will have OOPC.");
+    var div = document.getElementById("authGuideOE");
+    pElem43.appendChild(textNode43);
+    div.appendChild(pElem43);
+    break;
+  case "mayship3":
+    const pElem8 = document.createElement("p");
+    pElem8.classList.add("bodyTab2");
+    const textNode8 = document.createTextNode("Ship part with permision from CH.");
+    var div = document.getElementById("rfovrmsrp");
+    pElem8.appendChild(textNode8);
+    div.appendChild(pElem8);
+    break;
+  case "rfundmsrp":
+    const pElem9 = document.createElement("p");
+    pElem9.classList.add("bodyTab2");
+    const textNode9 = document.createTextNode("Auth MSRP.");
+    var div = document.getElementById("authGuideOE");
+    pElem9.appendChild(textNode9);
+    div.appendChild(pElem9);
+    break;
+  case "pricing":
+    document.getElementById('authGuideAM').style.display = "none";
+    document.getElementById('paGuide').style.display = "inline-block";
+    break;
+  case "listunder":
+    document.getElementById('listUnder').style.display = "inline-block";
+    break;
+  case "rfovrlist":
+    document.getElementById('rfovrlist').style.display = "inline-block";
+    break;
+  case "rfundlist":
+    const pElem1 = document.createElement("p");
+    pElem1.classList.add("bodyTab2");
+    const textNode1 = document.createTextNode("Auth RF price as its MCE");
+    var div = document.getElementById("listUnder");
+    pElem1.appendChild(textNode1);
+    div.appendChild(pElem1);
+    break;
+  case "mayship":
+    const pElem2 = document.createElement("p");
+    pElem2.classList.add("bodyTab2");
+    const textNode2 = document.createTextNode("Ship part with permision from CH.");
+    var div = document.getElementById("rfovrlist");
+    pElem2.appendChild(textNode2);
+    div.appendChild(pElem2);
+    break;
+  case "noship":
+    const pElem3 = document.createElement("p");
+    pElem3.classList.add("bodyTab2");
+    const textNode3 = document.createTextNode("Auth PA List under $250.00 and the remaining balance is OOPC.");
+    var div = document.getElementById("rfovrlist");
+    pElem3.appendChild(textNode3);
+    div.appendChild(pElem3);
+    break;
+  case "listover":
+    document.getElementById('listOver').style.display = "inline-block";
+    break;
+  case "costund":
+    document.getElementById('costund').style.display = "inline-block";
+    break;
+  case "rfundcost":
+    const pElem4 = document.createElement("p");
+    pElem4.classList.add("bodyTab2");
+    const textNode4 = document.createTextNode("Auth RF price as its MCE.");
+    var div = document.getElementById("costund");
+    pElem4.appendChild(textNode4);
+    div.appendChild(pElem4);
+    break;
+  case "rfovrcost":
+    document.getElementById('rfovrcost').style.display = "inline-block";
+    break;
+  case "mayship2":
+    const pElem5 = document.createElement("p");
+    pElem5.classList.add("bodyTab2");
+    const textNode5 = document.createTextNode("Ship part with permission from CH.");
+    var div = document.getElementById("rfovrcost");
+    pElem5.appendChild(textNode5);
+    div.appendChild(pElem5);
+    break;
+  case "noship2":
+    const pElem6 = document.createElement("p");
+    pElem6.classList.add("bodyTab2");
+    const textNode6 = document.createTextNode("Auth PA Cost under $250.00 and the remaining balance is OOP.");
+    var div = document.getElementById("rfovrcost");
+    pElem6.appendChild(textNode6);
+    div.appendChild(pElem6);
+    break;
+  case "sourcing":
+    document.getElementById('authGuide1').style.display = "none";
+    document.getElementById('authGuideOE').style.display = "none";
+    document.getElementById('authGuideAM').style.display = "none";
+    document.getElementById('paGuide').style.display = "none";
+    document.getElementById('IHSourcing').style.display = "inline-block";
+    break;
+  }
+}
+
 
 </script>
 </body>
