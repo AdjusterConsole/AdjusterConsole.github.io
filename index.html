@@ -6,7 +6,7 @@
 
 
 
-	<title>CONSOLE</title>
+	<title>Adjuster Console</title>
  
 <style>
 
@@ -680,19 +680,19 @@ f {
   left: 380px;
 }
 
-input.MCheckbox {
+input.Mradio {
   width: 14px;
   height: 14px;
 }
 
 input.largerCheckbox {
-  width: 18px;
-  height: 18px;
+  width: 15px;
+  height: 15px;
 }
 
 input.largerRadio {
-  width: 18px;
-  height: 18px;
+  width: 15px;
+  height: 15px;
   border-radius: 9px
 }.TheGang {
   left: 15px;
@@ -959,6 +959,7 @@ input.largerRadio {
   width: 80px;
   height: 50px;
 }
+
 #toggleMaster {
   top: 550px;
   left: 0px;
@@ -984,8 +985,8 @@ input.largerRadio {
   white-space: nowrap;
   position: absolute;
   display: inline-block;
-  top: 20px;
-  left: 50px;
+  top: 10px;
+  left: 25px;
 }
 
 .switch {
@@ -1011,6 +1012,13 @@ input.largerRadio {
   background-color: #ccc;
   -webkit-transition: .4s;
   transition: .4s;
+}
+
+.sd {
+  display: block;
+  margin: 5px;
+  margin-left: 0px;
+  float: left;
 }
 
 .slider:before {
@@ -1046,189 +1054,7 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
-
-#switchs9 {
-  position: absolute;
-  display: inline-block;
-  top: 0px;
-  right: 5px;
-}
-
-#switchs1 {
-  position: absolute;
-  display: inline-block;
-  top: 25px;
-  right: 5px;
-}
-
-#switchs2 {
-  position: absolute;
-  display: inline-block;
-  top: 50px;
-  right: 5px;
-}
-
-#switchs3 {
-  position: absolute;
-  display: inline-block;
-  top: 75px;
-  right: 5px;
-}
-
-#switchs4 {
-  position: absolute;
-  display: inline-block;
-  top: 100px;
-  right: 5px;
-}
-
-#switchs5 {
-  position: absolute;
-  display: inline-block;
-  top: 125px;
-  right: 5px;
-}
-
-#switchs6 {
-  position: absolute;
-  display: inline-block;
-  top: 150px;
-  right: 5px;
-}
-
-#switchs7 {
-  position: absolute;
-  display: inline-block;
-  top: 175px;
-  right: 5px;
-}
-
-#switchs8 {
-  position: absolute;
-  display: inline-block;
-  top: 200px;
-  right: 5px;
-}
-
-#switchs0 {
-  position: absolute;
-  display: inline-block;
-  top: 225px;
-  right: 5px;
-}
-
-#switcha0 {
-  position: absolute;
-  display: inline-block;
-  top: 250px;
-  right: 5px;
-}
-
-#switcha1 {
-  position: absolute;
-  display: inline-block;
-  top: 275px;
-  right: 5px;
-}
-
-#switcha2 {
-  position: absolute;
-  display: inline-block;
-  top: 300px;
-  right: 5px;
-}
-
-#switcha3 {
-  position: absolute;
-  display: inline-block;
-  top: 325px;
-  right: 5px;
-}
-
-#switcha4 {
-  position: absolute;
-  display: inline-block;
-  top: 350px;
-  right: 5px;
-}
-
-#switchf0 {
-  position: absolute;
-  display: inline-block;
-  top: 375px;
-  right: 5px;
-}
-
-#switchf1 {
-  position: absolute;
-  display: inline-block;
-  top: 400px;
-  right: 5px;
-}
-
-#switchf2 {
-  position: absolute;
-  display: inline-block;
-  top: 425px;
-  right: 5px;
-}
-
-#switchf3 {
-  position: absolute;
-  display: inline-block;
-  top: 450px;
-  right: 5px;
-}
-
-#switchf4 {
-  position: absolute;
-  display: inline-block;
-  top: 475px;
-  right: 5px;;
-}
-
-#switchf5 {
-  position: absolute;
-  display: inline-block;
-  top: 500px;
-  right: 5px;
-}
-
-#switchf6 {
-  position: absolute;
-  display: inline-block;
-  top: 525px;
-  right: 5px;
-}
-
-#switchf7 {
-  position: absolute;
-  display: inline-block;
-  top: 550px;
-  right: 5px;
-}
-
-#switchf8 {
-  position: absolute;
-  display: inline-block;
-  top: 575px;
-  right: 5px;
-}
-
-#switchf9 {
-  position: absolute;
-  display: inline-block;
-  top: 600px;
-  right: 5px;
-}
-
-#switchp3 {
-  position: absolute;
-  display: inline-block;
-  height: 10px;
-  top: 625px;
-  right: 5px;
-}#context-menu {
+#context-menu {
   position: fixed;
   z-index: 15;
   width: 180px;
@@ -1647,7 +1473,6 @@ input:checked + .slider:before {
 }
 
 @keyframes moveShine {
-
   0% {
   box-shadow:   
     1px 1px 1px red, 
@@ -1655,7 +1480,6 @@ input:checked + .slider:before {
    -1px 1px 1px red, 
     1px -1px 1px red;
   }
-
   25% {
   box-shadow:   
     1px 1px 1px red, 
@@ -1666,7 +1490,6 @@ input:checked + .slider:before {
     0px 0px 15px red,
     0px 0px 30px red;
   }
-
   50% {
   box-shadow:   
     1px 1px 1px red, 
@@ -1674,7 +1497,6 @@ input:checked + .slider:before {
    -1px 1px 1px red, 
     1px -1px 1px red;
   }
-
   100% {
   box-shadow:   
     1px 1px 1px red, 
@@ -2666,11 +2488,13 @@ input.tracker[type="number"] {
   </div>
 </div>
 
+class="Mradio" 
+
 <div id="transferTemplate" style="display: none;">
     <div id="quest1" class="noShow">
       <b>Is the repair facility able to diagnose to cause of failure and overhaul if needed?</b>
-      <input type="radio" style="float:right; margin-right: 60px;" id="no1" name="ans1" value="NO"><label for="no1" style="float:right;">&nbsp&nbsp&nbspNO</label>    
-      <input type="radio" style="float:right;" id="yes1" name="ans1" value="YES"><label for="yes1" style="float:right;">YES</label><BR>
+      <input type="radio" class="Mradio" style="float:right; margin-right: 60px;" id="no1" name="ans1" value="NO"><label for="no1" style="float:right;">&nbsp&nbsp&nbspNO</label>    
+      <input type="radio" class="Mradio" style="float:right;" id="yes1" name="ans1" value="YES"><label for="yes1" style="float:right;">YES</label><BR>
       The repair facility can either be able to meet this requirement or the contract holder<br>
       will be required to move the vehicle to another repair facility.<br>
       CVT transmissions are exempt from this requirement.<br><br>
@@ -2678,16 +2502,16 @@ input.tracker[type="number"] {
 
     <div id="quest2" class="noShow">
       <b>Has the repair facility ever serviced the vehicle before?</b>
-      <input type="radio" style="float:right; margin-right: 60px;" id="no2" name="ans2" value="NO"><label for="no2" style="float:right;">&nbsp&nbsp&nbspNO</label>
-      <input type="radio" style="float:right;" id="yes2" name="ans2" value="YES"><label for="yes2" style="float:right;">YES</label><BR>
+      <input type="radio" class="Mradio" style="float:right; margin-right: 60px;" id="no2" name="ans2" value="NO"><label for="no2" style="float:right;">&nbsp&nbsp&nbspNO</label>
+      <input type="radio" class="Mradio" style="float:right;" id="yes2" name="ans2" value="YES"><label for="yes2" style="float:right;">YES</label><BR>
       If so, have the repair facility submit the service records for review.<br><br>   
     </div>
 
     <div id="quest3" class="noShow">
       <b>Can a test drive be performed if needed?</b>
-      <input type="radio" style="float:right; margin-right: 60px;" id="no3" name="ans3" value="NO"><label for="no3" style="float:right;">&nbsp&nbsp&nbspNO</label>
-      <input type="radio" style="float:right;" id="yes3" name="ans3" value="YES"><label for="yes3" style="float:right;">&nbsp&nbsp&nbspYES</label>
-      <input type="radio" style="float:right;" id="nr3" name="ans3" value="NOT RECOMMENDED"><label for="nr3" style="float:right;">NOT RECOMMENDED</label><BR><BR>
+      <input type="radio" class="Mradio" style="float:right; margin-right: 60px;" id="no3" name="ans3" value="NO"><label for="no3" style="float:right;">&nbsp&nbsp&nbspNO</label>
+      <input type="radio" class="Mradio" style="float:right;" id="yes3" name="ans3" value="YES"><label for="yes3" style="float:right;">&nbsp&nbsp&nbspYES</label>
+      <input type="radio" class="Mradio" style="float:right;" id="nr3" name="ans3" value="NOT RECOMMENDED"><label for="nr3" style="float:right;">NOT RECOMMENDED</label><BR><BR>
     </div>
     <div id="q3ansN" class="noShow">  
       <textarea id="q3ansExplain" placeholder="Brief explanation..." rows="1" cols="35" style="right:60px;box-shadow:none;border:2px solid black;resize:none;"></textarea>
@@ -2697,35 +2521,35 @@ input.tracker[type="number"] {
 
     <div id="quest4" class="noShow">   
       <b>Did the repair facility tow the vehicle?</b>
-      <input type="radio" style="float:right; margin-right: 60px;" id="no4" name="ans4" value="NO"><label for="no4" style="float:right;">&nbsp&nbsp&nbspNO</label>
-      <input type="radio" style="float:right;" id="yes4" name="ans4" value="YES"> <label for="yes4" style="float:right;">&nbsp&nbsp&nbspYES</label>   
-      <input type="radio" style="float:right;" id="na4" name="ans4" value="NA"><label for="na4" style="float:right;">NA</label><BR>
+      <input type="radio" class="Mradio" style="float:right; margin-right: 60px;" id="no4" name="ans4" value="NO"><label for="no4" style="float:right;">&nbsp&nbsp&nbspNO</label>
+      <input type="radio" class="Mradio" style="float:right;" id="yes4" name="ans4" value="YES"> <label for="yes4" style="float:right;">&nbsp&nbsp&nbspYES</label>   
+      <input type="radio" class="Mradio" style="float:right;" id="na4" name="ans4" value="NA"><label for="na4" style="float:right;">NA</label><BR>
       If so, have the repair facility submit the invoice for review.<br><br>
     </div>
 
     <div id="quest5" class="noShow"> 
       <b>Has the cause of failure been identified?</b>
-      <input type="radio" style="float:right; margin-right: 60px;" id="no5" name="ans5" value="NO"><label for="no5" style="float:right;">&nbsp&nbsp&nbspNO</label>
-      <input type="radio" style="float:right;" id="yes5" name="ans5" value="YES"><label for="yes5" style="float:right;">YES</label><br><br><br>
+      <input type="radio" class="Mradio" style="float:right; margin-right: 60px;" id="no5" name="ans5" value="NO"><label for="no5" style="float:right;">&nbsp&nbsp&nbspNO</label>
+      <input type="radio" class="Mradio" style="float:right;" id="yes5" name="ans5" value="YES"><label for="yes5" style="float:right;">YES</label><br><br><br>
     </div>
 
     <div id="quest6" class="noShow"> 
       <b>Does the repair facility have an itemized estimate available?</b>
-      <input type="radio" style="float:right; margin-right: 60px;" id="no6" name="ans6" value="NO"><label for="no6" style="float:right;">&nbsp&nbsp&nbspNO</label>
-      <input type="radio" style="float:right;" id="yes6" name="ans6" value="YES"><label for="yes6" style="float:right;">YES</label><BR>
+      <input type="radio" class="Mradio" style="float:right; margin-right: 60px;" id="no6" name="ans6" value="NO"><label for="no6" style="float:right;">&nbsp&nbsp&nbspNO</label>
+      <input type="radio" class="Mradio" style="float:right;" id="yes6" name="ans6" value="YES"><label for="yes6" style="float:right;">YES</label><BR>
       If so, have the repair facility submit the estimate for review.<br><br>
     </div>
 
     <div id="quest7" class="noShow"> 
       <b>Has the repair facility's info and contact info been verified?</b>
-      <input type="radio" style="float:right; margin-right: 60px;" id="no7" name="ans7" value="NO"><label for="no7" style="float:right;">&nbsp&nbsp&nbspNO</label>
-      <input type="radio" style="float:right;" id="yes7" name="ans7" value="YES"><label for="yes7" style="float:right;">YES</label><BR>  
+      <input type="radio" class="Mradio" style="float:right; margin-right: 60px;" id="no7" name="ans7" value="NO"><label for="no7" style="float:right;">&nbsp&nbsp&nbspNO</label>
+      <input type="radio" class="Mradio" style="float:right;" id="yes7" name="ans7" value="YES"><label for="yes7" style="float:right;">YES</label><BR>  
       Please verify their information in order to proceed.<br><br>
     </div>
 
     <div id="quest8" class="noShow">
       <b>What is the preferred method of contact?</b>
-      <input type="radio" style="float:right; margin-right: 60px;" id="either" name="ans8" value="EITHER"><label for="either" style="float:right;">&nbsp&nbsp&nbspEither</label>
+      <input type="radio" class="Mradio" style="float:right; margin-right: 60px;" id="either" name="ans8" value="EITHER"><label for="either" style="float:right;">&nbsp&nbsp&nbspEither</label>
       <input type="radio" style="float:right;" id="email" name="ans8" value="EMAIL" autocomplete="off"><label for="email" style="float:right;">&nbsp&nbsp&nbspE-mail</label>
       <input type="radio" style="float:right;" id="phone" name="ans8" value="PHONE" autocomplete="off"><label for="phone" style="float:right;">Phone</label><BR>
       <textarea id="contact1" placeholder="Contact Name" rows="1" cols="25" style="right:60px;box-shadow:none;border:2px solid black;resize:none;"></textarea><br><br>
@@ -2734,22 +2558,22 @@ input.tracker[type="number"] {
 
     <div id="quest9" class="noShow">
       <b>Have the PT claim expectations been reviewed with the repair facility contact?</b>
-      <input type="radio" style="float:right; margin-right: 60px;" id="no9" name="ans9" value="NO"><label for="no9" style="float:right;">&nbsp&nbsp&nbspNO</label>
-      <input type="radio" style="float:right;" id="yes9" name="ans9" value="YES"><label for="yes9" style="float:right;">YES</label><BR> 
+      <input type="radio" class="Mradio" style="float:right; margin-right: 60px;" id="no9" name="ans9" value="NO"><label for="no9" style="float:right;">&nbsp&nbsp&nbspNO</label>
+      <input type="radio" class="Mradio" style="float:right;" id="yes9" name="ans9" value="YES"><label for="yes9" style="float:right;">YES</label><BR> 
       If not, this should be discussed with the repair facility prior to ending the call.<br><br>
     </div>
 
     <div id="quest10" class="noShow">      
       <b>Have you provided the repair facility with the assigned</b>
-      <input type="radio" style="float:right; margin-right: 60px;" id="no10" name="ans10" value="NO"><label for="no10" style="float:right;">&nbsp&nbsp&nbspNO</label>
-      <input type="radio" style="float:right;" id="yes10" name="ans10" value="YES"><label for="yes10" style="float:right;">YES</label><BR>
+      <input type="radio" class="Mradio" style="float:right; margin-right: 60px;" id="no10" name="ans10" value="NO"><label for="no10" style="float:right;">&nbsp&nbsp&nbspNO</label>
+      <input type="radio" class="Mradio" style="float:right;" id="yes10" name="ans10" value="YES"><label for="yes10" style="float:right;">YES</label><BR>
       <b>adjusters name, direct extension, and e-mail?</b><br><br>
     </div>
 
     <div id="quest11" class="noShow">
       <b>Is there any other relevant info that will assist the adjuster?</b>
-      <input type="radio" style="float:right; margin-right: 60px;" id="no11" name="ans11" value="NO"><label for="no11" style="float:right;">&nbsp&nbsp&nbspNO</label>
-      <input type="radio" style="float:right;" id="yes11" name="ans11" value="YES"><label for="yes11" style="float:right;">&nbsp&nbsp&nbspYES</label><br>
+      <input type="radio" class="Mradio" style="float:right; margin-right: 60px;" id="no11" name="ans11" value="NO"><label for="no11" style="float:right;">&nbsp&nbsp&nbspNO</label>
+      <input type="radio" class="Mradio" style="float:right;" id="yes11" name="ans11" value="YES"><label for="yes11" style="float:right;">&nbsp&nbsp&nbspYES</label><br>
     </div>
     <div id="q11ansY" class="noShow">  
       <textarea id="q11ansExplain" placeholder="Additional Information" rows="5" cols="40" style="left:20px;box-shadow:none;border:2px solid black;resize:none;"></textarea><br><br><br><br>
@@ -2802,11 +2626,11 @@ input.tracker[type="number"] {
     <div id="authParts" class="noShow" style="display:inline-block;font-size:16px;">
       <b>Who's parts at what pricing?</b><br>
       Select all that apply...<br><br>
-      <input type="checkbox" id="auth1" name="authparts" class="FNA MCheckbox"><label for="auth1"> <b>OEM Under 250</b><br>&nbsp&nbsp&nbsp&nbsp&nbspUsing RF's OEM parts at or under $250.00.</label><br>
-      <input type="checkbox" id="auth2" name="authparts" class="FNA MCheckbox"><label for="auth2"> <b>RF Parts at MCE</b><br>&nbsp&nbsp&nbsp&nbsp&nbspUsing RF's parts at or under sourcing MCE.</label><br>
-      <input type="checkbox" id="auth3" name="authparts" class="FNA MCheckbox"><label for="auth3"> <b>Sourcing MCE as Credit</b><br>&nbsp&nbsp&nbsp&nbsp&nbspUsing sourcing MCE as a credit toward repair facility parts. Shipping is not an option.</label><br>
-      <input type="checkbox" id="auth4" name="authparts" class="FNA MCheckbox"><label for="auth4"> <b>MCE as Credit or Shipped</b><br>&nbsp&nbsp&nbsp&nbsp&nbspUsing sourcing MCE as a credit toward repair facility parts or shipping in.</label><br>
-      <input type="checkbox" id="auth5" name="authparts" class="FNA MCheckbox"><label for="auth5"> <b>Negotiated for No OOPC</b><br>&nbsp&nbsp&nbsp&nbsp&nbspUsing RF's parts. Adjusted price to reasonable amount near MCE.</label><br>
+      <input type="checkbox" id="auth1" name="authparts" class="FNA largerCheckbox"><label for="auth1"> <b>OEM Under 250</b><br>&nbsp&nbsp&nbsp&nbsp&nbspUsing RF's OEM parts at or under $250.00.</label><br>
+      <input type="checkbox" id="auth2" name="authparts" class="FNA largerCheckbox"><label for="auth2"> <b>RF Parts at MCE</b><br>&nbsp&nbsp&nbsp&nbsp&nbspUsing RF's parts at or under sourcing MCE.</label><br>
+      <input type="checkbox" id="auth3" name="authparts" class="FNA largerCheckbox"><label for="auth3"> <b>Sourcing MCE as Credit</b><br>&nbsp&nbsp&nbsp&nbsp&nbspUsing sourcing MCE as a credit toward repair facility parts. Shipping is not an option.</label><br>
+      <input type="checkbox" id="auth4" name="authparts" class="FNA largerCheckbox"><label for="auth4"> <b>MCE as Credit or Shipped</b><br>&nbsp&nbsp&nbsp&nbsp&nbspUsing sourcing MCE as a credit toward repair facility parts or shipping in.</label><br>
+      <input type="checkbox" id="auth5" name="authparts" class="FNA largerCheckbox"><label for="auth5"> <b>Negotiated for No OOPC</b><br>&nbsp&nbsp&nbsp&nbsp&nbspUsing RF's parts. Adjusted price to reasonable amount near MCE.</label><br>
       <button id="cancelNewauth" class="Cancelbtn" onclick="cancelNewauth()">Cancel</button>
       <button id="authMove" class="Submitbtn" onclick="moveAuth()">Continue</button>
     </div>
@@ -2814,9 +2638,9 @@ input.tracker[type="number"] {
     <div id="authRequests" class="noShow" style="display:none;font-size:18px;">
       <b>Did you request an inspection, photos, records, or a statement?</b><br>
       Select all that apply...<br><br>
-      <input type="checkbox" id="auth6" name="authreqs" class="FNA"><label for="auth6"><b>Inspection</b></label><br>
-      <input type="checkbox" id="auth7" name="authreqs" class="FNA"><label for="auth7"><b>Photos</b></label><br>
-      <input type="checkbox" id="auth8" name="authreqs" class="FNA"><label for="auth8"><b>Records</b></label><br><br>
+      <input type="checkbox" id="auth6" name="authreqs" class="FNA largerCheckbox"><label for="auth6"><b>Inspection</b></label><br>
+      <input type="checkbox" id="auth7" name="authreqs" class="FNA largerCheckbox"><label for="auth7"><b>Photos</b></label><br>
+      <input type="checkbox" id="auth8" name="authreqs" class="FNA largerCheckbox"><label for="auth8"><b>Records</b></label><br><br>
       <input type="checkbox" id="auth9" name="authreqs" class="FNA largerCheckbox" onclick="moveAuth2()"><label for="auth9" style="font-size:20px;"><b>No Requests</b></label><br>
       <button id="cancelNewauth" class="Cancelbtn" onclick="cancelNewauth()">Cancel</button>
       <button id="authMove2" class="Submitbtn" onclick="moveAuth2()">Continue</button>
@@ -2825,23 +2649,23 @@ input.tracker[type="number"] {
     <div id="authOopcs" class="noShow" style="display:none;font-size:18px;">
       <div class="noShow" style="width:50%;left:15px;top:15px;position:absolute;font-size:18px;">
         <b>Is OOPC or shipping a concern?</b><br>
-        <input type="radio" id="auth10" name="authoops" class="FNA" onclick="showOOPopt()"><label for="auth10"><b>OOPC</b></label><br>
-        <input type="radio" id="auth11" name="authoops" class="FNA"><label for="auth11"><b>Shipping</b></label><br>
-        <input type="radio" id="auth12" name="authoops" class="FNA" onclick="showOOPopt()"><label for="auth12"><b>Both</b></label><br><br>
+        <input type="radio" id="auth10" name="authoops" class="FNA largerRadio" onclick="showOOPopt()"><label for="auth10"><b>OOPC</b></label><br>
+        <input type="radio" id="auth11" name="authoops" class="FNA largerRadio"><label for="auth11"><b>Shipping</b></label><br>
+        <input type="radio" id="auth12" name="authoops" class="FNA largerRadio" onclick="showOOPopt()"><label for="auth12"><b>Both</b></label><br><br>
         <input type="radio" id="auth13" name="authoops" class="FNA largerRadio"><label for="auth13"><b>No Concerns</b></label><br><br>
       </div>
 
       <div class="noShow" style="width:50%;left:15px;top:220px;position:absolute;font-size:18px;margin-top:15px;">
         <b>Any non-covered components?</b><br>
-        <input type="radio" id="auth18" name="authoops3" class="FNA"><label for="auth18"><b>Yes</b></label><br>
-        <input type="radio" id="auth19" name="authoops3" class="FNA"><label for="auth19"><b>No</b></label>
+        <input type="radio" id="auth18" name="authoops3" class="FNA largerRadio"><label for="auth18"><b>Yes</b></label><br>
+        <input type="radio" id="auth19" name="authoops3" class="FNA largerRadio"><label for="auth19"><b>No</b></label>
       </div>
 
       <div id="OOPoptDiv" class="noShow" style="display:none;width:50%;right:15px;top:15px;position:absolute;font-size:18px;">
       <b>What is the cause of OOPC?</b><br>
-        <input type="radio" id="auth14" name="authoops2" class="FNA"><label for="auth14"><b>Parts</b></label><br>
-        <input type="radio" id="auth15" name="authoops2" class="FNA"><label for="auth15"><b>Labor</b></label><br>
-        <input type="radio" id="auth16" name="authoops2" class="FNA"><label for="auth16"><b>Both</b></label><br><br>
+        <input type="radio" id="auth14" name="authoops2" class="FNA largerRadio"><label for="auth14"><b>Parts</b></label><br>
+        <input type="radio" id="auth15" name="authoops2" class="FNA largerRadio"><label for="auth15"><b>Labor</b></label><br>
+        <input type="radio" id="auth16" name="authoops2" class="FNA largerRadio"><label for="auth16"><b>Both</b></label><br><br>
         <label for="auth17"><b>Amount of OOPC<br>&nbsp&nbsp&nbspInclude DED</b></label><br><input type="number" style="padding:5px;" id="auth17" name="authoops" class="FNA" step="0.01"><br>
       </div>
 
@@ -3007,82 +2831,87 @@ input.tracker[type="number"] {
 
 <div id="toggleMaster" style="display: none" class="noShow">
  <div id="switchdivIndiv" class="noShow">
-  <div id="switchdivs9" class="noShow">
+  <div class="noShow sd">
     <label id="switchs9" class="switch"><input type="checkbox" id="s9" onclick="toggleConductor(this.id)"><span class="slider round"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspAll Buttons
-  </div>
-  <div id="switchdivs1" class="noShow">
+  </div><br>
+  <div id="switchdivs1" class="noShow sd">
     <label id="switchs1" class="switch"><input type="checkbox" id="s1" onclick="toggleConductor(this.id)"><span class="slider round"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspPicture Request
-  </div>
-  <div id="switchdivs2" class="noShow">
+  </div><br>
+  <div id="switchdivs2" class="noShow sd">
     <label id="switchs2" class="switch"><input type="checkbox" id="s2" onclick="toggleConductor(this.id)"><span class="slider round"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspRecords Request
-  </div>
-  <div id="switchdivs3" class="noShow">
+  </div><br>
+  <div id="switchdivs3" class="noShow sd">
     <label id="switchs3" class="switch"><input type="checkbox" id="s3" onclick="toggleConductor(this.id)"><span class="slider round"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspRecds Req No Ansr
-  </div>
-  <div id="switchdivs4" class="noShow">
+  </div><br>
+  <div id="switchdivs4" class="noShow sd">
     <label id="switchs4" class="switch"><input type="checkbox" id="s4" onclick="toggleConductor(this.id)"><span class="slider round"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspOOP Call No Ansr
-  </div>
-  <div id="switchdivs5" class="noShow">
+  </div><br>
+  <div id="switchdivs5" class="noShow sd">
     <label id="switchs5" class="switch"><input type="checkbox" id="s5" onclick="toggleConductor(this.id)"><span class="slider round"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspCH Authed OOPC
-  </div>
-  <div id="switchdivs6" class="noShow">
+  </div><br>
+  <div id="switchdivs6" class="noShow sd">
     <label id="switchs6" class="switch"><input type="checkbox" id="s6" onclick="toggleConductor(this.id)"><span class="slider round"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspTemplates
-  </div>
-  <div id="switchdivs7" class="noShow">
+  </div><br>
+  <div id="switchdivs7" class="noShow sd">
     <label id="switchs7" class="switch"><input type="checkbox" id="s7" onclick="toggleConductor(this.id)"><span class="slider round"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspAuth Claim
-  </div>
-  <div id="switchdivs8" class="noShow">
+  </div><br>
+  <div id="switchdivs8" class="noShow sd">
     <label id="switchs8" class="switch"><input type="checkbox" id="s8" onclick="toggleConductor(this.id)"><span class="slider round"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspStatus Note
-  </div>
-  <div id="switchdivs0" class="noShow">
+  </div><br>
+
+  <div id="switchdivg0" class="noShow sd">
+    <label id="switchg0" class="switch"><input type="checkbox" id="g0" onclick="toggleConductor(this.id)"><span class="slider round"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspResources
+  </div><br>
+  <div id="switchdivs0" class="noShow sd">
     <label id="switchs0" class="switch"><input type="checkbox" id="s0" onclick="toggleConductor(this.id)"><span class="slider round"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspGeneral Notes
-  </div>
-  <div id="switchdiva0" class="noShow">
+  </div><br>
+
+  <div id="switchdiva0" class="noShow sd">
     <label id="switcha0" class="switch"><input type="checkbox" id="a0" onclick="toggleConductor(this.id)"><span class="slider round"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspParts Intake
-  </div>
-  <div id="switchdiva1" class="noShow">
+  </div><br>
+  <div id="switchdiva1" class="noShow sd">
     <label id="switcha1" class="switch"><input type="checkbox" id="a1" onclick="toggleConductor(this.id)"><span class="slider round"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspCopy P&L
-  </div>
-  <div id="switchdiva2" class="noShow">
+  </div><br>
+  <div id="switchdiva2" class="noShow sd">
     <label id="switcha2" class="switch"><input type="checkbox" id="a2" onclick="toggleConductor(this.id)"><span class="slider round"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspParts Buttons
-  </div>
-  <div id="switchdiva3" class="noShow">
+  </div><br>
+  <div id="switchdiva3" class="noShow sd">
     <label id="switcha3" class="switch"><input type="checkbox" id="a3" onclick="toggleConductor(this.id)"><span class="slider round"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspLabor Buttons
-  </div>
-  <div id="switchdiva4" class="noShow">
+  </div><br>
+  <div id="switchdiva4" class="noShow sd">
     <label id="switcha4" class="switch"><input type="checkbox" id="a4" onclick="toggleConductor(this.id)"><span class="slider round"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspReset
-  </div>
-  <div id="switchdivf0" class="noShow">
+  </div><br>
+  <div id="switchdivf0" class="noShow sd">
     <label id="switchf0" class="switch"><input type="checkbox" id="u0" onclick="toggleConductor(this.id)"><span class="slider round"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspCUSTOM0
-  </div>
-  <div id="switchdivf1" class="noShow">
+  </div><br>
+  <div id="switchdivf1" class="noShow sd">
     <label id="switchf1" class="switch"><input type="checkbox" id="u1" onclick="toggleConductor(this.id)"><span class="slider round"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspCUSTOM1
-  </div>
-  <div id="switchdivf2" class="noShow">
+  </div><br>
+  <div id="switchdivf2" class="noShow sd">
     <label id="switchf2" class="switch"><input type="checkbox" id="u2" onclick="toggleConductor(this.id)"><span class="slider round"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspCUSTOM2
-  </div>
-  <div id="switchdivf3" class="noShow">
+  </div><br>
+  <div id="switchdivf3" class="noShow sd">
     <label id="switchf3" class="switch"><input type="checkbox" id="u3" onclick="toggleConductor(this.id)"><span class="slider round"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspCUSTOM3
-  </div>
-  <div id="switchdivf4" class="noShow">
+  </div><br>
+  <div id="switchdivf4" class="noShow sd">
     <label id="switchf4" class="switch"><input type="checkbox" id="u4" onclick="toggleConductor(this.id)"><span class="slider round"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspCUSTOM4
-  </div>
-  <div id="switchdivf5" class="noShow">
+  </div><br>
+  <div id="switchdivf5" class="noShow sd">
     <label id="switchf5" class="switch"><input type="checkbox" id="u5" onclick="toggleConductor(this.id)"><span class="slider round"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspCUSTOM5
-  </div>
-  <div id="switchdivf6" class="noShow">
+  </div><br>
+  <div id="switchdivf6" class="noShow sd">
     <label id="switchf6" class="switch"><input type="checkbox" id="u6" onclick="toggleConductor(this.id)"><span class="slider round"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspCUSTOM6
-  </div>
-  <div id="switchdivf7" class="noShow">
+  </div><br>
+  <div id="switchdivf7" class="noShow sd">
     <label id="switchf7" class="switch"><input type="checkbox" id="u7" onclick="toggleConductor(this.id)"><span class="slider round"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspCUSTOM7
-  </div>
-  <div id="switchdivf8" class="noShow">
+  </div><br>
+  <div id="switchdivf8" class="noShow sd">
     <label id="switchf8" class="switch"><input type="checkbox" id="u8" onclick="toggleConductor(this.id)"><span class="slider round"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspCUSTOM8
-  </div>
-  <div id="switchdivf9" class="noShow">
+  </div><br>
+  <div id="switchdivf9" class="noShow sd">
     <label id="switchf9" class="switch"><input type="checkbox" id="u9" onclick="toggleConductor(this.id)"><span class="slider round"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspCUSTOM9
-  </div>
-  <div id="switchp3" class="noShow"> &nbsp</div>
+  </div><br>
+  <div id="switchp3" class="noShow sd"> &nbsp</div>
  </div>
 </div>
 <div id="custBtns" class="noShow">
@@ -3494,7 +3323,7 @@ TIME:&nbsp&nbsp</textarea>
   </div>
 </div>
 
-<button id="SOPs" class="R P D" onclick="resrcCenter()">Resources</button>
+<button id="SOPs" class="R P D g0dispStat" oncontextmenu="customMenu(this.id, event)" onclick="resrcCenter()">Resources</button>
 
 <div id="resrcDiv" style="display: none;">
   <div class="tab">
@@ -3509,12 +3338,8 @@ TIME:&nbsp&nbsp</textarea>
     <button class="tablinks" onclick="openInfo(event, 'trackerTool')">Tracker</button>
   </div>
 
-
-
-
   <div id="MileDiscrep" class="tabcontent">
     <h3 class="headerTab">Mileage Discrepancies</h3>
-
     <div id="MileDiscrep1" class="mileage noShow"> 
       <p><b>Is the contract a Term contract or a Month-to-Month Contract?</b>
         <input type="radio" class="mdguide" id="md1" name="discrep1"><label for="md1" style="float:right;" required><b>Term</b></label><br>
@@ -3955,70 +3780,68 @@ TIME:&nbsp&nbsp</textarea>
 
 <div class="noShow" id="reportData" style="display:none;"></div>
 
+
 <script>
+  var newauthLine1 = "Verified failures using RF diagnostic.";
+  var newauthLine2 = "Contract has coverage for failed components.";
+  var newauthLine3 = "Verified OEM parts using Forte and AM parts using PA.";
+  var newauthLine4 = "Verified labor using Pro Demand.";
+  var newauthLine5 = "Verified payment info with repair facility at: ";
 
+  document.getElementById("auth1").value = "Using repair facility OEM parts at or under $250.00.";
+  document.getElementById("auth2").value = "Using repair facility parts at or under sourcing MCE.";
+  document.getElementById("auth3").value = "Using sourcing MCE as a credit toward repair facility parts.";
+  document.getElementById("auth4").value = "Using sourcing MCE as a credit toward repair facility parts or shipping in.";
+  document.getElementById("auth5").value = "Adjusted price to reasonable amount near MCE.\rThis was done considering all factors including claim delays,\rshipping costs, liability for future failures, time and mileage\rin coverage, number of prior claims and their cost, etc.";
 
+  var inspAuth1 = "No inspection needed as RF diagnostic matches CH concern.";
+  var inspAuth2 = "Sent inspection to verify failures.\rReviewed report and inspection photos.\rInspection review note is completed.";
+  var inspAuth3 = "Requested and reviewed photos from repair facility.\rPhoto review note is completed.";
+  var recordsAuth1 = "No records requested as history will not change claim decision.\rVehicle is not in waiting period.\rConcern is not maintenance related.\rNo prior related claims.\rNo recalls, TSBs, or mileage concerns.";
+  var recordsAuth2 = "Requested and reviewed records and statement.\rRecord review note is completed.";
+  var requestedAuth1 = "After reviewing all relevant documentation, we are moving forward with verified failures.";
+  var oopcsAuth1 = "Need to review OOPC of $";
+  var oopcsAuth2a = " with contract holder.";
+  var oopcsAuth2b = " and shipping option with contract holder.";
+  var oopcsAuth2c = "OOPC is due to differences in ";
+  var oopcsAuth3 = "Need to review shipping option with contract holder.";
+  var oopcsAuth3a = "Have not given authorization info to RF at this time.";
+  var oopcsAuth4 = "Contract holder has no OOPC besides deductible.";
+  var oopcsAuth4a = "Gave authorization info and payment instructions to ";
+  var noncovAuth1 = "Will inform CH of non-covered components";
 
-var newauthLine1 = "Verified failures using RF diagnostic.";
-var newauthLine2 = "Contract has coverage for failed components.";
-var newauthLine3 = "Verified OEM parts using Forte and AM parts using PA.";
-var newauthLine4 = "Verified labor using Pro Demand.";
-var newauthLine5 = "Verified payment info with repair facility at: ";
-
-document.getElementById("auth1").value = "Using repair facility OEM parts at or under $250.00.";
-document.getElementById("auth2").value = "Using repair facility parts at or under sourcing MCE.";
-document.getElementById("auth3").value = "Using sourcing MCE as a credit toward repair facility parts.";
-document.getElementById("auth4").value = "Using sourcing MCE as a credit toward repair facility parts or shipping in.";
-document.getElementById("auth5").value = "Adjusted price to reasonable amount near MCE.\rThis was done considering all factors including claim delays,\rshipping costs, liability for future failures, time and mileage\rin coverage, number of prior claims and their cost, etc.";
-
-var inspAuth1 = "No inspection needed as RF diagnostic matches CH concern.";
-var inspAuth2 = "Sent inspection to verify failures.\rReviewed report and inspection photos.\rInspection review note is completed.";
-var inspAuth3 = "Requested and reviewed photos from repair facility.\rPhoto review note is completed.";
-var recordsAuth1 = "No records requested as history will not change claim decision.\rVehicle is not in waiting period.\rConcern is not maintenance related.\rNo prior related claims.\rNo recalls, TSBs, or mileage concerns.";
-var recordsAuth2 = "Requested and reviewed records and statement.\rRecord review note is completed.";
-var requestedAuth1 = "After reviewing all relevant documentation, we are moving forward with verified failures.";
-var oopcsAuth1 = "Need to review OOPC of $";
-var oopcsAuth2a = " with contract holder.";
-var oopcsAuth2b = " and shipping option with contract holder.";
-var oopcsAuth2c = "OOPC is due to differences in ";
-var oopcsAuth3 = "Need to review shipping option with contract holder.";
-var oopcsAuth3a = "Have not given authorization info to RF at this time.";
-var oopcsAuth4 = "Contract holder has no OOPC besides deductible.";
-var oopcsAuth4a = "Gave authorization info and payment instructions to RF.";
-var noncovAuth1 = "Will inform CH of non-covered components";
-
-var PicturesReuest = "Requesting photos from RF to verify failure and avoid inspection delay.\rInforming RF to include pics of all 4 corners of the vehicle, VIN plate, odometer, and pictures of the failure.\rSent request via SRS action button.";
-var RecordsRequested = "Requesting CH statement regarding issues.\rRequesting past 12 months of service records from CH.\rSent records request using SRS action button.\rWill call CH to inform.";
-var InspectionTemplate = "Please verify all failures.\rPlease contact 1-2 hours prior to arrival.\rContact:   \rPhone:   \rEmail:   ";
-var StatementTemplate = "What happened:   \rWhen did the issue first occur:   \rHad the issue occurred before:   \rIf yes, when:   \rAny warning lights:   \rAny noise, smoke, or smell:   \rHow long has the CH owned the vehicle:   \rApproximate mileage when CH purchased:   \rWas vehicle towed to RF:   \rFrom where and by whom:   \r";
-var ReviewNote = "Reviewed inspection photos and report.\rReviewed photos sent by repair facility.\rVerified vin.\rVerified mileage.\rNo indication of commercial use.\rNo indication of modification.\r\r"
-var PtTransfer1 = "Is the repair facility able to diagnose to cause of failure and overhaul if needed?   ";
-var PtTransfer2 = "Has the repair facility ever serviced the vehicle before?   ";
-var PtTransfer3 = "Can a test drive be performed if needed?   ";
-var PtTransfer4 = "Did the repair facility tow the vehicle?   ";
-var PtTransfer5 = "Has the cause of failure been identified?   ";
-var PtTransfer6 = "Does the repair facility have an itemized estimate available?   ";
-var PtTransfer7 = "Has the repair facility's info and contact info been verified?   ";
-var PtTransfer8 = "What is the preferred method of contact?   ";
-var PtTransfer9 = "Have the PT claim expectations been reviewed with the repair facility contact?   ";
-var PtTransfer10 = "Have you provided the repair facility with the assigned adjusters name, direct extension, and e-mail?   ";
-var PtTransfer11 = "Is there any other relevant info that will assist the adjuster?   ";
-var NoAnswerOOPC = "Called CH for OOPC auth.\rNo answer – left voicemail.\rTasked to CS callbacks.";
-var ChAuthedOOPC = "Called CH for OOPC and shipping auth.\rCH has approved OOPC.\rCH has approved shipping.";
-var NoAnsRecdsRqst = "Called CH to request records.\rCalled CH to request statement.\rNo answer – left voicemail.\rTasked to CS callbacks.";
-var NewOEMpart = "Verified OEM PN:   \rVerified MSRP:   \rRF Price:   \r\r";
-var OemOver250 = "PA PN:   \rPA List:   \rPA Cost:   \rCore: NA\r\r";
-var NewAMpart = "RF AM PN:   \rRF Price:   \rPA PN:   \rPA List:   \rPA Cost:   \rCore: NA\r\r";
-var BulkFluid = "BULK:   \rRF Price:   \rFPS Allows:   \r\r";
-var Labor = "RF Asking:   \rPD Approved:   \r\r";
-var Diag = "Diag\rRF Asking:   \rPD Approved:   \r\r";
-var EvacRechrge = "Evac and Recharge\rRF Asking:   \rPD Approved:   1.4\r\r";
-var Alignment = "Alignment\rRF Asking:   \rPD Approved:   \r\r";
-var NoPAIHSourcing = "Nothing available in PA.\rSent to in house sourcing.\r\r";
-var ToEdit;
-var ButDidYouDie = "no";
-var IDset = [];
-var imBusy = "false";
+  var PicturesReuest = "Requesting photos from RF to verify failure and avoid inspection delay.\rInforming RF to include pics of all 4 corners of the vehicle, VIN plate, odometer, and pictures of the failure.\rSent request via SRS action button.";
+  var RecordsRequested = "Requesting CH statement regarding issues.\rRequesting past 12 months of service records from CH.\rSent records request using SRS action button.\rWill call CH to inform.";
+  var InspectionTemplate = "Please verify all failures.\rPlease contact 1-2 hours prior to arrival.\rContact:   \rPhone:   \rEmail:   ";
+  var StatementTemplate = "What happened:   \rWhen did the issue first occur:   \rHad the issue occurred before:   \rIf yes, when:   \rAny warning lights:   \rAny noise, smoke, or smell:   \rHow long has the CH owned the vehicle:   \rApproximate mileage when CH purchased:   \rWas vehicle towed to RF:   \rFrom where and by whom:   \r";
+  var ReviewNote = "Reviewed inspection photos and report.\rReviewed photos sent by repair facility.\rVerified vin.\rVerified mileage.\rNo indication of commercial use.\rNo indication of modification.\r\r"
+  var PtTransfer1 = "Is the repair facility able to diagnose to cause of failure and overhaul if needed?   ";
+  var PtTransfer2 = "Has the repair facility ever serviced the vehicle before?   ";
+  var PtTransfer3 = "Can a test drive be performed if needed?   ";
+  var PtTransfer4 = "Did the repair facility tow the vehicle?   ";
+  var PtTransfer5 = "Has the cause of failure been identified?   ";
+  var PtTransfer6 = "Does the repair facility have an itemized estimate available?   ";
+  var PtTransfer7 = "Has the repair facility's info and contact info been verified?   ";
+  var PtTransfer8 = "What is the preferred method of contact?   ";
+  var PtTransfer9 = "Have the PT claim expectations been reviewed with the repair facility contact?   ";
+  var PtTransfer10 = "Have you provided the repair facility with the assigned adjusters name, direct extension, and e-mail?   ";
+  var PtTransfer11 = "Is there any other relevant info that will assist the adjuster?   ";
+  var NoAnswerOOPC = "Called CH for OOPC auth.\rNo answer – left voicemail.\rTasked to CS callbacks.";
+  var ChAuthedOOPC = "Called CH for OOPC and shipping auth.\rCH has approved OOPC.\rCH has approved shipping.";
+  var NoAnsRecdsRqst = "Called CH to request records.\rCalled CH to request statement.\rNo answer – left voicemail.\rTasked to CS callbacks.";
+  var NewOEMpart = "Verified OEM PN:   \rVerified MSRP:   \rRF Price:   \r\r";
+  var OemOver250 = "PA PN:   \rPA List:   \rPA Cost:   \rCore: NA\r\r";
+  var NewAMpart = "RF AM PN:   \rRF Price:   \rPA PN:   \rPA List:   \rPA Cost:   \rCore: NA\r\r";
+  var BulkFluid = "BULK:   \rRF Price:   \rFPS Allows:   \r\r";
+  var Labor = "RF Asking:   \rPD Approved:   \r\r";
+  var Diag = "Diag\rRF Asking:   \rPD Approved:   \r\r";
+  var EvacRechrge = "Evac and Recharge\rRF Asking:   \rPD Approved:   1.4\r\r";
+  var Alignment = "Alignment\rRF Asking:   \rPD Approved:   \r\r";
+  var NoPAIHSourcing = "Nothing available in PA.\rSent to in house sourcing.\r\r";
+  var ToEdit;
+  var ButDidYouDie = "no";
+  var IDset = [];
+  var imBusy = "false";
 
   var resizeNode = document.querySelectorAll(".R");
   var displayNode = document.querySelectorAll(".D");
@@ -4046,37 +3869,37 @@ var imBusy = "false";
   var BtnBuilder = document.getElementById("BtnBuilder");
   var buttonMaker = document.getElementById("buttonMaker");
 
-var AUTHFOR = document.getElementById("TGAFBTN");
-var AUTHFORO = document.getElementById("TGAFOBTN");
-var AUTHFORS = document.getElementById("TGAFSBTN");
-var AUTHFORB = document.getElementById("TGAFBBTN");
-var OOPAUTHED = document.getElementById("TGAFOABTN");
-var OOPDENY = document.getElementById("TGAFODBTN");
-var OOPCB = document.getElementById("TGAFOCBTN");
-var SHIPAUTHED = document.getElementById("TGAFSABTN");
-var SHIPDENY = document.getElementById("TGAFSDBTN");
-var SHIPCB = document.getElementById("TGAFSCBTN");
-var OASAUTHED = document.getElementById("TGAFOSABTN");
-var OASDENYSHIP = document.getElementById("TGAFOSDSBTN");
-var OASDENYBOTH = document.getElementById("TGAFOSDBBTN");
-var OASCB = document.getElementById("TGAFOSCBTN");
-var LEFTVM = document.getElementById("NALVM");
-var NOVM = document.getElementById("NANVM");
-var VMREASON = "TempString";
-var other = document.getElementById("other");
-var RFINBOUND = document.getElementById("RFIBBTN");
-var CHOUTBOUND = document.getElementById("CHOBBTN");
-var DIDNTHAVE = document.getElementById("RFIBDH");
-var DIAGNOSTIC = document.getElementById("RFIBND");
-var ESTIMATE = document.getElementById("RFIBNE");
-var FAILURE = document.getElementById("RFIBNF");
-var VEHICLE = document.getElementById("RFIBNV");
-var RFPNLC = document.getElementById("PNLCBTN");
-var RFTOTALS = document.getElementById("TOTALBTN");
-var RFAUTH = document.getElementById("RFAUTHBTN");
-var DaddySaysSo = false;
-var SNIPPETAREA = document.getElementById("Snippings");
-var SNIPPETDIV = document.getElementById("snipbox");
+  var AUTHFOR = document.getElementById("TGAFBTN");
+  var AUTHFORO = document.getElementById("TGAFOBTN");
+  var AUTHFORS = document.getElementById("TGAFSBTN");
+  var AUTHFORB = document.getElementById("TGAFBBTN");
+  var OOPAUTHED = document.getElementById("TGAFOABTN");
+  var OOPDENY = document.getElementById("TGAFODBTN");
+  var OOPCB = document.getElementById("TGAFOCBTN");
+  var SHIPAUTHED = document.getElementById("TGAFSABTN");
+  var SHIPDENY = document.getElementById("TGAFSDBTN");
+  var SHIPCB = document.getElementById("TGAFSCBTN");
+  var OASAUTHED = document.getElementById("TGAFOSABTN");
+  var OASDENYSHIP = document.getElementById("TGAFOSDSBTN");
+  var OASDENYBOTH = document.getElementById("TGAFOSDBBTN");
+  var OASCB = document.getElementById("TGAFOSCBTN");
+  var LEFTVM = document.getElementById("NALVM");
+  var NOVM = document.getElementById("NANVM");
+  var VMREASON = "TempString";
+  var other = document.getElementById("other");
+  var RFINBOUND = document.getElementById("RFIBBTN");
+  var CHOUTBOUND = document.getElementById("CHOBBTN");
+  var DIDNTHAVE = document.getElementById("RFIBDH");
+  var DIAGNOSTIC = document.getElementById("RFIBND");
+  var ESTIMATE = document.getElementById("RFIBNE");
+  var FAILURE = document.getElementById("RFIBNF");
+  var VEHICLE = document.getElementById("RFIBNV");
+  var RFPNLC = document.getElementById("PNLCBTN");
+  var RFTOTALS = document.getElementById("TOTALBTN");
+  var RFAUTH = document.getElementById("RFAUTHBTN");
+  var DaddySaysSo = false;
+  var SNIPPETAREA = document.getElementById("Snippings");
+  var SNIPPETDIV = document.getElementById("snipbox");
 
 function RESET(){
   document.getElementById("textarea3").value = document.getElementById("textarea1").value + "\r\r" + document.getElementById("textarea3").value;
@@ -4320,26 +4143,26 @@ function TGAFSC(btnID){
 }
 
 function TGAFOSA(btnID){
- var Check = localStorage.getItem(btnID + "EDIT");
- SNIPPETAREA.style.display = "inline-block";
- if (Check == null) {
- document.getElementById("Snippings").value = "Called CH to get auth for OOPC and shipping.\rCH approved OOPC and shipping.\rWill call RF to inform and order parts.\r";
- document.getElementById("EDITarea").value = document.getElementById("Snippings").value;
- } else {
- document.getElementById("Snippings").value = Check;
- document.getElementById("EDITarea").value = Check;
- }
- let textarea = document.getElementById("Snippings");
- textarea.select();
- document.execCommand("copy");
- OASAUTHED.style.display = "none";
- OASDENYSHIP.style.display = "none";
- OASDENYBOTH.style.display = "none";
- OASCB.style.display = "none";
- LEFTVM.style.display = "none";
- NOVM.style.display = "none";
- LEFTVM.style.left = "270px";
- NOVM.style.left = "270px";
+  var Check = localStorage.getItem(btnID + "EDIT");
+  SNIPPETAREA.style.display = "inline-block";
+  if (Check == null) {
+    document.getElementById("Snippings").value = "Called CH to get auth for OOPC and shipping.\rCH approved OOPC and shipping.\rWill call RF to inform and order parts.\r";
+    document.getElementById("EDITarea").value = document.getElementById("Snippings").value;
+  } else {
+    document.getElementById("Snippings").value = Check;
+    document.getElementById("EDITarea").value = Check;
+  }
+  let textarea = document.getElementById("Snippings");
+  textarea.select();
+  document.execCommand("copy");
+  OASAUTHED.style.display = "none";
+  OASDENYSHIP.style.display = "none";
+  OASDENYBOTH.style.display = "none";
+  OASCB.style.display = "none";
+  LEFTVM.style.display = "none";
+  NOVM.style.display = "none";
+  LEFTVM.style.left = "270px";
+  NOVM.style.left = "270px";
 }
 
 function TGAFOSDS(btnID){
@@ -4422,14 +4245,14 @@ function RFIB(){
 }
 
 function RFIBDH(){
- DIAGNOSTIC.style.display = "inline-block";
- ESTIMATE.style.display = "inline-block";
- FAILURE.style.display = "inline-block";
- VEHICLE.style.display = "inline-block";
- RFAUTH.style.display = "none";
- RFTOTALS.style.display = "none";
- RFPNLC.style.display = "none";
- DIDNTHAVE.style.display = "none";
+  DIAGNOSTIC.style.display = "inline-block";
+  ESTIMATE.style.display = "inline-block";
+  FAILURE.style.display = "inline-block";
+  VEHICLE.style.display = "inline-block";
+  RFAUTH.style.display = "none";
+  RFTOTALS.style.display = "none";
+  RFPNLC.style.display = "none";
+  DIDNTHAVE.style.display = "none";
 }
 
 function RFIBND(btnID){
@@ -4523,7 +4346,7 @@ function TOTAL(btnID){
   var Check = localStorage.getItem(btnID + "EDIT");
   SNIPPETAREA.style.display = "inline-block";
   if (Check == null) {
-   document.getElementById("Snippings").value = "RF called in to go over totals.\rADV RF of totals. RF understood.";
+    document.getElementById("Snippings").value = "RF called in to go over totals.\rADV RF of totals. RF understood.";
   } else {
     document.getElementById("Snippings").value = Check;
   }
@@ -4634,15 +4457,15 @@ function RESETNOTE(){
 }
 
 document.onkeydown = function(e) {
-    if (e.ctrlKey && e.altKey && e.shiftKey && e.which == 85) {
-      document.getElementById('myInfo').style.display = "inline-block";
+  if (e.ctrlKey && e.altKey && e.shiftKey && e.which == 85) {
+    document.getElementById('myInfo').style.display = "inline-block";
   }
 };
 
 
 document.onkeyup = function(e) {
-    if (e.ctrlKey && e.altKey && e.shiftKey && e.which == 85) {
-      document.getElementById('myInfo').style.display = "none";
+  if (e.ctrlKey && e.altKey && e.shiftKey && e.which == 85) {
+    document.getElementById('myInfo').style.display = "none";
   }
 };
   let newpartcount = 2;
@@ -4683,6 +4506,22 @@ function checkOpen() {
   } else {
   return false;
   }
+}
+
+function getContact(whichInfo) {
+  var whichOne = parseInt(whichInfo);
+  var textarea = document.getElementById('textarea1');
+  var lines = textarea.value.split('\n');
+  var start = lines.slice(0, whichOne).reduce((acc, curr) => acc + curr.length + 1, 0);
+  var end = start + lines[whichOne].length;
+  textarea.focus();
+  textarea.setSelectionRange(start, end);
+  var tempStr = window.getSelection();
+  document.getElementById("textarea4").value = tempStr;
+  var fullString = document.getElementById("textarea4").value;
+  var contactString = fullString.slice(9);
+  var bananaMilkshake = contactString.trim();
+  return bananaMilkshake;
 }
 
 function ShowTemps() {
@@ -4749,7 +4588,6 @@ function statNOTE() {
   }
   statNote.style.display = "inline-block";
 }
-
 
 function cancelStat() {
   var statNote = document.getElementById("statNote");
@@ -4830,8 +4668,6 @@ function submitStat() {
   }
 }
 
-
-
 function showAuth() {
   var newAuthstyle = document.getElementById("newAuthstyle");
   var isOpen = checkOpen();
@@ -4852,7 +4688,6 @@ function moveAuth2() {
   document.getElementById("authOopcs").style.display = "inline-block";
 }
 
-
 function cancelNewauth() {
   document.getElementById("authParts").style.display = "inline-block";
   document.getElementById("authRequests").style.display = "none";
@@ -4871,22 +4706,8 @@ function newAuth() {
   document.getElementById("authOopcs").style.display = "none";
   document.getElementById("newAuthstyle").style.display = "none";
   var stage = document.getElementById("textarea2");
-
-  var textarea = document.getElementById('textarea1');
-  var lines = textarea.value.split('\n');
-  var lineIndex = 1;
-  var start = lines.slice(0, lineIndex).reduce((acc, curr) => acc + curr.length + 1, 0);
-  var end = start + lines[lineIndex].length;
-  textarea.focus();
-  textarea.setSelectionRange(start, end);
-  var tempStr = window.getSelection();
-  document.getElementById("textarea4").value = tempStr;
-  var fullString = document.getElementById("textarea4").value;
-  var contactString = fullString.slice(11);
-  var bananaMilkshake = contactString.trim();
-
+  var bananaMilkshake = getContact('1');
   stage.value = newauthLine1 + "\r" + newauthLine2 + "\r" + newauthLine3 + "\r" + newauthLine4  + "\r" + newauthLine5 + bananaMilkshake + "\r";
-
   partsOptions(stage);
 }
 
@@ -4900,7 +4721,6 @@ function partsOptions(stage) {
   requestOptions(stage);
 }
     
-
 function requestOptions(stage) {
   if (document.getElementById("auth9").checked == true) {
     stage.value += inspAuth1 + "\r" + recordsAuth1 + "\r";
@@ -4919,11 +4739,11 @@ function requestOptions(stage) {
   stage.value += requestedAuth1 + "\r";
   issuesOptions(stage);
 }
-
-
+  
 function issuesOptions(stage) {
+  var rfName = getContact('0');
   if (document.getElementById("auth13").checked == true) {
-    stage.value += oopcsAuth4 + "\r" + oopcsAuth4a + "\r";
+    stage.value += oopcsAuth4 + "\r" + oopcsAuth4a + rfName + "\r";
     finishAuth(stage);
     return;
   }
@@ -4946,7 +4766,6 @@ function issuesOptions(stage) {
     if (oopcCausel.checked == true) { oopcCausedBy = "labor."; } 
     if (oopcCausep.checked == true) { oopcCausedBy = "parts."; } 
     if (oopcAmt == null) { alert("Please enter the amount of OOPC"); return; }
-
     stage.value += oopcsAuth1 + oopcAmt;
     if (document.getElementById("auth12").checked == true) {
       stage.value += oopcsAuth2b + "\r" + oopcsAuth2c + oopcCausedBy + "\r" + oopcsAuth3a + "\r";
@@ -4973,7 +4792,6 @@ function finishAuth(stage) {
   }
 }
 
-
 function EVACRECH(btnID){
   var Check = localStorage.getItem(btnID + "EDIT");
   if (Check == null) {
@@ -4982,9 +4800,8 @@ function EVACRECH(btnID){
   } else {
     document.getElementById("textarea2").value += Check;
     document.getElementById("EDITarea").value = Check;
+  }
 }
-}
-
 
 function ALIGNMENT(btnID){
   var Check = localStorage.getItem(btnID + "EDIT");
@@ -4997,36 +4814,29 @@ function ALIGNMENT(btnID){
   }
 }
 
-
 function DIAG(boxNum){
-if (boxNum === "9") {
-document.getElementById("textarea2").value += "Diag \r";
-document.getElementById("textarea2").value += Labor;
+  if (boxNum === "9") {
+    document.getElementById("textarea2").value += "Diag \r";
+    document.getElementById("textarea2").value += Labor;
+  } else {
+    let partName = document.getElementById("part" + boxNum).value;
+    document.getElementById("textarea2").value += "Diag for ";
+    document.getElementById("textarea2").value += partName + "\r";
+    document.getElementById("textarea2").value += Labor;
+  }
 }
-else
-{
-let partName = document.getElementById("part" + boxNum).value;
-document.getElementById("textarea2").value += "Diag for ";
-document.getElementById("textarea2").value += partName + "\r";
-document.getElementById("textarea2").value += Labor;
-}
-}
-
 
 function LABOR(boxNum){
-if (boxNum === "9") {
-document.getElementById("textarea2").value += "R/R \r";
-document.getElementById("textarea2").value += Labor;
+  if (boxNum === "9") {
+    document.getElementById("textarea2").value += "R/R \r";
+    document.getElementById("textarea2").value += Labor;
+  } else {
+    let partName = document.getElementById("part" + boxNum).value;
+    document.getElementById("textarea2").value += "R/R ";
+    document.getElementById("textarea2").value += partName + "\r";
+    document.getElementById("textarea2").value += Labor;
+  }
 }
-else
-{
-let partName = document.getElementById("part" + boxNum).value;
-document.getElementById("textarea2").value += "R/R ";
-document.getElementById("textarea2").value += partName + "\r";
-document.getElementById("textarea2").value += Labor;
-}
-}
-
 
 function BULK(btnID){
   var Check = localStorage.getItem(btnID + "EDIT");
@@ -5039,30 +4849,23 @@ function BULK(btnID){
   }
 }
 
-
-
-
 function OEMOVER(){
-var textarea = document.getElementById("textarea2").value;
-textarea = textarea.slice(0,-1);
-document.getElementById("textarea2").value = textarea;
-document.getElementById("textarea2").value += OemOver250;
+  var textarea = document.getElementById("textarea2").value;
+  textarea = textarea.slice(0,-1);
+  document.getElementById("textarea2").value = textarea;
+  document.getElementById("textarea2").value += OemOver250;
 }
-
 
 function NEWAM(boxNum) {
-if (boxNum === "9") {
-document.getElementById("textarea2").value += NewAMpart;
+  if (boxNum === "9") {
+    document.getElementById("textarea2").value += NewAMpart;
+  } else {
+    let partName = document.getElementById("part" + boxNum).value;
+    document.getElementById("textarea2").value += "Part:   ";
+    document.getElementById("textarea2").value += partName + "\r";
+    document.getElementById("textarea2").value += NewAMpart;
+  }
 }
-else
-{
-let partName = document.getElementById("part" + boxNum).value;
-document.getElementById("textarea2").value += "Part:   ";
-document.getElementById("textarea2").value += partName + "\r";
-document.getElementById("textarea2").value += NewAMpart;
-}
-}
-
 
 function NEWOEM(boxNum) {
   if (boxNum === "9") {
@@ -5084,13 +4887,13 @@ function CALLNOANS(btnID){
     document.getElementById("textarea5").value = Check;
     document.getElementById("EDITarea").value = Check;
   }
-    let textarea = document.getElementById("textarea5");
-    textarea.select();
-    document.execCommand("copy");
+  let textarea = document.getElementById("textarea5");
+  textarea.select();
+  document.execCommand("copy");
 }
 
 function AUTHOOPC(btnID){
-var Check = localStorage.getItem(btnID + "EDIT");
+  var Check = localStorage.getItem(btnID + "EDIT");
   if (Check == null) {
     document.getElementById("textarea5").value = ChAuthedOOPC;
     document.getElementById("EDITarea").value = ChAuthedOOPC;
@@ -5135,8 +4938,6 @@ function REVIEW(btnID){
   imBusy = "false";
 }
 
-
-
 function RECREQ(btnID){
   var Check = localStorage.getItem(btnID + "EDIT");
   if (Check == null) {
@@ -5150,8 +4951,6 @@ function RECREQ(btnID){
   textarea.select();
   document.execCommand("copy");
 }
-
-
 
 function NOANSREC(btnID){
   var Check = localStorage.getItem(btnID + "EDIT");
@@ -5167,15 +4966,14 @@ function NOANSREC(btnID){
   document.execCommand("copy");
 }
 
-
 function INSPTEMP(btnID){
   var Check = localStorage.getItem(btnID + "EDIT");
   if (Check == null) {
     document.getElementById("textarea5").value = InspectionTemplate;
-   document.getElementById("EDITarea").value = InspectionTemplate;
+    document.getElementById("EDITarea").value = InspectionTemplate;
   } else {
     document.getElementById("textarea5").value = Check;
-   document.getElementById("EDITarea").value = Check;
+    document.getElementById("EDITarea").value = Check;
   }
   let textarea = document.getElementById("textarea5");
   textarea.select();
@@ -5187,6 +4985,10 @@ function INSPTEMP(btnID){
 function PTXFER(){
   var showTemp = document.getElementById("transferTemplate");
   showTemp.style.display = "inline-block";
+  var rfEmail = getContact('1');
+  var rfName = getContact('0');
+  document.getElementById("contact1").value = rfName;
+  document.getElementById("contact2").value = rfEmail;
 }
 
 function submitTEMP() {
@@ -5341,14 +5143,13 @@ function PICREQ(btnID){
   document.execCommand("copy");
 }
 
-
 function FLUIDLEAK() {
   var fluids = document.getElementById("div6");
   if (fluids.style.display != "none") {
-        fluids.style.display = "none";
+    fluids.style.display = "none";
     document.getElementById("fluid").textContent = "$";
   } else {
-fluids.style.display = "inline-block";
+    fluids.style.display = "inline-block";
     document.getElementById("fluid").textContent = "X";
   }
 }
@@ -5504,9 +5305,6 @@ function toggleConductor(boxId) {
   }
 }
 
-
-
-
 var STCBCount = 0;
 var PRINCount = 0;
 var LINKCount = 0;
@@ -5609,13 +5407,10 @@ window.onload = function PutItBack() {
   }
   localStorage.setItem("pageNum", "0");
   resetColors();
-
   const recordArr = [];
   localStorage.setItem("recordArr", JSON.stringify(recordArr));
-
   const objectArr = [];
   localStorage.setItem("objectArr", JSON.stringify(objectArr));
-
   localStorage.setItem("addLineCount", "0"); 
   localStorage.setItem("savedRecs", "0");
   localStorage.removeItem("serRcrdspot");
@@ -5632,12 +5427,9 @@ window.onload = function PutItBack() {
   localStorage.removeItem("serdate");
   localStorage.removeItem("rec0mileage");
   localStorage.removeItem("rec0date");
-
 }
 
-
 function resetColors() {
-
   var bgClr = localStorage.getItem("myBackgroundcolor");
   var acClr = localStorage.getItem("myAccentcolor");
   var shad1Clr = localStorage.getItem("shadow1color");
@@ -5693,9 +5485,6 @@ function resetColors() {
     document.documentElement.style.setProperty('--glow-outline-color', outlineClr);
     outlineClrelem.value = outlineClr;
   }
-
-
-  
 }
 
 function personalize() {
@@ -5704,16 +5493,13 @@ function personalize() {
   appearDiv.style.display = "inline-block";
 }
 
-
 function exitColor() {
   var appearDiv = document.getElementById("appearDiv");
   appearDiv.style.display = "none";
   location.reload();
 }
 
-
 function saveColors() {
-
   var bgClrelem = document.getElementById("background-picker");
   var acClrelem = document.getElementById("accent-picker");
   var shad1elem = document.getElementById("shad1-picker");
@@ -5735,7 +5521,6 @@ function saveColors() {
   var hoverClr = acClr + "32";
   var activeClr = acClr + "94";
   glowDiv.innerHTML = userName;
-
 
   document.documentElement.style.setProperty('--my-background-color', bgClr);
   document.documentElement.style.setProperty('--my-accent-color', acClr);
@@ -5759,8 +5544,6 @@ function saveColors() {
   localStorage.setItem("activeClr", activeClr);
   exitColor();
 }
-
-
 
 function setColor(colorSet) {
   var tempClr1; //background
@@ -5818,7 +5601,6 @@ function setColor(colorSet) {
     tempClr7 = "#ffffff";
     break;
   }
-
   var bgClrelem = document.getElementById("background-picker");
   bgClrelem.value = tempClr1;
 
@@ -5843,7 +5625,6 @@ function setColor(colorSet) {
   var hoverClr = tempClr2 + "32";
   var activeClr = tempClr2 + "94";
 
-
   document.documentElement.style.setProperty('--my-background-color', tempClr1);
   document.documentElement.style.setProperty('--my-accent-color', tempClr2);
   document.documentElement.style.setProperty('--my-shadow-color1', tempClr3);
@@ -5853,15 +5634,7 @@ function setColor(colorSet) {
   document.documentElement.style.setProperty('--glow-outline-color', tempClr7);
   document.documentElement.style.setProperty('--hover-color', hoverClr);
   document.documentElement.style.setProperty('--active-color', activeClr);
-
 }
-
-
-
-
-
-
-
 
 const menu = document.getElementById("context-menu");
 var menuState = 0;
@@ -5895,7 +5668,6 @@ function toggleMenuOff() {
   }
 }
 
-
 function getPosition(e) {
   var posx = 0;
   var posy = 0;
@@ -5916,7 +5688,6 @@ function getPosition(e) {
     y: posy
   };
 }
-
 
 function positionMenu(e) {
   let clickCoords = getPosition(e);
@@ -5953,7 +5724,6 @@ window.onkeyup = function (e) {
     toggleMenuOff();
   }
 };
-
 
 function editDisplay() {
   var lastID = localStorage.getItem("lastCalled");
@@ -6031,8 +5801,6 @@ function submitDisp(x) {
   }
 }
 
-
-
 function editContent() {
   var lastID = localStorage.getItem("lastCalled");
   var selectedButton = document.getElementById(lastID);
@@ -6056,7 +5824,6 @@ console.log(lastID);
     document.getElementById("ContentEditor").innerText = text;
   }
 }
-
 
 function cancelCont() {
   var contEdit = document.getElementById("contEdit");
@@ -6103,13 +5870,11 @@ function fontChange(x) {
 function editSize() {
   var lastID = localStorage.getItem("lastCalled");
   var selectedButton = document.getElementById(lastID);
-
   if (!selectedButton.classList.contains('R')) {
     alert("That function is not available on this button");
     localStorage.setItem("lastCalled", "noError");
     return;
   }
-
   localStorage.setItem("verifyCalled", lastID);
   var sizeEdit = document.getElementById("sizeEdit");
   sizeEdit.style.display = "inline-block";
@@ -6119,19 +5884,15 @@ function editSize() {
   var fontSize = window.getComputedStyle(selectedButton).fontSize;
   sizeShow.style.fontSize = fontSize;
   var currentDisplay = localStorage.getItem(lastID + "Display");
-    if (currentDisplay == null) {
-      sizeShow.innerHTML = document.getElementById(lastID).innerHTML;
-    } else {
-      sizeShow.innerHTML = currentDisplay;
-    }
-
+  if (currentDisplay == null) {
+    sizeShow.innerHTML = document.getElementById(lastID).innerHTML;
+  } else {
+    sizeShow.innerHTML = currentDisplay;
+  }
   var curWidth = selectedButton.offsetWidth;
   var curHeight = selectedButton.offsetHeight;
-
   sizeShow.style.height = curHeight + "px";
   sizeShow.style.width = curWidth + "px";
-
-
   var showLeft = (475 - curWidth) / 2;
   var showTop = (270 - curHeight) / 2;
   sizeShow.style.top = showTop + "px";
@@ -6148,7 +5909,6 @@ function heightChange(x) {
   selectedButton.style.height = newHeight + "px";
   sizeShow.style.height = newHeight + "px";
   localStorage.setItem(verifiedID + "Height", newHeight + "px");
-
   var showTop = (270 - newHeight) / 2;
   sizeShow.style.top = showTop + "px";
 }
@@ -6163,7 +5923,6 @@ function widthChange(x) {
   selectedButton.style.width = newWidth + "px";
   sizeShow.style.width = newWidth + "px";
   localStorage.setItem(verifiedID + "Width", newWidth + "px");
-
   var showLeft = (475 - newWidth) / 2;
   sizeShow.style.left = showLeft + "px";
 }
@@ -6174,7 +5933,6 @@ function sizeSubmit(x) {
   localStorage.setItem("verifyCalled", "noError");
   localStorage.setItem("lastCalled", "noError");
   sizeEdit.style.display = "none";
-
   if (x == "d") {
     localStorage.removeItem(verifiedID + "Width");
     localStorage.removeItem(verifiedID + "Height");
@@ -6185,13 +5943,11 @@ function sizeSubmit(x) {
 function editPos() {
   var lastID = localStorage.getItem("lastCalled");
   var selectedButton = document.getElementById(lastID);
-
   if (!selectedButton.classList.contains('P')) {
     alert("That function is not available on this button");
     localStorage.setItem("lastCalled", "noError");
     return;
   }
-
   localStorage.setItem("verifyCalled", lastID);
   var cacheIndex = window.getComputedStyle(selectedButton).getPropertyValue("z-index");
   localStorage.setItem(lastID + "zIndex", cacheIndex);
@@ -6212,11 +5968,9 @@ function editPos() {
   posEdit.style.display = "inline-block";
 }
 
-
 function lMove() {
   var verifiedID = localStorage.getItem("verifyCalled");
   var selectedButton = document.getElementById(verifiedID);
-
   var currentLeft = selectedButton.offsetLeft;
   var leftInt = parseInt(currentLeft);
   var newLeft = leftInt + 5;
@@ -6227,7 +5981,6 @@ function lMove() {
 function lrMove(x) {
   var verifiedID = localStorage.getItem("verifyCalled");
   var selectedButton = document.getElementById(verifiedID);
-
   var currentLeft = selectedButton.offsetLeft;
   var leftInt = parseInt(currentLeft);
   var direction = parseInt(x);
@@ -6257,7 +6010,6 @@ function dMove() {
   localStorage.setItem(verifiedID + "top", newTop + "px");
 }
 
-
 function posSubmit(x) {
   var upBTN = document.getElementById("upBTN");
   var downBTN = document.getElementById("downBTN");
@@ -6270,13 +6022,11 @@ function posSubmit(x) {
   var returnZindex = localStorage.getItem(verifiedID + "zIndex");
   selectedButton.style.zIndex = returnZindex;
   selectedButton.classList.remove("shiny");
-
   upBTN.style.display = "none";
   downBTN.style.display = "none";
   leftBTN.style.display = "none";
   rightBTN.style.display = "none";
   posEdit.style.display = "none";
-
   localStorage.setItem("verifyCalled", "noError");
   localStorage.setItem("lastCalled", "noError");
   if (x == "d") {
@@ -6339,14 +6089,12 @@ function infoDone2() {
   infoDiv2.style.display = "none";
   var typeFinder = document.getElementsByName('buttonType');
   var btnType;
-
   for(i = 0; i < typeFinder.length; i++){
     if(typeFinder[i].checked){
       btnType = typeFinder[i].value;
       localStorage.setItem("type", btnType);
     }
   }
-
   var selectedID = "holder1";
   var baseKey;
   var STt = localStorage.getItem(selectedID + "STCB");
@@ -6402,10 +6150,6 @@ function infoDone2() {
     alert("You must pick a button type");
     return;
   }
-
-
-
-
   newButton.innerHTML = BtnDisplay;
   newButton.id = baseKey;
 
@@ -6416,11 +6160,8 @@ function infoDone2() {
   var curWidth = newButton.offsetWidth;
   var curHeight = newButton.offsetHeight;
 
-
   newButtonDiv.style.left = "20px";
   newButtonDiv.style.top = "200px";
-
-
 
   localStorage.setItem(currdivID + "SHOW", "inline-block");
   localStorage.setItem(currID, baseKey);
@@ -6449,7 +6190,6 @@ function infoDone2() {
 function conjunctionJunction(buttonID) {
   var funct = buttonID.slice(0, 4);
   var note = localStorage.getItem(buttonID + "EDIT");
-
   if (note == null) {
     alert("No note currently defined");
     return false;
@@ -6482,10 +6222,6 @@ function conjunctionJunction(buttonID) {
     break;
   }
 }
-
-
-
-
 function tutorial() {
   if (menuOpen) { MENU(); }
   localStorage.setItem("pageNum", "0");
@@ -6580,7 +6316,6 @@ function nextNav(inner) {
     localStorage.setItem("pageNum", "0");
     }
   }
-
   if (inner == "myNav2") {
     switch(pageStr) {
   case "0":
@@ -6897,11 +6632,8 @@ function recallIndex(elementID) {
 }
 
 function closeNav() {
-location.reload();
+  location.reload();
 }
-
-
-
 function openInfo(evt, cityName) {
   var i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");
@@ -6987,11 +6719,23 @@ function resetReport() {
       }
     }
   }
-
   for (; LineCount > 0; LineCount--) {
     var rowId = "recTab" + LineCount;
     document.getElementById(rowId).style.visibility = "hidden";
   }
+  const recordArr = JSON.parse(localStorage.getItem("recordArr"));
+  for (i = 0; i < recordArr.length; i++) {
+    var recName = recordArr[i];
+    localStorage.removeItem(recName + "spot");
+  }
+  localStorage.removeItem("serdate");
+  localStorage.removeItem("sermileage");
+  localStorage.removeItem("IDforCor");
+  localStorage.removeItem("savedRecs");
+  localStorage.removeItem("objectArr");
+  localStorage.removeItem("recordArr");
+  localStorage.removeItem("InceptionMiles");
+  localStorage.removeItem("InceptionDate");
   localStorage.setItem("addLineCount", "0");
   localStorage.setItem("savedRecs", "0");
 }
@@ -7033,7 +6777,6 @@ function saveRecord(elemId) {
     alert("The minimum requirements are DATE and MILEAGE");
     return;
   }
-
   record.date = document.getElementById(newelemId + "Date").value;
   record.mileage = document.getElementById(newelemId + "Mile").value;
   record.notes = document.getElementById(newelemId + "Note").value;
@@ -7048,7 +6791,6 @@ function saveRecord(elemId) {
     localStorage.setItem("sermileage", record.mileage);
     localStorage.setItem("serdate", record.date);
   }
-
   if (newelemId == "inc") {
     record.isInception = true;
     record.correction = false;
@@ -7057,12 +6799,10 @@ function saveRecord(elemId) {
     localStorage.setItem("InceptionMiles", record.mileage);
     localStorage.setItem("InceptionDate", record.date);
   }
-
-
   if (newelemId != "inc") {
     var inceptStr = localStorage.getItem("InceptionMiles");
     if (inceptStr == null) { 
-      document.getElementById('trackerMsg').innerText += "Start with Inception Info.";
+      document.getElementById('trackerMsg').innerText += "Need Inception info first to perform calculations.";
       return;
     }
     var inceptMiles = parseInt(inceptStr);
@@ -7087,32 +6827,32 @@ function saveRecord(elemId) {
   }
   var recordArr = [];
   recordArr = JSON.parse(localStorage.getItem("recordArr"));
-
   var objectArr = [];
   objectArr = JSON.parse(localStorage.getItem("objectArr"));
-
   var savedRecs = localStorage.getItem("savedRecs");
   var recIndex = 0;
-  if (objectArr.length != null) {
+  if (objectArr.length != null) { //if the array isnt empty, set index per length
     var recIndex = objectArr.length;
   }
   var recName = newelemId + "Rcrd";
-  if (!recordArr.includes(recName)) {
-    if (!objectArr.includes("empty")) {
-      objectArr.push(record);
-    } else {
-      var indexA = objectArr.indexOf("empty");
-      objectArr.splice(indexA, 0, record); 
-      recIndex = indexA;
+  if (!recordArr.includes(recName)) { //if the name array doesnt have this name
+    if (!objectArr.includes("empty")) { //and it doesnt have an empty spot
+      objectArr.push(record); // uh push it...push it real good
+    } else { //but if there is an empty spot
+      var indexA = objectArr.indexOf("empty"); //get that index
+      objectArr.splice(indexA, 1, record); //splice the record in there
+      recIndex = indexA; //save the index
     } 
-    recordArr.push(recName);
-    localStorage.setItem(recName + "spot", recIndex);
+    recordArr.push(recName); //put name in name array
+    localStorage.setItem(recName + "spot", recIndex); //save everything
     localStorage.setItem("objectArr", JSON.stringify(objectArr));
     localStorage.setItem("recordArr", JSON.stringify(recordArr));
-    var newCount = parseInt(savedRecs) + 1;
+    var newCount = parseInt(savedRecs) + 1; //add and resave count
     localStorage.setItem("savedRecs", newCount);
   } else { 
-    document.getElementById('trackerMsg').innerText += "Delete record, then re-save."; 
+    var indexSaved = localStorage.getItem(recName + "spot");
+    objectArr.splice(indexSaved, 1, record);
+    localStorage.setItem("objectArr", JSON.stringify(objectArr));
   }
 }
 
@@ -7124,19 +6864,17 @@ function delRecord(elemId) {
   const objectArr = JSON.parse(localStorage.getItem("objectArr"));
   var recName = newelemId + "Rcrd";
   var objectIndex = localStorage.getItem(recName + "spot");
-
   if (recordArr.includes(recName)) { 
-    if (recName = "incRcrd") { 
+    if (recName == "incRcrd") { 
       localStorage.removeItem("InceptionMiles");
       localStorage.removeItem("InceptionDate");
     }
-    objectArr.splice(objectIndex, 0, "empty");
+    objectArr.splice(objectIndex, 1, "empty");
     localStorage.setItem("objectArr", JSON.stringify(objectArr));
     var savedRecs = localStorage.getItem("savedRecs");
     var newCount = parseInt(savedRecs) - 1;
     localStorage.setItem("savedRecs", newCount);
     localStorage.removeItem(recName); 
-
     const index = recordArr.indexOf(recName);
     if (index > -1) { 
       recordArr.splice(index, 1); 
@@ -7145,11 +6883,6 @@ function delRecord(elemId) {
   }
 }
 
-
-
-
-//this is to compile, sort, 
-
 function comsoCompan() {
   var savedRecs = localStorage.getItem("savedRecs");
   var recCount = parseInt(savedRecs);
@@ -7157,10 +6890,8 @@ function comsoCompan() {
     document.getElementById('trackerMsg').innerText += "Enter at least 3 records to generate a report.";
     return;
   }
-
   const objectArr = JSON.parse(localStorage.getItem("objectArr"));
   objectArr.sort(compare);
-
   var looped = objectArr.length - 1;
   for (i = 0; i < looped; i++) {
     var x = i + 1;
@@ -7190,17 +6921,12 @@ function compare (rec1, rec2) {
   return rec1.mileage - rec2.mileage;
 }
 
-//this is to compare and analyze
-
 function displayRecs() {
-
   const objectArr = JSON.parse(localStorage.getItem("objectArr"));
-  
   const table = document.createElement('table');
   table.classList.add('TheOutputtable');
   const header = table.createTHead().insertRow();
   header.classList.add('headit');
-
   header.insertCell(0).innerText = "Date";
   header.insertCell(1).innerText = "Mileage";
   header.insertCell(2).innerText = "Miles";
@@ -7213,11 +6939,9 @@ function displayRecs() {
   const body = document.createElement('tbody');
   table.appendChild(body);
 
-
   for (i = 0; i < objectArr.length; i++) {
     const row = body.insertRow();
     row.classList.add('rowit');
-
     var tempRec = objectArr[i];
     var dateStr = tempRec.date;
     var year = dateStr.substr(0,4);
@@ -7227,7 +6951,6 @@ function displayRecs() {
     var distance;
     var overTime;
     var outputDate = month + "-" + day + "-" + year;
-
     if (!tempRec.isInception) {
       distance = parseInt(tempRec.milesfrom);
       overTime = parseInt(tempRec.daysfrom);
@@ -7240,23 +6963,19 @@ function displayRecs() {
     row.insertCell(2).innerText = tempRec.milesfrom;
     row.insertCell(3).innerText = tempRec.daysfrom;
     row.insertCell(4).innerText = milesper;
-
     if (tempRec.waitperiod) {
       row.insertCell(5).innerText = "\u26D4";
     } else { 
       row.insertCell(5).innerText = "\u2714";
     }
-
     if (tempRec.discrepancy) {
       row.insertCell(6).innerText = "\u26D4";
     } else {
       row.insertCell(6).innerText = "\u2714";
     }
     row.insertCell(7).innerText = tempRec.notes;
-
     document.getElementById('outputDiv').appendChild(table);
-
-  var hasMessage = false;
+    var hasMessage = false;
     if (tempRec.isService) {
       if (overTime < 90) {
         document.getElementById('msgDiv').innerText += "This vehicle has less than 90 days in coverage\r\r"; 
@@ -7272,12 +6991,12 @@ function displayRecs() {
     if (tempRec.waitperiod) {
       document.getElementById('msgDiv').innerText += "The failure dated " + outputDate + " was on day " + overTime + " of coverage.\rThe vehicle travelled " + distance + " since inception before failure.\r\r";
       document.getElementById('alertDiv').innerText += "\u2757 ALERT: WAITING PERIOD \u2757\r";
-        hasMessage = true;
+      hasMessage = true;
     }
     if (tempRec.discrepancy) {
       document.getElementById('msgDiv').innerText += "Review The dates and mileages of the surrounding records for any discrepancies.\r\r";
       document.getElementById('alertDiv').innerText += "\u2757 ALERT: MILEAGE DISCREPANCY \u2757\r";
-        hasMessage = true;
+      hasMessage = true;
     }
     if (milesper > 200) {
       document.getElementById('msgDiv').innerText += "This vehicle has travelled " + milesper + " miles per day.\r"; 
@@ -7306,7 +7025,6 @@ function displayRecs() {
 function priorMileage() {
   const table = document.querySelector(".TheOutputtable");
   const objectArr = JSON.parse(localStorage.getItem("objectArr"));
-
   for (i = 0; i < objectArr.length; i++) {
     if(objectArr[i].isPrior) {
       var x = i + 1;
@@ -7316,11 +7034,9 @@ function priorMileage() {
   }
 }
 
-
 function showMsg() {
   document.getElementById('msgDiv').style.opacity = 1;
 }
-
 
 function closeOutput() {
   document.getElementById('msgDiv').innerText = "";
@@ -7329,58 +7045,40 @@ function closeOutput() {
   document.getElementById('outputDiv').style.display = "none";
 }
 
-
 function inceptEst() {
   document.getElementById('trackerMsg').innerText = "";
   var elemId = localStorage.getItem("IDforCor");
-
   var recMileage1 = localStorage.getItem(elemId + "mileage");
   var recDate = localStorage.getItem(elemId + "date");
-
   var serMileage1 = localStorage.getItem("sermileage");
   var serDate = localStorage.getItem("serdate");
-
   var incMileage1 = localStorage.getItem("InceptionMiles");
   var incDate = localStorage.getItem("InceptionDate");
-
   if (elemId == null || recMileage1 == null || recDate == null || serMileage1 == null || serDate == null || incMileage1 == null || incDate == null) {
     document.getElementById('trackerMsg').innerText = "Information is incomplete. Try Again";
     return;
   } 
-
   var recMileage = parseInt(recMileage1);
   var serMileage = parseInt(serMileage1);
   var incMileage = parseInt(incMileage1);
-   
-
   var daysBtwnRecs = dayCalc(recDate, serDate);
   var daysfromInc = dayCalc(incDate, serDate);
-
   var milesBtwnRecs = serMileage - recMileage;
-  
   var milesperday = milesBtwnRecs / daysBtwnRecs;
-
   var milesTravelled = daysfromInc * milesperday;
   var mileVariation = milesperday * .2;
-
   var minMilesTravelled = daysfromInc * (milesperday - mileVariation);
   var maxMilesTravelled = daysfromInc * (milesperday + mileVariation);
-
   var minMiles = recMileage + minMilesTravelled;
   var maxMiles = recMileage + maxMilesTravelled;
-
   var estimatedInception = serMileage - milesTravelled;
   console.log(milesperday,mileVariation,minMilesTravelled,maxMilesTravelled,estimatedInception);
-
   document.getElementById('trackerMsg').innerText = "The estimated inception mileage is " + estimatedInception;
   if (estimatedInception < minMiles || estimatedInception > maxMiles) {
     document.getElementById('trackerMsg').innerText += "\r\rThe reported inception mileage varies by\rmore than 20% of the estimated inception mileage";
   }
   document.getElementById('trackerMsg').innerText += "\r\rThis is NOT a substitute for a performing an inception mileage\rcalculation per SOP using the official method and documentation.";
-
 }
-
-
 
 function resetGuide() {
   const radioBtns = document.getElementsByClassName("authGuideradio");
@@ -7402,15 +7100,11 @@ function resetGuide() {
   document.getElementById('IHSourcing').style.display = "none";
 }
 
-
-
-
 function goGuide(option,name) {
   var usedBtn = document.getElementsByName(name);
   for (i = 0; i < usedBtn.length; i++) {
     usedBtn[i].disabled = true;
   }
-
   switch(option) {
   case "oeover":
   case "am":
@@ -7527,17 +7221,6 @@ function goGuide(option,name) {
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
 function mileDiscrep() {
   var isTerm = document.getElementById('md1').checked;
   var isM2m = document.getElementById('md2').checked;
@@ -7587,7 +7270,6 @@ function mileDiscrep() {
   }
 }
 
-
 function proceed() {
   if (document.getElementById('proceed').style.display == "none") {
     document.getElementById('proceed').style.display = "block";
@@ -7623,7 +7305,6 @@ function mileageCalc() {
   }
 }
 
-
 function resetMD() {
   const mileRadios = document.getElementsByClassName("mdguide");
   for (i = 0; i < mileRadios.length; i++) {
@@ -7637,22 +7318,7 @@ function resetMD() {
   document.getElementById('MileDiscrep1').style.display = "block";
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </script>
-
 </body>
 </html>
 
