@@ -2138,12 +2138,39 @@ input[type="color"] {
   position: initial;
   display: initial;
   border-radius: 5px;
-  width: calc(850px / 4);
+  width: calc(850px / 5);
 }
 
 .tablinks.edgeButton {
     border-right: none;
 }
+
+
+
+#mileagebtn {
+  right: 5px;
+  bottom: 5px;
+  border-left: 2px solid var(--my-accent-color);
+  width: 120px;
+  padding: 14px 10px;
+}
+
+#resetMD {
+  right: 125px;
+  bottom: 5px;
+  border-left: 2px solid var(--my-accent-color);
+  width: 120px;
+  padding: 14px 10px;
+}
+
+.mdguide {
+  float: right;
+  margin-right: 60px;
+  margin-left: 10px;
+  margin-top:5px;
+  padding: 5px;
+}
+
 
 .authGuideradio {
   float: right;
@@ -2479,6 +2506,9 @@ input.tracker[type="number"] {
 .headit td {
   border-top: none;
 }
+
+
+
 
 #ITSBRITTNEY {
   top: 430px;
@@ -3204,12 +3234,12 @@ TIME:&nbsp&nbsp</textarea>
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">Exit</a>
   <a href="javascript:void(0)" class="nextbtn" onclick="nextNav('myNav1')">Next</a>
 
-  <div id="nav1in0" class="overlay-content rightsec noShow" style="margin-top:30px; height:20%;">
+  <div id="nav1in0" class="overlay-content rightsec noShow" style="margin-top:30px; height:22%;">
       <b>New claims</b><br><br>
       When a repair facility calls in to start a claim, enter<br>
       the information as it becomes available into the top left<br>
       text area.<br><br>
-      The words PAYMENT, ZIP CODE, and MILEAGE are bold.<br><br>
+      The words PAYMENT, ZIP CODE, and MILEAGE are bold.<br>
       If you click on them, the text next to it will be copied<br><br>
       Use CRTL+V to paste wherever<br>
   </div>
@@ -3469,14 +3499,81 @@ TIME:&nbsp&nbsp</textarea>
 <div id="resrcDiv" style="display: none;">
   <div class="tab">
     <button class="tablinks" onclick="openInfo(event, 'MBIClaims')">MBI</button>
-    <button class="tablinks" onclick="openInfo(event, 'IsItPT')">Is It PT</button>
     <button class="tablinks" onclick="openInfo(event, 'xfer2790')">2790</button>
-    <button class="tablinks edgeButton" onclick="openInfo(event, 'DoNotUse')">Do Not Use</button>
+    <button class="tablinks" onclick="openInfo(event, 'DoNotUse')">Do Not Use</button>
+    <button class="tablinks" onclick="openInfo(event, 'IsItPT')">Is It PT</button>
+    <button class="tablinks edgeButton" onclick="openInfo(event, 'Diagnostic')">Diag Times</button>
     <button class="tablinks" onclick="openInfo(event, 'PANoOrder')">Do Not Order</button>
+    <button class="tablinks" onclick="openInfo(event, 'MileDiscrep')">Mileage Discrep</button>
     <button class="tablinks" onclick="openInfo(event, 'PAPrice')">Parts Pricing</button>
-    <button class="tablinks" onclick="openInfo(event, 'Diagnostic')">Diag Times</button>
-    <button class="tablinks edgeButton" onclick="openInfo(event, 'trackerTool')">Tracker</button>
+    <button class="tablinks" onclick="openInfo(event, 'trackerTool')">Tracker</button>
   </div>
+
+
+
+
+  <div id="MileDiscrep" class="tabcontent">
+    <h3 class="headerTab">Mileage Discrepancies</h3>
+
+    <div id="MileDiscrep1" class="mileage noShow"> 
+      <p><b>Is the contract a Term contract or a Month-to-Month Contract?</b>
+        <input type="radio" class="mdguide" id="md1" name="discrep1"><label for="md1" style="float:right;" required><b>Term</b></label><br>
+        <input type="radio" class="mdguide" id="md2" name="discrep1"><label for="md2" style="float:right;" required><b>M-2-M</b></label>
+      </p><br>
+      <p><b>Is the vehicle over 90 days in coverage?</b>
+        <input type="radio" class="mdguide" id="md3" name="discrep2"><label for="md3" style="float:right;" required><b>Yes</b></label><br>
+        <input type="radio" class="mdguide" id="md4" name="discrep2"><label for="md4" style="float:right;" required><b>No</b></label>
+      </p><br>
+      <p><b>What kind of mileage discrepancy is being reviewed?</b><br>
+        <input type="radio" class="mdguide" id="md5" name="discrep3"><label id="md5" style="float:right;" required><b>Negative Mileage</b></label><br>
+        <input type="radio" class="mdguide" id="md6" name="discrep3"><label id="md6" style="float:right;" required><b>Proven Inaccurate Start Mileage</b></label><br>
+        <input type="radio" class="mdguide" id="md7" name="discrep3"><label id="md7" style="float:right;" required><b>Mileage Unknown/Rollback/Inop ODO</b></label><br>
+        <input type="radio" class="mdguide" id="md8" name="discrep3"><label id="md8" style="float:right;" required><b>High Mileage Per Day</b></label>
+      </p><br>
+    </div>
+    <div id="under90hmpd" class="mileage noShow" style="display:none;">
+      <p><b>Does the contract have the <b>Commercial</b> or <b>Ride Share</b> surcharge?</b>
+        <input type="radio" onclick="proceed()" class="mdguide" id="md9" name="discrep4"><label for="md9" style="float:right;" required><b>Yes</b></label><br>
+        <input type="radio" onclick="noride()" class="mdguide" id="md10" name="discrep4"><label for="md10" style="float:right; required"><b>No</b></label>
+      </p>
+    </div>
+    <div id="norideshare" class="mileage noShow" style="display:none;">
+      <p>Contact the customer and ask about usage for potential Commercial/Rideshare use.<br>
+      <b>Did the customer admit to commercial or Ride Share use?</b>
+        <input type="radio" onclick="crReview()" class="mdguide" id="md11" name="discrep4"><label for="md11" style="float:right;" required><b>Yes</b></label><br>
+        <input type="radio" onclick="mileageCalc()" class="mdguide" id="md12" name="discrep4"><label for="md12" style="float:right;" required><b>No</b></label>
+      </p>
+    </div>
+    <div id="proceed" class="mileage noShow" style="display:none;">
+      <p class="bodyTab">
+        Proceed with the claim as normal.<br>
+        Do not send to Client Relations.
+      </p>
+    </div>
+    <div id="crReview" class="mileage noShow" style="display:none;">
+      <p class="bodyTab">
+        Task to Client Relations to review.<br>
+        Refer to the <b>Tasking to Client Relations</b> Job Aid.<br>
+      </p>
+    </div>
+    <div id="mileageCalc" class="mileage noShow" style="display:none;">
+      <p><b>How to Proceed with a Mileage Calculation</b></p>
+      <p class="bodyTab">
+        Verify the breakdown mileage with the Repair Facility.<br>
+        If the Repair Facility has any records the fit the required criteria, request them.<br>
+        If the RF doesn't have a record available to be used immediately, request verifiable records from the customer.<br>
+        If none are available or they are uncooperative, a CARFAX report may be used.<br>
+        Records should be as close to date of sale as possible - ideally no older than 12 months prior to date of sale.<br>
+        Perform a mileage calculation using the AAS SOP available in the Knowledge Base.
+      </p>
+    </div>
+
+    <div id="buttons" class="noShow">
+      <button id="resetMD" class="wefwefwef" onclick="resetMD()">Reset</button>
+      <button id="mileagebtn" class="wefwefwef" onclick="mileDiscrep()">Next</button>
+    </div>
+  </div>
+
 
   <div id="PAPrice" class="tabcontent">
     <h3 class="headerTab">Parts Pricing - PA and Sourcing</h3>
@@ -3614,8 +3711,9 @@ TIME:&nbsp&nbsp</textarea>
     <p class="bodyTab">Turbocharger<br>
     Harmonic Balancer<br>
     Radiators that begin with <b>"OR"</b><br>
-    LCD Screens and Radios<br>
-    Drive Shafts</p>
+    LCD Screens and Radios
+    Drive Shafts<br>
+    Power Steering Racks</p>
     </div>
   </div>
 
@@ -3857,8 +3955,10 @@ TIME:&nbsp&nbsp</textarea>
 
 <div class="noShow" id="reportData" style="display:none;"></div>
 
-
 <script>
+
+
+
 var newauthLine1 = "Verified failures using RF diagnostic.";
 var newauthLine2 = "Contract has coverage for failed components.";
 var newauthLine3 = "Verified OEM parts using Forte and AM parts using PA.";
@@ -5532,8 +5632,6 @@ window.onload = function PutItBack() {
   localStorage.removeItem("serdate");
   localStorage.removeItem("rec0mileage");
   localStorage.removeItem("rec0date");
-
-
 
 }
 
@@ -7429,7 +7527,132 @@ function goGuide(option,name) {
   }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+function mileDiscrep() {
+  var isTerm = document.getElementById('md1').checked;
+  var isM2m = document.getElementById('md2').checked;
+  var over90 = document.getElementById('md3').checked;
+  var under90 = document.getElementById('md4').checked;
+  var negMile = document.getElementById('md5').checked;
+  var inaccMile = document.getElementById('md6').checked;
+  var rollBack = document.getElementById('md7').checked;
+  var hasHmpd = document.getElementById('md8').checked;
+  if (isTerm) {
+    if (negMile || inaccMile || rollBack) {
+      crReview();
+    }
+  }
+  if (isM2m) {
+    if (under90) {
+      if (rollBack) {
+        crReview();
+      }
+    }
+  }
+  if (isM2m) {
+    if (negMile || inaccMile) {
+      mileageCalc();
+    }
+  }
+  if (isM2m) {
+    if (over90) {
+      if (rollBack || hasHmpd) {
+        proceed();
+      }
+    }
+  }
+  if (isTerm) {
+    if (over90) {
+      if (hasHmpd) {
+        proceed();
+      }
+    }
+  }
+  if (isM2m) {
+    if (under90) {
+      if (hasHmpd) {
+        document.getElementById('under90hmpd').style.display = "block";
+      }
+    }
+  }
+}
+
+
+function proceed() {
+  if (document.getElementById('proceed').style.display == "none") {
+    document.getElementById('proceed').style.display = "block";
+  } else {
+    document.getElementById('proceed').style.display = "none";
+  }
+}
+
+function noride() {
+  if (document.getElementById('norideshare').style.display == "none") {
+    document.getElementById('norideshare').style.display = "block";
+  } else {
+    document.getElementById('norideshare').style.display = "none";
+  }
+}
+
+function crReview() {
+  if (document.getElementById('crReview').style.display == "none") {
+    document.getElementById('crReview').style.display = "block";
+  } else {
+    document.getElementById('crReview').style.display = "none";
+  }
+}
+
+function mileageCalc() {
+  if (document.getElementById('mileageCalc').style.display == "none") {
+    document.getElementById('under90hmpd').style.display = "none";
+    document.getElementById('MileDiscrep1').style.display = "none";
+    document.getElementById('norideshare').style.display = "none";
+    document.getElementById('mileageCalc').style.display = "block";
+  } else {
+    document.getElementById('mileageCalc').style.display = "none";
+  }
+}
+
+
+function resetMD() {
+  const mileRadios = document.getElementsByClassName("mdguide");
+  for (i = 0; i < mileRadios.length; i++) {
+    mileRadios[i].checked = false;
+  }
+  document.getElementById('mileageCalc').style.display = "none";
+  document.getElementById('crReview').style.display = "none";
+  document.getElementById('norideshare').style.display = "none";
+  document.getElementById('proceed').style.display = "none";
+  document.getElementById('under90hmpd').style.display = "none";
+  document.getElementById('MileDiscrep1').style.display = "block";
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </script>
+
 </body>
 </html>
 
