@@ -6,8 +6,10 @@
 
 
 
+
+
 	<title>Adjuster Console</title>
- 
+
 <style>
 
 body { 
@@ -36,8 +38,8 @@ f {
   padding: 10px;
   top: 545px;
   left: 0;
-  width: 400px;
-  height: 375px;
+  width: 370px;
+  height: 345px;
 }
 
 .hideME {
@@ -694,7 +696,9 @@ input.largerRadio {
   width: 15px;
   height: 15px;
   border-radius: 9px
-}.TheGang {
+}
+
+.TheGang {
   left: 15px;
   top: 140px;
   display: inline-block;
@@ -873,14 +877,14 @@ input.largerRadio {
   font-size: 17px;
   width: 120px;
   height: 50px;
-  left: 40px;
+  left: 35px;
   top: -40px;
 }
 
 #R15 {
   font-size: 17px;
-  top: 275px;
-  left: 40px;
+  top: 265px;
+  left: 35px;
   WIDTH: 120px;
   height: 50px;
 }
@@ -919,7 +923,7 @@ input.largerRadio {
 
 #R12 {
   font-size: 17px;
-  top: 155px;
+  top: 145px;
   left: 100px;
   width: 80px;
   height: 50px;
@@ -927,7 +931,7 @@ input.largerRadio {
 
 #R13 {
   font-size: 17px;
-  top: 215px;
+  top: 205px;
   left: 100px;
   width: 80px;
   height: 50px;
@@ -946,7 +950,7 @@ input.largerRadio {
 
 #R16 {
   font-size: 17px;
-  top: 155px;
+  top: 145px;
   left: 10px;
   width: 80px;
   height: 50px;
@@ -954,7 +958,7 @@ input.largerRadio {
 
 #R17 {
   font-size: 17px;
-  top: 215px;
+  top: 205px;
   left: 10px;
   width: 80px;
   height: 50px;
@@ -1779,6 +1783,7 @@ input[type="color"] {
   width: 300px;
   text-align: center;
 }
+
 .overlay {
   height: 100%;
   width: 0%;
@@ -1960,14 +1965,36 @@ input[type="color"] {
   position: initial;
   display: initial;
   border-radius: 5px;
-  width: calc(850px / 5);
+  width: calc(900px / 5);
 }
 
 .tablinks.edgeButton {
-    border-right: none;
+  border-right: none;
 }
 
+.answerSlide {
+  position: absolute;
+  width: 0%;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: .5s;
+  z-index: 15;
+}
 
+.answerSlide.active {
+  position: absolute;
+  background: white;
+  width: 65%;
+  overflow: hidden;
+  transition: .5s;
+  white-space: nowrap;
+  z-index: 15;
+}
+
+.questions {
+  margin-left: 15px;
+  margin-bottom:15px;
+}
 
 #mileagebtn {
   right: 5px;
@@ -1988,17 +2015,15 @@ input[type="color"] {
 .mdguide {
   float: right;
   margin-right: 60px;
-  margin-left: 10px;
-  margin-top:5px;
   padding: 5px;
 }
-
 
 .authGuideradio {
   float: right;
   margin-right: 60px;
   margin-left: 10px;
   margin-top:5px;
+  margin-bottom:5px;
   padding: 5px;
 }
 
@@ -2125,15 +2150,16 @@ input[type="color"] {
 #resrcDiv {
   position: absolute;
   display: inline-block;
-  height: 750px;
-  width: 850px;
-  top: 100px;
-  left: 50px;
+  height: 850px;
+  width: 900px;
+  top: 25px;
+  left: 25px;
   background: white;
   z-index: 6;
   box-shadow:
    inset 0px 0px 10px 4px var(--my-shadow-color2),
    0px 12px 70px 14px black;
+  overflow: hidden;
 }  
 
 .tabcontent table {
@@ -2344,7 +2370,7 @@ input.tracker[type="number"] {
   display: inline-block;
   position: absolute;
   top: 600px;
-  left: 440px;
+  left: 415px;
 }
 
 #Request {
@@ -2392,7 +2418,6 @@ input.tracker[type="number"] {
   <button id="buttonMaker" class="astext menu" onclick="showCustom()" >&#x2666; New Button &#x2666;</button>
   <button id="tutorialSel" class="astext menu" onclick="tutorial()" >&#x2666; Tutorial &#x2666;</button>
 </div>
-
 <div id="appearDiv" style="display:none;">
   <div id="BGpick" class="noShow">
     <label for="background-picker">Page Background color:</label><br>
@@ -2433,7 +2458,6 @@ input.tracker[type="number"] {
   <button id="presetRed" class="picker" onclick="setColor('red')">Red Preset</button>
   <button id="presetGreen" class="picker" onclick="setColor('green')">Green Preset</button>
 </div>
-
 <div id="ITSBRITTNEY" class="ONEMORETIME noShow a0dispStat" style="display: inline-block">
   <textarea autocomplete="off" title="Part Name" id="partname7" class="intakeboxes" name="name" placeholder="Part Name" wrap="off"></textarea>
   <textarea autocomplete="off" title="Part Name" id="partname6" class="intakeboxes" name="name" placeholder="Part Name" wrap="off"></textarea>
@@ -2451,7 +2475,6 @@ input.tracker[type="number"] {
   <button id="DJKahlid" class="senditnow D R P" oncontextmenu="customMenu(this.id, event)" onclick="AnotherOne()">NEW PART</button>
   <button id="MTVsNEXT" class="senditnow D R P" oncontextmenu="customMenu(this.id, event)" onclick="NextPart()">NEXT PART</button> 
 </div>
-
 <div id="Request" class="REQUESTDIV noShow">
   <div id="RQ1" class="noShow">
     <button id="picR" class="PictureReqBTN D R P C s1dispStat" oncontextmenu="customMenu(this.id, event)" onclick="PICREQ(this.id)"><b>PICTURE</b> REQUEST</button>
@@ -2472,7 +2495,6 @@ input.tracker[type="number"] {
     <button id="T0" class="Template D R P s6dispStat" oncontextmenu="customMenu(this.id, event)" onclick="ShowTemps()"><b>TEMPLATES</b></button>
   </div>
 </div>
-
 <div id="TPDiv" class="noShow" style="display: none">
   <div id="T20" class="noShow">
     <button id="T1" class="PTXferTempBTN D R P" oncontextmenu="customMenu(this.id, event)" name="name" onclick="PTXFER()"><b>PT TRANSFER</b> TEMPLATE</button>
@@ -2487,9 +2509,6 @@ input.tracker[type="number"] {
     <button id="T4" class="InspectionTempBTN D R P C" oncontextmenu="customMenu(this.id, event)" onclick="INSPTEMP(this.id)"><b>INSPECTION</b> TEMPLATE</button>
   </div>
 </div>
-
-class="Mradio" 
-
 <div id="transferTemplate" style="display: none;">
     <div id="quest1" class="noShow">
       <b>Is the repair facility able to diagnose to cause of failure and overhaul if needed?</b>
@@ -2499,14 +2518,12 @@ class="Mradio"
       will be required to move the vehicle to another repair facility.<br>
       CVT transmissions are exempt from this requirement.<br><br>
     </div>
-
     <div id="quest2" class="noShow">
       <b>Has the repair facility ever serviced the vehicle before?</b>
       <input type="radio" class="Mradio" style="float:right; margin-right: 60px;" id="no2" name="ans2" value="NO"><label for="no2" style="float:right;">&nbsp&nbsp&nbspNO</label>
       <input type="radio" class="Mradio" style="float:right;" id="yes2" name="ans2" value="YES"><label for="yes2" style="float:right;">YES</label><BR>
       If so, have the repair facility submit the service records for review.<br><br>   
     </div>
-
     <div id="quest3" class="noShow">
       <b>Can a test drive be performed if needed?</b>
       <input type="radio" class="Mradio" style="float:right; margin-right: 60px;" id="no3" name="ans3" value="NO"><label for="no3" style="float:right;">&nbsp&nbsp&nbspNO</label>
@@ -2518,7 +2535,6 @@ class="Mradio"
       Has there been teardown that would prevent a test <br> drive or is the vehicle inoperable due to failure?
       <br><br>
     </div>
-
     <div id="quest4" class="noShow">   
       <b>Did the repair facility tow the vehicle?</b>
       <input type="radio" class="Mradio" style="float:right; margin-right: 60px;" id="no4" name="ans4" value="NO"><label for="no4" style="float:right;">&nbsp&nbsp&nbspNO</label>
@@ -2532,21 +2548,18 @@ class="Mradio"
       <input type="radio" class="Mradio" style="float:right; margin-right: 60px;" id="no5" name="ans5" value="NO"><label for="no5" style="float:right;">&nbsp&nbsp&nbspNO</label>
       <input type="radio" class="Mradio" style="float:right;" id="yes5" name="ans5" value="YES"><label for="yes5" style="float:right;">YES</label><br><br><br>
     </div>
-
     <div id="quest6" class="noShow"> 
       <b>Does the repair facility have an itemized estimate available?</b>
       <input type="radio" class="Mradio" style="float:right; margin-right: 60px;" id="no6" name="ans6" value="NO"><label for="no6" style="float:right;">&nbsp&nbsp&nbspNO</label>
       <input type="radio" class="Mradio" style="float:right;" id="yes6" name="ans6" value="YES"><label for="yes6" style="float:right;">YES</label><BR>
       If so, have the repair facility submit the estimate for review.<br><br>
     </div>
-
     <div id="quest7" class="noShow"> 
       <b>Has the repair facility's info and contact info been verified?</b>
       <input type="radio" class="Mradio" style="float:right; margin-right: 60px;" id="no7" name="ans7" value="NO"><label for="no7" style="float:right;">&nbsp&nbsp&nbspNO</label>
       <input type="radio" class="Mradio" style="float:right;" id="yes7" name="ans7" value="YES"><label for="yes7" style="float:right;">YES</label><BR>  
       Please verify their information in order to proceed.<br><br>
     </div>
-
     <div id="quest8" class="noShow">
       <b>What is the preferred method of contact?</b>
       <input type="radio" class="Mradio" style="float:right; margin-right: 60px;" id="either" name="ans8" value="EITHER"><label for="either" style="float:right;">&nbsp&nbsp&nbspEither</label>
@@ -2555,21 +2568,18 @@ class="Mradio"
       <textarea id="contact1" placeholder="Contact Name" rows="1" cols="25" style="right:60px;box-shadow:none;border:2px solid black;resize:none;"></textarea><br><br>
       <textarea id="contact2" placeholder="E-mail, phone, etc" rows="1" cols="25" style="right:60px;box-shadow:none;border:2px solid black;resize:none;"></textarea><br><br><br><br>
     </div>
-
     <div id="quest9" class="noShow">
       <b>Have the PT claim expectations been reviewed with the repair facility contact?</b>
       <input type="radio" class="Mradio" style="float:right; margin-right: 60px;" id="no9" name="ans9" value="NO"><label for="no9" style="float:right;">&nbsp&nbsp&nbspNO</label>
       <input type="radio" class="Mradio" style="float:right;" id="yes9" name="ans9" value="YES"><label for="yes9" style="float:right;">YES</label><BR> 
       If not, this should be discussed with the repair facility prior to ending the call.<br><br>
     </div>
-
     <div id="quest10" class="noShow">      
       <b>Have you provided the repair facility with the assigned</b>
       <input type="radio" class="Mradio" style="float:right; margin-right: 60px;" id="no10" name="ans10" value="NO"><label for="no10" style="float:right;">&nbsp&nbsp&nbspNO</label>
       <input type="radio" class="Mradio" style="float:right;" id="yes10" name="ans10" value="YES"><label for="yes10" style="float:right;">YES</label><BR>
       <b>adjusters name, direct extension, and e-mail?</b><br><br>
     </div>
-
     <div id="quest11" class="noShow">
       <b>Is there any other relevant info that will assist the adjuster?</b>
       <input type="radio" class="Mradio" style="float:right; margin-right: 60px;" id="no11" name="ans11" value="NO"><label for="no11" style="float:right;">&nbsp&nbsp&nbspNO</label>
@@ -2578,15 +2588,12 @@ class="Mradio"
     <div id="q11ansY" class="noShow">  
       <textarea id="q11ansExplain" placeholder="Additional Information" rows="5" cols="40" style="left:20px;box-shadow:none;border:2px solid black;resize:none;"></textarea><br><br><br><br>
     </div>
-
     <div id="questBTNs" class="noShow"> 
       <button id="submitTemp" onclick="submitTEMP()">Submit</button>
       <button id="cancelPT" onclick="cancelPT()">Cancel</button>
     </div>
   </div>
-  
  <button id="statusNote" class="D R P s8dispStat" oncontextmenu="customMenu(this.id, event)" onclick="statNOTE()"><b>Status</b> Note</button>
-
   <div id="statNote" style="display: none">
     <div id="stat0" style="text-align:center;width:100%;font-size:18px;" class="noShow"><b>Status Note</b></div><br>
     <div id="stat1" class="noShow">  
@@ -2619,9 +2626,7 @@ class="Mradio"
     <button id="submitStat" onclick="submitStat()">Submit</button>
     <button id="cancelStat" onclick="cancelStat()">Cancel</button>
   </div>
-
  <button id="newAuthstarter" class="D R P s7dispStat" oncontextmenu="customMenu(this.id, event)" onclick="showAuth()"><b><f>Authorize</f></b> Claim</button>
-
   <div id="newAuthstyle" style="display:none;">
     <div id="authParts" class="noShow" style="display:inline-block;font-size:16px;">
       <b>Who's parts at what pricing?</b><br>
@@ -2634,7 +2639,6 @@ class="Mradio"
       <button id="cancelNewauth" class="Cancelbtn" onclick="cancelNewauth()">Cancel</button>
       <button id="authMove" class="Submitbtn" onclick="moveAuth()">Continue</button>
     </div>
-
     <div id="authRequests" class="noShow" style="display:none;font-size:18px;">
       <b>Did you request an inspection, photos, records, or a statement?</b><br>
       Select all that apply...<br><br>
@@ -2645,7 +2649,6 @@ class="Mradio"
       <button id="cancelNewauth" class="Cancelbtn" onclick="cancelNewauth()">Cancel</button>
       <button id="authMove2" class="Submitbtn" onclick="moveAuth2()">Continue</button>
     </div>
-
     <div id="authOopcs" class="noShow" style="display:none;font-size:18px;">
       <div class="noShow" style="width:50%;left:15px;top:15px;position:absolute;font-size:18px;">
         <b>Is OOPC or shipping a concern?</b><br>
@@ -2654,13 +2657,11 @@ class="Mradio"
         <input type="radio" id="auth12" name="authoops" class="FNA largerRadio" onclick="showOOPopt()"><label for="auth12"><b>Both</b></label><br><br>
         <input type="radio" id="auth13" name="authoops" class="FNA largerRadio"><label for="auth13"><b>No Concerns</b></label><br><br>
       </div>
-
       <div class="noShow" style="width:50%;left:15px;top:220px;position:absolute;font-size:18px;margin-top:15px;">
         <b>Any non-covered components?</b><br>
         <input type="radio" id="auth18" name="authoops3" class="FNA largerRadio"><label for="auth18"><b>Yes</b></label><br>
         <input type="radio" id="auth19" name="authoops3" class="FNA largerRadio"><label for="auth19"><b>No</b></label>
       </div>
-
       <div id="OOPoptDiv" class="noShow" style="display:none;width:50%;right:15px;top:15px;position:absolute;font-size:18px;">
       <b>What is the cause of OOPC?</b><br>
         <input type="radio" id="auth14" name="authoops2" class="FNA largerRadio"><label for="auth14"><b>Parts</b></label><br>
@@ -2668,14 +2669,12 @@ class="Mradio"
         <input type="radio" id="auth16" name="authoops2" class="FNA largerRadio"><label for="auth16"><b>Both</b></label><br><br>
         <label for="auth17"><b>Amount of OOPC<br>&nbsp&nbsp&nbspInclude DED</b></label><br><input type="number" style="padding:5px;" id="auth17" name="authoops" class="FNA" step="0.01"><br>
       </div>
-
       <div class="noShow" style="bottom:0px;left:15px;height:50%;position:absolute;">
         <button id="cancelNewauth" style="bottom:45px;" class="Cancelbtn" onclick="cancelNewauth()">Cancel</button>
         <button id="finishAuth" style="bottom:45px;" class="Submitbtn" onclick="newAuth()">Finish</button>
       </div>
     </div>
   </div>
-
 <div id="hlc" class="HardLaborCamp noShow">
   <div id="C1" class="noShow">
     <button id="R2" class="PartsAndLabor D R P a1dispStat" oncontextmenu="customMenu(this.id, event)" onclick="COPYNOTE()">Copy P&L</button>
@@ -2715,7 +2714,6 @@ class="Mradio"
   </div>
   </div>
 </div>
-
 <div id="snipbox" class="SnipDiv noShow s0dispStat">
   <div id="rfibcall" class="RFinboundDIV  noShow">
     <div id="textpreview" class="noShow">
@@ -2768,7 +2766,6 @@ class="Mradio"
     </div> 
   </div>
 </div>
-
   <div id="context-menu">
     <div class="item" onclick="editDisplay()">Display</div>
     <div class="item" onclick="editContent()">Content</div>
@@ -2795,7 +2792,6 @@ class="Mradio"
   <button id="dispSubmit" onclick="submitDisp('s')">Submit</button>
   <button id="dispDefault" onclick="submitDisp('d')">Default</button>
 </div>
-
 <div class="CMeditDIV" id="contEdit" style="display:none; text-align: center;">
   <div id="ContentDisplay" class="noShow"><br><br><b>Edit Content</b></div>
   <div id="ContentEditor" style="box-shadow:none; border:3px dashed var(--my-background-color); background:white;" contenteditable></div>
@@ -2803,7 +2799,6 @@ class="Mradio"
   <button id="contCancel" onclick="cancelCont()">Exit</button>
   <button id="contDefault" onclick="defaultCont()">Default</button>
 </div>
-
 <div class="CMeditDIV" id="sizeEdit" style="display:none; text-align: center;">
   <div id="heightMod" class="noShow" style="text-align: center;">
     <button id="hplus" class="moveBTNS" onclick="heightChange('5')">&#x2B9E;</button><br><br>
@@ -2818,7 +2813,6 @@ class="Mradio"
     <button id="sizeDefault" onclick="sizeSubmit('d')">Default</button>
   <button id="sizeCancel" onclick="sizeSubmit()">Exit</button>
 </div>
-
 <div class="CMeditDIV" id="posEdit" style="display:none">
   <button class="moveBTNS" id="upBTN" onclick="udMove('-5')">&#x2B9E;</button>
   <button class="moveBTNS" id="downBTN" onclick="udMove('5')">&#x2B9C;</button>
@@ -2828,7 +2822,6 @@ class="Mradio"
   <button id="posDefault" class="astext" onclick="posSubmit('d')">Default</button>
   <button id="posCancel" class="astext" onclick="posSubmit('s')">Exit</button>
 </div>
-
 <div id="toggleMaster" style="display: none" class="noShow">
  <div id="switchdivIndiv" class="noShow">
   <div class="noShow sd">
@@ -2858,14 +2851,12 @@ class="Mradio"
   <div id="switchdivs8" class="noShow sd">
     <label id="switchs8" class="switch"><input type="checkbox" id="s8" onclick="toggleConductor(this.id)"><span class="slider round"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspStatus Note
   </div><br>
-
   <div id="switchdivg0" class="noShow sd">
     <label id="switchg0" class="switch"><input type="checkbox" id="g0" onclick="toggleConductor(this.id)"><span class="slider round"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspResources
   </div><br>
   <div id="switchdivs0" class="noShow sd">
     <label id="switchs0" class="switch"><input type="checkbox" id="s0" onclick="toggleConductor(this.id)"><span class="slider round"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspGeneral Notes
   </div><br>
-
   <div id="switchdiva0" class="noShow sd">
     <label id="switcha0" class="switch"><input type="checkbox" id="a0" onclick="toggleConductor(this.id)"><span class="slider round"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspParts Intake
   </div><br>
@@ -2985,7 +2976,6 @@ class="Mradio"
     <button id="infoDone2" class="infoBtn" onclick="infoDone2()">Done</button>
   </div>
 </div>
-
 <div id="areaOne">
 <textarea autocomplete="off" title="Contact Info" id="textarea1" class="textareamain" name="name" wrap="off">CONTACT:&nbsp&nbsp
 PAYMENT:&nbsp&nbsp
@@ -2993,23 +2983,19 @@ ZIPCODE:&nbsp&nbsp
 MILEAGE:&nbsp&nbsp
 DISTANCE:&nbsp&nbsp
 TIME:&nbsp&nbsp</textarea> 
-
 <button id="CopyPaymentBTN" class="astext" onclick="CopyIntakeForm('1')">PAYMENT: </button>
 <button id="CopyZipBTN" class="astext" onclick="CopyIntakeForm('2')">ZIPCODE: </button>
 <button id="CopyMileBTN" class="astext" onclick="CopyIntakeForm('3')">MILEAGE: </button>
 </div>
-
 <textarea autocomplete="off" title="Hidden" id="textarea2" class="textspace" name="name"></textarea>
 <textarea autocomplete="off" title="Hidden" id="textarea3" class="hideME noShow" name="name"></textarea>
 <textarea autocomplete="off" title="Hidden" id="textarea4" class="hideME noShow"name="name"></textarea>
 <textarea autocomplete="off" title="Hidden" id="textarea5" class="hideME noShow" name="name"></textarea>
 <textarea autocomplete="off" title="Hidden" id="textareadata" class="hideME noShow" name="name"></textarea>
 <textarea style="display: none;" id="EDITarea"></textarea>
-
 <div id="div6" class="div6" style="display: none">    
   REG OIL: 7.13<br>
   SYN OIL: 11.89<br><br>
-
   DEX III: 11.68<br>
   ATF+4: 11.99<br>
   DEX VI/SYN: 12.82<br>
@@ -3018,25 +3004,19 @@ TIME:&nbsp&nbsp</textarea>
   REG GEAR OIL: 12.91<br>
   SYN GEAR OIL: 18.66<br>
   FRIC MODIFIER: 10.59<br><br>
-
   PS FLUID: 9.16</b><br><br>
-
   DOT 3: 6.82 PER 12 OZ</b><br>
   DOT 4: 7.32 PER 12 OZ<br><br>
-
   REG COOLANT: 17.82<br>
   LONG LIFE COOLANT: 20.49<br><br>
-
   R134A: 16.38/LB 1.02/OZ<br>
   R1234YF: 100.33/LB 6.27/OZ<br>
   PAG OIL: 13.91/OZ<br>
   AC UV DYE: 11.71/OZ<br>
   FLUSH SOLVANT: 7.66/OZ<br><br>
-
   ENG/TRANS DYE: 12.49/OZ<br>
   SEALANT/RTV: 13.37 PER 3.5OZ<br>
 </div>
-
 <div id="NUMBERS" class="div4 noShow"><b>PAYMENTS FAX<br>303-456-1039<br><br>
  RECORDS FAX<br>303-420-4722<br><br>
  CAR SHIELD<br>800-430-1705<br><br>
@@ -3044,25 +3024,20 @@ TIME:&nbsp&nbsp</textarea>
  GENERAL<br>800-531-1925</b>
 </div>
 <div id="myInfo" class="infoOfme" style="display:none;">Created By Jesse Williams - 2024</div>
-
 <div id="glowDiv" class="neon noShow P" oncontextmenu="customMenu(this.id, event)"></div>
-
 <div id="myNav0" class="overlay noShow">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">Exit</a>
   <div id="myNavHead" class="overlay-content noShow" style="margin-top:30px;">Welcome to the Tutorials!<br></div>
   <div id="myNavHead1" class="overlay-content noShow" style="margin-top:10px;">Click a Tutorial to Get Started.</div>
- 
  <div id="tutHolder" class="overlay-content noShow">
     <a href="javascript:void(0)" class="MainTutbtn" onclick="nextNav('myNav1')"><span class="TutChoice">&#11214 Parts and Labor Intake &#11214</span></a><br><br>
     <a href="javascript:void(0)" class="MainTutbtn" onclick="nextNav('myNav2')"><span class="TutChoice">&#11214 Main Buttons and Templates &#11214</span></a><br><br>
     <a href="javascript:void(0)" class="MainTutbtn" onclick="nextNav('myNav3')"><span class="TutChoice">&#11214 Appearance and Customization &#11214</span></a>
   </div>
 </div>
-
 <div id="myNav1" class="overlay noShow">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">Exit</a>
   <a href="javascript:void(0)" class="nextbtn" onclick="nextNav('myNav1')">Next</a>
-
   <div id="nav1in0" class="overlay-content rightsec noShow" style="margin-top:30px; height:22%;">
       <b>New claims</b><br><br>
       When a repair facility calls in to start a claim, enter<br>
@@ -3072,12 +3047,10 @@ TIME:&nbsp&nbsp</textarea>
       If you click on them, the text next to it will be copied<br><br>
       Use CRTL+V to paste wherever<br>
   </div>
- 
   <div id="nav1in1" class="overlay-content rightsec noShow" style="height:8%;display: none;">
     <b>Parts Intake</b><br><br>
     Under that is the parts intake section.<br><br>
   </div>
-
   <div id="nav1in2" class="overlay-content rightsec noShow" style="height:16%;display: none;">
     For multiple failures, click the NEW PART button.<br><br>
     This will add another part name box.<br>
@@ -3085,7 +3058,6 @@ TIME:&nbsp&nbsp</textarea>
     Use the additional boxes for failed components or<br>
     for additional related items like gaskets and seals.
   </div>
-
   <div id="nav1in3" class="overlay-content rightsec slim noShow" style="display: none;">
     ***FOR AM PARTS, LEAVE MSRP BLANK***<br><br>
     For AM parts, once you have the part name,<br>
@@ -3093,36 +3065,30 @@ TIME:&nbsp&nbsp</textarea>
     This will send an AM part template to the lower<br>
     text area.
   </div>
-
   <div id="nav1in4" class="overlay-content rightsec short noShow" style="height:6%;display: none;">
     If you enter OEM MSRP, it will send 
     <br>a completed OEM template.
   </div>
-
   <div id="nav1in5" class="overlay-content rightsec short noShow" style="display: none;">
     If the OEM MSRP is over $250.00, it will<br>
     automatically add a PA sourcing template<br>
     to the end of the OEM template.
   </div>
-
   <div id="nav1in6" class="overlay-content rightsec short noShow" style="display: none;">
     The LABOR and DIAG buttons will send a template<br>
     with the part name filled out. If they are clicked<br>
     with no name entered, they will send a blank template.<br>
   </div>
-
   <div id="nav1in7" class="overlay-content rightsec short noShow" style="display: none;">
     The NEXT PART button will shift the parts in the list<br>
     down, discard the now unused part box, and clear the<br>
     template boxes.
   </div>
-
   <div id="nav1in8" class="overlay-content leftsec short noShow" style="display: none;">
     And of course, if that sounds like it won't work<br>
     with your style, the buttons to the right send blank<br>
     templates, among other things.
   </div>
-
   <div id="nav1in9" class="overlay-content rightsec noShow" style="display: none;">
     The RESET button will set all templates and text<br>
     boxes in the entire program back to starting<br>
@@ -3133,58 +3099,47 @@ TIME:&nbsp&nbsp</textarea>
     test those now, if you like.
   </div>
 </div>
-
 <div id="myNav2" class="overlay noShow">
   <a href="javascript:void(0)" class="nextbtn" onclick="nextNav('myNav2')">Next</a>
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav('myNav2')">Exit</a>
-
   <div id="nav2in0" class="overlay-content authTut noShow" style="display:none;margin-top:25px;margin-left:15px;text-align:left;">
     When the time comes in your<br>
     procedure for the auth note, <br>
     click Authorize Claim
   </div>
-
   <div id="nav2in1" class="overlay-content authTut noShow" style="display: none;">
     Select all options that apply to your claim.
   </div>
-
   <div id="nav2in2" class="overlay-content authTut noShow" style="display: none;">
     Indicate whether or not anything was requested. <br>
   </div>
-
   <div id="nav2in3" class="overlay-content authTut noShow" style="display: none;">
     Indicate if there were any concerns involving<br>
     shipping, OOPC, or any non-covered components.
   </div>
-
   <div id="nav2in4" class="overlay-content authTut noShow" style="display: none;">
     If there is OOPC involved, select if the OOPC is from<br>
     parts, labor, or both and enter the OOPC amount.<br>
   </div>
-
   <div id="nav2in5" class="overlay-content authTut noShow" style="display: none;">
     A note detailing all relevant information including OOPC,<br>
     repair facility payment info, verifications, and more<br>
     is compiled, copied, and ready to be pasted into your CMS note.<br>
   </div>
-
   <div id="nav2in6" class="overlay-content authTut noShow" style="display: none;">
     Status Note<br>
     To generate a status note, click Status Note,<br>
   </div>
-
   <div id="nav2in7" class="overlay-content authTut noShow" style="display: none;">
     Enter the information and click Submit.<br>
     Paste the note into CMS.
   </div>
-
   <div id="nav2in8" class="overlay-content authTutLeft noShow" style="display: none; margin-top:325px;">
     The other buttons are very simple.<br>
     When clicked, they send predefined text<br>
     directly to the clipboard, ready to be pasted.<br>
     Feel free to give them a try using the text area below.
   </div>
-
   <div id="nav2in9" class="overlay-content authTut noShow" style="display: none;">
     The TEMPLATES button shows 4 more buttons.<br><br>
     The Statement Questions, Review Note, <br>
@@ -3196,14 +3151,12 @@ TIME:&nbsp&nbsp</textarea>
     complete template. Click 'Submit' once in<br>
     the template to continue the tutorial.
   </div>
-
   <div id="nav2in10" class="overlay-content authTut noShow" style="display:none;">
      After entering the information and clicking<br>
      'Submit', a completed PT Transfer template will<br>
      be ready to paste to your notes. To see the one<br>
      that was just submitted, paste to the text area.
   </div>
-
   <div id="nav2in11" class="overlay-content authTut noShow" style="display: none;">
     These buttons are used to build dynamic notes<br>
     based on the selections made. They cover the<br>
@@ -3211,12 +3164,10 @@ TIME:&nbsp&nbsp</textarea>
     of repair facility inbound calls and outbound<br>
     calls to the CH for auth.
   </div>
-
   <div id="nav2in12" class="overlay-content authTut X noShow" style="display: none;text-align:left;">
     For example,<br>
     If you called the CH to get auth for<br>
   </div>
-
   <div id="nav2in15" class="overlay-content authTut noShow" style="display: none;">
     The sequences essentialy ready like a sentence <br>
     missing a few words here and there.<br><br>
@@ -3224,12 +3175,10 @@ TIME:&nbsp&nbsp</textarea>
     relevant info so they can be put directly into<br>
     CMS or easily edited prior to saving.
   </div>
-
 </div>
 <div id="myNav3" class="overlay noShow">
   <a href="javascript:void(0)" class="nextbtn" onclick="nextNav('myNav3')">Next</a>
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav('myNav3')">Exit</a>
-
   <div id="nav3in0" class="overlay-content appearTut noShow" style="display: none;">
     All buttons can have their size, position, and<br>
     display(the text on the front of the button)<br>
@@ -3238,71 +3187,56 @@ TIME:&nbsp&nbsp</textarea>
     When you want to change the display, content, size, or position,<br>
     right click on the button and select the attribute to modify.
   </div>
-
   <div id="nav3in1" class="overlay-content appearTut noShow" style="display: none;">
     <b>Display</b><br><br>
-
     You can change the size, boldness, color, and the text itself.<br>
     The preview will show your changes as you make them.<br><br>
     The default button will change the text back to the original.
   </div>
-
   <div id="nav3in2" class="overlay-content appearTut noShow" style="display: none;">
     <b>Content</b><br><br>
-
     Editing the content is fairly self-explanitory<br>
     It will output everything entered including spaces and carriage returns.<br>
     Keep this in mind when editing. Also, avoid special characters as they may <br>
     result in unintended operations or output.
   </div>
-
   <div id="nav3in3" class="overlay-content appearTut noShow" style="display: none;">
     <b>Size</b><br><br>
-
     The arrows near the top change width and<br>
     the arrows to the left change height.<br>
     Default will make the button the original size.
   </div>
-
   <div id="nav3in4" class="overlay-content appearTut X noShow" style="display: none;">
     <b>Position</b><br><br>
-
     Use the arrows on the controller to<br>
     position the button wherever you like.<br>
     The button actively being moved will glow red.<br>
     The default selection will place the button<br>
     back to its default location.
   </div>
-
   <div id="nav3in5" class="overlay-content appearTut noShow" style="display: none;">
     <b>New Buttons</b><br><br>
     There are 10 slots available for custom buttons<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>br><br><br><br><br><br><br><br>
     To create one, select New Button from the<br>
     right click menu or the Settings Menu<br><br>
   </div>
-
   <div id="nav3in6" class="overlay-content appearTut noShow" style="display: none;">
     There are 5 types of buttons you can create<br><br>
     Their descriptions explain how they work
   </div>
-
   <div id="nav3in7" class="overlay-content appearTut noShow" style="display: none;">
     Select the type of button you would like to create<br>
     enter the display and content, and select Done<br><br>
  </div>
-
   <div id="nav3in7a" class="overlay-content appearTut Low noShow" style="display: none;">
     All of the attributes can be modified using the right click menu.<br>
     The only option that can't be changed once selected is the type of button.
   </div>
-
   <div id="nav3in8" class="overlay-content appearTut X noShow" style="display: none;">
-
     If you want to make certain buttons or button<br>
     groups invisible, select Toggle List from<br>
     the right click menu or the Settings Menu.
   </div>
-
   <div id="nav3in9" class="overlay-content appearTut noShow" style="display: none;">
     Appearance Options<br><br>
     Open the Settings Menu and select Appearance.<br><br>
@@ -3322,9 +3256,7 @@ TIME:&nbsp&nbsp</textarea>
   <div id="nav3in10" class="overlay-content appearTut noShow" style="display: none;">
   </div>
 </div>
-
-<button id="SOPs" class="R P D g0dispStat" oncontextmenu="customMenu(this.id, event)" onclick="resrcCenter()">Resources</button>
-
+<button id="SOPs" class="R P D" onclick="resrcCenter()">Resources</button>
 <div id="resrcDiv" style="display: none;">
   <div class="tab">
     <button class="tablinks" onclick="openInfo(event, 'MBIClaims')">MBI</button>
@@ -3333,40 +3265,82 @@ TIME:&nbsp&nbsp</textarea>
     <button class="tablinks" onclick="openInfo(event, 'IsItPT')">Is It PT</button>
     <button class="tablinks edgeButton" onclick="openInfo(event, 'Diagnostic')">Diag Times</button>
     <button class="tablinks" onclick="openInfo(event, 'PANoOrder')">Do Not Order</button>
+    <button class="tablinks" onclick="openInfo(event, 'QuickAns')">Quick Answers</button>
     <button class="tablinks" onclick="openInfo(event, 'MileDiscrep')">Mileage Discrep</button>
     <button class="tablinks" onclick="openInfo(event, 'PAPrice')">Parts Pricing</button>
-    <button class="tablinks" onclick="openInfo(event, 'trackerTool')">Tracker</button>
+    <button class="tablinks edgeButton" onclick="openInfo(event, 'trackerTool')">Tracker</button>
   </div>
-
+  <div id="QuickAns" class="tabcontent">
+    <h3 class="headerTab" style="margin-bottom:0px;">Common questions</h3>
+    <p style="text-align:center;margin-top:10px;">And Their Answers or Where to Find Them.</p>
+    <div class="questions noShow" id="quest1" onclick="showAnswer(this.id)">
+      &blacklozenge; Where can I find tracking information about a PA order?
+    <div id="anstoquest1" class="answerSlide noShow">
+      <ul>
+      <li>Note the claim number.</li>
+      <li>Go to the Parts Authority home tab.</li>
+      <li>Click 'Track Orders and Invoices'.</li>
+      <li>Select the 'P.O. Number' search option</li>
+      <li>Input the claim number into the search box and click 'Search'.</li>
+      <li>Click on the order number.</li>
+      <li>The order should appear with relevant info such as the<br>
+      tracking number, address shipped to, parts shipped, etc.</li>
+      <li>Clicking on the tracking number will show you the current<br>
+      status of the shipment.</li>
+      </ul>
+    </div>
+    </div>
+    <div class="questions noShow" id="quest2" onclick="showAnswer(this.id)">
+      &blacklozenge; Am I supposed to open a claim or can this end in interaction?
+    <div id="anstoquest2" class="answerSlide noShow">
+      <p>You MUST open a claim if:</p>
+      <ul>
+      <li>The part has coverage.</li>
+      <li>There is a mileage issue. Negative mileage, for example.</li>
+      <li>There is a VIN issue.</li>
+      </ul>
+      Even if the claim will be denied, one must<br>
+      be opened if the part is listed.<br>
+      Even if the part is not listed, an open claim<br>
+      is needed to correct mileage or VIN issues.<br><br>
+      A claim doesn't need to be opened if:
+      <ul>
+      <li>The part is PNLC.</li>
+      <li>The CH vehicle is not at the RF.</li>
+      <li>The RF doesn't have a verified failure.</li>
+      </ul>
+    </div>
+    </div>
+  </div>
   <div id="MileDiscrep" class="tabcontent">
     <h3 class="headerTab">Mileage Discrepancies</h3>
-    <div id="MileDiscrep1" class="mileage noShow"> 
+    <div id="MileDiscrep1" class="mileage noShow" style="line-height:1.8;"> 
       <p><b>Is the contract a Term contract or a Month-to-Month Contract?</b>
-        <input type="radio" class="mdguide" id="md1" name="discrep1"><label for="md1" style="float:right;" required><b>Term</b></label><br>
-        <input type="radio" class="mdguide" id="md2" name="discrep1"><label for="md2" style="float:right;" required><b>M-2-M</b></label>
-      </p><br>
+        <input type="radio" class="mdguide Mradio" id="md1" name="discrep1" style="margin-top: 8px;"><label for="md1" style="float:right;" required><b>Term</b></label><br>
+        <input type="radio" class="mdguide Mradio" id="md2" name="discrep1" style="margin-top: 8px;"><label for="md2" style="float:right;" required><b>M-2-M</b></label>
+      </p>
       <p><b>Is the vehicle over 90 days in coverage?</b>
-        <input type="radio" class="mdguide" id="md3" name="discrep2"><label for="md3" style="float:right;" required><b>Yes</b></label><br>
-        <input type="radio" class="mdguide" id="md4" name="discrep2"><label for="md4" style="float:right;" required><b>No</b></label>
-      </p><br>
+        <input type="radio" class="mdguide Mradio" id="md3" name="discrep2" style="margin-top: 8px;"><label for="md3" style="float:right;" required><b>Yes</b></label><br>
+        <input type="radio" class="mdguide Mradio" id="md4" name="discrep2" style="margin-top: 8px;"><label for="md4" style="float:right;" required><b>No</b></label>
+      </p>
       <p><b>What kind of mileage discrepancy is being reviewed?</b><br>
-        <input type="radio" class="mdguide" id="md5" name="discrep3"><label id="md5" style="float:right;" required><b>Negative Mileage</b></label><br>
-        <input type="radio" class="mdguide" id="md6" name="discrep3"><label id="md6" style="float:right;" required><b>Proven Inaccurate Start Mileage</b></label><br>
-        <input type="radio" class="mdguide" id="md7" name="discrep3"><label id="md7" style="float:right;" required><b>Mileage Unknown/Rollback/Inop ODO</b></label><br>
-        <input type="radio" class="mdguide" id="md8" name="discrep3"><label id="md8" style="float:right;" required><b>High Mileage Per Day</b></label>
-      </p><br>
-    </div>
-    <div id="under90hmpd" class="mileage noShow" style="display:none;">
-      <p><b>Does the contract have the <b>Commercial</b> or <b>Ride Share</b> surcharge?</b>
-        <input type="radio" onclick="proceed()" class="mdguide" id="md9" name="discrep4"><label for="md9" style="float:right;" required><b>Yes</b></label><br>
-        <input type="radio" onclick="noride()" class="mdguide" id="md10" name="discrep4"><label for="md10" style="float:right; required"><b>No</b></label>
+        <input type="radio" class="mdguide Mradio" id="md5" name="discrep3" style="margin-top: 8px;"><label id="md5" style="float:right;" required><b>Negative Mileage</b></label><br>
+        <input type="radio" class="mdguide Mradio" id="md6" name="discrep3" style="margin-top: 8px;"><label id="md6" style="float:right;" required><b>Proven Inaccurate Start Mileage</b></label><br>
+        <input type="radio" class="mdguide Mradio" id="md7" name="discrep3" style="margin-top: 8px;"><label id="md7" style="float:right;" required><b>Mileage Unknown/Rollback/Inop ODO</b></label><br>
+        <input type="radio" class="mdguide Mradio" id="md8" name="discrep3" style="margin-top: 8px;"><label id="md8" style="float:right;" required><b>High Mileage Per Day</b></label>
       </p>
     </div>
-    <div id="norideshare" class="mileage noShow" style="display:none;">
+    <div id="under90hmpd" class="mileage noShow" style="display:none; line-height:1.8;">
+      <p><b>Does the contract have the <b>Commercial</b> or <b>Ride Share</b> surcharge?</b>
+        <input type="radio" onclick="proceed()" class="mdguide Mradio" id="md9" name="discrep4" style="margin-top: 8px;"><label for="md9" style="float:right;" required><b>Yes</b></label><br>
+        <input type="radio" onclick="noride()" class="mdguide Mradio" id="md10" name="discrep4" style="margin-top: 8px;"><label for="md10" style="float:right; required"><b>No</b></label>
+      </p>
+    </div>
+    <div id="norideshare" class="mileage noShow" style="display:none; line-height:1.8;">
       <p>Contact the customer and ask about usage for potential Commercial/Rideshare use.<br>
       <b>Did the customer admit to commercial or Ride Share use?</b>
-        <input type="radio" onclick="crReview()" class="mdguide" id="md11" name="discrep4"><label for="md11" style="float:right;" required><b>Yes</b></label><br>
-        <input type="radio" onclick="mileageCalc()" class="mdguide" id="md12" name="discrep4"><label for="md12" style="float:right;" required><b>No</b></label>
+        <input type="radio" onclick="crReview()" class="mdguide Mradio" id="md11" name="discrep4" style="margin-top: 8px;"><label for="md11" style="float:right;" required><b>Yes</b></label><br>
+        <input type="radio" onclick="mileageCalc()" class="mdguide Mradio" id="md12" name="discrep4" style="margin-top: 8px;"><label for="md12" style="float:right;" required><b>No</b></label>
       </p>
     </div>
     <div id="proceed" class="mileage noShow" style="display:none;">
@@ -3392,14 +3366,11 @@ TIME:&nbsp&nbsp</textarea>
         Perform a mileage calculation using the AAS SOP available in the Knowledge Base.
       </p>
     </div>
-
     <div id="buttons" class="noShow">
-      <button id="resetMD" class="wefwefwef" onclick="resetMD()">Reset</button>
       <button id="mileagebtn" class="wefwefwef" onclick="mileDiscrep()">Next</button>
+      <button id="resetMD" class="wefwefwef" onclick="resetMD()">Reset</button>
     </div>
   </div>
-
-
   <div id="PAPrice" class="tabcontent">
     <h3 class="headerTab">Parts Pricing - PA and Sourcing</h3>
     <div id="authGuide1" class="authGuide noShow"> 
@@ -3518,7 +3489,6 @@ TIME:&nbsp&nbsp</textarea>
     Oil Pump<br>
     Timing Components<br> -Except Timing Chain Kits</p>
   </div>
-
   <div class="innerRight">
     <p><b>Transmission and Other DriveTrain</b></p>
     <p class="bodyTab">Torque Converter<br>
@@ -3531,20 +3501,17 @@ TIME:&nbsp&nbsp</textarea>
     Differentials<br>
     Transfer Case (Including Internals)<br>
     ISM (Shift Module on Certain Transmissions)</p>
-
     <p><b>General</b></p>
     <p class="bodyTab">Turbocharger<br>
     Harmonic Balancer<br>
     Radiators that begin with <b>"OR"</b><br>
-    LCD Screens and Radios
+    LCD Screens and Radios<br>
     Drive Shafts<br>
     Power Steering Racks</p>
     </div>
   </div>
-
   <div id="Diagnostic" class="tabcontent">
     <h3 class="headerTab">Common Diagnostic Times</h3>
-      
       <div class="innerLeft">
       <p><b>Air Conditioning</b></p>
       <p class="bodyTab">Evac and Recharge: <b>1.4</b><br>
@@ -3553,7 +3520,6 @@ TIME:&nbsp&nbsp</textarea>
       Pressure Test: <b>.3</b><br>
       Sniffer Test: <b>.6</b><br>
       Blend Door Actuator Test: <b>.3</b></p>
-
       <p><b>Electrical</b></p>
       <p class="bodyTab">Electrical Test: <b>.3</b><br>
       Code Pull: <b>.3</b><br>
@@ -3562,19 +3528,16 @@ TIME:&nbsp&nbsp</textarea>
       Wire Repair: <b>.2</b> per wire, Max <b>2</b> hours<br>
       Alternator Diag: <b>.6</b><br>
       Pin Point Test: <b>.4</b></p>
-
       <p><b>Fuel</b></p>
       <p class="bodyTab">Fuel Pressure Test: <b>.5</b><br>
       Injector Node Test: <b>.5</b><br>
       Drain and Fill Fuel Tank: <b>.5</b></p>
       </div>
-
       <div class="innerRight">
       <p><b>Cooling</b></p>
       <p class="bodyTab">Pressure Test: <b>.4</b><br>
       Flush: <b>.5 - .7</b><br>
       Radiator Drain and Flush: <b>1.4</b></p>
-
       <p><b>Misc</b></p>
       <p class="bodyTab">Smoke Test - Emissions: <b>.6</b><br>
       Chassis Ears Noise Isolation: <b>.3</b><br>
@@ -3582,7 +3545,6 @@ TIME:&nbsp&nbsp</textarea>
       Bleeding Lines: <b>.7</b><br>
       Dye Test for Engine: <b>.5</b> - <b>1</b><br>
       Cleaning: <b>.2 - .4</b> if covered by contract</p>
-      
       <p><b>Additional Info</b></p>
       <p class="bodyTab">Coolant flushes after water pump replacement are to be 
       used only if there is contamination in the system from a covered 
@@ -3592,7 +3554,6 @@ TIME:&nbsp&nbsp</textarea>
       Always check ProDemand FIRST.</p>
       </div>
   </div>
-
   <div id="trackerTool" class="tabcontent">
   <table id="inputTable" class="inputClass">
     <tr>
@@ -3612,7 +3573,6 @@ TIME:&nbsp&nbsp</textarea>
       <td class="lastCell"><button id="incS" class="min inc" onclick="saveRecord(this.id)">Save</button></td>
       <td class="lastCell"><button id="incD" class="min inc" onclick="delRecord(this.id)">Del</button></td>
     </tr>
-
     <tr id="serTab">
       <th class="inptTbl">Service</th>
       <td class="inptTbl"><input type="date" id="serDate" class="tracker ser" style="font-size:14px;"></td>
@@ -3622,7 +3582,6 @@ TIME:&nbsp&nbsp</textarea>
       <td class="lastCell"><button id="serS" class="min ser" onclick="saveRecord(this.id)">Save</button></td>
       <td class="lastCell"><button id="serD" class="min ser" onclick="delRecord(this.id)">Del</button></td>
     </tr>
-
     <tr id="recTab0">
       <th class="inptTbl">Record</th>
       <td class="inptTbl"><input type="date" id="rec0Date" class="tracker rec" style="font-size:14px;"></td>
@@ -3632,7 +3591,6 @@ TIME:&nbsp&nbsp</textarea>
       <td class="lastCell"><button id="rec0S" class="min rec" onclick="saveRecord(this.id)">Save</button></td>
       <td class="lastCell"><button id="rec0D" class="min rec" onclick="delRecord(this.id)">Del</button></td>
     </tr>
-
     <tr id="recTab1" style="visibility:hidden;">
       <th class="inptTbl">Record</th>
       <td class="inptTbl"><input type="date" id="rec1Date" class="tracker rec" style="font-size:14px;"></td>
@@ -3642,7 +3600,6 @@ TIME:&nbsp&nbsp</textarea>
       <td class="lastCell"><button id="rec1S" class="min rec" onclick="saveRecord(this.id)">Save</button></td>
       <td class="lastCell"><button id="rec1D" class="min rec" onclick="delRecord(this.id)">Del</button></td>
     </tr>
-
     <tr id="recTab2" style="visibility:hidden;">
       <th class="inptTbl">Record</th>
       <td class="inptTbl"><input type="date" id="rec2Date" class="tracker" style="font-size:14px;"></td>
@@ -3652,7 +3609,6 @@ TIME:&nbsp&nbsp</textarea>
       <td class="lastCell"><button id="rec2S" class="min rec" onclick="saveRecord(this.id)">Save</button></td>
       <td class="lastCell"><button id="rec2D" class="min rec" onclick="delRecord(this.id)">Del</button></td>
     </tr>
-
     <tr id="recTab3" style="visibility:hidden;">
       <th class="inptTbl">Record</th>
       <td class="inptTbl"><input type="date" id="rec3Date" class="tracker rec" style="font-size:14px;"></td>
@@ -3671,7 +3627,6 @@ TIME:&nbsp&nbsp</textarea>
       <td class="lastCell"><button id="rec4S" class="min rec" onclick="saveRecord(this.id)">Save</button></td>
       <td class="lastCell"><button id="rec4D" class="min rec" onclick="delRecord(this.id)">Del</button></td>
     </tr>
-
     <tr id="recTab5" style="visibility:hidden;">
       <th class="inptTbl">Record</th>
       <td class="inptTbl"><input type="date" id="rec5Date" class="tracker rec" style="font-size:14px;"></td>
@@ -3682,50 +3637,36 @@ TIME:&nbsp&nbsp</textarea>
       <td class="lastCell"><button id="rec5D" class="min rec" onclick="delRecord(this.id)">Del</button></td>
     </tr>
    </table>
-
-
   <button id="inceptEst" class="wefwefwef" onclick="inceptEst()">Inc Mlg Est</button>
   <button id="genRep" class="wefwefwef" onclick="comsoCompan()">Generate Report</button>
   <button id="resetRep" class="wefwefwef" onclick="resetReport()">Reset Template</button>
-  <div id="trackerMsg" class="noShow"></div>
+  <div id="trackerMsgouter" class="noShow">
+    <div id="trackerMsg" class="noShow" style="margin-bottom: 15px;"></div>
+    <div id="trackerMini" class="noShow"></div>
+  </div>
 </div>
-
-
   <div id="DoNotUse" class="tabcontent">
     <h3 class="headerTab">Do Not Use vs STOP-NO CLAIMS ALLOWED</h3>
     <p class="bodyTab">Shops that have Do Not Use in the RF name are just duplicate accounts.<br>
     The Do Not Use is in reference to that profile. The RF will have another<br>
     without the Do Not Use tag.</p>
-
     <p class="bodyTab">However, if you see STOP-NO CLAIMS ALLOWED, do not start a new claim.<br>
     Inform the RF that you need to review coverage and will call them back.</p>
-
     <p class="bodyTab">Call the CH and inform them that we are unable to open new claims with their RF.<br>
     Apologize for the inconvenience, and help them with finding a new RF and towing.<br>
     If the CH escalates, transfer the call to the Escalation team for handling.</p>
-
     <p class="bodyTab">Do not share any details or speculation about the RF to the CH or anyone from the RF.</p>
-
     <p class="bodyTab">Document all actions taken in the notes.</p>
-
   </div>
-
-
   <div id="xfer2790" class="tabcontent">
     <h3 class="headerTab">2790</h3>
     <p><b>Don't let the big red banner scare you off.</b></p>
-
     <p class="bodyTab">A transfer to 2790 is only required in order to start a new claim.<br>
     If they already have a claim, read the notes.</p>
-
     <p class="bodyTab">The notes will indicate if any adjuster can continue the claim or if<br>
     you should task the assigned ADJ with updates or actions needed.</p>
-
     <p class="bodyTab">And of course, if you are not sure of what steps you should take, reach out to your TL.</p>
-
   </div>
-
-
   <div id="IsItPT" class="tabcontent">
     <h3 class="headerTab">Is It PT?</h3>
     <p><b>What Qualifies for PowerTrain Transfer:</b></p>
@@ -3735,7 +3676,6 @@ TIME:&nbsp&nbsp</textarea>
     Internal Transmission Failures<br>
     Turbo - ONLY if failure results in internal engine damage.<br>
     Timing Chains/Belts - All timing chains go to PT</p><br>
-
     <p><b>What does NOT qualify for PowerTrain Transfer:</b></p>
     <p class="bodyTab">Fuel injectors<br>
     Turbos - with no damage to engine<br>
@@ -3745,30 +3685,22 @@ TIME:&nbsp&nbsp</textarea>
     Electrical concerns<br>
     Engine Cooling Concerns<br>
     A/C Concerns</p>
-
   </div>
-
-
-
   <div id="MBIClaims" class="tabcontent">
     <h3 class="headerTab">MBI Claims</h3>
     <p><b>Important</b></p>
     <p>Do <b>NOT</b> request any disassembly or teardown unless notated to do so in the claim.<br>
     Do <b>NOT</b> disclose any information about coverage.</p>
-
     <p class="bodyTab">If an RF calls in and the contract is an MBI variant,<br>
     do not disclose any information about coverage whatsoever.<br>
     Do not bother pulling the contract to check or verify.</p>
-
     <p class="bodyTab">Open a claim following standard SOP and your normal process.<br>
     The difference is that you will key in and verify parts and labor<br>
     on all items regardless of coverage.</p>
-
     <p class="bodyTab">Once all items are keyed in and verified, click the Assign to MBI<br>
     button in the actions tab of CMS. Once it has reassigned to an MBI<br>
     adjuster, task that adjuster. Tell the RF that the claim is under<br>
     review and that an adjuster will reach out to them within 24 hours.</p>
-
   </div>
   <button id="exitRec" class="wefwefwef" onclick="closeResource()">Exit</button>
 </div>
@@ -3777,11 +3709,11 @@ TIME:&nbsp&nbsp</textarea>
     <div id="msgDiv" class="noShow"></div>
     <button id="closeOutput" class="wefwefwef" onclick="closeOutput()">close</button>
   </div>
-
 <div class="noShow" id="reportData" style="display:none;"></div>
 
 
 <script>
+
   var newauthLine1 = "Verified failures using RF diagnostic.";
   var newauthLine2 = "Contract has coverage for failed components.";
   var newauthLine3 = "Verified OEM parts using Forte and AM parts using PA.";
@@ -4481,7 +4413,8 @@ function checkOpen() {
   var TGAFOABTN = document.getElementById("TGAFOABTN");
   var TGAFSABTN = document.getElementById("TGAFSABTN");
   var TGAFOSABTN = document.getElementById("TGAFOSABTN");
-  var newAuthstyle =   document.getElementById("newAuthstyle");
+  var newAuthstyle = document.getElementById("newAuthstyle");
+  var resrcDiv = document.getElementById("resrcDiv");
 
   if (Snippings.style.display == "inline-block") {
     return true;
@@ -4502,6 +4435,8 @@ function checkOpen() {
   } else if (newAuthstyle.style.display == "inline-block") {
     return true;
   } else if (TPDiv.style.display == "inline-block") {
+    return true;
+  } else if (resrcDiv.style.display == "inline-block") {
     return true;
   } else {
   return false;
@@ -5428,6 +5363,7 @@ window.onload = function PutItBack() {
   localStorage.removeItem("rec0mileage");
   localStorage.removeItem("rec0date");
 }
+
 
 function resetColors() {
   var bgClr = localStorage.getItem("myBackgroundcolor");
@@ -6634,6 +6570,12 @@ function recallIndex(elementID) {
 function closeNav() {
   location.reload();
 }
+function showAnswer(questID) {
+  var answerDivID = "ansto" + questID;
+  var answerDiv = document.getElementById(answerDivID);
+  answerDiv.classList.toggle("active"); 
+}
+
 function openInfo(evt, cityName) {
   var i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");
@@ -6677,7 +6619,8 @@ function closeResource() {
   for (i = 0; i < tablinks.length; i++) {
     tablinks[i].className = tablinks[i].className.replace(" active", "");
   }
-  document.getElementById('trackerMsg').innerText = "";
+  document.getElementById('trackerMsg').innerHTML = "";
+  document.getElementById('trackerMini').innerHTML = "";
   resetGuide();
   resrcCenter();
 }
@@ -6687,14 +6630,15 @@ function resrcCenter() {
   var isOpen = checkOpen();
   if (resrcDiv.style.display == "none" && !isOpen) {
     resrcDiv.style.display = "inline-block";
-    document.getElementById('trackerMsg').innerText = "";
+    document.getElementById('trackerMsg').innerHTML = "";
     return;
   }
   resrcDiv.style.display = "none";
 }
 
 function addLine() {
-  document.getElementById('trackerMsg').innerText = "";
+  document.getElementById('trackerMsg').innerHTML = "";
+  document.getElementById('trackerMini').innerHTML = "";
   var addLineCount = localStorage.getItem("addLineCount");
   var lineNum = parseInt(addLineCount) + 1;
   if (lineNum < 6) {
@@ -6705,7 +6649,8 @@ function addLine() {
 }
 
 function resetReport() {
-  document.getElementById('trackerMsg').innerText = "";
+  document.getElementById('trackerMsg').innerHTML = "";
+  document.getElementById('trackerMini').innerHTML = "";
   var addLineCount = localStorage.getItem("addLineCount");
   var LineCount = parseInt(addLineCount);
   var inputElems = document.querySelectorAll(".tracker");
@@ -6731,11 +6676,12 @@ function resetReport() {
   localStorage.removeItem("serdate");
   localStorage.removeItem("sermileage");
   localStorage.removeItem("IDforCor");
-  localStorage.removeItem("savedRecs");
-  localStorage.removeItem("objectArr");
-  localStorage.removeItem("recordArr");
   localStorage.removeItem("InceptionMiles");
   localStorage.removeItem("InceptionDate");
+
+  const blankArr = [];
+  localStorage.setItem("objectArr", JSON.stringify(blankArr));
+  localStorage.setItem("recordArr", JSON.stringify(blankArr));
   localStorage.setItem("addLineCount", "0");
   localStorage.setItem("savedRecs", "0");
 }
@@ -6766,7 +6712,8 @@ function Record() {
 }
 
 function saveRecord(elemId) {
-  document.getElementById('trackerMsg').innerText = "";
+  document.getElementById('trackerMsg').innerHTML = "";
+  document.getElementById('trackerMini').innerHTML = "";
   var record = new Record();
   var indexF = elemId.length - 1;
   var newelemId = elemId.slice(0, indexF);
@@ -6802,7 +6749,7 @@ function saveRecord(elemId) {
   if (newelemId != "inc") {
     var inceptStr = localStorage.getItem("InceptionMiles");
     if (inceptStr == null) { 
-      document.getElementById('trackerMsg').innerText += "Need Inception info first to perform calculations.";
+      document.getElementById('trackerMsg').innerHTML += "Need Inception info first to perform calculations.";
       return;
     }
     var inceptMiles = parseInt(inceptStr);
@@ -6857,7 +6804,8 @@ function saveRecord(elemId) {
 }
 
 function delRecord(elemId) {
-  document.getElementById('trackerMsg').innerText = "";
+  document.getElementById('trackerMsg').innerHTML = "";
+  document.getElementById('trackerMini').innerHTML = "";
   var temp = elemId.length - 1;
   var newelemId = elemId.slice(0, temp);
   const recordArr = JSON.parse(localStorage.getItem("recordArr"));
@@ -6887,7 +6835,7 @@ function comsoCompan() {
   var savedRecs = localStorage.getItem("savedRecs");
   var recCount = parseInt(savedRecs);
   if (recCount < 3) {
-    document.getElementById('trackerMsg').innerText += "Enter at least 3 records to generate a report.";
+    document.getElementById('trackerMsg').innerHTML += "Enter at least 3 records to generate a report.";
     return;
   }
   const objectArr = JSON.parse(localStorage.getItem("objectArr"));
@@ -6922,6 +6870,7 @@ function compare (rec1, rec2) {
 }
 
 function displayRecs() {
+
   const objectArr = JSON.parse(localStorage.getItem("objectArr"));
   const table = document.createElement('table');
   table.classList.add('TheOutputtable');
@@ -6939,6 +6888,11 @@ function displayRecs() {
   const body = document.createElement('tbody');
   table.appendChild(body);
 
+  let EIC = false;
+  let waitPeriod = false;
+  let HMPD = false;
+  let mileDis = false;
+  
   for (i = 0; i < objectArr.length; i++) {
     const row = body.insertRow();
     row.classList.add('rowit');
@@ -6977,31 +6931,35 @@ function displayRecs() {
     document.getElementById('outputDiv').appendChild(table);
     var hasMessage = false;
     if (tempRec.isService) {
-      if (overTime < 90) {
-        document.getElementById('msgDiv').innerText += "This vehicle has less than 90 days in coverage\r\r"; 
+      if (overTime < 90 || distance < 700) {
+        if (overTime < 90 && !EIC) {
+          document.getElementById('msgDiv').innerText += "This vehicle has less than 90 days in coverage\r\r"; 
+        }
+        if (distance < 700) {
+          document.getElementById('msgDiv').innerText += "This vehicle is within 700 miles of the inception mileage\r\r";
+        }
         document.getElementById('alertDiv').innerText += "\u2757 ALERT: EARLY IN COVERAGE \u2757\r";
         hasMessage = true;
-      }
-      if (distance < 700) {
-        document.getElementById('msgDiv').innerText += "This vehicle is within 700 miles of the inception mileage\r\r"; 
-        document.getElementById('alertDiv').innerText += "\u2757 ALERT: EARLY IN COVERAGE \u2757\r";
-        hasMessage = true;
+        EIC = true;
       }
     }
-    if (tempRec.waitperiod) {
+    if (tempRec.waitperiod && !waitPeriod) {
       document.getElementById('msgDiv').innerText += "The failure dated " + outputDate + " was on day " + overTime + " of coverage.\rThe vehicle travelled " + distance + " since inception before failure.\r\r";
       document.getElementById('alertDiv').innerText += "\u2757 ALERT: WAITING PERIOD \u2757\r";
       hasMessage = true;
+      waitPeriod = true;
     }
-    if (tempRec.discrepancy) {
+    if (tempRec.discrepancy && !mileDis) {
       document.getElementById('msgDiv').innerText += "Review The dates and mileages of the surrounding records for any discrepancies.\r\r";
       document.getElementById('alertDiv').innerText += "\u2757 ALERT: MILEAGE DISCREPANCY \u2757\r";
       hasMessage = true;
+      mileDis = true;
     }
-    if (milesper > 200) {
+    if (milesper > 200 && !HMPD) {
       document.getElementById('msgDiv').innerText += "This vehicle has travelled " + milesper + " miles per day.\r"; 
       document.getElementById('alertDiv').innerText += "\u2757 ALERT: HMPD \u2757\r"; 
       hasMessage = true;
+      HMPD = true;
       if (overTime < 90) {
         document.getElementById('msgDiv').innerText += "Since they are on day " + overTime + " of coverage, please review the HMPD SOP.\r\r";         
       } else if (overTime > 89) {
@@ -7010,7 +6968,7 @@ function displayRecs() {
     }
     document.getElementById('outputDiv').style.display = "inline-block";
     if (hasMessage) {
-      document.getElementById('alertDiv').innerText += "\u2757 CLICK TO SHOW MESSAGES \u2757";
+      document.getElementById('alertDiv').innerText += "\u2757 CLICK TO SHOW MESSAGES \u2757\r";
     }
   }
   var allCells = document.getElementsByTagName("td");
@@ -7047,6 +7005,7 @@ function closeOutput() {
 
 function inceptEst() {
   document.getElementById('trackerMsg').innerText = "";
+  document.getElementById('trackerMini').innerHTML = "";
   var elemId = localStorage.getItem("IDforCor");
   var recMileage1 = localStorage.getItem(elemId + "mileage");
   var recDate = localStorage.getItem(elemId + "date");
@@ -7054,8 +7013,9 @@ function inceptEst() {
   var serDate = localStorage.getItem("serdate");
   var incMileage1 = localStorage.getItem("InceptionMiles");
   var incDate = localStorage.getItem("InceptionDate");
+
   if (elemId == null || recMileage1 == null || recDate == null || serMileage1 == null || serDate == null || incMileage1 == null || incDate == null) {
-    document.getElementById('trackerMsg').innerText = "Information is incomplete. Try Again";
+    document.getElementById('trackerMsg').innerHTML = "Information is incomplete. Try Again";
     return;
   } 
   var recMileage = parseInt(recMileage1);
@@ -7073,11 +7033,13 @@ function inceptEst() {
   var maxMiles = recMileage + maxMilesTravelled;
   var estimatedInception = serMileage - milesTravelled;
   console.log(milesperday,mileVariation,minMilesTravelled,maxMilesTravelled,estimatedInception);
-  document.getElementById('trackerMsg').innerText = "The estimated inception mileage is " + estimatedInception;
-  if (estimatedInception < minMiles || estimatedInception > maxMiles) {
-    document.getElementById('trackerMsg').innerText += "\r\rThe reported inception mileage varies by\rmore than 20% of the estimated inception mileage";
+  document.getElementById('trackerMsg').innerHTML = "The estimated inception mileage is " + estimatedInception + "<br><br>";
+
+  if (incMileage < minMiles || incMileage > maxMiles) {
+    document.getElementById('trackerMsg').innerHTML += "The reported inception mileage varies by<br>more than 20% of the estimated inception mileage<br><br>";
   }
-  document.getElementById('trackerMsg').innerText += "\r\rThis is NOT a substitute for a performing an inception mileage\rcalculation per SOP using the official method and documentation.";
+  document.getElementById('trackerMsg').innerHTML += "This is NOT a substitute for a performing an inception mileage<br>calculation per SOP using the official method and documentation.<br>";
+  document.getElementById('trackerMini').innerHTML += "Record Mileage: " + recMileage + "<br>Service Mileage: " + serMileage + "<br>Days Between Records: " + daysBtwnRecs  + "<br>Miles between Records: " + milesBtwnRecs + "<br>Miles per day: " + milesperday.toFixed(0) + "<br>Days from Incept to Service: " + daysfromInc + "<br>Est Miles Travelled Since Incept: " + milesTravelled + "<br>Miles per Day Variation Allowed: " + mileVariation.toFixed(0) + "<br>Minimum Mileage: " + minMiles + "<br>Maximum Mileage: " + maxMiles;
 }
 
 function resetGuide() {
@@ -7317,30 +7279,7 @@ function resetMD() {
   document.getElementById('under90hmpd').style.display = "none";
   document.getElementById('MileDiscrep1').style.display = "block";
 }
-
+	
 </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
