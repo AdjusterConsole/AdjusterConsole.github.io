@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
 
+
 	<title>Adjuster Console</title>
 
 <style>
@@ -1054,6 +1055,7 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
+
 #context-menu {
   position: fixed;
   z-index: 15;
@@ -1505,6 +1507,7 @@ input:checked + .slider:before {
     1px -1px 1px red;
   }
 }
+
 div {
   background: white;
   background: linear-gradient(35deg, 
@@ -1961,7 +1964,7 @@ input[type="color"] {
   position: initial;
   display: initial;
   border-radius: 5px;
-  width: calc(900px / 5);
+  width: var(--div-width);
 }
 
 .tablinks.edgeButton {
@@ -1969,28 +1972,35 @@ input[type="color"] {
 }
 
 .answerSlide {
+  display: inline-block;
   position: absolute;
   width: 0%;
   overflow: hidden;
   white-space: nowrap;
   transition: .5s;
   z-index: 15;
+  margin-top: 25px;
+  opacity: 0;
 }
 
 .answerSlide.active {
-  position: absolute;
-  background: white;
-  width: 65%;
-  overflow: hidden;
-  transition: .5s;
-  white-space: nowrap;
-  z-index: 15;
+  width: 93%;
+  box-shadow: -5px -5px 16px var(--fancy-dark), 5px 5px 16px var(--fancy-light);
+  background: linear-gradient(315deg, var(--fancy-meddark), var(--fancy-medlight));
+  opacity: 1;
 }
 
 .questions {
   margin-left: 15px;
-  margin-bottom:15px;
-  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+.QandA {
+  margin-left: 15px;
+}
+
+li {
+  margin: 5px;
 }
 
 #mileagebtn {
@@ -2012,6 +2022,8 @@ input[type="color"] {
 .mdguide {
   float: right;
   margin-right: 60px;
+  margin-left: 10px;
+  margin-top:5px;
   padding: 5px;
 }
 
@@ -2020,7 +2032,6 @@ input[type="color"] {
   margin-right: 60px;
   margin-left: 10px;
   margin-top:5px;
-  margin-bottom:5px;
   padding: 5px;
 }
 
@@ -2064,11 +2075,17 @@ input[type="color"] {
 
 #resetRep {
   border-left: 2px solid var(--my-accent-color);
-  right: 345px;
+  right: 515px;
   bottom: 5px;
 }
 
 #genRep {
+  border-left: 2px solid var(--my-accent-color);
+  right: 345px;
+  bottom: 5px;
+}
+
+#checkIt {
   border-left: 2px solid var(--my-accent-color);
   right: 5px;
   bottom: 5px;
@@ -2091,6 +2108,7 @@ input[type="color"] {
 .wefwefwef:hover {
   background: var(--active-color);
 }
+
 .wefwefwef:active {
   background: var(--active-color);
   box-shadow: none;
@@ -2137,21 +2155,40 @@ input[type="color"] {
   height: 60px;
   width: 150px;
   font-size: 22px;
-  color:red;
+  color:  red;
 }
 
 .authGuide {
   width: 100%;
 }
 
+.cover {
+  top: 0px;
+  left: 0px;
+  background: var(--fancy-background);
+  box-shadow: none;
+  overflow: hidden;
+  z-index: 11;
+  position: absolute;
+  display: inline-block;
+}
+.cover.noShow {
+  top: -10px;
+  left: -10px;
+  width: 0%;
+  height: 0%;
+  background: none;
+  box-shadow: none;
+  transition: .2s;
+  z-index: -1;
+}
+
 #resrcDiv {
   position: absolute;
   display: inline-block;
-  height: 850px;
-  width: 900px;
-  top: 25px;
-  left: 25px;
-  background: white;
+  height: 98%;
+  width: 98%;
+  background: var(--fancy-background);
   z-index: 6;
   box-shadow:
    inset 0px 0px 10px 4px var(--my-shadow-color2),
@@ -2160,24 +2197,60 @@ input[type="color"] {
 }  
 
 .tabcontent table {
-  width: 95%;
+  overflow: hidden;
+  font-size: 17px;
+  width: 75%;
+  text-align: center;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
+th:empty, td:empty {
+    border: none;
+}
 .inptTbl {
   text-align: center;
-  border: 1px solid black;
   padding: 5px;
-  text-align: center;
+  border: 1px solid var(--my-background-color);
+}
+
+.inptTbl.tblRadio input {
+  width: 50px;
 }
 
 #inputTable {
   border: none;
+  border-collapse: separate;
+  background: transparent;
+}
+
+#tableDiv {
+  margin-left: 70px;
+}
+
+.noteBins.arise.tableSize {
+  height: 375px;
+  width: 80%;
+  position: initial;
+}
+
+.inptTbl input {
+  background: var(--fancy-background);
+  font-weight: 700;
+  font-size: 17px;
+  width: 150px;
+  text-align: center;
 }
 
 .lastCell {
   border: none;
   outline: none;
   text-align: center;
+  font-size: 17px;
+}
+
+.wider {
+  width: 200px;
 }
 
 #infosetDiv {
@@ -2191,7 +2264,6 @@ input[type="color"] {
 
 .min {
   position: initial;
-  display: initial;
   border: none;
   outline: none;
   background: none;
@@ -2199,6 +2271,7 @@ input[type="color"] {
   padding: 0px;
   margin-bottom: 2px;
   margin-left: 10px;
+  text-align:right;
   white-space:nowrap;
 }
 
@@ -2253,10 +2326,6 @@ input[type="color"] {
   margin-top: 30px;
 }
 
-input.tracker[type="number"] {
-  width: 100px;
-}
-
 #infoDispDiv {
   bottom:15px;
   left: 15px;
@@ -2273,29 +2342,22 @@ input.tracker[type="number"] {
   margin: 0px;
 }
 
+.questionContain {
+  height: auto;
+  padding: 15px;
+  border: none;
+  outline: none;
+  box-shadow: -5px -5px 16px var(--fancy-dark), 5px 5px 16px var(--fancy-light);
+  background: linear-gradient(315deg, var(--fancy-meddark), var(--fancy-medlight));
+  overflow: hidden;
+}
+
 .o {
   padding:0px;
   border: none;
   outline: none;
   margin: 0px;
   width: initial;
-}
-
-#outputDiv {
-  z-index: 6;
-  position: absolute;
-  display: inline-block;
-  height: 700px;
-  width: 800px;
-  top: 100px;
-  left: 50px;
-  background: white;
-  display: none;
-  border-radius: 5px;
-  padding: 25px;
-  box-shadow:
-   inset 0px 0px 10px 4px var(--my-shadow-color2),
-   0px 12px 70px 14px black;
 }
 
 #msgDiv {
@@ -2307,17 +2369,31 @@ input.tracker[type="number"] {
 }
 
 .innerLeft {
-  background: none;
-  box-shadow: none;
+  margin-top: 25px;
+  margin-left: 35px;
   float: left;
-  width: 50%;
+  width: 35%;
+  height: auto;
+  padding: 25px;
+  border: none;
+  outline: none;
+  box-shadow: -5px -5px 16px var(--fancy-dark), 5px 5px 16px var(--fancy-light);
+  background: linear-gradient(315deg, var(--fancy-meddark), var(--fancy-medlight));
+  overflow: hidden;
 }
 
 .innerRight {
-  background: none;
-  box-shadow: none;
+  margin-top: 25px;
+  margin-right: 35px;
   float: right;
-  width: 50%;
+  width: 35%;
+  height: auto;
+  padding: 25px;
+  border: none;
+  outline: none;
+  box-shadow: -5px -5px 16px var(--fancy-dark), 5px 5px 16px var(--fancy-light);
+  background: linear-gradient(315deg, var(--fancy-meddark), var(--fancy-medlight));
+  overflow: hidden;
 }
 
 #alertDiv  {
@@ -2336,6 +2412,8 @@ input.tracker[type="number"] {
   border: none;
   outline: none;
   text-align: center;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 .headit  {
@@ -2352,8 +2430,63 @@ input.tracker[type="number"] {
   border-top: none;
 }
 
+.noteBins.outputDiv {
+  padding: 15px;
+  border: none;
+  outline: none;
+  position: absolute;
+  width: 800px;
+  top: 130px;
+  left: 50px;
+  overflow: hidden;
+  transition: .4s;
+  box-shadow: none;
+  background: none;
+  z-index: 15;
+  height: 0px;
+  opacity: 0;
+  pointer-events: none;
+}
 
+.noteBins {
+  padding: 15px;
+  border: none;
+  outline: none;
+  position: absolute;
+  width: 350px;
+  overflow: hidden;
+  transition: .4s;
+  box-shadow: none;
+  background: none;
+  z-index: 15;
+  height: 0px;
+  opacity: 0;
+  pointer-events: none;
+}
 
+.tabcontent .noteBins {
+  bottom: 200px;
+  left: 185px;
+}
+
+.tabcontent.noteBins.arise {
+  margin-left: 30px;
+  margin-top: 20px;
+  width: 90%;
+  height: auto;
+}
+
+.noteBins.arise {
+  box-shadow: -5px -5px 16px var(--fancy-dark), 5px 5px 16px var(--fancy-light);
+  background: linear-gradient(315deg, var(--fancy-meddark), var(--fancy-medlight));
+  overflow: hidden;
+  transition: .4s;
+  opacity: 1;
+  height: 150px;
+  z-index: 15;
+  position: absolute;
+  pointer-events: auto;
+}
 
 #ITSBRITTNEY {
   top: 430px;
@@ -2400,8 +2533,14 @@ input.tracker[type="number"] {
   --my-glow-color: #ffffff;
   --glow-txt-color: #000000;
   --glow-outline-color: #ffffff;
-  --hover-color: #70707016;
-  --hover-color: #70707048;
+  --hover-color: #70707032;
+  --active-color: #70707060;
+  --fancy-light: #cccccc;
+  --fancy-medlight: #fafafa;
+  --fancy-meddark: #848484;
+  --fancy-dark: #acacac;
+  --fancy-background: #bfbfbf;
+  --div-width: 10px;
 }
 
 </style>
@@ -3269,11 +3408,29 @@ TIME:&nbsp&nbsp</textarea>
   </div>
   <div id="QuickAns" class="tabcontent">
     <h3 class="headerTab" style="margin-bottom:0px;">Common questions</h3>
-    <p style="text-align:center;margin-top:10px;">And Their Answers or Where to Find Them.<br>
-    Click the question for the answer.<br>
-    More Questions and Answers Coming Soon...</p>
+    <p style="text-align:center;margin-top:10px;">And Their Answers or Where to Find Them.</p>
+    <div class="questionContain">
     <div class="questions noShow" id="quest1" onclick="showAnswer(this.id)">
       &blacklozenge; Where can I find tracking information about a PA order?
+    </div>
+    <div class="questions noShow" id="quest2" onclick="showAnswer(this.id)">
+      &blacklozenge; Am I supposed to open a claim or can this end in interaction?
+    </div>
+    <div class="questions noShow" id="quest3" onclick="showAnswer(this.id)">
+      &blacklozenge; Only some of the authorized repairs are going to be completed.<br>
+      How do I make the estimate match the invoice?
+    </div>
+    <div class="questions noShow" id="quest4" onclick="showAnswer(this.id)">
+      &blacklozenge; I have a CH on the phone and they don't want to pay OOPC.<br>
+      They want to get the work done at another repair facility.<br>
+      Where do I send them?<br>
+    </div>
+    <div class="questions noShow" id="quest5" onclick="showAnswer(this.id)">
+      &blacklozenge; The Repair Facility is saying they didn't get paid.<br>
+      It shows they were paid in CMS?<br>
+      How can I help?<br>
+    </div>
+    </div>
     <div id="anstoquest1" class="answerSlide noShow">
       <ul>
       <li>Note the claim number.</li>
@@ -3282,64 +3439,100 @@ TIME:&nbsp&nbsp</textarea>
       <li>Select the 'P.O. Number' search option</li>
       <li>Input the claim number into the search box and click 'Search'.</li>
       <li>Click on the order number.</li>
-      <li>The order should appear with relevant info such as the<br>
-      tracking number, address shipped to, parts shipped, etc.</li>
-      <li>Clicking on the tracking number will show you the current<br>
-      status of the shipment.</li>
+      <li>This will show relevant info such as the tracking number, address shipped to, etc.</li>
+      <li>Clicking on the tracking number will show you current shipment status.</li>
       </ul>
     </div>
-    </div>
-    <div class="questions noShow" id="quest2" onclick="showAnswer(this.id)">
-      &blacklozenge; Am I supposed to open a claim or can this end in interaction?
     <div id="anstoquest2" class="answerSlide noShow">
-      <p>You MUST open a claim if:</p>
+      <p class="QandA">You MUST open a claim if:</p>
       <ul>
       <li>The part has coverage.</li>
       <li>There is a mileage issue. Negative mileage, for example.</li>
       <li>There is a VIN issue.</li>
       </ul>
-      Even if the claim will be denied, one must<br>
-      be opened if the part is listed.<br>
-      Even if the part is not listed, an open claim<br>
-      is needed to correct mileage or VIN issues.<br><br>
-      A claim doesn't need to be opened if:
+      <p class="QandA">A claim doesn't need to be opened if:</p>
       <ul>
-      <li>The part is PNLC.</li>
+      <li>The part is PNLC unless VIN or mileage<br>issues need to be addressed</li>
       <li>The CH vehicle is not at the RF.</li>
       <li>The RF doesn't have a verified failure.</li>
       </ul>
+      <p class="QandA">Even if the claim will be denied, one must be opened if the part is listed.<br><br>
+      Even if the part is not listed, an open claim is needed to correct mileage or VIN issues.</p>
     </div>
+    <div id="anstoquest3" class="answerSlide noShow">
+      <ul>
+      <li>Reauthorize the claim using the 'Reauthorize' button in the actions tab of CMS.</li>
+      <li>Go to the estimate in CMS and lock the claim.</li>
+      <li>Open the authorized section of the estimate and find the items that are no longed needed.</li>
+      <li>Select the checkbox next to each of those items.</li>
+      <li>Click 'Modify Claim Item'.</li>
+      <li>For part line items, set the Repair Facility, AAS, and Authorized prices to $0.00.</li>
+      <li>For labor line items, set the Repair Facility, AAS, and Authorized labor hours to 0.0.</li>
+      <li>Click 'Save' in the bottom right corner when finished with each item.</li>
+      </ul>
+      <p class="QandA" style="margin-left:0px;text-align:center;"><b>IMPORTANT - Do NOT change any PART line item to a QUANTITY of 0.</b></p>
+    </div>
+    <div id="anstoquest4" class="answerSlide noShow">
+      <p class="QandA">There are 2 things the CH will need.
+      The first is our website:</p>
+      <ul>
+      <li>americanautoshield.com</li>
+      <li>At the TOP of the home page, just to the right of center, is a button labelled 'Claims'.</li>
+      <li>When they click on that, there is a drop-down menu with a link to 'Find a preferred repair facility'.</li>
+      <li>That link will take them to the PRF page where they can find a list of repair facilities.</li>
+      </ul>
+      <p class="QandA">The second is 2 questions:</p>
+      <li>Do you use Mitchell ProDemand?</li>
+      <li>Do you allow parts to be shipped in?</li>
+      </ul>
+      <p class="QandA">The CH will call Repair Facilities and ask them those questions.<br>
+      A repair facility that uses ProDemand and allows parts to be shipped in is most likely to have no OOPC.<br><br>
+      PepBoys as a national chain uses Mitchell and, generally, allows parts to be shipped in.</p>
+    </div>
+    <div id="anstoquest5" class="answerSlide noShow"><br>
+      <p class="QandA">'Paid' status in CMS just means that the card was sent<br>
+      It does not indicate if any money was actually dispersed.<br>
+      In order to resolve the issue:</p>
+      <ul>
+      <li>Verify the payment information on file and fix any errors.</li>
+      <li>Notate the claim stating the situation and that you verified payment info.</li>
+      <li>Note the claim number, Contract Holder name, and RF payment information.</li>
+      <li>To verify whether or not payment has been released and to release a secondary payment, contact Payments.</li>
+      <li>Call the payments line, explain the situation and provide any requested information</li>
+      <li>Payments will inform you if the card was ran or release payment if it hasn't.</li>
+      <li>Inform the RF of the outcome.</li>
+      </ul>
     </div>
   </div>
   <div id="MileDiscrep" class="tabcontent">
     <h3 class="headerTab">Mileage Discrepancies</h3>
-    <div id="MileDiscrep1" class="mileage noShow" style="line-height:1.8;"> 
+    <div id="MileDiscrep1" class="mileage noShow"> 
       <p><b>Is the contract a Term contract or a Month-to-Month Contract?</b>
-        <input type="radio" class="mdguide Mradio" id="md1" name="discrep1" style="margin-top: 8px;"><label for="md1" style="float:right;" required><b>Term</b></label><br>
-        <input type="radio" class="mdguide Mradio" id="md2" name="discrep1" style="margin-top: 8px;"><label for="md2" style="float:right;" required><b>M-2-M</b></label>
-      </p>
+        <input type="radio" class="mdguide" id="md1" name="discrep1"><label for="md1" style="float:right;" required><b>Term</b></label><br>
+        <input type="radio" class="mdguide" id="md2" name="discrep1"><label for="md2" style="float:right;" required><b>M-2-M</b></label>
+      </p><br>
       <p><b>Is the vehicle over 90 days in coverage?</b>
-        <input type="radio" class="mdguide Mradio" id="md3" name="discrep2" style="margin-top: 8px;"><label for="md3" style="float:right;" required><b>Yes</b></label><br>
-        <input type="radio" class="mdguide Mradio" id="md4" name="discrep2" style="margin-top: 8px;"><label for="md4" style="float:right;" required><b>No</b></label>
-      </p>
+        <input type="radio" class="mdguide" id="md3" name="discrep2"><label for="md3" style="float:right;" required><b>Yes</b></label><br>
+        <input type="radio" class="mdguide" id="md4" name="discrep2"><label for="md4" style="float:right;" required><b>No</b></label>
+      </p><br>
       <p><b>What kind of mileage discrepancy is being reviewed?</b><br>
-        <input type="radio" class="mdguide Mradio" id="md5" name="discrep3" style="margin-top: 8px;"><label id="md5" style="float:right;" required><b>Negative Mileage</b></label><br>
-        <input type="radio" class="mdguide Mradio" id="md6" name="discrep3" style="margin-top: 8px;"><label id="md6" style="float:right;" required><b>Proven Inaccurate Start Mileage</b></label><br>
-        <input type="radio" class="mdguide Mradio" id="md7" name="discrep3" style="margin-top: 8px;"><label id="md7" style="float:right;" required><b>Mileage Unknown/Rollback/Inop ODO</b></label><br>
-        <input type="radio" class="mdguide Mradio" id="md8" name="discrep3" style="margin-top: 8px;"><label id="md8" style="float:right;" required><b>High Mileage Per Day</b></label>
-      </p>
+        <input type="radio" class="mdguide" id="md5" name="discrep3"><label id="md5" style="float:right;" required><b>Negative Mileage</b></label><br>
+        <input type="radio" class="mdguide" id="md6" name="discrep3"><label id="md6" style="float:right;" required><b>Proven Inaccurate Start Mileage</b></label><br>
+        <input type="radio" class="mdguide" id="md7" name="discrep3"><label id="md7" style="float:right;" required><b>Mileage Unknown/Rollback/Inop ODO</b></label><br>
+        <input type="radio" class="mdguide" id="md8" name="discrep3"><label id="md8" style="float:right;" required><b>High Mileage Per Day</b></label>
+      </p><br>
     </div>
-    <div id="under90hmpd" class="mileage noShow" style="display:none; line-height:1.8;">
+    <div id="under90hmpd" class="mileage noShow" style="display:none;">
       <p><b>Does the contract have the <b>Commercial</b> or <b>Ride Share</b> surcharge?</b>
-        <input type="radio" onclick="proceed()" class="mdguide Mradio" id="md9" name="discrep4" style="margin-top: 8px;"><label for="md9" style="float:right;" required><b>Yes</b></label><br>
-        <input type="radio" onclick="noride()" class="mdguide Mradio" id="md10" name="discrep4" style="margin-top: 8px;"><label for="md10" style="float:right; required"><b>No</b></label>
+        <input type="radio" onclick="proceed()" class="mdguide" id="md9" name="discrep4"><label for="md9" style="float:right;" required><b>Yes</b></label><br>
+        <input type="radio" onclick="noride()" class="mdguide" id="md10" name="discrep4"><label for="md10" style="float:right; required"><b>No</b></label>
       </p>
     </div>
-    <div id="norideshare" class="mileage noShow" style="display:none; line-height:1.8;">
+    <div id="norideshare" class="mileage noShow" style="display:none;">
       <p>Contact the customer and ask about usage for potential Commercial/Rideshare use.<br>
       <b>Did the customer admit to commercial or Ride Share use?</b>
-        <input type="radio" onclick="crReview()" class="mdguide Mradio" id="md11" name="discrep4" style="margin-top: 8px;"><label for="md11" style="float:right;" required><b>Yes</b></label><br>
-        <input type="radio" onclick="mileageCalc()" class="mdguide Mradio" id="md12" name="discrep4" style="margin-top: 8px;"><label for="md12" style="float:right;" required><b>No</b></label>
+        <input type="radio" onclick="crReview()" class="mdguide" id="md11" name="discrep4"><label for="md11" style="float:right;" required><b>Yes</b></label><br>
+        <input type="radio" onclick="mileageCalc()" class="mdguide" id="md12" name="discrep4"><label for="md12" style="float:right;" required><b>No</b></label>
       </p>
     </div>
     <div id="proceed" class="mileage noShow" style="display:none;">
@@ -3462,14 +3655,6 @@ TIME:&nbsp&nbsp</textarea>
     </div>
   <button id="resetPA" class="wefwefwef" onclick="resetGuide()">Reset</button>
   </div>
-<div style="display:none">
-      <p class="bodyTab">
-        This is a direct COPY AND PASTE from the AAS SOP:<br>
-        Important!<br>
-        Keep in mind if there is a small difference in price<br>
-        between the best option from Parts Authority and the<br>
-        repair facility’s part, move forward with the repair<br>
-        facility’s part.</p></div>
   <div id="PANoOrder" class="tabcontent">
   <h3 class="headerTab">Do Not Order These Parts From PA</h3>
     <div class="innerLeft">
@@ -3511,7 +3696,7 @@ TIME:&nbsp&nbsp</textarea>
   </div>
   <div id="Diagnostic" class="tabcontent">
     <h3 class="headerTab">Common Diagnostic Times</h3>
-      <div class="innerLeft">
+      <div class="innerLeft noShow">
       <p><b>Air Conditioning</b></p>
       <p class="bodyTab">Evac and Recharge: <b>1.4</b><br>
       Partial Recharge: <b>.6</b><br>
@@ -3532,7 +3717,7 @@ TIME:&nbsp&nbsp</textarea>
       Injector Node Test: <b>.5</b><br>
       Drain and Fill Fuel Tank: <b>.5</b></p>
       </div>
-      <div class="innerRight">
+      <div class="innerRight noShow">
       <p><b>Cooling</b></p>
       <p class="bodyTab">Pressure Test: <b>.4</b><br>
       Flush: <b>.5 - .7</b><br>
@@ -3554,97 +3739,109 @@ TIME:&nbsp&nbsp</textarea>
       </div>
   </div>
   <div id="trackerTool" class="tabcontent">
+  <div id="tableDiv" class="noteBins arise tableSize">
   <table id="inputTable" class="inputClass">
     <tr>
-      <td class="inptTbl"></td>
+      <th class="lastCell"></td>
       <th class="inptTbl">Date</th>
       <th class="inptTbl">Mileage</th>
       <th class="inptTbl">&imacr;</th>
-      <th class="inptTbl">Notes</th>
       <td colspan="2" class="lastCell"><button id="addLineBtn" class="min rec" onclick="addLine()">Add Line</button></td>
+      <th class="lastCell"></td>
     </tr>
     <tr id="incTab">
-      <th class="inptTbl" class="inptTbl" style="width:100px">Inception</th>
-      <td class="inptTbl"><input type="date" id="incDate" class="tracker inc" style="font-size:14px;"></td>
-      <td class="inptTbl"><input type="number" id="incMile" class="tracker inc"></td>
-      <td class="inptTbl"><input type="radio" id="incC" class="tracker rec" style="visibility:hidden"></td>
-      <td class="inptTbl"><input type="text" id="incNote" class="tracker inc"></td>
+      <th class="inptTbl">Inception</th>
+      <td class="inptTbl tblDate"><input type="date" id="incDate" class="tracker inc"></td>
+      <td class="inptTbl tblMile"><input type="number" id="incMile" class="tracker inc"></td>
+      <td class="inptTbl tblRadio"><input type="radio" id="incC" class="tracker rec" style="visibility:hidden"></td>
+      <td class="wider"><button id="incN" class="min inc" onclick="showNote(this.id)">Add Note</button></td>
       <td class="lastCell"><button id="incS" class="min inc" onclick="saveRecord(this.id)">Save</button></td>
       <td class="lastCell"><button id="incD" class="min inc" onclick="delRecord(this.id)">Del</button></td>
     </tr>
     <tr id="serTab">
       <th class="inptTbl">Service</th>
-      <td class="inptTbl"><input type="date" id="serDate" class="tracker ser" style="font-size:14px;"></td>
-      <td class="inptTbl"><input type="number" id="serMile" class="tracker ser"></td>
-      <td class="inptTbl"><input type="radio" id="serC" class="tracker rec" style="visibility:hidden"></td>
-      <td class="inptTbl"><input type="text" id="serNote" class="tracker ser"></td>
+      <td class="inptTbl tblDate"><input type="date" id="serDate" class="tracker ser"></td>
+      <td class="inptTbl tblMile"><input type="number" id="serMile" class="tracker ser"></td>
+      <td class="inptTbl tblRadio"><input type="radio" id="serC" class="tracker rec" style="visibility:hidden"></td>
+      <td class="wider"><button id="serN" class="min ser" onclick="showNote(this.id)">Add Note</button></td>
       <td class="lastCell"><button id="serS" class="min ser" onclick="saveRecord(this.id)">Save</button></td>
       <td class="lastCell"><button id="serD" class="min ser" onclick="delRecord(this.id)">Del</button></td>
     </tr>
     <tr id="recTab0">
       <th class="inptTbl">Record</th>
-      <td class="inptTbl"><input type="date" id="rec0Date" class="tracker rec" style="font-size:14px;"></td>
-      <td class="inptTbl"><input type="number" id="rec0Mile" class="tracker rec"></td>
-      <td class="inptTbl"><input type="radio" id="rec0C" class="tracker rec" name="jeff"></td>
-      <td class="inptTbl"><input type="text" id="rec0Note" class="tracker rec"></td>
+      <td class="inptTbl tblDate"><input type="date" id="rec0Date" class="tracker rec"></td>
+      <td class="inptTbl tblMile"><input type="number" id="rec0Mile" class="tracker rec"></td>
+      <td class="inptTbl tblRadio"><input type="radio" id="rec0C" class="tracker rec" name="jeff"></td>
+      <td class="wider"><button id="rec0N" class="min rec" onclick="showNote(this.id)">Add Note</button></td>
       <td class="lastCell"><button id="rec0S" class="min rec" onclick="saveRecord(this.id)">Save</button></td>
       <td class="lastCell"><button id="rec0D" class="min rec" onclick="delRecord(this.id)">Del</button></td>
     </tr>
     <tr id="recTab1" style="visibility:hidden;">
       <th class="inptTbl">Record</th>
-      <td class="inptTbl"><input type="date" id="rec1Date" class="tracker rec" style="font-size:14px;"></td>
-      <td class="inptTbl"><input type="number" id="rec1Mile" class="tracker rec"></td>
-      <td class="inptTbl"><input type="radio" id="rec1C" class="tracker rec" name="jeff"></td>
-      <td class="inptTbl"><input type="text" id="rec1Note" class="tracker rec"></td>
+      <td class="inptTbl tblDate"><input type="date" id="rec1Date" class="tracker rec"></td>
+      <td class="inptTbl tblMile"><input type="number" id="rec1Mile" class="tracker rec"></td>
+      <td class="inptTbl tblRadio"><input type="radio" id="rec1C" class="tracker rec" name="jeff"></td>
+      <td class="wider"><button id="rec1N" class="min rec" onclick="showNote(this.id)">Add Note</button></td>
       <td class="lastCell"><button id="rec1S" class="min rec" onclick="saveRecord(this.id)">Save</button></td>
       <td class="lastCell"><button id="rec1D" class="min rec" onclick="delRecord(this.id)">Del</button></td>
     </tr>
     <tr id="recTab2" style="visibility:hidden;">
       <th class="inptTbl">Record</th>
-      <td class="inptTbl"><input type="date" id="rec2Date" class="tracker" style="font-size:14px;"></td>
-      <td class="inptTbl"><input type="number" id="rec2Mile" class="tracker rec"></td>
-      <td class="inptTbl"><input type="radio" id="rec2C" class="tracker rec" name="jeff"></td>
-      <td class="inptTbl"><input type="text" id="rec2Note" class="tracker rec"></td>
+      <td class="inptTbl tblDate"><input type="date" id="rec2Date" class="tracker"></td>
+      <td class="inptTbl tblMile"><input type="number" id="rec2Mile" class="tracker rec"></td>
+      <td class="inptTbl tblRadio"><input type="radio" id="rec2C" class="tracker rec" name="jeff"></td>
+      <td class="wider"><button id="rec2N" class="min rec" onclick="showNote(this.id)">Add Note</button></td>
       <td class="lastCell"><button id="rec2S" class="min rec" onclick="saveRecord(this.id)">Save</button></td>
       <td class="lastCell"><button id="rec2D" class="min rec" onclick="delRecord(this.id)">Del</button></td>
     </tr>
     <tr id="recTab3" style="visibility:hidden;">
       <th class="inptTbl">Record</th>
-      <td class="inptTbl"><input type="date" id="rec3Date" class="tracker rec" style="font-size:14px;"></td>
-      <td class="inptTbl"><input type="number" id="rec3Mile" class="tracker rec"></td>
-      <td class="inptTbl"><input type="radio" id="rec3C" class="tracker rec" name="jeff"></td>
-      <td class="inptTbl"><input type="text" id="rec3Note" class="tracker rec"></td>
+      <td class="inptTbl tblDate"><input type="date" id="rec3Date" class="tracker rec"></td>
+      <td class="inptTbl tblMile"><input type="number" id="rec3Mile" class="tracker rec"></td>
+      <td class="inptTbl tblRadio"><input type="radio" id="rec3C" class="tracker rec" name="jeff"></td>
+      <td class="wider"><button id="rec3N" class="min rec" onclick="showNote(this.id)">Add Note</button></td>
       <td class="lastCell"><button id="rec3S" class="min rec" onclick="saveRecord(this.id)">Save</button></td>
       <td class="lastCell"><button id="rec3D" class="min rec" onclick="delRecord(this.id)">Del</button></td>
     </tr>
     <tr id="recTab4" style="visibility:hidden;">
       <th class="inptTbl">Record</th>
-      <td class="inptTbl"><input type="date" id="rec4Date" class="tracker rec" style="font-size:14px;"></td>
-      <td class="inptTbl"><input type="number" id="rec4Mile" class="tracker rec"></td>
-      <td class="inptTbl"><input type="radio" id="rec4C" class="tracker rec" name="jeff"></td>
-      <td class="inptTbl"><input type="text" id="rec4Note" class="tracker rec"></td>
+      <td class="inptTbl tblDate"><input type="date" id="rec4Date" class="tracker rec"></td>
+      <td class="inptTbl tblMile"><input type="number" id="rec4Mile" class="tracker rec"></td>
+      <td class="inptTbl tblRadio"><input type="radio" id="rec4C" class="tracker rec" name="jeff"></td>
+      <td class="wider"><button id="rec4N" class="min rec" onclick="showNote(this.id)">Add Note</button></td>
       <td class="lastCell"><button id="rec4S" class="min rec" onclick="saveRecord(this.id)">Save</button></td>
       <td class="lastCell"><button id="rec4D" class="min rec" onclick="delRecord(this.id)">Del</button></td>
     </tr>
     <tr id="recTab5" style="visibility:hidden;">
       <th class="inptTbl">Record</th>
-      <td class="inptTbl"><input type="date" id="rec5Date" class="tracker rec" style="font-size:14px;"></td>
-      <td class="inptTbl"><input type="number" id="rec5Mile" class="tracker rec"></td>
-      <td class="inptTbl"><input type="radio" id="rec5C" class="tracker rec" name="jeff"></td>
-      <td class="inptTbl"><input type="text" id="rec5Note" class="tracker rec"></td>
+      <td class="inptTbl tblDate"><input type="date" id="rec5Date" class="tracker rec"></td>
+      <td class="inptTbl tblMile"><input type="number" id="rec5Mile" class="tracker rec"></td>
+      <td class="inptTbl tblRadio"><input type="radio" id="rec5C" class="tracker rec" name="jeff"></td>
+      <td class="wider"><button id="rec5N" class="min rec" onclick="showNote(this.id)">Add Note</button></td>
       <td class="lastCell"><button id="rec5S" class="min rec" onclick="saveRecord(this.id)">Save</button></td>
       <td class="lastCell"><button id="rec5D" class="min rec" onclick="delRecord(this.id)">Del</button></td>
     </tr>
    </table>
-  <button id="inceptEst" class="wefwefwef" onclick="inceptEst()">Inc Mlg Est</button>
-  <button id="genRep" class="wefwefwef" onclick="comsoCompan()">Generate Report</button>
+   </div>
+  <div id="incNotebin" style="height:0px;" class="noShow noteBins" contenteditable="true"></div>
+  <div id="serNotebin" style="height:0px;" class="noShow noteBins" contenteditable="true"></div>
+  <div id="rec0Notebin" style="height:0px;" class="noShow noteBins" contenteditable="true"></div>
+  <div id="rec1Notebin" style="height:0px;" class="noShow noteBins" contenteditable="true"></div>
+  <div id="rec2Notebin" style="height:0px;" class="noShow noteBins" contenteditable="true"></div>
+  <div id="rec3Notebin" style="height:0px;" class="noShow noteBins" contenteditable="true"></div>
+  <div id="rec4Notebin" style="height:0px;" class="noShow noteBins" contenteditable="true"></div>
+  <div id="rec5Notebin" style="height:0px;" class="noShow noteBins" contenteditable="true"></div>
+
+  <button id="inceptEst" class="wefwefwef" onclick="inceptEst()">Incept Estim</button>
+  <button id="checkIt" class="wefwefwef" onclick="comsoCompan()">Check Issues</button>
+  <button id="genRep" class="wefwefwef" onclick="duh()">Not Active Yet</button>
   <button id="resetRep" class="wefwefwef" onclick="resetReport()">Reset Template</button>
   <div id="trackerMsgouter" class="noShow">
     <div id="trackerMsg" class="noShow" style="margin-bottom: 15px;"></div>
     <div id="trackerMini" class="noShow"></div>
   </div>
 </div>
-  <div id="DoNotUse" class="tabcontent">
+  <div id="DoNotUse" class="tabcontent noteBins arise">
     <h3 class="headerTab">Do Not Use vs STOP-NO CLAIMS ALLOWED</h3>
     <p class="bodyTab">Shops that have Do Not Use in the RF name are just duplicate accounts.<br>
     The Do Not Use is in reference to that profile. The RF will have another<br>
@@ -3657,7 +3854,7 @@ TIME:&nbsp&nbsp</textarea>
     <p class="bodyTab">Do not share any details or speculation about the RF to the CH or anyone from the RF.</p>
     <p class="bodyTab">Document all actions taken in the notes.</p>
   </div>
-  <div id="xfer2790" class="tabcontent">
+  <div id="xfer2790" class="tabcontent noteBins arise">
     <h3 class="headerTab">2790</h3>
     <p><b>Don't let the big red banner scare you off.</b></p>
     <p class="bodyTab">A transfer to 2790 is only required in order to start a new claim.<br>
@@ -3666,7 +3863,7 @@ TIME:&nbsp&nbsp</textarea>
     you should task the assigned ADJ with updates or actions needed.</p>
     <p class="bodyTab">And of course, if you are not sure of what steps you should take, reach out to your TL.</p>
   </div>
-  <div id="IsItPT" class="tabcontent">
+  <div id="IsItPT" class="tabcontent noteBins arise">
     <h3 class="headerTab">Is It PT?</h3>
     <p><b>What Qualifies for PowerTrain Transfer:</b></p>
     <p class="bodyTab">Internal Engine Damage<br>
@@ -3685,7 +3882,7 @@ TIME:&nbsp&nbsp</textarea>
     Engine Cooling Concerns<br>
     A/C Concerns</p>
   </div>
-  <div id="MBIClaims" class="tabcontent">
+  <div id="MBIClaims" class="tabcontent noteBins arise">
     <h3 class="headerTab">MBI Claims</h3>
     <p><b>Important</b></p>
     <p>Do <b>NOT</b> request any disassembly or teardown unless notated to do so in the claim.<br>
@@ -3703,16 +3900,14 @@ TIME:&nbsp&nbsp</textarea>
   </div>
   <button id="exitRec" class="wefwefwef" onclick="closeResource()">Exit</button>
 </div>
-  <div id="outputDiv" class="noShow TheOutput">
+  <div id="outputDiv" class="noteBins outputDiv">
     <div id="alertDiv" class="noShow" onclick="showMsg()"></div>
     <div id="msgDiv" class="noShow"></div>
     <button id="closeOutput" class="wefwefwef" onclick="closeOutput()">close</button>
   </div>
 <div class="noShow" id="reportData" style="display:none;"></div>
 
-
 <script>
-
   var newauthLine1 = "Verified failures using RF diagnostic.";
   var newauthLine2 = "Contract has coverage for failed components.";
   var newauthLine3 = "Verified OEM parts using Forte and AM parts using PA.";
@@ -5340,6 +5535,10 @@ window.onload = function PutItBack() {
     checkbox.checked = false;
   }
   localStorage.setItem("pageNum", "0");
+  var iscolorSet = localStorage.getItem("iscolorSet");
+  if (iscolorSet == null) {
+    localStorage.setItem("iscolorSet", "default");
+  }
   resetColors();
   const recordArr = [];
   localStorage.setItem("recordArr", JSON.stringify(recordArr));
@@ -5361,6 +5560,7 @@ window.onload = function PutItBack() {
   localStorage.removeItem("serdate");
   localStorage.removeItem("rec0mileage");
   localStorage.removeItem("rec0date");
+  localStorage.setItem("noteOpen", "false");
 }
 
 
@@ -5384,6 +5584,37 @@ function resetColors() {
   var glowClrelem = document.getElementById("nameGlow");
   var txtClrelem = document.getElementById("nameColor");
   var outlineClrelem = document.getElementById("outlineColor");
+  var iscolorSet = localStorage.getItem("iscolorSet");
+  var tempClrL; 
+  var tempClrML; 
+  var tempClrMD; 
+  var tempClrD; 
+  var tempClrB; 
+  
+  switch(iscolorSet) {
+  case "default":
+  case "red":
+  case "green":
+    tempClrL = "#fafafa";
+    tempClrML = "#cccccc";
+    tempClrMD = "#acacac";
+    tempClrD = "#848484";
+    tempClrB = "#bfbfbf";
+    break;
+  case "blue":
+    tempClrL = "#ffffff";
+    tempClrML = "#c3cacf";
+    tempClrMD = "#a4aaae";
+    tempClrD = "#6d7174";
+    tempClrB = "#B6BDC1";
+    break;
+  }
+
+  document.documentElement.style.setProperty('--fancy-light', tempClrL);
+  document.documentElement.style.setProperty('--fancy-medlight', tempClrML);
+  document.documentElement.style.setProperty('--fancy-meddark', tempClrMD);
+  document.documentElement.style.setProperty('--fancy-dark', tempClrD);
+  document.documentElement.style.setProperty('--fancy-background', tempClrB);
 
   if (bgClr != null) {
     document.documentElement.style.setProperty('--my-background-color', bgClr);
@@ -5454,7 +5685,7 @@ function saveColors() {
   var userName = userNameelem.value;
   var outlineClr = outlineClrelem.value;
   var hoverClr = acClr + "32";
-  var activeClr = acClr + "94";
+  var activeClr = acClr + "60";
   glowDiv.innerHTML = userName;
 
   document.documentElement.style.setProperty('--my-background-color', bgClr);
@@ -5488,6 +5719,12 @@ function setColor(colorSet) {
   var tempClr5; //glow color
   var tempClr6; //text color
   var tempClr7; //outline
+  var tempClrL; 
+  var tempClrML; 
+  var tempClrMD; 
+  var tempClrD; 
+  var tempClrB; 
+  var iscolorSet;
 
   switch(colorSet) {
   case "default":
@@ -5498,6 +5735,12 @@ function setColor(colorSet) {
     tempClr5 = "#ffffff";
     tempClr6 = "#000000";
     tempClr7 = "#ffffff";
+    tempClrL = "#fafafa";
+    tempClrML = "#cccccc";
+    tempClrMD = "#acacac";
+    tempClrD = "#848484";
+    tempClrB = "#bfbfbf";
+    iscolorSet = "default";
     break;
   case "blue":
     tempClr1 = "#324350";
@@ -5507,6 +5750,12 @@ function setColor(colorSet) {
     tempClr5 = "#ffffff";
     tempClr6 = "#503f32";
     tempClr7 = "#ffffff";
+    tempClrL = "#ffffff";
+    tempClrML = "#c3cacf";
+    tempClrMD = "#a4aaae";
+    tempClrD = "#6d7174";
+    tempClrB = "#B6BDC1";
+    iscolorSet = "blue";
     break;
   case "red":
     tempClr1 = "#622823";
@@ -5516,6 +5765,12 @@ function setColor(colorSet) {
     tempClr5 = "#ffffff";
     tempClr6 = "#236228";
     tempClr7 = "#ffffff";
+    tempClrL = "#fafafa";
+    tempClrML = "#cccccc";
+    tempClrMD = "#acacac";
+    tempClrD = "#848484";
+    tempClrB = "#bfbfbf";
+    iscolorSet = "red";
     break;
   case "green":
     tempClr1 = "#2f9844";
@@ -5525,6 +5780,12 @@ function setColor(colorSet) {
     tempClr5 = "#ffffff";
     tempClr6 = "#98422f";
     tempClr7 = "#ffffff";
+    tempClrL = "#fafafa";
+    tempClrML = "#cccccc";
+    tempClrMD = "#acacac";
+    tempClrD = "#848484";
+    tempClrB = "#bfbfbf";
+    iscolorSet = "green";
     break;
   case "4":
     tempClr1 = "#4f4f4f";
@@ -5558,8 +5819,9 @@ function setColor(colorSet) {
   outlineClrelem.value = tempClr7;
 
   var hoverClr = tempClr2 + "32";
-  var activeClr = tempClr2 + "94";
+  var activeClr = tempClr2 + "60";
 
+  localStorage.setItem("iscolorSet", iscolorSet);
   document.documentElement.style.setProperty('--my-background-color', tempClr1);
   document.documentElement.style.setProperty('--my-accent-color', tempClr2);
   document.documentElement.style.setProperty('--my-shadow-color1', tempClr3);
@@ -5569,6 +5831,11 @@ function setColor(colorSet) {
   document.documentElement.style.setProperty('--glow-outline-color', tempClr7);
   document.documentElement.style.setProperty('--hover-color', hoverClr);
   document.documentElement.style.setProperty('--active-color', activeClr);
+  document.documentElement.style.setProperty('--fancy-light', tempClrL);
+  document.documentElement.style.setProperty('--fancy-medlight', tempClrML);
+  document.documentElement.style.setProperty('--fancy-meddark', tempClrMD);
+  document.documentElement.style.setProperty('--fancy-dark', tempClrD);
+  document.documentElement.style.setProperty('--fancy-background', tempClrB);
 }
 
 const menu = document.getElementById("context-menu");
@@ -6569,10 +6836,41 @@ function recallIndex(elementID) {
 function closeNav() {
   location.reload();
 }
+function questAnswered(answerDiv) {
+  if (answerDiv.style.opacity == "1") {
+    return true;
+  }
+}
+
+function questOpen() {
+  if (document.getElementById("anstoquest1").classList.contains('active')) {
+    return true;
+  } else if (document.getElementById("anstoquest2").classList.contains('active')) {
+    return true;
+  } else if (document.getElementById("anstoquest3").classList.contains('active')) {
+    return true;
+  } else if (document.getElementById("anstoquest4").classList.contains('active')) {
+    return true;
+  } else if (document.getElementById("anstoquest5").classList.contains('active')) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
 function showAnswer(questID) {
   var answerDivID = "ansto" + questID;
   var answerDiv = document.getElementById(answerDivID);
-  answerDiv.classList.toggle("active"); 
+ 
+  if (answerDiv.classList.contains('active')) {
+    answerDiv.classList.remove('active');
+    return;
+  } else if (!questOpen()) {
+    answerDiv.classList.add('active');
+    return;
+  } else {
+    return;
+  }
 }
 
 function openInfo(evt, cityName) {
@@ -6587,25 +6885,20 @@ function openInfo(evt, cityName) {
   }
   document.getElementById(cityName).style.display = "block";
   evt.currentTarget.className += " active";
-  
-//  var date = new Date();
-//  var day = date.getDate();
-//  var month = date.getMonth() + 1;
-//  var year = date.getFullYear();
-//  if (month < 10) month = "0" + month;
-//  if (day < 10) day = "0" + day;
-//  var today = year + "-" + month + "-" + day;       
-//  document.getElementById("serDate").value = today;
-//  document.getElementById("incDate").value = today;
-//  document.getElementById("rec0Date").value = today;
+  setDate();
+}
 
-  document.getElementById("incDate").value = "2024-01-31";
-  document.getElementById("serDate").value = "2024-03-01";
-  document.getElementById("rec0Date").value = "2024-01-01";
-
-  document.getElementById("incMile").value = "104000";
-  document.getElementById("serMile").value = "110000";
-  document.getElementById("rec0Mile").value = "100000";
+function setDate() {
+  var date = new Date();
+  var day = date.getDate();
+  var month = date.getMonth() + 1;
+  var year = date.getFullYear();
+  if (month < 10) month = "0" + month;
+  if (day < 10) day = "0" + day;
+  var today = year + "-" + month + "-" + day;       
+  document.getElementById("serDate").value = today;
+  document.getElementById("incDate").value = today;
+  document.getElementById("rec0Date").value = today;
 }
 
 function closeResource() {
@@ -6630,6 +6923,11 @@ function resrcCenter() {
   if (resrcDiv.style.display == "none" && !isOpen) {
     resrcDiv.style.display = "inline-block";
     document.getElementById('trackerMsg').innerHTML = "";
+    var widthpre = parseInt(window.getComputedStyle(resrcDiv).width);
+    var width1 = (widthpre / 5);
+    var width = width1.toString() + "px";
+    document.documentElement.style.setProperty('--div-width', width);
+console.log(widthpre, width1, width);
     return;
   }
   resrcDiv.style.display = "none";
@@ -6683,6 +6981,7 @@ function resetReport() {
   localStorage.setItem("recordArr", JSON.stringify(blankArr));
   localStorage.setItem("addLineCount", "0");
   localStorage.setItem("savedRecs", "0");
+  setDate();
 }
 
 function convertToDate(str) {
@@ -6711,6 +7010,12 @@ function Record() {
 }
 
 function saveRecord(elemId) {
+  var noteOpen = localStorage.getItem("noteOpen");
+  if (noteOpen == "true") {
+    document.getElementById('trackerMsg').innerHTML = "Close the note in order to proceed";
+    return;
+  }
+
   document.getElementById('trackerMsg').innerHTML = "";
   document.getElementById('trackerMini').innerHTML = "";
   var record = new Record();
@@ -6725,7 +7030,7 @@ function saveRecord(elemId) {
   }
   record.date = document.getElementById(newelemId + "Date").value;
   record.mileage = document.getElementById(newelemId + "Mile").value;
-  record.notes = document.getElementById(newelemId + "Note").value;
+  record.notes = localStorage.getItem(newelemId + "Note");
 
   if (document.getElementById(newelemId + "C").checked && newelemId != "ser") {
     localStorage.setItem("IDforCor", newelemId);
@@ -6759,16 +7064,9 @@ function saveRecord(elemId) {
     tempdayfr = dayCalc(inceptDate, record.date);
     if (tempdayfr < 0) { tempdayfr = tempdayfr * -1; record.isPrior = true;}
     record.daysfrom = tempdayfr;
-    if (record.isService) {
-      if (record.daysfrom < 26) {
-        record.waitperiod = true;
-      }
-      if (record.milesfrom < 250) {
-        record.waitperiod = true;
-      }
-      if (record.daysfrom < 41 && record.milesfrom < 500) {
-        record.waitperiod = true;
-      } 
+
+    if (isitWP(record)) {
+      record.waitperiod = true;
     }
   }
   var recordArr = [];
@@ -6777,28 +7075,42 @@ function saveRecord(elemId) {
   objectArr = JSON.parse(localStorage.getItem("objectArr"));
   var savedRecs = localStorage.getItem("savedRecs");
   var recIndex = 0;
-  if (objectArr.length != null) { //if the array isnt empty, set index per length
+  if (objectArr.length != null) { 
     var recIndex = objectArr.length;
   }
   var recName = newelemId + "Rcrd";
-  if (!recordArr.includes(recName)) { //if the name array doesnt have this name
-    if (!objectArr.includes("empty")) { //and it doesnt have an empty spot
-      objectArr.push(record); // uh push it...push it real good
-    } else { //but if there is an empty spot
-      var indexA = objectArr.indexOf("empty"); //get that index
-      objectArr.splice(indexA, 1, record); //splice the record in there
-      recIndex = indexA; //save the index
+  if (!recordArr.includes(recName)) { 
+    if (!objectArr.includes("empty")) { 
+      objectArr.push(record); 
+    } else { 
+      var indexA = objectArr.indexOf("empty");
+      objectArr.splice(indexA, 1, record); 
+      recIndex = indexA;
     } 
-    recordArr.push(recName); //put name in name array
-    localStorage.setItem(recName + "spot", recIndex); //save everything
+    recordArr.push(recName); 
+    localStorage.setItem(recName + "spot", recIndex); 
     localStorage.setItem("objectArr", JSON.stringify(objectArr));
     localStorage.setItem("recordArr", JSON.stringify(recordArr));
-    var newCount = parseInt(savedRecs) + 1; //add and resave count
+    var newCount = parseInt(savedRecs) + 1; 
     localStorage.setItem("savedRecs", newCount);
   } else { 
     var indexSaved = localStorage.getItem(recName + "spot");
     objectArr.splice(indexSaved, 1, record);
     localStorage.setItem("objectArr", JSON.stringify(objectArr));
+  }
+}
+
+function isitWP(record) {
+  if (record.isService) {
+    if (record.daysfrom < 26) {
+      return true;
+    }
+    if (record.milesfrom < 250) {
+      return true;
+    }
+    if (record.daysfrom < 41 && record.milesfrom < 500) {
+      return true;
+    } 
   }
 }
 
@@ -6816,6 +7128,7 @@ function delRecord(elemId) {
       localStorage.removeItem("InceptionMiles");
       localStorage.removeItem("InceptionDate");
     }
+    localStorage.removeItem(newelemId + "Note");
     objectArr.splice(objectIndex, 1, "empty");
     localStorage.setItem("objectArr", JSON.stringify(objectArr));
     var savedRecs = localStorage.getItem("savedRecs");
@@ -6868,11 +7181,41 @@ function compare (rec1, rec2) {
   return rec1.mileage - rec2.mileage;
 }
 
-function displayRecs() {
+function showNote(noteID) {
+  var noteOpen = localStorage.getItem("noteOpen");
+  var temp = noteID.length - 1;
+  var elemId = noteID.slice(0, temp);
+  var noteDivID = noteID + "otebin";
+  var binElem = document.getElementById(noteDivID);
+  if (binElem.style.height == "0px") {
+    if (noteOpen == "true") {
+      document.getElementById('trackerMsg').innerHTML = "Close the open note before opening another";
+      return;
+    }
+    binElem.classList.toggle("arise");
+    binElem.style.height = "150px"
+    document.getElementById(noteID).innerText = "Finished";
+    localStorage.setItem("noteOpen", "true");
+  } else if (binElem.style.height != "0px") {
+    document.getElementById('trackerMsg').innerHTML = "";
+    var noteText = binElem.innerText;
+    binElem.innerText = "";
+    localStorage.setItem(elemId + "Note", noteText);
+    document.getElementById(noteID).innerText = "Add Note";
+    binElem.style.height = "0px";
+    binElem.classList.toggle("arise");
+    localStorage.setItem("noteOpen", "false");
+  }
+}
 
+function displayRecs() {
+  if (document.getElementById('reportTable') != null) {
+    document.getElementById('outputDiv').removeChild(document.getElementById('reportTable'));
+  }
   const objectArr = JSON.parse(localStorage.getItem("objectArr"));
   const table = document.createElement('table');
   table.classList.add('TheOutputtable');
+  table.id = "reportTable";
   const header = table.createTHead().insertRow();
   header.classList.add('headit');
   header.insertCell(0).innerText = "Date";
@@ -6891,7 +7234,6 @@ function displayRecs() {
   let waitPeriod = false;
   let HMPD = false;
   let mileDis = false;
-  
   for (i = 0; i < objectArr.length; i++) {
     const row = body.insertRow();
     row.classList.add('rowit');
@@ -6929,45 +7271,46 @@ function displayRecs() {
     row.insertCell(7).innerText = tempRec.notes;
     document.getElementById('outputDiv').appendChild(table);
     var hasMessage = false;
+
     if (tempRec.isService) {
       if (overTime < 90 || distance < 700) {
         if (overTime < 90 && !EIC) {
-          document.getElementById('msgDiv').innerText += "This vehicle has less than 90 days in coverage\r\r"; 
+          document.getElementById('msgDiv').innerHTML += "This vehicle has less than 90 days in coverage<br><br>"; 
         }
         if (distance < 700) {
-          document.getElementById('msgDiv').innerText += "This vehicle is within 700 miles of the inception mileage\r\r";
+          document.getElementById('msgDiv').innerHTML += "This vehicle is within 700 miles of the inception mileage<br><br>";
         }
-        document.getElementById('alertDiv').innerText += "\u2757 ALERT: EARLY IN COVERAGE \u2757\r";
+        document.getElementById('alertDiv').innerHTML += "\u2757 ALERT: EARLY IN COVERAGE \u2757<br>";
         hasMessage = true;
         EIC = true;
       }
     }
     if (tempRec.waitperiod && !waitPeriod) {
-      document.getElementById('msgDiv').innerText += "The failure dated " + outputDate + " was on day " + overTime + " of coverage.\rThe vehicle travelled " + distance + " since inception before failure.\r\r";
-      document.getElementById('alertDiv').innerText += "\u2757 ALERT: WAITING PERIOD \u2757\r";
+      document.getElementById('msgDiv').innerHTML += "The failure dated " + outputDate + " was on day " + overTime + " of coverage.<br>The vehicle travelled " + distance + " since inception before failure.<br><br>";
+      document.getElementById('alertDiv').innerHTML += "\u2757 ALERT: WAITING PERIOD \u2757<br>";
       hasMessage = true;
       waitPeriod = true;
     }
     if (tempRec.discrepancy && !mileDis) {
-      document.getElementById('msgDiv').innerText += "Review The dates and mileages of the surrounding records for any discrepancies.\r\r";
-      document.getElementById('alertDiv').innerText += "\u2757 ALERT: MILEAGE DISCREPANCY \u2757\r";
+      document.getElementById('msgDiv').innerHTML += "Review The dates and mileages of the surrounding records for any discrepancies.<br><br>";
+      document.getElementById('alertDiv').innerHTML += "\u2757 ALERT: MILEAGE DISCREPANCY \u2757<br>";
       hasMessage = true;
       mileDis = true;
     }
     if (milesper > 200 && !HMPD) {
-      document.getElementById('msgDiv').innerText += "This vehicle has travelled " + milesper + " miles per day.\r"; 
-      document.getElementById('alertDiv').innerText += "\u2757 ALERT: HMPD \u2757\r"; 
+      document.getElementById('msgDiv').innerHTML += "This vehicle has travelled " + milesper + " miles per day.<br>"; 
+      document.getElementById('alertDiv').innerHTML += "\u2757 ALERT: HMPD \u2757<br>"; 
       hasMessage = true;
       HMPD = true;
       if (overTime < 90) {
-        document.getElementById('msgDiv').innerText += "Since they are on day " + overTime + " of coverage, please review the HMPD SOP.\r\r";         
+        document.getElementById('msgDiv').innerHTML += "Since they are on day " + overTime + " of coverage, please review the HMPD SOP.<br><br>";         
       } else if (overTime > 89) {
-        document.getElementById('msgDiv').innerText += "Since they are on day " + overTime + " of coverage, Continue the claim as normal.\r\r";
+        document.getElementById('msgDiv').innerHTML += "Since they are on day " + overTime + " of coverage, Continue the claim as normal.<br><br>";
       }
     }
-    document.getElementById('outputDiv').style.display = "inline-block";
+    displayOutput();
     if (hasMessage) {
-      document.getElementById('alertDiv').innerText += "\u2757 CLICK TO SHOW MESSAGES \u2757\r";
+      document.getElementById('alertDiv').innerHTML += "\u2757 CLICK TO SHOW MESSAGES \u2757<br>";
     }
   }
   var allCells = document.getElementsByTagName("td");
@@ -6995,11 +7338,33 @@ function showMsg() {
   document.getElementById('msgDiv').style.opacity = 1;
 }
 
+function hideTable() {
+  var tableDiv = document.getElementById('tableDiv');
+  tableDiv.style.opacity = "0";
+}
+
+function showTable() {
+  var tableDiv = document.getElementById('tableDiv');
+  tableDiv.style.opacity = "1";
+}
+
+
+function displayOutput() {
+  hideTable();
+  var outputDiv = document.getElementById('outputDiv'); 
+  outputDiv.classList.toggle("arise");
+  outputDiv.style.height = "700px";
+}
+
+
 function closeOutput() {
   document.getElementById('msgDiv').innerText = "";
   document.getElementById('alertDiv').innerText = "";
   document.getElementById('msgDiv').style.opacity = 0;
-  document.getElementById('outputDiv').style.display = "none";
+  var outputDiv = document.getElementById('outputDiv'); 
+  outputDiv.classList.toggle("arise");
+  outputDiv.style.height = "0px";
+  showTable();
 }
 
 function inceptEst() {
@@ -7031,7 +7396,6 @@ function inceptEst() {
   var minMiles = recMileage + minMilesTravelled;
   var maxMiles = recMileage + maxMilesTravelled;
   var estimatedInception = serMileage - milesTravelled;
-  console.log(milesperday,mileVariation,minMilesTravelled,maxMilesTravelled,estimatedInception);
   document.getElementById('trackerMsg').innerHTML = "The estimated inception mileage is " + estimatedInception + "<br><br>";
 
   if (incMileage < minMiles || incMileage > maxMiles) {
@@ -7278,7 +7642,39 @@ function resetMD() {
   document.getElementById('under90hmpd').style.display = "none";
   document.getElementById('MileDiscrep1').style.display = "block";
 }
-	
+
+function colorshift(col,amt) {
+  var usePound = false;
+  if (col[0] == "#") {
+    col = col.slice(1);
+    usePound = true;
+  }
+  var num = parseInt(col,16);
+  var r = (num >> 16) + amt;
+  if ( r > 255 ) {
+    r = 255;
+  } else if (r < 0) {
+    r = 0;
+  }
+  var b = ((num >> 8) & 0x00FF) + amt;
+  if ( b > 255 ) {
+    b = 255;
+  } else if (b < 0) {
+    b = 0;
+  }
+  var g = (num & 0x0000FF) + amt;
+  if (g > 255) {
+    g = 255;
+  } else if (g < 0) {
+    g = 0;
+  }
+  return (usePound?"#":"") + (g | (b << 8) | (r << 16)).toString(16);
+}
+
+function duh() {
+  alert("What did you think I meant?");
+}
+
 </script>
 </body>
 </html>
