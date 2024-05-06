@@ -1055,7 +1055,6 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
-
 #context-menu {
   position: fixed;
   z-index: 15;
@@ -1507,7 +1506,6 @@ input:checked + .slider:before {
     1px -1px 1px red;
   }
 }
-
 div {
   background: white;
   background: linear-gradient(35deg, 
@@ -1667,7 +1665,7 @@ input[type="color"] {
   width: 130px;
 }
 
-#presetBlue {
+#presetGrey {
   position: absolute;
   display: inline-block;
   top: 430px;
@@ -1958,6 +1956,7 @@ input[type="color"] {
   cursor: pointer;
   padding: 10px 14px;
   transition: 0.5s;
+  transition: width 0s;
   font-size: 17px;
   text-shadow: none;
   box-shadow: none;
@@ -1998,6 +1997,7 @@ input[type="color"] {
 .QandA {
   margin-left: 15px;
 }
+
 
 li {
   margin: 5px;
@@ -2108,7 +2108,6 @@ li {
 .wefwefwef:hover {
   background: var(--active-color);
 }
-
 .wefwefwef:active {
   background: var(--active-color);
   box-shadow: none;
@@ -2172,6 +2171,7 @@ li {
   position: absolute;
   display: inline-block;
 }
+
 .cover.noShow {
   top: -10px;
   left: -10px;
@@ -2208,6 +2208,7 @@ li {
 th:empty, td:empty {
     border: none;
 }
+
 .inptTbl {
   text-align: center;
   padding: 5px;
@@ -2465,8 +2466,8 @@ th:empty, td:empty {
 }
 
 .tabcontent .noteBins {
-  bottom: 200px;
-  left: 185px;
+  top: 550px;
+  left: 270px;
 }
 
 .tabcontent.noteBins.arise {
@@ -2475,6 +2476,7 @@ th:empty, td:empty {
   width: 90%;
   height: auto;
 }
+
 
 .noteBins.arise {
   box-shadow: -5px -5px 16px var(--fancy-dark), 5px 5px 16px var(--fancy-light);
@@ -2487,6 +2489,7 @@ th:empty, td:empty {
   position: absolute;
   pointer-events: auto;
 }
+
 
 #ITSBRITTNEY {
   top: 430px;
@@ -2526,20 +2529,20 @@ th:empty, td:empty {
 }
 
 :root {
-  --my-background-color: #4f4f4f;
-  --my-accent-color: #707070;
-  --my-shadow-color1: #cecece;
-  --my-shadow-color2: #141414;
+  --my-background-color: #324350;
+  --my-accent-color: #7C878F;
+  --my-shadow-color1: #D4D7DA;
+  --my-shadow-color2: #1A2229;
   --my-glow-color: #ffffff;
-  --glow-txt-color: #000000;
-  --glow-outline-color: #ffffff;
-  --hover-color: #70707032;
-  --active-color: #70707060;
-  --fancy-light: #cccccc;
-  --fancy-medlight: #fafafa;
-  --fancy-meddark: #848484;
-  --fancy-dark: #acacac;
-  --fancy-background: #bfbfbf;
+  --glow-txt-color: #324350;
+  --glow-outline-color: #FFFFFF;
+  --hover-color: #7C878F32;
+  --active-color: #7C878F60;
+  --fancy-light: #ffffff;
+  --fancy-medlight: #c3cacf;
+  --fancy-meddark: #a4aaae;
+  --fancy-dark: #6d7174;
+  --fancy-background: #B6BDC1;
   --div-width: 10px;
 }
 
@@ -2588,9 +2591,9 @@ th:empty, td:empty {
     <input id="nameGlow" type="color" value="#ffffff">
   </div>
   <button id="setColors" class="picker" onclick="saveColors()">Save and Exit</button>
-  <button id="exitColor" class="picker" onclick="exitColor()">Cancel</button>
+  <button id="exitColor" class="picker" onclick="exitColor()">Exit</button>
   <button id="defaultColors" class="picker" onclick="setColor('default')">Default Preset</button>
-  <button id="presetBlue" class="picker" onclick="setColor('blue')">Blue Preset</button>
+  <button id="presetGrey" class="picker" onclick="setColor('grey')">Grey Preset</button>
   <button id="presetRed" class="picker" onclick="setColor('red')">Red Preset</button>
   <button id="presetGreen" class="picker" onclick="setColor('green')">Green Preset</button>
 </div>
@@ -3406,6 +3409,7 @@ TIME:&nbsp&nbsp</textarea>
     <button class="tablinks" onclick="openInfo(event, 'PAPrice')">Parts Pricing</button>
     <button class="tablinks edgeButton" onclick="openInfo(event, 'trackerTool')">Tracker</button>
   </div>
+
   <div id="QuickAns" class="tabcontent">
     <h3 class="headerTab" style="margin-bottom:0px;">Common questions</h3>
     <p style="text-align:center;margin-top:10px;">And Their Answers or Where to Find Them.</p>
@@ -3431,6 +3435,7 @@ TIME:&nbsp&nbsp</textarea>
       How can I help?<br>
     </div>
     </div>
+
     <div id="anstoquest1" class="answerSlide noShow">
       <ul>
       <li>Note the claim number.</li>
@@ -3443,6 +3448,7 @@ TIME:&nbsp&nbsp</textarea>
       <li>Clicking on the tracking number will show you current shipment status.</li>
       </ul>
     </div>
+
     <div id="anstoquest2" class="answerSlide noShow">
       <p class="QandA">You MUST open a claim if:</p>
       <ul>
@@ -3459,6 +3465,7 @@ TIME:&nbsp&nbsp</textarea>
       <p class="QandA">Even if the claim will be denied, one must be opened if the part is listed.<br><br>
       Even if the part is not listed, an open claim is needed to correct mileage or VIN issues.</p>
     </div>
+
     <div id="anstoquest3" class="answerSlide noShow">
       <ul>
       <li>Reauthorize the claim using the 'Reauthorize' button in the actions tab of CMS.</li>
@@ -3472,6 +3479,7 @@ TIME:&nbsp&nbsp</textarea>
       </ul>
       <p class="QandA" style="margin-left:0px;text-align:center;"><b>IMPORTANT - Do NOT change any PART line item to a QUANTITY of 0.</b></p>
     </div>
+
     <div id="anstoquest4" class="answerSlide noShow">
       <p class="QandA">There are 2 things the CH will need.
       The first is our website:</p>
@@ -3482,13 +3490,15 @@ TIME:&nbsp&nbsp</textarea>
       <li>That link will take them to the PRF page where they can find a list of repair facilities.</li>
       </ul>
       <p class="QandA">The second is 2 questions:</p>
+      <ul>
       <li>Do you use Mitchell ProDemand?</li>
       <li>Do you allow parts to be shipped in?</li>
       </ul>
       <p class="QandA">The CH will call Repair Facilities and ask them those questions.<br>
-      A repair facility that uses ProDemand and allows parts to be shipped in is most likely to have no OOPC.<br><br>
+      A repair facility that uses ProDemand and allows us to ship parts is most likely to have no OOPC.<br><br>
       PepBoys as a national chain uses Mitchell and, generally, allows parts to be shipped in.</p>
     </div>
+
     <div id="anstoquest5" class="answerSlide noShow"><br>
       <p class="QandA">'Paid' status in CMS just means that the card was sent<br>
       It does not indicate if any money was actually dispersed.<br>
@@ -3497,7 +3507,8 @@ TIME:&nbsp&nbsp</textarea>
       <li>Verify the payment information on file and fix any errors.</li>
       <li>Notate the claim stating the situation and that you verified payment info.</li>
       <li>Note the claim number, Contract Holder name, and RF payment information.</li>
-      <li>To verify whether or not payment has been released and to release a secondary payment, contact Payments.</li>
+      <li>To verify whether or not payment has been released and to release a secondary payment,<br>
+      contact Payments.</li>
       <li>Call the payments line, explain the situation and provide any requested information</li>
       <li>Payments will inform you if the card was ran or release payment if it hasn't.</li>
       <li>Inform the RF of the outcome.</li>
@@ -3834,7 +3845,7 @@ TIME:&nbsp&nbsp</textarea>
 
   <button id="inceptEst" class="wefwefwef" onclick="inceptEst()">Incept Estim</button>
   <button id="checkIt" class="wefwefwef" onclick="comsoCompan()">Check Issues</button>
-  <button id="genRep" class="wefwefwef" onclick="duh()">Not Active Yet</button>
+  <button id="genRep" class="wefwefwef" onclick="comsoCompan()">Generate Report</button>
   <button id="resetRep" class="wefwefwef" onclick="resetReport()">Reset Template</button>
   <div id="trackerMsgouter" class="noShow">
     <div id="trackerMsg" class="noShow" style="margin-bottom: 15px;"></div>
@@ -3900,13 +3911,13 @@ TIME:&nbsp&nbsp</textarea>
   </div>
   <button id="exitRec" class="wefwefwef" onclick="closeResource()">Exit</button>
 </div>
+
   <div id="outputDiv" class="noteBins outputDiv">
     <div id="alertDiv" class="noShow" onclick="showMsg()"></div>
     <div id="msgDiv" class="noShow"></div>
     <button id="closeOutput" class="wefwefwef" onclick="closeOutput()">close</button>
   </div>
 <div class="noShow" id="reportData" style="display:none;"></div>
-
 <script>
   var newauthLine1 = "Verified failures using RF diagnostic.";
   var newauthLine2 = "Contract has coverage for failed components.";
@@ -5442,10 +5453,12 @@ var SOLOCount = 0;
 var buttonCount = 0;
 
 window.onload = function PutItBack() { 
+  
   var selected = "holder1";
   var selectedElem = document.getElementById(selected);
   var didItRun = localStorage.getItem("Im The Boss");
   if (didItRun == null) {
+    initialLoad();
     localStorage.setItem("Im The Boss", "It's Been Done");
     localStorage.setItem(selected + "STCB", '0');
     localStorage.setItem(selected + "PRIN", '0');
@@ -5837,6 +5850,207 @@ function setColor(colorSet) {
   document.documentElement.style.setProperty('--fancy-dark', tempClrD);
   document.documentElement.style.setProperty('--fancy-background', tempClrB);
 }
+
+
+
+
+
+
+
+
+function colorObject() {
+  this.background = "#324350";
+  this.accent = "#7C878F";
+  this.shadow1 = "#D4D7DA";
+  this.shadow2 = "#1A2229";
+  this.username;
+  this.glow = "#ffffff";
+  this.text = "#324350";
+  this.outline = "#ffffff";
+  this.hover = "#7C878F32";
+  this.active = "#7C878F60";
+  this.light = "#ffffff";
+  this.medlight = "#c3cacf";
+  this.meddark = "#a4aaae";
+  this.dark = "#6d7174";
+  this.lightbackground = "#B6BDC1";
+
+}
+
+function initialLoad() {
+
+  const colorCheck = JSON.parse(localStorage.getItem("colorSet"));
+  if (colorCheck == null){
+    const colorSet = new colorObject();
+    localStorage.setItem("colorSet", JSON.stringify(colorSet));
+    setProperty();
+    location.reload();
+  }
+}
+
+function getPicker() {
+  const colorSet = JSON.parse(localStorage.getItem("colorSet"));
+
+  colorSet.background = document.getElementById("background-picker").value;
+  colorSet.accent = document.getElementById("accent-picker").value;
+  colorSet.shadow1 = document.getElementById("shad1-picker").value;
+  colorSet.shadow2 = document.getElementById("shad2-picker").value;
+  colorSet.username = document.getElementById("userName").value;
+  colorSet.glow = document.getElementById("nameGlow").value;
+  colorSet.text = document.getElementById("nameColor").value;
+  colorSet.outline = document.getElementById("outlineColor").value;
+  localStorage.setItem("colorSet", JSON.stringify(colorSet));
+}
+
+function setPicker() {
+  const colorSet = JSON.parse(localStorage.getItem("colorSet"));
+  document.getElementById("background-picker").value = colorSet.background;
+  document.getElementById("accent-picker").value = colorSet.accent;
+  document.getElementById("shad1-picker").value = colorSet.shadow1;
+  document.getElementById("shad2-picker").value = colorSet.shadow2;
+  if (colorSet.username != null){
+  document.getElementById("userName").value = colorSet.username; }
+  document.getElementById("nameGlow").value = colorSet.glow;
+  document.getElementById("nameColor").value = colorSet.text;
+  document.getElementById("outlineColor").value = colorSet.outline;
+}
+
+function setProperty() {
+  const colorSet = JSON.parse(localStorage.getItem("colorSet"));
+
+  document.documentElement.style.setProperty('--my-background-color', colorSet.background);
+  document.documentElement.style.setProperty('--my-accent-color', colorSet.accent);
+  document.documentElement.style.setProperty('--my-shadow-color1', colorSet.shadow1);
+  document.documentElement.style.setProperty('--my-shadow-color2', colorSet.shadow2);
+  document.documentElement.style.setProperty('--my-glow-color', colorSet.glow);
+  document.documentElement.style.setProperty('--glow-txt-color', colorSet.text);
+  document.documentElement.style.setProperty('--glow-outline-color', colorSet.outline);
+  document.documentElement.style.setProperty('--hover-color', colorSet.hover);
+  document.documentElement.style.setProperty('--active-color', colorSet.active);
+  document.documentElement.style.setProperty('--fancy-light', colorSet.light);
+  document.documentElement.style.setProperty('--fancy-medlight', colorSet.medlight);
+  document.documentElement.style.setProperty('--fancy-meddark', colorSet.meddark);
+  document.documentElement.style.setProperty('--fancy-dark', colorSet.dark);
+  document.documentElement.style.setProperty('--fancy-background', colorSet.lightbackground);
+  if (colorSet.username != null) {
+    document.getElementById("userName").value = colorSet.username;
+    document.getElementById("glowDiv").innerHTML = colorSet.username;
+  }
+}
+
+function setColor(colors) {
+
+  const colorSet = new colorObject();
+  switch(colors) {
+  case "default":
+    colorSet.background = "#324350";
+    colorSet.accent = "#7C878F";
+    colorSet.shadow1 = "#D4D7DA";
+    colorSet.shadow2 = "#1A2229";
+    colorSet.glow = "#ffffff";
+    colorSet.text = "#324350";
+    colorSet.outline = "#FFFFFF";
+    colorSet.hover = "#7C878F32";
+    colorSet.active = "#7C878F60";
+    colorSet.light = "#ffffff";
+    colorSet.medlight = "#c3cacf";
+    colorSet.meddark = "#a4aaae";
+    colorSet.dark = "#6d7174";
+    colorSet.lightbackground = "#B6BDC1";
+    break;
+  case "grey":
+    colorSet.background = "#4f4f4f";
+    colorSet.accent = "#707070";
+    colorSet.shadow1 = "#cecece";
+    colorSet.shadow2 = "#141414";
+    colorSet.glow = "#ffffff";
+    colorSet.text = "#000000";
+    colorSet.outline = "#ffffff";
+    colorSet.hover = "#70707032";
+    colorSet.active = "#70707060";
+    colorSet.light = "#fafafa";
+    colorSet.medlight = "#cccccc";
+    colorSet.meddark = "#acacac";
+    colorSet.dark = "#848484";
+    colorSet.lightbackground = "#bfbfbf";
+    break;
+  case "red":
+    colorSet.background = "#622823";
+    colorSet.accent = "#81524E";
+    colorSet.shadow1 = "#CFBEBD";
+    colorSet.shadow2 = "#130807";
+    colorSet.glow = "#ffffff";
+    colorSet.text = "#000000";
+    colorSet.outline = "#2f9844";
+    colorSet.hover = "#81524E32";
+    colorSet.active = "#81524E60";
+    colorSet.light = "#fafafa";
+    colorSet.medlight = "#cccccc";
+    colorSet.meddark = "#acacac";
+    colorSet.dark = "#848484";
+    colorSet.lightbackground = "#bfbfbf";
+    break;
+  case "green":
+    colorSet.background = "#2f9844";
+    colorSet.accent = "#58ac69";
+    colorSet.shadow1 = "#c0e0c6";
+    colorSet.shadow2 = "#040f06";
+    colorSet.glow = "#ffffff";
+    colorSet.text = "#98422f";
+    colorSet.outline = "#98422f";
+    colorSet.hover = "#58ac6932";
+    colorSet.active = "#58ac6960";
+    colorSet.light = "#fafafa";
+    colorSet.medlight = "#cccccc";
+    colorSet.meddark = "#acacac";
+    colorSet.dark = "#848484";
+    colorSet.lightbackground = "#bfbfbf";
+    break;
+  }
+  localStorage.setItem("colorSet", JSON.stringify(colorSet));
+  setPicker();
+  setProperty();
+}
+
+function personalize() {
+  MENU();
+  document.getElementById("appearDiv").style.display = "inline-block";
+}
+
+function exitColor() {
+  document.getElementById("appearDiv").style.display = "none";
+  location.reload();
+}
+
+function saveColors() {
+  getPicker();
+  setProperty();                           
+  exitColor();
+}
+
+function resetColors() {
+  setPicker();
+  setProperty();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 const menu = document.getElementById("context-menu");
 var menuState = 0;
@@ -6889,16 +7103,24 @@ function openInfo(evt, cityName) {
 }
 
 function setDate() {
-  var date = new Date();
-  var day = date.getDate();
-  var month = date.getMonth() + 1;
-  var year = date.getFullYear();
-  if (month < 10) month = "0" + month;
-  if (day < 10) day = "0" + day;
-  var today = year + "-" + month + "-" + day;       
-  document.getElementById("serDate").value = today;
-  document.getElementById("incDate").value = today;
-  document.getElementById("rec0Date").value = today;
+//  var date = new Date();
+//  var day = date.getDate();
+//  var month = date.getMonth() + 1;
+//  var year = date.getFullYear();
+//  if (month < 10) month = "0" + month;
+//  if (day < 10) day = "0" + day;
+//  var today = year + "-" + month + "-" + day;       
+//  document.getElementById("serDate").value = today;
+//  document.getElementById("incDate").value = today;
+//  document.getElementById("rec0Date").value = today;
+
+  document.getElementById("incDate").value = "2024-01-31";
+  document.getElementById("serDate").value = "2024-03-01";
+  document.getElementById("rec0Date").value = "2024-01-01";
+
+  document.getElementById("incMile").value = "104000";
+  document.getElementById("serMile").value = "110000";
+  document.getElementById("rec0Mile").value = "100000";
 }
 
 function closeResource() {
@@ -6927,7 +7149,6 @@ function resrcCenter() {
     var width1 = (widthpre / 5);
     var width = width1.toString() + "px";
     document.documentElement.style.setProperty('--div-width', width);
-console.log(widthpre, width1, width);
     return;
   }
   resrcDiv.style.display = "none";
@@ -7308,7 +7529,9 @@ function displayRecs() {
         document.getElementById('msgDiv').innerHTML += "Since they are on day " + overTime + " of coverage, Continue the claim as normal.<br><br>";
       }
     }
-    displayOutput();
+
+   displayOutput();
+
     if (hasMessage) {
       document.getElementById('alertDiv').innerHTML += "\u2757 CLICK TO SHOW MESSAGES \u2757<br>";
     }
@@ -7643,6 +7866,8 @@ function resetMD() {
   document.getElementById('MileDiscrep1').style.display = "block";
 }
 
+
+
 function colorshift(col,amt) {
   var usePound = false;
   if (col[0] == "#") {
@@ -7671,10 +7896,9 @@ function colorshift(col,amt) {
   return (usePound?"#":"") + (g | (b << 8) | (r << 16)).toString(16);
 }
 
-function duh() {
-  alert("What did you think I meant?");
-}
+
 
 </script>
+
 </body>
 </html>
