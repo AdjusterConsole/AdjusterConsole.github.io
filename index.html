@@ -2681,7 +2681,6 @@ th:empty, td:empty {
       <input type="radio" class="Mradio" style="float:right;" id="na4" name="ans4" value="NA"><label for="na4" style="float:right;">NA</label><BR>
       If so, have the repair facility submit the invoice for review.<br><br>
     </div>
-
     <div id="quest5" class="noShow"> 
       <b>Has the cause of failure been identified?</b>
       <input type="radio" class="Mradio" style="float:right; margin-right: 60px;" id="no5" name="ans5" value="NO"><label for="no5" style="float:right;">&nbsp&nbsp&nbspNO</label>
@@ -3395,7 +3394,7 @@ TIME:&nbsp&nbsp</textarea>
   <div id="nav3in10" class="overlay-content appearTut noShow" style="display: none;">
   </div>
 </div>
-<button id="SOPs" class="R P D" onclick="resrcCenter()">Resources</button>
+<button id="SOPs" class="R P D g0dispStat" onclick="resrcCenter()">Resources</button>
 <div id="resrcDiv" style="display: none;">
   <div class="tab">
     <button class="tablinks" onclick="openInfo(event, 'MBIClaims')">MBI</button>
@@ -3482,9 +3481,9 @@ TIME:&nbsp&nbsp</textarea>
 
     <div id="anstoquest4" class="answerSlide noShow">
       <p class="QandA">There are 2 things the CH will need.
-      The first is our website:</p>
+      The first is a list of Repair facilities that work with us:</p>
       <ul>
-      <li>americanautoshield.com</li>
+      <li>The CH will go to americanautoshield.com</li>
       <li>At the TOP of the home page, just to the right of center, is a button labelled 'Claims'.</li>
       <li>When they click on that, there is a drop-down menu with a link to 'Find a preferred repair facility'.</li>
       <li>That link will take them to the PRF page where they can find a list of repair facilities.</li>
@@ -5577,287 +5576,6 @@ window.onload = function PutItBack() {
 }
 
 
-function resetColors() {
-  var bgClr = localStorage.getItem("myBackgroundcolor");
-  var acClr = localStorage.getItem("myAccentcolor");
-  var shad1Clr = localStorage.getItem("shadow1color");
-  var shad2Clr = localStorage.getItem("shadow2color");
-  var userName = localStorage.getItem("userName");
-  var glowClr = localStorage.getItem("myGlowcolor");
-  var txtClr = localStorage.getItem("glowTxtcolor");
-  var outlineClr = localStorage.getItem("outlineClr");
-  var hoverClr = localStorage.getItem("hoverClr");
-  var activeClr = localStorage.getItem("activeClr");
-
-  var bgClrelem = document.getElementById("background-picker");
-  var acClrelem = document.getElementById("accent-picker");
-  var shad1elem = document.getElementById("shad1-picker");
-  var shad2elem = document.getElementById("shad2-picker");
-  var userNameelem = document.getElementById("userName");
-  var glowClrelem = document.getElementById("nameGlow");
-  var txtClrelem = document.getElementById("nameColor");
-  var outlineClrelem = document.getElementById("outlineColor");
-  var iscolorSet = localStorage.getItem("iscolorSet");
-  var tempClrL; 
-  var tempClrML; 
-  var tempClrMD; 
-  var tempClrD; 
-  var tempClrB; 
-  
-  switch(iscolorSet) {
-  case "default":
-  case "red":
-  case "green":
-    tempClrL = "#fafafa";
-    tempClrML = "#cccccc";
-    tempClrMD = "#acacac";
-    tempClrD = "#848484";
-    tempClrB = "#bfbfbf";
-    break;
-  case "blue":
-    tempClrL = "#ffffff";
-    tempClrML = "#c3cacf";
-    tempClrMD = "#a4aaae";
-    tempClrD = "#6d7174";
-    tempClrB = "#B6BDC1";
-    break;
-  }
-
-  document.documentElement.style.setProperty('--fancy-light', tempClrL);
-  document.documentElement.style.setProperty('--fancy-medlight', tempClrML);
-  document.documentElement.style.setProperty('--fancy-meddark', tempClrMD);
-  document.documentElement.style.setProperty('--fancy-dark', tempClrD);
-  document.documentElement.style.setProperty('--fancy-background', tempClrB);
-
-  if (bgClr != null) {
-    document.documentElement.style.setProperty('--my-background-color', bgClr);
-    bgClrelem.value = bgClr;
-  }
-  if (acClr != null) {
-    document.documentElement.style.setProperty('--my-accent-color', acClr);
-    acClrelem.value = acClr;
-    document.documentElement.style.setProperty('--hover-color', hoverClr);
-    document.documentElement.style.setProperty('--active-color', activeClr);
-  }
-  if (shad1Clr != null) {
-    document.documentElement.style.setProperty('--my-shadow-color1', shad1Clr);
-    shad1elem.value = shad1Clr;
-  }
-  if (shad2Clr != null) {
-    document.documentElement.style.setProperty('--my-shadow-color2', shad2Clr);
-    shad2elem.value = shad2Clr;
-  }
-  if (userName != null) {
-    var glowDiv = document.getElementById("glowDiv");
-    glowDiv.innerHTML = userName;
-    userNameelem.value = userName;
-  }
-  if (glowClr != null) {
-    document.documentElement.style.setProperty('--my-glow-color', glowClr);
-    glowClrelem.value = glowClr;
-  }
-  if (txtClr != null) {
-    document.documentElement.style.setProperty('--glow-txt-color', txtClr);
-    txtClrelem.value = txtClr;
-  }
-  if (outlineClr != null) {
-    document.documentElement.style.setProperty('--glow-outline-color', outlineClr);
-    outlineClrelem.value = outlineClr;
-  }
-}
-
-function personalize() {
-  MENU();
-  var appearDiv = document.getElementById("appearDiv");
-  appearDiv.style.display = "inline-block";
-}
-
-function exitColor() {
-  var appearDiv = document.getElementById("appearDiv");
-  appearDiv.style.display = "none";
-  location.reload();
-}
-
-function saveColors() {
-  var bgClrelem = document.getElementById("background-picker");
-  var acClrelem = document.getElementById("accent-picker");
-  var shad1elem = document.getElementById("shad1-picker");
-  var shad2elem = document.getElementById("shad2-picker");
-  var glowClrelem = document.getElementById("nameGlow");
-  var txtClrelem = document.getElementById("nameColor");
-  var userNameelem = document.getElementById("userName");
-  var outlineClrelem = document.getElementById("outlineColor");
-  var glowDiv = document.getElementById("glowDiv");
-
-  var bgClr = bgClrelem.value;
-  var acClr = acClrelem.value;
-  var shad1Clr = shad1elem.value;
-  var shad2Clr = shad2elem.value;
-  var glowClr = glowClrelem.value;
-  var txtClr = txtClrelem.value;
-  var userName = userNameelem.value;
-  var outlineClr = outlineClrelem.value;
-  var hoverClr = acClr + "32";
-  var activeClr = acClr + "60";
-  glowDiv.innerHTML = userName;
-
-  document.documentElement.style.setProperty('--my-background-color', bgClr);
-  document.documentElement.style.setProperty('--my-accent-color', acClr);
-  document.documentElement.style.setProperty('--my-shadow-color1', shad1Clr);
-  document.documentElement.style.setProperty('--my-shadow-color2', shad2Clr);
-  document.documentElement.style.setProperty('--my-glow-color', glowClr);
-  document.documentElement.style.setProperty('--glow-txt-color', txtClr);
-  document.documentElement.style.setProperty('--glow-outline-color', outlineClr);
-  document.documentElement.style.setProperty('--hover-color', hoverClr);
-  document.documentElement.style.setProperty('--active-color', activeClr);
-
-  localStorage.setItem("myBackgroundcolor", bgClr);
-  localStorage.setItem("myAccentcolor", acClr);
-  localStorage.setItem("shadow1color", shad1Clr);
-  localStorage.setItem("shadow2color", shad2Clr);
-  localStorage.setItem("myGlowcolor", glowClr);
-  localStorage.setItem("glowTxtcolor", txtClr);
-  localStorage.setItem("userName", userName);
-  localStorage.setItem("outlineClr", outlineClr);
-  localStorage.setItem("hoverClr", hoverClr);
-  localStorage.setItem("activeClr", activeClr);
-  exitColor();
-}
-
-function setColor(colorSet) {
-  var tempClr1; //background
-  var tempClr2; //accent
-  var tempClr3; //shad1
-  var tempClr4; //shad2
-  var tempClr5; //glow color
-  var tempClr6; //text color
-  var tempClr7; //outline
-  var tempClrL; 
-  var tempClrML; 
-  var tempClrMD; 
-  var tempClrD; 
-  var tempClrB; 
-  var iscolorSet;
-
-  switch(colorSet) {
-  case "default":
-    tempClr1 = "#4f4f4f";
-    tempClr2 = "#707070";
-    tempClr3 = "#cecece";
-    tempClr4 = "#141414";
-    tempClr5 = "#ffffff";
-    tempClr6 = "#000000";
-    tempClr7 = "#ffffff";
-    tempClrL = "#fafafa";
-    tempClrML = "#cccccc";
-    tempClrMD = "#acacac";
-    tempClrD = "#848484";
-    tempClrB = "#bfbfbf";
-    iscolorSet = "default";
-    break;
-  case "blue":
-    tempClr1 = "#324350";
-    tempClr2 = "#7C878F";
-    tempClr3 = "#D4D7DA";
-    tempClr4 = "#1A2229";
-    tempClr5 = "#ffffff";
-    tempClr6 = "#503f32";
-    tempClr7 = "#ffffff";
-    tempClrL = "#ffffff";
-    tempClrML = "#c3cacf";
-    tempClrMD = "#a4aaae";
-    tempClrD = "#6d7174";
-    tempClrB = "#B6BDC1";
-    iscolorSet = "blue";
-    break;
-  case "red":
-    tempClr1 = "#622823";
-    tempClr2 = "#81524E";
-    tempClr3 = "#CFBEBD";
-    tempClr4 = "#130807";
-    tempClr5 = "#ffffff";
-    tempClr6 = "#236228";
-    tempClr7 = "#ffffff";
-    tempClrL = "#fafafa";
-    tempClrML = "#cccccc";
-    tempClrMD = "#acacac";
-    tempClrD = "#848484";
-    tempClrB = "#bfbfbf";
-    iscolorSet = "red";
-    break;
-  case "green":
-    tempClr1 = "#2f9844";
-    tempClr2 = "#58ac69";
-    tempClr3 = "#c0e0c6";
-    tempClr4 = "#040f06";
-    tempClr5 = "#ffffff";
-    tempClr6 = "#98422f";
-    tempClr7 = "#ffffff";
-    tempClrL = "#fafafa";
-    tempClrML = "#cccccc";
-    tempClrMD = "#acacac";
-    tempClrD = "#848484";
-    tempClrB = "#bfbfbf";
-    iscolorSet = "green";
-    break;
-  case "4":
-    tempClr1 = "#4f4f4f";
-    tempClr2 = "#707070";
-    tempClr3 = "#ffffff";
-    tempClr4 = "#000000";
-    tempClr5 = "#cecece";
-    tempClr6 = "#141414";
-    tempClr7 = "#ffffff";
-    break;
-  }
-  var bgClrelem = document.getElementById("background-picker");
-  bgClrelem.value = tempClr1;
-
-  var acClrelem = document.getElementById("accent-picker");
-  acClrelem.value = tempClr2;
-
-  var shad1elem = document.getElementById("shad1-picker");
-  shad1elem.value = tempClr3;
-
-  var shad2elem = document.getElementById("shad2-picker");
-  shad2elem.value = tempClr4;
-
-  var glowClrelem = document.getElementById("nameGlow");
-  glowClrelem.value = tempClr5;
-
-  var txtClrelem = document.getElementById("nameColor");
-  txtClrelem.value = tempClr6;
-
-  var outlineClrelem = document.getElementById("outlineColor");
-  outlineClrelem.value = tempClr7;
-
-  var hoverClr = tempClr2 + "32";
-  var activeClr = tempClr2 + "60";
-
-  localStorage.setItem("iscolorSet", iscolorSet);
-  document.documentElement.style.setProperty('--my-background-color', tempClr1);
-  document.documentElement.style.setProperty('--my-accent-color', tempClr2);
-  document.documentElement.style.setProperty('--my-shadow-color1', tempClr3);
-  document.documentElement.style.setProperty('--my-shadow-color2', tempClr4);
-  document.documentElement.style.setProperty('--my-glow-color', tempClr5);
-  document.documentElement.style.setProperty('--glow-txt-color', tempClr6);
-  document.documentElement.style.setProperty('--glow-outline-color', tempClr7);
-  document.documentElement.style.setProperty('--hover-color', hoverClr);
-  document.documentElement.style.setProperty('--active-color', activeClr);
-  document.documentElement.style.setProperty('--fancy-light', tempClrL);
-  document.documentElement.style.setProperty('--fancy-medlight', tempClrML);
-  document.documentElement.style.setProperty('--fancy-meddark', tempClrMD);
-  document.documentElement.style.setProperty('--fancy-dark', tempClrD);
-  document.documentElement.style.setProperty('--fancy-background', tempClrB);
-}
-
-
-
-
-
-
-
-
 function colorObject() {
   this.background = "#324350";
   this.accent = "#7C878F";
@@ -7895,8 +7613,6 @@ function colorshift(col,amt) {
   }
   return (usePound?"#":"") + (g | (b << 8) | (r << 16)).toString(16);
 }
-
-
 
 </script>
 
