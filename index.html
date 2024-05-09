@@ -508,10 +508,10 @@ f {
 
 #statusNote {
   font-size: 22px;
-  top: 110px;
+  top: 180px;
   left: 380px;
   width: 150px;
-  height: 80px;
+  height: 60px;
 }
 
 #submitStat {
@@ -675,7 +675,7 @@ f {
   font-size: 22px;
   height: 80px;
   width: 150px;
-  top: 15px;
+  top: 65px;
   left: 380px;
 }
 
@@ -1947,6 +1947,10 @@ input[type="color"] {
   border-radius: 5px;
 }
 
+.tab.hide {
+  display: none;
+}
+
 .tab button {
   background: none;
   float: left;
@@ -1954,7 +1958,7 @@ input[type="color"] {
   border-right: 2px solid var(--my-accent-color);
   outline: none;
   cursor: pointer;
-  padding: 10px 14px;
+  padding: 14px 18px;
   transition: 0.5s;
   transition: width 0s;
   font-size: 17px;
@@ -1997,7 +2001,6 @@ input[type="color"] {
 .QandA {
   margin-left: 15px;
 }
-
 
 li {
   margin: 5px;
@@ -2155,12 +2158,21 @@ li {
 }
 
 #SOPs {
-  left: 380px;
-  top: 205px;
-  height: 60px;
-  width: 150px;
+  left: 710px;
+  top: 15px;
+  height: 70px;
+  width: 125px;
   font-size: 22px;
-  color:  red;
+
+}
+
+#tools {
+  left: 710px;
+  top: 105px;
+  height: 70px;
+  width: 125px;
+  font-size: 22px;
+
 }
 
 .authGuide {
@@ -2209,7 +2221,6 @@ li {
   text-align: center;
   border-collapse: collapse;
   border-spacing: 0;
-
 }
 
 th:empty, td:empty {
@@ -2230,7 +2241,6 @@ th:empty, td:empty {
   border: none;
   border-collapse: separate;
   background: transparent;
-
 }
 
 #tableDiv {
@@ -2490,7 +2500,6 @@ th:empty, td:empty {
   height: auto;
 }
 
-
 .noteBins.arise {
   box-shadow: -5px -5px 16px var(--fancy-dark), 5px 5px 16px var(--fancy-light);
   background: linear-gradient(315deg, var(--fancy-meddark), var(--fancy-medlight));
@@ -2503,14 +2512,12 @@ th:empty, td:empty {
   pointer-events: auto;
 }
 
-
 #MileDiscrep1.mileage.noteBins.arise {
   top: 100px;
   left: 35px;
   width: 90%;
   height: auto;
 }
-
 
 .repOpt {
   margin: 10px;
@@ -2537,7 +2544,6 @@ th:empty, td:empty {
   text-align: left;
 }
 
-
 .both {
   display: none;
   position: absolute;
@@ -2553,14 +2559,12 @@ th:empty, td:empty {
 .both.leftSide {
   bottom: 95px;
   left: 15px;
-
 }
 
 .both.rightSide {
   bottom: 95px;
   right: 15px;
 }
-
 
 #ITSBRITTNEY {
   top: 430px;
@@ -2588,7 +2592,7 @@ th:empty, td:empty {
   display: inline-block;
   position: absolute;
   left: 570px;
-  top: 135px;
+  top: 125px;
 }
 
 #snipbox {
@@ -2696,7 +2700,7 @@ th:empty, td:empty {
     <button id="noansR" class="RecordsReqNoAnsBTN D R P C s3dispStat" oncontextmenu="customMenu(this.id, event)" onclick="NOANSREC(this.id)">RECDS REQST <b>NO ANSWER</b></button>
   </div>
   <div id="O1" class="noShow">
-    <button id="R6" class="OOPCallNoAnsBTN D R P C s4dispStat" oncontextmenu="customMenu(this.id, event)"  onclick="CALLNOANS(this.id)"><f>OOPC CALL</f> <b>NO ANSWER</b></button>
+    <button id="R6" class="OOPCallNoAnsBTN D R P C s4dispStat" oncontextmenu="customMenu(this.id, event)" onclick="CALLNOANS(this.id)"><f>OOPC CALL</f> <b>NO ANSWER</b></button>
   </div>
   <div id="O2" class="noShow">
     <button id="R7" class="CHAuthedOOPCBTN D R P C s5dispStat" oncontextmenu="customMenu(this.id, event)" onclick="AUTHOOPC(this.id)"><b>CH AUTHED</b> OOPC</button>
@@ -3061,7 +3065,10 @@ th:empty, td:empty {
     <label id="switchs8" class="switch"><input type="checkbox" id="s8" onclick="toggleConductor(this.id)"><span class="slider round"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspStatus Note
   </div><br>
   <div id="switchdivg0" class="noShow sd">
-    <label id="switchg0" class="switch"><input type="checkbox" id="g0" onclick="toggleConductor(this.id)"><span class="slider round"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspResources
+    <label id="switchg0" class="switch"><input type="checkbox" id="g0" onclick="toggleConductor(this.id)"><span class="slider round"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspInformation
+  </div><br>
+  <div id="switchdivg1" class="noShow sd">
+    <label id="switchg1" class="switch"><input type="checkbox" id="g1" onclick="toggleConductor(this.id)"><span class="slider round"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspTools
   </div><br>
   <div id="switchdivs0" class="noShow sd">
     <label id="switchs0" class="switch"><input type="checkbox" id="s0" onclick="toggleConductor(this.id)"><span class="slider round"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspGeneral Notes
@@ -3465,19 +3472,24 @@ TIME:&nbsp&nbsp</textarea>
   <div id="nav3in10" class="overlay-content appearTut noShow" style="display: none;">
   </div>
 </div>
-<button id="SOPs" class="R P D g0dispStat" onclick="resrcCenter()">Resources</button>
+<button id="SOPs" class="R P D g0dispStat" oncontextmenu="customMenu(this.id, event)" onclick="resrcCenter('6','p')"><f>Policy</f></button>
+<button id="tools" class="R P D g1dispStat" oncontextmenu="customMenu(this.id, event)" onclick="resrcCenter('4','t')"><f>Tools</f></button>
+
 <div id="resrcDiv" style="display: none;">
-  <div class="tab">
-    <button class="tablinks" onclick="openInfo(event, 'MBIClaims')">MBI</button>
-    <button class="tablinks" onclick="openInfo(event, 'xfer2790')">2790</button>
-    <button class="tablinks" onclick="openInfo(event, 'DoNotUse')">Do Not Use</button>
-    <button class="tablinks" onclick="openInfo(event, 'IsItPT')">Is It PT</button>
-    <button class="tablinks edgeButton" onclick="openInfo(event, 'Diagnostic')">Diag Times</button>
-    <button class="tablinks" onclick="openInfo(event, 'PANoOrder')">Do Not Order</button>
+  <div id="toolsDiv" class="tab hide">
     <button class="tablinks" onclick="openInfo(event, 'QuickAns')">Quick Answers</button>
     <button class="tablinks" onclick="openInfo(event, 'MileDiscrep')">Mileage Discrep</button>
     <button class="tablinks" onclick="openInfo(event, 'PAPrice')">Parts Pricing</button>
     <button class="tablinks edgeButton" onclick="openInfo(event, 'trackerTool')">Tracker</button>
+  </div>
+
+  <div id="policyDiv" class="tab hide">
+    <button class="tablinks" onclick="openInfo(event, 'MBIClaims')">MBI</button>
+    <button class="tablinks" onclick="openInfo(event, 'xfer2790')">2790</button>
+    <button class="tablinks" onclick="openInfo(event, 'DoNotUse')">Do Not Use</button>
+    <button class="tablinks" onclick="openInfo(event, 'IsItPT')">Is It PT</button>
+    <button class="tablinks" onclick="openInfo(event, 'Diagnostic')">Diag Times</button>
+    <button class="tablinks edgeButton" onclick="openInfo(event, 'PANoOrder')">Do Not Order</button>
   </div>
 
   <div id="QuickAns" class="tabcontent">
@@ -3818,11 +3830,12 @@ TIME:&nbsp&nbsp</textarea>
       <p class="bodyTab">Coolant flushes after water pump replacement are to be 
       used only if there is contamination in the system from a covered 
       failure.<br><br>
-      Swapping ignition coils is 100% a valid diag. We can auth the
-      labor time to swap the coil as diag and again as an R/R procedure.<br><br>
+      Anything that is part of the R/R procedure cannot be counted 
+      towards diag as it is considered overlap.<br><br>
       Always check ProDemand FIRST.</p>
       </div>
   </div>
+
   <div id="trackerTool" class="tabcontent">
   <div id="tableDiv" class="noteBins arise tableSize">
   <table id="inputTable" class="inputClass">
@@ -4570,6 +4583,7 @@ document.onkeyup = function(e) {
     document.getElementById('myInfo').style.display = "none";
   }
 };
+
   let newpartcount = 2;
   var menuOpen = false;
 
@@ -4887,6 +4901,7 @@ function showOOPopt() {
 }
 
 function finishAuth(stage) {
+  document.getElementById("OOPoptDiv").style.display = "none";
   var noncovComps = document.getElementById("auth18");
   if (noncovComps.checked) { stage.value += noncovAuth1; }
   stage.select();
@@ -6722,6 +6737,7 @@ function questAnswered(answerDiv) {
   }
 }
 
+
 function questOpen() {
   if (document.getElementById("anstoquest1").classList.contains('active')) {
     return true;
@@ -6805,19 +6821,24 @@ function closeResource() {
   resrcCenter();
 }
 
-function resrcCenter() {
+function resrcCenter(x,y) {
+  var w = parseInt(x);
   var resrcDiv = document.getElementById("resrcDiv");
   var isOpen = checkOpen();
   if (resrcDiv.style.display == "none" && !isOpen) {
     resrcDiv.style.display = "inline-block";
+    if (y == 'p') { document.getElementById("policyDiv").classList.remove("hide"); }
+    if (y == 't') { document.getElementById("toolsDiv").classList.remove("hide"); }
     document.getElementById('trackerMsg').innerText = "";
     var widthpre = parseInt(window.getComputedStyle(resrcDiv).width);
-    var width1 = (widthpre / 5);
+    var width1 = (widthpre / w);
     var width = width1.toString() + "px";
     document.documentElement.style.setProperty('--div-width', width);
     return;
   }
   resrcDiv.style.display = "none";
+  document.getElementById("policyDiv").classList.add("hide");
+  document.getElementById("toolsDiv").classList.add("hide");
 }
 
 function addLine() {
@@ -7695,8 +7716,6 @@ function resetMD() {
   document.getElementById('MileDiscrep1').style.display = "block";
 }
 
-
-
 function colorshift(col,amt) {
   var usePound = false;
   if (col[0] == "#") {
@@ -7726,5 +7745,6 @@ function colorshift(col,amt) {
 }
 
 </script>
+
 </body>
 </html>
