@@ -479,7 +479,7 @@ f {
 }
 
 #R7 {
-  display: none;	
+  display: none;
   font-size: 15px;
   width: 130px;
   height: 70px;
@@ -495,17 +495,74 @@ f {
   top: 180px;
 }
 
-#statNote {
+#theHoldup { 
+  left: 210px;
+  bottom: 225px;
+  border-left: 2px solid var(--my-accent-color);
+}
+
+
+.backing {
   position: absolute;
   display: inline-block;
+  background: var(--fancy-background);
+  box-shadow:
+   inset 0px 0px 10px 4px var(--my-shadow-color2),
+   0px 12px 70px 14px black;
+  overflow: hidden;
+}
+
+.newStyle {
+  background: linear-gradient(315deg, var(--fancy-meddark), var(--fancy-medlight));
+  box-shadow: -5px -5px 16px var(--fancy-dark), 5px 5px 16px var(--fancy-light);
+  overflow: hidden;
+  transition: .4s;
+}
+
+#statNoteinner {
+  width: 40%;
+  height: 50%;
+  padding: 15px;
+  margin: 15px;
+  transition: .4s;
+  transition-delay: .1s;
+}
+
+.newStyle.lftmid {
+  bottom: 200px;
+  right: 70px;
+  position: absolute;
+  display: inline-block;
+  padding: 15px;
+}
+
+#optionalNote {
+  width: 65%;
+  height: 40%;
+  padding: 15px;
+  outline: none;
+}
+
+.newStyle.rgtupr {
+  top: 30px;
+  right: 30px;
+  position: absolute;
+  display: inline-block;
+  padding: 15px;
+  height: 40%
+}
+
+#statNote {
+  position: absolute;
+  display: none;
   padding: 15px;
   z-index: 5;
   font-size: 14px;
   text-shadow: 0px 0px 1px;
-  top: 100px;
-  left: 50px;
+  top: 15px;
+  left: 15px;
   width: 800px;
-  height: 600px;
+  height: 850px;
 }
 
 #statusNote {
@@ -519,15 +576,17 @@ f {
 #submitStat {
   height: 60px;
   width: 140px;
-  bottom: 15px;
-  right: 15px;
+  bottom: 5px;
+  right: 5px;
+  border-left: 2px solid var(--my-accent-color);
 }
 
 #cancelStat {
-  height: 40px;
-  width: 80px;
-  bottom: 85px;
-  right: 15px;
+  height: 60px;
+  width: 140px;
+  bottom: 5px;
+  right: 145px;
+  border-left: 2px solid var(--my-accent-color);
 }
 
 #transferTemplate {
@@ -637,7 +696,7 @@ f {
   display: inline-block;
   height: 60px;
   width: 140px;
-  margin-top:15px;
+  margin-top:30px;
 }
 
 .Cancelbtn {
@@ -645,7 +704,7 @@ f {
   height: 40px;
   width: 80px;
   margin-left: 150px;
-  margin-top:15px;
+  margin-top:30px;
 }
 
 #newAuthstyle {
@@ -654,7 +713,7 @@ f {
   padding: 15px;
   top: 150px;
   left: 40px;
-  height: 420px;
+  height: 460px;
   width: 830px;
   z-index: 6;
 }
@@ -1960,7 +2019,7 @@ input[type="color"] {
   border-right: 2px solid var(--my-accent-color);
   outline: none;
   cursor: pointer;
-  padding: 14px 18px;
+  padding: 11px 15px;
   transition: 0.5s;
   transition: width 0s;
   font-size: 17px;
@@ -2165,6 +2224,7 @@ li {
   width: 130px;
   height: 70px;
   font-size: 22px;
+
 }
 
 #tools {
@@ -2173,6 +2233,7 @@ li {
   width: 130px;
   height: 70px;
   font-size: 22px;
+
 }
 
 .authGuide {
@@ -2547,7 +2608,7 @@ th:empty, td:empty {
 .both {
   display: none;
   position: absolute;
-  width: 40%;
+
   background: linear-gradient(315deg, var(--fancy-meddark), var(--fancy-medlight));
   box-shadow: -5px -5px 16px var(--fancy-dark), 5px 5px 16px var(--fancy-light);
   overflow: hidden;
@@ -2559,11 +2620,13 @@ th:empty, td:empty {
 .both.leftSide {
   bottom: 95px;
   left: 15px;
+  width: 35%;
 }
 
 .both.rightSide {
   bottom: 95px;
   right: 15px;
+  width: 44%;
 }
 
 #ITSBRITTNEY {
@@ -2699,10 +2762,10 @@ th:empty, td:empty {
   <div id="RQ3" class="noShow">
     <button id="noansR" class="RecordsReqNoAnsBTN D R P C s3dispStat" oncontextmenu="customMenu(this.id, event)" onclick="NOANSREC(this.id)">RECDS REQST <b>NO ANSWER</b></button>
   </div>
-  <div id="O1" class="noShow" style="display:none;">
+  <div id="O1" class="noShow">
     <button id="R6" class="OOPCallNoAnsBTN D R P C s4dispStat" oncontextmenu="customMenu(this.id, event)" onclick="CALLNOANS(this.id)"><f>OOPC CALL</f> <b>NO ANSWER</b></button>
   </div>
-  <div id="O2" class="noShow" style="display:none;">
+  <div id="O2" class="noShow">
     <button id="R7" class="CHAuthedOOPCBTN D R P C s5dispStat" oncontextmenu="customMenu(this.id, event)" onclick="AUTHOOPC(this.id)"><b>CH AUTHED</b> OOPC</button>
   </div>
   <div id="T10" class="noShow">
@@ -2806,39 +2869,68 @@ th:empty, td:empty {
       <button id="cancelPT" onclick="cancelPT()">Cancel</button>
     </div>
   </div>
- <button id="statusNote" class="D R P s8dispStat" oncontextmenu="customMenu(this.id, event)" onclick="statNOTE()"><b>Status</b> Note</button>
-  <div id="statNote" style="display: none">
-    <div id="stat0" style="text-align:center;width:100%;font-size:18px;" class="noShow"><b>Status Note</b></div><br>
-    <div id="stat1" class="noShow">  
-      <b>Is anything required from the repair facility or contract holder?</b>
-      <input type="radio" style="float:right; margin-right: 60px;" id="no1a" name="stat1a" value="NO"><label for="no1a" style="float:right;">&nbsp&nbsp&nbspNO</label>
-      <input type="radio" style="float:right;" id="yes1a" name="stat1a" value="YES"><label for="yes1a" style="float:right;">YES</label><br>
-       Photos, records, etc...
-      <textarea id="stat1explain" placeholder="If yes, describe" rows="2" cols="35" style="right:60px;box-shadow:none;border:2px solid black;resize:none;"></textarea>
-    </div><br><br><br><br><br>
-    <div id="stat2" class="noShow">  
-      <b>If so, are they aware of the requirements and how to accomplish?</b>
-      <input type="radio" style="float:right; margin-right: 60px;" id="no2a" name="stat2a" value="NO"><label for="no2a" style="float:right;">&nbsp&nbsp&nbspNO</label>
-      <input type="radio" style="float:right;" id="yes2a" name="stat2a" value="YES"> <label for="yes2a" style="float:right;">&nbsp&nbsp&nbspYES</label>   
-      <input type="radio" style="float:right;" id="na2a" name="stat2a" value="NA"><label for="na2a" style="float:right;">NA</label><br><br><br><br><br>
-    </div>
-    <div id="stat3" class="noShow">  
-      <textarea id="stat3explain" placeholder="Next steps..." rows="2" cols="35" style="right:60px;box-shadow:none;border:2px solid black;resize:none;"></textarea>
-      <b>What are the next steps in the claim process?</b><br>
-      Be clear and specific so the next <br>adjuster can complete the claim.<br>
-    </div><br><br><br><br>
-    <div id="stat4" class="noShow">  
-      <b>Are there any special conversations that need to</b>
-      <input type="radio" style="float:right; margin-right: 60px;" id="no4a" name="stat4a" value="NO"><label for="no4a" style="float:right;">&nbsp&nbsp&nbspNO</label>
-      <input type="radio" style="float:right;" id="yes4a" name="stat4a" value="YES"><label for="yes4a" style="float:right;">YES</label><br>
-      <b>happen with either the repair facility or contract holder?</b><br>
-      Parts/Labor difference, OOPC, Parts decisions, etc...
-      <textarea id="stat4explain" placeholder="If yes, describe" rows="2" cols="35" style="right:60px;box-shadow:none;border:2px solid black;resize:none;"></textarea>
-      <br><br>
-    </div>
-    <button id="submitStat" onclick="submitStat()">Submit</button>
-    <button id="cancelStat" onclick="cancelStat()">Cancel</button>
+
+  <button id="statusNote" class="D R P s8dispStat" oncontextmenu="customMenu(this.id, event)" onclick="statNOTE()"><b>Status</b> Note</button>
+  <div id="statNote" class="backing">
+  <div id="statNoteinner" class="newStyle">
+    <h3 class="headerTab">Status Note</h3>
+    <p>What are we waiting on?</p>
+    <p class="bodyTab">
+      <input type="radio" value="inspection" class="newStatus" name="waitfor" id="stat1"><label for="stat1">Inspection</label><br>
+      <input type="radio" value="photos" class="newStatus" name="waitfor" id="stat2"><label for="stat2">Photos</label><br>
+      <input type="radio" value="records" class="newStatus" name="waitfor" id="stat3"><label for="stat3">Records</label><br>
+      <input type="radio" value="CH statement" class="newStatus" name="waitfor" id="stat4"><label for="stat4">CH statement</label><br>
+      <input type="radio" value="review" class="newStatus" name="waitfor" id="stat5"><label for="stat5">Review</label><br>
+      <input type="radio" class="newStatus" name="waitfor" id="stat6"><label for="stat6">Other</label><input type="text" class="newStatus" id="stat6text" style="margin-left:15px;">
+    </p>
+    <p>From whom?</p>
+    <p class="bodyTab">
+      <input type="radio" value="Contract Holder" class="newStatus" name="onwho" id="stat7" required><label for="stat7">Contract Holder</label><br>
+      <input type="radio" value="Repair Facility" class="newStatus" name="onwho" id="stat8"><label for="stat8">Repair Facility</label><br>
+      <input type="radio" value="AAS" class="newStatus" name="onwho" id="stat9"><label for="stat9">AAS</label><br>
+      <input type="radio" class="newStatus" name="onwho" id="stat10"><label for="stat10">Other</label><input type="text" class="newStatus" id="stat10text" style="margin-left:15px;">
+    </p>
+    <p>Why?</p>
+    <p class="bodyTab">
+      <input type="checkbox" value="rule out pre-x" class="newStatus" name="butYtho" id="stat11"><label for="stat11">To rule out pre-x</label><br>
+      <input type="checkbox" value="verify failure" class="newStatus" name="butYtho" id="stat12"><label for="stat12">To verify failure</label><br>
+      <input type="checkbox" value="correct VIN or mileage issue" class="newStatus" name="butYtho" id="stat13"><label for="stat13">To correct VIN or mileage issue</label><br>
+      <input type="checkbox" class="newStatus" name="butYtho" id="stat14"><label for="stat14">Other</label><input type="text" class="newStatus" id="stat14text" style="margin-left:15px;">
+    </p>
+    <p>Do they know what we're looking for<br>and how to get it to us?</p>
+    <p class="bodyTab">
+      <input type="radio" value="yes" class="newStatus" name="aware" id="stat15" required><label for="stat15">Yes</label><br>
+      <input type="radio" value="no" class="newStatus" name="aware" id="stat16"><label for="stat16">No</label><br>
+    </p>
+    <button id="theHoldup" class="wefwefwef" onclick="submitStat('1')">Another One?</button>
   </div>
+  <div id="optional" class="newStyle rgtupr">
+    <p style="text-align:center; font-size:17px;" ><b>Optional</b></p>
+    <p class="bodyTab">
+      Any relevant info?<br>
+      What are the next steps in the claim?<br>
+      Anything for the next adjuster to look out for?<br>
+      Any notes, in general?<br>
+    <textarea id="optionalNote" class="statText"></textarea>
+    </p>
+    </div>
+    <div id="optional2" class="newStyle lftmid">
+      <p>
+        <input type="checkbox" id="informed" class="newStatus">
+        The CH and RF should be informed<br>of requests and claim status.<br><br>
+        <input type="checkbox" id="pandlin" class="newStatus">
+        Parts and labor should be verified<br>and entered into claim. <br><br>
+        <input type="checkbox" id="taskset" class="newStatus">
+        A task should be set for follow up. 
+      </p>
+    </div>
+    <button id="submitStat" class="wefwefwef" onclick="submitStat('0')">Submit</button>
+    <button id="cancelStat" class="wefwefwef" onclick="cancelStat()">Cancel</button>
+     </div>
+
+
+
+
  <button id="newAuthstarter" class="D R P s7dispStat" oncontextmenu="customMenu(this.id, event)" onclick="showAuth()"><b><f>Authorize</f></b> Claim</button>
   <div id="newAuthstyle" style="display:none;">
     <div id="authParts" class="noShow" style="display:inline-block;font-size:16px;">
@@ -2871,11 +2963,12 @@ th:empty, td:empty {
         <input type="radio" id="auth13" name="authoops" class="FNA largerRadio"><label for="auth13"><b>No Concerns</b></label><br><br>
       </div>
       <div class="noShow" style="width:50%;left:15px;top:220px;position:absolute;font-size:18px;margin-top:15px;">
-        <b>Any non-covered components?</b><br>
-        <input type="radio" id="auth18" name="authoops3" class="FNA largerRadio"><label for="auth18"><b>Yes</b></label><br>
-        <input type="radio" id="auth19" name="authoops3" class="FNA largerRadio"><label for="auth19"><b>No</b></label>
+        <b>Any non-covered or denied components?</b><br>
+        <input type="checkbox" id="auth18" name="authoops3" class="FNA largerCheckbox"><label for="auth18"><b>Non-Covered</b></label><br>
+        <input type="checkbox" id="auth18a" name="authoops3" class="FNA largerCheckbox"><label for="auth18a"><b>Denied</b></label><br>
+        <input type="checkbox" id="auth19" name="authoops3" class="FNA largerCheckbox"><label for="auth19"><b>No</b></label>
       </div>
-      <div id="OOPoptDiv" class="noShow" style="display:none;width:50%;right:15px;top:15px;position:absolute;font-size:18px;">
+      <div id="OOPoptDiv" class="noShow" style="display:none;width:45%;right:15px;top:15px;position:absolute;font-size:18px;">
       <b>What is the cause of OOPC?</b><br>
         <input type="radio" id="auth14" name="authoops2" class="FNA largerRadio"><label for="auth14"><b>Parts</b></label><br>
         <input type="radio" id="auth15" name="authoops2" class="FNA largerRadio"><label for="auth15"><b>Labor</b></label><br>
@@ -3472,7 +3565,7 @@ TIME:&nbsp&nbsp</textarea>
   <div id="nav3in10" class="overlay-content appearTut noShow" style="display: none;">
   </div>
 </div>
-<button id="SOPs" class="R P D g0dispStat" oncontextmenu="customMenu(this.id, event)" onclick="resrcCenter('6','p')"><f>Policy</f></button>
+<button id="SOPs" class="R P D g0dispStat" oncontextmenu="customMenu(this.id, event)" onclick="resrcCenter('7','p')"><f>Policy</f></button>
 <button id="tools" class="R P D g1dispStat" oncontextmenu="customMenu(this.id, event)" onclick="resrcCenter('4','t')"><f>Tools</f></button>
 
 <div id="resrcDiv" style="display: none;">
@@ -3488,9 +3581,29 @@ TIME:&nbsp&nbsp</textarea>
     <button class="tablinks" onclick="openInfo(event, 'xfer2790')">2790</button>
     <button class="tablinks" onclick="openInfo(event, 'DoNotUse')">Do Not Use</button>
     <button class="tablinks" onclick="openInfo(event, 'IsItPT')">Is It PT</button>
+    <button class="tablinks" onclick="openInfo(event, 'partsRes')">Parts Res</button>
     <button class="tablinks" onclick="openInfo(event, 'Diagnostic')">Diag Times</button>
     <button class="tablinks edgeButton" onclick="openInfo(event, 'PANoOrder')">Do Not Order</button>
   </div>
+
+
+
+  <div id="partsRes" class="tabcontent">
+    <h3 class="headerTab" style="margin-bottom:0px;">Parts Resolution</h3>
+    <p style="text-align:center;margin-top:10px;">What is it and how is it done?</p>
+
+    <p>Situations that require a Parts Resolution:</p>
+      <ul>
+      <li>The wrong part was ordered or delivered.</li>
+      <li>The part was delivered broken/inoperable</li>
+      <li>The part has failed after install but within 30 days of repair</li>
+      <li>The part has failed after 30 days but within warranty period<br>(typically within 12 months/12,000 miles of repair)</li>
+      <li>The part was not installed and is no longer required</li><br><br><br>
+      <li>Coming soon: SOP for parts resolutions plus tips and tricks</li>
+      </ul>
+
+  </div>
+
 
   <div id="QuickAns" class="tabcontent">
     <h3 class="headerTab" style="margin-bottom:0px;">Common questions</h3>
@@ -4016,11 +4129,14 @@ TIME:&nbsp&nbsp</textarea>
   </div>
 <div class="noShow" id="reportData" style="display:none;"></div>
 <script>
+  var newauthLine0 = "RF Contact name: ";
   var newauthLine1 = "Verified failures using RF diagnostic.";
+  var newauthLine1a = "Verified failures using RF diagnostic and inspection report.";
+  var newauthLine1b = "Verified failures using RF diagnostic and RF supplied photos.";
   var newauthLine2 = "Contract has coverage for failed components.";
   var newauthLine3 = "Verified OEM parts using Forte and AM parts using PA.";
   var newauthLine4 = "Verified labor using Pro Demand.";
-  var newauthLine5 = "Verified payment info with repair facility at: ";
+  var newauthLine5 = "Verified payment info with RF contact at: ";
 
   document.getElementById("auth1").value = "Using repair facility OEM parts at or under $250.00.";
   document.getElementById("auth2").value = "Using repair facility parts at or under sourcing MCE.";
@@ -4043,6 +4159,7 @@ TIME:&nbsp&nbsp</textarea>
   var oopcsAuth4 = "Contract holder has no OOPC besides deductible.";
   var oopcsAuth4a = "Gave authorization info and payment instructions to ";
   var noncovAuth1 = "Will inform CH of non-covered components";
+  var noncovAuth2 = "There were denied items on this claim. Review denial note for more details";
 
   var PicturesReuest = "Requesting photos from RF to verify failure and avoid inspection delay.\rInforming RF to include pics of all 4 corners of the vehicle, VIN plate, odometer, and pictures of the failure.\rSent request via SRS action button.";
   var RecordsRequested = "Requesting CH statement regarding issues.\rRequesting past 12 months of service records from CH.\rSent records request using SRS action button.\rWill call CH to inform.";
@@ -4583,7 +4700,6 @@ document.onkeyup = function(e) {
     document.getElementById('myInfo').style.display = "none";
   }
 };
-
   let newpartcount = 2;
   var menuOpen = false;
 
@@ -4700,90 +4816,150 @@ function MENU() {
 
 function statNOTE() {
   var statNote = document.getElementById("statNote");
+  var statNoteinner = document.getElementById("statNoteinner");
   var isOpen = checkOpen();
   if (statNote.style.display == "inline-block" || isOpen) {
     statNote.style.display = "none";
+    statNoteinner.style.height = "0%";
     return;
   }
   statNote.style.display = "inline-block";
+  statNoteinner.style.height = "70%";
 }
 
 function cancelStat() {
   var statNote = document.getElementById("statNote");
+  var statNoteinner = document.getElementById("statNoteinner");
   statNote.style.display = "none";
+  statNoteinner.style.height = "0%";
 }
 
-function submitStat() {
+function submitStat(again) {
+  var optionalNote = document.getElementById("optionalNote").value;
   var statNote = document.getElementById("statNote");
-  var q1 = document.getElementsByName("stat1a");
-  var stat1explain = document.getElementById("stat1explain").value;
-  var q2 = document.getElementsByName("stat2a");
-  var stat3explain = document.getElementById("stat3explain").value;
-  var q4 = document.getElementsByName("stat4a");
-  var stat4explain = document.getElementById("stat4explain").value;
-  var ansTotal = 0;
+  var q1 = document.getElementsByName("waitfor");
+  var q2 = document.getElementsByName("onwho");
+  var q3 = document.getElementsByName("butYtho");
+//  var q4 = document.getElementsByName("aware");
+  var stat6text = document.getElementById("stat6text").value;
+  var stat10text = document.getElementById("stat10text").value;
+  var stat14text = document.getElementById("stat14text").value;
+  var isInformed = document.getElementById("informed");
+  var isPandlin = document.getElementById("pandlin");
+  var isTaskset = document.getElementById("taskset");
+  var ans1;
+  var ans2;
+  var ans3;
+//  var ans4;
+  localStorage.removeItem("num0");
+  localStorage.removeItem("num1");
+  localStorage.removeItem("num2");
+  localStorage.removeItem("num3");
   var checkedArr = [];
   for (i = 0; i < q1.length; i++) {
     if (q1[i].checked) {
-      var ans1 = q1[i].value;
-      ansTotal = ansTotal + 1;
-      checkedArr.push(q1[i]);
+      if(q1[i].id == "stat6") {
+        ans1 = stat6text;
+        checkedArr.push(q1[i]);
+      } else {
+        ans1 = q1[i].value;
+        checkedArr.push(q1[i]);
+      }
     }
-  }
-  if (ans1 == "YES" && stat1explain == null) {
-    alert("Please describe what is needed and by whom.");
-    return;
   }
   for (i = 0; i < q2.length; i++) {
     if (q2[i].checked) {
-      var ans2 = q2[i].value;
-      ansTotal = ansTotal + 1;
-      checkedArr.push(q2[i]);
+      if(q2[i].id == "stat10") {
+        ans2 = stat10text;
+        checkedArr.push(q2[i]);
+      } else {
+        ans2 = q2[i].value;
+        checkedArr.push(q2[i]);
+      }
     }
   }
-  if (stat3explain == null) {
-    alert("Please describe the next steps in the claim.");
+  for (i = 0; i < q3.length; i++) {
+    if (q3[i].checked) {
+      if(q3[i].id == "stat14") {
+        ans3 = stat14text;
+        localStorage.setItem("num" + i, ans3);
+        checkedArr.push(q3[i]);
+      } else {
+        ans3 = q3[i].value;
+        localStorage.setItem("num" + i, ans3);
+        checkedArr.push(q3[i]);
+      }
+    }
+  }
+//  for (i = 0; i < q4.length; i++) {
+//    if (q4[i].checked) {
+//      ans4 = q4[i].value;
+//      checkedArr.push(q4[i]);
+//    }
+//  }
+  for (i = 0; i < checkedArr.length; i++) {
+    checkedArr[i].checked = false;
+  }
+  document.getElementById("stat6text").value = "";
+  document.getElementById("stat10text").value = "";
+  document.getElementById("stat14text").value = "";
+  document.getElementById("textarea5").value += "Waiting on " + ans1 + " from " + ans2 + " in order to ";
+  var addon = 0;
+  if (document.getElementById("stat15").checked) {
+    localStorage.setItem("toldem", "true");
+  }
+  for (i = 0; i < 4; i++) {
+    var ans3 = localStorage.getItem("num" + i);
+    if (ans3 != null) {
+      if (addon != '0') {
+        if (i == '3') {
+          document.getElementById("textarea5").value += " as well as " + ans3;
+        } else {
+          document.getElementById("textarea5").value += " and " + ans3;
+          addon = addon + 1; 
+        }
+      } else {
+        document.getElementById("textarea5").value += ans3;
+        addon = addon + 1;
+      }
+    }
+  localStorage.removeItem("num" + i);
+  }
+  document.getElementById("textarea5").value += ".\r"
+
+  document.getElementById("stat15").checked = false;
+  document.getElementById("stat16").innerHTML = false;
+
+  if (again == '1') {
     return;
-  } else {
-    ansTotal = ansTotal + 1;
   }
-  for (i = 0; i < q4.length; i++) {
-    if (q4[i].checked) {
-      var ans4 = q4[i].value;
-      ansTotal = ansTotal + 1;
-      checkedArr.push(q4[i]);
+  if (again == '0') {
+    var toldem = localStorage.getItem("toldem");
+    if (toldem == "true") {
+      document.getElementById("textarea5").value += "They have been informed of the request and given instructions on how to submit.\r";
+      localStorage.setItem("toldem", "false");
     }
-  }
-  if (ans4 == "YES" && stat1explain == null) {
-    alert("Please describe what conversations need to happen.");
-    return;
-  }
-  if(ansTotal < 4) {
-    alert("Please answer all questions");
-  } else {
-    for (i = 0; i < checkedArr.length; i++) {
-      checkedArr[i].checked = false;
-    }
-    document.getElementById("textarea5").value = "Is anything required from the repair facility or contract holder?   " + ans1 + "\r";  
-    if (ans1 == "YES"){
-      document.getElementById("textarea5").value += stat1explain + "\r\r";
-    } else {
-      document.getElementById("textarea5").value +=  "\r";
-    }
-    document.getElementById("textarea5").value += "If so, are they aware of the requirements and how to accomplish?   " + ans2 + "\r\r";
-    document.getElementById("textarea5").value += "What are the next steps in the claim process?   \r";
-    document.getElementById("textarea5").value += stat3explain + "\r\r";
-    document.getElementById("textarea5").value += "Are there any special conversations that need to\rhappen with either the repair facility or contract holder?   " + ans4 + "\r";
-    if (ans4 == "YES"){
-      document.getElementById("textarea5").value += stat4explain;
+    if (optionalNote != null) {
+      document.getElementById("textarea5").value += "\r" + optionalNote + "\r\r";
+    } 
+    if (isPandlin.checked){
+      document.getElementById("textarea5").value += "Parts and labor are verified and keyed in.\r";
+      isPandlin.checked = false;
+    } 
+    if (isInformed.checked){
+      document.getElementById("textarea5").value += "RF and CH are informed of claim status.\r";
+      isInformed.checked = false;
+    } 
+    if (isTaskset.checked){
+      document.getElementById("textarea5").value += "A task has been set for follow-up.\r\r";
+      isTaskset.checked = false;
     } 
     let textarea = document.getElementById("textarea5");
     textarea.select();
     document.execCommand("copy");
-    document.getElementById("stat4explain").value = "";
-    document.getElementById("stat3explain").value = "";
-    document.getElementById("stat1explain").value = "";
+
     statNote.style.display = "none";
+    statNoteinner.style.height = "0%";
   }
 }
 
@@ -4826,7 +5002,13 @@ function newAuth() {
   document.getElementById("newAuthstyle").style.display = "none";
   var stage = document.getElementById("textarea2");
   var bananaMilkshake = getContact('1');
-  stage.value = newauthLine1 + "\r" + newauthLine2 + "\r" + newauthLine3 + "\r" + newauthLine4  + "\r" + newauthLine5 + bananaMilkshake + "\r";
+console.log(bananaMilkshake);
+  var rfContact = getContact('0');
+  stage.value = newauthLine0 + rfContact + "\r";
+  var firstAuthline = newauthLine1;
+  if (document.getElementById("auth6").checked) { firstAuthline = newauthLine1a; }
+  if (document.getElementById("auth7").checked) { firstAuthline = newauthLine1b; }
+  stage.value += firstAuthline + "\r" + newauthLine2 + "\r" + newauthLine3 + "\r" + newauthLine4  + "\r" + newauthLine5 + bananaMilkshake + "\r";
   partsOptions(stage);
 }
 
@@ -4904,6 +5086,9 @@ function finishAuth(stage) {
   document.getElementById("OOPoptDiv").style.display = "none";
   var noncovComps = document.getElementById("auth18");
   if (noncovComps.checked) { stage.value += noncovAuth1; }
+  var deniedComps = document.getElementById("auth18a");
+  if (deniedComps.checked) { stage.value += noncovAuth2; }
+
   stage.select();
   document.execCommand("copy");
   var boxes = document.querySelectorAll(".FNA");
@@ -5437,6 +5622,7 @@ window.onload = function PutItBack() {
   var selected = "holder1";
   var selectedElem = document.getElementById(selected);
   var didItRun = localStorage.getItem("Im The Boss");
+  localStorage.setItem("toldem", "false");
   if (didItRun == null) {
     initialLoad();
     localStorage.setItem("Im The Boss", "It's Been Done");
@@ -5731,6 +5917,25 @@ function resetColors() {
   setPicker();
   setProperty();
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 const menu = document.getElementById("context-menu");
 var menuState = 0;
@@ -7094,9 +7299,6 @@ function whichRep() {
   
 }
 
-
-
-
 function comsoCompan(z) {
   var savedRecs = localStorage.getItem("savedRecs");
   var recCount = parseInt(savedRecs);
@@ -7392,9 +7594,9 @@ function inceptEst(spot) {
     if (incMileage < minMiles || incMileage > maxMiles) {
       document.getElementById('msgDiv').innerHTML += "The reported inception mileage varies by<br>more than 20% of the estimated inception mileage<br><br>";
     }
-    document.getElementById('msgDiv').innerHTML += "This is NOT a substitute for a performing an inception mileage<br>calculation per SOP using the official method and documentation.<br><br>";
-    document.getElementById('msgDiv').innerHTML += "Record Mileage: " + recMileage + "<br>Service Mileage: " + serMileage + "<br>Days Between Records: " + daysBtwnRecs  + "<br>Miles between Records: " + milesBtwnRecs + "<br>Miles per day: " + milesperday.toFixed(0) + "<br>Days from Incept to Service: " + daysfromInc + "<br>Est Miles Travelled Since Incept: " + milesTravelled + "<br>Miles per Day Variation Allowed: " + mileVariation.toFixed(0) + "<br>Minimum Mileage: " + minMiles + "<br>Maximum Mileage: " + maxMiles;
-
+    document.getElementById('msgDiv').innerHTML += "This is NOT a substitute for a performing<br>an inception mileage calculation per SOP<br>using the official method and documentation.<br><br>";
+    document.getElementById('msgDiv').innerHTML += "Record Mileage: " + recMileage + "<br>Service Mileage: " + serMileage + "<br>Days Between Records: " + daysBtwnRecs  + "<br>Miles between Records: " + milesBtwnRecs + "<br>Miles per day: " + milesperday.toFixed(0) + "<br>Days from Incept to Service: " + daysfromInc + "<br>Est Miles Travelled Since Incept: " + milesTravelled + "<br>Miles per Day Variation Allowed: " + mileVariation.toFixed(0) + "<br>Minimum Mileage Est: " + minMiles + "<br>Maximum Mileage Est: " + maxMiles;
+      console.log("Record Mileage: ",recMileage,"Service Mileage: ",serMileage,"Days Between Records: ",daysBtwnRecs,"Miles between Records: ",milesBtwnRecs,"Miles per day: ",milesperday.toFixed(0)," Days from Incept to Service: ",daysfromInc,"Est Miles Travelled Since Incept: ",milesTravelled,"Miles per Day Variation Allowed: ",mileVariation.toFixed(0),"Minimum Mileage: ",minMiles,"Maximum Mileage: ",maxMiles);
   } else if (spot == 'all') {
     document.getElementById('splitL').style.display = "inline-block";
     document.getElementById('splitR').style.display = "inline-block";
@@ -7403,8 +7605,9 @@ function inceptEst(spot) {
     if (incMileage < minMiles || incMileage > maxMiles) {
       document.getElementById('splitR').innerHTML += "The reported inception mileage varies by<br>more than 20% of the estimated inception mileage<br><br>";
     }
-    document.getElementById('splitR').innerHTML += "This is NOT a substitute for a performing an inception mileage<br>calculation per SOP using the official method and documentation.<br><br>";
-    document.getElementById('splitR').innerHTML += "Record Mileage: " + recMileage + "<br>Service Mileage: " + serMileage + "<br>Days Between Records: " + daysBtwnRecs  + "<br>Miles between Records: " + milesBtwnRecs + "<br>Miles per day: " + milesperday.toFixed(0) + "<br>Days from Incept to Service: " + daysfromInc + "<br>Est Miles Travelled Since Incept: " + milesTravelled + "<br>Miles per Day Variation Allowed: " + mileVariation.toFixed(0) + "<br>Minimum Mileage: " + minMiles + "<br>Maximum Mileage: " + maxMiles;
+    document.getElementById('splitR').innerHTML += "This is NOT a substitute for a performing<br>an inception mileage calculation per SOP<br>using the official method and documentation.<br><br>";
+    document.getElementById('splitR').innerHTML += "Record Mileage: " + recMileage + "<br>Service Mileage: " + serMileage + "<br>Days Between Records: " + daysBtwnRecs  + "<br>Miles between Records: " + milesBtwnRecs + "<br>Miles per day: " + milesperday.toFixed(0) + "<br>Days from Incept to Service: " + daysfromInc + "<br>Est Miles Travelled Since Incept: " + milesTravelled + "<br>Miles per Day Variation Allowed: " + mileVariation.toFixed(0) + "<br>Minimum Mileage Est: " + minMiles + "<br>Maximum Mileage Est: " + maxMiles;
+      console.log("Record Mileage: ",recMileage,"Service Mileage: ",serMileage,"Days Between Records: ",daysBtwnRecs,"Miles between Records: ",milesBtwnRecs,"Miles per day: ",milesperday.toFixed(0)," Days from Incept to Service: ",daysfromInc,"Est Miles Travelled Since Incept: ",milesTravelled,"Miles per Day Variation Allowed: ",mileVariation.toFixed(0),"Minimum Mileage: ",minMiles,"Maximum Mileage: ",maxMiles);
   } else {
     outputDiv2.classList.toggle("arise");
     outputDiv2.style.height = "700px";
@@ -7413,8 +7616,9 @@ function inceptEst(spot) {
     if (incMileage < minMiles || incMileage > maxMiles) {
       document.getElementById('outputDiv3').innerHTML += "The reported inception mileage varies by<br>more than 20% of the estimated inception mileage<br><br>";
     }
-    document.getElementById('outputDiv3').innerHTML += "This is NOT a substitute for a performing an inception mileage<br>calculation per SOP using the official method and documentation.<br><br>";
-    document.getElementById('outputDiv3').innerHTML += "Record Mileage: " + recMileage + "<br>Service Mileage: " + serMileage + "<br>Days Between Records: " + daysBtwnRecs  + "<br>Miles between Records: " + milesBtwnRecs + "<br>Miles per day: " + milesperday.toFixed(0) + "<br>Days from Incept to Service: " + daysfromInc + "<br>Est Miles Travelled Since Incept: " + milesTravelled + "<br>Miles per Day Variation Allowed: " + mileVariation.toFixed(0) + "<br>Minimum Mileage: " + minMiles + "<br>Maximum Mileage: " + maxMiles;
+    document.getElementById('outputDiv3').innerHTML += "This is NOT a substitute for a performing<br>an inception mileage calculation per SOP<br>using the official method and documentation.<br><br>";
+    document.getElementById('outputDiv3').innerHTML += "Record Mileage: " + recMileage + "<br>Service Mileage: " + serMileage + "<br>Days Between Records: " + daysBtwnRecs  + "<br>Miles between Records: " + milesBtwnRecs + "<br>Miles per day: " + milesperday.toFixed(0) + "<br>Days from Incept to Service: " + daysfromInc + "<br>Est Miles Travelled Since Incept: " + milesTravelled + "<br>Miles per Day Variation Allowed: " + mileVariation.toFixed(0) + "<br>Minimum Mileage Est: " + minMiles + "<br>Maximum Mileage Est: " + maxMiles;
+      console.log("Record Mileage: ",recMileage,"Service Mileage: ",serMileage,"Days Between Records: ",daysBtwnRecs,"Miles between Records: ",milesBtwnRecs,"Miles per day: ",milesperday.toFixed(0)," Days from Incept to Service: ",daysfromInc,"Est Miles Travelled Since Incept: ",milesTravelled,"Miles per Day Variation Allowed: ",mileVariation.toFixed(0),"Minimum Mileage: ",minMiles,"Maximum Mileage: ",maxMiles);
   }
 }
 
@@ -7715,6 +7919,8 @@ function resetMD() {
   document.getElementById('under90hmpd').style.display = "none";
   document.getElementById('MileDiscrep1').style.display = "block";
 }
+
+
 
 function colorshift(col,amt) {
   var usePound = false;
