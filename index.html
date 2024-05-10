@@ -496,11 +496,10 @@ f {
 }
 
 #theHoldup { 
-  left: 210px;
-  bottom: 225px;
+  left: 235px;
+  bottom: 55px;
   border-left: 2px solid var(--my-accent-color);
 }
-
 
 .backing {
   position: absolute;
@@ -520,8 +519,9 @@ f {
 }
 
 #statNoteinner {
+  font-size: 16px;
   width: 40%;
-  height: 50%;
+  height: 80%;
   padding: 15px;
   margin: 15px;
   transition: .4s;
@@ -534,6 +534,13 @@ f {
   position: absolute;
   display: inline-block;
   padding: 15px;
+}
+
+.newStatus {
+  margin-bottom: 5px;
+  outline: none;
+  border: none;
+  font-size: 16px;
 }
 
 #optionalNote {
@@ -549,7 +556,8 @@ f {
   position: absolute;
   display: inline-block;
   padding: 15px;
-  height: 40%
+  height: 40%;
+  width: 40%;
 }
 
 #statNote {
@@ -561,8 +569,8 @@ f {
   text-shadow: 0px 0px 1px;
   top: 15px;
   left: 15px;
-  width: 800px;
-  height: 850px;
+  width: 92%;
+  height: 90%;
 }
 
 #statusNote {
@@ -2876,51 +2884,51 @@ th:empty, td:empty {
     <h3 class="headerTab">Status Note</h3>
     <p>What are we waiting on?</p>
     <p class="bodyTab">
-      <input type="radio" value="inspection" class="newStatus" name="waitfor" id="stat1"><label for="stat1">Inspection</label><br>
-      <input type="radio" value="photos" class="newStatus" name="waitfor" id="stat2"><label for="stat2">Photos</label><br>
-      <input type="radio" value="records" class="newStatus" name="waitfor" id="stat3"><label for="stat3">Records</label><br>
-      <input type="radio" value="CH statement" class="newStatus" name="waitfor" id="stat4"><label for="stat4">CH statement</label><br>
-      <input type="radio" value="review" class="newStatus" name="waitfor" id="stat5"><label for="stat5">Review</label><br>
-      <input type="radio" class="newStatus" name="waitfor" id="stat6"><label for="stat6">Other</label><input type="text" class="newStatus" id="stat6text" style="margin-left:15px;">
+      <input type="radio" value="inspection" class="newStatus Mradio" name="waitfor" id="stat1"><label for="stat1">Inspection</label><br>
+      <input type="radio" value="photos" class="newStatus Mradio" name="waitfor" id="stat2"><label for="stat2">Photos</label><br>
+      <input type="radio" value="records" class="newStatus Mradio" name="waitfor" id="stat3"><label for="stat3">Records</label><br>
+      <input type="radio" value="CH statement" class="newStatus Mradio" name="waitfor" id="stat4"><label for="stat4">CH statement</label><br>
+      <input type="radio" value="review" class="newStatus Mradio" name="waitfor" id="stat5"><label for="stat5">Review</label><br>
+      <input type="radio" class="newStatus Mradio" name="waitfor" id="stat6"><label for="stat6">Other</label><input type="text" class="newStatus" id="stat6text" style="margin-left:15px;">
     </p>
     <p>From whom?</p>
     <p class="bodyTab">
-      <input type="radio" value="Contract Holder" class="newStatus" name="onwho" id="stat7" required><label for="stat7">Contract Holder</label><br>
-      <input type="radio" value="Repair Facility" class="newStatus" name="onwho" id="stat8"><label for="stat8">Repair Facility</label><br>
-      <input type="radio" value="AAS" class="newStatus" name="onwho" id="stat9"><label for="stat9">AAS</label><br>
-      <input type="radio" class="newStatus" name="onwho" id="stat10"><label for="stat10">Other</label><input type="text" class="newStatus" id="stat10text" style="margin-left:15px;">
+      <input type="radio" value="Contract Holder" class="newStatus Mradio" name="onwho" id="stat7" required><label for="stat7">Contract Holder</label><br>
+      <input type="radio" value="Repair Facility" class="newStatus Mradio" name="onwho" id="stat8"><label for="stat8">Repair Facility</label><br>
+      <input type="radio" value="AAS" class="newStatus Mradio" name="onwho" id="stat9"><label for="stat9">AAS</label><br>
+      <input type="radio" class="newStatus Mradio" name="onwho" id="stat10"><label for="stat10">Other</label><input type="text" class="newStatus" id="stat10text" style="margin-left:15px;">
     </p>
     <p>Why?</p>
     <p class="bodyTab">
-      <input type="checkbox" value="rule out pre-x" class="newStatus" name="butYtho" id="stat11"><label for="stat11">To rule out pre-x</label><br>
-      <input type="checkbox" value="verify failure" class="newStatus" name="butYtho" id="stat12"><label for="stat12">To verify failure</label><br>
-      <input type="checkbox" value="correct VIN or mileage issue" class="newStatus" name="butYtho" id="stat13"><label for="stat13">To correct VIN or mileage issue</label><br>
-      <input type="checkbox" class="newStatus" name="butYtho" id="stat14"><label for="stat14">Other</label><input type="text" class="newStatus" id="stat14text" style="margin-left:15px;">
+      <input type="checkbox" value="rule out pre-x" class="newStatus largerCheckbox" name="butYtho" id="stat11"><label for="stat11">To rule out pre-x</label><br>
+      <input type="checkbox" value="verify failure" class="newStatus largerCheckbox" name="butYtho" id="stat12"><label for="stat12">To verify failure</label><br>
+      <input type="checkbox" value="correct VIN or mileage issue" class="newStatus largerCheckbox" name="butYtho" id="stat13"><label for="stat13">To correct VIN or mileage issue</label><br>
+      <input type="checkbox" class="newStatus largerCheckbox" name="butYtho" id="stat14"><label for="stat14">Other</label><input type="text" class="newStatus" id="stat14text" style="margin-left:15px;">
     </p>
     <p>Do they know what we're looking for<br>and how to get it to us?</p>
     <p class="bodyTab">
-      <input type="radio" value="yes" class="newStatus" name="aware" id="stat15" required><label for="stat15">Yes</label><br>
-      <input type="radio" value="no" class="newStatus" name="aware" id="stat16"><label for="stat16">No</label><br>
+      <input type="radio" value="yes" class="newStatus Mradio" name="aware" id="stat15" required><label for="stat15">Yes</label><br>
+      <input type="radio" value="no" class="newStatus Mradio" name="aware" id="stat16"><label for="stat16">No</label><br>
     </p>
     <button id="theHoldup" class="wefwefwef" onclick="submitStat('1')">Another One?</button>
   </div>
   <div id="optional" class="newStyle rgtupr">
-    <p style="text-align:center; font-size:17px;" ><b>Optional</b></p>
-    <p class="bodyTab">
+    <p style="text-align:center;" ><b>Optional</b></p>
+    <p class="bodyTab" style="font-size:16px;">
       Any relevant info?<br>
-      What are the next steps in the claim?<br>
-      Anything for the next adjuster to look out for?<br>
+      What are the next steps?<br>
+      Anything to look out for?<br>
       Any notes, in general?<br>
     <textarea id="optionalNote" class="statText"></textarea>
     </p>
     </div>
-    <div id="optional2" class="newStyle lftmid">
+    <div id="optional2" class="newStyle lftmid" style="font-size:16px;">
       <p>
-        <input type="checkbox" id="informed" class="newStatus">
+        <input type="checkbox" id="informed" class="newStatus largerCheckbox">
         The CH and RF should be informed<br>of requests and claim status.<br><br>
-        <input type="checkbox" id="pandlin" class="newStatus">
+        <input type="checkbox" id="pandlin" class="newStatus largerCheckbox">
         Parts and labor should be verified<br>and entered into claim. <br><br>
-        <input type="checkbox" id="taskset" class="newStatus">
+        <input type="checkbox" id="taskset" class="newStatus largerCheckbox">
         A task should be set for follow up. 
       </p>
     </div>
@@ -4129,6 +4137,7 @@ TIME:&nbsp&nbsp</textarea>
   </div>
 <div class="noShow" id="reportData" style="display:none;"></div>
 <script>
+
   var newauthLine0 = "RF Contact name: ";
   var newauthLine1 = "Verified failures using RF diagnostic.";
   var newauthLine1a = "Verified failures using RF diagnostic and inspection report.";
@@ -4824,7 +4833,7 @@ function statNOTE() {
     return;
   }
   statNote.style.display = "inline-block";
-  statNoteinner.style.height = "70%";
+  statNoteinner.style.height = "90%";
 }
 
 function cancelStat() {
