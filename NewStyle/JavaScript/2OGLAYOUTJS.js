@@ -994,7 +994,8 @@ window.onload = function PutItBack() {
     localStorage.setItem(selected + "Count", '0');
   }
   if (didItRun2 == null) {
-    localStorage.setItem("Im STILL The Boss", "It's Been Done");
+    localStorage.setItem("Im STILL The Boss", "I Did It AGAIN!");
+    localStorage.removeItem("colorSet");
     initialLoad();
   }
   var STt = localStorage.getItem(selected + "STCB");
