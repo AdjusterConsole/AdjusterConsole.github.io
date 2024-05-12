@@ -981,6 +981,7 @@ window.onload = function PutItBack() {
   var selected = "holder1";
   var selectedElem = document.getElementById(selected);
   var didItRun = localStorage.getItem("Im The Boss");
+  var didItRun2 = localStorage.getItem("Im STILL The Boss");
   localStorage.setItem("toldem", "false");
   if (didItRun == null) {
     initialLoad();
@@ -991,6 +992,9 @@ window.onload = function PutItBack() {
     localStorage.setItem(selected + "ENDN", '0');
     localStorage.setItem(selected + "SOLO", '0');
     localStorage.setItem(selected + "Count", '0');
+    if (didItRun2 == null) {
+      initialLoad();
+    }
   }
   var STt = localStorage.getItem(selected + "STCB");
   var PRt = localStorage.getItem(selected + "PRIN");
