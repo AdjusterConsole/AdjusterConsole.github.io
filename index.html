@@ -529,7 +529,7 @@ f {
 }
 
 .newStyle.lftmid {
-  bottom: 200px;
+  bottom: 300px;
   right: 70px;
   position: absolute;
   display: inline-block;
@@ -545,18 +545,28 @@ f {
 
 #optionalNote {
   width: 65%;
-  height: 40%;
+  height: 30%;
   padding: 15px;
   outline: none;
 }
 
-.newStyle.rgtupr {
-  top: 30px;
-  right: 30px;
+#littleHelp {
   position: absolute;
   display: inline-block;
-  padding: 15px;
-  height: 40%;
+  font-size: 13px;
+  width: 40%;
+  height: 20%;
+  bottom: 75px;
+  right: 60px;
+}
+
+.newStyle.rgtupr {
+  top: 30px;
+  right: 45px;
+  position: absolute;
+  display: inline-block;
+  padding: 10px;
+  height: 30%;
   width: 40%;
 }
 
@@ -2692,10 +2702,25 @@ th:empty, td:empty {
   --div-width: 10px;
 }
 
+.otherone {
+  display: inline-block;
+  position: absolute;
+  left: 425px;
+  top: 5px;
+  color: black;
+  text-shadow:   
+    1px 1px 5px white, 
+   -1px -1px 5px white, 
+   -1px 1px 5px white, 
+    1px -1px 5px white;
+  font-size: 12px;
+}
+
 </style>
 </head>
 <body>
 <div id="pdiv" class="noShow"><p></div>
+<a class="otherone" href="index2.html">New Style</a>
 <div id="Mystery" class="TheGang noShow">
   <button id="LOCK1" style="color: black;" class="astext" onclick="MENU()">&#x2666; Settings &#x2666;</button>
   <button id="appearance" class="astext menu" onclick="personalize()">&#x2666; Appearance &#x2666;</button>
@@ -2881,7 +2906,7 @@ th:empty, td:empty {
   <button id="statusNote" class="D R P s8dispStat" oncontextmenu="customMenu(this.id, event)" onclick="statNOTE()"><b>Status</b> Note</button>
   <div id="statNote" class="backing">
   <div id="statNoteinner" class="newStyle">
-    <h3 class="headerTab">Status Note</h3>
+    <p style="text-align:center;margin-top:10px;"><b>Status Note</b></p>
     <p>What are we waiting on?</p>
     <p class="bodyTab">
       <input type="radio" value="inspection" class="newStatus Mradio" name="waitfor" id="stat1"><label for="stat1">Inspection</label><br>
@@ -2913,7 +2938,6 @@ th:empty, td:empty {
     <button id="theHoldup" class="wefwefwef" onclick="submitStat('1')">Another One?</button>
   </div>
   <div id="optional" class="newStyle rgtupr">
-    <p style="text-align:center;" ><b>Optional</b></p>
     <p class="bodyTab" style="font-size:16px;">
       Any relevant info?<br>
       What are the next steps?<br>
@@ -2932,6 +2956,7 @@ th:empty, td:empty {
         A task should be set for follow up. 
       </p>
     </div>
+    <div id="littleHelp" class="noShow">In the Status Note section, select the options relevant to your claim. If you are waiting on additional items, click 'Another One?' and repeat.<br>Add anything you like in the text area at the top right of the screen.<br>In the section under that, click the boxes next to the procedures you have completed.<br>When finished click 'Submit' to generate your note.</div>
     <button id="submitStat" class="wefwefwef" onclick="submitStat('0')">Submit</button>
     <button id="cancelStat" class="wefwefwef" onclick="cancelStat()">Cancel</button>
      </div>
@@ -4137,7 +4162,6 @@ TIME:&nbsp&nbsp</textarea>
   </div>
 <div class="noShow" id="reportData" style="display:none;"></div>
 <script>
-
   var newauthLine0 = "RF Contact name: ";
   var newauthLine1 = "Verified failures using RF diagnostic.";
   var newauthLine1a = "Verified failures using RF diagnostic and inspection report.";
