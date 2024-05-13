@@ -267,10 +267,10 @@ li {
   height: 98%;
   width: 98%;
   background: var(--fancy-background);
-  z-index: 6;
   box-shadow:
    inset 0px 0px 10px 4px var(--my-shadow-color2),
    0px 12px 70px 14px black;
+  z-index: 6;
   overflow: hidden;
 }  
 

@@ -22,7 +22,8 @@ textarea {
   display: inline-block;
   position: absolute;
   resize: none;
-  box-shadow:  7px 7px 16px var(--my-shadow-color4), -7px -7px 16pxvar(--my-shadow-color1);
+  box-shadow:  7px 7px 16px var(--my-shadow-color4), 
+               -7px -7px 16pxvar(--my-shadow-color1);
 }
 
 button {
