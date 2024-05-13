@@ -34,7 +34,7 @@
   var RecordsRequested = "Requesting CH statement regarding issues.\rRequesting past 12 months of service records from CH.\rSent records request using SRS action button.\rWill call CH to inform.";
   var InspectionTemplate = "Please verify all failures.\rPlease contact 1-2 hours prior to arrival.\rContact:   \rPhone:   \rEmail:   ";
   var StatementTemplate = "What happened:   \rWhen did the issue first occur:   \rHad the issue occurred before:   \rIf yes, when:   \rAny warning lights:   \rAny noise, smoke, or smell:   \rHow long has the CH owned the vehicle:   \rApproximate mileage when CH purchased:   \rWas vehicle towed to RF:   \rFrom where and by whom:   \r";
-  var ReviewNote = "Reviewed inspection photos and report.\rReviewed photos sent by repair facility.\rVerified vin.\rVerified mileage.\rNo indication of commercial use.\rNo indication of modification.\r\r"
+  var ReviewNote = "Reviewed inspection photos and report.\rReviewed photos sent by repair facility.\rVerified vin.\rVerified mileage.\rNo indication of commercial use.\rNo indication of modification.\r\r";
   var PtTransfer1 = "Is the repair facility able to diagnose to cause of failure and overhaul if needed?   ";
   var PtTransfer2 = "Has the repair facility ever serviced the vehicle before?   ";
   var PtTransfer3 = "Can a test drive be performed if needed?   ";
@@ -217,7 +217,7 @@ function didntHave() {
   document.getElementById("RFIBNV").style.display = "none";
 }
 
-function TGAFO(){
+function TGAFO() {
   document.getElementById("TGAFOABTN").style.display = "inline-block";
   document.getElementById("TGAFODBTN").style.display = "inline-block"; 
   document.getElementById("TGAFOCBTN").style.display = "inline-block";
@@ -226,7 +226,7 @@ function TGAFO(){
   localStorage.setItem("VMREASON",VMREASON);
 }
 
-function TGAFS(){
+function TGAFS() {
   document.getElementById("TGAFSABTN").style.display = "inline-block";
   document.getElementById("TGAFSDBTN").style.display = "inline-block";
   document.getElementById("TGAFSCBTN").style.display = "inline-block";
@@ -236,7 +236,7 @@ function TGAFS(){
   localStorage.setItem("VMREASON",VMREASON);
 }
 
-function TGAFB(){
+function TGAFB() {
   changeVMpos();
   document.getElementById("TGAFOSABTN").style.display = "inline-block";
   document.getElementById("TGAFOSDSBTN").style.display = "inline-block";
@@ -248,9 +248,7 @@ function TGAFB(){
   localStorage.setItem("VMREASON",VMREASON);
 }
 
-
-
-function TGAFOA(btnID){
+function TGAFOA(btnID) {
   var Check = localStorage.getItem(btnID + "EDIT");
   showSnip();
   if (Check == null) {
@@ -265,7 +263,7 @@ function TGAFOA(btnID){
   hideVM();
 }
 
-function TGAFOD(btnID){
+function TGAFOD(btnID) {
   var Check = localStorage.getItem(btnID + "EDIT");
   showSnip();
   if (Check == null) {
@@ -280,7 +278,7 @@ function TGAFOD(btnID){
   hideVM();
 }
 
-function TGAFOC(btnID){
+function TGAFOC(btnID) {
   var Check = localStorage.getItem(btnID + "EDIT");
   showSnip();
   if (Check == null) {
@@ -295,7 +293,7 @@ function TGAFOC(btnID){
   hideVM();
 }
 
-function TGAFSA(btnID){
+function TGAFSA(btnID) {
   var Check = localStorage.getItem(btnID + "EDIT");
   showSnip();
   if (Check == null) {
@@ -309,7 +307,7 @@ function TGAFSA(btnID){
   hideVM();
 }
 
-function TGAFSD(btnID){
+function TGAFSD(btnID) {
   var Check = localStorage.getItem(btnID + "EDIT");
   showSnip();
   if (Check == null) {
@@ -323,7 +321,7 @@ function TGAFSD(btnID){
   hideVM();
 }
 
-function TGAFSC(btnID){
+function TGAFSC(btnID) {
   var Check = localStorage.getItem(btnID + "EDIT");
   showSnip();
   if (Check == null) {
@@ -337,7 +335,7 @@ function TGAFSC(btnID){
   hideVM();
 }
 
-function TGAFOSA(btnID){
+function TGAFOSA(btnID) {
   var Check = localStorage.getItem(btnID + "EDIT");
   showSnip();
   if (Check == null) {
@@ -352,7 +350,7 @@ function TGAFOSA(btnID){
   setVMpos();
 }
 
-function TGAFOSDS(btnID){
+function TGAFOSDS(btnID) {
   var Check = localStorage.getItem(btnID + "EDIT");
   showSnip();
   if (Check == null) {
@@ -367,7 +365,7 @@ function TGAFOSDS(btnID){
   setVMpos();
 }
 
-function TGAFOSDB(btnID){
+function TGAFOSDB(btnID) {
   var Check = localStorage.getItem(btnID + "EDIT");
   showSnip();
   if (Check == null) {
@@ -382,7 +380,7 @@ function TGAFOSDB(btnID){
   setVMpos();
 }
 
-function TGAFOSC(btnID){
+function TGAFOSC(btnID) {
   var Check = localStorage.getItem(btnID + "EDIT");
   showSnip();
   if (Check == null) {
@@ -401,15 +399,13 @@ function RFIB(){
   if (checkOpen()) { return; }
   ClearText();
   hideSnip();
-
   document.getElementById("RFIBDH").style.display = "inline-block";
   document.getElementById("PNLCBTN").style.display = "inline-block";
   document.getElementById("TOTALBTN").style.display = "inline-block";
   document.getElementById("RFAUTHBTN").style.display = "inline-block";
 }
 
-
-function RFIBDH(){ 
+function RFIBDH() { 
   document.getElementById("RFIBND").style.display = "inline-block";
   document.getElementById("RFIBNE").style.display = "inline-block";
   document.getElementById("RFIBNF").style.display = "inline-block";
@@ -417,7 +413,7 @@ function RFIBDH(){
   rfbaseFour();
 }
 
-function RFIBND(btnID){
+function RFIBND(btnID) {
   var Check = localStorage.getItem(btnID + "EDIT");
   showSnip();
   if (Check === null) {
@@ -430,7 +426,7 @@ function RFIBND(btnID){
   didntHave();
 }
 
-function RFIBNE(btnID){
+function RFIBNE(btnID) {
   var Check = localStorage.getItem(btnID + "EDIT");
   showSnip();
   if (Check == null) {
@@ -443,7 +439,7 @@ function RFIBNE(btnID){
   didntHave();
 }
 
-function RFIBNF(btnID){
+function RFIBNF(btnID) {
   var Check = localStorage.getItem(btnID + "EDIT");
   showSnip();
   if (Check == null) {
@@ -452,11 +448,11 @@ function RFIBNF(btnID){
     document.getElementById("Snippings").value = Check;
   }
   document.getElementById("EDITarea").value = document.getElementById("Snippings").value;
-  COPYIt();;
+  COPYIt();
   didntHave();
 }
 
-function RFIBNV(btnID){
+function RFIBNV(btnID) {
   var Check = localStorage.getItem(btnID + "EDIT");
   showSnip();
   if (Check == null) {
@@ -469,7 +465,7 @@ function RFIBNV(btnID){
   didntHave();
 }
 
-function PNLC(btnID){
+function PNLC(btnID) {
   var Check = localStorage.getItem(btnID + "EDIT");
   showSnip();
   if (Check == null) {
@@ -481,7 +477,7 @@ function PNLC(btnID){
   rfbaseFour();
 }
 
-function TOTAL(btnID){
+function TOTAL(btnID) {
   var Check = localStorage.getItem(btnID + "EDIT");
   showSnip();
   if (Check == null) {
@@ -494,7 +490,7 @@ function TOTAL(btnID){
   rfbaseFour();
 }
 
-function GAR(btnID){
+function GAR(btnID) {
   var Check = localStorage.getItem(btnID + "EDIT");
   showSnip();
   if (Check == null) {
@@ -507,33 +503,33 @@ function GAR(btnID){
   rfbaseFour();
 }
 
-function NAV(){
+function NAV() {
   showSnip();
   document.getElementById("Snippings").value = localStorage.getItem("VMREASON");
   document.getElementById("Snippings").value += "No answer - Left voicemail\rTasked to CS callbacks\r";
   COPYIt();
   OOPADCB();
-  authforOSB()
+  authforOSB();
   shipADCB();
   bothADDCB();
   hideVM();
   setVMpos();
 }
 
-function NAN(){
+function NAN() {
   showSnip();
   document.getElementById("Snippings").value = localStorage.getItem("VMREASON");
   document.getElementById("Snippings").value += "No answer - No voicemail available\rTasked to CS callbacks\r";
   COPYIt();
   OOPADCB();
-  authforOSB()
+  authforOSB();
   shipADCB();
   bothADDCB();
   hideVM();
   setVMpos();
 }
 
-function RESETNOTE(){
+function RESETNOTE() {
   document.getElementById("RFIBBTN").style.display = "inline-block";
   document.getElementById("TGAFBTN").style.display = "inline-block";
   rfbaseFour();
@@ -562,7 +558,6 @@ document.onkeydown = function(e) {
     document.getElementById('myInfo').style.display = "inline-block";
   }
 };
-
 
 document.onkeyup = function(e) {
   if (e.ctrlKey && e.altKey && e.shiftKey && e.which == 85) {

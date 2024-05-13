@@ -4,7 +4,6 @@ function questAnswered(answerDiv) {
   }
 }
 
-
 function questOpen() {
   if (document.getElementById("anstoquest1").classList.contains('active')) {
     return true;
@@ -327,7 +326,6 @@ function delRecord(elemId) {
   }
 }
 
-
 function whichRep() {
   const whichA = document.getElementById('whichA').checked;
   const whichB = document.getElementById('whichB').checked;
@@ -355,10 +353,8 @@ function whichRep() {
   if (whichA && whichB && whichC) {
     inceptEst('all');
     comsoCompan('3');
-
     return;
   }
-  
 }
 
 function comsoCompan(z) {
@@ -470,7 +466,6 @@ function displayRecs(z) {
     var overTime;
     var outputDate = month + "-" + day + "-" + year;
     tempRec.date = outputDate;
-
     if (!tempRec.isInception) {
       distance = parseInt(tempRec.milesfrom);
       overTime = parseInt(tempRec.daysfrom);
@@ -478,29 +473,24 @@ function displayRecs(z) {
     } else {
       milesper = 0;
     }
-
     row.insertCell(0).innerText = outputDate;
     row.insertCell(1).innerText = tempRec.mileage;
     row.insertCell(2).innerText = tempRec.milesfrom;
     row.insertCell(3).innerText = tempRec.daysfrom;
     row.insertCell(4).innerText = milesper;
-
     if (tempRec.waitperiod) {
       row.insertCell(5).innerText = "\u26D4";
     } else { 
       row.insertCell(5).innerText = "\u2714";
     }
-
     if (tempRec.discrepancy) {
       row.insertCell(6).innerText = "\u26D4";
     } else {
       row.insertCell(6).innerText = "\u2714";
     }
-
     row.insertCell(7).innerText = tempRec.notes;
     document.getElementById('outputDiv').appendChild(table);
     var hasMessage = false;
-
     if (tempRec.isService) {
       if (overTime < 90 || distance < 700) {
         if (overTime < 90 && !EIC) {
@@ -514,21 +504,18 @@ function displayRecs(z) {
         EIC = true;
       }
     }
-
     if (tempRec.waitperiod && !waitPeriod) {
       document.getElementById('msgDiv').innerHTML += "The failure dated " + outputDate + " was on day " + overTime + " of coverage.<br>The vehicle travelled " + distance + " since inception before failure.<br><br>";
       document.getElementById('alertDiv').innerHTML += "\u2757 ALERT: WAITING PERIOD \u2757<br>";
       hasMessage = true;
       waitPeriod = true;
     }
-
     if (tempRec.discrepancy && !mileDis) {
       document.getElementById('msgDiv').innerHTML += "Review The dates and mileages of the surrounding records for any discrepancies.<br><br>";
       document.getElementById('alertDiv').innerHTML += "\u2757 ALERT: MILEAGE DISCREPANCY \u2757<br>";
       hasMessage = true;
       mileDis = true;
     }
-
     if (milesper > 200 && !HMPD) {
       document.getElementById('msgDiv').innerHTML += "This vehicle has travelled " + milesper + " miles per day.<br>"; 
       document.getElementById('alertDiv').innerHTML += "\u2757 ALERT: HMPD \u2757<br>"; 
@@ -554,7 +541,6 @@ function displayRecs(z) {
     }
   }
   priorMileage();
-
   if (z == '1' || z == '2' || z == '3') { 
     noteOutput(z, EIC, waitPeriod, HMPD, mileDis);
     return;
@@ -587,14 +573,12 @@ function showTable() {
   tableDiv.style.opacity = "1";
 }
 
-
 function displayOutput() {
   hideTable();
   var outputDiv = document.getElementById('outputDiv'); 
   outputDiv.classList.add("arise");
   outputDiv.style.height = "700px";
 }
-
 
 function closeOutput() {
   document.getElementById('splitL').innerHTML = "";
@@ -629,7 +613,6 @@ function inceptEst(spot) {
   var serDate = localStorage.getItem("serdate");
   var incMileage1 = localStorage.getItem("InceptionMiles");
   var incDate = localStorage.getItem("InceptionDate");
-
   if (elemId == null || recMileage1 == null || recDate == null || serMileage1 == null || serDate == null || incMileage1 == null || incDate == null) {
     document.getElementById('trackerMsg').innerHTML += "Information is incomplete. Try Again";
     return;
@@ -648,49 +631,40 @@ function inceptEst(spot) {
   var minMiles = recMileage + minMilesTravelled;
   var maxMiles = recMileage + maxMilesTravelled;
   var estimatedInception = serMileage - milesTravelled;
-
   if (spot == 'both') {
     document.getElementById('msgDiv').style.opacity = 1;
     document.getElementById('msgDiv').innerHTML += "<b>The estimated inception mileage is " + estimatedInception + "</b><br><br>";
-
     if (incMileage < minMiles || incMileage > maxMiles) {
       document.getElementById('msgDiv').innerHTML += "The reported inception mileage varies by<br>more than 20% of the estimated inception mileage<br><br>";
     }
     document.getElementById('msgDiv').innerHTML += "This is NOT a substitute for a performing<br>an inception mileage calculation per SOP<br>using the official method and documentation.<br><br>";
     document.getElementById('msgDiv').innerHTML += "Record Mileage: " + recMileage + "<br>Service Mileage: " + serMileage + "<br>Days Between Records: " + daysBtwnRecs  + "<br>Miles between Records: " + milesBtwnRecs + "<br>Miles per day: " + milesperday.toFixed(0) + "<br>Days from Incept to Service: " + daysfromInc + "<br>Est Miles Travelled Since Incept: " + milesTravelled + "<br>Miles per Day Variation Allowed: " + mileVariation.toFixed(0) + "<br>Minimum Mileage Est: " + minMiles + "<br>Maximum Mileage Est: " + maxMiles;
-      console.log("Record Mileage: ",recMileage,"Service Mileage: ",serMileage,"Days Between Records: ",daysBtwnRecs,"Miles between Records: ",milesBtwnRecs,"Miles per day: ",milesperday.toFixed(0)," Days from Incept to Service: ",daysfromInc,"Est Miles Travelled Since Incept: ",milesTravelled,"Miles per Day Variation Allowed: ",mileVariation.toFixed(0),"Minimum Mileage: ",minMiles,"Maximum Mileage: ",maxMiles);
   } else if (spot == 'all') {
     document.getElementById('splitL').style.display = "inline-block";
     document.getElementById('splitR').style.display = "inline-block";
     document.getElementById('splitR').innerHTML += "<b>The estimated inception mileage is " + estimatedInception + "</b><br><br>";
-
     if (incMileage < minMiles || incMileage > maxMiles) {
       document.getElementById('splitR').innerHTML += "The reported inception mileage varies by<br>more than 20% of the estimated inception mileage<br><br>";
     }
     document.getElementById('splitR').innerHTML += "This is NOT a substitute for a performing<br>an inception mileage calculation per SOP<br>using the official method and documentation.<br><br>";
     document.getElementById('splitR').innerHTML += "Record Mileage: " + recMileage + "<br>Service Mileage: " + serMileage + "<br>Days Between Records: " + daysBtwnRecs  + "<br>Miles between Records: " + milesBtwnRecs + "<br>Miles per day: " + milesperday.toFixed(0) + "<br>Days from Incept to Service: " + daysfromInc + "<br>Est Miles Travelled Since Incept: " + milesTravelled + "<br>Miles per Day Variation Allowed: " + mileVariation.toFixed(0) + "<br>Minimum Mileage Est: " + minMiles + "<br>Maximum Mileage Est: " + maxMiles;
-      console.log("Record Mileage: ",recMileage,"Service Mileage: ",serMileage,"Days Between Records: ",daysBtwnRecs,"Miles between Records: ",milesBtwnRecs,"Miles per day: ",milesperday.toFixed(0)," Days from Incept to Service: ",daysfromInc,"Est Miles Travelled Since Incept: ",milesTravelled,"Miles per Day Variation Allowed: ",mileVariation.toFixed(0),"Minimum Mileage: ",minMiles,"Maximum Mileage: ",maxMiles);
   } else {
     outputDiv2.classList.toggle("arise");
     outputDiv2.style.height = "700px";
     document.getElementById('outputDiv3').innerHTML += "<b>The estimated inception mileage is " + estimatedInception + "</b><br><br>";
-
     if (incMileage < minMiles || incMileage > maxMiles) {
       document.getElementById('outputDiv3').innerHTML += "The reported inception mileage varies by<br>more than 20% of the estimated inception mileage<br><br>";
     }
     document.getElementById('outputDiv3').innerHTML += "This is NOT a substitute for a performing<br>an inception mileage calculation per SOP<br>using the official method and documentation.<br><br>";
     document.getElementById('outputDiv3').innerHTML += "Record Mileage: " + recMileage + "<br>Service Mileage: " + serMileage + "<br>Days Between Records: " + daysBtwnRecs  + "<br>Miles between Records: " + milesBtwnRecs + "<br>Miles per day: " + milesperday.toFixed(0) + "<br>Days from Incept to Service: " + daysfromInc + "<br>Est Miles Travelled Since Incept: " + milesTravelled + "<br>Miles per Day Variation Allowed: " + mileVariation.toFixed(0) + "<br>Minimum Mileage Est: " + minMiles + "<br>Maximum Mileage Est: " + maxMiles;
-      console.log("Record Mileage: ",recMileage,"Service Mileage: ",serMileage,"Days Between Records: ",daysBtwnRecs,"Miles between Records: ",milesBtwnRecs,"Miles per day: ",milesperday.toFixed(0)," Days from Incept to Service: ",daysfromInc,"Est Miles Travelled Since Incept: ",milesTravelled,"Miles per Day Variation Allowed: ",mileVariation.toFixed(0),"Minimum Mileage: ",minMiles,"Maximum Mileage: ",maxMiles);
   }
 }
-
 
 function noteOutput(z, EIC, waitPeriod, HMPD, mileDis) {
   var msgDiv = document.getElementById('msgDiv');
   var outputDiv3 = document.getElementById('outputDiv3'); 
   var splitL = document.getElementById('splitL');
   var whereOut;
-
   if (z == '1') {
     whereOut = outputDiv3;
   } else if (z == '2') {
@@ -698,7 +672,6 @@ function noteOutput(z, EIC, waitPeriod, HMPD, mileDis) {
   } else if (z == '3') {
     whereOut = splitL;
   }
-
   const objectArr = JSON.parse(localStorage.getItem("objectArr"));
   for (i = 0; i < objectArr.length; i++) {
     if (i != 0) { whereOut.innerHTML += "<br>"; }
@@ -742,7 +715,6 @@ function noteOutput(z, EIC, waitPeriod, HMPD, mileDis) {
     document.getElementById('outputDiv').style.width = "90%";
   }
 }
-
 
 function resetGuide() {
   const radioBtns = document.getElementsByClassName("authGuideradio");
@@ -981,8 +953,6 @@ function resetMD() {
   document.getElementById('under90hmpd').style.display = "none";
   document.getElementById('MileDiscrep1').style.display = "block";
 }
-
-
 
 function colorshift(col,amt) {
   var usePound = false;
