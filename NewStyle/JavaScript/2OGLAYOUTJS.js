@@ -994,6 +994,7 @@ window.onload = function PutItBack() {
     localStorage.setItem(selected + "SOLO", '0');
     localStorage.setItem(selected + "Count", '0');
   }
+
   if (lastUsed == "colorSetOG" && didItRun2 == null) {
     localStorage.setItem("Im STILL The Boss", "I Did It AGAIN!");
     const colorCheck = JSON.parse(localStorage.getItem("colorSet"));
@@ -1014,7 +1015,6 @@ window.onload = function PutItBack() {
     resetColors();
     location.reload();
   }
-  
 
   var STt = localStorage.getItem(selected + "STCB");
   var PRt = localStorage.getItem(selected + "PRIN");

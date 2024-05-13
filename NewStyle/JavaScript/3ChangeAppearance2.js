@@ -19,10 +19,12 @@ function colorObject() {
 }
 
 function initialLoad() {
+
   const colorSet = new colorObject();
   localStorage.setItem("colorSet", JSON.stringify(colorSet));
   resetColors();
   location.reload();
+
 }
 
 function getPicker() {
