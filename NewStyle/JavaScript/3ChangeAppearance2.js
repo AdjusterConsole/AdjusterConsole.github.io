@@ -20,13 +20,11 @@ function colorObject() {
 
 function initialLoad() {
 
-  const colorCheck = JSON.parse(localStorage.getItem("colorSet"));
-  if (colorCheck == null){
-    const colorSet = new colorObject();
-    localStorage.setItem("colorSet", JSON.stringify(colorSet));
-    setProperty();
-    location.reload();
-  }
+  const colorSet = new colorObject();
+  localStorage.setItem("colorSet", JSON.stringify(colorSet));
+  resetColors();
+  location.reload();
+
 }
 
 function getPicker() {
@@ -47,8 +45,6 @@ function getPicker() {
   colorSet.meddark = document.getElementById("md-picker").value;
   colorSet.dark = document.getElementById("fd-picker").value;
   colorSet.lightbackground = document.getElementById("bg2-picker").value;
-
-
 
   localStorage.setItem("colorSet", JSON.stringify(colorSet));
 }

@@ -983,6 +983,7 @@ window.onload = function PutItBack() {
   var didItRun = localStorage.getItem("Im The Boss");
   var didItRun2 = localStorage.getItem("Im STILL The Boss");
   localStorage.setItem("toldem", "false");
+  var lastUsed = localStorage.getItem("lastUsed");
   if (didItRun == null) {
     initialLoad();
     localStorage.setItem("Im The Boss", "It's Been Done");
@@ -993,11 +994,28 @@ window.onload = function PutItBack() {
     localStorage.setItem(selected + "SOLO", '0');
     localStorage.setItem(selected + "Count", '0');
   }
-  if (didItRun2 == null) {
+
+  if (lastUsed == "colorSetOG" && didItRun2 == null) {
     localStorage.setItem("Im STILL The Boss", "I Did It AGAIN!");
+    const colorCheck = JSON.parse(localStorage.getItem("colorSet"));
+    localStorage.setItem("colorSetOG", JSON.stringify(colorCheck));
     localStorage.removeItem("colorSet");
+    localStorage.setItem("lastUsed", "colorSetNew");
     initialLoad();
   }
+
+  if (lastUsed == "colorSetOG" && didItRun2 != null) {
+    const colorCheck = JSON.parse(localStorage.getItem("colorSet"));
+    localStorage.setItem("colorSetOG", JSON.stringify(colorCheck));
+
+    const colorSet = JSON.parse(localStorage.getItem("colorSetNew"));
+    localStorage.setItem("colorSet", JSON.stringify(colorSet));
+
+    localStorage.setItem("lastUsed", "colorSetNew");
+    resetColors();
+    location.reload();
+  }
+
   var STt = localStorage.getItem(selected + "STCB");
   var PRt = localStorage.getItem(selected + "PRIN");
   var LIt = localStorage.getItem(selected + "LINK");

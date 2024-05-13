@@ -932,11 +932,16 @@ window.onload = function PutItBack() {
     localStorage.setItem(selected + "SOLO", '0');
     localStorage.setItem(selected + "Count", '0');
   }
-  if (didItRun2 != null) {
-    localStorage.removeItem("colorSet");
-    localStorage.removeItem("Im STILL The Boss");
-    initialLoad();
+  var lastUsed = localStorage.getItem("lastUsed");
+  if (lastUsed == "colorSetNew") {
+    const colorCheck = JSON.parse(localStorage.getItem("colorSet"));
+    localStorage.setItem("colorSetNew", JSON.stringify(colorCheck));
+    const colorSet = JSON.parse(localStorage.getItem("colorSetOG"));
+    localStorage.setItem("colorSet", JSON.stringify(colorSet));
+    resetColors();
+    location.reload();
   }
+  localStorage.setItem("lastUsed", "colorSetOG");
   var STt = localStorage.getItem(selected + "STCB");
   var PRt = localStorage.getItem(selected + "PRIN");
   var LIt = localStorage.getItem(selected + "LINK");
