@@ -34,7 +34,7 @@
   var RecordsRequested = "Requesting CH statement regarding issues.\rRequesting past 12 months of service records from CH.\rSent records request using SRS action button.\rWill call CH to inform.";
   var InspectionTemplate = "Please verify all failures.\rPlease contact 1-2 hours prior to arrival.\rContact:   \rPhone:   \rEmail:   ";
   var StatementTemplate = "What happened:   \rWhen did the issue first occur:   \rHad the issue occurred before:   \rIf yes, when:   \rAny warning lights:   \rAny noise, smoke, or smell:   \rHow long has the CH owned the vehicle:   \rApproximate mileage when CH purchased:   \rWas vehicle towed to RF:   \rFrom where and by whom:   \r";
-  var ReviewNote = "Reviewed inspection photos and report.\rReviewed photos sent by repair facility.\rVerified vin.\rVerified mileage.\rNo indication of commercial use.\rNo indication of modification.\r\r"
+  var ReviewNote = "Reviewed inspection photos and report.\rReviewed photos sent by repair facility.\rVerified vin.\rVerified mileage.\rNo indication of commercial use.\rNo indication of modification.\r\r";
 
   var NoAnswerOOPC = "Called CH for OOPC auth.\rNo answer – left voicemail.\rTasked to CS callbacks.";
   var ChAuthedOOPC = "Called CH for OOPC and shipping auth.\rCH has approved OOPC.\rCH has approved shipping.";
@@ -238,8 +238,6 @@ function TGAFB(){
   localStorage.setItem("VMREASON",VMREASON);
 }
 
-
-
 function TGAFOA(btnID){
   var Check = localStorage.getItem(btnID + "EDIT");
   showSnip();
@@ -442,7 +440,7 @@ function RFIBNF(btnID){
     document.getElementById("Snippings").value = Check;
   }
   document.getElementById("EDITarea").value = document.getElementById("Snippings").value;
-  COPYIt();;
+  COPYIt();
   didntHave();
 }
 
@@ -504,7 +502,7 @@ function NAV(){
   document.getElementById("Snippings").value += "No answer - Left voicemail\rTasked to CS callbacks\r";
   COPYIt();
   OOPADCB();
-  authforOSB()
+  authforOSB();
   shipADCB();
   bothADDCB();
   hideVM();
@@ -517,7 +515,7 @@ function NAN(){
   document.getElementById("Snippings").value += "No answer - No voicemail available\rTasked to CS callbacks\r";
   COPYIt();
   OOPADCB();
-  authforOSB()
+  authforOSB();
   shipADCB();
   bothADDCB();
   hideVM();

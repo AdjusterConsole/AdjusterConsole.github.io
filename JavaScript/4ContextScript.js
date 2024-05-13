@@ -110,7 +110,6 @@ function editDisplay() {
     }
   }
   var fontSize = window.getComputedStyle(selectedButton).fontSize;
-
   document.getElementById("fontSizer").innerText = "Font Size: " + fontSize;
   selectedButton.style.fontSize = fontSize;
   mimic.style.fontSize = fontSize;
@@ -148,12 +147,10 @@ function submitDisp(x) {
       colorState = "0";
     } 
   }
-
   var newDisplay = mimic.innerHTML;
   var selectedButton = document.getElementById(verifiedID);
   selectedButton.innerHTML = newDisplay;
   localStorage.setItem(verifiedID + "Display", newDisplay);
-
   if (x == "s") {
     var disEdit = document.getElementById("disEdit");
     disEdit.style.display = "none";
@@ -321,7 +318,6 @@ function editPos() {
   var rightBTN = document.getElementById("rightBTN");
   var posSubmit = document.getElementById("posSubmit");
   var posEdit = document.getElementById("posEdit");
-
   upBTN.style.display = "inline-block";
   downBTN.style.display = "inline-block";
   leftBTN.style.display = "inline-block";
@@ -471,13 +467,10 @@ function infoDone2() {
   var ENDNCount = parseInt(ENt);
   var SOLOCount = parseInt(SOt);
   var buttonCount = parseInt(but);
-
   var currID = "cust" + but;
   var newButton = document.getElementById(currID);
-
   var BtnDisplay = document.getElementById("BtnDisplay").value;
   var BtnContent = document.getElementById("BtnContent").value;
-
   if (BtnDisplay == null || BtnContent == null) {
   alert("You must pick a button display and content value");
   return;
@@ -514,17 +507,13 @@ function infoDone2() {
   }
   newButton.innerHTML = BtnDisplay;
   newButton.id = baseKey;
-
   var currdivID = "custBtn" + but;
   var newButtonDiv = document.getElementById(currdivID);
   newButtonDiv.style.display = "inline-block";
- 
   var curWidth = newButton.offsetWidth;
   var curHeight = newButton.offsetHeight;
-
   newButtonDiv.style.left = "20px";
   newButtonDiv.style.top = "200px";
-
   localStorage.setItem(currdivID + "SHOW", "inline-block");
   localStorage.setItem(currID, baseKey);
   localStorage.setItem(baseKey + "Display", BtnDisplay);
@@ -533,7 +522,6 @@ function infoDone2() {
   localStorage.setItem(baseKey + "Width", curWidth);
   localStorage.setItem(currdivID + "top", "200px");
   localStorage.setItem(currdivID + "left", "20px");
-
   idList.push(newButton);
   idList.push(newButtonDiv);
   contentList.push(newButton);
@@ -543,7 +531,6 @@ function infoDone2() {
   showList.push(newButtonDiv);
   buttonList.push(newButton);
   divList.push(newButtonDiv);
-
   buttonCount = buttonCount + 1;
   localStorage.setItem(selectedID + "Count", buttonCount);
   SALTANDPEPA('0');

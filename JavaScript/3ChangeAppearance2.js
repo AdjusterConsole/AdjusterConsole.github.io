@@ -14,11 +14,9 @@ function colorObject() {
   this.meddark = "#a4aaae";
   this.dark = "#6d7174";
   this.lightbackground = "#B6BDC1";
-
 }
 
 function initialLoad() {
-
   const colorCheck = JSON.parse(localStorage.getItem("colorSet"));
   if (colorCheck == null){
     const colorSet = new colorObject();
@@ -30,7 +28,6 @@ function initialLoad() {
 
 function getPicker() {
   const colorSet = JSON.parse(localStorage.getItem("colorSet"));
-
   colorSet.background = document.getElementById("background-picker").value;
   colorSet.accent = document.getElementById("accent-picker").value;
   colorSet.shadow1 = document.getElementById("shad1-picker").value;
@@ -57,7 +54,6 @@ function setPicker() {
 
 function setProperty() {
   const colorSet = JSON.parse(localStorage.getItem("colorSet"));
-
   document.documentElement.style.setProperty('--my-background-color', colorSet.background);
   document.documentElement.style.setProperty('--my-accent-color', colorSet.accent);
   document.documentElement.style.setProperty('--my-shadow-color1', colorSet.shadow1);
@@ -79,7 +75,6 @@ function setProperty() {
 }
 
 function setColor(colors) {
-
   const colorSet = new colorObject();
   switch(colors) {
   case "default":
@@ -172,22 +167,3 @@ function resetColors() {
   setPicker();
   setProperty();
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

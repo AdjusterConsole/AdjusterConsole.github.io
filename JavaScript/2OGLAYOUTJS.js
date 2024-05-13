@@ -71,42 +71,32 @@ function MENU() {
   document.getElementById("EDITarea").value = "";
   if (!menuOpen) {
     theMenu.innerText = "\u2666 Close \u2666";
-
     appearance.style.top = "45px";
     appearance.style.color = "black";
     appearance.style.textShadow = "1px 1px 1px var(--glow-outline-color), -1px -1px 1px var(--glow-outline-color), -1px 1px 1px var(--glow-outline-color),  1px -1px 1px var(--glow-outline-color), 0px 0px 8px var(--my-glow-color), 0px 0px 11px var(--my-glow-color), 0px 0px 14px var(--my-glow-color), 0px 0px 17px var(--my-glow-color), 0px 0px 20px var(--my-glow-color), 0px 0px 23px var(--my-glow-color), 0px 0px 26px var(--my-glow-color)";
-
     BtnBuilder.style.top = "70px";
     BtnBuilder.style.color = "black";
     BtnBuilder.style.textShadow = "1px 1px 1px var(--glow-outline-color), -1px -1px 1px var(--glow-outline-color), -1px 1px 1px var(--glow-outline-color),  1px -1px 1px var(--glow-outline-color), 0px 0px 8px var(--my-glow-color), 0px 0px 11px var(--my-glow-color), 0px 0px 14px var(--my-glow-color), 0px 0px 17px var(--my-glow-color), 0px 0px 20px var(--my-glow-color), 0px 0px 23px var(--my-glow-color), 0px 0px 26px var(--my-glow-color)";
-    
     buttonMaker.style.top = "95px";
     buttonMaker.style.color = "black";
     buttonMaker.style.textShadow = "1px 1px 1px var(--glow-outline-color), -1px -1px 1px var(--glow-outline-color), -1px 1px 1px var(--glow-outline-color),  1px -1px 1px var(--glow-outline-color), 0px 0px 8px var(--my-glow-color), 0px 0px 11px var(--my-glow-color), 0px 0px 14px var(--my-glow-color), 0px 0px 17px var(--my-glow-color), 0px 0px 20px var(--my-glow-color), 0px 0px 23px var(--my-glow-color), 0px 0px 26px var(--my-glow-color)";
-
     tutorialSel.style.top = "120px";
     tutorialSel.style.color = "black";
     tutorialSel.style.textShadow = "1px 1px 1px var(--glow-outline-color), -1px -1px 1px var(--glow-outline-color), -1px 1px 1px var(--glow-outline-color),  1px -1px 1px var(--glow-outline-color), 0px 0px 8px var(--my-glow-color), 0px 0px 11px var(--my-glow-color), 0px 0px 14px var(--my-glow-color), 0px 0px 17px var(--my-glow-color), 0px 0px 20px var(--my-glow-color), 0px 0px 23px var(--my-glow-color), 0px 0px 26px var(--my-glow-color)";
-
     menuOpen = true;
   } else {
-
     BtnBuilder.style.top = "20px";
     BtnBuilder.style.color = "var(--my-background-color)";
     BtnBuilder.style.textShadow = "none";
-
     appearance.style.top = "20px";    
     appearance.style.color = "var(--my-background-color)";
     appearance.style.textShadow = "none";
-
     buttonMaker.style.top = "20px";
     buttonMaker.style.color = "var(--my-background-color)";
     buttonMaker.style.textShadow = "none";
-
     tutorialSel.style.top = "20px";
     tutorialSel.style.color = "var(--my-background-color)";
     tutorialSel.style.textShadow = "none";
-
     theMenu.innerText = "\u2666 Settings \u2666";
     menuOpen = false;
   }
@@ -138,7 +128,6 @@ function submitStat(again) {
   var q1 = document.getElementsByName("waitfor");
   var q2 = document.getElementsByName("onwho");
   var q3 = document.getElementsByName("butYtho");
-//  var q4 = document.getElementsByName("aware");
   var stat6text = document.getElementById("stat6text").value;
   var stat10text = document.getElementById("stat10text").value;
   var stat14text = document.getElementById("stat14text").value;
@@ -148,7 +137,6 @@ function submitStat(again) {
   var ans1;
   var ans2;
   var ans3;
-//  var ans4;
   localStorage.removeItem("num0");
   localStorage.removeItem("num1");
   localStorage.removeItem("num2");
@@ -189,12 +177,6 @@ function submitStat(again) {
       }
     }
   }
-//  for (i = 0; i < q4.length; i++) {
-//    if (q4[i].checked) {
-//      ans4 = q4[i].value;
-//      checkedArr.push(q4[i]);
-//    }
-//  }
   for (i = 0; i < checkedArr.length; i++) {
     checkedArr[i].checked = false;
   }
@@ -224,10 +206,8 @@ function submitStat(again) {
   localStorage.removeItem("num" + i);
   }
   document.getElementById("textarea5").value += ".\r"
-
   document.getElementById("stat15").checked = false;
   document.getElementById("stat16").innerHTML = false;
-
   if (again == '1') {
     return;
   }
@@ -255,7 +235,6 @@ function submitStat(again) {
     let textarea = document.getElementById("textarea5");
     textarea.select();
     document.execCommand("copy");
-
     statNote.style.display = "none";
     statNoteinner.style.height = "0%";
   }
@@ -386,7 +365,6 @@ function finishAuth(stage) {
   if (noncovComps.checked) { stage.value += noncovAuth1; }
   var deniedComps = document.getElementById("auth18a");
   if (deniedComps.checked) { stage.value += noncovAuth2; }
-
   stage.select();
   document.execCommand("copy");
   var boxes = document.querySelectorAll(".FNA");
@@ -916,7 +894,6 @@ var SOLOCount = 0;
 var buttonCount = 0;
 
 window.onload = function PutItBack() { 
-  
   var selected = "holder1";
   var selectedElem = document.getElementById(selected);
   var didItRun = localStorage.getItem("Im The Boss");
@@ -1050,5 +1027,3 @@ window.onload = function PutItBack() {
   localStorage.removeItem("rec0date");
   localStorage.setItem("noteOpen", "false");
 }
-
-
