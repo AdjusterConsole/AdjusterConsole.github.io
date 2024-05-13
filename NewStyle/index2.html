@@ -51,7 +51,6 @@
 }
 
 :root {
-
   --my-background-color: #324350;
   --my-accent-color: #7C878F;
   --my-shadow-color1: #506b7f;
@@ -67,8 +66,6 @@
   --fancy-medlight: #c3cacf;
   --fancy-meddark: #a4aaae;
   --fancy-dark: #6d7174;
-
-
   --fancy-background: #B6BDC1;
   --div-width: 10px;
 }
@@ -121,16 +118,6 @@
 </head>
 <body>
 
-<!--
-
-  <div id="O1" class="noShow">
-    <button id="R6" class="OOPCallNoAnsBTN D R P C s4dispStat" oncontextmenu="customMenu(this.id, event)" onclick="CALLNOANS(this.id)"><f>OOPC CALL</f> <b>NO ANSWER</b></button>
-  </div>
-  <div id="O2" class="noShow">
-    <button id="R7" class="CHAuthedOOPCBTN D R P C s5dispStat" oncontextmenu="customMenu(this.id, event)" onclick="AUTHOOPC(this.id)"><b>CH AUTHED</b> OOPC</button>
-  </div>
-
--->
 <a class="otherone" href="../index.html">Original</a>
 <div id="pdiv" class="noShow"><p></div>
 <div id="Mystery" class="TheGang noShow">
@@ -157,7 +144,6 @@
    <label for="shad3-picker">Gradient End:</label><br>
     <input id="shad3-picker" type="color">
   </div>
-
   <div id="shad1Pick" class="noShow">
     <label for="shad1-picker">Highlight: </label><br>
     <input id="shad1-picker" type="color">
@@ -171,22 +157,18 @@
    <label for="bg2-picker">Secondary Background Color:</label><br>
     <input id="bg2-picker" type="color">
   </div>
-
   <div id="flPick" class="noShow">
    <label for="fl-picker">Secondary Highlight:</label><br>
     <input id="fl-picker" type="color">
   </div>
-
   <div id="fdPick" class="noShow">
    <label for="fd-picker">Secondary Shadow:</label><br>
     <input id="fd-picker" type="color">
   </div>
-
   <div id="mlPick" class="noShow">
    <label for="ml-picker">Seccondary Gradient Start:</label><br>
     <input id="ml-picker" type="color">
   </div>
-
   <div id="mdPick" class="noShow">
    <label for="md-picker">Seccondary Gradient End:</label><br>
     <input id="md-picker" type="color" value="#a4aaae">
@@ -215,7 +197,6 @@
   <button id="presetRed" class="picker" onclick="setColor('red')">Red Preset</button>
   <button id="presetGreen" class="picker" onclick="setColor('green')">Green Preset</button>
 </div>
-
 <div id="allBut" class="noShow">
 <div id="Request" class="REQUESTDIV noShow">
   <div id="RQ1" class="noShow">
@@ -231,7 +212,6 @@
     <button id="T0" class="Template D R P s6dispStat" oncontextmenu="customMenu(this.id, event)" onclick="ShowTemps()"><b>TEMPLATES</b></button>
   </div>
 </div>
-
 <div id="TPDiv" class="noShow" style="display: none">
   <div id="T20" class="noShow">
     <button id="T1" class="PTXferTempBTN D R P" oncontextmenu="customMenu(this.id, event)" name="name" onclick="PTXFER()"><b>PT TRANSFER</b></button>
@@ -251,7 +231,6 @@
   <button id="SOPs" class="R P D g0dispStat" oncontextmenu="customMenu(this.id, event)" onclick="resrcCenter('7','p')"><f>Policy</f></button>
   <button id="tools" class="R P D g1dispStat" oncontextmenu="customMenu(this.id, event)" onclick="resrcCenter('4','t')"><f>Tools</f></button>
 </div>
-
 <div id="transferTemplate" class="backing" style="display:none;">
    <h3 class="headerTab" style="margin-bottom:30px;">PT Transfer</h3>
     <div id="quest1" class="newStyle ptQuest">
@@ -637,12 +616,6 @@
   </div><br>
   <div id="switchdivs3" class="noShow sd">
     <label id="switchs3" class="switch"><input type="checkbox" id="s3" onclick="toggleConductor(this.id)"><span class="slider round"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspRecds Reqst No Ans
-  </div><br>
-  <div id="switchdivs4" class="noShow sd" style="display:none">
-    <label id="switchs4" class="switch"><input type="checkbox" id="s4" onclick="toggleConductor(this.id)"><span class="slider round"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspPolicy
-  </div><br>
-  <div id="switchdivs5" class="noShow sd" style="display:none">
-    <label id="switchs5" class="switch"><input type="checkbox" id="s5" onclick="toggleConductor(this.id)"><span class="slider round"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspCH Authed OOPC
   </div><br>
   <div id="switchdivs6" class="noShow sd">
     <label id="switchs6" class="switch"><input type="checkbox" id="s6" onclick="toggleConductor(this.id)"><span class="slider round"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspTemplates
@@ -1065,7 +1038,7 @@ TIME:&nbsp&nbsp</textarea>
   </div>
 </div>
 
-<div id="resrcDiv" style="display: none;">
+<div id="resrcDiv" class="backing" style="display: none;">
   <div id="toolsDiv" class="tab hide">
     <button class="tablinks" onclick="openInfo(event, 'QuickAns')">Quick Answers</button>
     <button class="tablinks" onclick="openInfo(event, 'MileDiscrep')">Mileage Discrep</button>
