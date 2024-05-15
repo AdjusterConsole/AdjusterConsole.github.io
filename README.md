@@ -3,8 +3,8 @@ README
 ADJUSTER CONSOLE VERSION 5.XX
 JESSE WILLIAMS 2024
 ADJUSTERCONSOLE@GMAIL.COM
------------------------------------------------------
------------------------------------------------------
+
+
 -----------------------------------------------------
 BACK STORY AND GOALS
 -----------------------------------------------------
@@ -21,14 +21,14 @@ COMPREHENSIVE COVERAGE POSSIBLE.
 WHEN ALL ASPECTS ARE USED IN CONJUCTION, THEY REDUCE CALL TIME AND MAKE THE CLAIMS PROCESS EASIER
 BY ALLOWING THE ADJUSTER TO GET ACCURATE ANSWERS QUICKLY FOR POLICY AND PROCEDURE, SPENDING LESS TIME
 ON NOTATION, AND SPEEDING UP THE DECISION MAKING PROCESS.
------------------------------------------------------
------------------------------------------------------
+
+
 -----------------------------------------------------
 THE OPERATION
 -----------------------------------------------------
 
 
------------------------------------------------------
+
 THE TEXT AREA IN THE UPPER LEFT IS FOR RF CONTACT INFO.
 
 THE PAYMENT LINE IS FOR THE EMAIL OR FAX USED FOR PAYMENT
@@ -38,10 +38,9 @@ DISTANCE AND TIME ARE MILES AND DAYS IN COVERAGE.
 THE BOLDED WORDS CAN BE CLICKED TO COPY THAT LINE.
 
 CLICKING PAYMENT WOULD COPY THE PAYMENT METHOD, FOR EXAMPLE.
------------------------------------------------------
-
 
 -----------------------------------------------------
+
 CLICKING THE 'AUTHORIZE CLAIM' BUTTON WILL START THE AUTH NOTE BUILDER.
 
 SELECT WHICH PARTS WERE USED AT WHAT PRICING, IF ANYTHING WAS REQUESTED, AND IF THERE WERE ANY
