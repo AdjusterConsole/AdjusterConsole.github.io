@@ -23,7 +23,6 @@ BY ALLOWING THE ADJUSTER TO GET ACCURATE ANSWERS QUICKLY FOR POLICY AND PROCEDUR
 ON NOTATION, AND SPEEDING UP THE DECISION MAKING PROCESS.
 
 
------------------------------------------------------
 THE OPERATION
 -----------------------------------------------------
 
