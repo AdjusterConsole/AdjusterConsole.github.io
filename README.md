@@ -192,6 +192,9 @@ AAS FLUID PRICING SHEET. CLICK THE X TO CLOSE.
 RESET WILL CLEAR ALL TEMPLATES, CLOSE ALL WINDOWS AND RESET THE WHOLE PROGRAM TO 
 STARTING POSITION.
 
+X
+
+X
 
 CUSTOMIZATION
 -----------------------------------------------------
@@ -279,6 +282,9 @@ CLICKING IT WILL SHOW A SLIGHTLY DIFFERENT SET UP FOR THE BUTTONS AND A VASTLY D
 
 CLICKING 'ORIGINAL' WILL REVERT THE DISPLAY BACK TO DEFAULT.
 
+X
+
+X
 
 STORAGE
 -----------------------------------------------------
@@ -359,6 +365,10 @@ X
 
 QUESTIONS, CONCERNS, ISSUES, SUGGESTIONS, ETC
 -----------------------------------------------------
+
+X
+
+X
 
 ADJUSTERCONSOLE@GMAIL.COM
 -----------------------------------------------------
