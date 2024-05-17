@@ -15,6 +15,20 @@ function swapPage(x) {
   }
 }
 
+function setVer(x) {
+   switch(x) {
+  case '1':
+    localStorage.setItem('currentVer', '1');
+    break;
+  case '2':
+    localStorage.setItem('currentVer', '2');
+    break;
+  case '3':
+    localStorage.setItem('currentVer', '3');
+    break;
+  }
+}
+
 function checkOpen() {
   var TPDiv = document.getElementById("TPDiv");
   var statNote = document.getElementById("statNote");
@@ -86,32 +100,40 @@ function MENU() {
   if (!menuOpen) {
     theMenu.innerText = "\u2666 Close \u2666";
     appearance.style.top = "45px";
-    appearance.style.color = "black";
+    appearance.style.color = "var(--glow-text-color)";
     appearance.style.textShadow = "1px 1px 1px var(--glow-outline-color), -1px -1px 1px var(--glow-outline-color), -1px 1px 1px var(--glow-outline-color),  1px -1px 1px var(--glow-outline-color), 0px 0px 8px var(--my-glow-color), 0px 0px 11px var(--my-glow-color), 0px 0px 14px var(--my-glow-color), 0px 0px 17px var(--my-glow-color), 0px 0px 20px var(--my-glow-color), 0px 0px 23px var(--my-glow-color), 0px 0px 26px var(--my-glow-color)";
     BtnBuilder.style.top = "70px";
-    BtnBuilder.style.color = "black";
+    BtnBuilder.style.color = "var(--glow-text-color)";
     BtnBuilder.style.textShadow = "1px 1px 1px var(--glow-outline-color), -1px -1px 1px var(--glow-outline-color), -1px 1px 1px var(--glow-outline-color),  1px -1px 1px var(--glow-outline-color), 0px 0px 8px var(--my-glow-color), 0px 0px 11px var(--my-glow-color), 0px 0px 14px var(--my-glow-color), 0px 0px 17px var(--my-glow-color), 0px 0px 20px var(--my-glow-color), 0px 0px 23px var(--my-glow-color), 0px 0px 26px var(--my-glow-color)";
     buttonMaker.style.top = "95px";
-    buttonMaker.style.color = "black";
+    buttonMaker.style.color = "var(--glow-text-color)";
     buttonMaker.style.textShadow = "1px 1px 1px var(--glow-outline-color), -1px -1px 1px var(--glow-outline-color), -1px 1px 1px var(--glow-outline-color),  1px -1px 1px var(--glow-outline-color), 0px 0px 8px var(--my-glow-color), 0px 0px 11px var(--my-glow-color), 0px 0px 14px var(--my-glow-color), 0px 0px 17px var(--my-glow-color), 0px 0px 20px var(--my-glow-color), 0px 0px 23px var(--my-glow-color), 0px 0px 26px var(--my-glow-color)";
     tutorialSel.style.top = "120px";
-    tutorialSel.style.color = "black";
+    tutorialSel.style.color = "var(--glow-text-color)";
     tutorialSel.style.textShadow = "1px 1px 1px var(--glow-outline-color), -1px -1px 1px var(--glow-outline-color), -1px 1px 1px var(--glow-outline-color),  1px -1px 1px var(--glow-outline-color), 0px 0px 8px var(--my-glow-color), 0px 0px 11px var(--my-glow-color), 0px 0px 14px var(--my-glow-color), 0px 0px 17px var(--my-glow-color), 0px 0px 20px var(--my-glow-color), 0px 0px 23px var(--my-glow-color), 0px 0px 26px var(--my-glow-color)";
     menuOpen = true;
   } else {
     BtnBuilder.style.top = "20px";
-    BtnBuilder.style.color = "var(--my-background-color)";
     BtnBuilder.style.textShadow = "none";
     appearance.style.top = "20px";    
-    appearance.style.color = "var(--my-background-color)";
     appearance.style.textShadow = "none";
     buttonMaker.style.top = "20px";
-    buttonMaker.style.color = "var(--my-background-color)";
     buttonMaker.style.textShadow = "none";
     tutorialSel.style.top = "20px";
-    tutorialSel.style.color = "var(--my-background-color)";
     tutorialSel.style.textShadow = "none";
-    theMenu.innerText = "\u2666 Settings \u2666";
+    var page = localStorage.getItem('currentVer');
+    if (page == '3') {
+      BtnBuilder.style.color = "var(--my-accent-color)";
+      appearance.style.color = "var(--my-accent-color)";
+      buttonMaker.style.color = "var(--my-accent-color)";
+      tutorialSel.style.color = "var(--my-accent-color)";
+    } else {
+      BtnBuilder.style.color = "var(--my-background-color)";
+      appearance.style.color = "var(--my-background-color)";
+      buttonMaker.style.color = "var(--my-background-color)";
+      tutorialSel.style.color = "var(--my-background-color)";
+      theMenu.innerText = "\u2666 Settings \u2666"; 
+    }
     menuOpen = false;
   }
 }
@@ -287,15 +309,6 @@ function cancelNewauth() {
 }
 
 function newAuth() {
-  var newauthLine0 = "RF Contact name: ";
-  var newauthLine1 = "Verified failures using RF diagnostic.";
-  var newauthLine1a = "Verified failures using RF diagnostic and inspection report.";
-  var newauthLine1b = "Verified failures using RF diagnostic and RF supplied photos.";
-  var newauthLine2 = "Contract has coverage for failed components.";
-  var newauthLine3 = "Verified OEM parts using Forte and AM parts using PA.";
-  var newauthLine4 = "Verified labor using Pro Demand.";
-  var newauthLine5 = "Verified payment info with RF contact at: ";
-
   document.getElementById("authParts").style.display = "inline-block";
   document.getElementById("authRequests").style.display = "none";
   document.getElementById("authOopcs").style.display = "none";
@@ -312,12 +325,7 @@ function newAuth() {
 }
 
 function partsOptions(stage) {
-  var auth1 = document.getElementById("auth1");
-  var auth2 = document.getElementById("auth2");
-  var auth3 = document.getElementById("auth3");
-  var auth4 = document.getElementById("auth4");
-  var auth5 = document.getElementById("auth5");
-  var partOpts = [ auth1, auth2, auth3, auth4, auth5 ];
+  var partOpts = document.getElementsByName("authparts");
   for (i = 0; i < partOpts.length; i++) {
     if (partOpts[i].checked == true) {
       stage.value += partOpts[i].value + "\r";
@@ -327,13 +335,6 @@ function partsOptions(stage) {
 }
     
 function requestOptions(stage) {
-  var inspAuth1 = "No inspection needed as RF diagnostic matches CH concern.";
-  var inspAuth2 = "Sent inspection to verify failures.\rReviewed report and inspection photos.\rInspection review note is completed.";
-  var inspAuth3 = "Requested and reviewed photos from repair facility.\rPhoto review note is completed.";
-  var recordsAuth1 = "No records requested as history will not change claim decision.\rVehicle is not in waiting period.\rConcern is not maintenance related.\rNo prior related claims.\rNo recalls, TSBs, or mileage concerns.";
-  var recordsAuth2 = "Requested and reviewed records and statement.\rRecord review note is completed.";
-  var requestedAuth1 = "After reviewing all relevant documentation, we are moving forward with verified failures.";
-
   if (document.getElementById("auth9").checked == true) {
     stage.value += inspAuth1 + "\r" + recordsAuth1 + "\r";
     issuesOptions(stage);
@@ -353,15 +354,6 @@ function requestOptions(stage) {
 }
   
 function issuesOptions(stage) {
-  var oopcsAuth1 = "Need to review OOPC of $";
-  var oopcsAuth2a = " with contract holder.";
-  var oopcsAuth2b = " and shipping option with contract holder.";
-  var oopcsAuth2c = "OOPC is due to differences in ";
-  var oopcsAuth3 = "Need to review shipping option with contract holder.";
-  var oopcsAuth3a = "Have not given authorization info to RF at this time.";
-  var oopcsAuth4 = "Contract holder has no OOPC besides deductible.";
-  var oopcsAuth4a = "Gave authorization info and payment instructions to ";
-
   var rfName = getContact('0');
   if (document.getElementById("auth13").checked == true) {
     stage.value += oopcsAuth4 + "\r" + oopcsAuth4a + rfName + "\r";
@@ -403,9 +395,6 @@ function showOOPopt() {
 }
 
 function finishAuth(stage) {
-  var noncovAuth1 = "Will inform CH of non-covered components";
-  var noncovAuth2 = "There were denied items on this claim.\rReview denial note for more details";
-
   document.getElementById("OOPoptDiv").style.display = "none";
   var noncovComps = document.getElementById("auth18");
   if (noncovComps.checked) { stage.value += noncovAuth1; }
@@ -420,7 +409,6 @@ function finishAuth(stage) {
 }
 
 function EVACRECH(btnID) {
-  var EvacRechrge = "Evac and Recharge\rRF Asking:   \rPD Approved:   1.4\r\r";
   var Check = localStorage.getItem(btnID + "EDIT");
   var textarea = document.getElementById("textarea2");
   if (Check == null) {
@@ -434,7 +422,6 @@ function EVACRECH(btnID) {
 }
 
 function ALIGNMENT(btnID) {
-  var Alignment = "Alignment\rRF Asking:   \rPD Approved:   \r\r";
   var Check = localStorage.getItem(btnID + "EDIT");
   var textarea = document.getElementById("textarea2");
   if (Check == null) {
@@ -447,20 +434,35 @@ function ALIGNMENT(btnID) {
   textarea.scrollTop = textarea.scrollHeight;
 }
 
-function DIAG() {
+function DIAG(boxNum) {
   var textarea = document.getElementById("textarea2");
-  textarea.value += "Diag  \rRF Asking:  \rPD Approved:  \r\r";
+  if (boxNum === "9") {
+    textarea.value += "Diag \r";
+    textarea.value += Labor;
+  } else {
+    let partName = document.getElementById("part" + boxNum).value;
+    textarea.value += "Diag for ";
+    textarea.value += partName + "\r";
+    textarea.value += Labor;
+  }
   textarea.scrollTop = textarea.scrollHeight;
 }
 
-function LABOR() {
+function LABOR(boxNum) {
   var textarea = document.getElementById("textarea2");
-  textarea.value += "R/R \rRF Asking:  \rPD Approved:  \r\r";
+  if (boxNum === "9") {
+    textarea.value += "R/R \r";
+    textarea.value += Labor;
+  } else {
+    let partName = document.getElementById("part" + boxNum).value;
+    textarea.value += "R/R ";
+    textarea.value += partName + "\r";
+    textarea.value += Labor;
+  }
   textarea.scrollTop = textarea.scrollHeight;
 }
 
 function BULK(btnID) {
-  var BulkFluid = "BULK:   \rRF Price:   \rFPS Allows:   \r\r";
   var Check = localStorage.getItem(btnID + "EDIT");
   var textarea = document.getElementById("textarea2");
   if (Check == null) {
@@ -474,7 +476,6 @@ function BULK(btnID) {
 }
 
 function OEMOVER() {
-  var OemOver250 = "PA PN:   \rPA List:   \rPA Cost:   \rCore: NA\r\r";
   var textareaVal = document.getElementById("textarea2").value;
   var textarea = document.getElementById("textarea2");
   textareaVal = textareaVal.slice(0,-1);
@@ -483,21 +484,61 @@ function OEMOVER() {
   textarea.scrollTop = textarea.scrollHeight;
 }
 
-function NEWAM() {
+function NEWAM(boxNum) {
   var textarea = document.getElementById("textarea2");
-  textarea.value += "RF AM PN:   \rRF Price:   \rPA PN:   \rPA List:   \rPA Cost:   \rCore: NA\r\r";
+  if (boxNum === "9") {
+    textarea.value += NewAMpart;
+  } else {
+    let partName = document.getElementById("part" + boxNum).value;
+    textarea.value += "Part:   ";
+    textarea.value += partName + "\r";
+    textarea.value += NewAMpart;
+  }
   textarea.scrollTop = textarea.scrollHeight;
 }
 
-function NEWOEM() {
+function NEWOEM(boxNum) {
   var textarea = document.getElementById("textarea2");
-  textarea.value += "Verified OEM PN:   \rVerified MSRP:   \rRF Price:   \r\r";
+  if (boxNum === "9") {
+    textarea.value += NewOEMpart;
+  } else {
+    let partName = document.getElementById("part" + boxNum).value;
+    textarea.value += "Part:   ";
+    textarea.value += partName + "\r";
+    textarea.value += NewOEMpart;
+  }
   textarea.scrollTop = textarea.scrollHeight;
+}
+
+function CALLNOANS(btnID) {
+  var Check = localStorage.getItem(btnID + "EDIT");
+  if (Check == null) {
+    document.getElementById("textarea5").value = NoAnswerOOPC;
+    document.getElementById("EDITarea").value = NoAnswerOOPC;
+  } else {
+    document.getElementById("textarea5").value = Check;
+    document.getElementById("EDITarea").value = Check;
+  }
+  let textarea = document.getElementById("textarea5");
+  textarea.select();
+  document.execCommand("copy");
+}
+
+function AUTHOOPC(btnID) {
+  var Check = localStorage.getItem(btnID + "EDIT");
+  if (Check == null) {
+    document.getElementById("textarea5").value = ChAuthedOOPC;
+    document.getElementById("EDITarea").value = ChAuthedOOPC;
+  } else {
+    document.getElementById("textarea5").value = Check;
+    document.getElementById("EDITarea").value = Check;
+  }
+  let textarea = document.getElementById("textarea5");
+  textarea.select();
+  document.execCommand("copy");
 }
 
 function STMTTEMP(btnID) {
-  var StatementTemplate = "What happened:   \rWhen did the issue first occur:   \rHad the issue occurred before:   \rIf yes, when:   \rAny warning lights:   \rAny noise, smoke, or smell:   \rHow long has the CH owned the vehicle:   \rApproximate mileage when CH purchased:   \rWas vehicle towed to RF:   \rFrom where and by whom:   \r";
-
   var Check = localStorage.getItem(btnID + "EDIT");
   if (Check == null) {
     document.getElementById("textarea5").value = StatementTemplate;
@@ -514,7 +555,6 @@ function STMTTEMP(btnID) {
 }
 
 function REVIEW(btnID) {
-  var ReviewNote = "Reviewed inspection photos and report.\rReviewed photos sent by repair facility.\rVerified vin.\rVerified mileage.\rNo indication of commercial use.\rNo indication of modification.\r\r";
   var Check = localStorage.getItem(btnID + "EDIT");
   if (Check == null) {
     document.getElementById("textarea5").value = ReviewNote;
@@ -531,7 +571,6 @@ function REVIEW(btnID) {
 }
 
 function RECREQ(btnID) {
-  var RecordsRequested = "Requesting CH statement regarding issues.\rRequesting past 12 months of service records from CH.\rSent records request using SRS action button.\rWill call CH to inform.";
   var Check = localStorage.getItem(btnID + "EDIT");
   if (Check == null) {
     document.getElementById("textarea5").value = RecordsRequested;
@@ -546,7 +585,6 @@ function RECREQ(btnID) {
 }
 
 function NOANSREC(btnID) {
-  var NoAnsRecdsRqst = "Called CH to request records.\rCalled CH to request statement.\rNo answer – left voicemail.\rTasked to CS callbacks.";
   var Check = localStorage.getItem(btnID + "EDIT");
   if (Check == null) {
     document.getElementById("textarea5").value = NoAnsRecdsRqst;
@@ -561,7 +599,6 @@ function NOANSREC(btnID) {
 }
 
 function INSPTEMP(btnID) {
-  var InspectionTemplate = "Please verify all failures.\rPlease contact 1-2 hours prior to arrival.\rContact:   \rPhone:   \rEmail:   ";
   var Check = localStorage.getItem(btnID + "EDIT");
   if (Check == null) {
     document.getElementById("textarea5").value = InspectionTemplate;
@@ -575,32 +612,6 @@ function INSPTEMP(btnID) {
   document.execCommand("copy");
   ShowTemps();
   imBusy = "false";
-}
-
-function PTXFER() {
-  var showTemp = document.getElementById("transferTemplate");
-  showTemp.style.display = "inline-block";
-  var rfEmail = getContact('1');
-  var rfName = getContact('0');
-  document.getElementById("contact1").value = rfName;
-  document.getElementById("contact2").value = rfEmail;
-  localStorage.setItem("PTpage", "1");
-  document.getElementById("quest1").style.display = "block";
-  ShowTemps();
-}
-
-function PTXFER1() {
-  var showTemp = document.getElementById("transferTemplate");
-  showTemp.style.display = "inline-block";
-  var rfEmail = getContact('1');
-  var rfName = getContact('0');
-  document.getElementById("contact1").value = rfName;
-  document.getElementById("contact2").value = rfEmail;
-}
-
-function cancelPT1() {
-  var showTemp = document.getElementById("transferTemplate");
-  showTemp.style.display = "none";
 }
 
 function PTXFER() {
@@ -659,19 +670,6 @@ function backTEMP() {
   document.getElementById(nextId).style.display = "block";
 }
 
-function cancelPT() {
-  var showTemp = document.getElementById("transferTemplate");
-  showTemp.style.display = "none";
-  var questDivs = document.getElementsByClassName("ptQuest");
-  for (const x of questDivs) {
-    x.style.display = "none";
-  }
-  var questRadios = document.getElementsByClassName("ptRad");
-  for (const x of questRadios) {
-    x.checked = false;
-  }
-}
-
 function submitTEMP() {
   var PtTransfer1 = "Is the repair facility able to diagnose to cause of failure and overhaul if needed?   ";
   var PtTransfer2 = "Has the repair facility ever serviced the vehicle before?   ";
@@ -695,8 +693,17 @@ function submitTEMP() {
   var q9 = document.getElementsByName("ans9");
   var q10 = document.getElementsByName("ans10");
   var q11 = document.getElementsByName("ans11");
-
-  var ans1, ans2, ans3, ans4, ans5, ans6, ans7, ans8, ans9, ans10, ans11;
+  var ans1;
+  var ans2;
+  var ans3;
+  var ans4;
+  var ans5;
+  var ans6;
+  var ans7;
+  var ans8;
+  var ans9;
+  var ans10;
+  var ans11;
 
   var checkedArr = [];
   for (i = 0; i < q1.length; i++) {
@@ -794,8 +801,20 @@ function submitTEMP() {
   showTemp.style.display = "none";
 }
 
+function cancelPT() {
+  var showTemp = document.getElementById("transferTemplate");
+  showTemp.style.display = "none";
+  var questDivs = document.getElementsByClassName("ptQuest");
+  for (const x of questDivs) {
+    x.style.display = "none";
+  }
+  var questRadios = document.getElementsByClassName("ptRad");
+  for (const x of questRadios) {
+    x.checked = false;
+  }
+}
+
 function PICREQ(btnID) {
-  var PicturesReuest = "Requesting photos from RF to verify failure and avoid inspection delay.\rInforming RF to include pics of all 4 corners of the vehicle, VIN plate, odometer, and pictures of the failure.\rSent request via SRS action button.";
   var Check = localStorage.getItem(btnID + "EDIT");
   if (Check == null) {
     document.getElementById("textarea5").value = PicturesReuest;
@@ -861,7 +880,7 @@ function FormToTA() {
     textarea.value += "RF Price: ";
     textarea.value += rfprice + "\r";
     if (overCheck > 250) {
-      textarea.value += "PA PN:   \rPA List:   \rPA Cost:   \rCore: NA\r\r";
+      textarea.value += OemOver250;
       } else {
         textarea.value += "\r";
       }
@@ -872,13 +891,13 @@ function FormToTA() {
     textarea.value += partnum + "\r";
     textarea.value += "RF Price: ";
     textarea.value += rfprice + "\r";
-    textarea.value += "PA PN:   \rPA List:   \rPA Cost:   \rCore: NA\r\r";
+    textarea.value += OemOver250;
   }
   textarea.scrollTop = textarea.scrollHeight;
 }
 
 function AnotherOne() {
-  if (newpartcount < 7) {
+  if (newpartcount < 7){
     document.getElementById("partname" + newpartcount).style.display = "inline-block";
     newpartcount++;
   }
@@ -905,28 +924,34 @@ function NextPart() {
 function SENDLABOR1() {
   var partname = document.getElementById('partname1').value;
   var textarea = document.getElementById("textarea2");
-  textarea.value += "R/R" + partname + "\rRF Asking:   \rPD Approved:   \r\r";
+  textarea.value += "R/R ";
+  textarea.value += partname + "\r";
+  textarea.value += Labor;
   textarea.scrollTop = textarea.scrollHeight;
 }
 
 function SENDDIAG1() {
   var partname = document.getElementById('partname1').value;
   var textarea = document.getElementById("textarea2");
-  textarea.value += "Diag on " +  partname + "\rRF Asking:   \rPD Approved:   \r\r";
+  textarea.value += "Diag on ";
+  textarea.value += partname + "\r";
+  textarea.value += Labor;
   textarea.scrollTop = textarea.scrollHeight;
 }
 
 function QLABOR() {
   var partname = document.getElementById('partname1').value;
   var textarea = document.getElementById("textarea4");
-  textarea.value += "R/R " + partname + "\rRF Asking:   \rPD Approved:   \r\r";
-
+  textarea.value += "R/R ";
+  textarea.value += partname + "\r";
+  textarea.value += Labor;
 }
 
 function QDIAG() {
   var partname = document.getElementById('partname1').value;
   var textarea = document.getElementById("textarea4");
-  textarea.value += "Diag on " + partname + "\rRF Asking:   \rPD Approved:   \r\r";
+  textarea.value += "Diag on ";
+  textarea.value += partname + "\r";
   textarea.value += Labor;
 }
 
@@ -948,6 +973,18 @@ function COPYNOTE() {
   textarea.select();
   document.execCommand("copy");
 }
+
+const downloadFile = () => {
+  const date = new Date();
+  var stamp = date.toDateString();
+  const link = document.createElement("a");
+  const content = document.getElementById("textareadata").value;
+  const file = new Blob([content], { type: 'text/plain' });
+  link.href = URL.createObjectURL(file);
+  link.download = stamp + ".txt";
+  link.click();
+  URL.revokeObjectURL(link.href);
+};
 
 function toggleConductor(boxId) {
   var checkBox = document.getElementById(boxId);
@@ -980,6 +1017,13 @@ function toggleConductor(boxId) {
   }
 }
 
+var STCBCount = 0;
+var PRINCount = 0;
+var LINKCount = 0;
+var ENDNCount = 0;
+var SOLOCount = 0;
+var buttonCount = 0;
+
 window.onload = function PutItBack() { 
   var selected = "holder1";
   var selectedElem = document.getElementById(selected);
@@ -1000,11 +1044,11 @@ window.onload = function PutItBack() {
   var ENt = localStorage.getItem(selected + "ENDN");
   var SOt = localStorage.getItem(selected + "SOLO");
   var but = localStorage.getItem(selected + "Count");
-  var STCBCount = parseInt(STt);
-  var PRINCount = parseInt(PRt);
-  var LINKCount = parseInt(LIt);
-  var ENDNCount = parseInt(ENt);
-  var SOLOCount = parseInt(SOt);
+  STCBCount = parseInt(STt);
+  PRINCount = parseInt(PRt);
+  LINKCount = parseInt(LIt);
+  ENDNCount = parseInt(ENt);
+  SOLOCount = parseInt(SOt);
   buttonCount = parseInt(but);
   for (i = 0; i < buttonCount; i++) {
     var count = i.toString();
@@ -1102,3 +1146,15 @@ function trackerBlank() {
   localStorage.removeItem("rec0date");
   localStorage.setItem("noteOpen", "false");
 }
+
+//  localStorage.setItem("PtTransfer1", "Is the repair facility able to diagnose to cause of failure and overhaul if needed?   ");
+//  localStorage.setItem("PtTransfer2", "Has the repair facility ever serviced the vehicle before?   ");
+//  localStorage.setItem("PtTransfer3", "Can a test drive be performed if needed?   ");
+//  localStorage.setItem("PtTransfer4", "Did the repair facility tow the vehicle?   ");
+//  localStorage.setItem("PtTransfer5", "Has the cause of failure been identified?   ");
+//  localStorage.setItem("PtTransfer6", "Does the repair facility have an itemized estimate available?   ");
+//  localStorage.setItem("PtTransfer7", "Has the repair facility's info and contact info been verified?   ");
+//  localStorage.setItem("PtTransfer8", "What is the preferred method of contact?   ");
+//  localStorage.setItem("PtTransfer9", "Have the PT claim expectations been reviewed with the repair facility contact?   ");
+//  localStorage.setItem("PtTransfer10", "Have you provided the repair facility with the assigned adjusters name, direct extension, and e-mail?   ");
+//  localStorage.setItem("PtTransfer11", "Is there any other relevant info that will assist the adjuster?   ");

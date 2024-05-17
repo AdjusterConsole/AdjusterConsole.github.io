@@ -17,6 +17,7 @@ f {
   top: 0px;
   width: 330px;
   height: 125px;  
+  z-index:2;
 } 
 
 .textspace {

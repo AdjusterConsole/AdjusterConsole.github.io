@@ -286,6 +286,7 @@
   left: 160px;
   height: 35px;
   width: 150px;
+  padding: 0px;
 }
 
 #color {
@@ -295,6 +296,7 @@
   top: 185px;
   height: 35px;
   width: 150px;
+  padding: 0px;
 }
 
 #fontSizer {
@@ -314,6 +316,7 @@
   height: 35px;
   width: 35px;
   text-shadow: none;
+  padding: 0px;
 }
 
 #minus {
@@ -325,6 +328,7 @@
   height: 35px;
   width: 35px;
   text-shadow: none;
+  padding: 0px;
 }
 
 #posSubmit {

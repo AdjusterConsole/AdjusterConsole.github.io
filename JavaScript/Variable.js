@@ -1,3 +1,53 @@
+  var newauthLine0 = "RF Contact name: ";
+  var newauthLine1 = "Verified failures using RF diagnostic.";
+  var newauthLine1a = "Verified failures using RF diagnostic and inspection report.";
+  var newauthLine1b = "Verified failures using RF diagnostic and RF supplied photos.";
+  var newauthLine2 = "Contract has coverage for failed components.";
+  var newauthLine3 = "Verified OEM parts using Forte and AM parts using PA.";
+  var newauthLine4 = "Verified labor using Pro Demand.";
+  var newauthLine5 = "Verified payment info with RF contact at: ";
+
+  document.getElementById("auth1").value = "Using repair facility OEM parts at or under $250.00.";
+  document.getElementById("auth2").value = "Using repair facility parts at or under sourcing MCE.";
+  document.getElementById("auth3").value = "Using sourcing MCE as a credit toward repair facility parts.";
+  document.getElementById("auth4").value = "Using sourcing MCE as a credit toward repair facility parts or shipping in.";
+  document.getElementById("auth5").value = "Adjusted price to reasonable amount near MCE.\rThis was done considering all factors including claim delays,\rshipping costs, liability for future failures, time and mileage\rin coverage, number of prior claims and their cost, etc.";
+
+  var inspAuth1 = "No inspection needed as RF diagnostic matches CH concern.";
+  var inspAuth2 = "Sent inspection to verify failures.\rReviewed report and inspection photos.\rInspection review note is completed.";
+  var inspAuth3 = "Requested and reviewed photos from repair facility.\rPhoto review note is completed.";
+  var recordsAuth1 = "No records requested as history will not change claim decision.\rVehicle is not in waiting period.\rConcern is not maintenance related.\rNo prior related claims.\rNo recalls, TSBs, or mileage concerns.";
+  var recordsAuth2 = "Requested and reviewed records and statement.\rRecord review note is completed.";
+  var requestedAuth1 = "After reviewing all relevant documentation, we are moving forward with verified failures.";
+  var oopcsAuth1 = "Need to review OOPC of $";
+  var oopcsAuth2a = " with contract holder.";
+  var oopcsAuth2b = " and shipping option with contract holder.";
+  var oopcsAuth2c = "OOPC is due to differences in ";
+  var oopcsAuth3 = "Need to review shipping option with contract holder.";
+  var oopcsAuth3a = "Have not given authorization info to RF at this time.";
+  var oopcsAuth4 = "Contract holder has no OOPC besides deductible.";
+  var oopcsAuth4a = "Gave authorization info and payment instructions to ";
+  var noncovAuth1 = "Will inform CH of non-covered components";
+  var noncovAuth2 = "There were denied items on this claim. Review denial note for more details";
+
+  var PicturesReuest = "Requesting photos from RF to verify failure and avoid inspection delay.\rInforming RF to include pics of all 4 corners of the vehicle, VIN plate, odometer, and pictures of the failure.\rSent request via SRS action button.";
+  var RecordsRequested = "Requesting CH statement regarding issues.\rRequesting past 12 months of service records from CH.\rSent records request using SRS action button.\rWill call CH to inform.";
+  var InspectionTemplate = "Please verify all failures.\rPlease contact 1-2 hours prior to arrival.\rContact:   \rPhone:   \rEmail:   ";
+  var StatementTemplate = "What happened:   \rWhen did the issue first occur:   \rHad the issue occurred before:   \rIf yes, when:   \rAny warning lights:   \rAny noise, smoke, or smell:   \rHow long has the CH owned the vehicle:   \rApproximate mileage when CH purchased:   \rWas vehicle towed to RF:   \rFrom where and by whom:   \r";
+  var ReviewNote = "Reviewed inspection photos and report.\rReviewed photos sent by repair facility.\rVerified vin.\rVerified mileage.\rNo indication of commercial use.\rNo indication of modification.\r\r";
+
+  var NoAnswerOOPC = "Called CH for OOPC auth.\rNo answer – left voicemail.\rTasked to CS callbacks.";
+  var ChAuthedOOPC = "Called CH for OOPC and shipping auth.\rCH has approved OOPC.\rCH has approved shipping.";
+  var NoAnsRecdsRqst = "Called CH to request records.\rCalled CH to request statement.\rNo answer – left voicemail.\rTasked to CS callbacks.";
+  var NewOEMpart = "Verified OEM PN:   \rVerified MSRP:   \rRF Price:   \r\r";
+  var OemOver250 = "PA PN:   \rPA List:   \rPA Cost:   \rCore: NA\r\r";
+  var NewAMpart = "RF AM PN:   \rRF Price:   \rPA PN:   \rPA List:   \rPA Cost:   \rCore: NA\r\r";
+  var BulkFluid = "BULK:   \rRF Price:   \rFPS Allows:   \r\r";
+  var Labor = "RF Asking:   \rPD Approved:   \r\r";
+  var Diag = "Diag\rRF Asking:   \rPD Approved:   \r\r";
+  var EvacRechrge = "Evac and Recharge\rRF Asking:   \rPD Approved:   1.4\r\r";
+  var Alignment = "Alignment\rRF Asking:   \rPD Approved:   \r\r";
+  var NoPAIHSourcing = "Nothing available in PA.\rSent to in house sourcing.\r\r";
   var ToEdit;
   var ButDidYouDie = "no";
   var IDset = [];
@@ -31,7 +81,13 @@
 
   var DaddySaysSo = false;
 
-function RESET() {
+function RESET(){
+  document.getElementById("textarea3").value = document.getElementById("textarea1").value + "\r\r" + document.getElementById("textarea3").value;
+  document.getElementById("textarea3").value += document.getElementById("textarea2").value;
+  document.getElementById("textareadata").value = document.getElementById("textareadata").value + "\r\r" + document.getElementById("textarea3").value;
+  let textarea = document.getElementById("textarea3");
+  textarea.select();
+  document.execCommand("copy");
   document.getElementById("textarea3").value = "";
   document.getElementById("textarea2").value = "";
   document.getElementById("textarea1").value = "CONTACT:   \rPAYMENT:   \rZIPCODE:   \rMILEAGE:   \rDISTANCE:   \rTIME:   ";
@@ -68,21 +124,21 @@ function RESET() {
   document.getElementById("TPDiv").style.display = "none";
 }
 
-function CloseIt() {
+function CloseIt(){
   document.getElementById("snipbox").style.display = "none";
 }
 
-function ClearText() {
+function ClearText(){
   document.getElementById("Snippings").value = "";
 }
 
-function COPYIt() {
+function COPYIt(){
   let textarea = document.getElementById("Snippings");
   textarea.select();
   document.execCommand("copy");
 }
 
-function authforOSB() {
+function authforOSB(){
   document.getElementById("TGAFOBTN").style.display = "none";
   document.getElementById("TGAFSBTN").style.display = "none";
   document.getElementById("TGAFBBTN").style.display = "none";
@@ -107,7 +163,7 @@ function bothADDCB() {
   document.getElementById("TGAFOSCBTN").style.display = "none";
 }
 
-function TGAF() {
+function TGAF(){
   if (checkOpen()) { return; }
   ClearText();
   hideSnip();
@@ -151,7 +207,7 @@ function didntHave() {
   document.getElementById("RFIBNV").style.display = "none";
 }
 
-function TGAFO() {
+function TGAFO(){
   document.getElementById("TGAFOABTN").style.display = "inline-block";
   document.getElementById("TGAFODBTN").style.display = "inline-block"; 
   document.getElementById("TGAFOCBTN").style.display = "inline-block";
@@ -160,7 +216,7 @@ function TGAFO() {
   localStorage.setItem("VMREASON",VMREASON);
 }
 
-function TGAFS() {
+function TGAFS(){
   document.getElementById("TGAFSABTN").style.display = "inline-block";
   document.getElementById("TGAFSDBTN").style.display = "inline-block";
   document.getElementById("TGAFSCBTN").style.display = "inline-block";
@@ -170,7 +226,7 @@ function TGAFS() {
   localStorage.setItem("VMREASON",VMREASON);
 }
 
-function TGAFB() {
+function TGAFB(){
   changeVMpos();
   document.getElementById("TGAFOSABTN").style.display = "inline-block";
   document.getElementById("TGAFOSDSBTN").style.display = "inline-block";
@@ -182,7 +238,7 @@ function TGAFB() {
   localStorage.setItem("VMREASON",VMREASON);
 }
 
-function TGAFOA(btnID) {
+function TGAFOA(btnID){
   var Check = localStorage.getItem(btnID + "EDIT");
   showSnip();
   if (Check == null) {
@@ -197,7 +253,7 @@ function TGAFOA(btnID) {
   hideVM();
 }
 
-function TGAFOD(btnID) {
+function TGAFOD(btnID){
   var Check = localStorage.getItem(btnID + "EDIT");
   showSnip();
   if (Check == null) {
@@ -212,7 +268,7 @@ function TGAFOD(btnID) {
   hideVM();
 }
 
-function TGAFOC(btnID) {
+function TGAFOC(btnID){
   var Check = localStorage.getItem(btnID + "EDIT");
   showSnip();
   if (Check == null) {
@@ -227,7 +283,7 @@ function TGAFOC(btnID) {
   hideVM();
 }
 
-function TGAFSA(btnID) {
+function TGAFSA(btnID){
   var Check = localStorage.getItem(btnID + "EDIT");
   showSnip();
   if (Check == null) {
@@ -241,7 +297,7 @@ function TGAFSA(btnID) {
   hideVM();
 }
 
-function TGAFSD(btnID) {
+function TGAFSD(btnID){
   var Check = localStorage.getItem(btnID + "EDIT");
   showSnip();
   if (Check == null) {
@@ -255,7 +311,7 @@ function TGAFSD(btnID) {
   hideVM();
 }
 
-function TGAFSC(btnID) {
+function TGAFSC(btnID){
   var Check = localStorage.getItem(btnID + "EDIT");
   showSnip();
   if (Check == null) {
@@ -269,7 +325,7 @@ function TGAFSC(btnID) {
   hideVM();
 }
 
-function TGAFOSA(btnID) {
+function TGAFOSA(btnID){
   var Check = localStorage.getItem(btnID + "EDIT");
   showSnip();
   if (Check == null) {
@@ -284,7 +340,7 @@ function TGAFOSA(btnID) {
   setVMpos();
 }
 
-function TGAFOSDS(btnID) {
+function TGAFOSDS(btnID){
   var Check = localStorage.getItem(btnID + "EDIT");
   showSnip();
   if (Check == null) {
@@ -299,7 +355,7 @@ function TGAFOSDS(btnID) {
   setVMpos();
 }
 
-function TGAFOSDB(btnID) {
+function TGAFOSDB(btnID){
   var Check = localStorage.getItem(btnID + "EDIT");
   showSnip();
   if (Check == null) {
@@ -314,7 +370,7 @@ function TGAFOSDB(btnID) {
   setVMpos();
 }
 
-function TGAFOSC(btnID) {
+function TGAFOSC(btnID){
   var Check = localStorage.getItem(btnID + "EDIT");
   showSnip();
   if (Check == null) {
@@ -329,17 +385,19 @@ function TGAFOSC(btnID) {
   setVMpos();
 }
 
-function RFIB() {
+function RFIB(){
   if (checkOpen()) { return; }
   ClearText();
   hideSnip();
+
   document.getElementById("RFIBDH").style.display = "inline-block";
   document.getElementById("PNLCBTN").style.display = "inline-block";
   document.getElementById("TOTALBTN").style.display = "inline-block";
   document.getElementById("RFAUTHBTN").style.display = "inline-block";
 }
 
-function RFIBDH() { 
+
+function RFIBDH(){ 
   document.getElementById("RFIBND").style.display = "inline-block";
   document.getElementById("RFIBNE").style.display = "inline-block";
   document.getElementById("RFIBNF").style.display = "inline-block";
@@ -347,7 +405,7 @@ function RFIBDH() {
   rfbaseFour();
 }
 
-function RFIBND(btnID) {
+function RFIBND(btnID){
   var Check = localStorage.getItem(btnID + "EDIT");
   showSnip();
   if (Check === null) {
@@ -360,7 +418,7 @@ function RFIBND(btnID) {
   didntHave();
 }
 
-function RFIBNE(btnID) {
+function RFIBNE(btnID){
   var Check = localStorage.getItem(btnID + "EDIT");
   showSnip();
   if (Check == null) {
@@ -373,7 +431,7 @@ function RFIBNE(btnID) {
   didntHave();
 }
 
-function RFIBNF(btnID) {
+function RFIBNF(btnID){
   var Check = localStorage.getItem(btnID + "EDIT");
   showSnip();
   if (Check == null) {
@@ -386,7 +444,7 @@ function RFIBNF(btnID) {
   didntHave();
 }
 
-function RFIBNV(btnID) {
+function RFIBNV(btnID){
   var Check = localStorage.getItem(btnID + "EDIT");
   showSnip();
   if (Check == null) {
@@ -399,9 +457,10 @@ function RFIBNV(btnID) {
   didntHave();
 }
 
-function PNLC(btnID) {
+function PNLC(btnID){
   var Check = localStorage.getItem(btnID + "EDIT");
   showSnip();
+  document.getElementById("Snippings").style.visibility = "visible";
   if (Check == null) {
     document.getElementById("Snippings").value = "RF called in with the following concerns:\r\rADV PNLC";
   } else {
@@ -411,7 +470,7 @@ function PNLC(btnID) {
   rfbaseFour();
 }
 
-function TOTAL(btnID) {
+function TOTAL(btnID){
   var Check = localStorage.getItem(btnID + "EDIT");
   showSnip();
   if (Check == null) {
@@ -424,7 +483,7 @@ function TOTAL(btnID) {
   rfbaseFour();
 }
 
-function GAR(btnID) {
+function GAR(btnID){
   var Check = localStorage.getItem(btnID + "EDIT");
   showSnip();
   if (Check == null) {
@@ -437,7 +496,7 @@ function GAR(btnID) {
   rfbaseFour();
 }
 
-function NAV() {
+function NAV(){
   showSnip();
   document.getElementById("Snippings").value = localStorage.getItem("VMREASON");
   document.getElementById("Snippings").value += "No answer - Left voicemail\rTasked to CS callbacks\r";
@@ -450,7 +509,7 @@ function NAV() {
   setVMpos();
 }
 
-function NAN() {
+function NAN(){
   showSnip();
   document.getElementById("Snippings").value = localStorage.getItem("VMREASON");
   document.getElementById("Snippings").value += "No answer - No voicemail available\rTasked to CS callbacks\r";
@@ -463,7 +522,7 @@ function NAN() {
   setVMpos();
 }
 
-function RESETNOTE() {
+function RESETNOTE(){
   document.getElementById("RFIBBTN").style.display = "inline-block";
   document.getElementById("TGAFBTN").style.display = "inline-block";
   rfbaseFour();
@@ -492,6 +551,7 @@ document.onkeydown = function(e) {
     document.getElementById('myInfo').style.display = "inline-block";
   }
 };
+
 
 document.onkeyup = function(e) {
   if (e.ctrlKey && e.altKey && e.shiftKey && e.which == 85) {
@@ -534,3 +594,6 @@ function hideParts() {
     NUMBERS2.style.left = "0px";
   }
 }
+
+
+

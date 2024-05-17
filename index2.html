@@ -105,11 +105,11 @@
   position: absolute;
   color: black;
   text-shadow:
-    -1px 0px 2px white,
+   -1px 0px 2px white,
     1px 0px 2px white,
-    -4px 0px 6px white,
+   -4px 0px 6px white,
     4px 0px 6px white,
-    -8px 0px 10px white,
+   -8px 0px 10px white,
     8px 0px 10px white;
   font-size: 12px;
   background: none;
@@ -244,7 +244,7 @@
 </div>
   <button id="newAuthstarter" class="D R P s7dispStat" oncontextmenu="customMenu(this.id, event)" onclick="showAuth()"><b><f>Authorize</f></b> Claim</button>
   <button id="statusNote" class="D R P s8dispStat" oncontextmenu="customMenu(this.id, event)" onclick="statNOTE()"><b>Status</b> Note</button>
-  <button id="SOPs" class="R P D g0dispStat" oncontextmenu="customMenu(this.id, event)" onclick="resrcCenter('7','p')"><f>Policy</f></button>
+  <button id="SOPs" class="R P D g0dispStat" oncontextmenu="customMenu(this.id, event)" onclick="resrcCenter('4','p')"><f>Policy</f></button>
   <button id="tools" class="R P D g1dispStat" oncontextmenu="customMenu(this.id, event)" onclick="resrcCenter('4','t')"><f>Tools</f></button>
 </div>
 <div id="transferTemplate" class="backing" style="display:none;">
@@ -338,7 +338,6 @@
       <button id="cancelPT" class="wefwefwef" onclick="cancelPT()">Cancel</button>
     </div>
   </div>
-
   <div id="statNote" class="backing">
     <div id="statNoteinner" class="newStyle">
     <p style="text-align:center;margin-top:10px;"><b>Status Note</b></p>
@@ -395,7 +394,6 @@
     <button id="submitStat" class="wefwefwef" onclick="submitStat('0')">Submit</button>
     <button id="cancelStat" class="wefwefwef" onclick="cancelStat()">Cancel</button>
   </div>
-
   <div id="newAuthstyle" class="backing" style="display:none;">
     <div id="authParts" class="newStyle authStyle">
       <p style="text-align:center;"><b>Who's parts at what pricing?</b><br>
@@ -447,7 +445,6 @@
       </div>
     </div>
   </div>
-
 <div id="allParts" class="noShow" style="opacity:1">
 <div id="ITSBRITTNEY" class="ONEMORETIME noShow a0dispStat" style="display: inline-block">
   <textarea autocomplete="off" title="Part Name" id="partname7" class="intakeboxes" name="name" placeholder="Part Name" wrap="off"></textarea>
@@ -460,13 +457,13 @@
   <textarea autocomplete="off" title="Part Number" id="partnum" class="intakeboxes" name="name" placeholder="Part Number" wrap="off"></textarea>
   <textarea autocomplete="off" title="RF Price" id="rfprice" class="intakeboxes" name="name" placeholder="RF Price" wrap="off"></textarea>
   <textarea autocomplete="off" title="MSRP" id="msrp" class="intakeboxes" name="name" placeholder="OEM MSRP" wrap="off"></textarea>
-  <button id="SENDPART" class="senditnow D R P" oncontextmenu="customMenu(this.id, event)" onclick="FormToTA()">PART</button>
-  <button id="SENDLABOR" class="senditnow D R P" oncontextmenu="customMenu(this.id, event)" onclick="SENDLABOR1()">LABOR</button>
-  <button id="SENDDIAG" class="senditnow D R P" oncontextmenu="customMenu(this.id, event)" onclick="SENDDIAG1()">DIAG</button> 
-  <button id="DJKahlid" class="senditnow D R P" oncontextmenu="customMenu(this.id, event)" onclick="AnotherOne()">NEW</button>
-  <button id="MTVsNEXT" class="senditnow D R P" oncontextmenu="customMenu(this.id, event)" onclick="NextPart()">NEXT</button> 
+  <button id="SENDPART" class="senditnow D R P" oncontextmenu="customMenu(this.id, event)" onclick="FormToTA();">Part</button>
+  <button id="SENDLABOR" class="senditnow D R P" oncontextmenu="customMenu(this.id, event)" onclick="SENDLABOR1()">Labor</button>
+  <button id="SENDDIAG" class="senditnow D R P" oncontextmenu="customMenu(this.id, event)" onclick="SENDDIAG1()">Diag</button> 
+  <button id="clearIntake" class="senditnow D R P" oncontextmenu="customMenu(this.id, event)" onclick="ClearIntake();">Clear</button> 
+  <button id="DJKahlid" class="senditnow D R P" oncontextmenu="customMenu(this.id, event)" onclick="AnotherOne()">Add Box</button>
+  <button id="MTVsNEXT" class="senditnow D R P" oncontextmenu="customMenu(this.id, event)" onclick="NextPart()">Next</button> 
 </div>
-
 <div id="hlc" class="HardLaborCamp noShow">
   <div id="C1" class="noShow">
     <button id="R2" class="PartsAndLabor D R P a1dispStat" oncontextmenu="customMenu(this.id, event)" onclick="COPYNOTE()">Copy P&L</button>
@@ -507,7 +504,6 @@
   </div>
 </div>
 </div>
-
 <div id="snipbox2" class="noShow">
 <div id="snipbox" class="SnipDiv noShow s0dispStat">
   <div id="rfibcall" class="RFinboundDIV  noShow">
@@ -818,7 +814,6 @@ TIME:&nbsp&nbsp</textarea>
  GENERAL<br>800-531-1925</b>
 </div>
 </div>
-
 <div id="myInfo" class="infoOfme" style="display:none;">Created By Jesse Williams - 2024</div>
 <div id="glowDiv" class="neon noShow P" oncontextmenu="customMenu(this.id, event)"></div>
 <div id="myNav0" class="overlay noShow">
@@ -1052,7 +1047,6 @@ TIME:&nbsp&nbsp</textarea>
   <div id="nav3in10" class="overlay-content appearTut noShow" style="display: none;">
   </div>
 </div>
-
 <div id="resrcDiv" class="backing" style="display: none;">
   <div id="toolsDiv" class="tab hide">
     <button class="tablinks" onclick="openInfo(event, 'QuickAns')">Quick Answers</button>
@@ -1060,36 +1054,16 @@ TIME:&nbsp&nbsp</textarea>
     <button class="tablinks" onclick="openInfo(event, 'PAPrice')">Parts Pricing</button>
     <button class="tablinks edgeButton" onclick="openInfo(event, 'trackerTool')">Tracker</button>
   </div>
-
   <div id="policyDiv" class="tab hide">
     <button class="tablinks" onclick="openInfo(event, 'MBIClaims')">MBI</button>
     <button class="tablinks" onclick="openInfo(event, 'xfer2790')">2790</button>
-    <button class="tablinks" onclick="openInfo(event, 'DoNotUse')">Do Not Use</button>
+    <button class="tablinks" onclick="openInfo(event, 'Tesla')">Tesla</button>
+    <button class="tablinks edgeButton" onclick="openInfo(event, 'DoNotUse')">Do Not Use</button>
     <button class="tablinks" onclick="openInfo(event, 'IsItPT')">Is It PT</button>
     <button class="tablinks" onclick="openInfo(event, 'partsRes')">Parts Res</button>
     <button class="tablinks" onclick="openInfo(event, 'Diagnostic')">Diag Times</button>
     <button class="tablinks edgeButton" onclick="openInfo(event, 'PANoOrder')">Do Not Order</button>
   </div>
-
-
-
-  <div id="partsRes" class="tabcontent">
-    <h3 class="headerTab" style="margin-bottom:0px;">Parts Resolution</h3>
-    <p style="text-align:center;margin-top:10px;">What is it and how is it done?</p>
-
-    <p>Situations that require a Parts Resolution:</p>
-      <ul>
-      <li>The wrong part was ordered or delivered.</li>
-      <li>The part was delivered broken/inoperable</li>
-      <li>The part has failed after install but within 30 days of repair</li>
-      <li>The part has failed after 30 days but within warranty period<br>(typically within 12 months/12,000 miles of repair)</li>
-      <li>The part was not installed and is no longer required</li><br><br><br>
-      <li>Coming soon: SOP for parts resolutions plus tips and tricks</li>
-      </ul>
-
-  </div>
-
-
   <div id="QuickAns" class="tabcontent">
     <h3 class="headerTab" style="margin-bottom:0px;">Common questions</h3>
     <p style="text-align:center;margin-top:10px;">And Their Answers or Where to Find Them.</p>
@@ -1143,7 +1117,6 @@ TIME:&nbsp&nbsp</textarea>
       <p class="QandA">Even if the claim will be denied, one must be opened if the part is listed.<br><br>
       Even if the part is not listed, an open claim is needed to correct mileage or VIN issues.</p>
     </div>
-
     <div id="anstoquest3" class="answerSlide noShow">
       <ul>
       <li>Reauthorize the claim using the 'Reauthorize' button in the actions tab of CMS.</li>
@@ -1157,7 +1130,6 @@ TIME:&nbsp&nbsp</textarea>
       </ul>
       <p class="QandA" style="margin-left:0px;text-align:center;"><b>IMPORTANT - Do NOT change any PART line item to a QUANTITY of 0.</b></p>
     </div>
-
     <div id="anstoquest4" class="answerSlide noShow">
       <p class="QandA">There are 2 things the CH will need.
       The first is a list of Repair facilities that work with us:</p>
@@ -1176,7 +1148,6 @@ TIME:&nbsp&nbsp</textarea>
       A repair facility that uses ProDemand and allows us to ship parts is most likely to have no OOPC.<br><br>
       PepBoys as a national chain uses Mitchell and, generally, allows parts to be shipped in.</p>
     </div>
-
     <div id="anstoquest5" class="answerSlide noShow"><br>
       <p class="QandA">'Paid' status in CMS just means that the card was sent<br>
       It does not indicate if any money was actually dispersed.<br>
@@ -1431,7 +1402,6 @@ TIME:&nbsp&nbsp</textarea>
       Always check ProDemand FIRST.</p>
       </div>
   </div>
-
   <div id="trackerTool" class="tabcontent">
   <div id="tableDiv" class="noteBins arise tableSize">
   <table id="inputTable" class="inputClass">
@@ -1538,6 +1508,48 @@ TIME:&nbsp&nbsp</textarea>
     <div id="trackerMini" class="noShow"></div>
   </div>
 </div>
+  <div id="partsRes" class="tabcontent noteBins arise">
+    <h3 class="headerTab" style="margin-bottom:0px;">Parts Resolution</h3><br>
+    <p style="text-align:center;margin-top:10px;"><b>What Qualifies as a Parts Resolution?</b></p>
+      <ul>
+      <li>The wrong part was ordered or delivered.</li>
+      <li>The part was delivered broken/inoperable</li>
+      <li>The part has failed after install but within 30 days of repair</li>
+      <li>The part has failed after 30 days but within warranty period<br>(typically within 12 months/12,000 miles of repair)</li>
+      <li>The part was not installed and is no longer required</li>
+      </ul><br><br>
+    <p style="text-align:center;margin-top:10px;"><b>How is a Parts Resolution Done?</b></p>
+      <ul>
+      <li>Note the RF contact name, mileage, labor rate, and labor time for the part.</li>
+      <li>Select the 'Parts" tab in CMS and click 'Parts Ordered.</li>
+      <li>Click the checkbox next to the part select 'Parts Resolution'.</li>
+      <li>Select the repair facility and click 'Next'.</li>
+      <li>Select the repair facility contact.</li>
+      <li>Enter the mileage, labor rate and hours, if the part was installed, and the case reason.</li>
+      <li>Select that you have notified the RF about contact time.</li>
+      <li>Enter a detailed description of why the part was wrong or how it failed.</li>
+      <li>Be as specific as posible especially for incorrect parts.</li>
+      <li>Click 'Next' then 'Finish'</li>
+      <li>Upload anything the RF sent in to documents.</li>
+      <li>Notate the claim</li>
+      </ul>
+  </div>
+  <div id="Tesla" class="tabcontent noteBins arise">
+    <h3 class="headerTab">Tesla</h3>
+    <p class="bodyTab">When a repair facility calls in a Tesla claim, start an interaction and take note of the following information:</p>
+      <ul class="teslatab">
+      <li>Contract Number</li>
+      <li>Interaction Number</li>
+      <li>Contract Holder's Name</li>
+      <li>Repair Facility Name</li>
+      <li>Repair Facility Phone Number</li>
+      <li>Repair Facility E-mail Address</li>
+      <li>Repair Facility Contact Name</li>
+      <li>Failed Component(s)</li>
+      </ul>
+      <p class="bodyTab">E-mail this information to JudeDeangelis@americanautoshield.com<br>
+      Advise the Repair Facility that the team that handles Tesla claims will reach out with-in 24 hours.</p>
+  </div>
   <div id="DoNotUse" class="tabcontent noteBins arise">
     <h3 class="headerTab">Do Not Use vs STOP-NO CLAIMS ALLOWED</h3>
     <p class="bodyTab">Shops that have Do Not Use in the RF name are just duplicate accounts.<br>
@@ -1597,7 +1609,6 @@ TIME:&nbsp&nbsp</textarea>
   </div>
   <button id="exitRec" class="wefwefwef" onclick="closeResource()">Exit</button>
 </div>
-
   <div id="outputDiv" class="noteBins outputDiv">
     <div id="alertDiv" class="noShow" onclick="showMsg()"></div>
     <div id="msgDiv" class="noShow"></div>
@@ -1605,7 +1616,6 @@ TIME:&nbsp&nbsp</textarea>
     <div id="splitR" class="noShow both rightSide"></div>
     <button id="closeOutput" class="wefwefwef" onclick="closeOutput()">close</button>
   </div>
-
   <div id="outputDiv2" class="noteBins outputDiv">
     <div id="outputDiv3" class="noShow"></div>
     <button id="closeOutput2" class="wefwefwef" onclick="closeOutput2()">close</button>
@@ -1617,5 +1627,8 @@ TIME:&nbsp&nbsp</textarea>
 <script src="JavaScript/ContextScript.js"></script>
 <script src="JavaScript/tutorialScript.js"></script>
 <script src="JavaScript/commonScript.js"></script>
+<script>
+  setVer('2');
+</script>
 </body>
 </html>

@@ -1,13 +1,13 @@
 div {
-  background: white;
   background: var(--my-accent-color);
   outline: none;
   border-radius: 6px;
   box-shadow: none;
+  font-family: 'Aldrich';
 }
 
 textarea { 
-  font-family: arial, sans-serif;
+  font-family: 'Aldrich';
   line-height: 1.3;
   margin: 10px;
   border-radius: 6px;
@@ -20,7 +20,13 @@ textarea {
   box-shadow: none;
 }
 
+.sdf {
+
+    -10px 0px 10px -12px;
+}
+
 button {
+  font-family: 'Aldrich';
   overflow: hidden;
   overflow-wrap: normal;
   font-size: 17px;
@@ -31,15 +37,34 @@ button {
   outline: none;
   padding: 10px;
   margin: 0px;
-  border: none;
-  border-radius: 6px;
+  border-left: 3px solid var(--my-shadow-color3);
+  border-right: none;
+  border-top: none;
+  border-bottom: none;
+  border-radius: 9px;
   color: var(--my-shadow-color4);
   background: none;
-  box-shadow:  none;
-
-}
-
-button:active {
+  box-shadow: -5px 0px 5px -1px var(--my-shadow-color3);
+  opacity: 1;
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    transition: all .4s;
+    z-index: -1;
+  }
+  &:hover {
+    transition: all .4s;
+    color: var(--my-shadow-color4);
+    &:before {
+      width: 100%;
+    background-color: var(--my-shadow-color3);
+    opacity: .2;
+    }
+  }
 }
 
 .noShow {
@@ -57,7 +82,6 @@ button:active {
   position: absolute;
   display: inline-block;
   font-size: 30px;
-
   color: var(--glow-txt-color);
   text-shadow:   
     1px 1px 1px var(--glow-outline-color), 
@@ -105,18 +129,13 @@ input[type="color"] {
 
 .picker {
   font-size: 16px;
-  width: 140px;
-  border: 2px solid var(--my-accent-color);
-  background: none;
-  box-shadow: none;
-  border-radius: 5px;
 }
 
 #setColors{
   position: absolute;
   display: inline-block;
-  bottom: 5px;
-  right: 5px;
+  bottom: 15px;
+  right: 15px;
   padding: 14px 18px;
   border-bottom: none;
   border-right: none;
@@ -125,8 +144,8 @@ input[type="color"] {
 #exitColor {
   position: absolute;
   display: inline-block;
-  bottom: 5px;
-  right: 145px;
+  bottom: 15px;
+  right: 185px;
   padding: 14px 18px;
   border-bottom: none;
   border-right: none;

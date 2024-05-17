@@ -5,40 +5,61 @@
 
 #picR {
   font-size: 16px;
-  width: 130px;
-  height: 70px;
+
   left: 0px;
   top: 0px;
 }
 
 #recR {
   font-size: 16px;
-  width: 130px;
-  height: 70px;
   left: 0px;
   top: 90px;
 }
 
 #noansR {
   font-size: 15px;
-  width: 130px;
-  height: 70px;
+  white-space: nowrap;
   left: 0px;
   top: 180px;
 }
 
-#T0{
+#T0 {
   font-size: 16px;
-  width: 130px;
-  height: 70px;
-  left: 145px;
+
+  left: 165px;
   top: 180px;
 }
 
 #theHoldup { 
-  left: 235px;
-  bottom: 55px;
-  border-left: 2px solid var(--my-accent-color);
+  left: 255px;
+  bottom: 60px;
+}
+
+.abacking {
+  position: absolute;
+  display: inline-block;
+  border-radius: 20px;
+  border: 3px solid var(--my-shadow-color3);
+  background: var(--fancy-background);
+}
+
+.bbacking {
+  border-radius: 16px;
+  border-top: 3px solid var(--my-shadow-color3);
+  border-bottom: 3px solid var(--my-shadow-color3);
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  padding-right: 0px;
+  background: var(--fancy-background);
+}
+
+.cbacking {
+  padding: 15px;
+  margin: 20px;
+  background: var(--my-accent-color);
+  border-top: 3px solid var(--my-shadow-color3);
+  border-bottom: 3px solid var(--my-shadow-color3);
 }
 
 .backing {
@@ -61,16 +82,16 @@
 }
 
 #statNoteinner {
-  font-size: 16px;
+  font-size: 17px;
   width: 40%;
-  height: 80%;
+  height: 75%;
   padding: 15px;
   margin: 15px;
   transition: .4s;
   transition-delay: .1s;
 }
 
-.newStyle.lftmid {
+.bbacking.lftmid {
   bottom: 300px;
   right: 70px;
   position: absolute;
@@ -102,7 +123,7 @@
   right: 60px;
 }
 
-.newStyle.rgtupr {
+.bbacking.rgtupr {
   top: 30px;
   right: 45px;
   position: absolute;
@@ -128,25 +149,17 @@
 #statusNote {
   font-size: 22px;
   top: 180px;
-  left: 380px;
-  width: 150px;
-  height: 60px;
+  left: 395px;
 }
 
 #submitStat {
-  height: 60px;
-  width: 140px;
-  bottom: 5px;
-  right: 5px;
-  border-left: 2px solid var(--my-accent-color);
+  bottom: 10px;
+  right: 30px;
 }
 
 #cancelStat {
-  height: 60px;
-  width: 140px;
-  bottom: 5px;
-  right: 145px;
-  border-left: 2px solid var(--my-accent-color);
+  bottom: 10px;
+  right: 150px;
 }
 
 #transferTemplate {
@@ -173,7 +186,7 @@
 }
 
 .ta {
-  margin-top: 30px;
+  margin-top: 70px;
   margin-left: 150px; 
 }
 
@@ -185,16 +198,19 @@
 #q3ansExplain {
   position: absolute;
   display: inline-block;
-  top: 170px;
+  top: 190px;
   left: 170px;
   box-shadow: none;
   padding: 10px;
 }
 
 #done3.ptLittle {
-  position: absolute;
-  display: inline-block;
   top: 190px;
+  right: 70px;
+}
+
+#done8.ptLittle {
+  top: 200px;
   right: 70px;
 }
 
@@ -204,6 +220,11 @@
   padding: 10px;
 }
 
+#done11.ptLittle {
+  top: 200px;
+  right: 170px;
+}
+
 #anotherGuess.noShow {
   position: relative;
   margin: auto;
@@ -211,26 +232,23 @@
 }
 
 .ptLittle {
-  position: relative;
-  display: block;
+  position: absolute;
+  display: inline-block;
   text-shadow: none;
   box-shadow: none;
-  width: 100px;
-  height: auto;
-  border: 2px solid var(--my-accent-color);
   margin-left: 50px;
   margin-top: 15px;
   background: none;
-  border-radius: 5px;
 }
 
 .qs {
-  width: 69%;
+  width: 66%;
   position: absolute;
   line-height: 1.5;
 }
 
 .as {
+  margin-top: 5px;
   min-width: 20%;
   float: right;
   white-space: nowrap;
@@ -246,36 +264,28 @@ input.ptRad {
   padding: 15px;
   margin: auto;
   width: 90%;
+  background: none;
 }
 
 #submitTemp {
   position: absolute;
   display: inline-block;
-  height: 60px;
-  width: 140px;
-  bottom: 5px;
+  bottom: 15px;
   right: 5px;
-  border-left: 2px solid var(--my-accent-color);
 }
 
 #backTemp {
   position: absolute;
   display: inline-block;
-  height: 60px;
-  width: 140px;
-  bottom: 5px;
-  right: 5px;
-  border-left: 2px solid var(--my-accent-color);
+  bottom: 15px;
+  right: 30px;
 }
 
 #cancelPT {
   position: absolute;
   display: inline-block;
-  height: 60px;
-  width: 140px;
-  bottom: 5px;
+  bottom: 15px;
   right: 145px;
-  border-left: 2px solid var(--my-accent-color);
 }
 
 #T1 {
@@ -366,19 +376,18 @@ input.ptRad {
 }
 
 #cancelNewauth{
-  height: 60px;
-  width: 140px;
-  bottom: 5px;
+  bottom: 15px;
   right: 145px;
-  border-left: 2px solid var(--my-accent-color);
 }
 
-#authMove, #authMove2, #finishAuth {
-  height: 60px;
-  width: 140px;
-  bottom: 5px;
-  right: 5px;
-  border-left: 2px solid var(--my-accent-color);
+#authMove, #authMove2 {
+  bottom: 15px;
+  right: 15px;
+}
+
+#finishAuth {
+  bottom: 15px;
+  right: 30px;
 }
 
 #newAuthstyle {
@@ -417,8 +426,6 @@ input.ptRad {
   position: absolute;
   display: inline-block;
   font-size: 22px;
-  height: 80px;
-  width: 150px;
   top: 65px;
   left: 380px;
 }
@@ -506,152 +513,130 @@ input.largerRadio {
   overflow: hidden;
   padding: 1px;
   padding-left: 10px;
-  width: 110px;
+  width: 115px;
   height: 30px;
   line-height: 30px;
   resize: none;
-  z-index: 6;
 }
 
 #partname7 {
-  top: -28px;
-  left: -100px;
-  width: 0px;
+  top: -260px;
+  left: -10px;
+  width: 195px;
   display: none;
-  visibility: hidden;
 }
 
 #partname6 {
-  top: -245px;
+  top: -220px;
   left: -10px;
-  width: 200px;
+  width: 195px;
   display: none;
 }
 
 #partname5 {
-  top: -205px;
+  top: -180px;
   left: -10px;
-  width: 200px;
+  width: 195px;
   display: none;
 }
 
 #partname4 {
-  top: -165px;
+  top: -140px;
   left: -10px;
-  width: 200px;
+  width: 195px;
   display: none;
 }
 
 #partname3 {
-  top: -125px;
+  top: -100px;
   left: -10px;
-  width: 200px;
+  width: 195px;
   display: none;
 }
 
 #partname2 {
-  top: -85px;
+  top: -60px;
   left: -10px;
-  width: 200px;
+  width: 195px;
   display: none;
 }
 
 #partname1 {
-  top: -45px;
+  top: -10px;
   left: -10px;
   width: 200px;
 }
 
 #partnum {
-  top: -5px;
-  left: -10px;
+  top: -10px;
+  left: 205px;
 }
 
 #rfprice {
-  top: 35px;
+  top: 30px;
   left: -10px;
 }
 
 #msrp {
-  top: 75px;
+  top: 70px;
   left: -10px;
 }
 
 .senditnow {
   font-size: 17px;
-  z-index: 5;
+  width: 65px;
+  height: 50px;
 }
 
 #SENDPART {
-  top: 0px;
-  left: 135px;
+  top: 50px;
+  left: 140px;
 }
 
 #SENDLABOR {
-  top: 40px;
-  left: 128px;
+  top: 50px;
+  left: 220px;
 }
 
 #SENDDIAG {
-  top: 80px;
-  left: 135px;
-}
-
-#SendQ {
-  top: 40px;
-  left: 310px;
-  white-space: nowrap;
-  font-size: 15px;
-}
-
-#QLABOR {
-  top: 40px;
-  left: 222px;
-  white-space: nowrap;
-  font-size: 15px;
-}
-
-#QDIAG {
-  top: 80px;
-  left: 223px;
-  white-space: nowrap;
-  font-size: 15px;
-}
-
-#partQlQd {
-  white-space: nowrap;
-  top: 0px;
-  left: 215px;
-}
-
-#partLD {
-  white-space: nowrap;
-  top: 0px;
+  top: 50px;
   left: 300px;
 }
 
 #DJKahlid {
-  top: -60px;
-  left: 231px;
+  top: -170px;
+  left: 250px;
+  width: 90px;
+  height: auto;
+  white-space: nowrap;
 }
 
 #MTVsNEXT {
-  top: 80px;
-  left: 312px;
+  top: -50px;
+  left: 250px;
+  width: 90px;
+  height: auto;
+}
+
+#clearIntake {
+  top: -100px;
+  left: 250px;
+  width: 90px;
+  height: auto;
 }
 
 #R2 {
   font-size: 28px;
-  left: 40px;
+  left: 60px;
   top: -70px;
-
 }
 
 #R15 {
   font-size: 22px;
   top: 270px;
-  left: 240px;
-
+  left: 280px;
+  color: red;
+  border-color: red;
 }
 
 #R8 {
@@ -663,43 +648,43 @@ input.largerRadio {
 #R9 {
   font-size: 22px;
   top: 105px;
-  left: 23px;
+  left: 15px;S
 }
 
 #R10 {
   font-size: 22px;
   top: 15px;
-  left: 108px;
+  left: 130px;
 }
 
 #R11 {
   font-size: 22px;
   top: 105px;
-  left: 122px;
+  left: 130px;
 }
 
 #R12 {
   font-size: 22px;
   top: 190px;
-  left: 124px;
+  left: 130px;
 }
 
 #R13 {
   font-size: 22px;
   top: 270px;
-  left: 120px;
+  left: 130px;
 }
 
 #fluid {
   font-size: 22px;
   top: 115px;
-  left: 215px;
+  left: 220px;
 }
 
 #R16 {
   font-size: 22px;
   top: 190px;
-  left: 7px;
+  left: 15px;
 }
 
 #R17 {
@@ -799,28 +784,50 @@ input:checked + .slider:before {
 }
 
 #authLine {
-  top: 130px;
-  left: 380px;
-  width: 130px;
+  top: 260px;
+  left: 420px;
+  width: 370px;
+}
+
+#partsLine {
+  top: 620px;
+  left: 370px;
+  height: 255px;
+}
+
+#partsLine2 {
+  top: 620px;
+  left: 510px;
+  height: 255px;
+}
+
+#reqLine {
+  top: 50px;
+  left: 520px;
+  height: 150px;
+}
+
+#snipLine {
+  top: 310px;
+  left: 400px;
+  height: 100px;
 }
 
 .verticalWrap {
   display: inline-block;
   position: absolute;
   background: none;
-  height: 100px;
   width: 3px;
   overlfow:visible;
 }
 .verticalWrap .line {
   position: absolute;
-  background-color: white;
-  box-shadow: 0px 0px 12px white;
-  width: 4px;
-  height: 100px;
+  background-color: var(--my-glow-color);
+  box-shadow: 0px 0px 12px var(--my-glow-color);
+  width: 3px;
   top: 0px;
   left: 0px;
-  border-radius: 100%;
+  border-radius: 50%;
   overflow: visible;
 }
 
@@ -829,15 +836,13 @@ input:checked + .slider:before {
   position: absolute;
   background: none;
   height: 5px;
-
   overlfow:visible;
 }
 
 .horizontalWrap .line {
   position: absolute;
-  background-color: white;
-  box-shadow: 0px 0px 12px white;
-  width: 80px;
+  background-color: var(--my-glow-color);
+  box-shadow: 0px 0px 12px var(--my-glow-color);
   height: 3px;
   top: 0px;
   left: 0px;
