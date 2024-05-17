@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
-<link rel="stylesheet" href="CSS3/3Stable.css">
-<link rel="stylesheet" href="CSS3/3Buttons.css">
-<link rel="stylesheet" href="CSS3/3contextMenu.css">
-<link rel="stylesheet" href="CSS3/3AppearOpts.css">
-<link rel="stylesheet" href="CSS3/3Resource.css">
+<link href='https://fonts.googleapis.com/css?family=Aldrich' rel='stylesheet'>
+<link rel="stylesheet" href="CSS/Aust/Stable.css">
+<link rel="stylesheet" href="CSS/Aust/Buttons.css">
+<link rel="stylesheet" href="CSS/Aust/contextMenu.css">
+<link rel="stylesheet" href="CSS/Aust/AppearOpts.css">
+<link rel="stylesheet" href="CSS/Aust/Resource.css">
 
 	<title>Adjuster Console</title>
 
@@ -117,16 +119,33 @@
   background: none;
   box-shadow: none;
   overflow: visible;
+  &:before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    transition: all .4s;
+    z-index: -1;
+  }
+  &:hover {
+    color: black;
+    &:before {
+      width: 0%;
+    }
+  }
 }
 
 #swap1 {
   right: 0px;
   top: 0px;
+  border: none;
 }
 
 #swap2 {
   right: 0px;
   top: 25px;
+  border: none;
 }
 
 </style>
@@ -145,84 +164,67 @@
   <button id="buttonMaker" class="astext menu" onclick="showCustom()" >&#x2666; New Button &#x2666;</button>
   <button id="tutorialSel" class="astext menu" onclick="tutorial()" >&#x2666; Tutorial &#x2666;</button>
 </div>
- 
-<div id="appearDiv" style="display:none;" class="backing">
-
+<div id="appearDiv" style="display:none;" class="abacking">
   <div id="BGpick" class="noShow">
     <label for="background-picker">Page Background color:</label><br>
     <input id="background-picker" type="color">
   </div>
-
   <div id="ACpick" class="noShow">
     <label for="accent-picker">Page Accent Color:</label><br>
     <input id="accent-picker" type="color">
   </div>
-
   <div id="shad2Pick" class="noShow">
     <label for="shad2-picker">Gradient Start:</label><br>
     <input id="shad2-picker" type="color">
   </div>
-
   <div id="shad3Pick" class="noShow">
     <label for="shad3-picker">Gradient End:</label><br>
     <input id="shad3-picker" type="color">
   </div>
-
   <div id="shad1Pick" class="noShow">
     <label for="shad1-picker">Highlight: </label><br>
     <input id="shad1-picker" type="color">
   </div>
-
   <div id="shad4Pick" class="noShow">
     <label for="shad4-picker">Shadow: </label><br>
     <input id="shad4-picker" type="color">
   </div>
-
   <div id="bg2Pick" class="noShow">
     <label for="bg2-picker">Secondary Background Color:</label><br>
     <input id="bg2-picker" type="color">
   </div>
-
   <div id="flPick" class="noShow">
     <label for="fl-picker">Secondary Highlight:</label><br>
     <input id="fl-picker" type="color">
   </div>
-
   <div id="fdPick" class="noShow">
     <label for="fd-picker">Secondary Shadow:</label><br>
     <input id="fd-picker" type="color">
   </div>
-
   <div id="mlPick" class="noShow">
     <label for="ml-picker">Seccondary Gradient Start:</label><br>
     <input id="ml-picker" type="color">
   </div>
-
   <div id="mdPick" class="noShow">
     <label for="md-picker">Seccondary Gradient End:</label><br>
     <input id="md-picker" type="color" value="#a4aaae">
   </div>
-
   <div id="nameLabelDiv" class="noShow">
     <label for="userName">Your Name:</label><br>
     <input type="text" id="userName"><br>
   </div>
-
   <div id="namecolorLabelDiv" class="noShow">
     <label for="nameColor">Name Color:</label><br>
     <input id="nameColor" type="color">
   </div>
-
   <div id="nameOutlineDiv" class="noShow">
     <label for="outlineColor">Outline Color:</label><br>
     <input id="outlineColor" type="color">
   </div>
-
   <div id="glowLabelDiv" class="noShow">
     <label for="nameGlow">Glow Color:</label><br>
     <input id="nameGlow" type="color">
   </div>
-
   <button id="setColors" class="picker" onclick="saveColors()">Save and Exit</button>
   <button id="exitColor" class="picker" onclick="exitColor()">Exit</button>
   <button id="defaultColors" class="picker" onclick="setColor('default')">Default Preset</button>
@@ -230,90 +232,87 @@
   <button id="presetRed" class="picker" onclick="setColor('red')">Red Preset</button>
   <button id="presetGreen" class="picker" onclick="setColor('green')">Green Preset</button>
 </div>
-
+  <button id="newAuthstarter" class="D R P s7dispStat" oncontextmenu="customMenu(this.id, event)" onclick="showAuth()">Authorize<br>Claim</button>
+  <button id="statusNote" class="D R P s8dispStat" oncontextmenu="customMenu(this.id, event)" onclick="statNOTE()">Status<br>Note</button>
 <div id="Request" class="REQUESTDIV noShow">
-  <button id="picR" class="PictureReqBTN D R P C s1dispStat" oncontextmenu="customMenu(this.id, event)" onclick="PICREQ(this.id)">PICTURE REQUEST</button>
-  <button id="recR" class="RecordsRequestBTN D R P C s2dispStat" oncontextmenu="customMenu(this.id, event)" onclick="RECREQ(this.id)">RECORDS REQUEST</button>
-  <button id="noansR" class="RecordsReqNoAnsBTN D R P C s3dispStat" oncontextmenu="customMenu(this.id, event)" onclick="NOANSREC(this.id)">RECDS REQST NO ANSWER</button>
-  <button id="T0" class="Template D R P s6dispStat" oncontextmenu="customMenu(this.id, event)" onclick="ShowTemps()">TEMPLATES</button>
+  <button id="picR" class="D R P C s1dispStat" oncontextmenu="customMenu(this.id, event)" onclick="PICREQ(this.id)">PICTURE<br>REQUEST</button>
+  <button id="recR" class="D R P C s2dispStat" oncontextmenu="customMenu(this.id, event)" onclick="RECREQ(this.id)">RECORDS<br>REQUEST</button>
+  <button id="noansR" class="D R P C s3dispStat" oncontextmenu="customMenu(this.id, event)" onclick="NOANSREC(this.id)">RECDS REQST<br>NO ANSWER</button>
+  <button id="T0" class="D R P s6dispStat" oncontextmenu="customMenu(this.id, event)" onclick="ShowTemps()">TEMPLATES</button>
 </div>
-
 <div id="TPDiv" class="noShow" style="display: none">
-  <button id="T1" class="PTXferTempBTN D R P" oncontextmenu="customMenu(this.id, event)" name="name" onclick="PTXFER()">PT TRANSFER</button>
-  <button id="T2" class="CHStatementBTN D R P C" oncontextmenu="customMenu(this.id, event)" onclick="STMTTEMP(this.id)">CH STMNT</button>
-  <button id="T3" class="ReviewNoteBTN D R P C" oncontextmenu="customMenu(this.id, event)" onclick="REVIEW(this.id)">REVIEW NOTE</button>
-  <button id="T4" class="InspectionTempBTN D R P C" oncontextmenu="customMenu(this.id, event)" onclick="INSPTEMP(this.id)">INSP</button>
+  <button id="T1" class="D R P" oncontextmenu="customMenu(this.id, event)" name="name" onclick="PTXFER()">PT TRANSFER</button>
+  <button id="T2" class="D R P C" oncontextmenu="customMenu(this.id, event)" onclick="STMTTEMP(this.id)">CH STMNT</button>
+  <button id="T3" class="D R P C" oncontextmenu="customMenu(this.id, event)" onclick="REVIEW(this.id)">REVIEW NOTE</button>
+  <button id="T4" class="D R P C" oncontextmenu="customMenu(this.id, event)" onclick="INSPTEMP(this.id)">INSP</button>
 </div>
-
-  <div class="horizontalWrap">
-  <div id="authLine" class="line"> </div>
-  </div>
-
-  <div class="verticalWrap">
-  <div class="line"> </div>
-  </div>
-  <button id="newAuthstarter" class="D R P s7dispStat" oncontextmenu="customMenu(this.id, event)" onclick="showAuth()">Authorize Claim</button>
-
-
-  <button id="statusNote" class="D R P s8dispStat" oncontextmenu="customMenu(this.id, event)" onclick="statNOTE()">Status Note</button>
-  <button id="SOPs" class="R P D g0dispStat" oncontextmenu="customMenu(this.id, event)" onclick="resrcCenter('7','p')">Policy</button>
+  <button id="SOPs" class="R P D g0dispStat" oncontextmenu="customMenu(this.id, event)" onclick="resrcCenter('4','p')">Policy</button>
   <button id="tools" class="R P D g1dispStat" oncontextmenu="customMenu(this.id, event)" onclick="resrcCenter('4','t')">Tools</button>
-
-<div id="transferTemplate" class="backing" style="display:none;">
+  <div class="verticalWrap">
+  <div id="partsLine" class="line"></div>
+  </div>
+  <div class="verticalWrap">
+  <div id="reqLine" class="line"></div>
+  </div>
+  <div class="verticalWrap">
+  <div id="snipLine" class="line"></div>
+  </div>
+<div id="transferTemplate" class="abacking" style="display:none;">
    <h3 class="headerTab" style="margin-bottom:30px;">PT Transfer</h3>
-    <div id="quest1" class="newStyle ptQuest">
-      <div class="PT qs"><b>Is the repair facility able to diagnose to cause of failure and overhaul if needed?</b></div>
+    <div id="quest1" class="ptQuest">
+      <div class="PT qs bbacking"><b>Is the repair facility able to diagnose to cause of failure and overhaul if needed?</b></div>
       <div class="PT as">
       <label for="yes1">YES</label><input type="radio" onclick="advancePT(this.id)" class="Mradio ptRad" id="yes1" name="ans1" value="YES"><br>
       <label for="no1">NO</label><input type="radio" onclick="advancePT(this.id)" class="Mradio ptRad" id="no1" name="ans1" value="NO"></div>
     </div>
-    <div id="quest2" class="newStyle ptQuest" style="display:none;">
-      <div class="PT qs"><b>Has the repair facility ever serviced the vehicle before?</b></div>
+    <div id="quest2" class="ptQuest" style="display:none;">
+      <div class="PT qs bbacking"><b>Has the repair facility ever serviced the vehicle before?</b></div>
       <div class="PT as">
       <label for="yes2">YES</label><input type="radio" onclick="advancePT(this.id)" class="Mradio ptRad" id="yes2" name="ans2" value="YES"><br>
       <label for="no2"">NO</label><input type="radio" onclick="advancePT(this.id)" class="Mradio ptRad" id="no2" name="ans2" value="NO"></div>
     </div>
-    <div id="quest3" class="newStyle ptQuest" style="display:none;">
-      <div class="PT qs"><b>Can a test drive be performed if needed?</b></div>
+    <div id="quest3" class="ptQuest" style="display:none;">
+      <div class="PT qs bbacking"><b>Can a test drive be performed if needed?</b></div>
       <div class="PT as">
       <label for="yes3">YES</label><input type="radio" onclick="advancePT(this.id)" class="Mradio ptRad" id="yes3" name="ans3" value="YES"><br>
       <label for="no3">NO</label><input type="radio" onclick="advancePT(this.id)" class="Mradio ptRad" id="no3" name="ans3" value="NO"><br>
       <label for="nr3">NOT RECOMMENDED</label><input type="radio" onclick="advancePT(this.id)" class="Mradio ptRad" id="nr3" name="ans3" value="NOT RECOMMENDED"></div>
     </div>
-    <div id="q3ansN" class="newStyle ptQuest" style="display:none;">
-      <b>Has there been teardown that would prevent a test drive or is the vehicle inoperable due to failure?</b>
-      <div class="iGuess noShow">
+    <div id="q3ansN" class="ptQuest" style="display:none;">
+      <div class="bbacking" style="margin-bottom:15px;">
+      <b>Has there been teardown that would prevent a test drive or is the vehicle inoperable due to failure?</b> </div>
+      <div class="noShow">
       <textarea id="q3ansExplain" placeholder="Brief explanation..." rows="7" cols="30"></textarea>
       <button id="done3" class="ptLittle" onclick="advancePT(this.id)">Next</button>
      </div>
     </div>
-    <div id="quest4" class="newStyle ptQuest" style="display:none;">
-      <div class="PT qs"><b>Did the repair facility tow the vehicle?</b></div>
+    <div id="quest4" class="ptQuest" style="display:none;">
+      <div class="PT qs bbacking"><b>Did the repair facility tow the vehicle?</b></div>
       <div class="PT as">
       <label for="yes4" >YES</label><input type="radio" onclick="advancePT(this.id)" class="Mradio ptRad" id="yes4" name="ans4" value="YES"><br>
       <label for="no4">NO</label><input type="radio" onclick="advancePT(this.id)" class="Mradio ptRad" id="no4" name="ans4" value="NO"><br>
       <label for="na4">NA</label><input type="radio" onclick="advancePT(this.id)" class="Mradio ptRad" id="na4" name="ans4" value="NA"></div>
     </div>
-    <div id="quest5" class="newStyle ptQuest" style="display:none;">
-      <div class="PT qs"><b>Has the cause of failure been identified?</b></div>
+    <div id="quest5" class="ptQuest" style="display:none;">
+      <div class="PT qs bbacking"><b>Has the cause of failure been identified?</b></div>
       <div class="PT as">
       <label for="yes5">YES</label><input type="radio" onclick="advancePT(this.id)" class="Mradio ptRad" id="yes5" name="ans5" value="YES"><br>
       <label for="no5">NO</label><input type="radio" onclick="advancePT(this.id)" class="Mradio ptRad" id="no5" name="ans5" value="NO"></div>
     </div>
-    <div id="quest6" class="newStyle ptQuest" style="display:none;">
-      <div class="PT qs"><b>Does the repair facility have an itemized estimate available?</b></div>
+    <div id="quest6" class="ptQuest" style="display:none;">
+      <div class="PT qs bbacking"><b>Does the repair facility have an itemized estimate available?</b></div>
       <div class="PT as">
       <label for="yes6">YES</label><input type="radio" onclick="advancePT(this.id)" class="Mradio ptRad" id="yes6" name="ans6" value="YES"><br>
       <label for="no6">NO</label><input type="radio" onclick="advancePT(this.id)" class="Mradio ptRad" id="no6" name="ans6" value="NO"></div>
     </div>
-    <div id="quest7" class="newStyle ptQuest" style="display:none;">
-      <div class="PT qs"><b>Has the repair facility's info and contact info been verified?</b></div>
+    <div id="quest7" class="ptQuest" style="display:none;">
+      <div class="PT qs bbacking"><b>Has the repair facility's info and contact info been verified?</b></div>
       <div class="PT as">
       <label for="yes7">YES</label><input type="radio" onclick="advancePT(this.id)" class="Mradio ptRad" id="yes7" name="ans7" value="YES"><br>
       <label for="no7">NO</label><input type="radio" onclick="advancePT(this.id)" class="Mradio ptRad" id="no7" name="ans7" value="NO"></div>
     </div>
-    <div id="quest8" class="newStyle ptQuest" style="display:none;">
-      <div class="PT qs"><b>What is the preferred method of contact?</b></div>
+    <div id="quest8" class="ptQuest" style="display:none;">
+      <div class="PT qs bbacking" style="width: 60%;"><b>What is the preferred method of contact?</b></div>
       <div class="PT as">
       <label for="phone">Phone</label><input type="radio" class="Mradio ptRad" id="phone" name="ans8" value="PHONE" autocomplete="off"><br>
       <label for="email">E-mail</label><input type="radio" class="Mradio ptRad" id="email" name="ans8" value="EMAIL" autocomplete="off"><br>
@@ -323,36 +322,35 @@
       <textarea id="contact1" class="taAuth" placeholder="Contact Name" rows="1" cols="25"></textarea><br><br>
       <textarea id="contact2" class="taAuth" placeholder="E-mail, phone, etc" rows="1" cols="25"></textarea></div>
     </div>
-    <div id="quest9" class="newStyle ptQuest" style="display:none;">
-      <div class="PT qs"><b>Have the PT claim expectations been reviewed with the repair facility contact?</b></div>
+    <div id="quest9" class="ptQuest" style="display:none;">
+      <div class="PT qs bbacking"><b>Have the PT claim expectations been reviewed with the repair facility contact?</b></div>
       <div class="PT as">
       <label for="yes9"">YES</label><input type="radio" onclick="advancePT(this.id)" class="Mradio ptRad"  id="yes9" name="ans9" value="YES"><br>
       <label for="no9"">NO</label><input type="radio" onclick="advancePT(this.id)" class="Mradio ptRad" id="no9" name="ans9" value="NO"></div>
     </div>
-    <div id="quest10" class="newStyle ptQuest" style="display:none;">     
-      <div class="PT qs"><b>Have you provided the repair facility with the assigned adjusters name, direct extension, and e-mail?</b></div>
+    <div id="quest10" class="ptQuest" style="display:none;">     
+      <div class="PT qs bbacking"><b>Have you provided the repair facility with the assigned adjusters name, direct extension, and e-mail?</b></div>
       <div class="PT as">
       <label for="yes10">YES</label><input type="radio" onclick="advancePT(this.id)" class="Mradio ptRad" id="yes10" name="ans10" value="YES"><br>
       <label for="no10">NO</label><input type="radio" onclick="advancePT(this.id)" class="Mradio ptRad" id="no10" name="ans10" value="NO"></div>
     </div>
-    <div id="quest11" class="newStyle ptQuest" style="display:none;">
-      <div class="PT qs"><b>Is there any other relevant info that will assist the adjuster?</b></div>
+    <div id="quest11" class="ptQuest" style="display:none;">
+      <div class="PT qs bbacking"><b>Is there any other relevant info that will assist the adjuster?</b></div>
       <div class="PT as">
       <label for="yes11">YES</label><input type="radio" onclick="advancePT(this.id)" class="Mradio ptRad" id="yes11" name="ans11" value="YES"><br>
       <label for="no11">NO</label><input type="radio" onclick="advancePT(this.id)" class="Mradio ptRad" id="no11" name="ans11" value="NO"></div>
     </div>
     <div id="q11ansY" class="anotherGuess noShow" style="display:none;"> 
-      <textarea id="q11ansExplain" placeholder="Additional Information" rows="5" cols="40" style="left:20px;box-shadow:none;border:2px solid black;resize:none;"></textarea>
+      <textarea id="q11ansExplain" placeholder="Additional Information" rows="5" cols="40"></textarea>
       <button id="done11" class="ptLittle" onclick="advancePT(this.id)">Next</button>
     </div>
     <div id="questBTNs" class="noShow"> 
-      <button id="backTemp" class="wefwefwef" onclick="backTEMP()">Back</button>
-      <button id="cancelPT" class="wefwefwef" onclick="cancelPT()">Cancel</button>
+      <button id="backTemp" onclick="backTEMP()">Back</button>
+      <button id="cancelPT" onclick="cancelPT()">Cancel</button>
     </div>
   </div>
-
-  <div id="statNote" class="backing">
-    <div id="statNoteinner" class="newStyle">
+  <div id="statNote" class="abacking">
+    <div id="statNoteinner" class="bbacking">
     <p style="text-align:center;margin-top:10px;"><b>Status Note</b></p>
     <p>What are we waiting on?</p>
     <p class="bodyTab">
@@ -382,9 +380,9 @@
       <input type="radio" value="yes" class="newStatus Mradio" name="aware" id="stat15" required><label for="stat15">Yes</label><br>
       <input type="radio" value="no" class="newStatus Mradio" name="aware" id="stat16"><label for="stat16">No</label><br>
     </p>
-    <button id="theHoldup" class="wefwefwef" onclick="submitStat('1')">Another One?</button>
+    <button id="theHoldup" onclick="submitStat('1')">Another One?</button>
   </div>
-  <div id="optional" class="newStyle rgtupr">
+  <div id="optional" class="bbacking rgtupr">
     <p class="bodyTab" style="font-size:16px;">
       Any relevant info?<br>
       What are the next steps?<br>
@@ -393,7 +391,7 @@
       <textarea id="optionalNote" class="statText" style="box-shadow:none;"></textarea>
     </p>
   </div>
-  <div id="optional2" class="newStyle lftmid" style="font-size:16px;">
+  <div id="optional2" class="bbacking lftmid" style="font-size:16px;">
     <p>
       <input type="checkbox" id="informed" class="newStatus largerCheckbox">
       The CH and RF should be informed<br>of requests and claim status.<br><br>
@@ -404,12 +402,11 @@
     </p>
   </div>
   <div id="littleHelp" class="noShow">In the Status Note section, select the options relevant to your claim. If you are waiting on additional items, click 'Another One?' and repeat.<br>Add anything you like in the text area at the top right of the screen.<br>In the section under that, click the boxes next to the procedures you have completed.<br>When finished click 'Submit' to generate your note.</div>
-    <button id="submitStat" class="wefwefwef" onclick="submitStat('0')">Submit</button>
-    <button id="cancelStat" class="wefwefwef" onclick="cancelStat()">Cancel</button>
+    <button id="submitStat" onclick="submitStat('0')">Submit</button>
+    <button id="cancelStat" onclick="cancelStat()">Cancel</button>
   </div>
-
-  <div id="newAuthstyle" class="backing" style="display:none;">
-    <div id="authParts" class="newStyle authStyle">
+  <div id="newAuthstyle" class="abacking" style="display:none;">
+    <div id="authParts" class="bbacking authStyle">
       <p style="text-align:center;"><b>Who's parts at what pricing?</b><br>
       Select all that apply...</p>
       <p class="bodyTab"><input type="checkbox" id="auth1" name="authparts" class="FNA largerCheckbox"><label for="auth1"> <b>OEM Under 250</b><br>&nbsp&nbsp&nbsp&nbsp&nbspUsing RF's OEM parts at or under $250.00.</label><br>
@@ -417,36 +414,36 @@
       <input type="checkbox" id="auth3" name="authparts" class="FNA largerCheckbox"><label for="auth3"> <b>Sourcing MCE as Credit</b><br>&nbsp&nbsp&nbsp&nbsp&nbspUsing sourcing MCE as a credit toward repair facility parts. Shipping is not an option.</label><br>
       <input type="checkbox" id="auth4" name="authparts" class="FNA largerCheckbox"><label for="auth4"> <b>MCE as Credit or Shipped</b><br>&nbsp&nbsp&nbsp&nbsp&nbspUsing sourcing MCE as a credit toward repair facility parts or shipping in.</label><br>
       <input type="checkbox" id="auth5" name="authparts" class="FNA largerCheckbox"><label for="auth5"> <b>Negotiated for No OOPC</b><br>&nbsp&nbsp&nbsp&nbsp&nbspUsing RF's parts. Adjusted price to reasonable amount near MCE.</label></p>
-      <button id="cancelNewauth" class="wefwefwef" onclick="cancelNewauth()">Cancel</button>
-      <button id="authMove" class="wefwefwef" onclick="moveAuth()">Continue</button>
+      <button id="cancelNewauth" onclick="cancelNewauth()">Cancel</button>
+      <button id="authMove" onclick="moveAuth()">Continue</button>
     </div>
-    <div id="authRequests" class="newStyle authStyle" style="display:none;>
+    <div id="authRequests" class="bbacking authStyle" style="display:none;>
       <p style="text-align:center;"><b>Did you request anything?</b><br>
       Select all that apply...</p>
       <p class="bodyTab"><input type="checkbox" id="auth6" name="authreqs" class="FNA largerCheckbox"><label for="auth6"><b>Inspection</b></label><br>
       <input type="checkbox" id="auth7" name="authreqs" class="FNA largerCheckbox"><label for="auth7"><b>Photos</b></label><br>
       <input type="checkbox" id="auth8" name="authreqs" class="FNA largerCheckbox"><label for="auth8"><b>Records</b></label><br><br>
       <input type="checkbox" id="auth9" name="authreqs" class="FNA largerCheckbox" onclick="moveAuth2()"><label for="auth9" style="font-size:20px;"><b>No Requests</b></label><br></p>
-      <button id="cancelNewauth" class="wefwefwef" onclick="cancelNewauth()">Cancel</button>
-      <button id="authMove2" class="wefwefwef" onclick="moveAuth2()">Continue</button>
+      <button id="cancelNewauth" onclick="cancelNewauth()">Cancel</button>
+      <button id="authMove2" onclick="moveAuth2()">Continue</button>
     </div>
     <div id="authOopcs" class="noShow" style="display:none;font-size:18px;">
       <div class="noShow" style="width:50%;float:left;">
-      <div class="newStyle authStyle" style="font-size:18px;">
+      <div class="bbacking authStyle" style="font-size:18px;">
         <b>Is OOPC or shipping a concern?</b><br>
         <input type="radio" id="auth10" name="authoops" class="FNA largerRadio" onclick="showOOPopt()"><label for="auth10"><b>OOPC</b></label><br>
         <input type="radio" id="auth11" name="authoops" class="FNA largerRadio"><label for="auth11"><b>Shipping</b></label><br>
         <input type="radio" id="auth12" name="authoops" class="FNA largerRadio" onclick="showOOPopt()"><label for="auth12"><b>Both</b></label><br><br>
         <input type="radio" id="auth13" name="authoops" class="FNA largerRadio"><label for="auth13"><b>No Concerns</b></label><br><br>
       </div><br>
-      <div class="newStyle authStyle" style="font-size:18px;margin-left:20px;">
+      <div class="bbacking authStyle" style="font-size:18px;margin-left:20px;">
         <b>Any non-covered or denied components?</b><br>
         <input type="checkbox" id="auth18" name="authoops3" class="FNA largerCheckbox"><label for="auth18"><b>Non-Covered</b></label><br>
         <input type="checkbox" id="auth18a" name="authoops3" class="FNA largerCheckbox"><label for="auth18a"><b>Denied</b></label><br>
         <input type="checkbox" id="auth19" name="authoops3" class="FNA largerCheckbox"><label for="auth19"><b>No</b></label>
       </div>
       </div>
-      <div id="OOPoptDiv" class="newStyle authStyle" style="display:none;font-size:18px;">
+      <div id="OOPoptDiv" class="bbacking authStyle" style="display:none;font-size:18px;">
       <b>What is the cause of OOPC?</b><br>
         <input type="radio" id="auth14" name="authoops2" class="FNA largerRadio"><label for="auth14"><b>Parts</b></label><br>
         <input type="radio" id="auth15" name="authoops2" class="FNA largerRadio"><label for="auth15"><b>Labor</b></label><br>
@@ -454,12 +451,11 @@
         <label for="auth17"><b>Amount of OOPC<br>&nbsp&nbsp&nbspInclude DED</b></label><br><input type="number" style="padding:5px;" id="auth17" name="authoops" class="FNA" step="0.01"><br>
       </div>
       <div id="authbtns" class="noShow">
-        <button id="cancelNewauth" class="wefwefwef" onclick="cancelNewauth()">Cancel</button>
-        <button id="finishAuth"  class="wefwefwef" onclick="newAuth()">Finish</button>
+        <button id="cancelNewauth" onclick="cancelNewauth()">Cancel</button>
+        <button id="finishAuth" onclick="newAuth()">Finish</button>
       </div>
     </div>
   </div>
-
 <div id="ITSBRITTNEY" class="ONEMORETIME noShow a0dispStat" style="display: inline-block">
   <textarea autocomplete="off" title="Part Name" id="partname7" class="intakeboxes" name="name" placeholder="Part Name" wrap="off"></textarea>
   <textarea autocomplete="off" title="Part Name" id="partname6" class="intakeboxes" name="name" placeholder="Part Name" wrap="off"></textarea>
@@ -471,23 +467,13 @@
   <textarea autocomplete="off" title="Part Number" id="partnum" class="intakeboxes" name="name" placeholder="Part Number" wrap="off"></textarea>
   <textarea autocomplete="off" title="RF Price" id="rfprice" class="intakeboxes" name="name" placeholder="RF Price" wrap="off"></textarea>
   <textarea autocomplete="off" title="MSRP" id="msrp" class="intakeboxes" name="name" placeholder="OEM MSRP" wrap="off"></textarea>
-
-  <button id="SENDPART" class="senditnow D R P" oncontextmenu="customMenu(this.id, event)" onclick="FormToTA()">PART</button>
-  <button id="SENDLABOR" class="senditnow D R P" oncontextmenu="customMenu(this.id, event)" onclick="SENDLABOR1()">LABOR</button>
-  <button id="SENDDIAG" class="senditnow D R P" oncontextmenu="customMenu(this.id, event)" onclick="SENDDIAG1()">DIAG</button> 
-
-  <button id="partQlQd" class="senditnow D R P" oncontextmenu="customMenu(this.id, event)" onclick="FormToTA();QLABOR();QDIAG()";NextPart()>Part w/Q</button> 
-  <button id="partLD" class="senditnow D R P" oncontextmenu="customMenu(this.id, event)" onclick="FormToTA();SENDLABOR1();SENDDIAG1();NextPart()">Send ALL</button> 
-
-  <button id="QLABOR" class="senditnow D R P" oncontextmenu="customMenu(this.id, event)" onclick="QLABOR()">QLabor</button>
-  <button id="QDIAG" class="senditnow D R P" oncontextmenu="customMenu(this.id, event)" onclick="QDIAG()">QDiag</button> 
-  <button id="SendQ" class="senditnow D R P" oncontextmenu="customMenu(this.id, event)" onclick="SendQ()">SendQ</button>
-
-
+  <button id="SENDPART" class="senditnow D R P" oncontextmenu="customMenu(this.id, event)" onclick="FormToTA();">Part</button>
+  <button id="SENDLABOR" class="senditnow D R P" oncontextmenu="customMenu(this.id, event)" onclick="SENDLABOR1()">Labor</button>
+  <button id="SENDDIAG" class="senditnow D R P" oncontextmenu="customMenu(this.id, event)" onclick="SENDDIAG1()">Diag</button> 
+  <button id="clearIntake" class="senditnow D R P" oncontextmenu="customMenu(this.id, event)" onclick="ClearIntake();">Clear</button> 
   <button id="DJKahlid" class="senditnow D R P" oncontextmenu="customMenu(this.id, event)" onclick="AnotherOne()">Add Box</button>
   <button id="MTVsNEXT" class="senditnow D R P" oncontextmenu="customMenu(this.id, event)" onclick="NextPart()">Next</button> 
 </div>
-
 <div id="hlc" class="HardLaborCamp noShow">
   <button id="R2" class="PartsAndLabor D R P a1dispStat" oncontextmenu="customMenu(this.id, event)" onclick="COPYNOTE()">Copy P&L</button>
   <button id="R15" class="Reset D R P a4dispStat" oncontextmenu="customMenu(this.id, event)" style="display: inline-block" onclick="RESET()">RESET</button>
@@ -505,8 +491,6 @@
     <button id="R17" class="D R P" oncontextmenu="customMenu(this.id, event)" style="display: inline-block" onclick="DIAG()">DIAG</button>
   </div>
 </div>
-
-
 <div id="snipbox2" class="noShow">
 <div id="snipbox" class="SnipDiv noShow s0dispStat">
   <div id="rfibcall" class="RFinboundDIV  noShow">
@@ -514,8 +498,8 @@
        <textarea autocomplete="off" id="Snippings" class="SnipArea" name="name" style="display: none" oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'></textarea>
     </div>
     <div id="RFone noShow">
-      <button id="RFIBBTN" class="IBOBC R D P" oncontextmenu="customMenu(this.id, event)" onclick="RFIB()"><RF<br>INBOUND</button>
-      <button id="TGAFBTN" class="IBOBC R D P" oncontextmenu="customMenu(this.id, event)" onclick="TGAF()"><CALLED CH<br>TO GET AUTH FOR</button>
+      <button id="RFIBBTN" class="IBOBC R D P" oncontextmenu="customMenu(this.id, event)" onclick="RFIB()">RF<br>INBOUND</button>
+      <button id="TGAFBTN" class="IBOBC R D P" oncontextmenu="customMenu(this.id, event)" onclick="TGAF()">CALLED CH<br>TO GET AUTH FOR</button>
       <button id="RESET" class="IBOBC R D P" oncontextmenu="customMenu(this.id, event)" onclick="RESETNOTE()">RESET</button>
       <button id="COPY" class="IBOBC R D P" oncontextmenu="customMenu(this.id, event)" onclick="COPYIt()">COPY</button>
     </div>
@@ -570,31 +554,31 @@
     <div class="item" onclick="BuilderShow('o')">Toggle List</div>
     <div class="item" onclick="tutorial()">Tutorial</div>
   </div>
-<div class="CMeditDIV backing" id="disEdit" style="display:none; text-align: center;">
+<div class="CMeditDIV abacking" id="disEdit" style="display:none; text-align: center;">
   <div id="TitleDisplay" class="noShow"><b>Edit Display</b>
   </div>
   <div id="Instruction" class="noShow"> Highlight the text you would like to modify.<br>
     Press the button to apply the effect<br>
     Change the font size using the + and - buttons<br><br>
   </div>
-  <button id="color" class="bones" onclick="submitDisp('c')">Color Change</button>
-  <button id="bold" class="bones" onclick="submitDisp('b')">Toggle Bold</button>
-  <button id="mimic" class="bones" contenteditable></button>
+  <button id="color" onclick="submitDisp('c')">Color Change</button>
+  <button id="bold" onclick="submitDisp('b')">Toggle Bold</button>
+  <button id="mimic" contenteditable></button>
   <div id="fontSizer" class="noShow"></div>
-  <button id="plus" class="bones" onclick="fontChange('1')"> <b>+</b> </button>
-  <button id="minus" class="bones" onclick="fontChange('-1')"> <b>-</b> </button>
-  <button id="dispCancel" class="bones" onclick="submitDisp('s')">Exit</button>
-  <button id="dispSubmit" class="bones" onclick="submitDisp('s')">Submit</button>
-  <button id="dispDefault" class="bones" onclick="submitDisp('d')">Default</button>
+  <button id="plus" onclick="fontChange('1')"> <b>+</b> </button>
+  <button id="minus" onclick="fontChange('-1')"> <b>-</b> </button>
+  <button id="dispCancel" onclick="submitDisp('s')">Exit</button>
+  <button id="dispSubmit"onclick="submitDisp('s')">Submit</button>
+  <button id="dispDefault" onclick="submitDisp('d')">Default</button>
 </div>
-<div class="CMeditDIV backing" id="contEdit" style="display:none; text-align: center;">
+<div class="CMeditDIV abacking" id="contEdit" style="display:none; text-align: center;">
   <div id="ContentDisplay" class="noShow"><br><br><b>Edit Content</b></div>
   <div id="ContentEditor" style="box-shadow:none; border:3px dashed var(--my-background-color); background:white;" contenteditable></div>
-  <button id="contSubmit" class="bones" onclick="submitCont()">Submit</button>
-  <button id="contCancel" class="bones" onclick="cancelCont()">Exit</button>
-  <button id="contDefault" class="bones" onclick="defaultCont()">Default</button>
+  <button id="contSubmit" onclick="submitCont()">Submit</button>
+  <button id="contCancel" onclick="cancelCont()">Exit</button>
+  <button id="contDefault" onclick="defaultCont()">Default</button>
 </div>
-<div class="CMeditDIV backing" id="sizeEdit" style="display:none; text-align: center;">
+<div class="CMeditDIV abacking" id="sizeEdit" style="display:none; text-align: center;">
   <div id="heightMod" class="noShow" style="text-align: center;">
     <button id="hplus" class="moveBTNS" onclick="heightChange('5')">&#x2B9E;</button><br><br>
     <button id="hminus" class="moveBTNS" onclick="heightChange('-5')">&#x2B9C;</button>
@@ -603,12 +587,12 @@
     <button  id="wplus" class="moveBTNS" onclick="widthChange('5')">&#x2B9E;</button>
     <button  id="wminus" class="moveBTNS" onclick="widthChange('-5')">&#x2B9C;</button>
   </div>
-    <button id="sizeShow" class="bones"></button>
-    <button id="sizeSubmit" class="bones" onclick="sizeSubmit('s')">Submit</button>
-    <button id="sizeDefault" class="bones" onclick="sizeSubmit('d')">Default</button>
-  <button id="sizeCancel" class="bones" onclick="sizeSubmit()">Exit</button>
+    <button id="sizeShow" ></button>
+    <button id="sizeSubmit" onclick="sizeSubmit('s')">Submit</button>
+    <button id="sizeDefault" onclick="sizeSubmit('d')">Default</button>
+  <button id="sizeCancel" onclick="sizeSubmit()">Exit</button>
 </div>
-<div class="CMeditDIV backing" id="posEdit" style="display:none">
+<div class="CMeditDIV abacking" id="posEdit" style="display:none">
   <button class="moveBTNS" id="upBTN" onclick="udMove('-5')">&#x2B9E;</button>
   <button class="moveBTNS" id="downBTN" onclick="udMove('5')">&#x2B9C;</button>
   <button class="moveBTNS" id="leftBTN" onclick="lrMove('-5')">&#x2B9C;</button>
@@ -730,7 +714,7 @@
   </div>
 </div>
 <div id="buttonSpot" class="noShow"></div>
-  <div id="infoDiv1" class="backing" style="display: none">
+  <div id="infoDiv1" class="abacking" style="display: none">
     <b>Button Types:</b><br><br>
     <b>Solo Note:</b> This is for adding text to the text area.<br>
     This will not clear the text area or copy to the clipboard.<br>
@@ -745,10 +729,10 @@
     This will add text to the end of a Starter Note or another Link Note.<br><br>
     <b>End Note:</b> This is for the last note in a Chain. This will add text<br>
     to the existing note and copy all of it to the clipboard.<br>
-    <button id="infoDone" class="infoBtn bones" onclick="infoDone()">Ready</button>
-    <button id="infoCancel" class="infoBtn bones" onclick="infoCancel()">Cancel</button>
+    <button id="infoDone" class="infoBtn" onclick="infoDone()">Ready</button>
+    <button id="infoCancel" class="infoBtn" onclick="infoCancel()">Cancel</button>
   </div>
-  <div id="infoDiv2" class="backing" style="display: none"><br><br>
+  <div id="infoDiv2" class="abacking" style="display: none"><br><br>
     <div id="radioLine" class="noShow">
       <b>Select the Button Type</b><br><br>
       <input type="radio" id="SOLO" name="buttonType" value="SOLO">
@@ -764,8 +748,8 @@
    </div>
     <p><textarea id="BtnDisplay" placeholder="Button Display..." name="btnDisplay" rows="1" cols="35"></textarea></p>
     <p><textarea id="BtnContent" placeholder="Note Content..." name="btnContent" rows="5" cols="35"></textarea></p>
-    <button id="infoCancel2" class="infoBtn bones" onclick="infoCancel2()">Cancel</button>
-    <button id="infoDone2" class="infoBtn bones" onclick="infoDone2()">Done</button>
+    <button id="infoCancel2" class="infoBtn" onclick="infoCancel2()">Cancel</button>
+    <button id="infoDone2" class="infoBtn" onclick="infoDone2()">Done</button>
   </div>
 </div>
 <div id="areaOne">
@@ -810,14 +794,13 @@ TIME:&nbsp&nbsp</textarea>
   SEALANT/RTV: 13.37 PER 3.5OZ<br>
 </div>
 <div id="NUMBERS2" class="noShow">
-<div id="NUMBERS" class="div4 noShow"><b>PAYMENTS FAX<br>303-456-1039<br><br>
+<div id="NUMBERS" class="div4 noShow">PAYMENTS FAX<br>303-456-1039<br><br>
  RECORDS FAX<br>303-420-4722<br><br>
  CAR SHIELD<br>800-430-1705<br><br>
  ROADSIDE ASSITANCE<br>866-222-7869<br><br>
- GENERAL<br>800-531-1925</b>
+ GENERAL<br>800-531-1925
 </div>
 </div>
-
 <div id="myInfo" class="infoOfme" style="display:none;">Created By Jesse Williams - 2024</div>
 <div id="glowDiv" class="neon noShow P" oncontextmenu="customMenu(this.id, event)"></div>
 <div id="myNav0" class="overlay noShow">
@@ -1051,31 +1034,26 @@ TIME:&nbsp&nbsp</textarea>
   <div id="nav3in10" class="overlay-content appearTut noShow" style="display: none;">
   </div>
 </div>
-
-<div id="resrcDiv" class="backing" style="display: none;">
+<div id="resrcDiv" class="abacking" style="display:none;">
   <div id="toolsDiv" class="tab hide">
-    <button class="tablinks" onclick="openInfo(event, 'QuickAns')">Quick Answers</button>
+    <button class="tablinks edgeButton" onclick="openInfo(event, 'QuickAns')">Quick Answers</button>
     <button class="tablinks" onclick="openInfo(event, 'MileDiscrep')">Mileage Discrep</button>
     <button class="tablinks" onclick="openInfo(event, 'PAPrice')">Parts Pricing</button>
-    <button class="tablinks edgeButton" onclick="openInfo(event, 'trackerTool')">Tracker</button>
+    <button class="tablinks" onclick="openInfo(event, 'trackerTool')">Tracker</button>
   </div>
-
   <div id="policyDiv" class="tab hide">
     <button class="tablinks" onclick="openInfo(event, 'MBIClaims')">MBI</button>
     <button class="tablinks" onclick="openInfo(event, 'xfer2790')">2790</button>
+    <button class="tablinks" onclick="openInfo(event, 'Tesla')">Tesla</button>
     <button class="tablinks" onclick="openInfo(event, 'DoNotUse')">Do Not Use</button>
     <button class="tablinks" onclick="openInfo(event, 'IsItPT')">Is It PT</button>
     <button class="tablinks" onclick="openInfo(event, 'partsRes')">Parts Res</button>
     <button class="tablinks" onclick="openInfo(event, 'Diagnostic')">Diag Times</button>
-    <button class="tablinks edgeButton" onclick="openInfo(event, 'PANoOrder')">Do Not Order</button>
+    <button class="tablinks" onclick="openInfo(event, 'PANoOrder')">Do Not Order</button>
   </div>
-
-
-
-  <div id="partsRes" class="tabcontent">
+  <div id="partsRes" class="tabcontent cbacking">
     <h3 class="headerTab" style="margin-bottom:0px;">Parts Resolution</h3>
     <p style="text-align:center;margin-top:10px;">What is it and how is it done?</p>
-
     <p>Situations that require a Parts Resolution:</p>
       <ul>
       <li>The wrong part was ordered or delivered.</li>
@@ -1085,14 +1063,11 @@ TIME:&nbsp&nbsp</textarea>
       <li>The part was not installed and is no longer required</li><br><br><br>
       <li>Coming soon: SOP for parts resolutions plus tips and tricks</li>
       </ul>
-
   </div>
-
-
   <div id="QuickAns" class="tabcontent">
     <h3 class="headerTab" style="margin-bottom:0px;">Common questions</h3>
     <p style="text-align:center;margin-top:10px;">And Their Answers or Where to Find Them.</p>
-    <div class="questionContain">
+    <div class="cbacking noShow">
     <div class="questions noShow" id="quest1" onclick="showAnswer(this.id)">
       &blacklozenge; Where can I find tracking information about a PA order?
     </div>
@@ -1142,7 +1117,6 @@ TIME:&nbsp&nbsp</textarea>
       <p class="QandA">Even if the claim will be denied, one must be opened if the part is listed.<br><br>
       Even if the part is not listed, an open claim is needed to correct mileage or VIN issues.</p>
     </div>
-
     <div id="anstoquest3" class="answerSlide noShow">
       <ul>
       <li>Reauthorize the claim using the 'Reauthorize' button in the actions tab of CMS.</li>
@@ -1156,7 +1130,6 @@ TIME:&nbsp&nbsp</textarea>
       </ul>
       <p class="QandA" style="margin-left:0px;text-align:center;"><b>IMPORTANT - Do NOT change any PART line item to a QUANTITY of 0.</b></p>
     </div>
-
     <div id="anstoquest4" class="answerSlide noShow">
       <p class="QandA">There are 2 things the CH will need.
       The first is a list of Repair facilities that work with us:</p>
@@ -1175,7 +1148,6 @@ TIME:&nbsp&nbsp</textarea>
       A repair facility that uses ProDemand and allows us to ship parts is most likely to have no OOPC.<br><br>
       PepBoys as a national chain uses Mitchell and, generally, allows parts to be shipped in.</p>
     </div>
-
     <div id="anstoquest5" class="answerSlide noShow"><br>
       <p class="QandA">'Paid' status in CMS just means that the card was sent<br>
       It does not indicate if any money was actually dispersed.<br>
@@ -1192,7 +1164,7 @@ TIME:&nbsp&nbsp</textarea>
       </ul>
     </div>
   </div>
-  <div id="MileDiscrep" class="tabcontent">
+  <div id="MileDiscrep" class="tabcontent cbacking">
     <h3 class="headerTab">Mileage Discrepancies</h3>
     <div id="MileDiscrep1" class="mileage noShow"> 
       <p><b>Is the contract a Term contract or a Month-to-Month Contract?</b>
@@ -1251,11 +1223,11 @@ TIME:&nbsp&nbsp</textarea>
       </p>
     </div>
     <div id="buttons" class="noShow">
-      <button id="mileagebtn" class="wefwefwef" onclick="mileDiscrep()">Next</button>
-      <button id="resetMD" class="wefwefwef" onclick="resetMD()">Reset</button>
+      <button id="mileagebtn" onclick="mileDiscrep()">Next</button>
+      <button id="resetMD" onclick="resetMD()">Reset</button>
     </div>
   </div>
-  <div id="PAPrice" class="tabcontent">
+  <div id="PAPrice" class="tabcontent cbacking">
     <h3 class="headerTab">Parts Pricing - PA and Sourcing</h3>
     <div id="authGuide1" class="authGuide noShow"> 
       <p class="bodyTab"><b>Is the Repair Facility part OEM or AM?</b>
@@ -1345,11 +1317,11 @@ TIME:&nbsp&nbsp</textarea>
         If there are no PA options and nothing returns from in house, auth MSRP.<br><br>
         Before shippping or calling the CH for OOPC, always give the RF a chance to match</p>
     </div>
-  <button id="resetPA" class="wefwefwef" onclick="resetGuide()">Reset</button>
+  <button id="resetPA" onclick="resetGuide()">Reset</button>
   </div>
   <div id="PANoOrder" class="tabcontent">
   <h3 class="headerTab">Do Not Order These Parts From PA</h3>
-    <div class="innerLeft">
+    <div class="innerLeft cbacking noShow">
     <p><b>Engine and Internals</b></p>
     <p class="bodyTab">Rocker Arm<br>
     Camshaft<br>
@@ -1365,7 +1337,7 @@ TIME:&nbsp&nbsp</textarea>
     Oil Pump<br>
     Timing Components<br> -Except Timing Chain Kits</p>
   </div>
-  <div class="innerRight">
+  <div class="innerRight cbacking noShow">
     <p><b>Transmission and Other DriveTrain</b></p>
     <p class="bodyTab">Torque Converter<br>
     Valve Body<br>
@@ -1388,7 +1360,7 @@ TIME:&nbsp&nbsp</textarea>
   </div>
   <div id="Diagnostic" class="tabcontent">
     <h3 class="headerTab">Common Diagnostic Times</h3>
-      <div class="innerLeft noShow">
+      <div class="innerLeft cbacking noShow">
       <p><b>Air Conditioning</b></p>
       <p class="bodyTab">Evac and Recharge: <b>1.4</b><br>
       Partial Recharge: <b>.6</b><br>
@@ -1409,7 +1381,7 @@ TIME:&nbsp&nbsp</textarea>
       Injector Node Test: <b>.5</b><br>
       Drain and Fill Fuel Tank: <b>.5</b></p>
       </div>
-      <div class="innerRight noShow">
+      <div class="innerRight cbacking noShow">
       <p><b>Cooling</b></p>
       <p class="bodyTab">Pressure Test: <b>.4</b><br>
       Flush: <b>.5 - .7</b><br>
@@ -1530,14 +1502,14 @@ TIME:&nbsp&nbsp</textarea>
     <label for="whichB" class="selectLabel">Inception Estimate</label><input type="checkbox" id="whichB" class="repOpt largerCheckbox"></input><br>
     <label for="whichC" class="selectLabel">Format for Note</label><input type="checkbox" id="whichC" class="repOpt largerCheckbox"></input>
   </div>
-  <button id="checkIt" class="wefwefwef" onclick="whichRep()">Generate Report</button>
-  <button id="resetRep" class="wefwefwef" onclick="resetReport()">Reset Template</button>
+  <button id="checkIt" onclick="whichRep()">Generate Report</button>
+  <button id="resetRep" onclick="resetReport()">Reset Template</button>
   <div id="trackerMsgouter" class="noShow">
     <div id="trackerMsg" class="noShow" style="margin-bottom: 15px;"></div>
     <div id="trackerMini" class="noShow"></div>
   </div>
 </div>
-  <div id="DoNotUse" class="tabcontent noteBins arise">
+  <div id="DoNotUse" class="tabcontent cbacking">
     <h3 class="headerTab">Do Not Use vs STOP-NO CLAIMS ALLOWED</h3>
     <p class="bodyTab">Shops that have Do Not Use in the RF name are just duplicate accounts.<br>
     The Do Not Use is in reference to that profile. The RF will have another<br>
@@ -1550,7 +1522,23 @@ TIME:&nbsp&nbsp</textarea>
     <p class="bodyTab">Do not share any details or speculation about the RF to the CH or anyone from the RF.</p>
     <p class="bodyTab">Document all actions taken in the notes.</p>
   </div>
-  <div id="xfer2790" class="tabcontent noteBins arise">
+  <div id="Tesla" class="tabcontent cbacking">
+    <h3 class="headerTab">Tesla</h3>
+    <p class="bodyTab">When a repair facility calls in a Tesla claim, start an interaction and take note of the following information:</p>
+      <ul class="teslatab">
+      <li>Contract Number</li>
+      <li>Interaction Number</li>
+      <li>Contract Holder's Name</li>
+      <li>Repair Facility Name</li>
+      <li>Repair Facility Phone Number</li>
+      <li>Repair Facility E-mail Address</li>
+      <li>Repair Facility Contact Name</li>
+      <li>Failed Component(s)</li>
+      </ul>
+      <p class="bodyTab">E-mail this information to JudeDeangelis@americanautoshield.com<br>
+      Advise the Repair Facility that the team that handles Tesla claims will reach out with-in 24 hours.</p>
+  </div>
+  <div id="xfer2790" class="tabcontent cbacking">
     <h3 class="headerTab">2790</h3>
     <p><b>Don't let the big red banner scare you off.</b></p>
     <p class="bodyTab">A transfer to 2790 is only required in order to start a new claim.<br>
@@ -1559,7 +1547,7 @@ TIME:&nbsp&nbsp</textarea>
     you should task the assigned ADJ with updates or actions needed.</p>
     <p class="bodyTab">And of course, if you are not sure of what steps you should take, reach out to your TL.</p>
   </div>
-  <div id="IsItPT" class="tabcontent noteBins arise">
+  <div id="IsItPT" class="tabcontent cbacking">
     <h3 class="headerTab">Is It PT?</h3>
     <p><b>What Qualifies for PowerTrain Transfer:</b></p>
     <p class="bodyTab">Internal Engine Damage<br>
@@ -1578,7 +1566,7 @@ TIME:&nbsp&nbsp</textarea>
     Engine Cooling Concerns<br>
     A/C Concerns</p>
   </div>
-  <div id="MBIClaims" class="tabcontent noteBins arise">
+  <div id="MBIClaims" class="tabcontent cbacking">
     <h3 class="headerTab">MBI Claims</h3>
     <p><b>Important</b></p>
     <p>Do <b>NOT</b> request any disassembly or teardown unless notated to do so in the claim.<br>
@@ -1596,7 +1584,6 @@ TIME:&nbsp&nbsp</textarea>
   </div>
   <button id="exitRec" class="wefwefwef" onclick="closeResource()">Exit</button>
 </div>
-
   <div id="outputDiv" class="noteBins outputDiv">
     <div id="alertDiv" class="noShow" onclick="showMsg()"></div>
     <div id="msgDiv" class="noShow"></div>
@@ -1604,7 +1591,6 @@ TIME:&nbsp&nbsp</textarea>
     <div id="splitR" class="noShow both rightSide"></div>
     <button id="closeOutput" class="wefwefwef" onclick="closeOutput()">close</button>
   </div>
-
   <div id="outputDiv2" class="noteBins outputDiv">
     <div id="outputDiv3" class="noShow"></div>
     <button id="closeOutput2" class="wefwefwef" onclick="closeOutput2()">close</button>
@@ -1616,5 +1602,9 @@ TIME:&nbsp&nbsp</textarea>
 <script src="JavaScript/ContextScript.js"></script>
 <script src="JavaScript/tutorialScript.js"></script>
 <script src="JavaScript/commonScript.js"></script>
+<script>
+setVer('3');
+
+</script>
 </body>
 </html>

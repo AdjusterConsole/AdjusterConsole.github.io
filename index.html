@@ -45,7 +45,7 @@
 #snipbox {
   padding: 0px;
   top: 300px;
-  left: 50px;
+  left: 70px;
   display: inline-block;
   position: absolute;
 }
@@ -162,11 +162,12 @@
   <textarea autocomplete="off" title="Part Number" id="partnum" class="intakeboxes" name="name" placeholder="Part Number" wrap="off"></textarea>
   <textarea autocomplete="off" title="RF Price" id="rfprice" class="intakeboxes" name="name" placeholder="RF Price" wrap="off"></textarea>
   <textarea autocomplete="off" title="MSRP" id="msrp" class="intakeboxes" name="name" placeholder="OEM MSRP" wrap="off"></textarea>
-  <button id="SENDPART" class="senditnow D R P" oncontextmenu="customMenu(this.id, event)" onclick="FormToTA()">SEND PART</button>
-  <button id="SENDLABOR" class="senditnow D R P" oncontextmenu="customMenu(this.id, event)" onclick="SENDLABOR1()">LABOR</button>
-  <button id="SENDDIAG" class="senditnow D R P" oncontextmenu="customMenu(this.id, event)" onclick="SENDDIAG1()">DIAG</button> 
-  <button id="DJKahlid" class="senditnow D R P" oncontextmenu="customMenu(this.id, event)" onclick="AnotherOne()">NEW PART</button>
-  <button id="MTVsNEXT" class="senditnow D R P" oncontextmenu="customMenu(this.id, event)" onclick="NextPart()">NEXT PART</button> 
+  <button id="SENDPART" class="senditnow D R P" oncontextmenu="customMenu(this.id, event)" onclick="FormToTA();">Part</button>
+  <button id="SENDLABOR" class="senditnow D R P" oncontextmenu="customMenu(this.id, event)" onclick="SENDLABOR1()">Labor</button>
+  <button id="SENDDIAG" class="senditnow D R P" oncontextmenu="customMenu(this.id, event)" onclick="SENDDIAG1()">Diag</button> 
+  <button id="clearIntake" class="senditnow D R P" oncontextmenu="customMenu(this.id, event)" onclick="ClearIntake();">Clear</button> 
+  <button id="DJKahlid" class="senditnow D R P" oncontextmenu="customMenu(this.id, event)" onclick="AnotherOne()">Add Box</button>
+  <button id="MTVsNEXT" class="senditnow D R P" oncontextmenu="customMenu(this.id, event)" onclick="NextPart()">Next</button> 
 </div>
 <div id="Request" class="REQUESTDIV noShow">
   <div id="RQ1" class="noShow">
@@ -190,7 +191,7 @@
 </div>
 <div id="TPDiv" class="noShow" style="display: none">
   <div id="T20" class="noShow">
-    <button id="T1" class="PTXferTempBTN D R P" oncontextmenu="customMenu(this.id, event)" name="name" onclick="PTXFER1()"><b>PT TRANSFER</b> TEMPLATE</button>
+    <button id="T1" class="PTXferTempBTN D R P" oncontextmenu="customMenu(this.id, event)" name="name" onclick="PTXFER()"><b>PT TRANSFER</b> TEMPLATE</button>
   </div>
   <div id="T30" class="noShow">
     <button id="T2" class="CHStatementBTN D R P C" oncontextmenu="customMenu(this.id, event)" onclick="STMTTEMP(this.id)">CH <b>STATEMENT</b> QUESTIONS</button>
@@ -202,87 +203,95 @@
     <button id="T4" class="InspectionTempBTN D R P C" oncontextmenu="customMenu(this.id, event)" onclick="INSPTEMP(this.id)"><b>INSPECTION</b> TEMPLATE</button>
   </div>
 </div>
-<div id="transferTemplate" style="display: none;">
-    <div id="quest1" class="noShow">
-      <b>Is the repair facility able to diagnose to cause of failure and overhaul if needed?</b>
-      <input type="radio" class="Mradio" style="float:right; margin-right: 60px;" id="no1" name="ans1" value="NO"><label for="no1" style="float:right;">&nbsp&nbsp&nbspNO</label>    
-      <input type="radio" class="Mradio" style="float:right;" id="yes1" name="ans1" value="YES"><label for="yes1" style="float:right;">YES</label><BR>
-      The repair facility can either be able to meet this requirement or the contract holder<br>
-      will be required to move the vehicle to another repair facility.<br>
-      CVT transmissions are exempt from this requirement.<br><br>
+<div id="transferTemplate" class="backing" style="display:none;">
+   <h3 class="headerTab" style="margin-bottom:30px;">PT Transfer</h3>
+    <div id="quest1" class="newStyle ptQuest">
+      <div class="PT qs"><b>Is the repair facility able to diagnose to cause of failure and overhaul if needed?</b></div>
+      <div class="PT as">
+      <label for="yes1">YES</label><input type="radio" onclick="advancePT(this.id)" class="Mradio ptRad" id="yes1" name="ans1" value="YES"><br>
+      <label for="no1">NO</label><input type="radio" onclick="advancePT(this.id)" class="Mradio ptRad" id="no1" name="ans1" value="NO"></div>
     </div>
-    <div id="quest2" class="noShow">
-      <b>Has the repair facility ever serviced the vehicle before?</b>
-      <input type="radio" class="Mradio" style="float:right; margin-right: 60px;" id="no2" name="ans2" value="NO"><label for="no2" style="float:right;">&nbsp&nbsp&nbspNO</label>
-      <input type="radio" class="Mradio" style="float:right;" id="yes2" name="ans2" value="YES"><label for="yes2" style="float:right;">YES</label><BR>
-      If so, have the repair facility submit the service records for review.<br><br>   
+    <div id="quest2" class="newStyle ptQuest" style="display:none;">
+      <div class="PT qs"><b>Has the repair facility ever serviced the vehicle before?</b></div>
+      <div class="PT as">
+      <label for="yes2">YES</label><input type="radio" onclick="advancePT(this.id)" class="Mradio ptRad" id="yes2" name="ans2" value="YES"><br>
+      <label for="no2"">NO</label><input type="radio" onclick="advancePT(this.id)" class="Mradio ptRad" id="no2" name="ans2" value="NO"></div>
     </div>
-    <div id="quest3" class="noShow">
-      <b>Can a test drive be performed if needed?</b>
-      <input type="radio" class="Mradio" style="float:right; margin-right: 60px;" id="no3" name="ans3" value="NO"><label for="no3" style="float:right;">&nbsp&nbsp&nbspNO</label>
-      <input type="radio" class="Mradio" style="float:right;" id="yes3" name="ans3" value="YES"><label for="yes3" style="float:right;">&nbsp&nbsp&nbspYES</label>
-      <input type="radio" class="Mradio" style="float:right;" id="nr3" name="ans3" value="NOT RECOMMENDED"><label for="nr3" style="float:right;">NOT RECOMMENDED</label><BR><BR>
+    <div id="quest3" class="newStyle ptQuest" style="display:none;">
+      <div class="PT qs"><b>Can a test drive be performed if needed?</b></div>
+      <div class="PT as">
+      <label for="yes3">YES</label><input type="radio" onclick="advancePT(this.id)" class="Mradio ptRad" id="yes3" name="ans3" value="YES"><br>
+      <label for="no3">NO</label><input type="radio" onclick="advancePT(this.id)" class="Mradio ptRad" id="no3" name="ans3" value="NO"><br>
+      <label for="nr3">NOT RECOMMENDED</label><input type="radio" onclick="advancePT(this.id)" class="Mradio ptRad" id="nr3" name="ans3" value="NOT RECOMMENDED"></div>
     </div>
-    <div id="q3ansN" class="noShow">  
-      <textarea id="q3ansExplain" placeholder="Brief explanation..." rows="1" cols="35" style="right:60px;box-shadow:none;border:2px solid black;resize:none;"></textarea>
-      Has there been teardown that would prevent a test <br> drive or is the vehicle inoperable due to failure?
-      <br><br>
+    <div id="q3ansN" class="newStyle ptQuest" style="display:none;">
+      <b>Has there been teardown that would prevent a test drive or is the vehicle inoperable due to failure?</b>
+      <div class="iGuess noShow">
+      <textarea id="q3ansExplain" placeholder="Brief explanation..." rows="7" cols="30"></textarea>
+      <button id="done3" class="ptLittle" onclick="advancePT(this.id)">Next</button>
+     </div>
     </div>
-    <div id="quest4" class="noShow">   
-      <b>Did the repair facility tow the vehicle?</b>
-      <input type="radio" class="Mradio" style="float:right; margin-right: 60px;" id="no4" name="ans4" value="NO"><label for="no4" style="float:right;">&nbsp&nbsp&nbspNO</label>
-      <input type="radio" class="Mradio" style="float:right;" id="yes4" name="ans4" value="YES"> <label for="yes4" style="float:right;">&nbsp&nbsp&nbspYES</label>   
-      <input type="radio" class="Mradio" style="float:right;" id="na4" name="ans4" value="NA"><label for="na4" style="float:right;">NA</label><BR>
-      If so, have the repair facility submit the invoice for review.<br><br>
+    <div id="quest4" class="newStyle ptQuest" style="display:none;">
+      <div class="PT qs"><b>Did the repair facility tow the vehicle?</b></div>
+      <div class="PT as">
+      <label for="yes4" >YES</label><input type="radio" onclick="advancePT(this.id)" class="Mradio ptRad" id="yes4" name="ans4" value="YES"><br>
+      <label for="no4">NO</label><input type="radio" onclick="advancePT(this.id)" class="Mradio ptRad" id="no4" name="ans4" value="NO"><br>
+      <label for="na4">NA</label><input type="radio" onclick="advancePT(this.id)" class="Mradio ptRad" id="na4" name="ans4" value="NA"></div>
     </div>
-    <div id="quest5" class="noShow"> 
-      <b>Has the cause of failure been identified?</b>
-      <input type="radio" class="Mradio" style="float:right; margin-right: 60px;" id="no5" name="ans5" value="NO"><label for="no5" style="float:right;">&nbsp&nbsp&nbspNO</label>
-      <input type="radio" class="Mradio" style="float:right;" id="yes5" name="ans5" value="YES"><label for="yes5" style="float:right;">YES</label><br><br><br>
+    <div id="quest5" class="newStyle ptQuest" style="display:none;">
+      <div class="PT qs"><b>Has the cause of failure been identified?</b></div>
+      <div class="PT as">
+      <label for="yes5">YES</label><input type="radio" onclick="advancePT(this.id)" class="Mradio ptRad" id="yes5" name="ans5" value="YES"><br>
+      <label for="no5">NO</label><input type="radio" onclick="advancePT(this.id)" class="Mradio ptRad" id="no5" name="ans5" value="NO"></div>
     </div>
-    <div id="quest6" class="noShow"> 
-      <b>Does the repair facility have an itemized estimate available?</b>
-      <input type="radio" class="Mradio" style="float:right; margin-right: 60px;" id="no6" name="ans6" value="NO"><label for="no6" style="float:right;">&nbsp&nbsp&nbspNO</label>
-      <input type="radio" class="Mradio" style="float:right;" id="yes6" name="ans6" value="YES"><label for="yes6" style="float:right;">YES</label><BR>
-      If so, have the repair facility submit the estimate for review.<br><br>
+    <div id="quest6" class="newStyle ptQuest" style="display:none;">
+      <div class="PT qs"><b>Does the repair facility have an itemized estimate available?</b></div>
+      <div class="PT as">
+      <label for="yes6">YES</label><input type="radio" onclick="advancePT(this.id)" class="Mradio ptRad" id="yes6" name="ans6" value="YES"><br>
+      <label for="no6">NO</label><input type="radio" onclick="advancePT(this.id)" class="Mradio ptRad" id="no6" name="ans6" value="NO"></div>
     </div>
-    <div id="quest7" class="noShow"> 
-      <b>Has the repair facility's info and contact info been verified?</b>
-      <input type="radio" class="Mradio" style="float:right; margin-right: 60px;" id="no7" name="ans7" value="NO"><label for="no7" style="float:right;">&nbsp&nbsp&nbspNO</label>
-      <input type="radio" class="Mradio" style="float:right;" id="yes7" name="ans7" value="YES"><label for="yes7" style="float:right;">YES</label><BR>  
-      Please verify their information in order to proceed.<br><br>
+    <div id="quest7" class="newStyle ptQuest" style="display:none;">
+      <div class="PT qs"><b>Has the repair facility's info and contact info been verified?</b></div>
+      <div class="PT as">
+      <label for="yes7">YES</label><input type="radio" onclick="advancePT(this.id)" class="Mradio ptRad" id="yes7" name="ans7" value="YES"><br>
+      <label for="no7">NO</label><input type="radio" onclick="advancePT(this.id)" class="Mradio ptRad" id="no7" name="ans7" value="NO"></div>
     </div>
-    <div id="quest8" class="noShow">
-      <b>What is the preferred method of contact?</b>
-      <input type="radio" class="Mradio" style="float:right; margin-right: 60px;" id="either" name="ans8" value="EITHER"><label for="either" style="float:right;">&nbsp&nbsp&nbspEither</label>
-      <input type="radio" style="float:right;" id="email" name="ans8" value="EMAIL" autocomplete="off"><label for="email" style="float:right;">&nbsp&nbsp&nbspE-mail</label>
-      <input type="radio" style="float:right;" id="phone" name="ans8" value="PHONE" autocomplete="off"><label for="phone" style="float:right;">Phone</label><BR>
-      <textarea id="contact1" placeholder="Contact Name" rows="1" cols="25" style="right:60px;box-shadow:none;border:2px solid black;resize:none;"></textarea><br><br>
-      <textarea id="contact2" placeholder="E-mail, phone, etc" rows="1" cols="25" style="right:60px;box-shadow:none;border:2px solid black;resize:none;"></textarea><br><br><br><br>
+    <div id="quest8" class="newStyle ptQuest" style="display:none;">
+      <div class="PT qs"><b>What is the preferred method of contact?</b></div>
+      <div class="PT as">
+      <label for="phone">Phone</label><input type="radio" class="Mradio ptRad" id="phone" name="ans8" value="PHONE" autocomplete="off"><br>
+      <label for="email">E-mail</label><input type="radio" class="Mradio ptRad" id="email" name="ans8" value="EMAIL" autocomplete="off"><br>
+      <label for="either">Either</label><input type="radio" class="Mradio ptRad" id="either" name="ans8" value="EITHER"><br>
+      <button id="done8" class="ptLittle" onclick="advancePT(this.id)">Next</button></div>
+      <div class="PT ta">
+      <textarea id="contact1" class="taAuth" placeholder="Contact Name" rows="1" cols="25"></textarea><br><br>
+      <textarea id="contact2" class="taAuth" placeholder="E-mail, phone, etc" rows="1" cols="25"></textarea></div>
     </div>
-    <div id="quest9" class="noShow">
-      <b>Have the PT claim expectations been reviewed with the repair facility contact?</b>
-      <input type="radio" class="Mradio" style="float:right; margin-right: 60px;" id="no9" name="ans9" value="NO"><label for="no9" style="float:right;">&nbsp&nbsp&nbspNO</label>
-      <input type="radio" class="Mradio" style="float:right;" id="yes9" name="ans9" value="YES"><label for="yes9" style="float:right;">YES</label><BR> 
-      If not, this should be discussed with the repair facility prior to ending the call.<br><br>
+    <div id="quest9" class="newStyle ptQuest" style="display:none;">
+      <div class="PT qs"><b>Have the PT claim expectations been reviewed with the repair facility contact?</b></div>
+      <div class="PT as">
+      <label for="yes9"">YES</label><input type="radio" onclick="advancePT(this.id)" class="Mradio ptRad"  id="yes9" name="ans9" value="YES"><br>
+      <label for="no9"">NO</label><input type="radio" onclick="advancePT(this.id)" class="Mradio ptRad" id="no9" name="ans9" value="NO"></div>
     </div>
-    <div id="quest10" class="noShow">      
-      <b>Have you provided the repair facility with the assigned</b>
-      <input type="radio" class="Mradio" style="float:right; margin-right: 60px;" id="no10" name="ans10" value="NO"><label for="no10" style="float:right;">&nbsp&nbsp&nbspNO</label>
-      <input type="radio" class="Mradio" style="float:right;" id="yes10" name="ans10" value="YES"><label for="yes10" style="float:right;">YES</label><BR>
-      <b>adjusters name, direct extension, and e-mail?</b><br><br>
+    <div id="quest10" class="newStyle ptQuest" style="display:none;">     
+      <div class="PT qs"><b>Have you provided the repair facility with the assigned adjusters name, direct extension, and e-mail?</b></div>
+      <div class="PT as">
+      <label for="yes10">YES</label><input type="radio" onclick="advancePT(this.id)" class="Mradio ptRad" id="yes10" name="ans10" value="YES"><br>
+      <label for="no10">NO</label><input type="radio" onclick="advancePT(this.id)" class="Mradio ptRad" id="no10" name="ans10" value="NO"></div>
     </div>
-    <div id="quest11" class="noShow">
-      <b>Is there any other relevant info that will assist the adjuster?</b>
-      <input type="radio" class="Mradio" style="float:right; margin-right: 60px;" id="no11" name="ans11" value="NO"><label for="no11" style="float:right;">&nbsp&nbsp&nbspNO</label>
-      <input type="radio" class="Mradio" style="float:right;" id="yes11" name="ans11" value="YES"><label for="yes11" style="float:right;">&nbsp&nbsp&nbspYES</label><br>
+    <div id="quest11" class="newStyle ptQuest" style="display:none;">
+      <div class="PT qs"><b>Is there any other relevant info that will assist the adjuster?</b></div>
+      <div class="PT as">
+      <label for="yes11">YES</label><input type="radio" onclick="advancePT(this.id)" class="Mradio ptRad" id="yes11" name="ans11" value="YES"><br>
+      <label for="no11">NO</label><input type="radio" onclick="advancePT(this.id)" class="Mradio ptRad" id="no11" name="ans11" value="NO"></div>
     </div>
-    <div id="q11ansY" class="noShow">  
-      <textarea id="q11ansExplain" placeholder="Additional Information" rows="5" cols="40" style="left:20px;box-shadow:none;border:2px solid black;resize:none;"></textarea><br><br><br><br>
+    <div id="q11ansY" class="anotherGuess noShow" style="display:none;"> 
+      <textarea id="q11ansExplain" placeholder="Additional Information" rows="5" cols="40" style="left:20px;box-shadow:none;border:2px solid black;resize:none;"></textarea>
+      <button id="done11" class="ptLittle" onclick="advancePT(this.id)">Next</button>
     </div>
     <div id="questBTNs" class="noShow"> 
-      <button id="submitTemp" onclick="submitTEMP()">Submit</button>
-      <button id="cancelPT" onclick="cancelPT1()">Cancel</button>
+      <button id="backTemp" class="wefwefwef" onclick="backTEMP()">Back</button>
+      <button id="cancelPT" class="wefwefwef" onclick="cancelPT()">Cancel</button>
     </div>
   </div>
 
@@ -978,7 +987,7 @@ TIME:&nbsp&nbsp</textarea>
   <div id="nav3in10" class="overlay-content appearTut noShow" style="display: none;">
   </div>
 </div>
-<button id="SOPs" class="R P D g0dispStat" oncontextmenu="customMenu(this.id, event)" onclick="resrcCenter('7','p')"><f>Policy</f></button>
+<button id="SOPs" class="R P D g0dispStat" oncontextmenu="customMenu(this.id, event)" onclick="resrcCenter('4','p')"><f>Policy</f></button>
 <button id="tools" class="R P D g1dispStat" oncontextmenu="customMenu(this.id, event)" onclick="resrcCenter('4','t')"><f>Tools</f></button>
 
 <div id="resrcDiv" style="display: none;">
@@ -988,36 +997,16 @@ TIME:&nbsp&nbsp</textarea>
     <button class="tablinks" onclick="openInfo(event, 'PAPrice')">Parts Pricing</button>
     <button class="tablinks edgeButton" onclick="openInfo(event, 'trackerTool')">Tracker</button>
   </div>
-
   <div id="policyDiv" class="tab hide">
     <button class="tablinks" onclick="openInfo(event, 'MBIClaims')">MBI</button>
     <button class="tablinks" onclick="openInfo(event, 'xfer2790')">2790</button>
-    <button class="tablinks" onclick="openInfo(event, 'DoNotUse')">Do Not Use</button>
+    <button class="tablinks" onclick="openInfo(event, 'Tesla')">Tesla</button>
+    <button class="tablinks edgeButton" onclick="openInfo(event, 'DoNotUse')">Do Not Use</button>
     <button class="tablinks" onclick="openInfo(event, 'IsItPT')">Is It PT</button>
     <button class="tablinks" onclick="openInfo(event, 'partsRes')">Parts Res</button>
     <button class="tablinks" onclick="openInfo(event, 'Diagnostic')">Diag Times</button>
     <button class="tablinks edgeButton" onclick="openInfo(event, 'PANoOrder')">Do Not Order</button>
   </div>
-
-
-
-  <div id="partsRes" class="tabcontent">
-    <h3 class="headerTab" style="margin-bottom:0px;">Parts Resolution</h3>
-    <p style="text-align:center;margin-top:10px;">What is it and how is it done?</p>
-
-    <p>Situations that require a Parts Resolution:</p>
-      <ul>
-      <li>The wrong part was ordered or delivered.</li>
-      <li>The part was delivered broken/inoperable</li>
-      <li>The part has failed after install but within 30 days of repair</li>
-      <li>The part has failed after 30 days but within warranty period<br>(typically within 12 months/12,000 miles of repair)</li>
-      <li>The part was not installed and is no longer required</li><br><br><br>
-      <li>Coming soon: SOP for parts resolutions plus tips and tricks</li>
-      </ul>
-
-  </div>
-
-
   <div id="QuickAns" class="tabcontent">
     <h3 class="headerTab" style="margin-bottom:0px;">Common questions</h3>
     <p style="text-align:center;margin-top:10px;">And Their Answers or Where to Find Them.</p>
@@ -1043,7 +1032,6 @@ TIME:&nbsp&nbsp</textarea>
       How can I help?<br>
     </div>
     </div>
-
     <div id="anstoquest1" class="answerSlide noShow">
       <ul>
       <li>Note the claim number.</li>
@@ -1056,7 +1044,6 @@ TIME:&nbsp&nbsp</textarea>
       <li>Clicking on the tracking number will show you current shipment status.</li>
       </ul>
     </div>
-
     <div id="anstoquest2" class="answerSlide noShow">
       <p class="QandA">You MUST open a claim if:</p>
       <ul>
@@ -1073,7 +1060,6 @@ TIME:&nbsp&nbsp</textarea>
       <p class="QandA">Even if the claim will be denied, one must be opened if the part is listed.<br><br>
       Even if the part is not listed, an open claim is needed to correct mileage or VIN issues.</p>
     </div>
-
     <div id="anstoquest3" class="answerSlide noShow">
       <ul>
       <li>Reauthorize the claim using the 'Reauthorize' button in the actions tab of CMS.</li>
@@ -1087,7 +1073,6 @@ TIME:&nbsp&nbsp</textarea>
       </ul>
       <p class="QandA" style="margin-left:0px;text-align:center;"><b>IMPORTANT - Do NOT change any PART line item to a QUANTITY of 0.</b></p>
     </div>
-
     <div id="anstoquest4" class="answerSlide noShow">
       <p class="QandA">There are 2 things the CH will need.
       The first is a list of Repair facilities that work with us:</p>
@@ -1361,7 +1346,6 @@ TIME:&nbsp&nbsp</textarea>
       Always check ProDemand FIRST.</p>
       </div>
   </div>
-
   <div id="trackerTool" class="tabcontent">
   <div id="tableDiv" class="noteBins arise tableSize">
   <table id="inputTable" class="inputClass">
@@ -1481,6 +1465,22 @@ TIME:&nbsp&nbsp</textarea>
     <p class="bodyTab">Do not share any details or speculation about the RF to the CH or anyone from the RF.</p>
     <p class="bodyTab">Document all actions taken in the notes.</p>
   </div>
+  <div id="Tesla" class="tabcontent noteBins arise">
+    <h3 class="headerTab">Tesla</h3>
+    <p class="bodyTab">When a repair facility calls in a Tesla claim, start an interaction and take note of the following information:</p>
+      <ul class="teslatab">
+      <li>Contract Number</li>
+      <li>Interaction Number</li>
+      <li>Contract Holder's Name</li>
+      <li>Repair Facility Name</li>
+      <li>Repair Facility Phone Number</li>
+      <li>Repair Facility E-mail Address</li>
+      <li>Repair Facility Contact Name</li>
+      <li>Failed Component(s)</li>
+      </ul>
+      <p class="bodyTab">E-mail this information to JudeDeangelis@americanautoshield.com<br>
+      Advise the Repair Facility that the team that handles Tesla claims will reach out with-in 24 hours.</p>
+  </div>
   <div id="xfer2790" class="tabcontent noteBins arise">
     <h3 class="headerTab">2790</h3>
     <p><b>Don't let the big red banner scare you off.</b></p>
@@ -1489,6 +1489,32 @@ TIME:&nbsp&nbsp</textarea>
     <p class="bodyTab">The notes will indicate if any adjuster can continue the claim or if<br>
     you should task the assigned ADJ with updates or actions needed.</p>
     <p class="bodyTab">And of course, if you are not sure of what steps you should take, reach out to your TL.</p>
+  </div>
+  <div id="partsRes" class="tabcontent noteBins arise">
+    <h3 class="headerTab" style="margin-bottom:0px;">Parts Resolution</h3><br>
+    <p style="text-align:center;margin-top:10px;"><b>What Qualifies as a Parts Resolution?</b></p>
+      <ul>
+      <li>The wrong part was ordered or delivered.</li>
+      <li>The part was delivered broken/inoperable</li>
+      <li>The part has failed after install but within 30 days of repair</li>
+      <li>The part has failed after 30 days but within warranty period<br>(typically within 12 months/12,000 miles of repair)</li>
+      <li>The part was not installed and is no longer required</li>
+      </ul><br><br>
+    <p style="text-align:center;margin-top:10px;"><b>How is a Parts Resolution Done?</b></p>
+      <ul>
+      <li>Note the RF contact name, mileage, labor rate, and labor time for the part.</li>
+      <li>Select the 'Parts" tab in CMS and click 'Parts Ordered.</li>
+      <li>Click the checkbox next to the part select 'Parts Resolution'.</li>
+      <li>Select the repair facility and click 'Next'.</li>
+      <li>Select the repair facility contact.</li>
+      <li>Enter the mileage, labor rate and hours, if the part was installed, and the case reason.</li>
+      <li>Select that you have notified the RF about contact time.</li>
+      <li>Enter a detailed description of why the part was wrong or how it failed.</li>
+      <li>Be as specific as posible especially for incorrect parts.</li>
+      <li>Click 'Next' then 'Finish'</li>
+      <li>Upload anything the RF sent in to documents.</li>
+      <li>Notate the claim</li>
+      </ul>
   </div>
   <div id="IsItPT" class="tabcontent noteBins arise">
     <h3 class="headerTab">Is It PT?</h3>
@@ -1527,7 +1553,6 @@ TIME:&nbsp&nbsp</textarea>
   </div>
   <button id="exitRec" class="wefwefwef" onclick="closeResource()">Exit</button>
 </div>
-
   <div id="outputDiv" class="noteBins outputDiv">
     <div id="alertDiv" class="noShow" onclick="showMsg()"></div>
     <div id="msgDiv" class="noShow"></div>
@@ -1535,7 +1560,6 @@ TIME:&nbsp&nbsp</textarea>
     <div id="splitR" class="noShow both rightSide"></div>
     <button id="closeOutput" class="wefwefwef" onclick="closeOutput()">close</button>
   </div>
-
   <div id="outputDiv2" class="noteBins outputDiv">
     <div id="outputDiv3" class="noShow"></div>
     <button id="closeOutput2" class="wefwefwef" onclick="closeOutput2()">close</button>
@@ -1547,5 +1571,8 @@ TIME:&nbsp&nbsp</textarea>
 <script src="JavaScript/ContextScript.js"></script>
 <script src="JavaScript/tutorialScript.js"></script>
 <script src="JavaScript/commonScript.js"></script>
+<script>
+  setVer('1');
+</script>
 </body>
 </html>

@@ -223,7 +223,6 @@ li {
   width: 130px;
   height: 70px;
   font-size: 22px;
-
 }
 
 #tools {
@@ -232,7 +231,6 @@ li {
   width: 130px;
   height: 70px;
   font-size: 22px;
-
 }
 
 .authGuide {
@@ -607,7 +605,6 @@ th:empty, td:empty {
 .both {
   display: none;
   position: absolute;
-
   background: linear-gradient(315deg, var(--fancy-meddark), var(--fancy-medlight));
   box-shadow: -5px -5px 16px var(--fancy-dark), 5px 5px 16px var(--fancy-light);
   overflow: hidden;
@@ -626,4 +623,8 @@ th:empty, td:empty {
   bottom: 95px;
   right: 15px;
   width: 44%;
+}
+
+.teslatab {
+  margin-left: 30px;
 }

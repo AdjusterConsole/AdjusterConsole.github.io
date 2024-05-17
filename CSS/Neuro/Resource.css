@@ -624,3 +624,7 @@ th:empty, td:empty {
   right: 15px;
   width: 44%;
 }
+
+.teslatab {
+  margin-left: 30px;
+}
