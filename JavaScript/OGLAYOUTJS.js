@@ -434,31 +434,17 @@ function ALIGNMENT(btnID) {
   textarea.scrollTop = textarea.scrollHeight;
 }
 
-function DIAG(boxNum) {
+function DIAG() {
   var textarea = document.getElementById("textarea2");
-  if (boxNum === "9") {
-    textarea.value += "Diag \r";
-    textarea.value += Labor;
-  } else {
-    let partName = document.getElementById("part" + boxNum).value;
-    textarea.value += "Diag for ";
-    textarea.value += partName + "\r";
-    textarea.value += Labor;
-  }
+  textarea.value += "Diag \r";
+  textarea.value += Labor;
   textarea.scrollTop = textarea.scrollHeight;
 }
 
 function LABOR(boxNum) {
   var textarea = document.getElementById("textarea2");
-  if (boxNum === "9") {
-    textarea.value += "R/R \r";
-    textarea.value += Labor;
-  } else {
-    let partName = document.getElementById("part" + boxNum).value;
-    textarea.value += "R/R ";
-    textarea.value += partName + "\r";
-    textarea.value += Labor;
-  }
+  textarea.value += "R/R \r";
+  textarea.value += Labor;
   textarea.scrollTop = textarea.scrollHeight;
 }
 
@@ -484,29 +470,15 @@ function OEMOVER() {
   textarea.scrollTop = textarea.scrollHeight;
 }
 
-function NEWAM(boxNum) {
+function NEWAM() {
   var textarea = document.getElementById("textarea2");
-  if (boxNum === "9") {
-    textarea.value += NewAMpart;
-  } else {
-    let partName = document.getElementById("part" + boxNum).value;
-    textarea.value += "Part:   ";
-    textarea.value += partName + "\r";
-    textarea.value += NewAMpart;
-  }
+  textarea.value += NewAMpart;
   textarea.scrollTop = textarea.scrollHeight;
 }
 
-function NEWOEM(boxNum) {
+function NEWOEM() {
   var textarea = document.getElementById("textarea2");
-  if (boxNum === "9") {
-    textarea.value += NewOEMpart;
-  } else {
-    let partName = document.getElementById("part" + boxNum).value;
-    textarea.value += "Part:   ";
-    textarea.value += partName + "\r";
-    textarea.value += NewOEMpart;
-  }
+  textarea.value += NewOEMpart;
   textarea.scrollTop = textarea.scrollHeight;
 }
 
