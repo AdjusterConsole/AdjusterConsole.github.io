@@ -100,40 +100,25 @@ function MENU() {
   if (!menuOpen) {
     theMenu.innerText = "\u2666 Close \u2666";
     appearance.style.top = "45px";
-    appearance.style.color = "var(--glow-text-color)";
-    appearance.style.textShadow = "1px 1px 1px var(--glow-outline-color), -1px -1px 1px var(--glow-outline-color), -1px 1px 1px var(--glow-outline-color),  1px -1px 1px var(--glow-outline-color), 0px 0px 8px var(--my-glow-color), 0px 0px 11px var(--my-glow-color), 0px 0px 14px var(--my-glow-color), 0px 0px 17px var(--my-glow-color), 0px 0px 20px var(--my-glow-color), 0px 0px 23px var(--my-glow-color), 0px 0px 26px var(--my-glow-color)";
+    appearance.style.opacity = '1';
     BtnBuilder.style.top = "70px";
-    BtnBuilder.style.color = "var(--glow-text-color)";
-    BtnBuilder.style.textShadow = "1px 1px 1px var(--glow-outline-color), -1px -1px 1px var(--glow-outline-color), -1px 1px 1px var(--glow-outline-color),  1px -1px 1px var(--glow-outline-color), 0px 0px 8px var(--my-glow-color), 0px 0px 11px var(--my-glow-color), 0px 0px 14px var(--my-glow-color), 0px 0px 17px var(--my-glow-color), 0px 0px 20px var(--my-glow-color), 0px 0px 23px var(--my-glow-color), 0px 0px 26px var(--my-glow-color)";
+    BtnBuilder.style.opacity = '1';
     buttonMaker.style.top = "95px";
-    buttonMaker.style.color = "var(--glow-text-color)";
-    buttonMaker.style.textShadow = "1px 1px 1px var(--glow-outline-color), -1px -1px 1px var(--glow-outline-color), -1px 1px 1px var(--glow-outline-color),  1px -1px 1px var(--glow-outline-color), 0px 0px 8px var(--my-glow-color), 0px 0px 11px var(--my-glow-color), 0px 0px 14px var(--my-glow-color), 0px 0px 17px var(--my-glow-color), 0px 0px 20px var(--my-glow-color), 0px 0px 23px var(--my-glow-color), 0px 0px 26px var(--my-glow-color)";
+    buttonMaker.style.opacity = '1';
     tutorialSel.style.top = "120px";
-    tutorialSel.style.color = "var(--glow-text-color)";
-    tutorialSel.style.textShadow = "1px 1px 1px var(--glow-outline-color), -1px -1px 1px var(--glow-outline-color), -1px 1px 1px var(--glow-outline-color),  1px -1px 1px var(--glow-outline-color), 0px 0px 8px var(--my-glow-color), 0px 0px 11px var(--my-glow-color), 0px 0px 14px var(--my-glow-color), 0px 0px 17px var(--my-glow-color), 0px 0px 20px var(--my-glow-color), 0px 0px 23px var(--my-glow-color), 0px 0px 26px var(--my-glow-color)";
+    tutorialSel.style.opacity = '1';
     menuOpen = true;
   } else {
     BtnBuilder.style.top = "20px";
-    BtnBuilder.style.textShadow = "none";
+    BtnBuilder.style.opacity = '0';
     appearance.style.top = "20px";    
-    appearance.style.textShadow = "none";
+    appearance.style.opacity = '0';
     buttonMaker.style.top = "20px";
-    buttonMaker.style.textShadow = "none";
+    buttonMaker.style.opacity = '0';
     tutorialSel.style.top = "20px";
-    tutorialSel.style.textShadow = "none";
+    tutorialSel.style.opacity = '0';
     var page = localStorage.getItem('currentVer');
-    if (page == '3') {
-      BtnBuilder.style.color = "var(--my-accent-color)";
-      appearance.style.color = "var(--my-accent-color)";
-      buttonMaker.style.color = "var(--my-accent-color)";
-      tutorialSel.style.color = "var(--my-accent-color)";
-    } else {
-      BtnBuilder.style.color = "var(--my-background-color)";
-      appearance.style.color = "var(--my-background-color)";
-      buttonMaker.style.color = "var(--my-background-color)";
-      tutorialSel.style.color = "var(--my-background-color)";
-      theMenu.innerText = "\u2666 Settings \u2666"; 
-    }
+    theMenu.innerText = "\u2666 Settings \u2666"; 
     menuOpen = false;
   }
 }
@@ -309,6 +294,14 @@ function cancelNewauth() {
 }
 
 function newAuth() {
+  var newauthLine0 = "RF Contact name: ";
+  var newauthLine1 = "Verified failures using RF diagnostic.";
+  var newauthLine1a = "Verified failures using RF diagnostic and inspection report.";
+  var newauthLine1b = "Verified failures using RF diagnostic and RF supplied photos.";
+  var newauthLine2 = "Contract has coverage for failed components.";
+  var newauthLine3 = "Verified OEM parts using Forte and AM parts using PA.";
+  var newauthLine4 = "Verified labor using Pro Demand.";
+  var newauthLine5 = "Verified payment info with RF contact at: ";
   document.getElementById("authParts").style.display = "inline-block";
   document.getElementById("authRequests").style.display = "none";
   document.getElementById("authOopcs").style.display = "none";
@@ -324,7 +317,16 @@ function newAuth() {
   partsOptions(stage);
 }
 
+function setValue() {
+  document.getElementById("auth1").value = "Using repair facility OEM parts at or under $250.00.";
+  document.getElementById("auth2").value = "Using repair facility parts at or under sourcing MCE.";
+  document.getElementById("auth3").value = "Using sourcing MCE as a credit toward repair facility parts.";
+  document.getElementById("auth4").value = "Using sourcing MCE as a credit toward repair facility parts or shipping in.";
+  document.getElementById("auth5").value = "Adjusted price to reasonable amount near MCE.\rThis was done considering all factors including claim delays,\rshipping costs, liability for future failures, time and mileage\rin coverage, number of prior claims and their cost, etc.";
+}
+
 function partsOptions(stage) {
+  setValue();
   var partOpts = document.getElementsByName("authparts");
   for (i = 0; i < partOpts.length; i++) {
     if (partOpts[i].checked == true) {
@@ -335,6 +337,13 @@ function partsOptions(stage) {
 }
     
 function requestOptions(stage) {
+  var inspAuth1 = "No inspection needed as RF diagnostic matches CH concern.";
+  var inspAuth2 = "Sent inspection to verify failures.\rReviewed report and inspection photos.\rInspection review note is completed.";
+  var inspAuth3 = "Requested and reviewed photos from repair facility.\rPhoto review note is completed.";
+  var recordsAuth1 = "No records requested as history will not change claim decision.\rVehicle is not in waiting period.\rConcern is not maintenance related.\rNo prior related claims.\rNo recalls, TSBs, or mileage concerns.";
+  var recordsAuth2 = "Requested and reviewed records and statement.\rRecord review note is completed.";
+  var requestedAuth1 = "After reviewing all relevant documentation, we are moving forward with verified failures.";
+
   if (document.getElementById("auth9").checked == true) {
     stage.value += inspAuth1 + "\r" + recordsAuth1 + "\r";
     issuesOptions(stage);
@@ -354,6 +363,15 @@ function requestOptions(stage) {
 }
   
 function issuesOptions(stage) {
+  var oopcsAuth1 = "Need to review OOPC of $";
+  var oopcsAuth2a = " with contract holder.";
+  var oopcsAuth2b = " and shipping option with contract holder.";
+  var oopcsAuth2c = "OOPC is due to differences in ";
+  var oopcsAuth3 = "Need to review shipping option with contract holder.";
+  var oopcsAuth3a = "Have not given authorization info to RF at this time.";
+  var oopcsAuth4 = "Contract holder has no OOPC besides deductible.";
+  var oopcsAuth4a = "Gave authorization info and payment instructions to ";
+
   var rfName = getContact('0');
   if (document.getElementById("auth13").checked == true) {
     stage.value += oopcsAuth4 + "\r" + oopcsAuth4a + rfName + "\r";
@@ -395,9 +413,11 @@ function showOOPopt() {
 }
 
 function finishAuth(stage) {
+  var noncovAuth1 = "Will inform CH of non-covered components";
+  var noncovAuth2 = "There were denied items on this claim.\rReview denial note for more details";
   document.getElementById("OOPoptDiv").style.display = "none";
   var noncovComps = document.getElementById("auth18");
-  if (noncovComps.checked) { stage.value += noncovAuth1; }
+  if (noncovComps.checked) { stage.value += noncovAuth1 + "\r"; }
   var deniedComps = document.getElementById("auth18a");
   if (deniedComps.checked) { stage.value += noncovAuth2; }
   stage.select();

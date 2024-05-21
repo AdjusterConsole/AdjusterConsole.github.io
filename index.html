@@ -120,6 +120,11 @@ body {
   background: none;
   box-shadow: none;
   overflow: visible;
+ &:active {
+  background: none;
+  box-shadow: none;
+  transform: translateY(0px);
+  }
 }
 
 #swap1 {
@@ -135,12 +140,11 @@ body {
 </style>
 </head>
 <body>
-
 <div id="pdiv" class="noShow"><p></div>
 <button id="swap1" class="otherone" onclick="swapPage('2')">Neumorphic</button>
-<!--
-<button id="swap2" class="otherone" onclick="swapPage('3')">Austere</button>
--->
+
+                                                <!-- Menu -->
+
 <div id="Mystery" class="TheGang noShow">
   <button id="LOCK1" style="color: black;" class="astext" onclick="MENU()">&#x2666; Settings &#x2666;</button>
   <button id="appearance" class="astext menu" onclick="personalize()">&#x2666; Appearance &#x2666;</button>
@@ -148,6 +152,9 @@ body {
   <button id="buttonMaker" class="astext menu" onclick="showCustom()" >&#x2666; New Button &#x2666;</button>
   <button id="tutorialSel" class="astext menu" onclick="tutorial()" >&#x2666; Tutorial &#x2666;</button>
 </div>
+
+                                                <!-- Appearance Settings -->
+
 <div id="appearDiv" style="display:none;">
   <div id="BGpick" class="noShow">
     <label for="background-picker">Page Background color:</label><br>
@@ -188,6 +195,32 @@ body {
   <button id="presetRed" class="picker" onclick="setColor('red')">Red Preset</button>
   <button id="presetGreen" class="picker" onclick="setColor('green')">Green Preset</button>
 </div>
+
+                                              <!-- Main Buttons -->
+
+<button id="newAuthstarter" class="D R P s7dispStat" oncontextmenu="customMenu(this.id, event)" onclick="showAuth()"><b><f>Authorize</f></b> Claim</button>
+
+<button id="statusNote" class="D R P s8dispStat" oncontextmenu="customMenu(this.id, event)" onclick="statNOTE()"><b>Status</b> Note</button>
+
+<div id="Request" class="REQUESTDIV noShow">
+  <button id="picR" class="D R P C s1dispStat" oncontextmenu="customMenu(this.id, event)" onclick="PICREQ(this.id)"><b>PICTURE</b> REQUEST</button>
+  <button id="recR" class="D R P C s2dispStat" oncontextmenu="customMenu(this.id, event)" onclick="RECREQ(this.id)"><b>RECORDS</b> REQUEST</button>
+  <button id="noansR" class="D R P C s3dispStat" oncontextmenu="customMenu(this.id, event)" onclick="NOANSREC(this.id)">RECDS REQST <b>NO ANSWER</b></button>
+  <button id="T0" class="D R P s6dispStat" oncontextmenu="customMenu(this.id, event)" onclick="ShowTemps()"><b>TEMPLATES</b></button>
+</div>
+
+<button id="SOPs" class="R P D g0dispStat" oncontextmenu="customMenu(this.id, event)" onclick="resrcCenter('4','p')"><f>Policy</f></button>
+<button id="tools" class="R P D g1dispStat" oncontextmenu="customMenu(this.id, event)" onclick="resrcCenter('4','t')"><f>Tools</f></button>
+
+<div id="TPDiv" class="noShow" style="display: none">
+  <button id="T1" class="D R P" oncontextmenu="customMenu(this.id, event)" name="name" onclick="PTXFER()"><b>PT TRANSFER</b> TEMPLATE</button>
+  <button id="T2" class="D R P C" oncontextmenu="customMenu(this.id, event)" onclick="STMTTEMP(this.id)">CH <b>STATEMENT</b> QUESTIONS</button>
+  <button id="T3" class="D R P C" oncontextmenu="customMenu(this.id, event)" onclick="REVIEW(this.id)">INPS/PIC <b>REVIEW</b> NOTE</button>
+  <button id="T4" class="D R P C" oncontextmenu="customMenu(this.id, event)" onclick="INSPTEMP(this.id)"><b>INSPECTION</b> TEMPLATE</button>
+</div>
+
+                                                <!-- Parts Intake -->
+
 <div id="ITSBRITTNEY" class="ONEMORETIME noShow a0dispStat" style="display: inline-block">
   <textarea autocomplete="off" title="Part Name" id="partname7" class="intakeboxes" name="name" placeholder="Part Name" wrap="off"></textarea>
   <textarea autocomplete="off" title="Part Name" id="partname6" class="intakeboxes" name="name" placeholder="Part Name" wrap="off"></textarea>
@@ -206,45 +239,34 @@ body {
   <button id="DJKahlid" class="senditnow D R P" oncontextmenu="customMenu(this.id, event)" onclick="AnotherOne()">Add Box</button>
   <button id="MTVsNEXT" class="senditnow D R P" oncontextmenu="customMenu(this.id, event)" onclick="NextPart()">Next</button> 
 </div>
-<div id="Request" class="REQUESTDIV noShow">
-  <div id="RQ1" class="noShow">
-    <button id="picR" class="PictureReqBTN D R P C s1dispStat" oncontextmenu="customMenu(this.id, event)" onclick="PICREQ(this.id)"><b>PICTURE</b> REQUEST</button>
+
+                                            <!-- Other Parts and Labor -->
+
+<div id="hlc" class="HardLaborCamp noShow">
+  <button id="R2" class="PartsAndLabor D R P a1dispStat" oncontextmenu="customMenu(this.id, event)" onclick="COPYNOTE()">Copy P&L</button>
+  <button id="R15" class="Reset D R P a4dispStat" oncontextmenu="customMenu(this.id, event)" style="display: inline-block" onclick="RESET()"><f>RESET</f></button>
+  <div id="subPL2" class="noShow a2dispStat">
+    <button id="R8" class="D R P" oncontextmenu="customMenu(this.id, event)" style="display: inline-block" onclick="NEWOEM()"><f>OEM</f></button>
+    <button id="R9" class="D R P" oncontextmenu="customMenu(this.id, event)" style="display: inline-block" onclick="NEWAM()"><f>AM</f></button>
+    <button id="R10" class="D R P" oncontextmenu="customMenu(this.id, event)" style="display: inline-block" onclick="OEMOVER()">Over 250</button>
+    <button id="R11" class="D R P" oncontextmenu="customMenu(this.id, event)" style="display: inline-block" name="edit" onclick="BULK(this.id)">BULK</button>
+    <button id="fluid" class="P astext" oncontextmenu="customMenu(this.id, event)" style="display: inline-block" onclick="FLUIDLEAK()">$</button>
   </div>
-  <div id="RQ2" class="noShow">
-    <button id="recR" class="RecordsRequestBTN D R P C s2dispStat" oncontextmenu="customMenu(this.id, event)" onclick="RECREQ(this.id)"><b>RECORDS</b> REQUEST</button>
-  </div>
-  <div id="RQ3" class="noShow">
-    <button id="noansR" class="RecordsReqNoAnsBTN D R P C s3dispStat" oncontextmenu="customMenu(this.id, event)" onclick="NOANSREC(this.id)">RECDS REQST <b>NO ANSWER</b></button>
-  </div>
-  <div id="O1" class="noShow">
-    <button id="R6" class="OOPCallNoAnsBTN D R P C s4dispStat" oncontextmenu="customMenu(this.id, event)" onclick="CALLNOANS(this.id)"><f>OOPC CALL</f> <b>NO ANSWER</b></button>
-  </div>
-  <div id="O2" class="noShow">
-    <button id="R7" class="CHAuthedOOPCBTN D R P C s5dispStat" oncontextmenu="customMenu(this.id, event)" onclick="AUTHOOPC(this.id)"><b>CH AUTHED</b> OOPC</button>
-  </div>
-  <div id="T10" class="noShow">
-    <button id="T0" class="Template D R P s6dispStat" oncontextmenu="customMenu(this.id, event)" onclick="ShowTemps()"><b>TEMPLATES</b></button>
-  </div>
-</div>
-<div id="TPDiv" class="noShow" style="display: none">
-  <div id="T20" class="noShow">
-    <button id="T1" class="PTXferTempBTN D R P" oncontextmenu="customMenu(this.id, event)" name="name" onclick="PTXFER()"><b>PT TRANSFER</b> TEMPLATE</button>
-  </div>
-  <div id="T30" class="noShow">
-    <button id="T2" class="CHStatementBTN D R P C" oncontextmenu="customMenu(this.id, event)" onclick="STMTTEMP(this.id)">CH <b>STATEMENT</b> QUESTIONS</button>
-  </div>
-  <div id="T40" class="noShow">
-    <button id="T3" class="ReviewNoteBTN D R P C" oncontextmenu="customMenu(this.id, event)" onclick="REVIEW(this.id)">INPS/PIC <b>REVIEW</b> NOTE</button>
-  </div>
-  <div id="T50" class="noShow">
-    <button id="T4" class="InspectionTempBTN D R P C" oncontextmenu="customMenu(this.id, event)" onclick="INSPTEMP(this.id)"><b>INSPECTION</b> TEMPLATE</button>
+  <div id="subPL1" class="noShow a3dispStat">
+    <button id="R12" class="D R P C" oncontextmenu="customMenu(this.id, event)" style="display: inline-block" name="edit" onclick="EVACRECH(this.id)">EVAC</button>
+    <button id="R13" class="D R P C" oncontextmenu="customMenu(this.id, event)" style="display: inline-block" name="edit" onclick="ALIGNMENT(this.id)">ALIGN</button>
+    <button id="R16" class="D R P" oncontextmenu="customMenu(this.id, event)" style="display: inline-block" onclick="LABOR()">LABOR</button>
+    <button id="R17" class="D R P" oncontextmenu="customMenu(this.id, event)" style="display: inline-block" onclick="DIAG()">DIAG</button>
   </div>
 </div>
-<div id="transferTemplate" class="backing" style="display:none;">
-   <h3 class="headerTab" style="margin-bottom:30px;">PT Transfer</h3>
+
+                                                <!-- PT Transfer -->
+
+  <div id="transferTemplate" class="backing" style="display:none;">
+    <h3 class="headerTab" style="margin-bottom:30px;">PT Transfer</h3>
     <div id="quest1" class="newStyle ptQuest">
       <div class="PT qs"><b>Is the repair facility able to diagnose to cause of failure and overhaul if needed?</b></div>
-      <div class="PT as">
+      <div class="PT as">
       <label for="yes1">YES</label><input type="radio" onclick="advancePT(this.id)" class="Mradio ptRad" id="yes1" name="ans1" value="YES"><br>
       <label for="no1">NO</label><input type="radio" onclick="advancePT(this.id)" class="Mradio ptRad" id="no1" name="ans1" value="NO"></div>
     </div>
@@ -332,7 +354,8 @@ body {
     </div>
   </div>
 
-  <button id="statusNote" class="D R P s8dispStat" oncontextmenu="customMenu(this.id, event)" onclick="statNOTE()"><b>Status</b> Note</button>
+                                                <!-- Status Note -->
+
   <div id="statNote" class="backing">
   <div id="statNoteinner" class="newStyle">
     <p style="text-align:center;margin-top:10px;"><b>Status Note</b></p>
@@ -388,11 +411,12 @@ body {
     <div id="littleHelp" class="noShow">In the Status Note section, select the options relevant to your claim. If you are waiting on additional items, click 'Another One?' and repeat.<br>Add anything you like in the text area at the top right of the screen.<br>In the section under that, click the boxes next to the procedures you have completed.<br>When finished click 'Submit' to generate your note.</div>
     <button id="submitStat" class="wefwefwef" onclick="submitStat('0')">Submit</button>
     <button id="cancelStat" class="wefwefwef" onclick="cancelStat()">Cancel</button>
-     </div>
+  </div>
 
- <button id="newAuthstarter" class="D R P s7dispStat" oncontextmenu="customMenu(this.id, event)" onclick="showAuth()"><b><f>Authorize</f></b> Claim</button>
+                                                <!-- Auth Note -->
+
   <div id="newAuthstyle" style="display:none;">
-    <div id="authParts" class="noShow" style="display:inline-block;font-size:16px;">
+    <div id="authParts" class="noShow paddington" style="display:inline-block;font-size:16px;">
       <b>Who's parts at what pricing?</b><br>
       Select all that apply...<br><br>
       <input type="checkbox" id="auth1" name="authparts" class="FNA largerCheckbox"><label for="auth1"> <b>OEM Under 250</b><br>&nbsp&nbsp&nbsp&nbsp&nbspUsing RF's OEM parts at or under $250.00.</label><br>
@@ -403,7 +427,7 @@ body {
       <button id="cancelNewauth" class="Cancelbtn" onclick="cancelNewauth()">Cancel</button>
       <button id="authMove" class="Submitbtn" onclick="moveAuth()">Continue</button>
     </div>
-    <div id="authRequests" class="noShow" style="display:none;font-size:18px;">
+    <div id="authRequests" class="noShow paddington" style="display:none;font-size:18px;">
       <b>Did you request an inspection, photos, records, or a statement?</b><br>
       Select all that apply...<br><br>
       <input type="checkbox" id="auth6" name="authreqs" class="FNA largerCheckbox"><label for="auth6"><b>Inspection</b></label><br>
@@ -414,20 +438,20 @@ body {
       <button id="authMove2" class="Submitbtn" onclick="moveAuth2()">Continue</button>
     </div>
     <div id="authOopcs" class="noShow" style="display:none;font-size:18px;">
-      <div class="noShow" style="width:50%;left:15px;top:15px;position:absolute;font-size:18px;">
+      <div class="noShow innersomething" style="top:0px;">
         <b>Is OOPC or shipping a concern?</b><br>
         <input type="radio" id="auth10" name="authoops" class="FNA largerRadio" onclick="showOOPopt()"><label for="auth10"><b>OOPC</b></label><br>
         <input type="radio" id="auth11" name="authoops" class="FNA largerRadio"><label for="auth11"><b>Shipping</b></label><br>
         <input type="radio" id="auth12" name="authoops" class="FNA largerRadio" onclick="showOOPopt()"><label for="auth12"><b>Both</b></label><br><br>
         <input type="radio" id="auth13" name="authoops" class="FNA largerRadio"><label for="auth13"><b>No Concerns</b></label><br><br>
       </div>
-      <div class="noShow" style="width:50%;left:15px;top:220px;position:absolute;font-size:18px;margin-top:15px;">
+      <div class="noShow innersomething">
         <b>Any non-covered or denied components?</b><br>
         <input type="checkbox" id="auth18" name="authoops3" class="FNA largerCheckbox"><label for="auth18"><b>Non-Covered</b></label><br>
         <input type="checkbox" id="auth18a" name="authoops3" class="FNA largerCheckbox"><label for="auth18a"><b>Denied</b></label><br>
         <input type="checkbox" id="auth19" name="authoops3" class="FNA largerCheckbox"><label for="auth19"><b>No</b></label>
       </div>
-      <div id="OOPoptDiv" class="noShow" style="display:none;width:45%;right:15px;top:15px;position:absolute;font-size:18px;">
+      <div id="OOPoptDiv" class="noShow" style="display:none;width:40%;right:15px;top:30px;position:absolute;font-size:18px;">
       <b>What is the cause of OOPC?</b><br>
         <input type="radio" id="auth14" name="authoops2" class="FNA largerRadio"><label for="auth14"><b>Parts</b></label><br>
         <input type="radio" id="auth15" name="authoops2" class="FNA largerRadio"><label for="auth15"><b>Labor</b></label><br>
@@ -440,45 +464,9 @@ body {
       </div>
     </div>
   </div>
-<div id="hlc" class="HardLaborCamp noShow">
-  <div id="C1" class="noShow">
-    <button id="R2" class="PartsAndLabor D R P a1dispStat" oncontextmenu="customMenu(this.id, event)" onclick="COPYNOTE()">Copy P&L</button>
-  </div>
-  <div id="L8" class="noShow">
-    <button id="R15" class="Reset D R P a4dispStat" oncontextmenu="customMenu(this.id, event)" style="display: inline-block" onclick="RESET()"><f>RESET</f></button>
-  </div>
-  <div id="subPL2" class="noShow a2dispStat">
-  <div id="L1" class="noShow">
-    <button id="R8" class="D R P" oncontextmenu="customMenu(this.id, event)" style="display: inline-block" onclick="NEWOEM()"><f>OEM</f></button>
-  </div>
-  <div id="L2" class="noShow">
-    <button id="R9" class="D R P" oncontextmenu="customMenu(this.id, event)" style="display: inline-block" onclick="NEWAM()"><f>AM</f></button>
-  </div>
-  <div id="L3" class="noShow">
-    <button id="R10" class="D R P" oncontextmenu="customMenu(this.id, event)" style="display: inline-block" onclick="OEMOVER()">Over 250</button>
-  </div>
-  <div id="L4" class="noShow">
-    <button id="R11" class="D R P" oncontextmenu="customMenu(this.id, event)" style="display: inline-block" name="edit" onclick="BULK(this.id)">BULK</button>
-  </div>
-  <div id="L7" class="noShow">
-    <button id="fluid" class="P astext" oncontextmenu="customMenu(this.id, event)" style="display: inline-block" onclick="FLUIDLEAK()">$</button>
-  </div>
-  </div>
-  <div id="subPL1" class="noShow a3dispStat">
-  <div id="L5" class="noShow">
-    <button id="R12" class="D R P C" oncontextmenu="customMenu(this.id, event)" style="display: inline-block" name="edit" onclick="EVACRECH(this.id)">EVAC</button>
-  </div>
-  <div id="L6" class="noShow">
-    <button id="R13" class="D R P C" oncontextmenu="customMenu(this.id, event)" style="display: inline-block" name="edit" onclick="ALIGNMENT(this.id)">ALIGN</button>
-  </div>
-  <div id="L9" class="noShow">
-    <button id="R16" class="D R P" oncontextmenu="customMenu(this.id, event)" style="display: inline-block" onclick="LABOR()">LABOR</button>
-  </div>
-  <div id="L10" class="noShow">
-    <button id="R17" class="D R P" oncontextmenu="customMenu(this.id, event)" style="display: inline-block" onclick="DIAG()">DIAG</button>
-  </div>
-  </div>
-</div>
+
+                                                <!-- Note Builder -->
+
 <div id="snipbox" class="SnipDiv noShow s0dispStat">
   <div id="rfibcall" class="RFinboundDIV  noShow">
     <div id="textpreview" class="noShow">
@@ -531,6 +519,9 @@ body {
     </div> 
   </div>
 </div>
+
+                                                <!-- Context Menu -->
+
   <div id="context-menu">
     <div class="item" onclick="editDisplay()">Display</div>
     <div class="item" onclick="editContent()">Content</div>
@@ -540,9 +531,9 @@ body {
     <div class="item" onclick="BuilderShow('o')">Toggle List</div>
     <div class="item" onclick="tutorial()">Tutorial</div>
   </div>
+
 <div class="CMeditDIV" id="disEdit" style="display:none; text-align: center;">
-  <div id="TitleDisplay" class="noShow"><b>Edit Display</b>
-  </div>
+  <div id="TitleDisplay" class="noShow"><b>Edit Display</b></div>
   <div id="Instruction" class="noShow"> Highlight the text you would like to modify.<br>
     Press the button to apply the effect<br>
     Change the font size using the + and - buttons<br><br>
@@ -587,6 +578,9 @@ body {
   <button id="posDefault" class="astext" onclick="posSubmit('d')">Default</button>
   <button id="posCancel" class="astext" onclick="posSubmit('s')">Exit</button>
 </div>
+
+                                                <!-- Toggle Menu -->
+
 <div id="toggleMaster" style="display: none" class="noShow">
  <div id="switchdivIndiv" class="noShow">
   <div class="noShow sd">
@@ -673,6 +667,9 @@ body {
   <div id="switchp3" class="noShow sd"> &nbsp</div>
  </div>
 </div>
+
+                                                <!-- Custom Buttons -->
+
 <div id="custBtns" class="noShow">
   <div id="custBtn0" class="noShow u0dispStat">
     <button id="cust0" class="custom0 D R P C X"  oncontextmenu="customMenu(this.id, event)" onclick="conjunctionJunction(this.id)">CUSTOM0</button>
@@ -705,6 +702,7 @@ body {
     <button id="cust9" class="custom0 D R P C X" oncontextmenu="customMenu(this.id, event)" onclick="conjunctionJunction(this.id)">CUSTOM9</button>
   </div>
 </div>
+
 <div id="buttonSpot" class="noShow"></div>
   <div id="infoDiv1" style="display: none">
     <b>Button Types:</b><br><br>
@@ -744,6 +742,9 @@ body {
     <button id="infoDone2" class="infoBtn" onclick="infoDone2()">Done</button>
   </div>
 </div>
+
+                                        <!-- Textareas and Hidden-->
+
 <div id="areaOne">
 <textarea autocomplete="off" title="Contact Info" id="textarea1" class="textareamain" name="name" wrap="off">CONTACT:&nbsp&nbsp
 PAYMENT:&nbsp&nbsp
@@ -755,12 +756,14 @@ TIME:&nbsp&nbsp</textarea>
 <button id="CopyZipBTN" class="astext" onclick="CopyIntakeForm('2')">ZIPCODE: </button>
 <button id="CopyMileBTN" class="astext" onclick="CopyIntakeForm('3')">MILEAGE: </button>
 </div>
+
 <textarea autocomplete="off" title="Hidden" id="textarea2" class="textspace" name="name"></textarea>
 <textarea autocomplete="off" title="Hidden" id="textarea3" class="hideME noShow" name="name"></textarea>
 <textarea autocomplete="off" title="Hidden" id="textarea4" class="hideME noShow"name="name"></textarea>
 <textarea autocomplete="off" title="Hidden" id="textarea5" class="hideME noShow" name="name"></textarea>
 <textarea autocomplete="off" title="Hidden" id="textareadata" class="hideME noShow" name="name"></textarea>
 <textarea style="display: none;" id="EDITarea"></textarea>
+
 <div id="div6" class="div6" style="display: none">    
   REG OIL: 7.13<br>
   SYN OIL: 11.89<br><br>
@@ -785,14 +788,19 @@ TIME:&nbsp&nbsp</textarea>
   ENG/TRANS DYE: 12.49/OZ<br>
   SEALANT/RTV: 13.37 PER 3.5OZ<br>
 </div>
+
 <div id="NUMBERS" class="div4 noShow"><b>PAYMENTS FAX<br>303-456-1039<br><br>
  RECORDS FAX<br>303-420-4722<br><br>
  CAR SHIELD<br>800-430-1705<br><br>
  ROADSIDE ASSITANCE<br>866-222-7869<br><br>
  GENERAL<br>800-531-1925</b>
 </div>
+
 <div id="myInfo" class="infoOfme" style="display:none;">Created By Jesse Williams - 2024</div>
 <div id="glowDiv" class="neon noShow P" oncontextmenu="customMenu(this.id, event)"></div>
+
+                                               <!-- Tutorial -->
+
 <div id="myNav0" class="overlay noShow">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">Exit</a>
   <div id="myNavHead" class="overlay-content noShow" style="margin-top:30px;">Welcome to the Tutorials!<br></div>
@@ -1024,8 +1032,8 @@ TIME:&nbsp&nbsp</textarea>
   <div id="nav3in10" class="overlay-content appearTut noShow" style="display: none;">
   </div>
 </div>
-<button id="SOPs" class="R P D g0dispStat" oncontextmenu="customMenu(this.id, event)" onclick="resrcCenter('4','p')"><f>Policy</f></button>
-<button id="tools" class="R P D g1dispStat" oncontextmenu="customMenu(this.id, event)" onclick="resrcCenter('4','t')"><f>Tools</f></button>
+
+                                          <!-- Tools and Policy -->
 
 <div id="resrcDiv" style="display: none;">
   <div id="toolsDiv" class="tab hide">
@@ -1044,6 +1052,7 @@ TIME:&nbsp&nbsp</textarea>
     <button class="tablinks" onclick="openInfo(event, 'Diagnostic')">Diag Times</button>
     <button class="tablinks edgeButton" onclick="openInfo(event, 'PANoOrder')">Do Not Order</button>
   </div>
+
   <div id="QuickAns" class="tabcontent">
     <h3 class="headerTab" style="margin-bottom:0px;">Common questions</h3>
     <p style="text-align:center;margin-top:10px;">And Their Answers or Where to Find Them.</p>
@@ -1128,7 +1137,6 @@ TIME:&nbsp&nbsp</textarea>
       A repair facility that uses ProDemand and allows us to ship parts is most likely to have no OOPC.<br><br>
       PepBoys as a national chain uses Mitchell and, generally, allows parts to be shipped in.</p>
     </div>
-
     <div id="anstoquest5" class="answerSlide noShow"><br>
       <p class="QandA">'Paid' status in CMS just means that the card was sent<br>
       It does not indicate if any money was actually dispersed.<br>
@@ -1145,6 +1153,8 @@ TIME:&nbsp&nbsp</textarea>
       </ul>
     </div>
   </div>
+
+
   <div id="MileDiscrep" class="tabcontent">
     <h3 class="headerTab">Mileage Discrepancies</h3>
     <div id="MileDiscrep1" class="mileage noShow"> 
@@ -1208,6 +1218,8 @@ TIME:&nbsp&nbsp</textarea>
       <button id="resetMD" class="wefwefwef" onclick="resetMD()">Reset</button>
     </div>
   </div>
+
+
   <div id="PAPrice" class="tabcontent">
     <h3 class="headerTab">Parts Pricing - PA and Sourcing</h3>
     <div id="authGuide1" class="authGuide noShow"> 
@@ -1300,6 +1312,8 @@ TIME:&nbsp&nbsp</textarea>
     </div>
   <button id="resetPA" class="wefwefwef" onclick="resetGuide()">Reset</button>
   </div>
+
+
   <div id="PANoOrder" class="tabcontent">
   <h3 class="headerTab">Do Not Order These Parts From PA</h3>
     <div class="innerLeft">
@@ -1383,6 +1397,8 @@ TIME:&nbsp&nbsp</textarea>
       Always check ProDemand FIRST.</p>
       </div>
   </div>
+
+
   <div id="trackerTool" class="tabcontent">
   <div id="tableDiv" class="noteBins arise tableSize">
   <table id="inputTable" class="inputClass">
@@ -1489,6 +1505,8 @@ TIME:&nbsp&nbsp</textarea>
     <div id="trackerMini" class="noShow"></div>
   </div>
 </div>
+
+
   <div id="DoNotUse" class="tabcontent noteBins arise">
     <h3 class="headerTab">Do Not Use vs STOP-NO CLAIMS ALLOWED</h3>
     <p class="bodyTab">Shops that have Do Not Use in the RF name are just duplicate accounts.<br>
@@ -1502,6 +1520,8 @@ TIME:&nbsp&nbsp</textarea>
     <p class="bodyTab">Do not share any details or speculation about the RF to the CH or anyone from the RF.</p>
     <p class="bodyTab">Document all actions taken in the notes.</p>
   </div>
+
+
   <div id="Tesla" class="tabcontent noteBins arise">
     <h3 class="headerTab">Tesla</h3>
     <p class="bodyTab">When a repair facility calls in a Tesla claim, start an interaction and take note of the following information:</p>
@@ -1518,6 +1538,8 @@ TIME:&nbsp&nbsp</textarea>
       <p class="bodyTab">E-mail this information to Jude.Deangelis@americanautoshield.com<br>
       Advise the Repair Facility that the team that handles Tesla claims will reach out with-in 24 hours.</p>
   </div>
+
+
   <div id="xfer2790" class="tabcontent noteBins arise">
     <h3 class="headerTab">2790</h3>
     <p><b>Don't let the big red banner scare you off.</b></p>
@@ -1527,6 +1549,8 @@ TIME:&nbsp&nbsp</textarea>
     you should task the assigned ADJ with updates or actions needed.</p>
     <p class="bodyTab">And of course, if you are not sure of what steps you should take, reach out to your TL.</p>
   </div>
+
+
   <div id="partsRes" class="tabcontent noteBins arise">
     <h3 class="headerTab" style="margin-bottom:0px;">Parts Resolution</h3><br>
     <p style="text-align:center;margin-top:10px;"><b>What Qualifies as a Parts Resolution?</b></p>
@@ -1540,19 +1564,21 @@ TIME:&nbsp&nbsp</textarea>
     <p style="text-align:center;margin-top:10px;"><b>How is a Parts Resolution Done?</b></p>
       <ul>
       <li>Note the RF contact name, mileage, labor rate, and labor time for the part.</li>
-      <li>Select the 'Parts" tab in CMS and click 'Parts Ordered.</li>
+      <li>Select the 'Parts' tab in CMS and click 'Parts Ordered'.</li>
       <li>Click the checkbox next to the part select 'Parts Resolution'.</li>
       <li>Select the repair facility and click 'Next'.</li>
       <li>Select the repair facility contact.</li>
       <li>Enter the mileage, labor rate and hours, if the part was installed, and the case reason.</li>
       <li>Select that you have notified the RF about contact time.</li>
       <li>Enter a detailed description of why the part was wrong or how it failed.</li>
-      <li>Be as specific as posible especially for incorrect parts.</li>
+      <li>Be as specific as possible, especially for incorrect parts.</li>
       <li>Click 'Next' then 'Finish'</li>
       <li>Upload anything the RF sent in to documents.</li>
       <li>Notate the claim</li>
       </ul>
   </div>
+
+
   <div id="IsItPT" class="tabcontent noteBins arise">
     <h3 class="headerTab">Is It PT?</h3>
     <p><b>What Qualifies for PowerTrain Transfer:</b></p>
@@ -1572,6 +1598,8 @@ TIME:&nbsp&nbsp</textarea>
     Engine Cooling Concerns<br>
     A/C Concerns</p>
   </div>
+
+
   <div id="MBIClaims" class="tabcontent noteBins arise">
     <h3 class="headerTab">MBI Claims</h3>
     <p><b>Important</b></p>
@@ -1590,6 +1618,8 @@ TIME:&nbsp&nbsp</textarea>
   </div>
   <button id="exitRec" class="wefwefwef" onclick="closeResource()">Exit</button>
 </div>
+
+
   <div id="outputDiv" class="noteBins outputDiv">
     <div id="alertDiv" class="noShow" onclick="showMsg()"></div>
     <div id="msgDiv" class="noShow"></div>
@@ -1597,11 +1627,14 @@ TIME:&nbsp&nbsp</textarea>
     <div id="splitR" class="noShow both rightSide"></div>
     <button id="closeOutput" class="wefwefwef" onclick="closeOutput()">close</button>
   </div>
+
   <div id="outputDiv2" class="noteBins outputDiv">
     <div id="outputDiv3" class="noShow"></div>
     <button id="closeOutput2" class="wefwefwef" onclick="closeOutput2()">close</button>
   </div>
 <div class="noShow" id="reportData" style="display:none;"></div>
+
+
 <script src="JavaScript/Variable.js"></script>
 <script src="JavaScript/OGLAYOUTJS.js"></script>
 <script src="JavaScript/ChangeAppearance1.js"></script>

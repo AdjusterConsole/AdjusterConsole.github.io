@@ -69,6 +69,10 @@
   overflow: hidden;
 }
 
+.paddington {
+  padding: 15px;
+}
+
 .newStyle {
   background: linear-gradient(315deg, var(--fancy-meddark), var(--fancy-medlight));
   box-shadow: -5px -5px 16px var(--fancy-dark), 5px 5px 16px var(--fancy-light);
@@ -268,7 +272,6 @@ input.ptRad {
   width: 90%;
 }
 
-
 #submitTemp {
   position: absolute;
   display: inline-block;
@@ -376,13 +379,14 @@ input.ptRad {
   height: 60px;
   width: 140px;
   margin-top:30px;
+  margin-left:30px;
 }
 
 .Cancelbtn {
   display: inline-block;
   height: 40px;
   width: 80px;
-  margin-left: 150px;
+  margin-left: 180px;
   margin-top:30px;
 }
 
@@ -399,14 +403,17 @@ input.ptRad {
 
 #authParts {
   width: 100%;
+  padding: 15px;
 }
 
 #authRequests {
   width: 100%;
+  padding: 15px;
 }
 
 #authOopcs {
   width: 100%;
+  padding: 15px;
 }
 
 #newAuthstarter {
@@ -417,6 +424,16 @@ input.ptRad {
   width: 150px;
   top: 65px;
   left: 380px;
+}
+
+.innersomething {
+  width: 50%;
+  left: 15px;
+  top: 210px;
+  position: absolute;
+  font-size: 18px;
+  margin-top: 15px;
+  padding: 15px;
 }
 
 input.Mradio {
@@ -453,7 +470,7 @@ input.largerRadio {
   top: 20px;
   transition: all 0.4s ease;
   z-index: 5;
-  color: var(--glow-txt-color);
+  color: black;
   text-shadow: 
     1px 1px 1px var(--glow-outline-color), 
    -1px -1px 1px var(--glow-outline-color), 
@@ -476,9 +493,22 @@ input.largerRadio {
   top: 20px;
   width: 180px;
   height: 20px;
+  color: black;
   transition: all .1s ease;
-  color: var(--my-background-color);
+  text-shadow: 
+    1px 1px 1px var(--glow-outline-color), 
+   -1px -1px 1px var(--glow-outline-color), 
+   -1px 1px 1px var(--glow-outline-color),  
+    1px -1px 1px var(--glow-outline-color), 
+    0px 0px 8px var(--my-glow-color), 
+    0px 0px 11px var(--my-glow-color), 
+    0px 0px 14px var(--my-glow-color), 
+    0px 0px 17px var(--my-glow-color), 
+    0px 0px 20px var(--my-glow-color), 
+    0px 0px 23px var(--my-glow-color), 
+    0px 0px 26px var(--my-glow-color);
   overflow: visible;
+  opacity: 0;
 }
 
 #appearance {

@@ -73,10 +73,6 @@
   overflow: hidden;
 }
 
-.dfbsgfb {
-    inset -px 0px 15px var(--fancy-background),
-}
-
 .newStyle {
   background: linear-gradient(315deg, var(--fancy-meddark), var(--fancy-medlight));
   box-shadow: -5px -5px 16px var(--fancy-dark), 5px 5px 16px var(--fancy-light);
@@ -505,8 +501,21 @@ input.largerRadio {
   width: 180px;
   height: 20px;
   transition: all .1s ease;
-  color: var(--my-background-color);
+  color: var(--glow-txt-color);
+  text-shadow: 
+    1px 1px 1px var(--glow-outline-color), 
+   -1px -1px 1px var(--glow-outline-color), 
+   -1px 1px 1px var(--glow-outline-color),  
+    1px -1px 1px var(--glow-outline-color), 
+    0px 0px 8px var(--my-glow-color), 
+    0px 0px 11px var(--my-glow-color), 
+    0px 0px 14px var(--my-glow-color), 
+    0px 0px 17px var(--my-glow-color), 
+    0px 0px 20px var(--my-glow-color), 
+    0px 0px 23px var(--my-glow-color), 
+    0px 0px 26px var(--my-glow-color);
   overflow: visible;
+  opacity: 0;
 }
 
 #appearance {
@@ -711,10 +720,10 @@ input.largerRadio {
   top: 115px;
   left: 215px;
   text-shadow: 
-    1px 1px 1px var(--glow-outline-color), 
-   -1px -1px 1px var(--glow-outline-color), 
-   -1px 1px 1px var(--glow-outline-color),  
-    1px -1px 1px var(--glow-outline-color); 
+    1px 1px 1px var(--glow-txt-color), 
+   -1px -1px 1px var(--glow-txt-color), 
+   -1px 1px 1px var(--glow-txt-color),  
+    1px -1px 1px var(--glow-txt-color); 
 }
 
 #R16 {

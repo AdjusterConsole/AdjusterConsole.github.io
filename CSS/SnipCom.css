@@ -16,7 +16,7 @@ f {
   display: inline-block;
 }
 
-#div6 {
+.div6 {
   font-size: 16px; 
   top: 60px;
   left: 420px;
@@ -24,6 +24,18 @@ f {
   display: none;
   z-index: 5;
   padding: 15px;
+  margin: 10px;
+  background: var(--fancy-background);
+}
+
+.dbacking.div6 {
+  font-size: 17px; 
+  top: 40px;
+  left: 420px;
+  position: absolute;
+  display: none;
+  z-index: 5;
+  padding: 30px;
   margin: 10px;
 }
 
@@ -36,7 +48,9 @@ f {
   cursor: pointer;
   text-decoration:none;
   box-shadow: none;
+  transition: all .1s ease;
   text-shadow: none;
+  color: black;
   &:before {
     position: absolute;
     bottom: 0;
@@ -288,21 +302,22 @@ f {
 
 #CopyZipBTN {
   top: 60px;
-  left: 20px;
+  left: 21px;
   z-index: 2;
 }
 
 #CopyMileBTN {
   top: 80px;
-  left: 20px;
+  left: 21px;
   z-index: 2;
 }
 
 #CopyPaymentBTN{
   top: 41px;
-  left: 20px;
+  left: 21px;
   z-index: 2;
 }
+
 #custBtns {
   position: absolute;
   display: inline-block;
@@ -313,26 +328,26 @@ f {
 #infoDiv1 {
   font-size: 14px;
   top: 150px;
-  left: 200px;
+  left: 165px;
   height: 450px;
-  width: 530px;
+  width: 600px;
   position: absolute;
   display: inline-block;
   border-radius: 5px;
-  padding: 10px;
+  padding: 20px;
   z-index: 5;
 }
 
 #infoDiv2 {
   font-size: 14px;
   top: 150px;
-  left: 200px;
+  left: 165px;
   height: 450px;
-  width: 530px;
+  width: 600px;
   position: absolute;
   display: inline-block;
   border-radius: 5px;
-  padding: 10px;
+  padding: 20px;
   z-index: 5;
 }
 
