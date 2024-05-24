@@ -103,6 +103,7 @@ body {
   --fancy-dark: #6d7174;
   --fancy-background: #B6BDC1;
   --div-width: 10px;
+  --div-width2: 10px;
 }
 
 .otherone {
@@ -210,7 +211,7 @@ body {
 </div>
 
 <button id="SOPs" class="R P D g0dispStat" oncontextmenu="customMenu(this.id, event)" onclick="resrcCenter('4','p')"><f>Policy</f></button>
-<button id="tools" class="R P D g1dispStat" oncontextmenu="customMenu(this.id, event)" onclick="resrcCenter('4','t')"><f>Tools</f></button>
+<button id="tools" class="R P D g1dispStat" oncontextmenu="customMenu(this.id, event)" onclick="resrcCenter('5','t')"><f>Tools</f></button>
 
 <div id="TPDiv" class="noShow" style="display: none">
   <button id="T1" class="D R P" oncontextmenu="customMenu(this.id, event)" name="name" onclick="PTXFER()"><b>PT TRANSFER</b> TEMPLATE</button>
@@ -1040,6 +1041,7 @@ TIME:&nbsp&nbsp</textarea>
     <button class="tablinks" onclick="openInfo(event, 'QuickAns')">Quick Answers</button>
     <button class="tablinks" onclick="openInfo(event, 'MileDiscrep')">Mileage Discrep</button>
     <button class="tablinks" onclick="openInfo(event, 'PAPrice')">Parts Pricing</button>
+    <button class="tablinks" onclick="closeResource();diagCenter();">Diagnostic</button>
     <button class="tablinks edgeButton" onclick="openInfo(event, 'trackerTool')">Tracker</button>
   </div>
   <div id="policyDiv" class="tab hide">
@@ -1578,7 +1580,6 @@ TIME:&nbsp&nbsp</textarea>
       </ul>
   </div>
 
-
   <div id="IsItPT" class="tabcontent noteBins arise">
     <h3 class="headerTab">Is It PT?</h3>
     <p><b>What Qualifies for PowerTrain Transfer:</b></p>
@@ -1598,7 +1599,6 @@ TIME:&nbsp&nbsp</textarea>
     Engine Cooling Concerns<br>
     A/C Concerns</p>
   </div>
-
 
   <div id="MBIClaims" class="tabcontent noteBins arise">
     <h3 class="headerTab">MBI Claims</h3>
@@ -1634,6 +1634,472 @@ TIME:&nbsp&nbsp</textarea>
   </div>
 <div class="noShow" id="reportData" style="display:none;"></div>
 
+
+                                          <!-- Diagnostic -->
+
+
+
+<div id="diagDiv" style="display:none;">
+  <div id="diagBtns" class="tab">
+    <button class="tablinks2" onclick="openInfo2(event, 'Cooling')">Cooling</button>
+    <button class="tablinks2" onclick="openInfo2(event, 'Turbo')">Turbo</button>
+    <button class="tablinks2" onclick="openInfo2(event, 'Timing')">Timing</button>
+    <button class="tablinks2 edgeButton" onclick="openInfo2(event, 'Steering')">Steering</button>
+    <button class="tablinks2" onclick="openInfo2(event, 'Suspension')">Suspension</button>
+    <button class="tablinks2" onclick="openInfo2(event, 'AC')">AC</button>
+    <button class="tablinks2" onclick="openInfo2(event, 'Electrical')">Electrical</button>
+    <button class="tablinks2 edgeButton" onclick="openInfo2(event, 'Fuel')">Fuel</button>
+  </div>
+  <div id="Cooling" class="diagcontent">
+    <div class="diagTop">
+      <div class="diagTop left">
+        <genopHead>General Operation Principals</genopHead>
+          <ul style="font-size:15px;">
+          <li>The cooling system prevents the engine from overheating by absorbing heat generated from combustion and releasing it into the atmosphere through the radiator.</li>
+          <li>The main components are the water pump, radiator, thermostat, and cooling fans.</li>
+          <li>The water pump circulates the coolant through the system.</li>
+          <li>The radiator spreads the coolant out over a large area to allow more heat to escape.</li>
+          <li>The fans pull cool air through the radiator allowing heat to escape more efficiently.</li>
+          <li>The thermostat opens and closes to block or allow coolant through the radiator to be cooled keeping the engine at it's optimum temperature.</li>
+        </ul>
+      </div>
+      <div class="diagTop right" onclick="magnify('cooling')">
+        <genopHeadimg>Cooling</genopHeadimg>
+        <img src="./Images/CoolingImg.png" class="diagImg">
+      </div>
+    </div>
+    <div class="diagMid marginCall">
+      <table class="diagtable">
+        <tr>
+          <th class="diag">Fluids: Level, Condition, Contamination?</th>
+          <td class="diag"><input></td>
+        </tr>
+        <tr>
+          <th class="diag">Was a pressure test completed? Where is the leak?</th>
+          <td class="diag"><input></td>
+        </tr>
+        <tr>
+          <th class="diag">Any codes stored? List and define.</th>
+          <td class="diag"><input></td>
+        </tr>
+        <tr>
+          <th class="diag">Any freeze freame data available? Date/Mileage?</th>
+          <td class="diag"><input></td>
+        </tr>
+        <tr>
+          <th class="diag">Did the vehicle overheat? Any further damage?</th>
+          <td class="diag"><input></td>
+        </tr>
+        <tr>
+          <th class="diag">Any previous engine repairs?</th>
+          <td class="diag"><input></td>
+        </tr>
+        <tr>
+          <th class="diag">Any signs of impact damage or corrosion as the COF?</th>
+          <td class="diag"><input></td>
+        </tr>
+        <tr>
+          <th class="diag">What is the root cause of overheating?</th>
+          <td class="diag"><input></td>
+        </tr>
+      </table>
+    </div>
+    <div class="diagBot">
+      <textarea class="diag" placeholder="Notes..."></textarea> 
+    </div>
+  </div>
+  <div id="Turbo" class="diagcontent">
+    <div class="diagTop">
+      <div class="diagTop left">
+        <genopHead>General Operation Principals</genopHead>
+        <ul style="font-size:15px;">
+          <li>The Turbo uses exhaust gas to compress the air going to the intake allowing for more fuel to be used, creating more power.</li>
+          <li>The exhaust gases produced by combustion are routed to a turbine connected to a compressor making it spin.</li>
+          <li>The compressed air is cooled before being sent to the engine.</li>
+          <li>Compressed air has a higher density of oxygen which allows more fuel to be burnt which increases power output.</li>
+          <li>When there is more boost available than the engine needs, the wastegate opens to vent the uneeded boost pressure.</li>
+      </ul>
+      </div>
+      <div class="diagTop right" onclick="magnify('turbo')">
+        <genopHeadimg>Turbo</genopHeadimg>
+        <img src="./Images/TurboImg.png" class="diagImg">
+      </div>
+    </div>
+    <div class="diagMid">
+      <table class="diagtable">
+        <tr>
+          <th class="diag">Any codes stored? List and define.</th>
+          <td class="diag"><input></td>
+        </tr>
+        <tr>
+          <th class="diag">Any freeze frame data available? Date/Mileage?</th>
+          <td class="diag"><input></td>
+        </tr>
+        <tr>
+          <th class="diag">Any noise, smoke, etc?</th>
+          <td class="diag"><input></td>
+        </tr>
+        <tr>
+          <th class="diag">Any play in the turbo shaft?</th>
+          <td class="diag"><input></td>
+        </tr>
+        <tr>
+          <th class="diag">Wastegate and actuator operating properly?</th>
+          <td class="diag"><input></td>
+        </tr>
+        <tr>
+          <th class="diag">Any previous engine repairs?</th>
+          <td class="diag"><input></td>
+        </tr>
+        <tr>
+          <th class="diag">Oil or coolant leaks from turbo?</th>
+          <td class="diag"><input></td>
+        </tr>
+      </table>
+    </div>
+    <div class="diagBot">
+      <textarea class="diag" placeholder="Notes..."></textarea> 
+    </div>
+  </div>
+  <div id="Electrical" class="diagcontent">
+    <div class="diagTop">
+      <div class="diagTop left">
+        <genopHead>General Operation Principals</genopHead>
+        <ul>
+           <li>The battery is used to power the starter while the vehicle is not running.
+           <li>While the engine is running, the alternator produces approximately 13.6 volts.</li>
+           <li>That voltage is what recharges the battery and provides power to all electrical
+           components of the vehicle.</li>
+           <li>For any electrical component to operate, there must be voltage supplied (+) and
+           a path for that voltage to return (-).</li>
+        </ul>
+      </div>
+      <div class="diagTop right" onclick="magnify('electrical')">
+        <genopHeadimg>Electrical</genopHeadimg>
+        <img src="./Images/ElectricalImg.png" class="diagImg">
+      </div>
+    </div>
+    <div class="diagMid">
+      <table class="diagtable">
+        <tr>
+          <th class="diag">Is there a Check engine light or other warning lights?</th>
+          <td class="diag"><input></td>
+        </tr>
+        <tr>
+          <th class="diag">Any codes stored? List and define.</th>
+          <td class="diag"><input></td>
+        </tr>
+        <tr>
+          <th class="diag">Alternator/Battery test results?</th>
+          <td class="diag"><input></td>
+        </tr>
+        <tr>
+          <th class="diag">Verified power and ground?</th>
+          <td class="diag"><input></td>
+        </tr>
+        <tr>
+          <th class="diag">Any other circuit/pinpoint tests?</th>
+          <td class="diag"><input></td>
+        </tr>
+        <tr>
+          <th class="diag">Any other potential causes tested?</th>
+          <td class="diag"><input></td>
+        </tr>
+        <tr>
+          <th class="diag">Fluid intrusion/corrosion/damaged wires?</th>
+          <td class="diag"><input></td>
+        </tr>
+      </table>
+    </div>
+    <div class="diagBot">
+      <textarea class="diag" placeholder="Notes..."></textarea> 
+    </div>
+  </div>
+  <div id="Fuel" class="diagcontent">
+    <div class="diagTop">
+      <div class="diagTop left">
+        <genopHead>General Operation Principals</genopHead>
+        <ul>
+          <li>When the ignition is in the 'on' position, a signal is sent to run the fuel pump.</li>
+          <li>The pump pulls fuel from the tank, which passes through a filter on it's way to the pressure regulator.</li>
+          <li>The regulator provides consistant fuel pressure to the fuel rail.</li>
+          <li>The fuel rail supplies fuel to the injectors.</li>
+          <li>Control modules regulate to operation of the components.</li>
+        </ul>
+      </div>
+      <div class="diagTop right" onclick="magnify('fuel')">
+        <genopHeadimg>Fuel</genopHeadimg>
+        <img src="./Images/FuelImg.png" class="diagImg">
+      </div>
+    </div>
+    <div class="diagMid">
+      <table class="diagtable">
+        <tr>
+          <th class="diag">Is there fuel in the vehicle?  Has fuel filter been serviced?</th>
+          <td class="diag"><input></td>
+        </tr>
+        <tr>
+          <th class="diag">Power and ground to pump?</th>
+          <td class="diag"><input></td>
+        </tr>
+        <tr>
+          <th class="diag">Fuel pressure test results?</th>
+          <td class="diag"><input></td>
+        </tr>
+        <tr>
+          <th class="diag">Any codes stored? List and define.</th>
+          <td class="diag"><input></td>
+        </tr>
+        <tr>
+          <th class="diag">Fuel pressure at fuel rail - Actual/Spec?</th>
+          <td class="diag"><input></td>
+        </tr>
+        <tr>
+          <th class="diag">Is the injector stuck open, clogged or not functioning?</th>
+          <td class="diag"><input></td>
+        </tr>
+        <tr>
+          <th class="diag">Any other testing performed?</th>
+          <td class="diag"><input></td>
+        </tr>
+      </table>
+    </div>
+    <div class="diagBot">
+      <textarea class="diag" placeholder="Notes..."></textarea> 
+    </div>
+  </div>
+  <div id="Steering" class="diagcontent">
+    <div class="diagTop">
+      <div class="diagTop left">
+        <genopHead>General Operation Principals</genopHead>
+        <ul>
+          <li>The steering wheel rotates a shaft which has a gear on the end called the pinion.</li>
+          <li>The rotational motion of the shaft is converted to transverse motion by meshing with a second gear called the rack.</li>
+          <li>The rack has a hydrualic piston with fluid supply lines on either side.</li>
+          <li>When the rack is moving in either direction, fluid is pumped into the opposite side of the piston.</li>
+          <li>The fluid pushes the piston in the desired direction using the pressure provided by the power steering pump.</li>
+          <li>The ends of the rack are connected to the steering knuckles via the inner and outer tie rod ends.</li>
+        </ul>
+      </div>
+      <div class="diagTop right" onclick="magnify('steering')">
+        <genopHeadimg>Steering</genopHeadimg>
+        <img src="./Images/SteeringImg.png" class="diagImg">
+      </div>
+    </div>
+    <div class="diagMid marginCall">
+      <table class="diagtable">
+        <tr>
+          <th class="diag">Any noises while turning, if so describe?</th>
+          <td class="diag"><input></td>
+        </tr>
+        <tr>
+          <th class="diag">What is condition of tie rods, if damaged describe?</th>
+          <td class="diag"><input></td>
+        </tr>
+        <tr>
+          <th class="diag">Power steering fluid level?</th>
+          <td class="diag"><input></td>
+        </tr>
+        <tr>
+          <th class="diag">Any power steering leaks?</th>
+          <td class="diag"><input></td>
+        </tr>
+        <tr>
+          <th class="diag">Any codes stored? List and define.</th>
+          <td class="diag"><input></td>
+        </tr>
+        <tr>
+          <th class="diag">Any other testing performed?</th>
+          <td class="diag"><input></td>
+        </tr>
+        <tr>
+          <th class="diag">Any signs of impact damage?</th>
+          <td class="diag"><input></td>
+        </tr>
+      </table>
+    </div>
+    <div class="diagBot">
+      <textarea class="diag" placeholder="Notes..."></textarea> 
+    </div>
+  </div>
+  <div id="Suspension" class="diagcontent">
+    <div class="diagTop">
+      <div class="diagTop left">
+        <genopHead>General Operation Principals</genopHead>
+        <ul>
+          <li>Vehicle suspension systems have many variations but serve the same purpose.</li>
+          <li>The steering knuckle attaches to the frame and steering mechanism via control arms and tie rods. It, also, houses the hub assembly.</li>
+          <li>Shocks will use either air or hydraulics to dampen the vibrations in the road.</li>
+          <li>The sway bar is a torsion spring that resists twisting and levels the vehicle during turns.</li>
+          <li>Ball joints bewteen the knuckle and control arm provide the flexability for movement.</li>
+          <li>Control arm bushings do the same for the other end of the control arm at the frame.</li>
+        </ul>
+      </div>
+      <div class="diagTop right" onclick="magnify('suspension')">
+        <genopHeadimg>Suspension</genopHeadimg>
+        <img src="./Images/SuspensionImg.png" class="diagImg">
+      </div>
+    </div>
+    <div class="diagMid">
+      <table class="diagtable">
+        <tr>
+          <th class="diag">Any suspension noises, if so describe?</th>
+          <td class="diag"><input></td>
+        </tr>
+        <tr>
+          <th class="diag">Any signs of impact damage?</th>
+          <td class="diag"><input></td>
+        </tr>
+        <tr>
+          <th class="diag">Signs of rust or corrosion as COF?</th>
+          <td class="diag"><input></td>
+        </tr>
+        <tr>
+          <th class="diag">Any play in suspension components?</th>
+          <td class="diag"><input></td>
+        </tr>
+        <tr>
+          <th class="diag">Are bushings worn, torn, cracked or dry rotted?</th>
+          <td class="diag"><input></td>
+        </tr>
+        <tr>
+          <th class="diag">Was diag: test drive, visual inspection, leverage?</th>
+          <td class="diag"><input></td>
+        </tr>
+      </table>
+    </div>
+    <div class="diagBot">
+      <textarea class="diag" placeholder="Notes..."></textarea> 
+    </div>
+  </div>
+  <div id="AC" class="diagcontent">
+    <div class="diagTop">
+      <div class="diagTop left">
+        <genopHead>General Operation Principals</genopHead>
+        <p>
+          <li>There are 4 processes involved in air conditioning: compression, condensation, expansion, and evaporation.</li>
+          <li>The A/C compressor compresses incoming gas refrigerant increasing it's temperature and pressure.</li>
+          <li>The compressed gas travels to the condenser where heat is released and the gas is condensed to liquid form.</li>
+          <li>The high pressure liquid refrigerant is passed through a drier to remove any moisture before arriving at the expansion device.</li>
+          <li>The expansion device is a restriction that controls flow in to a line of larger volume initiating the low pressure side cooling the liquid even more.</li>
+          <li>The cool, low pressure liquid enters the evaporator, boils as it absorbs the heat from the cabin, and becomes a gas again.</li>
+          <li>The low pressure, hot gas returns to the compressor to complete the cycle.</li>
+        </ul>
+      </div>
+      <div class="diagTop right" onclick="magnify('ac')">
+        <genopHeadimg>Air Conditioning</genopHeadimg>
+        <img src="./Images/ACImg.png" class="diagImg">
+      </div>
+    </div>
+    <div class="diagMid">
+      <table class="diagtable">
+        <tr>
+          <th class="diag">What is the ambient temperature/vent temperature?</th>
+          <td class="diag"><input></td>
+        </tr>
+        <tr>
+          <th class="diag">Is there any refrigerant in the system?</th>
+          <td class="diag"><input></td>
+        </tr>
+        <tr>
+          <th class="diag">How much refrigerant was recovered?  What is the system spec?</th>
+          <td class="diag"><input></td>
+        </tr>
+        <tr>
+          <th class="diag">Is the A/C compressor clutch activating?</th>
+          <td class="diag"><input></td>
+        </tr>
+        <tr>
+          <th class="diag">What are the H/L side pressures? Are they out of range?</th>
+          <td class="diag"><input></td>
+        </tr>
+        <tr>
+          <th class="diag">Was a leak test performed?</th>
+          <td class="diag"><input></td>
+        </tr>
+        <tr>
+          <th class="diag">If leaking, where from? Any further damage?</th>
+          <td class="diag"><input></td>
+        </tr>
+        <tr>
+          <th class="diag">Contamination in system? If so, send photos.</th>
+          <td class="diag"><input></td>
+        </tr>
+      </table>
+    </div>
+    <div class="diagBot">
+      <textarea class="diag" placeholder="Notes..."></textarea> 
+    </div>
+  </div>
+  <div id="Timing" class="diagcontent">
+    <div class="diagTop">
+      <div class="diagTop left">
+        <genopHead>General Operation Principals</genopHead>
+          <ul style="font-size:15px;">
+          <li>For an engine to operate properly, the components must operate at the proper time.</li>
+          <li>The relationship between the bottom end and valvetrain is maintained using a timing chain (or belt).</li>
+          <li>The timing chain tensioner keeps the chain tight so it doesn't skip teeth or come off.</li>
+          <li>The timing chain guides provide some additional tension and keep the chain from fluttering.</li>
+          <li>The timing chain can also be responsible for turning the water pump.</li>
+        </ul>
+      </div>
+      <div class="diagTop right" onclick="magnify('timing')">
+        <genopHeadimg>Timing</genopHeadimg>
+        <img src="./Images/TimingImg.png" class="diagImg">
+      </div>
+    </div>
+    <div class="diagMid">
+      <table class="diagtable">
+        <tr>
+          <th class="diag">Any codes stored? List and define.</th>
+          <td class="diag"><input></td>
+        </tr>
+        <tr>
+          <th class="diag">Any freeze frame data available? Date/Mileage?</th>
+          <td class="diag"><input></td>
+        </tr>
+        <tr>
+          <th class="diag">Does the vehicle have a timing chain or belt?</th>
+          <td class="diag"><input></td>
+        </tr>
+        <tr>
+          <th class="diag">If a belt was there maintenance performed at correct mileage?</th>
+          <td class="diag"><input></td>
+        </tr>
+        <tr>
+          <th class="diag">Was there any damage to the engine from this failure?</th>
+          <td class="diag"><input></td>
+        </tr>
+        <tr>
+          <th class="diag">Is there any noises from the chain or belt area?</th>
+          <td class="diag"><input></td>
+        </tr>
+        <tr>
+          <th class="diag">Any previous engine repairs?</th>
+          <td class="diag"><input></td>
+        </tr>
+        <tr>
+          <th class="diag">What is the COF?</th>
+          <td class="diag"><input></td>
+        </tr>
+      </table>
+    </div>
+    <div class="diagBot">
+      <textarea class="diag" placeholder="Notes..."></textarea> 
+    </div>
+  </div>
+  <button id="exitRcrce2" class="wefwefwef" onclick="closeResource2()">Exit</button>
+  <div id="theDepot" class="imageDepot" onclick="magnify('back')">
+    <img src="./Images/CoolingImg.png" class="depotImg" id="coolingDepot">
+    <img src="./Images/TurboImg.png" class="depotImg" id="turboDepot">
+    <img src="./Images/ElectricalImg.png" class="depotImg" id="electricalDepot">
+    <img src="./Images/FuelImg.png" class="depotImg" id="fuelDepot">
+    <img src="./Images/SteeringImg.png" class="depotImg" id="steeringDepot">
+    <img src="./Images/SuspensionImg.png" class="depotImg" id="suspensionDepot">
+    <img src="./Images/TimingImg.png" class="depotImg" id="timingDepot">
+    <img src="./Images/ACImg.png" class="depotImg" id="acDepot">
+  </div>
+</div>
 
 <script src="JavaScript/Variable.js"></script>
 <script src="JavaScript/OGLAYOUTJS.js"></script>

@@ -1,4 +1,62 @@
-                                                                           //RESOURCE DIV         
+function openInfo2(evt, cityName) {
+  var i, diagcontent, tablinks2;
+  diagcontent = document.getElementsByClassName("diagcontent");
+  for (i = 0; i < diagcontent.length; i++) {
+    diagcontent[i].style.display = "none";
+  }
+  tablinks2 = document.getElementsByClassName("tablinks2");
+  for (i = 0; i < tablinks2.length; i++) {
+    tablinks2[i].className = tablinks2[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}                                                                     
+
+function closeResource2() {
+  var i, diagcontent, tablinks2;
+  diagcontent = document.getElementsByClassName("diagcontent");
+  for (i = 0; i < diagcontent.length; i++) {
+    diagcontent[i].style.display = "none";
+  }
+  tablinks2 = document.getElementsByClassName("tablinks2");
+  for (i = 0; i < tablinks2.length; i++) {
+    tablinks2[i].className = tablinks2[i].className.replace(" active", "");
+  }
+ document.getElementById('diagDiv').style.display = "none";
+}
+
+function diagCenter() {
+  var diagDiv = document.getElementById("diagDiv");
+  var isOpen = checkOpen();
+  if (diagDiv.style.display == "none" && !isOpen) {
+    diagDiv.style.display = "block";
+    var widthpre = parseInt(window.getComputedStyle(diagDiv).width);
+    var width1 = (widthpre / 4);
+    var width = width1.toString() + "px";
+    document.documentElement.style.setProperty('--div-width2', width);
+  } else {
+  diagDiv.style.display = "none";
+  }
+}
+
+function magnify(image) {
+  var lastImageId = localStorage.getItem("lastImageId");
+  if (image == 'back') {
+    document.getElementById(lastImageId).style.display = "none";
+    document.getElementById('theDepot').style.display = "none";
+    localStorage.removeItem("lastImageId");
+  } else {
+    var imageId = image + "Depot";
+    localStorage.setItem("lastImageId", imageId);
+    document.getElementById(imageId).style.display = "block";
+    document.getElementById('theDepot').style.display = "inline-block";
+  }
+}
+
+
+
+
+                                                 //RESOURCE DIV         
 function openInfo(evt, cityName) {
   var i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");

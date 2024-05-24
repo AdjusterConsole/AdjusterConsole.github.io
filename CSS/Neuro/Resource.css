@@ -39,6 +39,179 @@
   border-right: none;
 }
 
+.tablinks2.edgeButton {
+  border-right: none;
+}
+
+.tab button.tablinks2 {
+  width: var(--div-width2);
+}
+
+#diagDiv {
+  position: absolute;
+  display: inline-block;
+  height: 98%;
+  width: 98%;
+  margin: auto;
+  background: var(--fancy-background);
+  z-index: 6;
+  overflow: hidden;
+}
+
+#diagHelp {
+  display: inline-block;
+  position: absolute;
+  bottom: 25px;
+  right: 100px;
+}
+
+.diagcontent {
+  display: none;
+  background: none;
+  box-shadow: none;
+  border-radius: 5px;
+  padding: 25px;
+}
+
+.diagTop {
+  height: 30%;
+  display: inline-block;
+  width: 100%;
+  background: none;
+  box-shadow: none;
+}
+
+.left.diagTop {
+  float: left;
+  width: 55%;
+  display: inline-block;
+}
+
+.right.diagTop {
+  float: right;
+  display: inline-block;
+  background: none;
+  box-shadow: none;
+  background-repeat: no-repeat;
+  width: 44%;
+}
+
+.diagImg {
+  float: right;
+  width: 100%;
+  height: 100%;
+}
+
+.marginCall {
+  padding: 30px 0px; 
+}
+
+.imageDepot {
+  position: absolute;
+  top: 50px;
+  display: none;
+  height: 98%;
+  width: 98%;
+  z-index: 6;
+  margin: auto;
+  background: none;
+  box-shadow: none;
+}
+
+.depotImg {
+  display: none;
+  margin: auto;
+  object-fit: contain;
+  z-index: 7;
+}
+
+.diagHeader {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 0px;
+}
+
+.diagMid {
+  position: relative;
+  height: 35%;
+  width: 100%;
+  background: none;
+  box-shadow: none;
+  margin:auto;
+}
+
+textarea.diag {
+  height: 100px;
+  width: 450px;
+  margin-left: 20px;
+  margin-top: 20px;
+  padding: 10px;
+  resize: none;
+}
+
+.diagBot {
+  height: 25%;
+  width: 100%;
+  background: none;
+  box-shadow: none;
+  position: absolute;
+  bottom: -55px;
+}
+
+.diagNotes1 {
+  width: 100%;
+  height: 20%;
+  background: none;
+  box-shadow: none;
+}
+
+table.diagtable {
+  font-size: 14px;
+  border-collapse: collapse;
+  width: 100%;
+  background: none;
+  box-shadow: none;
+}
+
+table.diagtable th,td {
+  border-bottom: 1px solid black;
+}
+
+th.diag {
+  text-align: left;
+  height: 30px;
+  margin-right: 15px;
+}
+
+td.diag {
+  width: 40%
+}
+
+.diag input {
+  width: 100%;
+  outline: none;
+}
+
+genopHead {
+  display: block;
+  text-align: center;
+  font-weight: bold;
+}
+
+genopHeadimg {
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  margin: auto auto 10px auto;
+}
+
+#exitRcrce2 {
+  display: inline-block;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  border-left: 2px solid var(--my-accent-color);
+}
 .answerSlide {
   display: inline-block;
   position: absolute;
@@ -273,6 +446,7 @@ li {
 #resrcDiv {
   position: absolute;
   display: inline-block;
+  margin: auto;
   height: 98%;
   width: 98%;
   background: var(--fancy-background);
