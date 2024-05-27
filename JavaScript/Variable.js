@@ -529,38 +529,29 @@ document.onkeyup = function(e) {
 };
 
 document.onkeydown = function(e) {
-  if (e.ctrlKey && e.shiftKey && e.which == 72) {
-    hideParts();
+  if (e.ctrlKey && e.shiftKey && e.which == 70) {
+    anotherView();
   }
 };
 
-function hideParts() {
-  var allParts = document.getElementById('allParts');
+function anotherView() {
+  var hlc = document.getElementById('hlc');
+  var ITSBRITTNEY = document.getElementById('ITSBRITTNEY');
+
   var allBut = document.getElementById('allBut');
   var snipbox2 = document.getElementById('snipbox2');
   var textarea = document.getElementById('textarea2');
   var NUMBERS2 = document.getElementById('NUMBERS2');
 
-  if (allParts.style.opacity == '1') {
-    allParts.style.opacity = "0";
-    allParts.style.width = "0%";
-    allParts.style.height = "0%";
-    allBut.style.left = "-350px";
-    allBut.style.top = "230px";
-    snipbox2.style.left = "-400px";
-    snipbox2.style.top = "250px";
+  if (ITSBRITTNEY.style.display == 'inline-block') {
+    ITSBRITTNEY.style.display = "none";
     textarea.style.display = "none";
-    NUMBERS2.style.left = "-400px";
+
   } else {
-    allParts.style.opacity = "1";
-    allParts.style.width = "auto";
-    allParts.style.height = "auto";
-    allBut.style.left = "0px";
-    allBut.style.top = "0px";
-    snipbox2.style.left = "0px";
-    snipbox2.style.top = "0px";
+
+    hlc.style.display = "inline-block";
+    ITSBRITTNEY.style.display = "inline-block";
     textarea.style.display = "inline-block";
-    NUMBERS2.style.left = "0px";
   }
 }
 

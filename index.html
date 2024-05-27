@@ -4,10 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
 <link rel="stylesheet" href="CSS/SnipCom.css">
+<link rel="stylesheet" href="CSS/Common.css">
 <link rel="stylesheet" href="CSS/Orig/Buttons.css">
 <link rel="stylesheet" href="CSS/contextMenu.css">
 <link rel="stylesheet" href="CSS/Orig/AppearOpts.css">
 <link rel="stylesheet" href="CSS/Orig/Resource.css">
+
 
 	<title>Adjuster Console</title>
 
@@ -117,7 +119,7 @@ body {
     4px 0px 6px white,
     -8px 0px 10px white,
     8px 0px 10px white;
-  font-size: 12px;
+  font-size: 20px;
   background: none;
   box-shadow: none;
   overflow: visible;
@@ -130,7 +132,7 @@ body {
 
 #swap1 {
   right: 0px;
-  top: 0px;
+  top: 450px;
 }
 
 #swap2 {
@@ -142,7 +144,7 @@ body {
 </head>
 <body>
 <div id="pdiv" class="noShow"><p></div>
-<button id="swap1" class="otherone" onclick="swapPage('2')">Neumorphic</button>
+<button id="swap1" class="otherone" onclick="openNav()">&#x2B80;</button>
 
                                                 <!-- Menu -->
 
@@ -151,8 +153,46 @@ body {
   <button id="appearance" class="astext menu" onclick="personalize()">&#x2666; Appearance &#x2666;</button>
   <button id="BtnBuilder" class="astext menu" onclick="BuilderShow()">&#x2666; Toggle On/Off &#x2666;</button>
   <button id="buttonMaker" class="astext menu" onclick="showCustom()" >&#x2666; New Button &#x2666;</button>
-  <button id="tutorialSel" class="astext menu" onclick="tutorial()" >&#x2666; Tutorial &#x2666;</button>
+  <button id="tutorialSel" class="astext menu" onclick="swapPage('2')" >&#x2666; Neumorphic &#x2666;</button>
 </div>
+
+                                                <!-- Side Nav -->
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <button class="navHeader color_mod">Tools</button>
+  <button class="color_mod" onclick="openScript()">Labor Rate Script</button>
+  <button class="color_mod" onclick="resrcCenter('5','t');openInfo(event, 'trackerTool')">Tracker Tool</button>
+  <button class="color_mod" onclick="resrcCenter('5','t');openInfo(event, 'PAPrice')">Pricing Guide</button>
+  <button class="color_mod" class="color_mod" onclick="resrcCenter('5','t');openInfo(event, 'MileDiscrep')">Mileage Issues</button>
+  <button class="navEnder color_mod" onclick="resrcCenter('5','t');openInfo(event, 'QuickAns')">Quick Answers</button>
+  <button class="navHeader color_mod">Policy</button>
+  <button class="color_mod" onclick="resrcCenter('4','p');openInfo2(event, 'MBIClaims')">MBI</button>
+  <button class="color_mod" onclick="resrcCenter('4','p');openInfo2(event, 'xfer2790')">2790 Xfer</button>
+  <button class="color_mod" onclick="resrcCenter('4','p');openInfo2(event, 'Tesla')">Tesla</button>
+  <button class="color_mod" onclick="resrcCenter('4','p');openInfo2(event, 'DoNotUse')">Do Not Use</button>
+  <button class="color_mod" onclick="resrcCenter('4','p');openInfo2(event, 'IsItPT')">Is It PT?</button>
+  <button class="color_mod" onclick="resrcCenter('4','p');openInfo2(event, 'partsRes')">Parts Resolution</button>
+  <button class="color_mod" onclick="resrcCenter('4','p');openInfo2(event, 'Diagnostic')">Diagnostic Times</button>
+  <button class="navEnder color_mod" onclick="resrcCenter('4','p');openInfo2(event, 'PANoOrder')">Do Not Order</button>
+  <button class="navHeader color_mod">Diagnostic Assistance</button>
+  <button class="color_mod" onclick="cdiagCenter();openInfo2(event, 'Cooling')">Cooling</button>
+  <button class="color_mod" onclick="diagCenter();openInfo2(event, 'Turbo')">Turbo</button>
+  <button class="color_mod" onclick="diagCenter();openInfo2(event, 'Timing')">Timing</button>
+  <button class="color_mod" onclick="diagCenter();openInfo2(event, 'Steering')">Steering</button>
+  <button class="color_mod" onclick="diagCenter();openInfo2(event, 'Suspension')">Suspension</button>
+  <button class="color_mod" onclick="diagCenter();openInfo2(event, 'AC')">AC</button>
+  <button class="color_mod" onclick="diagCenter();openInfo2(event, 'Electrical')">Electrical</button>
+  <button class="navEnder color_mod" onclick="diagCenter();openInfo2(event, 'Fuel')">Fuel</button>
+  <button class="navHeader color_mod">Templates</button>
+  <button class="color_mod" onclick="PTXFER()">PT Transfer</button>
+  <button class="color_mod" onclick="STMTTEMP('T2')>CH Statement</button>
+  <button class="color_mod" onclick="REVIEW('T3')">Insp/Pic Review</button>
+  <button class="color_mod" onclick="INSPTEMP('T4')">Inspection Template</button>
+  <button class="color_mod" onclick="showAuth()">Authorization</button>
+  <button class="color_mod" onclick="statNOTE()">Status</button>
+</div>
+
 
                                                 <!-- Appearance Settings -->
 
@@ -204,7 +244,7 @@ body {
 <button id="statusNote" class="D R P s8dispStat" oncontextmenu="customMenu(this.id, event)" onclick="statNOTE()"><b>Status</b> Note</button>
 
 <div id="Request" class="REQUESTDIV noShow">
-  <button id="picR" class="D R P C s1dispStat" oncontextmenu="customMenu(this.id, event)" onclick="PICREQ(this.id)"><b>PICTURE</b> REQUEST</button>
+  <button id="picR" class="D R P C s1dispStat" oncontextmenu="customMenu(this.id, event)" onclick="PICREQ(this.id);"><b>PICTURE</b> REQUEST</button>
   <button id="recR" class="D R P C s2dispStat" oncontextmenu="customMenu(this.id, event)" onclick="RECREQ(this.id)"><b>RECORDS</b> REQUEST</button>
   <button id="noansR" class="D R P C s3dispStat" oncontextmenu="customMenu(this.id, event)" onclick="NOANSREC(this.id)">RECDS REQST <b>NO ANSWER</b></button>
   <button id="T0" class="D R P s6dispStat" oncontextmenu="customMenu(this.id, event)" onclick="ShowTemps()"><b>TEMPLATES</b></button>
@@ -1041,7 +1081,7 @@ TIME:&nbsp&nbsp</textarea>
     <button class="tablinks" onclick="openInfo(event, 'QuickAns')">Quick Answers</button>
     <button class="tablinks" onclick="openInfo(event, 'MileDiscrep')">Mileage Discrep</button>
     <button class="tablinks" onclick="openInfo(event, 'PAPrice')">Parts Pricing</button>
-    <button class="tablinks" onclick="closeResource();diagCenter();">Diagnostic</button>
+    <button class="tablinks" onclick="closeResource();diagCenter();">Diag Help</button>
     <button class="tablinks edgeButton" onclick="openInfo(event, 'trackerTool')">Tracker</button>
   </div>
   <div id="policyDiv" class="tab hide">
@@ -1216,8 +1256,8 @@ TIME:&nbsp&nbsp</textarea>
       </p>
     </div>
     <div id="buttons" class="noShow">
-      <button id="mileagebtn" class="wefwefwef" onclick="mileDiscrep()">Next</button>
-      <button id="resetMD" class="wefwefwef" onclick="resetMD()">Reset</button>
+      <button id="mileagebtn" class="wefwefwef D R P" onclick="mileDiscrep()">Next</button>
+      <button id="resetMD" class="wefwefwef D R P" onclick="resetMD()">Reset</button>
     </div>
   </div>
 
@@ -1312,7 +1352,7 @@ TIME:&nbsp&nbsp</textarea>
         If there are no PA options and nothing returns from in house, auth MSRP.<br><br>
         Before shippping or calling the CH for OOPC, always give the RF a chance to match</p>
     </div>
-  <button id="resetPA" class="wefwefwef" onclick="resetGuide()">Reset</button>
+  <button id="resetPA" class="wefwefwef D R P" onclick="resetGuide()">Reset</button>
   </div>
 
 
@@ -1634,10 +1674,7 @@ TIME:&nbsp&nbsp</textarea>
   </div>
 <div class="noShow" id="reportData" style="display:none;"></div>
 
-
                                           <!-- Diagnostic -->
-
-
 
 <div id="diagDiv" style="display:none;">
   <div id="diagBtns" class="tab">
@@ -1665,7 +1702,7 @@ TIME:&nbsp&nbsp</textarea>
       </div>
       <div class="diagTop right" onclick="magnify('cooling')">
         <genopHeadimg>Cooling</genopHeadimg>
-        <img src="../Images/CoolingImg.PNG" class="diagImg">
+        <img src="./Images/CoolingImg.png" class="diagImg">
       </div>
     </div>
     <div class="diagMid marginCall">
@@ -1722,7 +1759,7 @@ TIME:&nbsp&nbsp</textarea>
       </div>
       <div class="diagTop right" onclick="magnify('turbo')">
         <genopHeadimg>Turbo</genopHeadimg>
-        <img src="../Images/TurboImg.PNG" class="diagImg">
+        <img src="./Images/TurboImg.png" class="diagImg">
       </div>
     </div>
     <div class="diagMid">
@@ -1776,7 +1813,7 @@ TIME:&nbsp&nbsp</textarea>
       </div>
       <div class="diagTop right" onclick="magnify('electrical')">
         <genopHeadimg>Electrical</genopHeadimg>
-        <img src="../Images/ElectricalImg.PNG" class="diagImg">
+        <img src="./Images/ElectricalImg.png" class="diagImg">
       </div>
     </div>
     <div class="diagMid">
@@ -1829,7 +1866,7 @@ TIME:&nbsp&nbsp</textarea>
       </div>
       <div class="diagTop right" onclick="magnify('fuel')">
         <genopHeadimg>Fuel</genopHeadimg>
-        <img src="../Images/FuelImg.PNG" class="diagImg">
+        <img src="./Images/FuelImg.png" class="diagImg">
       </div>
     </div>
     <div class="diagMid">
@@ -1883,7 +1920,7 @@ TIME:&nbsp&nbsp</textarea>
       </div>
       <div class="diagTop right" onclick="magnify('steering')">
         <genopHeadimg>Steering</genopHeadimg>
-        <img src="../Images/SteeringImg.PNG" class="diagImg">
+        <img src="./Images/SteeringImg.png" class="diagImg">
       </div>
     </div>
     <div class="diagMid marginCall">
@@ -1937,7 +1974,7 @@ TIME:&nbsp&nbsp</textarea>
       </div>
       <div class="diagTop right" onclick="magnify('suspension')">
         <genopHeadimg>Suspension</genopHeadimg>
-        <img src="../Images/SuspensionImg.PNG" class="diagImg">
+        <img src="./Images/SuspensionImg.png" class="diagImg">
       </div>
     </div>
     <div class="diagMid">
@@ -1988,7 +2025,7 @@ TIME:&nbsp&nbsp</textarea>
       </div>
       <div class="diagTop right" onclick="magnify('ac')">
         <genopHeadimg>Air Conditioning</genopHeadimg>
-        <img src="../Images/ACImg.PNG" class="diagImg">
+        <img src="./Images/ACImg.png" class="diagImg">
       </div>
     </div>
     <div class="diagMid">
@@ -2045,7 +2082,7 @@ TIME:&nbsp&nbsp</textarea>
       </div>
       <div class="diagTop right" onclick="magnify('timing')">
         <genopHeadimg>Timing</genopHeadimg>
-        <img src="../Images/TimingImg.PNG" class="diagImg">
+        <img src="./Images/TimingImg.png" class="diagImg">
       </div>
     </div>
     <div class="diagMid">
@@ -2088,19 +2125,94 @@ TIME:&nbsp&nbsp</textarea>
       <textarea class="diag" placeholder="Notes..."></textarea> 
     </div>
   </div>
-  <button id="exitRcrce2" class="wefwefwef" onclick="closeResource2()">Exit</button>
+  <button id="exitRcrce2" class="wefwefwef D R P" onclick="closeResource2()">Exit</button>
   <div id="theDepot" class="imageDepot" onclick="magnify('back')">
-    <img src="../Images/CoolingImg.PNG" class="depotImg" id="coolingDepot">
-    <img src="../Images/TurboImg.PNG" class="depotImg" id="turboDepot">
-    <img src="../Images/ElectricalImg.PNG" class="depotImg" id="electricalDepot">
-    <img src="../Images/FuelImg.PNG" class="depotImg" id="fuelDepot">
-    <img src="../Images/SteeringImg.PNG" class="depotImg" id="steeringDepot">
-    <img src="../Images/SuspensionImg.PNG" class="depotImg" id="suspensionDepot">
-    <img src="../Images/TimingImg.PNG" class="depotImg" id="timingDepot">
-    <img src="../Images/ACImg.PNG" class="depotImg" id="acDepot">
+    <img src="./Images/CoolingImg.png" class="depotImg" id="coolingDepot">
+    <img src="./Images/TurboImg.png" class="depotImg" id="turboDepot">
+    <img src="./Images/ElectricalImg.png" class="depotImg" id="electricalDepot">
+    <img src="./Images/FuelImg.png" class="depotImg" id="fuelDepot">
+    <img src="./Images/SteeringImg.png" class="depotImg" id="steeringDepot">
+    <img src="./Images/SuspensionImg.png" class="depotImg" id="suspensionDepot">
+    <img src="./Images/TimingImg.png" class="depotImg" id="timingDepot">
+    <img src="./Images/ACImg.png" class="depotImg" id="acDepot">
   </div>
 </div>
 
+<button id="openScript" class="D R P" oncontextmenu="customMenu(this.id, event)" onclick="openScript()">Labor Rate<br>Script</button> 
+
+<div id="laborscriptDiv" class="ls_main" style="display:none;">
+  <div class="ls_sub">
+    <h3 style="text-align:center;">Labor Rate Script</h3>
+    <div class="left_div revert">
+      <p>
+      Ask the RF:<br>What is the current posted labor rate at your Repair Facility?
+      </p>
+      <p>
+        Optional:<br>
+        Are they requesting more than the Labor Rate in CMS? 
+      </p>
+    </div>
+    <div class="side_div revert">
+      <p>
+        <label for="asking">RF Posted Labor Rate:</label><br>
+        $<input type="number" id="asking" step=".01" required><br>
+      </p>
+      <p>
+        <label for="current">Labor Rate in CMS:</label><br>
+        $<input type="number" id="current" step=".01">
+      </p>
+      <div class="side_sub revert">
+        <div class="drop_sub menu_sub revert">
+          <select id="radius">
+            <option selected value="0">Radius</option>
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="25">25</option>
+          </select><br>
+          <select id="type">
+            <option selected value="0">Facility Type</option>
+            <option value="All">All</option>
+            <option value="Independent">Independent</option>
+            <option value="Domestic">Domestic</option>
+            <option value="European">European</option>
+            <option value="Asian">Asian</option>
+          </select><br>
+          <select id="quant">
+            <option selected value="0">Facilities</option>
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="25">25</option>
+            <option value="50">50</option>
+            <option value="100">100</option>
+            <option value="All">All</option>
+          </select><br>
+        </div>
+        <div class="drop_sub label_sub revert">
+          <label for="radius">Radius:</label><br>
+          <label for="type">Facility Type:</label><br>
+          <label for="quant">Number of Facilities: </label>
+        </div>
+      </div>
+      <p>
+        <label for="aveRate">Average Labor Rate:</label><br>
+        <input type="number" id="aveRate" step=".01" required>
+      </p>
+      <button id="myScript" class="script_btn D R P" onclick="laborScript()">My Response</button>
+      <div id="responseDiv" class="flt_lft revert" style="display:none;">
+        <div id="responseDiv_text" class="revert">The response is:<br></div>
+        <button id="yesScript" class="script_btn D R P" onclick="negotiateScript('y')">Yes</button>
+        <button id="noScript" class="script_btn D R P" onclick="negotiateScript('n')">No</button>
+        <div id="rf_offer_div" class="revert">
+          <div id="sub_offer_div" class="sub_offer revert"><label for="custom">The RF offered: </label><br>
+          $<input type="number" id="custom" step=".01"></div>
+          <button id="acceptScript" class="script_btn D R P" onclick="negotiateScript('a')">Accept</button>
+        </div>
+      <button id="resetScript" class="script_btn D R P" onclick="negotiateScript('r')">Reset</button>
+      </div>
+    </div>
+    <button id="exitScript" class="script_btn D R P" onclick="openScript()">Exit</button>
+  </div>
+</div>
 <script src="JavaScript/Variable.js"></script>
 <script src="JavaScript/OGLAYOUTJS.js"></script>
 <script src="JavaScript/ChangeAppearance1.js"></script>

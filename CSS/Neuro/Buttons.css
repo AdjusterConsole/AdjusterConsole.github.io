@@ -300,7 +300,7 @@ input.ptRad {
 
 #T1 {
   font-size: 15px;
-  width: 100px;
+  width: 115px;
   height: 80px;
   left: 0px;
   top: 170px;
@@ -308,15 +308,15 @@ input.ptRad {
 
 #T2 {
   font-size: 15px;
-  width: 100px;
+  width: 115px;
   height: 80px;
-  left: 130px;
+  left: 140px;
   top: 170px;
 }
 
 #T3 {
   font-size: 15px;
-  width: 100px;
+  width: 115px;
   height: 80px;
   left: 0px;
   top: 280px;
@@ -324,9 +324,9 @@ input.ptRad {
 
 #T4 {
   font-size: 15px;
-  width: 100px;
+  width: 115px;
   height: 80px;
-  left: 130px;
+  left: 140px;
   top: 280px;
 }
 

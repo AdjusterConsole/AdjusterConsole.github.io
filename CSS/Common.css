@@ -1,0 +1,322 @@
+.ls_main {
+  position: absolute;
+  display: block;
+  width: 98%;
+  height: 98%;
+  z-index: 6;
+  background: none;
+  box-shadow: none;
+  border: none;
+  outline: none;
+}
+
+.ls_sub {
+  height: 75%;
+  width: 75%;
+  margin: auto;
+  padding: 15px
+}
+
+.ls_sub2 {
+  height: 75%;
+  width: 75%;
+  margin: auto;
+  padding: 15px
+  border-radius: 20px;
+  background: var(--fancy-background);
+  box-shadow:
+    inset 0px 0px 4px black,
+    inset 0px 0px 22px black,
+    20px 10px 70px 20px black;
+  overflow: hidden; 
+}
+
+.head_labor {
+  text-align: center;
+  color: var(--glow-txt-color);
+  text-shadow:   
+    1px 1px 2px var(--glow-outline-color), 
+   -1px -1px 2px var(--glow-outline-color), 
+   -1px 1px 2px var(--glow-outline-color), 
+    1px -1px 2px var(--glow-outline-color);
+}
+
+.side_div {
+  width: 55%;
+  float: right;
+  text-align: center;
+}
+
+.side_div input[type="number"] {
+  width: 80px;
+  outline: none;
+  font-size: 18px;
+  margin-top: 5px;
+}
+
+.side_div label {
+  margin: 5px;
+}
+
+.side_sub {
+  margin-right: 90px;
+  height: 70px;
+}
+
+.revert {
+  background: none;
+  box-shadow: none;
+  border: none;
+  outline: none;
+}
+
+.drop_sub {
+  float: right;
+}
+
+.label_sub.drop_sub {
+  text-align: right;
+  line-height: 1.5;
+}
+
+.menu_sub.drop_sub {
+  text-align: left;
+  margin-left: 10px;
+  line-height: 1.5;
+}
+
+.script_btn {
+  position: initial;
+  display: initial;
+  margin: 10px;
+  width: 100px;
+}
+
+.script_btn2 {
+  position: initial;
+  display: initial;
+  border: 2px solid var(--my-accent-color);
+  margin: 10px;
+  background: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  box-shadow: none;
+  min-width: 120px;
+  min-height: 45px;
+  font-size: 17px;
+  font-weight: bold;
+  text-shadow:   
+    1px 1px 1px var(--glow-outline-color), 
+   -1px -1px 1px var(--glow-outline-color), 
+   -1px 1px 1px var(--glow-outline-color), 
+    1px -1px 1px var(--glow-outline-color);
+}
+
+.left_div {
+  float: left;
+  width: 38%;
+  text-align: justify;
+  margin-left: 45px;
+}
+
+.flt_lft.revert {
+  border: 2px solid black;
+  position: absolute;
+  display: block;
+  padding: 10px;
+  bottom: 230px;
+  left: 10px;
+  width: 60%;
+  height: 250px;
+  margin-left: 165px;
+}
+
+.flt_lft2.revert {
+  border: 2px solid var(--my-accent-color);
+  position: absolute;
+  display: block;
+  padding: 10px;
+  bottom: 270px;
+  left: 10px;
+  width: 60%;
+  height: 270px;
+  margin-left: 165px;
+}
+
+#myScript {
+  width: auto;
+}
+
+.sub_offer {
+  position: absolute;
+  display: inline-block;
+  bottom: 20px;
+  left: 15px;
+}
+
+#acceptScript {
+  position: absolute;
+  display: inline-block;
+  bottom: 15px;
+  left: 150px;
+}
+
+#resetScript {
+  position: absolute;
+  display: inline-block;
+  bottom: 15px;
+  right: 15px;
+}
+
+#buildScript {
+  position: absolute;
+  display: inline-block;
+  bottom: 75px;
+  right: 15px;
+}
+
+#labor_result_outer {
+  position: absolute;
+  display: block;
+  top: 150px;
+  left: 150px;
+  height: 500px;
+  width: 600px;
+  z-index: 7;
+  padding: 25px;
+}
+
+#exitScript2 {
+  position: absolute;
+  display: inline-block;
+  top: -10px;
+  left: 110px;
+  border-top: none;
+  border-left: none;
+}
+
+#exitScript {
+  position: absolute;
+  display: inline-block;
+  top: 0px;
+  left: 110px;
+  border-top: none;
+  border-left: none;
+}
+
+#openScript {
+  font-size: 17px;
+  left: 250px;
+  top: 170px;
+}
+
+#openScript2 {
+  font-size: 17px;
+  left: 250px;
+  top: 170px;
+  color: var(--glow-txt-color);
+}
+
+#closeResult {
+  padding: 10px 15px;
+  margin: 15px;
+  float: right;
+}
+
+#showResult {
+  position: absolute;
+  display: inline-block;
+  bottom: 15px;
+  right: 150px;
+  width: 130px;
+}
+
+.sidenav {
+  box-shadow: none;
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background: var(--my-background-color);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 30px;
+  text-align: center;
+  border-left: 2px solid var(--my-background-color);
+  text-shadow:   
+    1px 1px 1px var(--glow-outline-color), 
+   -1px -1px 1px var(--glow-outline-color), 
+   -1px 1px 1px var(--glow-outline-color), 
+    1px -1px 1px var(--glow-outline-color);
+}
+
+.sidenav button {
+  padding: 8px;
+  background: none;
+  font-size: 16px;
+  color: var(--glow-txt-color);
+  display: block;
+  position: initial;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: bold;
+  width: 100%;
+  text-align: center;
+  margin: -5px auto;
+  box-shadow: none;
+  border-radius: 0px;
+  text-shadow:   
+    1px 1px 1px var(--glow-outline-color), 
+   -1px -1px 1px var(--glow-outline-color), 
+   -1px 1px 1px var(--glow-outline-color), 
+    1px -1px 1px var(--glow-outline-color);
+}
+
+.sidenav button.color_mod {
+  color: var(--glow-outline-color);
+  text-shadow:   
+    1px 1px 1px var(--glow-txt-color), 
+   -1px -1px 1px var(--glow-txt-color), 
+   -1px 1px 1px var(--glow-txt-color), 
+    1px -1px 1px var(--glow-txt-color);
+}
+
+.sidenav button.color_mod:hover {
+  background: var(--fancy-background);
+  color: var(--glow-txt-color);
+}
+
+.sidenav button:hover {
+  background: var(--fancy-background);
+  color: var(--glow-outline-color);
+  text-shadow:   
+    1px 1px 1px var(--glow-txt-color), 
+   -1px -1px 1px var(--glow-txt-color), 
+   -1px 1px 1px var(--glow-txt-color), 
+    1px -1px 1px var(--glow-txt-color);
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  font-size: 25px;
+  margin-right: 55px;
+  color: var(--glow-txt-color);
+  text-shadow:   
+    1px 1px 1px var(--glow-outline-color), 
+   -1px -1px 1px var(--glow-outline-color), 
+   -1px 1px 1px var(--glow-outline-color), 
+    1px -1px 1px var(--glow-outline-color);
+}
+
+.sidenav .navHeader {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.sidenav .navEnder {
+  margin-bottom: 5px;
+}

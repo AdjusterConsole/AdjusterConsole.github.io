@@ -35,7 +35,7 @@ function diagCenter() {
     var width = width1.toString() + "px";
     document.documentElement.style.setProperty('--div-width2', width);
   } else {
-  diagDiv.style.display = "none";
+    diagDiv.style.display = "none";
   }
 }
 
@@ -52,11 +52,8 @@ function magnify(image) {
     document.getElementById('theDepot').style.display = "inline-block";
   }
 }
-
-
-
-
-                                                 //RESOURCE DIV         
+//                                                                      RESOURCE DIV
+        
 function openInfo(evt, cityName) {
   var i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");
@@ -737,6 +734,7 @@ function resetReport() {
   setDate();
 }
 //                                                                         AUTH GUIDE
+
 function goGuide(option,name) {
   var usedBtn = document.getElementsByName(name);
   for (i = 0; i < usedBtn.length; i++) {
@@ -858,6 +856,7 @@ function goGuide(option,name) {
   }
 }
 //                                                                    MILEAGE DISCREP
+
 function mileDiscrep() {
   var isTerm = document.getElementById('md1').checked;
   var isM2m = document.getElementById('md2').checked;
@@ -975,6 +974,7 @@ function resetGuide() {
   document.getElementById('IHSourcing').style.display = "none";
 }
 //                                                                        Q AND A
+
 function questAnswered(answerDiv) {
   if (answerDiv.style.opacity == "1") {
     return true;
@@ -1011,15 +1011,243 @@ function showAnswer(questID) {
     return;
   }
 }
+//                                                                       LABOR RATE SCRIPT
 
+function openScript() {
+  var laborscriptDiv = document.getElementById("laborscriptDiv");
+  var isOpen = checkOpen();
+  if (laborscriptDiv.style.display == "none" && !isOpen) {
+    laborscriptDiv.style.display = "block";
+  } else {
+    laborscriptDiv.style.display = "none";
+  }
+}
 
+function enabler(btnId) {
+  var current = document.getElementById("current");
+  if (document.getElementById("moreless").checked) {
+    current.removeAttribute("disabled");
+    current.setAttribute("required", true);
+  } else {
+    current.removeAttribute("required");
+    current.setAttribute("disabled", true);
+  }
+}
 
+function setZero() {
+  document.getElementById("myScript").style.display = "inline";
+  document.getElementById("noScript").style.display = "none";
+  document.getElementById("yesScript").style.display = "none";
+  document.getElementById("responseDiv").style.display = "none";
+  document.getElementById("asking").value = "";
+  document.getElementById("radius").value = 0;
+  document.getElementById("type").value = 0;
+  document.getElementById("quant").value = 0;
+  document.getElementById("aveRate").value = "";
+  document.getElementById("responseDiv_text").innerHTML = "";
+  document.getElementById("current").value = "";
+}
 
+function scriptInfo() {
+  if (document.getElementById("asking").value != null) {
+    var asking = document.getElementById("asking").value;
+  }
+  if (document.getElementById("current").value != null) {
+    var current = document.getElementById("current").value;
+  }
+  if (document.getElementById("radius").value != null) {
+    var radius = document.getElementById("radius").value;
+  }
+  if (document.getElementById("type").value != null) {
+    var type = document.getElementById("type").value;
+  }
+  if (document.getElementById("quant").value != null) {
+    var quant = document.getElementById("quant").value;
+  }
+  if (document.getElementById("aveRate").value != null) {
+    var aveRate = document.getElementById("aveRate").value;
+  }
+  if (document.getElementById("custom").value != null) {
+    var custom = document.getElementById("custom").value;
+  }
+  localStorage.setItem("asking", asking);
+  localStorage.setItem("radius", radius);
+  localStorage.setItem("type", type);
+  localStorage.setItem("quant", quant);
+  localStorage.setItem("aveRate", aveRate);
+  localStorage.setItem("current", current);
+  localStorage.setItem("custom", custom);
+}
 
+function laborScript() {
+  var current = document.getElementById("current").value;
+  var asking = document.getElementById("asking").value;
+  var aveRate = document.getElementById("aveRate").value;
+  var whatDo = laborReview(asking, current, aveRate);
 
+  document.getElementById("myScript").style.display = "none";
+  document.getElementById("responseDiv").style.display = "block";
 
+  localStorage.setItem("weTried", "notYet");
 
+  if (whatDo == "allow") {
+    document.getElementById("responseDiv_text").innerHTML = "Your Response is:<br>I have updated your repair facility profile and set the labor rate at that amount.";
+    buildLaborNote('underAve');
+    return;
+  } else {
+    negotiateScript('f');
+  }
+}
 
+function negotiateScript(x) {
+  if (x == 'r') {
+    setZero();
+    return;
+  }
+  var askingElem = document.getElementById("asking");
+  var asking = document.getElementById("asking").value;
 
+  var aveRateElem = document.getElementById("aveRate");
+  var aveRate = document.getElementById("aveRate").value;
 
+  var currentElem = document.getElementById("current");
+  var current = document.getElementById("current").value;
 
+  var responseDiv_text = document.getElementById("responseDiv_text");
+  var responseDiv = document.getElementById("responseDiv");
+
+  document.getElementById("noScript").style.display = "initial";
+  document.getElementById("yesScript").style.display = "initial";
+
+  var whatDo = laborReview(asking, current, aveRate);
+  var tryHarder = localStorage.getItem("weTried");
+
+//code1 gimme
+//code2 accepted neg
+//code3 declined no issue
+//code4 felt appropriate to request docs
+
+  if (x == 'y') {
+    var agreed; 
+    if (tryHarder != "notYet") {
+      agreed = tryHarder;
+      buildLaborNote('halfway');
+    } else {
+      agreed = aveRate;
+      buildLaborNote('atAve');
+    }
+    responseDiv_text.innerHTML = "Your Response is:<br>Thank you. I have updated your repair facility profile and set the labor rate at $" + agreed + ".";
+    document.getElementById("noScript").style.display = "none";
+    document.getElementById("yesScript").style.display = "none";
+    return;
+  }
+  if (x == 'a') {
+    var custom = document.getElementById("custom").value;
+    responseDiv_text.innerHTML = "Your Response is:<br>Thank you. I have updated your repair facility profile and set the labor rate at $" + custom + ".";
+    document.getElementById("noScript").style.display = "none";
+    document.getElementById("yesScript").style.display = "none";
+    buildLaborNote('custom');
+    return;
+  }
+  if (x == 'n' &&  tryHarder == "notYet") {
+    var please = (parseInt(asking) + parseInt(aveRate)) / 2;
+    responseDiv_text.innerHTML =  "Your Response is:<br>Are you able to match us at $" + please + "?";
+    localStorage.setItem("weTried", please);
+    return;
+  } 
+
+  if (x == 'n' && whatDo == "normal") {
+    responseDiv_text.innerHTML = "Your Response is:<br>No problem. Thank you for considering it.<br>I will update your repair facility profile to $" + asking + ".<br>Please keep in mind there could be other times during the claims process that we may ask you to negotiate pricing";
+    document.getElementById("noScript").style.display = "none";
+    document.getElementById("yesScript").style.display = "none";
+    buildLaborNote('declined');
+  }
+  if (x == 'n' && whatDo == "alt") {
+    responseDiv_text.innerHTML = "Your Response is either:<br>No problem. Thank you for considering it.<br>I will update your repair facility profile to $" + asking + ".<br>Please keep in mind there could be other times during the claims process that we may ask you to negotiate pricing";
+    responseDiv_text.innerHTML = "<br>OR: I have your current labor rate set at $" + current + ".<br>In order to increase the labor rate, we would request that verification be sent in.<br>I can start that process for you once we have finished.";
+    responseDiv_text.innerHTML = "<br>Follow the most recent directives from AAS or discuss with your TL/DRG/Team Chat if needed.";
+    document.getElementById("noScript").style.display = "none";
+    document.getElementById("yesScript").style.display = "none";
+    buildLaborNote('declined');
+    return;
+  }
+  if (x == 'f') {
+    responseDiv_text.innerHTML = "Your Response is:<br>The average labor rate in your area is $" + aveRate + ".<br>Are you able to match that?";
+    return;
+  }
+}
+
+function laborReview(askingStr, currentStr, averageStr) {
+  var asking = parseInt(askingStr);
+  var current = parseInt(currentStr);
+  var average = parseInt(averageStr);
+  var normal = "normal";
+  var alt = "alt";
+  var allow = "allow";
+  var diffInRate = asking - current;
+  if (asking <= average) {
+    return allow;
+  } else if (asking <= current) {
+    return normal;
+  } else if (asking > 250 || diffInRate > 29.99) {
+    return alt;
+  } else {
+    return normal;
+  }
+}
+
+function buildLaborNote(result) {
+  scriptInfo();
+  var textarea = document.getElementById("textarea5");
+  var pleaseStr = localStorage.getItem("weTried");
+  var askingStr = localStorage.getItem("asking");
+  var radiusStr = localStorage.getItem("radius");
+  var typeStr = localStorage.getItem("type");
+  var quantStr = localStorage.getItem("quant");
+  var aveRateStr = localStorage.getItem("aveRate");
+  var currentStr = localStorage.getItem("current");
+  var customStr = localStorage.getItem("custom");
+
+  var please = parseInt(pleaseStr);
+  var asking = parseInt(askingStr);
+  var radius = parseInt(radiusStr);
+  var type = typeStr;
+  var quant = parseInt(quantStr);
+  var aveRate = parseInt(aveRateStr);
+  var current = parseInt(currentStr);
+  var custom = parseInt(customStr);
+
+  textarea.value = "Search Parameters:\rRadius: " + radius + "\rFacility Type: " + type + "\rNumber of Facilities: " + quant + "\r\r";
+
+  textarea.value += "Average Labor Rate: $" + aveRate;
+
+  if (asking != current) {
+    textarea.value += "\rRepair Facility Previous Labor Rate: $" + current;
+  }
+
+  textarea.value += "\rRepair Facility Posted Labor Rate: $" + asking;
+
+  if (result == "underAve") {
+    textarea.value += "\r\rThe Repair Facility posted labor rate is under the average labor rate for comparable shops in the vicinity."
+    textarea.value += "\rUpdated Repair Facility labor rate at: $" + asking;
+  }
+  if (result == "declined") {
+    textarea.value += "\r\rThe Repair Facility is unwilling to negotiate the labor rate."
+    textarea.value += "\rUpdated Repair Facility labor rate at: $" + asking;
+  }
+  if (result == "atAve") {
+    textarea.value += "\r\rThe Repair Facility is willing to negotiate.\rThey agreed to the average rate for the area."
+    textarea.value += "\rUpdated Repair Facility labor rate at: $" + aveRate;
+  }
+  if (result == "halfway") {
+    labor_result.value += "\r\rThe Repair Facility is willing to negotiate.\rThey agreed on midway between average and asking."
+    textarea.value += "\rUpdated Repair Facility labor rate at: $" + please;
+  }
+  if (result == "custom") {
+    textarea.value += "\r\rThe Repair Facility is willing to negotiate.\rThey made an offer under the current posted labor rate which we accepted";
+    textarea.value += "\rUpdated Repair Facility labor rate at: $" + custom;
+  }
+  console.log("got here");
+  textarea.select();
+  document.execCommand("copy");
+}

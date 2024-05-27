@@ -30,7 +30,7 @@ function setVer(x) {
 }
 
 function checkOpen() {
-  var TPDiv = document.getElementById("TPDiv");
+ // var TPDiv = document.getElementById("TPDiv");
   var statNote = document.getElementById("statNote");
   var Snippings = document.getElementById("Snippings");
   var RFIBDH = document.getElementById("RFIBDH");
@@ -60,8 +60,8 @@ function checkOpen() {
     return true;
   } else if (newAuthstyle.style.display == "inline-block") {
     return true;
-  } else if (TPDiv.style.display == "inline-block") {
-    return true;
+ // } else if (TPDiv.style.display == "inline-block") {
+ //   return true;
   } else if (resrcDiv.style.display == "inline-block") {
     return true;
   } else {
@@ -1017,6 +1017,7 @@ var SOLOCount = 0;
 var buttonCount = 0;
 
 window.onload = function PutItBack() { 
+  localStorage.setItem('sideNav', 'closed');
   var selected = "holder1";
   var selectedElem = document.getElementById(selected);
   var didItRun = localStorage.getItem("Im The Boss");
@@ -1139,14 +1140,13 @@ function trackerBlank() {
   localStorage.setItem("noteOpen", "false");
 }
 
-//  localStorage.setItem("PtTransfer1", "Is the repair facility able to diagnose to cause of failure and overhaul if needed?   ");
-//  localStorage.setItem("PtTransfer2", "Has the repair facility ever serviced the vehicle before?   ");
-//  localStorage.setItem("PtTransfer3", "Can a test drive be performed if needed?   ");
-//  localStorage.setItem("PtTransfer4", "Did the repair facility tow the vehicle?   ");
-//  localStorage.setItem("PtTransfer5", "Has the cause of failure been identified?   ");
-//  localStorage.setItem("PtTransfer6", "Does the repair facility have an itemized estimate available?   ");
-//  localStorage.setItem("PtTransfer7", "Has the repair facility's info and contact info been verified?   ");
-//  localStorage.setItem("PtTransfer8", "What is the preferred method of contact?   ");
-//  localStorage.setItem("PtTransfer9", "Have the PT claim expectations been reviewed with the repair facility contact?   ");
-//  localStorage.setItem("PtTransfer10", "Have you provided the repair facility with the assigned adjusters name, direct extension, and e-mail?   ");
-//  localStorage.setItem("PtTransfer11", "Is there any other relevant info that will assist the adjuster?   ");
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("mySidenav").style.borderLeft = "2px solid var(--my-glow-color)";
+  
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("mySidenav").style.borderLeft = "none";
+}

@@ -460,7 +460,12 @@ li {
 }
 
 th:empty, td:empty {
-    border: none;
+  border: none;
+}
+
+td.wider {
+  border: none;
+  outline: none;
 }
 
 .inptTbl {
