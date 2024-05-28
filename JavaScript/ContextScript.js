@@ -5,6 +5,8 @@ var contextMenuActive = "block";
 
 function customMenu(sentID, event) {
   event.preventDefault();
+  var menuNode = document.querySelectorAll(".CMeditDIV");
+  var menuList = Array.from(menuNode);
   for (i = 0; i < menuList.length; i++) {
     if (menuList[i].style.display != "none") {
       console.log("issue");
@@ -99,34 +101,44 @@ function editDisplay() {
   var disEdit = document.getElementById("disEdit");
   disEdit.style.display = "inline-block";
   var mimic = document.getElementById("mimic");
-  var lHeight = window.getComputedStyle(selectedButton).lineHeight;
-  mimic.style.lineHeight = lHeight
-  if (displayList.includes(selectedButton)) {
-    var currentDisplay = localStorage.getItem(lastID + "Display");
-    if (currentDisplay == null) {
-      mimic.innerHTML = document.getElementById(lastID).innerHTML;
-    } else {
-      mimic.innerHTML = currentDisplay;
-    }
+  var styleGive = window.getComputedStyle(selectedButton);
+
+  mimic.style.lineHeight = styleGive.lineHeight;
+
+  var currentDisplay = localStorage.getItem(lastID + "Display");
+  if (currentDisplay == null) {
+    mimic.innerHTML = document.getElementById(lastID).innerHTML;
+  } else {
+    mimic.innerHTML = currentDisplay;
   }
-  var fontSize = window.getComputedStyle(selectedButton).fontSize;
+  var fontSize = styleGive.fontSize;
+
 
   document.getElementById("fontSizer").innerText = "Font Size: " + fontSize;
   selectedButton.style.fontSize = fontSize;
-  mimic.style.fontSize = fontSize;
-  var cHeight = window.getComputedStyle(selectedButton).height;
-  var cWidth = window.getComputedStyle(selectedButton).width;
-  mimic.style.width = cWidth;
-  mimic.style.height = cHeight;
+  mimic.style.fontSize = styleGive.fontSize;
+  mimic.style.width = styleGive.width;
+  mimic.style.height = styleGive.height;
+  mimic.style.textShadow = styleGive.textShadow;
+  mimic.style.boxShadow = styleGive.boxShadow;
+  mimic.style.color = styleGive.color;
+  mimic.style.padding = styleGive.padding;
+  mimic.style.borderRadius = styleGive.borderRadius;
+  mimic.style.border = styleGive.border;
+  mimic.style.margin = styleGive.margin;
+  mimic.style.background = styleGive.background;
   divWidth = disEdit.offsetWidth;
   disWidth = parseInt(divWidth);
-  cisWidth = parseInt(cWidth);
+  cisWidth = parseInt(styleGive.width);
   mimic.style.left = (((disWidth - cisWidth) / 2) - 20) + "px";
+
+  localStorage.setItem(lastID + "color", styleGive.color);
 }
 
 function submitDisp(x) {
   var mimic = document.getElementById("mimic");
   var verifiedID = localStorage.getItem("verifyCalled");
+  var selectedButton = document.getElementById(verifiedID);
   if (x == 'd') {
     mimic.innerHTML = "";
     localStorage.removeItem(verifiedID + "Display");
@@ -144,7 +156,8 @@ function submitDisp(x) {
       document.execCommand('foreColor', false, '#FF0000');
       colorState = "1";
     } else {
-      document.execCommand('foreColor', false, '#000000');
+      var colorChange = localStorage.getItem(verifiedID + "color");
+      document.execCommand('foreColor', false, colorChange);
       colorState = "0";
     } 
   }
@@ -166,7 +179,6 @@ function submitDisp(x) {
 function editContent() {
   var lastID = localStorage.getItem("lastCalled");
   var selectedButton = document.getElementById(lastID);
-console.log(lastID);
   if (!selectedButton.classList.contains('C')) {
     alert("That function is not available on this button");
     localStorage.setItem("lastCalled", "noError");
@@ -177,7 +189,7 @@ console.log(lastID);
   contEdit.style.display = "inline-block";
 
   var currentNote = localStorage.getItem(lastID + "EDIT");
-  console.log(currentNote);
+
   if (currentNote != null) {
     document.getElementById("ContentEditor").innerText = currentNote;
   } else {
@@ -190,7 +202,7 @@ console.log(lastID);
 function cancelCont() {
   var contEdit = document.getElementById("contEdit");
   document.getElementById("ContentEditor").innerText = "";
-  contEdit.style.display = "none"
+  contEdit.style.display = "none";
 }
 
 function submitCont() {
@@ -241,10 +253,22 @@ function editSize() {
   var sizeEdit = document.getElementById("sizeEdit");
   sizeEdit.style.display = "inline-block";
   var sizeShow = document.getElementById("sizeShow");
-  var lHeight = window.getComputedStyle(selectedButton).lineHeight;
-  sizeShow.style.lineHeight = lHeight
-  var fontSize = window.getComputedStyle(selectedButton).fontSize;
-  sizeShow.style.fontSize = fontSize;
+  var styleGive = window.getComputedStyle(selectedButton);
+  sizeShow.style.lineHeight = styleGive.lineHeight;
+  sizeShow.style.fontSize = styleGive.fontSize;
+  sizeShow.style.color = styleGive.color;
+  sizeShow.style.margin = styleGive.margin;
+
+  sizeShow.style.textShadow = styleGive.textShadow;
+  sizeShow.style.boxShadow = styleGive.boxShadow;
+
+  sizeShow.style.padding = styleGive.padding;
+  sizeShow.style.borderRadius = styleGive.borderRadius;
+  sizeShow.style.border = styleGive.border;
+  sizeShow.style.background = styleGive.background;
+
+ 
+
   var currentDisplay = localStorage.getItem(lastID + "Display");
   if (currentDisplay == null) {
     sizeShow.innerHTML = document.getElementById(lastID).innerHTML;
@@ -399,6 +423,7 @@ function posSubmit(x) {
 }
 
 function BuilderShow() {
+  var menuOpen = localStorage.getItem("menuOpen");
   var toggleMaster = document.getElementById("toggleMaster");
   var BtnBuilder = document.getElementById("BtnBuilder");
   if (toggleMaster.style.display == "none") {
@@ -407,7 +432,7 @@ function BuilderShow() {
   } else {
     toggleMaster.style.display = "none";
     BtnBuilder.innerText = "\u2666 Toggle On/Off \u2666";
-    if (menuOpen){
+    if (menuOpen == 'true'){
       MENU();
     }
   }
@@ -533,16 +558,6 @@ function infoDone2() {
   localStorage.setItem(baseKey + "Width", curWidth);
   localStorage.setItem(currdivID + "top", "200px");
   localStorage.setItem(currdivID + "left", "20px");
-
-  idList.push(newButton);
-  idList.push(newButtonDiv);
-  contentList.push(newButton);
-  moveList.push(newButtonDiv);
-  resizeList.push(newButton);
-  displayList.push(newButton);
-  showList.push(newButtonDiv);
-  buttonList.push(newButton);
-  divList.push(newButtonDiv);
 
   buttonCount = buttonCount + 1;
   localStorage.setItem(selectedID + "Count", buttonCount);

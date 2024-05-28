@@ -1,0 +1,263 @@
+textarea { 
+  font-family: arial, sans-serif;
+  line-height: 1.3;
+  margin: 10px;
+  border-radius: 15px;
+  font-size: 15px;
+  border: none;
+  outline: 2px solid var(--my-accent-color);
+  display: inline-block;
+  position: absolute;
+  resize: none;
+  box-shadow:
+    7px 7px 16px var(--my-shadow-color4), 
+   -7px -7px 16pxvar(--my-shadow-color1);
+}
+
+button {
+  overflow: hidden;
+  overflow-wrap: normal;
+  font-size: 17px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: absolute;
+  display: inline-block;
+  outline: none;
+  padding: 10px;
+  margin: 0px;
+  border: none;
+  border-radius: 15px;
+  color: var(--glow-txt-color);
+  background: linear-gradient(145deg, var(--my-shadow-color3), var(--my-shadow-color2));
+  box-shadow:  3px 3px 10px var(--my-shadow-color4), -3px -3px 10px var(--my-shadow-color1);
+  text-shadow:   
+    1px 1px 1px var(--glow-outline-color), 
+   -1px -1px 1px var(--glow-outline-color), 
+   -1px 1px 1px var(--glow-outline-color), 
+    1px -1px 1px var(--glow-outline-color);
+}
+
+button:active {
+  transition: all 0.2s ease;
+  background: var(--my-background-color));
+  box-shadow:  inset -2px -2px 5px var(--my-shadow-color1), inset 2px 2px 5px var(--my-shadow-color4);
+}
+
+.picker {
+  font-size: 16px;
+  width: 140px;
+  border: 2px solid var(--my-accent-color);
+  background: none;
+  box-shadow: none;
+  border-radius: 5px;
+}
+
+#setColors{
+  position: absolute;
+  display: inline-block;
+  bottom: 5px;
+  right: 5px;
+  padding: 14px 18px;
+  border-bottom: none;
+  border-right: none;
+}
+
+#exitColor {
+  position: absolute;
+  display: inline-block;
+  bottom: 5px;
+  right: 145px;
+  padding: 14px 18px;
+  border-bottom: none;
+  border-right: none;
+}
+
+#defaultColors {
+  position: absolute;
+  display: inline-block;
+  top: 555px;
+  left: 90px;
+}
+
+#presetGrey {
+  position: absolute;
+  display: inline-block;
+  top: 605px;
+  left: 90px;
+}
+
+#presetRed {
+  position: absolute;
+  display: inline-block;
+  top: 655px;
+  left: 90px;
+}
+
+#presetGreen {
+  position: absolute;
+  display: inline-block;
+  top: 705px;
+  left: 90px;
+}
+
+#appearDiv {
+  font-size: 18px;
+  top: 50px;
+  left: 150px;
+  height: 800px;
+  width: 600px;
+  position: absolute;
+  display: inline-block;
+  padding: 15px;
+  z-index: 9;
+}
+
+#BGpick {
+  position: absolute;
+  display: inline-block;
+  margin: 0px;
+  top: 25px;
+  left: 10px;
+  width: 300px;
+  text-align: center;
+}
+
+#shad1Pick {
+  position: absolute;
+  display: inline-block;
+  margin: 0px;
+  top: 110px;
+  left: 10px;
+  width: 300px;
+  text-align: center;
+}
+
+#shad2Pick {
+  position: absolute;
+  display: inline-block;
+  margin: 0px;
+  top: 195px;
+  left: 10px;
+  width: 300px;
+  text-align: center;
+}
+
+#shad3Pick {
+  position: absolute;
+  display: inline-block;
+  margin: 0px;
+  top: 280px;
+  left: 10px;
+  width: 300px;
+  text-align: center;
+}
+
+#shad4Pick {
+  position: absolute;
+  display: inline-block;
+  margin: 0px;
+  top: 365px;
+  left: 10px;
+  width: 300px;
+  text-align: center;
+}
+
+#ACpick {
+  position: absolute;
+  display: inline-block;
+  margin: 0px;
+  top: 450px;
+  left: 10px;
+  width: 300px;
+  text-align: center;
+}
+
+#bg2Pick {
+  position: absolute;
+  display: inline-block;
+  margin: 0px;
+  top: 25px;
+  right: 10px;
+  width: 300px;
+  text-align: center;
+}
+
+#flPick {
+  position: absolute;
+  display: inline-block;
+  margin: 0px;
+  top: 110px;
+  right: 10px;
+  width: 300px;
+  text-align: center;
+}
+
+#fdPick {
+  position: absolute;
+  display: inline-block;
+  margin: 0px;
+  top: 195px;
+  right: 10px;
+  width: 300px;
+  text-align: center;
+}
+
+#mlPick {
+  position: absolute;
+  display: inline-block;
+  margin: 0px;
+  top: 280px;
+  right: 10px;
+  width: 300px;
+  text-align: center;
+}
+
+#mdPick {
+  position: absolute;
+  display: inline-block;
+  margin: 0px;
+  top: 365px;
+  right: 10px;
+  width: 300px;
+  text-align: center;
+}
+
+#namecolorLabelDiv {
+  position: absolute;
+  display: inline-block;
+  margin: 0px;
+  top: 450px;
+  right: 10px;
+  width: 300px;
+  text-align: center;
+}
+
+#nameOutlineDiv {
+  position: absolute;
+  display: inline-block;
+  margin: 0px;
+  top: 535px;
+  right: 10px;
+  width: 300px;
+  text-align: center;
+}
+
+#glowLabelDiv {
+  position: absolute;
+  display: inline-block;
+  margin: 0px;
+  top: 620px;
+  right: 10px;
+  width: 300px;
+  text-align: center;
+}
+
+#nameLabelDiv {
+  position: absolute;
+  display: inline-block;
+  margin: 0px;
+  width: 300px;
+  top: 705px;
+  right: 10px;
+  text-align: center;
+}

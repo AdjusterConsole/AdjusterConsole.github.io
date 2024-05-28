@@ -1,53 +1,6 @@
-
-  var PicturesReuest = "Requesting photos from RF to verify failure and avoid inspection delay.\rInforming RF to include pics of all 4 corners of the vehicle, VIN plate, odometer, and pictures of the failure.\rSent request via SRS action button.";
-  var RecordsRequested = "Requesting CH statement regarding issues.\rRequesting past 12 months of service records from CH.\rSent records request using SRS action button.\rWill call CH to inform.";
-  var InspectionTemplate = "Please verify all failures.\rPlease contact 1-2 hours prior to arrival.\rContact:   \rPhone:   \rEmail:   ";
-  var StatementTemplate = "What happened:   \rWhen did the issue first occur:   \rHad the issue occurred before:   \rIf yes, when:   \rAny warning lights:   \rAny noise, smoke, or smell:   \rHow long has the CH owned the vehicle:   \rApproximate mileage when CH purchased:   \rWas vehicle towed to RF:   \rFrom where and by whom:   \r";
-  var ReviewNote = "Reviewed inspection photos and report.\rReviewed photos sent by repair facility.\rVerified vin.\rVerified mileage.\rNo indication of commercial use.\rNo indication of modification.\r\r";
-
-  var NoAnswerOOPC = "Called CH for OOPC auth.\rNo answer – left voicemail.\rTasked to CS callbacks.";
-  var ChAuthedOOPC = "Called CH for OOPC and shipping auth.\rCH has approved OOPC.\rCH has approved shipping.";
-  var NoAnsRecdsRqst = "Called CH to request records.\rCalled CH to request statement.\rNo answer – left voicemail.\rTasked to CS callbacks.";
-  var NewOEMpart = "Verified OEM PN:   \rVerified MSRP:   \rRF Price:   \r\r";
-  var OemOver250 = "PA PN:   \rPA List:   \rPA Cost:   \rCore: NA\r\r";
-  var NewAMpart = "RF AM PN:   \rRF Price:   \rPA PN:   \rPA List:   \rPA Cost:   \rCore: NA\r\r";
-  var BulkFluid = "BULK:   \rRF Price:   \rFPS Allows:   \r\r";
-  var Labor = "RF Asking:   \rPD Approved:   \r\r";
-  var Diag = "Diag\rRF Asking:   \rPD Approved:   \r\r";
-  var EvacRechrge = "Evac and Recharge\rRF Asking:   \rPD Approved:   1.4\r\r";
-  var Alignment = "Alignment\rRF Asking:   \rPD Approved:   \r\r";
-  var NoPAIHSourcing = "Nothing available in PA.\rSent to in house sourcing.\r\r";
-  var ToEdit;
   var ButDidYouDie = "no";
   var IDset = [];
   var imBusy = "false";
-
-  var resizeNode = document.querySelectorAll(".R");
-  var displayNode = document.querySelectorAll(".D");
-  var moveNode = document.querySelectorAll(".P");
-  var contentNode = document.querySelectorAll(".C");
-
-  var buttonNode = document.querySelectorAll("button");
-  var idNode = document.querySelectorAll('*[id]');
-  var divNode = document.getElementsByTagName("div");
-  var menuNode = document.querySelectorAll(".CMeditDIV");
-  var showNode = document.querySelectorAll('[class$="dispStat"]');
-
-  var menuList = Array.from(menuNode);
-  var showList = Array.from(showNode);
-  var divList = Array.from(divNode);
-  var idList =  Array.from(idNode);
-  var buttonList = Array.from(buttonNode);
-  var moveList = Array.from(moveNode);
-  var resizeList = Array.from(resizeNode);
-  var displayList = Array.from(displayNode);
-  var contentList = Array.from(contentNode);
-
-  var theMenu = document.getElementById("LOCK1");
-  var ETPHONEHOME = document.getElementById("PHONE");
-  var BtnBuilder = document.getElementById("BtnBuilder");
-  var buttonMaker = document.getElementById("buttonMaker");
-
   var DaddySaysSo = false;
 
 function RESET(){

@@ -269,10 +269,13 @@
   outline: none;
   border-radius: 5px;
   padding: 10px;
-  color: black; 
+  color: var(--glow-txt-color);
   margin: 10px;
-  color: black;
-  text-shadow: 0px 0px 1px;
+  text-shadow:   
+    1px 1px 1px var(--glow-outline-color), 
+   -1px -1px 1px var(--glow-outline-color), 
+   -1px 1px 1px var(--glow-outline-color), 
+    1px -1px 1px var(--glow-outline-color);
 }
 
 #mimic:active {

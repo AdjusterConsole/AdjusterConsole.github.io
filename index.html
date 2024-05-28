@@ -144,7 +144,7 @@ body {
 </head>
 <body>
 <div id="pdiv" class="noShow"><p></div>
-<button id="swap1" class="otherone" onclick="openNav()">&#x2B80;</button>
+<button id="swap1" class="otherone" onclick="openNav()">Menu<br>&#x2B80;</button>
 
                                                 <!-- Menu -->
 
@@ -158,15 +158,15 @@ body {
 
                                                 <!-- Side Nav -->
 
-<div id="mySidenav" class="sidenav">
+<div id="mySidenav" class="sidenav closed_nav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <button class="navHeader color_mod">Tools</button>
+  <button class="navHeader color_mod" onclick="resrcCenter('5','t')">Tools</button>
   <button class="color_mod" onclick="openScript()">Labor Rate Script</button>
   <button class="color_mod" onclick="resrcCenter('5','t');openInfo(event, 'trackerTool')">Tracker Tool</button>
   <button class="color_mod" onclick="resrcCenter('5','t');openInfo(event, 'PAPrice')">Pricing Guide</button>
   <button class="color_mod" class="color_mod" onclick="resrcCenter('5','t');openInfo(event, 'MileDiscrep')">Mileage Issues</button>
   <button class="navEnder color_mod" onclick="resrcCenter('5','t');openInfo(event, 'QuickAns')">Quick Answers</button>
-  <button class="navHeader color_mod">Policy</button>
+  <button class="navHeader color_mod" onclick="resrcCenter('4','p')">Policy</button>
   <button class="color_mod" onclick="resrcCenter('4','p');openInfo2(event, 'MBIClaims')">MBI</button>
   <button class="color_mod" onclick="resrcCenter('4','p');openInfo2(event, 'xfer2790')">2790 Xfer</button>
   <button class="color_mod" onclick="resrcCenter('4','p');openInfo2(event, 'Tesla')">Tesla</button>
@@ -175,7 +175,7 @@ body {
   <button class="color_mod" onclick="resrcCenter('4','p');openInfo2(event, 'partsRes')">Parts Resolution</button>
   <button class="color_mod" onclick="resrcCenter('4','p');openInfo2(event, 'Diagnostic')">Diagnostic Times</button>
   <button class="navEnder color_mod" onclick="resrcCenter('4','p');openInfo2(event, 'PANoOrder')">Do Not Order</button>
-  <button class="navHeader color_mod">Diagnostic Assistance</button>
+  <button class="navHeader color_mod" onclick="diagCenter()">Diagnostic Assistance</button>
   <button class="color_mod" onclick="cdiagCenter();openInfo2(event, 'Cooling')">Cooling</button>
   <button class="color_mod" onclick="diagCenter();openInfo2(event, 'Turbo')">Turbo</button>
   <button class="color_mod" onclick="diagCenter();openInfo2(event, 'Timing')">Timing</button>
@@ -184,7 +184,7 @@ body {
   <button class="color_mod" onclick="diagCenter();openInfo2(event, 'AC')">AC</button>
   <button class="color_mod" onclick="diagCenter();openInfo2(event, 'Electrical')">Electrical</button>
   <button class="navEnder color_mod" onclick="diagCenter();openInfo2(event, 'Fuel')">Fuel</button>
-  <button class="navHeader color_mod">Templates</button>
+  <button class="navHeader color_mod" onclick="ShowTemps()">Templates</button>
   <button class="color_mod" onclick="PTXFER()">PT Transfer</button>
   <button class="color_mod" onclick="STMTTEMP('T2')>CH Statement</button>
   <button class="color_mod" onclick="REVIEW('T3')">Insp/Pic Review</button>
@@ -242,6 +242,8 @@ body {
 <button id="newAuthstarter" class="D R P s7dispStat" oncontextmenu="customMenu(this.id, event)" onclick="showAuth()"><b><f>Authorize</f></b> Claim</button>
 
 <button id="statusNote" class="D R P s8dispStat" oncontextmenu="customMenu(this.id, event)" onclick="statNOTE()"><b>Status</b> Note</button>
+
+<button id="openScript" class="D R P s4dispStat" oncontextmenu="customMenu(this.id, event)" onclick="openScript()">Labor Rate<br>Script</button> 
 
 <div id="Request" class="REQUESTDIV noShow">
   <button id="picR" class="D R P C s1dispStat" oncontextmenu="customMenu(this.id, event)" onclick="PICREQ(this.id);"><b>PICTURE</b> REQUEST</button>
@@ -570,7 +572,6 @@ body {
     <div class="item" onclick="editPos()">Position</div>
     <div class="item" onclick="showCustom()">New Button</div>
     <div class="item" onclick="BuilderShow('o')">Toggle List</div>
-    <div class="item" onclick="tutorial()">Tutorial</div>
   </div>
 
 <div class="CMeditDIV" id="disEdit" style="display:none; text-align: center;">
@@ -634,13 +635,10 @@ body {
     <label id="switchs2" class="switch"><input type="checkbox" id="s2" onclick="toggleConductor(this.id)"><span class="slider round"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspRecords Request
   </div><br>
   <div id="switchdivs3" class="noShow sd">
-    <label id="switchs3" class="switch"><input type="checkbox" id="s3" onclick="toggleConductor(this.id)"><span class="slider round"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspRecds Req No Ansr
+    <label id="switchs3" class="switch"><input type="checkbox" id="s3" onclick="toggleConductor(this.id)"><span class="slider round"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspRecds Reqst No Ans
   </div><br>
   <div id="switchdivs4" class="noShow sd">
-    <label id="switchs4" class="switch"><input type="checkbox" id="s4" onclick="toggleConductor(this.id)"><span class="slider round"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspOOP Call No Ansr
-  </div><br>
-  <div id="switchdivs5" class="noShow sd">
-    <label id="switchs5" class="switch"><input type="checkbox" id="s5" onclick="toggleConductor(this.id)"><span class="slider round"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspCH Authed OOPC
+    <label id="switchs4" class="switch"><input type="checkbox" id="s4" onclick="toggleConductor(this.id)"><span class="slider round"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspLabor Rate Script
   </div><br>
   <div id="switchdivs6" class="noShow sd">
     <label id="switchs6" class="switch"><input type="checkbox" id="s6" onclick="toggleConductor(this.id)"><span class="slider round"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspTemplates
@@ -652,7 +650,7 @@ body {
     <label id="switchs8" class="switch"><input type="checkbox" id="s8" onclick="toggleConductor(this.id)"><span class="slider round"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspStatus Note
   </div><br>
   <div id="switchdivg0" class="noShow sd">
-    <label id="switchg0" class="switch"><input type="checkbox" id="g0" onclick="toggleConductor(this.id)"><span class="slider round"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspInformation
+    <label id="switchg0" class="switch"><input type="checkbox" id="g0" onclick="toggleConductor(this.id)"><span class="slider round"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspPolicy
   </div><br>
   <div id="switchdivg1" class="noShow sd">
     <label id="switchg1" class="switch"><input type="checkbox" id="g1" onclick="toggleConductor(this.id)"><span class="slider round"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspTools
@@ -2138,8 +2136,6 @@ TIME:&nbsp&nbsp</textarea>
   </div>
 </div>
 
-<button id="openScript" class="D R P" oncontextmenu="customMenu(this.id, event)" onclick="openScript()">Labor Rate<br>Script</button> 
-
 <div id="laborscriptDiv" class="ls_main" style="display:none;">
   <div class="ls_sub">
     <h3 style="text-align:center;">Labor Rate Script</h3>
@@ -2163,13 +2159,13 @@ TIME:&nbsp&nbsp</textarea>
       </p>
       <div class="side_sub revert">
         <div class="drop_sub menu_sub revert">
-          <select id="radius">
+          <select id="radius" required>
             <option selected value="0">Radius</option>
             <option value="5">5</option>
             <option value="10">10</option>
             <option value="25">25</option>
           </select><br>
-          <select id="type">
+          <select id="type" required>
             <option selected value="0">Facility Type</option>
             <option value="All">All</option>
             <option value="Independent">Independent</option>
@@ -2177,7 +2173,7 @@ TIME:&nbsp&nbsp</textarea>
             <option value="European">European</option>
             <option value="Asian">Asian</option>
           </select><br>
-          <select id="quant">
+          <select id="quant" required>
             <option selected value="0">Facilities</option>
             <option value="5">5</option>
             <option value="10">10</option>
@@ -2195,9 +2191,11 @@ TIME:&nbsp&nbsp</textarea>
       </div>
       <p>
         <label for="aveRate">Average Labor Rate:</label><br>
-        <input type="number" id="aveRate" step=".01" required>
+        $<input type="number" id="aveRate" step=".01" required>
       </p>
+
       <button id="myScript" class="script_btn D R P" onclick="laborScript()">My Response</button>
+
       <div id="responseDiv" class="flt_lft revert" style="display:none;">
         <div id="responseDiv_text" class="revert">The response is:<br></div>
         <button id="yesScript" class="script_btn D R P" onclick="negotiateScript('y')">Yes</button>

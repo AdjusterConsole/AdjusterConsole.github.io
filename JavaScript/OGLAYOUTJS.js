@@ -1,5 +1,4 @@
   let newpartcount = 2;
-  var menuOpen = false;
 
 function swapPage(x) {
   switch(x) {
@@ -30,7 +29,7 @@ function setVer(x) {
 }
 
 function checkOpen() {
- // var TPDiv = document.getElementById("TPDiv");
+  var TPDiv = document.getElementById("TPDiv");
   var statNote = document.getElementById("statNote");
   var Snippings = document.getElementById("Snippings");
   var RFIBDH = document.getElementById("RFIBDH");
@@ -60,8 +59,8 @@ function checkOpen() {
     return true;
   } else if (newAuthstyle.style.display == "inline-block") {
     return true;
- // } else if (TPDiv.style.display == "inline-block") {
- //   return true;
+  } else if (TPDiv.style.display == "inline-block") {
+    return true;
   } else if (resrcDiv.style.display == "inline-block") {
     return true;
   } else {
@@ -93,11 +92,17 @@ function ShowTemps() {
     return;
   }
   TPDiv.style.display = "inline-block";
+  const list = document.getElementById("mySidenav").classList;
+  list.replace("open_nav", "closed_nav");
 }
 
 function MENU() {
+  var theMenu = document.getElementById("LOCK1");
+  var BtnBuilder = document.getElementById("BtnBuilder");
+  var buttonMaker = document.getElementById("buttonMaker");
+  var menuOpen = localStorage.getItem("menuOpen");
   document.getElementById("EDITarea").value = "";
-  if (!menuOpen) {
+  if (menuOpen == 'false') {
     theMenu.innerText = "\u2666 Close \u2666";
     appearance.style.top = "45px";
     appearance.style.opacity = '1';
@@ -107,7 +112,9 @@ function MENU() {
     buttonMaker.style.opacity = '1';
     tutorialSel.style.top = "120px";
     tutorialSel.style.opacity = '1';
-    menuOpen = true;
+    const list = document.getElementById("mySidenav").classList;
+    list.replace("open_nav", "closed_nav");
+    localStorage.setItem("menuOpen", "true");
   } else {
     BtnBuilder.style.top = "20px";
     BtnBuilder.style.opacity = '0';
@@ -119,7 +126,7 @@ function MENU() {
     tutorialSel.style.opacity = '0';
     var page = localStorage.getItem('currentVer');
     theMenu.innerText = "\u2666 Settings \u2666"; 
-    menuOpen = false;
+    localStorage.setItem("menuOpen", "false");
   }
 }
 
@@ -134,6 +141,8 @@ function statNOTE() {
   }
   statNote.style.display = "inline-block";
   statNoteinner.style.height = "90%";
+  const list = document.getElementById("mySidenav").classList;
+  list.replace("open_nav", "closed_nav");
 }
 
 function cancelStat() {
@@ -269,6 +278,8 @@ function showAuth() {
     return;
   }
   newAuthstyle.style.display = "inline-block";
+  const list = document.getElementById("mySidenav").classList;
+  list.replace("open_nav", "closed_nav");
 }
 
 function moveAuth() {
@@ -429,6 +440,7 @@ function finishAuth(stage) {
 }
 
 function EVACRECH(btnID) {
+  var EvacRechrge = "Evac and Recharge\rRF Asking:   \rPD Approved:   1.4\r\r";
   var Check = localStorage.getItem(btnID + "EDIT");
   var textarea = document.getElementById("textarea2");
   if (Check == null) {
@@ -442,6 +454,7 @@ function EVACRECH(btnID) {
 }
 
 function ALIGNMENT(btnID) {
+  var Alignment = "Alignment\rRF Asking:   \rPD Approved:   \r\r";
   var Check = localStorage.getItem(btnID + "EDIT");
   var textarea = document.getElementById("textarea2");
   if (Check == null) {
@@ -456,19 +469,18 @@ function ALIGNMENT(btnID) {
 
 function DIAG() {
   var textarea = document.getElementById("textarea2");
-  textarea.value += "Diag \r";
-  textarea.value += Labor;
+  textarea.value += "Diag\rRF Asking:   \rPD Approved:   \r\r";
   textarea.scrollTop = textarea.scrollHeight;
 }
 
 function LABOR(boxNum) {
   var textarea = document.getElementById("textarea2");
-  textarea.value += "R/R \r";
-  textarea.value += Labor;
+  textarea.value += "R/R \rRF Asking:   \rPD Approved:   \r\r";
   textarea.scrollTop = textarea.scrollHeight;
 }
 
 function BULK(btnID) {
+  var BulkFluid = "BULK:   \rRF Price:   \rFPS Allows:   \r\r";
   var Check = localStorage.getItem(btnID + "EDIT");
   var textarea = document.getElementById("textarea2");
   if (Check == null) {
@@ -486,19 +498,19 @@ function OEMOVER() {
   var textarea = document.getElementById("textarea2");
   textareaVal = textareaVal.slice(0,-1);
   textarea.value = textareaVal;
-  textarea.value += OemOver250;
+  textarea.value += "PA PN:   \rPA List:   \rPA Cost:   \rCore: NA\r\r";
   textarea.scrollTop = textarea.scrollHeight;
 }
 
 function NEWAM() {
   var textarea = document.getElementById("textarea2");
-  textarea.value += NewAMpart;
+  textarea.value += "RF AM PN:   \rRF Price:   \rPA PN:   \rPA List:   \rPA Cost:   \rCore: NA\r\r";
   textarea.scrollTop = textarea.scrollHeight;
 }
 
 function NEWOEM() {
   var textarea = document.getElementById("textarea2");
-  textarea.value += NewOEMpart;
+  textarea.value += "Verified OEM PN:   \rVerified MSRP:   \rRF Price:   \r\r";
   textarea.scrollTop = textarea.scrollHeight;
 }
 
@@ -531,10 +543,11 @@ function AUTHOOPC(btnID) {
 }
 
 function STMTTEMP(btnID) {
+  var StTemp = "What happened:   \rWhen did the issue first occur:   \rHad the issue occurred before:   \rIf yes, when:   \rAny warning lights:   \rAny noise, smoke, or smell:   \rHow long has the CH owned the vehicle:   \rApproximate mileage when CH purchased:   \rWas vehicle towed to RF:   \rFrom where and by whom:   \r";
   var Check = localStorage.getItem(btnID + "EDIT");
   if (Check == null) {
-    document.getElementById("textarea5").value = StatementTemplate;
-    document.getElementById("EDITarea").value = StatementTemplate;
+    document.getElementById("textarea5").value = StTemp;
+    document.getElementById("EDITarea").value = StTemp;
   } else {
     document.getElementById("textarea5").value = Check;
     document.getElementById("EDITarea").value = Check;
@@ -547,10 +560,11 @@ function STMTTEMP(btnID) {
 }
 
 function REVIEW(btnID) {
+  var Rev = "Reviewed inspection photos and report.\rReviewed photos sent by repair facility.\rVerified vin.\rVerified mileage.\rNo indication of commercial use.\rNo indication of modification.\r\r";
   var Check = localStorage.getItem(btnID + "EDIT");
   if (Check == null) {
-    document.getElementById("textarea5").value = ReviewNote;
-    document.getElementById("EDITarea").value = ReviewNote;
+    document.getElementById("textarea5").value = Rev;
+    document.getElementById("EDITarea").value = Rev;
   } else {
     document.getElementById("textarea5").value = Check;
     document.getElementById("EDITarea").value = Check;
@@ -563,10 +577,11 @@ function REVIEW(btnID) {
 }
 
 function RECREQ(btnID) {
+  var RecReq = "Requesting CH statement regarding issues.\rRequesting past 12 months of service records from CH.\rSent records request using SRS action button.\rWill call CH to inform.";
   var Check = localStorage.getItem(btnID + "EDIT");
   if (Check == null) {
-    document.getElementById("textarea5").value = RecordsRequested;
-    document.getElementById("EDITarea").value = RecordsRequested;
+    document.getElementById("textarea5").value = RecReq;
+    document.getElementById("EDITarea").value = RecReq;
   } else {
     document.getElementById("textarea5").value = Check;
     document.getElementById("EDITarea").value = Check;
@@ -577,10 +592,11 @@ function RECREQ(btnID) {
 }
 
 function NOANSREC(btnID) {
+  var NoAns = "Called CH to request records.\rCalled CH to request statement.\rNo answer – left voicemail.\rTasked to CS callbacks.";
   var Check = localStorage.getItem(btnID + "EDIT");
   if (Check == null) {
-    document.getElementById("textarea5").value = NoAnsRecdsRqst;
-    document.getElementById("EDITarea").value = NoAnsRecdsRqst;
+    document.getElementById("textarea5").value = NoAns;
+    document.getElementById("EDITarea").value = NoAns;
   } else {
     document.getElementById("textarea5").value = Check;
     document.getElementById("EDITarea").value = Check;
@@ -591,10 +607,11 @@ function NOANSREC(btnID) {
 }
 
 function INSPTEMP(btnID) {
+  var InsTemp = "Please verify all failures.\rPlease contact 1-2 hours prior to arrival.\rContact:   \rPhone:   \rEmail:   ";
   var Check = localStorage.getItem(btnID + "EDIT");
   if (Check == null) {
-    document.getElementById("textarea5").value = InspectionTemplate;
-    document.getElementById("EDITarea").value = InspectionTemplate;
+    document.getElementById("textarea5").value = InsTemp;
+    document.getElementById("EDITarea").value = InsTemp;
   } else {
     document.getElementById("textarea5").value = Check;
     document.getElementById("EDITarea").value = Check;
@@ -807,10 +824,11 @@ function cancelPT() {
 }
 
 function PICREQ(btnID) {
+  var PicReq = "Requesting photos from RF to verify failure and avoid inspection delay.\rInforming RF to include pics of all 4 corners of the vehicle, VIN plate, odometer, and pictures of the failure.\rSent request via SRS action button.";
   var Check = localStorage.getItem(btnID + "EDIT");
   if (Check == null) {
-    document.getElementById("textarea5").value = PicturesReuest;
-   document.getElementById("EDITarea").value = PicturesReuest;
+    document.getElementById("textarea5").value = PicReq;
+   document.getElementById("EDITarea").value = PicReq;
   } else {
     document.getElementById("textarea5").value = Check;
    document.getElementById("EDITarea").value = Check;
@@ -872,9 +890,11 @@ function FormToTA() {
     textarea.value += "RF Price: ";
     textarea.value += rfprice + "\r";
     if (overCheck > 250) {
-      textarea.value += OemOver250;
+      textarea.value += "PA PN:   \rPA List:   \rPA Cost:   \rCore: NA\r\r";
+      textarea.scrollTop = textarea.scrollHeight;
       } else {
         textarea.value += "\r";
+        textarea.scrollTop = textarea.scrollHeight;
       }
   } else {
     textarea.value += "Part: ";
@@ -883,9 +903,9 @@ function FormToTA() {
     textarea.value += partnum + "\r";
     textarea.value += "RF Price: ";
     textarea.value += rfprice + "\r";
-    textarea.value += OemOver250;
+    textarea.value += "PA PN:   \rPA List:   \rPA Cost:   \rCore: NA\r\r";
+    textarea.scrollTop = textarea.scrollHeight;
   }
-  textarea.scrollTop = textarea.scrollHeight;
 }
 
 function AnotherOne() {
@@ -914,6 +934,7 @@ function NextPart() {
 }
 
 function SENDLABOR1() {
+  var Labor = "RF Asking:   \rPD Approved:   \r\r";
   var partname = document.getElementById('partname1').value;
   var textarea = document.getElementById("textarea2");
   textarea.value += "R/R ";
@@ -923,33 +944,12 @@ function SENDLABOR1() {
 }
 
 function SENDDIAG1() {
+  var Labor = "RF Asking:   \rPD Approved:   \r\r";
   var partname = document.getElementById('partname1').value;
   var textarea = document.getElementById("textarea2");
   textarea.value += "Diag on ";
   textarea.value += partname + "\r";
   textarea.value += Labor;
-  textarea.scrollTop = textarea.scrollHeight;
-}
-
-function QLABOR() {
-  var partname = document.getElementById('partname1').value;
-  var textarea = document.getElementById("textarea4");
-  textarea.value += "R/R ";
-  textarea.value += partname + "\r";
-  textarea.value += Labor;
-}
-
-function QDIAG() {
-  var partname = document.getElementById('partname1').value;
-  var textarea = document.getElementById("textarea4");
-  textarea.value += "Diag on ";
-  textarea.value += partname + "\r";
-  textarea.value += Labor;
-}
-
-function SendQ() {
-  var textarea = document.getElementById("textarea2");
-  textarea.value += document.getElementById("textarea4").value;
   textarea.scrollTop = textarea.scrollHeight;
 }
 
@@ -1009,19 +1009,12 @@ function toggleConductor(boxId) {
   }
 }
 
-var STCBCount = 0;
-var PRINCount = 0;
-var LINKCount = 0;
-var ENDNCount = 0;
-var SOLOCount = 0;
-var buttonCount = 0;
-
 window.onload = function PutItBack() { 
-  localStorage.setItem('sideNav', 'closed');
   var selected = "holder1";
   var selectedElem = document.getElementById(selected);
   var didItRun = localStorage.getItem("Im The Boss");
   localStorage.setItem("toldem", "false");
+  localStorage.setItem("menuOpen", "false");
   if (didItRun == null) {
     localStorage.setItem("Im The Boss", "It's Been Done");
     localStorage.setItem(selected + "STCB", '0');
@@ -1031,18 +1024,8 @@ window.onload = function PutItBack() {
     localStorage.setItem(selected + "SOLO", '0');
     localStorage.setItem(selected + "Count", '0');
   }
-  var STt = localStorage.getItem(selected + "STCB");
-  var PRt = localStorage.getItem(selected + "PRIN");
-  var LIt = localStorage.getItem(selected + "LINK");
-  var ENt = localStorage.getItem(selected + "ENDN");
-  var SOt = localStorage.getItem(selected + "SOLO");
   var but = localStorage.getItem(selected + "Count");
-  STCBCount = parseInt(STt);
-  PRINCount = parseInt(PRt);
-  LINKCount = parseInt(LIt);
-  ENDNCount = parseInt(ENt);
-  SOLOCount = parseInt(SOt);
-  buttonCount = parseInt(but);
+  var buttonCount = parseInt(but);
   for (i = 0; i < buttonCount; i++) {
     var count = i.toString();
     var currID = "cust" + count;
@@ -1050,11 +1033,6 @@ window.onload = function PutItBack() {
     var currdivID = "custBtn" + count;
     var buttonX = document.getElementById(currID)
     buttonX.id = newID;
-    idList.push(buttonX);
-    contentList.push(buttonX);
-    resizeList.push(buttonX);
-    displayList.push(buttonX);
-    buttonList.push(buttonX);
   }
   for (i = 0; i < 10; i++) {
     var count = i.toString();
@@ -1064,6 +1042,8 @@ window.onload = function PutItBack() {
       localStorage.setItem(curdivID + "SHOW", "none");
     }
   }
+  var idNode = document.querySelectorAll('*[id]');
+  var idList =  Array.from(idNode);
   for (i = 0; i < idList.length; i++) {
     var selectedID = idList[i].id;
     var selectedElem = document.getElementById(selectedID);
@@ -1088,6 +1068,8 @@ window.onload = function PutItBack() {
       selectedElem.innerHTML = setTEXT;
     }
   }
+  var showNode = document.querySelectorAll('[class$="dispStat"]');
+  var showList = Array.from(showNode);
   for (i = 0; i < showList.length; i++) {
     var selectedID = showList[i].id;
     var selectedElem = document.getElementById(selectedID);
@@ -1141,12 +1123,11 @@ function trackerBlank() {
 }
 
 function openNav() {
-  document.getElementById("mySidenav").style.width = "250px";
-  document.getElementById("mySidenav").style.borderLeft = "2px solid var(--my-glow-color)";
-  
+  const list = document.getElementById("mySidenav").classList;
+  list.replace("closed_nav", "open_nav");
 }
 
 function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-  document.getElementById("mySidenav").style.borderLeft = "none";
+  const list = document.getElementById("mySidenav").classList;
+  list.replace("open_nav", "closed_nav");
 }
