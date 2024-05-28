@@ -176,7 +176,7 @@ body {
   <button class="color_mod" onclick="resrcCenter('4','p');openInfo2(event, 'Diagnostic')">Diagnostic Times</button>
   <button class="navEnder color_mod" onclick="resrcCenter('4','p');openInfo2(event, 'PANoOrder')">Do Not Order</button>
   <button class="navHeader color_mod" onclick="diagCenter()">Diagnostic Assistance</button>
-  <button class="color_mod" onclick="cdiagCenter();openInfo2(event, 'Cooling')">Cooling</button>
+  <button class="color_mod" onclick="diagCenter();openInfo2(event, 'Cooling')">Cooling</button>
   <button class="color_mod" onclick="diagCenter();openInfo2(event, 'Turbo')">Turbo</button>
   <button class="color_mod" onclick="diagCenter();openInfo2(event, 'Timing')">Timing</button>
   <button class="color_mod" onclick="diagCenter();openInfo2(event, 'Steering')">Steering</button>
@@ -2124,7 +2124,7 @@ TIME:&nbsp&nbsp</textarea>
     </div>
   </div>
   <button id="exitRcrce2" class="wefwefwef D R P" onclick="closeResource2()">Exit</button>
-  <div id="theDepot" class="imageDepot" alt= onclick="magnify('back')">
+  <div id="theDepot" class="imageDepot" onclick="magnify('back')">
     <img src="./Images/CoolingImg.PNG" alt="./imgBackup/CoolingImg.PNG" class="depotImg" id="coolingDepot">
     <img src="./Images/TurboImg.PNG" alt="./imgBackup/TurboImg.PNG" class="depotImg" id="turboDepot">
     <img src="./Images/ElectricalImg.PNG" alt="./imgBackup/ElectricalImg.PNG" class="depotImg" id="electricalDepot">
@@ -2159,13 +2159,13 @@ TIME:&nbsp&nbsp</textarea>
       </p>
       <div class="side_sub revert">
         <div class="drop_sub menu_sub revert">
-          <select id="radius" required>
+          <select id="radius">
             <option selected value="0">Radius</option>
             <option value="5">5</option>
             <option value="10">10</option>
             <option value="25">25</option>
           </select><br>
-          <select id="type" required>
+          <select id="type">
             <option selected value="0">Facility Type</option>
             <option value="All">All</option>
             <option value="Independent">Independent</option>
@@ -2173,7 +2173,7 @@ TIME:&nbsp&nbsp</textarea>
             <option value="European">European</option>
             <option value="Asian">Asian</option>
           </select><br>
-          <select id="quant" required>
+          <select id="quant">
             <option selected value="0">Facilities</option>
             <option value="5">5</option>
             <option value="10">10</option>
