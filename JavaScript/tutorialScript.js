@@ -410,6 +410,6 @@ function recallIndex(elementID) {
   localStorage.removeItem(elementID + "saveIndex");
 }
 
-function closeNav() {
+function closeNav1() {
   location.reload();
 }

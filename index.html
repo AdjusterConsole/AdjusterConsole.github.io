@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
-<link rel="stylesheet" href="CSS/SnipCom.css">
+<link rel="stylesheet" href="CSS/Stable.css">
 <link rel="stylesheet" href="CSS/Common.css">
 <link rel="stylesheet" href="CSS/Orig/Buttons.css">
 <link rel="stylesheet" href="CSS/contextMenu.css">
@@ -108,43 +108,11 @@ body {
   --div-width2: 10px;
 }
 
-.otherone {
-  display: inline-block;
-  position: absolute;
-  color: black;
-  text-shadow:
-    -1px 0px 2px white,
-    1px 0px 2px white,
-    -4px 0px 6px white,
-    4px 0px 6px white,
-    -8px 0px 10px white,
-    8px 0px 10px white;
-  font-size: 20px;
-  background: none;
-  box-shadow: none;
-  overflow: visible;
- &:active {
-  background: none;
-  box-shadow: none;
-  transform: translateY(0px);
-  }
-}
-
-#swap1 {
-  right: 0px;
-  top: 450px;
-}
-
-#swap2 {
-  right: 0px;
-  top: 25px;
-}
-
 </style>
 </head>
 <body>
 <div id="pdiv" class="noShow"><p></div>
-<button id="swap1" class="otherone" onclick="openNav()">Menu<br>&#x2B80;</button>
+<div id="swap1" class="otherone" style="vertical-align: middle;" onclick="openNav()">&#9776;</div>
 
                                                 <!-- Menu -->
 
@@ -158,40 +126,43 @@ body {
 
                                                 <!-- Side Nav -->
 
-<div id="mySidenav" class="sidenav closed_nav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <button class="navHeader color_mod" onclick="resrcCenter('5','t')">Tools</button>
-  <button class="color_mod" onclick="openScript()">Labor Rate Script</button>
-  <button class="color_mod" onclick="resrcCenter('5','t');openInfo(event, 'trackerTool')">Tracker Tool</button>
-  <button class="color_mod" onclick="resrcCenter('5','t');openInfo(event, 'PAPrice')">Pricing Guide</button>
-  <button class="color_mod" class="color_mod" onclick="resrcCenter('5','t');openInfo(event, 'MileDiscrep')">Mileage Issues</button>
-  <button class="navEnder color_mod" onclick="resrcCenter('5','t');openInfo(event, 'QuickAns')">Quick Answers</button>
-  <button class="navHeader color_mod" onclick="resrcCenter('4','p')">Policy</button>
-  <button class="color_mod" onclick="resrcCenter('4','p');openInfo2(event, 'MBIClaims')">MBI</button>
-  <button class="color_mod" onclick="resrcCenter('4','p');openInfo2(event, 'xfer2790')">2790 Xfer</button>
-  <button class="color_mod" onclick="resrcCenter('4','p');openInfo2(event, 'Tesla')">Tesla</button>
-  <button class="color_mod" onclick="resrcCenter('4','p');openInfo2(event, 'DoNotUse')">Do Not Use</button>
-  <button class="color_mod" onclick="resrcCenter('4','p');openInfo2(event, 'IsItPT')">Is It PT?</button>
-  <button class="color_mod" onclick="resrcCenter('4','p');openInfo2(event, 'partsRes')">Parts Resolution</button>
-  <button class="color_mod" onclick="resrcCenter('4','p');openInfo2(event, 'Diagnostic')">Diagnostic Times</button>
-  <button class="navEnder color_mod" onclick="resrcCenter('4','p');openInfo2(event, 'PANoOrder')">Do Not Order</button>
-  <button class="navHeader color_mod" onclick="diagCenter()">Diagnostic Assistance</button>
-  <button class="color_mod" onclick="diagCenter();openInfo2(event, 'Cooling')">Cooling</button>
-  <button class="color_mod" onclick="diagCenter();openInfo2(event, 'Turbo')">Turbo</button>
-  <button class="color_mod" onclick="diagCenter();openInfo2(event, 'Timing')">Timing</button>
-  <button class="color_mod" onclick="diagCenter();openInfo2(event, 'Steering')">Steering</button>
-  <button class="color_mod" onclick="diagCenter();openInfo2(event, 'Suspension')">Suspension</button>
-  <button class="color_mod" onclick="diagCenter();openInfo2(event, 'AC')">AC</button>
-  <button class="color_mod" onclick="diagCenter();openInfo2(event, 'Electrical')">Electrical</button>
-  <button class="navEnder color_mod" onclick="diagCenter();openInfo2(event, 'Fuel')">Fuel</button>
-  <button class="navHeader color_mod" onclick="ShowTemps()">Templates</button>
-  <button class="color_mod" onclick="PTXFER()">PT Transfer</button>
-  <button class="color_mod" onclick="STMTTEMP('T2')>CH Statement</button>
-  <button class="color_mod" onclick="REVIEW('T3')">Insp/Pic Review</button>
-  <button class="color_mod" onclick="INSPTEMP('T4')">Inspection Template</button>
-  <button class="color_mod" onclick="showAuth()">Authorization</button>
-  <button class="color_mod" onclick="statNOTE()">Status</button>
-</div>
+
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <button class="navHeader color_mod" onclick="resrcCenter('5','t')">Tools</button>
+    <button class="color_mod" onclick="openScript()">Labor Rate Script</button>
+    <button class="color_mod" onclick="resrcCenter('5','t');openInfo(event, 'trackerTool')">Tracker Tool</button>
+    <button class="color_mod" onclick="resrcCenter('5','t');openInfo(event, 'PAPrice')">Pricing Guide</button>
+    <button class="color_mod" class="color_mod" onclick="resrcCenter('5','t');openInfo(event, 'MileDiscrep')">Mileage Issues</button>
+    <button class="navEnder color_mod" onclick="resrcCenter('5','t');openInfo(event, 'QuickAns')">Quick Answers</button>
+    <button class="navHeader color_mod" onclick="resrcCenter('4','p')">Policy</button>
+    <button class="color_mod" onclick="resrcCenter('4','p');openInfo2(event, 'MBIClaims')">MBI</button>
+    <button class="color_mod" onclick="resrcCenter('4','p');openInfo2(event, 'xfer2790')">2790 Xfer</button>
+    <button class="color_mod" onclick="resrcCenter('4','p');openInfo2(event, 'Tesla')">Tesla</button>
+    <button class="color_mod" onclick="resrcCenter('4','p');openInfo2(event, 'DoNotUse')">Do Not Use</button>
+    <button class="color_mod" onclick="resrcCenter('4','p');openInfo2(event, 'IsItPT')">Is It PT?</button>
+    <button class="color_mod" onclick="resrcCenter('4','p');openInfo2(event, 'partsRes')">Parts Resolution</button>
+    <button class="color_mod" onclick="resrcCenter('4','p');openInfo2(event, 'Diagnostic')">Diagnostic Times</button>
+    <button class="navEnder color_mod" onclick="resrcCenter('4','p');openInfo2(event, 'PANoOrder')">Do Not Order</button>
+    <button class="navHeader color_mod" onclick="diagCenter()">Diagnostic Assistance</button>
+    <button class="color_mod" onclick="diagCenter();openInfo2(event, 'Cooling')">Cooling</button>
+    <button class="color_mod" onclick="diagCenter();openInfo2(event, 'Turbo')">Turbo</button>
+    <button class="color_mod" onclick="diagCenter();openInfo2(event, 'Timing')">Timing</button>
+    <button class="color_mod" onclick="diagCenter();openInfo2(event, 'Steering')">Steering</button>
+    <button class="color_mod" onclick="diagCenter();openInfo2(event, 'Suspension')">Suspension</button>
+    <button class="color_mod" onclick="diagCenter();openInfo2(event, 'AC')">AC</button>
+    <button class="color_mod" onclick="diagCenter();openInfo2(event, 'Electrical')">Electrical</button>
+    <button class="navEnder color_mod" onclick="diagCenter();openInfo2(event, 'Fuel')">Fuel</button>
+    <button class="navHeader color_mod" onclick="ShowTemps()">Templates</button>
+    <button class="color_mod" onclick="PTXFER()">PT Transfer</button>
+    <button class="color_mod" onclick="STMTTEMP('T2')">CH Statement</button>
+    <button class="color_mod" onclick="REVIEW('T3')">Insp/Pic Review</button>
+    <button class="color_mod" onclick="INSPTEMP('T4')">Inspection Template</button>
+    <button class="color_mod" onclick="showAuth()">Authorization</button>
+    <button class="color_mod" onclick="statNOTE()">Status</button>
+  </div>
+
+
 
 
                                                 <!-- Appearance Settings -->
@@ -2219,6 +2190,4 @@ TIME:&nbsp&nbsp</textarea>
 <script src="JavaScript/commonScript.js"></script>
 <script>
   setVer('1');
-</script>
-</body>
-</html>
+ 

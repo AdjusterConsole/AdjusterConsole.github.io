@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
-<link rel="stylesheet" href="CSS/SnipCom.css">
+<link rel="stylesheet" href="CSS/Stable.css">
 <link rel="stylesheet" href="CSS/Common.css">
 <link rel="stylesheet" href="CSS/Neu/Buttons.css">
 <link rel="stylesheet" href="CSS/contextMenu.css">
@@ -118,53 +118,12 @@ body {
   left: 0px;
 }
 
-.otherone {
-  display: inline-block;
-  position: absolute;
-  color: black;
-  text-shadow:
-    -1px 0px 2px white,
-    1px 0px 2px white,
-    -4px 0px 6px white,
-    4px 0px 6px white,
-    -8px 0px 10px white,
-    8px 0px 10px white;
-  font-size: 20px;
-  background: none;
-  box-shadow: none;
-  overflow: visible;
- &:active {
-  background: none;
-  box-shadow: none;
-  transform: translateY(0px);
-  }
-}
-
-.edge_right {
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  height: 90%;
-  background: none;
-  box-shadow: none;
- }
-
-#swap1 {
-  position: relative;
-  display: block;
-  top: 50%;
-  text-shadow: 
-    1px 1px 1px var(--glow-txt-color), 
-   -1px -1px 1px var(--glow-txt-color), 
-   -1px 1px 1px var(--glow-txt-color),  
-    1px -1px 1px var(--glow-txt-color);
-}
-
 </style>
 </head>
 <body>
 
 <div id="pdiv" class="noShow"><p></div>
+<div id="swap1" class="otherone" style="vertical-align: middle;" onclick="openNav()">&#9776;</div>
 
                                                 <!-- Menu -->
 
@@ -2274,9 +2233,6 @@ TIME:&nbsp&nbsp</textarea>
     </div>
     <button id="exitScript" class="script_btn2 D R P" onclick="negotiateScript('r');openScript()">Exit</button>
   </div>
-</div>
-<div class="edge_right">
-  <button id="swap1" class="otherone" onclick="openNav()">Menu<br>&#x2B80;</button>
 </div>
 <script src="JavaScript/Variable.js"></script>
 <script src="JavaScript/OGLAYOUTJS.js"></script>

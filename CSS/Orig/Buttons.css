@@ -1,7 +1,4 @@
-.custom0 {
-  position: ABSOLUTE;
-  display: inline-block;
-}
+/*Buttons, Stat Note, PT xfer, Auth, Menu, P and L */
 
 #picR {
   font-size: 16px;
@@ -33,6 +30,38 @@
   height: 70px;
   left: 145px;
   top: 180px;
+}
+
+#T1 {
+  font-size: 15px;
+  width: 240px;
+  height: 50px;
+  left: 0px;
+  top: 170px;
+}
+
+#T2 {
+  font-size: 15px;
+  width: 240px;
+  height: 50px;
+  left: 0px;
+  top: 230px;
+}
+
+#T3 {
+  font-size: 15px;
+  width: 240px;
+  height: 50px;
+  left: 0px;
+  top: 290px;
+}
+
+#T4 {
+  font-size: 15px;
+  width: 240px;
+  height: 50px;
+  left: 0px;
+  top: 350px;
 }
 
 #theHoldup { 
@@ -282,78 +311,6 @@ input.ptRad {
   bottom: 5px;
   right: 145px;
   border-left: 2px solid var(--my-accent-color);
-}
-
-#T1 {
-  font-size: 15px;
-  width: 240px;
-  height: 50px;
-  left: 0px;
-  top: 170px;
-}
-
-#T2 {
-  font-size: 15px;
-  width: 240px;
-  height: 50px;
-  left: 0px;
-  top: 230px;
-}
-
-#T3 {
-  font-size: 15px;
-  width: 240px;
-  height: 50px;
-  left: 0px;
-  top: 290px;
-}
-
-#T4 {
-  font-size: 15px;
-  width: 240px;
-  height: 50px;
-  left: 0px;
-  top: 350px;
-}
-
-#custBtn0 {
-  display: none;
-}
-
-#custBtn1 {
-  display: none;
-}
-
-#custBtn2 {
-  display: none;
-}
-
-#custBtn3 {
-  display: none;
-}
-
-#custBtn4 {
-  display: none;
-}
-
-#custBtn5 {
-  display: none;
-}
-
-#custBtn6 {
-  display: none;
-}
-
-#custBtn7 {
-  display: none;
-}
-
-#custBtn8 {
-  display: none;
-}
-
-#custBtn9 {
-  display: none;
 }
 
 .Submitbtn {

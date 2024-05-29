@@ -979,6 +979,8 @@ const downloadFile = () => {
 };
 
 function toggleConductor(boxId) {
+  var showNode = document.querySelectorAll('[class$="dispStat"]');
+  var showList = Array.from(showNode);
   var checkBox = document.getElementById(boxId);
   if (boxId == "s9") {
     for (i = 0; i < showList.length; i++) {
@@ -1124,10 +1126,12 @@ function trackerBlank() {
 
 function openNav() {
   const list = document.getElementById("mySidenav").classList;
-  list.replace("closed_nav", "open_nav");
+  list.toggle("open_nav");
+  document.getElementById("mySidenav").offsetWidth; // Force repaint
 }
 
 function closeNav() {
   const list = document.getElementById("mySidenav").classList;
-  list.replace("open_nav", "closed_nav");
+  list.toggle("open_nav");
+  document.getElementById("mySidenav").offsetWidth; // Force repaint
 }

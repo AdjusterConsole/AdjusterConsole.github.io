@@ -1025,20 +1025,9 @@ function openScript() {
   if (laborscriptDiv.style.display == "none" && !isOpen) {
     laborscriptDiv.style.display = "block";
     const list = document.getElementById("mySidenav").classList;
-    list.replace("open_nav", "closed_nav");
+    list.remove("open_nav");
   } else {
     laborscriptDiv.style.display = "none";
-  }
-}
-
-function enabler(btnId) {
-  var current = document.getElementById("current");
-  if (document.getElementById("moreless").checked) {
-    current.removeAttribute("disabled");
-    current.setAttribute("required", true);
-  } else {
-    current.removeAttribute("required");
-    current.setAttribute("disabled", true);
   }
 }
 
@@ -1136,11 +1125,6 @@ function negotiateScript(x) {
 
   var whatDo = laborReview(asking, current, aveRate);
   var tryHarder = localStorage.getItem("weTried");
-
-//code1 gimme
-//code2 accepted neg
-//code3 declined no issue
-//code4 felt appropriate to request docs
 
   if (x == 'y') {
     var agreed; 
@@ -1265,7 +1249,6 @@ function buildLaborNote(result) {
     textarea.value += "\r\rThe Repair Facility is willing to negotiate.\rThey made an offer under the current posted labor rate which we accepted";
     textarea.value += "\rUpdated Repair Facility labor rate at: $" + custom;
   }
-  console.log("got here");
   textarea.select();
   document.execCommand("copy");
 }
