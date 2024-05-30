@@ -1,0 +1,710 @@
+/*Restricted Use License
+
+This code is provided under the following terms and conditions:
+
+1. You are not allowed to use, copy, modify, merge, publish, distribute, sublicense, or sell copies of this code in any form, modified or unmodified, without express written permission from the author.
+
+2. You are not allowed to use this code for any illegal or unethical purpose.
+
+3. This license applies to all versions of the code previously released, as well as all future versions. Any prior statements made about permission given are hereby revoked.
+
+4. This code is provided "as is", without warranty of any kind, express or implied. The author shall not be liable for any damages arising from the use of this code.
+
+By using this code, you agree to abide by these terms and conditions. Failure to comply with these terms may result in legal action.
+
+For inquiries regarding licensing or permission to use this code in ways not covered by this license, please contact the author at AdjusterConsole.com.  */
+/*Buttons, Stat Note, PT xfer, Auth, Menu, P and L */
+
+#picR {
+  font-size: 16px;
+  width: 130px;
+  height: 70px;
+  left: 0px;
+  top: 0px;
+}
+
+#recR {
+  font-size: 16px;
+  width: 130px;
+  height: 70px;
+  left: 0px;
+  top: 90px;
+}
+
+#noansR {
+  font-size: 15px;
+  width: 130px;
+  height: 70px;
+  left: 0px;
+  top: 180px;
+}
+
+#T0{
+  font-size: 15px;
+  width: 130px;
+  height: 70px;
+  left: 145px;
+  top: 180px;
+}
+
+#T1 {
+  font-size: 15px;
+  width: 240px;
+  height: 50px;
+  left: 0px;
+  top: 170px;
+}
+
+#T2 {
+  font-size: 15px;
+  width: 240px;
+  height: 50px;
+  left: 0px;
+  top: 230px;
+}
+
+#T3 {
+  font-size: 15px;
+  width: 240px;
+  height: 50px;
+  left: 0px;
+  top: 290px;
+}
+
+#T4 {
+  font-size: 15px;
+  width: 240px;
+  height: 50px;
+  left: 0px;
+  top: 350px;
+}
+
+#theHoldup { 
+  left: 235px;
+  bottom: 55px;
+  border-left: 2px solid var(--my-accent-color);
+}
+
+.backing {
+  position: absolute;
+  display: inline-block;
+  background: var(--fancy-background);
+  box-shadow:
+   inset 0px 0px 10px 4px var(--my-shadow-color2),
+   0px 12px 70px 14px black;
+  overflow: hidden;
+}
+
+.paddington {
+  padding: 15px;
+}
+
+.newStyle {
+  background: linear-gradient(315deg, var(--fancy-meddark), var(--fancy-medlight));
+  box-shadow: -5px -5px 16px var(--fancy-dark), 5px 5px 16px var(--fancy-light);
+  overflow: hidden;
+  transition: .4s;
+}
+
+#statNoteinner {
+  font-size: 16px;
+  width: 40%;
+  height: 80%;
+  padding: 15px;
+  margin: 15px;
+  transition: .4s;
+  transition-delay: .1s;
+}
+
+.newStyle.lftmid {
+  bottom: 300px;
+  right: 70px;
+  position: absolute;
+  display: inline-block;
+  padding: 15px;
+}
+
+.newStatus {
+  margin-bottom: 5px;
+  outline: none;
+  border: none;
+  font-size: 16px;
+}
+
+#optionalNote {
+  width: 65%;
+  height: 30%;
+  padding: 15px;
+  outline: none;
+}
+
+#littleHelp {
+  position: absolute;
+  display: inline-block;
+  font-size: 13px;
+  width: 40%;
+  height: 20%;
+  bottom: 75px;
+  right: 60px;
+}
+
+.newStyle.rgtupr {
+  top: 30px;
+  right: 45px;
+  position: absolute;
+  display: inline-block;
+  padding: 10px;
+  height: 30%;
+  width: 40%;
+}
+
+#statNote {
+  position: absolute;
+  display: none;
+  padding: 15px;
+  z-index: 5;
+  font-size: 14px;
+  text-shadow: 0px 0px 1px;
+  top: 15px;
+  left: 15px;
+  width: 92%;
+  height: 90%;
+}
+
+#statusNote {
+  font-size: 22px;
+  top: 180px;
+  left: 380px;
+  width: 150px;
+  height: 60px;
+}
+
+#submitStat {
+  height: 60px;
+  width: 140px;
+  bottom: 5px;
+  right: 5px;
+  border-left: 2px solid var(--my-accent-color);
+}
+
+#cancelStat {
+  height: 60px;
+  width: 140px;
+  bottom: 5px;
+  right: 145px;
+  border-left: 2px solid var(--my-accent-color);
+}
+
+#transferTemplate {
+  text-align: center;
+  position: absolute;
+  display: inline-block;
+  padding: 30px;
+  z-index: 5;
+  font-size: 16px;
+  top: 200px;
+  left: 150px;
+  width: 600px;
+  height: 400px;
+}
+
+.PT {
+  display: inline-block;
+  box-shadow: none;
+  background: none;
+}
+
+.ptRad {
+  margin: 10px; 
+}
+
+.ta {
+  margin-top: 30px;
+  margin-left: 150px; 
+}
+
+.taAuth {
+  border-radius: none;
+  box-shadow: none;
+}
+
+#q3ansExplain {
+  position: absolute;
+  display: inline-block;
+  top: 170px;
+  left: 170px;
+  box-shadow: none;
+  padding: 10px;
+  resize: none;
+}
+
+#done3.ptLittle {
+  position: absolute;
+  display: inline-block;
+  top: 190px;
+  right: 70px;
+}
+
+#q11ansExplain {
+  margin: auto;
+  position: relative;
+  padding: 10px;
+  resize: none;
+  border: none;
+  outline: none;
+}
+
+#anotherGuess.noShow {
+  position: relative;
+  margin: auto;
+  padding: 20px;
+}
+
+.ptLittle {
+  position: relative;
+  display: block;
+  text-shadow: none;
+  box-shadow: none;
+  width: 100px;
+  height: auto;
+  border: 2px solid var(--my-accent-color);
+  margin-left: 50px;
+  margin-top: 15px;
+  background: none;
+  border-radius: 5px;
+}
+
+.qs {
+  width: 69%;
+  position: absolute;
+  line-height: 1.5;
+}
+
+.as {
+  min-width: 20%;
+  float: right;
+  white-space: nowrap;
+  text-align: right;
+}
+
+input.ptRad {
+  width: auto;
+}
+
+.ptQuest {
+  text-align: left;
+  padding: 15px;
+  margin: auto;
+  width: 90%;
+}
+
+#submitTemp {
+  position: absolute;
+  display: inline-block;
+  height: 60px;
+  width: 140px;
+  bottom: 5px;
+  right: 5px;
+  border-left: 2px solid var(--my-accent-color);
+}
+
+#backTemp {
+  position: absolute;
+  display: inline-block;
+  height: 60px;
+  width: 140px;
+  bottom: 5px;
+  right: 5px;
+  border-left: 2px solid var(--my-accent-color);
+}
+
+#cancelPT {
+  position: absolute;
+  display: inline-block;
+  height: 60px;
+  width: 140px;
+  bottom: 5px;
+  right: 145px;
+  border-left: 2px solid var(--my-accent-color);
+}
+
+.Submitbtn {
+  display: inline-block;
+  height: 60px;
+  width: 140px;
+  margin-top:30px;
+  margin-left:30px;
+}
+
+.Cancelbtn {
+  display: inline-block;
+  height: 40px;
+  width: 80px;
+  margin-left: 180px;
+  margin-top:30px;
+}
+
+#newAuthstyle {
+  position: absolute;
+  display: inline-block;
+  padding: 15px;
+  top: 150px;
+  left: 40px;
+  height: 460px;
+  width: 830px;
+  z-index: 6;
+}
+
+#authParts {
+  width: 100%;
+  padding: 15px;
+}
+
+#authRequests {
+  width: 100%;
+  padding: 15px;
+}
+
+#authOopcs {
+  width: 100%;
+  padding: 15px;
+}
+
+#newAuthstarter {
+  position: absolute;
+  display: inline-block;
+  font-size: 22px;
+  height: 80px;
+  width: 150px;
+  top: 65px;
+  left: 380px;
+}
+
+.innersomething {
+  width: 50%;
+  left: 15px;
+  top: 210px;
+  position: absolute;
+  font-size: 18px;
+  margin-top: 15px;
+  padding: 15px;
+}
+
+input.Mradio {
+  width: 14px;
+  height: 14px;
+}
+
+input.largerCheckbox {
+  width: 15px;
+  height: 15px;
+}
+
+input.largerRadio {
+  width: 15px;
+  height: 15px;
+  border-radius: 9px
+}
+
+.TheGang {
+  left: 15px;
+  top: 140px;
+  display: inline-block;
+  position: absolute;
+  color: #324350;
+  overflow: visible;
+}
+
+#LOCK1 {
+  font-weight: 700;
+  font-size: 12px;
+  width: 180px;
+  height: 20px;
+  left: 0px;
+  top: 20px;
+  transition: all 0.4s ease;
+  z-index: 5;
+  color: black;
+  text-shadow: 
+    1px 1px 1px var(--glow-outline-color), 
+   -1px -1px 1px var(--glow-outline-color), 
+   -1px 1px 1px var(--glow-outline-color),  
+    1px -1px 1px var(--glow-outline-color), 
+    0px 0px 8px var(--my-glow-color), 
+    0px 0px 11px var(--my-glow-color), 
+    0px 0px 14px var(--my-glow-color), 
+    0px 0px 17px var(--my-glow-color), 
+    0px 0px 20px var(--my-glow-color), 
+    0px 0px 23px var(--my-glow-color), 
+    0px 0px 26px var(--my-glow-color);
+  overflow: visible;
+}
+
+.astext.menu {
+  font-weight: 700;
+  font-size: 12px;
+  left: 0px;
+  top: 20px;
+  width: 180px;
+  height: 20px;
+  color: black;
+  transition: all .1s ease;
+  text-shadow: 
+    1px 1px 1px var(--glow-outline-color), 
+   -1px -1px 1px var(--glow-outline-color), 
+   -1px 1px 1px var(--glow-outline-color),  
+    1px -1px 1px var(--glow-outline-color), 
+    0px 0px 8px var(--my-glow-color), 
+    0px 0px 11px var(--my-glow-color), 
+    0px 0px 14px var(--my-glow-color), 
+    0px 0px 17px var(--my-glow-color), 
+    0px 0px 20px var(--my-glow-color), 
+    0px 0px 23px var(--my-glow-color), 
+    0px 0px 26px var(--my-glow-color);
+  overflow: visible;
+  opacity: 0;
+}
+
+#appearance {
+  transition: all .1s ease;
+}
+
+#BtnBuilder {
+  transition: all .2s ease;
+}
+
+#buttonMaker {
+  transition: all .3s ease;
+}
+
+#tutorialSel {
+  transition: all .4s ease;
+}
+
+.intakeboxes {
+  font-size: 14px;
+  overflow: hidden;
+  padding: 1px;
+  padding-left: 10px;
+  width: 115px;
+  height: 30px;
+  line-height: 30px;
+  resize: none;
+}
+
+#partname7 {
+  top: -260px;
+  left: -10px;
+  width: 195px;
+  display: none;
+}
+
+#partname6 {
+  top: -220px;
+  left: -10px;
+  width: 195px;
+  display: none;
+}
+
+#partname5 {
+  top: -180px;
+  left: -10px;
+  width: 195px;
+  display: none;
+}
+
+#partname4 {
+  top: -140px;
+  left: -10px;
+  width: 195px;
+  display: none;
+}
+
+#partname3 {
+  top: -100px;
+  left: -10px;
+  width: 195px;
+  display: none;
+}
+
+#partname2 {
+  top: -60px;
+  left: -10px;
+  width: 195px;
+  display: none;
+}
+
+#partname1 {
+  top: -10px;
+  left: -10px;
+  width: 200px;
+}
+
+#partnum {
+  top: -10px;
+  left: 205px;
+}
+
+#rfprice {
+  top: 30px;
+  left: -10px;
+}
+
+#msrp {
+  top: 70px;
+  left: -10px;
+}
+
+.senditnow {
+  font-size: 17px;
+  width: 65px;
+  height: 70px;
+}
+
+#SENDPART {
+  top: 40px;
+  left: 140px;
+}
+
+#SENDLABOR {
+  top: 40px;
+  left: 220px;
+}
+
+#SENDDIAG {
+  top: 40px;
+  left: 300px;
+}
+
+#DJKahlid {
+  top: -170px;
+  left: 250px;
+  width: 90px;
+  height: auto;
+  white-space: nowrap;
+}
+
+#MTVsNEXT {
+  top: -50px;
+  left: 250px;
+  width: 90px;
+  height: auto;
+}
+
+#clearIntake {
+  top: -100px;
+  left: 250px;
+  width: 90px;
+  height: auto;
+}
+
+#R2 {
+  font-size: 17px;
+  width: 120px;
+  height: 50px;
+  left: 35px;
+  top: -40px;
+}
+
+#R15 {
+  font-size: 17px;
+  top: 265px;
+  left: 35px;
+  WIDTH: 120px;
+  height: 50px;
+}
+
+#R8 {
+  font-size: 18px;
+  top: 20px;
+  left: 10px;
+  width: 80px;
+  height: 50px;
+}
+
+#R9 {
+  font-size: 18px;
+  top: 80px;
+  left: 10px;
+  width: 80px;
+  height: 50px;
+}
+
+#R10 {
+  font-size: 14px;
+  top: 20px;
+  left: 100px;
+  width: 80px;
+  height: 50px;
+}
+
+#R11 {
+  font-size: 19px;
+  top: 80px;
+  left: 100px;
+  width: 80px;
+  height: 50px;
+}
+
+#R12 {
+  font-size: 17px;
+  top: 145px;
+  left: 100px;
+  width: 80px;
+  height: 50px;
+}
+
+#R13 {
+  font-size: 17px;
+  top: 205px;
+  left: 100px;
+  width: 80px;
+  height: 50px;
+}
+
+#fluid {
+  font-size: 24px;
+  top: 90px;
+  left: 190px;
+  text-shadow: 
+    1px 1px 1px var(--glow-outline-color), 
+   -1px -1px 1px var(--glow-outline-color), 
+   -1px 1px 1px var(--glow-outline-color),  
+    1px -1px 1px var(--glow-outline-color); 
+}
+
+#R16 {
+  font-size: 17px;
+  top: 145px;
+  left: 10px;
+  width: 80px;
+  height: 50px;
+}
+
+#R17 {
+  font-size: 17px;
+  top: 205px;
+  left: 10px;
+  width: 80px;
+  height: 50px;
+}
+
+#toggleMaster {
+  top: 550px;
+  left: 0px;
+  height: 400px;
+  width: 430px;
+  position: absolute;
+  display: inline-block;
+  background: white;
+  border-radius: 5px;
+  z-index: 5;
+  box-shadow:
+  inset -1px -1px 2px #595959,    
+  inset -3px -3px 2px #ffffff,   
+  inset 1px 1px 2px #ffffff,
+  inset 3px 3px 2px #333333,
+  3px 3px 7px black;
+  text-shadow: 0px 0px 1px;
+  overflow: auto;
+}
