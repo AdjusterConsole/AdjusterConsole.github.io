@@ -10,7 +10,7 @@
 //
 //4. This code is provided "as is", without warranty of any kind, express or implied. The author shall not be liable for any damages arising from the use of this code.
 //
-//By viewing this code, you agree to abide by these terms and conditions. Failure to comply with these terms may result in legal action.
+//By using this code, you agree to abide by these terms and conditions. Failure to comply with these terms may result in legal action.
 //
 //For inquiries regarding licensing or permission to use this code in ways not covered by this license, please contact the author at AdjusterConsole.com.
 
@@ -1012,8 +1012,7 @@ function openScript() {
   var isOpen = checkOpen();
   if (laborscriptDiv.style.display == "none" && !isOpen) {
     laborscriptDiv.style.display = "block";
-    const list = document.getElementById("mySidenav").classList;
-    list.remove("open_nav");
+    document.getElementById("mySidenav").classList.remove("open_nav");
   } else {
     laborscriptDiv.style.display = "none";
   }
@@ -1210,3 +1209,100 @@ function buildLaborNote(result) {
   textarea.select();
   document.execCommand("copy");
 }
+function closePDFmenu() {
+  document.getElementById("navtag").style.display = "initial";
+  document.getElementById("sopnav").classList.remove("open_sop");
+  document.getElementById("sopnav2").classList.remove("open_sop");
+  document.getElementById("sopnav3").classList.remove("open_sop");
+}
+
+function openSOPnav() {
+  document.getElementById("navtag").style.display = "none";
+  document.getElementById("sopnav").classList.add("open_sop");
+  document.getElementById("sopnav2").classList.add("open_sop");
+  document.getElementById("sopnav3").classList.add("open_sop");
+}
+
+function showSOP(id) {
+  closePDFmenu();
+  const sources = [
+    "./SOP/ClaimsBasic/Start_a_Claim.pdf",
+    "./SOP/ClaimsBasic/Search_For_Claims.pdf",
+    "./SOP/ClaimsBasic/Contract_Holder_Verification.pdf",
+    "./SOP/ClaimsBasic/Parts_Verification.pdf",
+    "./SOP/ClaimsBasic/Labor_Verification.pdf",
+    "./SOP/ClaimsBasic/Assign_A_Task.pdf",
+    "./SOP/ClaimsBasic/Set_An_Inspection.pdf",
+    "./SOP/ClaimsBasic/Request_Records.pdf",
+    "./SOP/ClaimsBasic/Upload_Documents.pdf",
+    "./SOP/ClaimsBasic/Add_Or_Update_Repair_Facilites.pdf",
+    "./SOP/ClaimsBasic/Finalizing_Claims.pdf",
+    "./SOP/ClaimsBasic/Claim_Notes.pdf",
+    "./SOP/ClaimsIssues/Handling_Escalations.pdf",
+    "./SOP/ClaimsIssues/Parts_Resolution.pdf",
+    "./SOP/ClaimsIssues/Part_Returns_and_Freight.pdf",
+    "./SOP/ClaimsIssues/Close_Or_Set_Inactive.pdf",
+    "./SOP/ClaimsIssues/Warranties_Recalls_TSBs.pdf",
+    "./SOP/ClaimsIssues/Recognizing_Altered_Records.pdf",
+    "./SOP/ClaimsIssues/Escalating_Misrepresentation_to_Legal.pdf",
+    "./SOP/ClaimsIssues/RF_Management_Case.pdf",
+    "./SOP/ClaimsIssues/TL_Request_Support_Regarding_Network_RF.pdf",
+    "./SOP/ClaimsIssues/TL_Help_Request_Vendor_Network.pdf",
+    "./SOP/Reviewing/Reviewing_Branded_Title.pdf",
+    "./SOP/Reviewing/Reviewing_Commerical_Usage.pdf",
+    "./SOP/Reviewing/Reviewing_Mileage_Discrepancies.pdf",
+    "./SOP/Reviewing/Reviewing_Modifications.pdf",
+    "./SOP/Reviewing/Reviewing_Oversized_Tires.pdf",
+    "./SOP/Reviewing/Reviewing_Suspension_Modification.pdf",
+    "./SOP/HowTo/Handle_MBI_Claims.pdf",
+    "./SOP/HowTo/Handle_Preferred_Customers.pdf",
+    "./SOP/HowTo/Key_And_Authorize_Tow.pdf",
+    "./SOP/HowTo/Key_Rental_Reimbursement.pdf",
+    "./SOP/HowTo/Key_Roadside_Reimbursement.pdf",
+    "./SOP/HowTo/Request_Tracking.pdf",
+    "./SOP/HowTo/Make_A_3Way_Call.pdf",
+    "./SOP/HowTo/Reach_Out_To_DataManagement.pdf",
+    "./SOP/Info/Terms_And_Abbreviations.pdf",
+    "./SOP/Info/Enhanced_Deductible.pdf",
+    "./SOP/Info/Fluid_Pricing_Sheet.pdf",
+    "./SOP/Info/PT_Or_General_Claim.pdf",
+    "./SOP/Info/Repair_Facility_Types.pdf",
+    "./SOP/Info/PRF_Location.pdf",
+    "./SOP/Info/CMS_Emails.pdf",
+    "./SOP/Info/Text_Notifications.pdf",
+    "./SOP/Info/PT_First_Contact.pdf",
+    "./SOP/Info/State_Tax.pdf"
+        ];
+  console.log(sources);
+  const index = parseInt(id.substring(3)) - 1;
+  const src = sources[index];
+  const iframe = document.createElement('iframe');
+  iframe.src = src;
+  const PDFdepot = document.getElementById('PDFdepot');
+  const existingIframe = PDFdepot.querySelector('iframe');
+  if (existingIframe) {
+    PDFdepot.removeChild(existingIframe);
+  }
+  PDFdepot.appendChild(iframe);
+  PDFdepot.style.display = 'block';
+}
+
+function closeSOP() {
+  const PDFdepot = document.getElementById('PDFdepot');
+  const iframe = PDFdepot.querySelector('iframe');
+  if (iframe) {
+    PDFdepot.removeChild(iframe);
+  }
+  PDFdepot.style.display = 'none';
+}
+
+
+
+
+
+
+
+
+
+
+

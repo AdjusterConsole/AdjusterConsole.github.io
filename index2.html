@@ -26,7 +26,7 @@ This code is provided under the following terms and conditions:
 
 4. This code is provided "as is", without warranty of any kind, express or implied. The author shall not be liable for any damages arising from the use of this code.
 
-By viewing this code, you agree to abide by these terms and conditions. Failure to comply with these terms may result in legal action.
+By using this code, you agree to abide by these terms and conditions. Failure to comply with these terms may result in legal action.
 
 For inquiries regarding licensing or permission to use this code in ways not covered by this license, please contact the author at AdjusterConsole.com.  */
 
@@ -151,6 +151,80 @@ body {
   <button id="tutorialSel" class="astext menu" onclick="swapPage('1')" >&#x2666; Original &#x2666;</button>
 </div>
 
+
+                                                <!-- File Things -->
+
+<div id="navtag" class="nav_tag neu_style" onclick="openSOPnav();">Browse Full SOPs</div>
+
+<div id="sopnav" class="sop_nav">
+  <a href="javascript:void(0)" class="close_pdf" onclick="closePDFmenu()">&times;</a>
+  <button class="sop_btn neu navHeader">Claim Basics</button>
+  <button class="sop_btn neu" id="pdf0001" onclick="showSOP(this.id)">Start a Claim</button>
+  <button class="sop_btn neu" id="pdf0002" onclick="showSOP(this.id)">Search For Claims</button>
+  <button class="sop_btn neu" id="pdf0003" onclick="showSOP(this.id)">CH Verification</button>
+  <button class="sop_btn neu" id="pdf0004" onclick="showSOP(this.id)">Parts Verification</button>
+  <button class="sop_btn neu" id="pdf0005" onclick="showSOP(this.id)">Labor Verification</button>
+  <button class="sop_btn neu" id="pdf0006" onclick="showSOP(this.id)">Assign A Task</button>
+  <button class="sop_btn neu" id="pdf0007" onclick="showSOP(this.id)">Set An Inspection</button>
+  <button class="sop_btn neu" id="pdf0008" onclick="showSOP(this.id)">Request Records</button>
+  <button class="sop_btn neu" id="pdf0009" onclick="showSOP(this.id)">Upload Documents</button>
+  <button class="sop_btn neu" id="pdf0010" onclick="showSOP(this.id)">Add Or Update RF</button>
+  <button class="sop_btn neu" id="pdf0011" onclick="showSOP(this.id)">Finalizing Claims</button>
+  <button class="sop_btn neu navEnder" id="pdf0012" onclick="showSOP(this.id)">Claim Documentation</button>
+
+</div>
+
+<div id="sopnav2" class="sop_nav">
+  <a href="javascript:void(0)" class="close_pdf" onclick="closePDFmenu()">&times;</a>
+  <button class="sop_btn neu navHeader">Claim Issues</button>
+  <button class="sop_btn neu" id="pdf0013" onclick="showSOP(this.id)">Handling Escalations</button>
+  <button class="sop_btn neu" id="pdf0014" onclick="showSOP(this.id)">Parts Resolution</button>
+  <button class="sop_btn neu" id="pdf0015" onclick="showSOP(this.id)">Part Returns and Freight</button>
+  <button class="sop_btn neu" id="pdf0016" onclick="showSOP(this.id)">Close Or Set Inactive</button>
+  <button class="sop_btn neu" id="pdf0017" onclick="showSOP(this.id)">Warranties Recalls TSBs</button>
+  <button class="sop_btn neu" id="pdf0018" onclick="showSOP(this.id)">Recognizing Altered Records</button>
+  <button class="sop_btn neu" id="pdf0019" onclick="showSOP(this.id)">Escalating Misrepresentation</button>
+  <button class="sop_btn neu" id="pdf0020" onclick="showSOP(this.id)">RF Management Case</button>
+  <button class="sop_btn neu" id="pdf0021" onclick="showSOP(this.id)">TL Help Request RF</button>
+  <button class="sop_btn neu navEnder" id="pdf0022" onclick="showSOP(this.id)">TL Help Request VN</button>
+  <button class="sop_btn neu navHeader">Reviewing:</button>
+  <button class="sop_btn neu" id="pdf0023" onclick="showSOP(this.id)">Branded Title</button>
+  <button class="sop_btn neu" id="pdf0024" onclick="showSOP(this.id)">Commerical Usage</button>
+  <button class="sop_btn neu" id="pdf0025" onclick="showSOP(this.id)">Mileage Discrepancies</button>
+  <button class="sop_btn neu" id="pdf0026" onclick="showSOP(this.id)">Modifications</button>
+  <button class="sop_btn neu" id="pdf0027" onclick="showSOP(this.id)">Oversized Tires</button>
+  <button class="sop_btn neu navEnder" id="pdf0028" onclick="showSOP(this.id)">Suspension Modification</button>
+
+
+</div>
+<div id="sopnav3" class="sop_nav">
+  <a href="javascript:void(0)" class="close_pdf" onclick="closePDFmenu()">&times;</a>
+  <button class="sop_btn neu navHeader">How To:</button>
+  <button class="sop_btn neu" id="pdf0029" onclick="showSOP(this.id)">MBI Claims</button>
+  <button class="sop_btn neu" id="pdf0030" onclick="showSOP(this.id)">Preferred Customers</button>
+  <button class="sop_btn neu" id="pdf0031" onclick="showSOP(this.id)">Key And Auth Tow</button>
+  <button class="sop_btn neu" id="pdf0032" onclick="showSOP(this.id)">Key Rental Reimb</button>
+  <button class="sop_btn neu" id="pdf0033" onclick="showSOP(this.id)">Key Roadside Reimb</button>
+  <button class="sop_btn neu" id="pdf0034" onclick="showSOP(this.id)">Request Tracking</button>
+  <button class="sop_btn neu" id="pdf0035" onclick="showSOP(this.id)">Make A 3 Way Call</button>
+  <button class="sop_btn neu navEnder" id="pdf0036" onclick="showSOP(this.id)">RO To Data Management</button>
+  <button class="sop_btn neu navHeader">Info</button>
+  <button class="sop_btn neu" id="pdf0037" onclick="showSOP(this.id)">Terms And Abbreviations</button>
+  <button class="sop_btn neu" id="pdf0038" onclick="showSOP(this.id)">Enhanced Deductible</button>
+  <button class="sop_btn neu" id="pdf0039" onclick="showSOP(this.id)">Fluid Pricing Sheet</button>
+  <button class="sop_btn neu" id="pdf0040" onclick="showSOP(this.id)">PT Or General Claim</button>
+  <button class="sop_btn neu" id="pdf0041" onclick="showSOP(this.id)">Repair Facility Types</button>
+  <button class="sop_btn neu" id="pdf0042" onclick="showSOP(this.id)">PRF Location</button>
+  <button class="sop_btn neu" id="pdf0043" onclick="showSOP(this.id)">CMS Emails</button>
+  <button class="sop_btn neu" id="pdf0044" onclick="showSOP(this.id)">Text Notifications</button>
+  <button class="sop_btn neu" id="pdf0045" onclick="showSOP(this.id)">PT First Contact</button>
+  <button class="sop_btn neu" id="pdf0046" onclick="showSOP(this.id)">State Tax</button>
+</div>
+<div id="PDFdepot" class="PDF_depot">
+  <button class="close_button" onclick="closeSOP()">Close</button>
+</div>
+
+                                                <!-- Side Nav -->
 
 <div id="mySidenav" class="sidenav closed_nav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -809,9 +883,9 @@ body {
   </div>
 </div>
 
-                                        <!-- Textareas and Hidden-->
+                                        <!-- Textareas and Hidden  -->
 
-<div id="areaOne">
+<div id="areaOne" class="noShow">
 <textarea autocomplete="off" title="Contact Info" id="textarea1" class="textareamain" name="name" wrap="off">CONTACT:&nbsp&nbsp
 PAYMENT:&nbsp&nbsp
 ZIPCODE:&nbsp&nbsp
