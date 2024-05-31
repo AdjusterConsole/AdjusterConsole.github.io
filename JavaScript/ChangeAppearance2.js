@@ -38,7 +38,8 @@ function colorObject() {
 function getPicker() {
   const colorSet = JSON.parse(localStorage.getItem("colorSet2"));
 
-  colorSet.background = document.getElementById("background-picker").value;
+  var background = document.getElementById("background-picker").value;
+  colorSet.background = background.toString;
   colorSet.accent = document.getElementById("accent-picker").value;
   colorSet.shadow1 = document.getElementById("shad1-picker").value;
   colorSet.shadow2 = document.getElementById("shad2-picker").value;
