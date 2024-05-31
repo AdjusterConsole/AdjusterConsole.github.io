@@ -967,8 +967,8 @@ function infoDone2() {
   var buttonCount = parseInt(but);
   var currID = "cust" + but;
   var newButton = document.getElementById(currID);
-  var BtnDisplay = document.getElementById("BtnDisplay").value;
-  var BtnContent = document.getElementById("BtnContent").value;
+  var BtnDisplay = sanitizeInput(document.getElementById("BtnDisplay").value);
+  var BtnContent = sanitizeInput(document.getElementById("BtnContent").value);
   if (BtnDisplay == null || BtnContent == null) {
   alert("You must pick a button display and content value");
   return;
