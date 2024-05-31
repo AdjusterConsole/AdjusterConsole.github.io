@@ -1082,7 +1082,7 @@ function negotiateScript(x) {
     return;
   }
   var askingElem = document.getElementById("asking");
-  var asking = document.getElementById("asking").value;
+  var asking = sanitizeInput(document.getElementById("asking").value);
   var aveRateElem = document.getElementById("aveRate");
   var aveRate = document.getElementById("aveRate").value;
   var currentElem = document.getElementById("current");
