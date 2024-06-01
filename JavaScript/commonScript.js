@@ -53,8 +53,7 @@ function diagCenter() {
     var width1 = (widthpre / 4);
     var width = width1.toString() + "px";
     document.documentElement.style.setProperty('--div-width2', width);
-    const list = document.getElementById("mySidenav").classList;
-    list.replace("open_nav", "closed_nav");
+    document.getElementById("mySidenav").classList.remove("open_nav");
   } else {
     diagDiv.style.display = "none";
   }
@@ -119,8 +118,7 @@ function resrcCenter(x,y) {
     var width1 = (widthpre / w);
     var width = width1.toString() + "px";
     document.documentElement.style.setProperty('--div-width', width);
-    const list = document.getElementById("mySidenav").classList;
-    list.replace("open_nav", "closed_nav");
+    document.getElementById("mySidenav").classList.remove("open_nav");
     return;
   }
   resrcDiv.style.display = "none";
