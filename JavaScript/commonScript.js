@@ -582,18 +582,38 @@ function inceptEst(spot) {
   var milesperday = milesBtwnRecs / daysBtwnRecs;
   var daysBtwnMaintSale = dayCalc(recDate, incDate);
   var estimatedInception = (milesperday * daysBtwnMaintSale) + recMileage;
+  var milesIn = serMileage - estimatedInception;
+  var daysIn = dayCalc(incDate, serDate);
 
   if (spot == 'both') {
     document.getElementById('msgDiv').style.opacity = 1;
-    document.getElementById('msgDiv').innerHTML += "<b>The estimated inception mileage is " + estimatedInception + "</b><br>";
+    document.getElementById('msgDiv').innerHTML += "<b>The inception mileage is " + estimatedInception + "</b><br>";
+    document.getElementById('msgDiv').innerHTML += "Elapsed Days Claim/Maint: " + daysBtwnRecs + "<br>";
+    document.getElementById('msgDiv').innerHTML += "Elapsed Miles Claim/Maint: " + milesBtwnRecs + "<br>";
+    document.getElementById('msgDiv').innerHTML += "Miles Per Day (Average): " + milesperday.toFixed() + "<br>";
+    document.getElementById('msgDiv').innerHTML += "Elapsed Days Maint/Sale: " + daysBtwnMaintSale + "<br>";
+    document.getElementById('msgDiv').innerHTML += "Miles Elapased in Contract: " + milesIn + "<br>";
+    document.getElementById('msgDiv').innerHTML += "Days Elapsed In Contract: " + daysIn;
   } else if (spot == 'all') {
     document.getElementById('splitL').style.display = "inline-block";
     document.getElementById('splitR').style.display = "inline-block";
-    document.getElementById('msgDiv').innerHTML += "<b>The estimated inception mileage is " + estimatedInception + "</b><br>";
+    document.getElementById('splitR').innerHTML += "<b>The inception mileage is " + estimatedInception + "</b><br>";
+    document.getElementById('splitR').innerHTML += "Elapsed Days Claim/Maint: " + daysBtwnRecs + "<br>";
+    document.getElementById('splitR').innerHTML += "Elapsed Miles Claim/Maint: " + milesBtwnRecs + "<br>";
+    document.getElementById('splitR').innerHTML += "Miles Per Day (Average): " + milesperday.toFixed() + "<br>";
+    document.getElementById('splitR').innerHTML += "Elapsed Days Maint/Sale: " + daysBtwnMaintSale + "<br>";
+    document.getElementById('splitR').innerHTML += "Miles Elapased in Contract: " + milesIn + "<br>";
+    document.getElementById('splitR').innerHTML += "Days Elapsed In Contract: " + daysIn;
   } else {
     outputDiv2.classList.toggle("arise");
     outputDiv2.style.height = "700px";
-    document.getElementById('outputDiv3').innerHTML += "<b>The estimated inception mileage is " + estimatedInception + "</b><br>";
+    document.getElementById('outputDiv3').innerHTML += "<b>The inception mileage is " + estimatedInception + "</b><br>";
+    document.getElementById('outputDiv3').innerHTML += "Elapsed Days Claim/Maint: " + daysBtwnRecs + "<br>";
+    document.getElementById('outputDiv3').innerHTML += "Elapsed Miles Claim/Maint: " + milesBtwnRecs + "<br>";
+    document.getElementById('outputDiv3').innerHTML += "Miles Per Day (Average): " + milesperday.toFixed() + "<br>";
+    document.getElementById('outputDiv3').innerHTML += "Elapsed Days Maint/Sale: " + daysBtwnMaintSale + "<br>";
+    document.getElementById('outputDiv3').innerHTML += "Miles Elapased in Contract: " + milesIn + "<br>";
+    document.getElementById('outputDiv3').innerHTML += "Days Elapsed In Contract: " + daysIn;
   }
 }
 
@@ -663,6 +683,8 @@ function displayOutput() {
 function closeOutput() {
   document.getElementById('splitL').innerHTML = "";
   document.getElementById('splitR').innerHTML = "";
+  document.getElementById('splitL').style.display = "none";
+  document.getElementById('splitR').style.display = "none";
   document.getElementById('msgDiv').innerHTML = "";
   document.getElementById('alertDiv').innerHTML = "";
   document.getElementById('msgDiv').style.opacity = 0;
@@ -1209,6 +1231,7 @@ function buildLaborNote(result) {
   textarea.select();
   document.execCommand("copy");
 }
+
 function closePDFmenu() {
   document.getElementById("navtag").style.display = "initial";
   document.getElementById("sopnav").classList.remove("open_sop");
@@ -1217,6 +1240,7 @@ function closePDFmenu() {
 }
 
 function openSOPnav() {
+  if (checkOpen()) { return; }
   document.getElementById("navtag").style.display = "none";
   document.getElementById("sopnav").classList.add("open_sop");
   document.getElementById("sopnav2").classList.add("open_sop");

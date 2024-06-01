@@ -516,7 +516,7 @@ th:empty, td:empty {
   text-align: center;
 }
 
-.lastCell {
+td.lastCell {
   border: none;
   outline: none;
   text-align: center;
@@ -525,6 +525,8 @@ th:empty, td:empty {
 
 .wider {
   width: 200px;
+  border: none;
+  outline: none;
 }
 
 #infosetDiv {
@@ -702,8 +704,8 @@ th:empty, td:empty {
   outline: none;
 }
 
-.rowit td {
-  border-top: 1px solid black;
+tr.rowit td{
+  border-bottom: 1px solid black;
   outline: none;
 }
 
@@ -780,6 +782,7 @@ th:empty, td:empty {
   margin: 10px;
   margin-top: 10px;
 }
+
 
 #boxHolder {
   width: 250px;

@@ -342,7 +342,7 @@ function setValue() {
   document.getElementById("auth2").value = "Using repair facility parts at or under sourcing MCE.";
   document.getElementById("auth3").value = "Using sourcing MCE as a credit toward repair facility parts.";
   document.getElementById("auth4").value = "Using sourcing MCE as a credit toward repair facility parts or shipping in.";
-  document.getElementById("auth5").value = "Adjusted price to reasonable amount near MCE.\rThis was done considering all factors including claim delays,\rshipping costs, liability for future failures, time and mileage\rin coverage, number of prior claims and their cost, etc.";
+  document.getElementById("auth5").value = "Adjusted price to reasonable amount near MCE.\rThis was done considering all factors including claim delays, shipping costs, liability for future failures, time and mileage in coverage, number of prior claims and their cost, etc.";
 }
 
 function partsOptions(stage) {
@@ -759,13 +759,11 @@ function submitTEMP() {
   for (i = 0; i < checkedArr.length; i++) {
     checkedArr[i].checked = false;
   }
-  document.getElementById("textarea5").value = PtTransfer1 + ans1 + "\r\r" +  PtTransfer2 + ans2 + "\r\r" + PtTransfer3 + ans3 + "\r";  
+  document.getElementById("textarea5").value = PtTransfer1 + ans1 + "\r" +  PtTransfer2 + ans2 + "\r" + PtTransfer3 + ans3 + "\r";  
   if (ans3 != "YES") {
-    document.getElementById("textarea5").value += q3ansExplain + "\r\r";
-  } else {
-    document.getElementById("textarea5").value +=  "\r";
+    document.getElementById("textarea5").value += q3ansExplain + "\r";
   }
-  document.getElementById("textarea5").value += PtTransfer4 + ans4 + "\r\r" +  PtTransfer5 + ans5 + "\r\r" +  PtTransfer6 + ans6 + "\r\r" +  PtTransfer7 + ans7 + "\r\r" +  PtTransfer8 + ans8 + "\r" + contact1 + "\r" + contact2 + "\r\r" + PtTransfer9 + ans9 + "\r\r" + PtTransfer10 + ans10 + "\r\r" + PtTransfer11 + ans11 + "\r";
+  document.getElementById("textarea5").value += PtTransfer4 + ans4 + "\r" +  PtTransfer5 + ans5 + "\r" +  PtTransfer6 + ans6 + "\r" +  PtTransfer7 + ans7 + "\r" +  PtTransfer8 + ans8 + "\r" + contact1 + "\r" + contact2 + "\r" + PtTransfer9 + ans9 + "\r" + PtTransfer10 + ans10 + "\r" + PtTransfer11 + ans11 + "\r";
   if (ans11 == "YES") {
     document.getElementById("textarea5").value += q11ansExplain;
   }
@@ -1083,13 +1081,14 @@ function trackerBlank() {
 }
 
 function openNav() {
+  if (checkOpen()) { return; }
   const list = document.getElementById("mySidenav").classList;
   list.toggle("open_nav");
-  document.getElementById("mySidenav").offsetWidth; // Force repaint
+  document.getElementById("mySidenav").offsetWidth;
 }
 
 function closeNav() {
   const list = document.getElementById("mySidenav").classList;
   list.toggle("open_nav");
-  document.getElementById("mySidenav").offsetWidth; // Force repaint
+  document.getElementById("mySidenav").offsetWidth;
 }

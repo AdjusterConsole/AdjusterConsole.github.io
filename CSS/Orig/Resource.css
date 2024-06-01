@@ -517,7 +517,7 @@ td.wider {
   text-align: center;
 }
 
-.lastCell {
+td.lastCell {
   border: none;
   outline: none;
   text-align: center;
@@ -526,6 +526,10 @@ td.wider {
 
 .wider {
   width: 200px;
+}
+
+tr.rowit td {
+  border-bottom: 1px solid black;
 }
 
 #infosetDiv {
