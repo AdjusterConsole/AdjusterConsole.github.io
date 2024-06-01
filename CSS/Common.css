@@ -45,16 +45,16 @@ For inquiries regarding licensing or permission to use this code in ways not cov
     inset 0px 0px 4px black,
     inset 0px 0px 22px black,
     20px 10px 70px 20px black;
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 .head_labor {
   text-align: center;
   color: var(--glow-txt-color);
-  text-shadow:   
-    1px 1px 2px var(--glow-outline-color), 
-   -1px -1px 2px var(--glow-outline-color), 
-   -1px 1px 2px var(--glow-outline-color), 
+  text-shadow:
+    1px 1px 2px var(--glow-outline-color),
+   -1px -1px 2px var(--glow-outline-color),
+   -1px 1px 2px var(--glow-outline-color),
     1px -1px 2px var(--glow-outline-color);
 }
 
@@ -122,10 +122,10 @@ For inquiries regarding licensing or permission to use this code in ways not cov
   min-height: 45px;
   font-size: 17px;
   font-weight: bold;
-  text-shadow:   
-    1px 1px 1px var(--glow-outline-color), 
-   -1px -1px 1px var(--glow-outline-color), 
-   -1px 1px 1px var(--glow-outline-color), 
+  text-shadow:
+    1px 1px 1px var(--glow-outline-color),
+   -1px -1px 1px var(--glow-outline-color),
+   -1px 1px 1px var(--glow-outline-color),
     1px -1px 1px var(--glow-outline-color);
 }
 
@@ -288,19 +288,19 @@ For inquiries regarding licensing or permission to use this code in ways not cov
   box-shadow: none;
   border-radius: 0px;
   white-space: nowrap;
-  text-shadow:   
-    1px 1px 1px var(--glow-outline-color), 
-   -1px -1px 1px var(--glow-outline-color), 
-   -1px 1px 1px var(--glow-outline-color), 
+  text-shadow:
+    1px 1px 1px var(--glow-outline-color),
+   -1px -1px 1px var(--glow-outline-color),
+   -1px 1px 1px var(--glow-outline-color),
     1px -1px 1px var(--glow-outline-color);
 }
 
 .sidenav button.color_mod {
   color: var(--glow-outline-color);
-  text-shadow:   
-    1px 1px 1px var(--glow-txt-color), 
-   -1px -1px 1px var(--glow-txt-color), 
-   -1px 1px 1px var(--glow-txt-color), 
+  text-shadow:
+    1px 1px 1px var(--glow-txt-color),
+   -1px -1px 1px var(--glow-txt-color),
+   -1px 1px 1px var(--glow-txt-color),
     1px -1px 1px var(--glow-txt-color);
 }
 
@@ -308,19 +308,19 @@ For inquiries regarding licensing or permission to use this code in ways not cov
   background: var(--fancy-background);
   color: var(--glow-txt-color);
   text-shadow:
-    1px 1px 1px var(--glow-outline-color), 
-    -1px -1px 1px var(--glow-outline-color), 
-    -1px 1px 1px var(--glow-outline-color), 
+    1px 1px 1px var(--glow-outline-color),
+    -1px -1px 1px var(--glow-outline-color),
+    -1px 1px 1px var(--glow-outline-color),
     1px -1px 1px var(--glow-outline-color);
 }
 
 .sidenav button:hover {
   background: var(--fancy-background);
   color: var(--glow-outline-color);
-  text-shadow:   
-    1px 1px 1px var(--glow-txt-color), 
-   -1px -1px 1px var(--glow-txt-color), 
-   -1px 1px 1px var(--glow-txt-color), 
+  text-shadow:
+    1px 1px 1px var(--glow-txt-color),
+   -1px -1px 1px var(--glow-txt-color),
+   -1px 1px 1px var(--glow-txt-color),
     1px -1px 1px var(--glow-txt-color);
 }
 
@@ -332,10 +332,10 @@ For inquiries regarding licensing or permission to use this code in ways not cov
   margin-right: 65px;
   color: var(--glow-txt-color);
   text-decoration: none;
-  text-shadow:   
-    1px 1px 1px var(--glow-outline-color), 
-   -1px -1px 1px var(--glow-outline-color), 
-   -1px 1px 1px var(--glow-outline-color), 
+  text-shadow:
+    1px 1px 1px var(--glow-outline-color),
+   -1px -1px 1px var(--glow-outline-color),
+   -1px 1px 1px var(--glow-outline-color),
     1px -1px 1px var(--glow-outline-color);
 }
 
@@ -346,7 +346,7 @@ For inquiries regarding licensing or permission to use this code in ways not cov
 }
 
 .sidenav .navEnder {
-  margin-bottom: 15px;  
+  margin-bottom: 15px;
 }
 
 .otherone {
@@ -388,10 +388,10 @@ For inquiries regarding licensing or permission to use this code in ways not cov
   background: none;
   font-size: 16px;
   color: var(--glow-outline-color);
-  text-shadow:   
-    1px 1px 1px var(--glow-txt-color), 
-   -1px -1px 1px var(--glow-txt-color), 
-   -1px 1px 1px var(--glow-txt-color), 
+  text-shadow:
+    1px 1px 1px var(--glow-txt-color),
+   -1px -1px 1px var(--glow-txt-color),
+   -1px 1px 1px var(--glow-txt-color),
     1px -1px 1px var(--glow-txt-color);
   display: block;
   position: initial;
@@ -409,19 +409,19 @@ For inquiries regarding licensing or permission to use this code in ways not cov
 
 .sop_btn.neu {
   color: var(--glow-txt-color);
-  text-shadow:   
-    1px 1px 1px var(--glow-outline-color), 
-   -1px -1px 1px var(--glow-outline-color), 
-   -1px 1px 1px var(--glow-outline-color), 
+  text-shadow:
+    1px 1px 1px var(--glow-outline-color),
+   -1px -1px 1px var(--glow-outline-color),
+   -1px 1px 1px var(--glow-outline-color),
     1px -1px 1px var(--glow-outline-color);
 }
 
 .sop_btn.neu:hover {
   color: var(--glow-outline-color);
-  text-shadow:   
-    1px 1px 1px var(--glow-txt-color), 
-   -1px -1px 1px var(--glow-txt-color), 
-   -1px 1px 1px var(--glow-txt-color), 
+  text-shadow:
+    1px 1px 1px var(--glow-txt-color),
+   -1px -1px 1px var(--glow-txt-color),
+   -1px 1px 1px var(--glow-txt-color),
     1px -1px 1px var(--glow-txt-color);
 }
 
@@ -429,14 +429,14 @@ For inquiries regarding licensing or permission to use this code in ways not cov
   background: var(--fancy-background);
   color: var(--glow-txt-color);
   text-shadow:
-    1px 1px 1px var(--glow-outline-color), 
-    -1px -1px 1px var(--glow-outline-color), 
-    -1px 1px 1px var(--glow-outline-color), 
+    1px 1px 1px var(--glow-outline-color),
+    -1px -1px 1px var(--glow-outline-color),
+    -1px 1px 1px var(--glow-outline-color),
     1px -1px 1px var(--glow-outline-color);
 }
 
 .sop_btn .navEnder {
-  margin-bottom: 15px;  
+  margin-bottom: 15px;
 }
 
 #sopnav {
@@ -508,12 +508,12 @@ For inquiries regarding licensing or permission to use this code in ways not cov
 }
 
 .sop_nav .navEnder {
-  margin-bottom: 15px;  
+  margin-bottom: 15px;
 }
 
 .PDF_depot {
   display: none;
-  position: fixed; 
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -549,7 +549,7 @@ For inquiries regarding licensing or permission to use this code in ways not cov
   right: 60px;
   display: inline-block;
   position: absolute;
-  cursor: pointer; 
+  cursor: pointer;
   font-size: 20px;
   font-weight: bold;
   border-radius: 10px 10px 0px 0px;
@@ -563,10 +563,10 @@ For inquiries regarding licensing or permission to use this code in ways not cov
   padding: 10px;
   transition: all 0s ease;
   color: var(--glow-outline-color);
-  text-shadow:   
-    1px 1px 1px var(--glow-txt-color), 
-   -1px -1px 1px var(--glow-txt-color), 
-   -1px 1px 1px var(--glow-txt-color), 
+  text-shadow:
+    1px 1px 1px var(--glow-txt-color),
+   -1px -1px 1px var(--glow-txt-color),
+   -1px 1px 1px var(--glow-txt-color),
     1px -1px 1px var(--glow-txt-color);
  &:active {
   background: none;
@@ -577,10 +577,10 @@ For inquiries regarding licensing or permission to use this code in ways not cov
 
 .nav_tag.neu_style {
   color: var(--glow-txt-color);
-  text-shadow:   
-    1px 1px 1px var(--glow-outline-color), 
-   -1px -1px 1px var(--glow-outline-color), 
-   -1px 1px 1px var(--glow-outline-color), 
+  text-shadow:
+    1px 1px 1px var(--glow-outline-color),
+   -1px -1px 1px var(--glow-outline-color),
+   -1px 1px 1px var(--glow-outline-color),
     1px -1px 1px var(--glow-outline-color);
 }
 
@@ -592,10 +592,10 @@ For inquiries regarding licensing or permission to use this code in ways not cov
   margin-right: 65px;
   color: var(--glow-txt-color);
   text-decoration: none;
-  text-shadow:   
-    1px 1px 1px var(--glow-outline-color), 
-   -1px -1px 1px var(--glow-outline-color), 
-   -1px 1px 1px var(--glow-outline-color), 
+  text-shadow:
+    1px 1px 1px var(--glow-outline-color),
+   -1px -1px 1px var(--glow-outline-color),
+   -1px 1px 1px var(--glow-outline-color),
     1px -1px 1px var(--glow-outline-color);
 }
 
@@ -615,7 +615,7 @@ For inquiries regarding licensing or permission to use this code in ways not cov
   height: 15px;
 }
 
-.switch input { 
+.switch input {
   opacity: 0;
   width: 0;
   height: 0;
