@@ -29,7 +29,7 @@ function openInfo2(evt, cityName) {
   evt.currentTarget.className += " active";
   const list = document.getElementById("mySidenav").classList;
   list.replace("open_nav", "closed_nav");
-}                                                                     
+}
 
 function closeResource2() {
   var i, diagcontent, tablinks2;
@@ -73,7 +73,7 @@ function magnify(image) {
   }
 }
 //                                                                      RESOURCE DIV
-        
+
 function openInfo(evt, cityName) {
   var i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");
@@ -147,7 +147,7 @@ function setDate() {
 //  var year = date.getFullYear();
 //  if (month < 10) month = "0" + month;
 //  if (day < 10) day = "0" + day;
-//  var today = year + "-" + month + "-" + day;       
+//  var today = year + "-" + month + "-" + day;
 //  document.getElementById("serDate").value = today;
 //  document.getElementById("incDate").value = today;
 //  document.getElementById("rec0Date").value = today;
@@ -192,7 +192,7 @@ function isitOlder(isOlder, thanThis) {
   } else {
     return false;
   }
-} 
+}
 
 function compare (rec1, rec2) {
   return rec1.mileage - rec2.mileage;
@@ -208,7 +208,7 @@ function isitWP(record) {
     }
     if (record.daysfrom < 41 && record.milesfrom < 500) {
       return true;
-    } 
+    }
   }
 }
 
@@ -262,7 +262,7 @@ function saveRecord(elemId) {
   }
   if (newelemId != "inc") {
     var inceptStr = localStorage.getItem("InceptionMiles");
-    if (inceptStr == null) { 
+    if (inceptStr == null) {
       document.getElementById('trackerMsg').innerHTML += "Need Inception info first to perform calculations.";
       return;
     }
@@ -284,25 +284,25 @@ function saveRecord(elemId) {
   objectArr = JSON.parse(localStorage.getItem("objectArr"));
   var savedRecs = localStorage.getItem("savedRecs");
   var recIndex = 0;
-  if (objectArr.length != null) { 
+  if (objectArr.length != null) {
     var recIndex = objectArr.length;
   }
   var recName = newelemId + "Rcrd";
-  if (!recordArr.includes(recName)) { 
-    if (!objectArr.includes("empty")) { 
-      objectArr.push(record); 
-    } else { 
+  if (!recordArr.includes(recName)) {
+    if (!objectArr.includes("empty")) {
+      objectArr.push(record);
+    } else {
       var indexA = objectArr.indexOf("empty");
-      objectArr.splice(indexA, 1, record); 
+      objectArr.splice(indexA, 1, record);
       recIndex = indexA;
-    } 
-    recordArr.push(recName); 
-    localStorage.setItem(recName + "spot", recIndex); 
+    }
+    recordArr.push(recName);
+    localStorage.setItem(recName + "spot", recIndex);
     localStorage.setItem("objectArr", JSON.stringify(objectArr));
     localStorage.setItem("recordArr", JSON.stringify(recordArr));
-    var newCount = parseInt(savedRecs) + 1; 
+    var newCount = parseInt(savedRecs) + 1;
     localStorage.setItem("savedRecs", newCount);
-  } else { 
+  } else {
     var indexSaved = localStorage.getItem(recName + "spot");
     objectArr.splice(indexSaved, 1, record);
     localStorage.setItem("objectArr", JSON.stringify(objectArr));
@@ -318,8 +318,8 @@ function delRecord(elemId) {
   const objectArr = JSON.parse(localStorage.getItem("objectArr"));
   var recName = newelemId + "Rcrd";
   var objectIndex = localStorage.getItem(recName + "spot");
-  if (recordArr.includes(recName)) { 
-    if (recName == "incRcrd") { 
+  if (recordArr.includes(recName)) {
+    if (recName == "incRcrd") {
       localStorage.removeItem("InceptionMiles");
       localStorage.removeItem("InceptionDate");
     }
@@ -329,12 +329,12 @@ function delRecord(elemId) {
     var savedRecs = localStorage.getItem("savedRecs");
     var newCount = parseInt(savedRecs) - 1;
     localStorage.setItem("savedRecs", newCount);
-    localStorage.removeItem(recName); 
+    localStorage.removeItem(recName);
     const index = recordArr.indexOf(recName);
     document.getElementById(newelemId + "Date").value = "";
     document.getElementById(newelemId + "Mile").value = "";
-    if (index > -1) { 
-      recordArr.splice(index, 1); 
+    if (index > -1) {
+      recordArr.splice(index, 1);
       localStorage.setItem("recordArr", JSON.stringify(recordArr));
     }
   }
@@ -475,7 +475,7 @@ function displayRecs(z) {
     row.insertCell(4).innerText = milesper;
     if (tempRec.waitperiod) {
       row.insertCell(5).innerText = "\u26D4";
-    } else { 
+    } else {
       row.insertCell(5).innerText = "\u2714";
     }
     if (tempRec.discrepancy) {
@@ -489,7 +489,7 @@ function displayRecs(z) {
     if (tempRec.isService) {
       if (overTime < 90 || distance < 700) {
         if (overTime < 90 && !EIC) {
-          document.getElementById('msgDiv').innerHTML += "This vehicle has less than 90 days in coverage<br><br>"; 
+          document.getElementById('msgDiv').innerHTML += "This vehicle has less than 90 days in coverage<br><br>";
         }
         if (distance < 700) {
           document.getElementById('msgDiv').innerHTML += "This vehicle is within 700 miles of the inception mileage<br><br>";
@@ -512,21 +512,21 @@ function displayRecs(z) {
       mileDis = true;
     }
     if (milesper > 200 && !HMPD) {
-      document.getElementById('msgDiv').innerHTML += "This vehicle has travelled " + milesper + " miles per day.<br>"; 
-      document.getElementById('alertDiv').innerHTML += "\u2757 ALERT: HMPD \u2757<br>"; 
+      document.getElementById('msgDiv').innerHTML += "This vehicle has travelled " + milesper + " miles per day.<br>";
+      document.getElementById('alertDiv').innerHTML += "\u2757 ALERT: HMPD \u2757<br>";
       hasMessage = true;
       HMPD = true;
       if (overTime < 90) {
-        document.getElementById('msgDiv').innerHTML += "Since they are on day " + overTime + " of coverage, please review the HMPD SOP.<br><br>";         
+        document.getElementById('msgDiv').innerHTML += "Since they are on day " + overTime + " of coverage, please review the HMPD SOP.<br><br>";
       } else if (overTime > 89) {
         document.getElementById('msgDiv').innerHTML += "Since they are on day " + overTime + " of coverage, Continue the claim as normal.<br><br>";
       }
     }
-    if (z == '0' || z == '2' || z == '3') { 
+    if (z == '0' || z == '2' || z == '3') {
       displayOutput();
       if (hasMessage) {
         document.getElementById('alertDiv').innerHTML += "\u2757 CLICK TO SHOW MESSAGES \u2757<br>";
-      }  
+      }
     }
   }
   var allCells = document.getElementsByTagName("td");
@@ -536,7 +536,7 @@ function displayRecs(z) {
     }
   }
   priorMileage();
-  if (z == '1' || z == '2' || z == '3') { 
+  if (z == '1' || z == '2' || z == '3') {
     noteOutput(z, EIC, waitPeriod, HMPD, mileDis);
     return;
   }
@@ -571,7 +571,7 @@ function inceptEst(spot) {
   if (elemId == null || recMileage1 == null || recDate == null || serMileage1 == null || serDate == null || incMileage1 == null || incDate == null) {
     document.getElementById('trackerMsg').innerHTML += "Information is incomplete. Try Again";
     return;
-  } 
+  }
   var recMileage = parseInt(recMileage1);
   var serMileage = parseInt(serMileage1);
   var incMileage = parseInt(incMileage1);
@@ -617,7 +617,7 @@ function inceptEst(spot) {
 
 function noteOutput(z, EIC, waitPeriod, HMPD, mileDis) {
   var msgDiv = document.getElementById('msgDiv');
-  var outputDiv3 = document.getElementById('outputDiv3'); 
+  var outputDiv3 = document.getElementById('outputDiv3');
   var splitL = document.getElementById('splitL');
   var whereOut;
   if (z == '1') {
@@ -643,16 +643,16 @@ function noteOutput(z, EIC, waitPeriod, HMPD, mileDis) {
     whereOut.innerHTML += "Notes: " + objectArr[i].notes + "<br>";
   }
   whereOut.innerHTML += "<br>";
-  if (EIC) { 
+  if (EIC) {
     whereOut.innerHTML += "This contract is early into coverage.<br>";
   }
-  if (waitPeriod) { 
+  if (waitPeriod) {
     whereOut.innerHTML += "This Claim date is in the waiting period.<br>";
   }
-  if (HMPD) { 
+  if (HMPD) {
     whereOut.innerHTML += "This vehicle exhibited HMPD.<br>";
   }
-  if (mileDis) { 
+  if (mileDis) {
     whereOut.innerHTML += "There is a mileage discrepancy within the records.<br>";
   }
   whereOut.innerHTML += "<br>";
@@ -673,7 +673,7 @@ function noteOutput(z, EIC, waitPeriod, HMPD, mileDis) {
 
 function displayOutput() {
   hideTable();
-  var outputDiv = document.getElementById('outputDiv'); 
+  var outputDiv = document.getElementById('outputDiv');
   outputDiv.classList.add("arise");
   outputDiv.style.height = "700px";
 }
@@ -686,7 +686,7 @@ function closeOutput() {
   document.getElementById('msgDiv').innerHTML = "";
   document.getElementById('alertDiv').innerHTML = "";
   document.getElementById('msgDiv').style.opacity = 0;
-  var outputDiv = document.getElementById('outputDiv'); 
+  var outputDiv = document.getElementById('outputDiv');
   outputDiv.classList.remove("arise");
   outputDiv.style.height = "0px";
   outputDiv.style.width = "800px";
@@ -696,7 +696,7 @@ function closeOutput() {
 }
 
 function closeOutput2() {
-  var outputDiv2 = document.getElementById('outputDiv2'); 
+  var outputDiv2 = document.getElementById('outputDiv2');
   outputDiv3.innerHTML = "";
   outputDiv2.classList.remove("arise");
   outputDiv2.style.height = "0px";
@@ -1114,7 +1114,7 @@ function negotiateScript(x) {
   var whatDo = laborReview(asking, current, aveRate);
   var tryHarder = localStorage.getItem("weTried");
   if (x == 'y') {
-    var agreed; 
+    var agreed;
     if (tryHarder != "notYet") {
       agreed = tryHarder;
       buildLaborNote('halfway');
@@ -1144,7 +1144,7 @@ function negotiateScript(x) {
     responseDiv_text.innerHTML =  "Your Response is:<br>Are you able to match us at $" + please + "?";
     localStorage.setItem("weTried", please);
     return;
-  } 
+  }
   if (x == 'n' && whatDo == "normal") {
     responseDiv_text.innerHTML = "Your Response is:<br>No problem. Thank you for considering it.<br>I will update your repair facility profile to $" + asking + ".<br>Please keep in mind there could be other times during the claims process that we may ask you to negotiate pricing";
     document.getElementById("noScript").style.display = "none";
@@ -1317,14 +1317,3 @@ function closeSOP() {
   }
   PDFdepot.style.display = 'none';
 }
-
-
-
-
-
-
-
-
-
-
-
