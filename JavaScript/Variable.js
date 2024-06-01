@@ -488,7 +488,7 @@ function customMenu(sentID, event) {
 }
 
 function toggleMenuOn() {
-  const menustate = parseInt(localStorage.getItem("menuState"));
+  const menuState = parseInt(localStorage.getItem("menuState"));
   const menu = document.getElementById("context-menu");
   if (menuState !== 1) {
     menuState = 1;
@@ -498,7 +498,7 @@ function toggleMenuOn() {
 }
 
 function toggleMenuOff() {
-  const menustate = parseInt(localStorage.getItem("menuState"));
+  const menuState = parseInt(localStorage.getItem("menuState"));
   const menu = document.getElementById("context-menu");
   if (menuState !== 0) {
     menuState = 0;
