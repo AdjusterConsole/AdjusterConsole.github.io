@@ -19,7 +19,7 @@ function swapPage(x) {
     window.location.href = "index.html";
   } else if (x == '2') {
     window.location.href = "index2.html";
-  } else { 
+  } else {
     return;
   }
 }
@@ -29,7 +29,7 @@ function setVer(x) {
     localStorage.setItem('currentVer', '1');
   } else if (x == '2') {
     localStorage.setItem('currentVer', '2');
-  } else { 
+  } else {
     return;
   }
 }
@@ -122,14 +122,14 @@ function MENU() {
   } else {
     BtnBuilder.style.top = "20px";
     BtnBuilder.style.opacity = '0';
-    appearance.style.top = "20px";    
+    appearance.style.top = "20px";
     appearance.style.opacity = '0';
     buttonMaker.style.top = "20px";
     buttonMaker.style.opacity = '0';
     tutorialSel.style.top = "20px";
     tutorialSel.style.opacity = '0';
     var page = localStorage.getItem('currentVer');
-    theMenu.innerText = "\u2666 Settings \u2666"; 
+    theMenu.innerText = "\u2666 Settings \u2666";
     localStorage.setItem("menuOpen", "false");
   }
 }
@@ -229,7 +229,7 @@ function submitStat(again) {
           document.getElementById("textarea5").value += " as well as " + ans3;
         } else {
           document.getElementById("textarea5").value += " and " + ans3;
-          addon = addon + 1; 
+          addon = addon + 1;
         }
       } else {
         document.getElementById("textarea5").value += ans3;
@@ -252,19 +252,19 @@ function submitStat(again) {
     }
     if (optionalNote != null) {
       document.getElementById("textarea5").value += "\r" + optionalNote + "\r\r";
-    } 
+    }
     if (isPandlin.checked){
       document.getElementById("textarea5").value += "Parts and labor are verified and keyed in.\r";
       isPandlin.checked = false;
-    } 
+    }
     if (isInformed.checked){
       document.getElementById("textarea5").value += "RF and CH are informed of claim status.\r";
       isInformed.checked = false;
-    } 
+    }
     if (isTaskset.checked){
       document.getElementById("textarea5").value += "A task has been set for follow-up.\r\r";
       isTaskset.checked = false;
-    } 
+    }
     let textarea = document.getElementById("textarea5");
     textarea.select();
     document.execCommand("copy");
@@ -349,7 +349,7 @@ function partsOptions(stage) {
   }
   requestOptions(stage);
 }
-    
+
 function requestOptions(stage) {
   var inspAuth1 = "No inspection needed as RF diagnostic matches CH concern.";
   var inspAuth2 = "Sent inspection to verify failures.\rReviewed report and inspection photos.\rInspection review note is completed.";
@@ -375,7 +375,7 @@ function requestOptions(stage) {
   stage.value += requestedAuth1 + "\r";
   issuesOptions(stage);
 }
-  
+
 function issuesOptions(stage) {
   var oopcsAuth1 = "Need to review OOPC of $";
   var oopcsAuth2a = " with contract holder.";
@@ -407,9 +407,9 @@ function issuesOptions(stage) {
     var oopcAmt2 = num.toFixed(2);
     var oopcAmt = oopcAmt2.toString();
     var oopcCausedBy;
-    if (oopcCauseb.checked == true) { oopcCausedBy = "parts and labor."; } 
-    if (oopcCausel.checked == true) { oopcCausedBy = "labor."; } 
-    if (oopcCausep.checked == true) { oopcCausedBy = "parts."; } 
+    if (oopcCauseb.checked == true) { oopcCausedBy = "parts and labor."; }
+    if (oopcCausel.checked == true) { oopcCausedBy = "labor."; }
+    if (oopcCausep.checked == true) { oopcCausedBy = "parts."; }
     if (oopcAmt == null) { alert("Please enter the amount of OOPC"); return; }
     stage.value += oopcsAuth1 + oopcAmt;
     if (document.getElementById("auth12").checked == true) {
@@ -421,7 +421,7 @@ function issuesOptions(stage) {
     return;
   }
 }
-  
+
 function showOOPopt() {
   document.getElementById("OOPoptDiv").style.display = "inline-block";
 }
@@ -750,7 +750,7 @@ function submitTEMP() {
   for (i = 0; i < checkedArr.length; i++) {
     checkedArr[i].checked = false;
   }
-  document.getElementById("textarea5").value = PtTransfer1 + ans1 + "\r" +  PtTransfer2 + ans2 + "\r" + PtTransfer3 + ans3 + "\r";  
+  document.getElementById("textarea5").value = PtTransfer1 + ans1 + "\r" +  PtTransfer2 + ans2 + "\r" + PtTransfer3 + ans3 + "\r";
   if (ans3 != "YES") {
     document.getElementById("textarea5").value += q3ansExplain + "\r";
   }
@@ -877,7 +877,7 @@ function AnotherOne() {
   }
 }
 
-function NextPart() {  
+function NextPart() {
   var newpartcountStr = localStorage.getItem("newpartcount");
   var newpartcount = parseInt(newpartcountStr);
   document.getElementById('partnum').value = "";
@@ -951,9 +951,9 @@ function toggleConductor(boxId) {
     }
   return;
   } else {
-    var displayElemNode = document.getElementsByClassName(boxId + "dispStat"); 
+    var displayElemNode = document.getElementsByClassName(boxId + "dispStat");
     var affectedElem = displayElemNode[0];
-    var affectedId = displayElemNode[0].id; 
+    var affectedId = displayElemNode[0].id;
     if (checkBox.checked == true){
       affectedElem.style.display = "inline-block";
       localStorage.setItem(affectedId + "SHOW", "inline-block");
@@ -964,7 +964,7 @@ function toggleConductor(boxId) {
   }
 }
 
-window.onload = function PutItBack() { 
+window.onload = function PutItBack() {
   var selected = "holder1";
   var selectedElem = document.getElementById(selected);
   var didItRun = localStorage.getItem("Im The Boss");
@@ -1036,7 +1036,7 @@ window.onload = function PutItBack() {
     var checkBox = document.getElementById(boxId);
     var currDisp = selectedElem.style.display;
     var setDisp = localStorage.getItem(selectedID + "SHOW");
-    if (setDisp == null || setDisp == "inline-block") { 
+    if (setDisp == null || setDisp == "inline-block") {
       checkBox.checked = true;
       selectedElem.style.display = "inline-block";
     } else {
@@ -1061,7 +1061,7 @@ function trackerBlank() {
   localStorage.setItem("recordArr", JSON.stringify(recordArr));
   const objectArr = [];
   localStorage.setItem("objectArr", JSON.stringify(objectArr));
-  localStorage.setItem("addLineCount", "0"); 
+  localStorage.setItem("addLineCount", "0");
   localStorage.setItem("savedRecs", "0");
   localStorage.removeItem("serRcrdspot");
   localStorage.removeItem("incRcrdspot");
