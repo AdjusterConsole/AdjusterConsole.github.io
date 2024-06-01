@@ -136,7 +136,7 @@ function didntHave() {
 
 function TGAFO() {
   document.getElementById("TGAFOABTN").style.display = "inline-block";
-  document.getElementById("TGAFODBTN").style.display = "inline-block"; 
+  document.getElementById("TGAFODBTN").style.display = "inline-block";
   document.getElementById("TGAFOCBTN").style.display = "inline-block";
   showVM();
   var VMREASON = "Called CH to get auth for OOPC.\r";
@@ -175,7 +175,7 @@ function TGAFOA(btnID) {
   }
   document.getElementById("EDITarea").value = document.getElementById("Snippings").value;
   COPYIt();
-  OOPADCB(); 
+  OOPADCB();
   authforOSB();
   hideVM();
 }
@@ -323,7 +323,7 @@ function RFIB() {
 }
 
 
-function RFIBDH(){ 
+function RFIBDH(){
   document.getElementById("RFIBND").style.display = "inline-block";
   document.getElementById("RFIBNE").style.display = "inline-block";
   document.getElementById("RFIBNF").style.display = "inline-block";
@@ -636,7 +636,7 @@ function submitDisp(x) {
       document.execCommand('foreColor', false, colorChange);
       colorState = "0";
       localStorage.setItem("colorState",colorState);
-    } 
+    }
   }
 
   var newDisplay = mimic.innerHTML;
@@ -707,7 +707,7 @@ function fontChange(x) {
   var fontS = window.getComputedStyle(selectedButton).fontSize;
   var fontInt = parseInt(fontS);
   fontInt = fontInt + bigorSmoll;
-  var tempFont = fontInt.toString(); 
+  var tempFont = fontInt.toString();
   var newFont = tempFont + "px";
   selectedButton.style.fontSize = newFont;
   mimic.style.fontSize = newFont;
@@ -761,7 +761,7 @@ function heightChange(x) {
   var selectedButton = document.getElementById(verifiedID);
   var sizeShow = document.getElementById("sizeShow");
   var curHeight = selectedButton.offsetHeight;
-  var newHeight = curHeight + bigorSmoll; 
+  var newHeight = curHeight + bigorSmoll;
   selectedButton.style.height = newHeight + "px";
   sizeShow.style.height = newHeight + "px";
   localStorage.setItem(verifiedID + "Height", newHeight + "px");
@@ -775,7 +775,7 @@ function widthChange(x) {
   var selectedButton = document.getElementById(verifiedID);
   var sizeShow = document.getElementById("sizeShow");
   var curWidth = selectedButton.offsetWidth;
-  newWidth = curWidth + bigorSmoll; 
+  newWidth = curWidth + bigorSmoll;
   selectedButton.style.width = newWidth + "px";
   sizeShow.style.width = newWidth + "px";
   localStorage.setItem(verifiedID + "Width", newWidth + "px");
