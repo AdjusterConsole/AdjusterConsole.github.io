@@ -14,11 +14,6 @@
 //
 //For inquiries regarding licensing or permission to use this code in ways not covered by this license, please contact the author at AdjusterConsole.com.
 
-const menu = document.getElementById("context-menu");
-var menuState = 0;
-var colorState = "0";
-var contextMenuActive = "block";
-
 function RESET() {
   document.getElementById("textarea3").value = "";
   document.getElementById("textarea2").value = "";
@@ -493,16 +488,22 @@ function customMenu(sentID, event) {
 }
 
 function toggleMenuOn() {
+  const menustate = parseInt(localStorage.getItem("menuState"));
+  const menu = document.getElementById("context-menu");
   if (menuState !== 1) {
     menuState = 1;
     menu.classList.add("visible");
+    localStorage.setItem("menuState", menuState);
   }
 }
 
 function toggleMenuOff() {
+  const menustate = parseInt(localStorage.getItem("menuState"));
+  const menu = document.getElementById("context-menu");
   if (menuState !== 0) {
     menuState = 0;
     menu.classList.remove("visible");
+    localStorage.setItem("menuState", menuState);
   }
 }
 
@@ -528,6 +529,7 @@ function getPosition(e) {
 }
 
 function positionMenu(e) {
+  const menu = document.getElementById("context-menu");
   let clickCoords = getPosition(e);
   let clickCoordsX = clickCoords.x;
   let clickCoordsY = clickCoords.y;
@@ -611,6 +613,7 @@ function submitDisp(x) {
   var mimic = document.getElementById("mimic");
   var verifiedID = localStorage.getItem("verifyCalled");
   var selectedButton = document.getElementById(verifiedID);
+  const colorState = localStorage.getItem("colorState");
   if (x == 'd') {
     mimic.innerHTML = "";
     localStorage.removeItem(verifiedID + "Display");
@@ -627,10 +630,12 @@ function submitDisp(x) {
     if (colorState == "0") {
       document.execCommand('foreColor', false, '#FF0000');
       colorState = "1";
+      localStorage.setItem("colorState",colorState);
     } else {
       var colorChange = localStorage.getItem(verifiedID + "color");
       document.execCommand('foreColor', false, colorChange);
       colorState = "0";
+      localStorage.setItem("colorState",colorState);
     } 
   }
 
