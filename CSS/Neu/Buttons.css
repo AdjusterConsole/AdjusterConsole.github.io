@@ -77,7 +77,7 @@ For inquiries regarding licensing or permission to use this code in ways not cov
   top: 280px;
 }
 
-#theHoldup { 
+#theHoldup {
   left: 235px;
   bottom: 55px;
   border-left: 2px solid var(--my-accent-color);
@@ -211,12 +211,12 @@ For inquiries regarding licensing or permission to use this code in ways not cov
 }
 
 .ptRad {
-  margin: 10px; 
+  margin: 10px;
 }
 
 .ta {
   margin-top: 30px;
-  margin-left: 150px; 
+  margin-left: 150px;
 }
 
 .taAuth {
@@ -430,17 +430,17 @@ input.largerRadio {
   transition: all 0.4s ease;
   z-index: 1;
   color: var(--glow-txt-color);
-  text-shadow: 
-    1px 1px 1px var(--glow-outline-color), 
-   -1px -1px 1px var(--glow-outline-color), 
-   -1px 1px 1px var(--glow-outline-color),  
-    1px -1px 1px var(--glow-outline-color), 
-    0px 0px 8px var(--my-glow-color), 
-    0px 0px 11px var(--my-glow-color), 
-    0px 0px 14px var(--my-glow-color), 
-    0px 0px 17px var(--my-glow-color), 
-    0px 0px 20px var(--my-glow-color), 
-    0px 0px 23px var(--my-glow-color), 
+  text-shadow:
+    1px 1px 1px var(--glow-outline-color),
+   -1px -1px 1px var(--glow-outline-color),
+   -1px 1px 1px var(--glow-outline-color),
+    1px -1px 1px var(--glow-outline-color),
+    0px 0px 8px var(--my-glow-color),
+    0px 0px 11px var(--my-glow-color),
+    0px 0px 14px var(--my-glow-color),
+    0px 0px 17px var(--my-glow-color),
+    0px 0px 20px var(--my-glow-color),
+    0px 0px 23px var(--my-glow-color),
     0px 0px 26px var(--my-glow-color);
   overflow: visible;
 }
@@ -454,17 +454,17 @@ input.largerRadio {
   height: 20px;
   transition: all .1s ease;
   color: var(--glow-txt-color);
-  text-shadow: 
-    1px 1px 1px var(--glow-outline-color), 
-   -1px -1px 1px var(--glow-outline-color), 
-   -1px 1px 1px var(--glow-outline-color),  
-    1px -1px 1px var(--glow-outline-color), 
-    0px 0px 8px var(--my-glow-color), 
-    0px 0px 11px var(--my-glow-color), 
-    0px 0px 14px var(--my-glow-color), 
-    0px 0px 17px var(--my-glow-color), 
-    0px 0px 20px var(--my-glow-color), 
-    0px 0px 23px var(--my-glow-color), 
+  text-shadow:
+    1px 1px 1px var(--glow-outline-color),
+   -1px -1px 1px var(--glow-outline-color),
+   -1px 1px 1px var(--glow-outline-color),
+    1px -1px 1px var(--glow-outline-color),
+    0px 0px 8px var(--my-glow-color),
+    0px 0px 11px var(--my-glow-color),
+    0px 0px 14px var(--my-glow-color),
+    0px 0px 17px var(--my-glow-color),
+    0px 0px 20px var(--my-glow-color),
+    0px 0px 23px var(--my-glow-color),
     0px 0px 26px var(--my-glow-color);
   overflow: visible;
   opacity: 0;
@@ -671,11 +671,11 @@ input.largerRadio {
   font-size: 24px;
   top: 115px;
   left: 215px;
-  text-shadow: 
-    1px 1px 1px var(--glow-txt-color), 
-   -1px -1px 1px var(--glow-txt-color), 
-   -1px 1px 1px var(--glow-txt-color),  
-    1px -1px 1px var(--glow-txt-color); 
+  text-shadow:
+    1px 1px 1px var(--glow-txt-color),
+   -1px -1px 1px var(--glow-txt-color),
+   -1px 1px 1px var(--glow-txt-color),
+    1px -1px 1px var(--glow-txt-color);
 }
 
 #R16 {
