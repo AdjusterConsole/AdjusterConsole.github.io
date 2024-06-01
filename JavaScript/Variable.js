@@ -488,7 +488,7 @@ function customMenu(sentID, event) {
 }
 
 function toggleMenuOn() {
-  const menuState = parseInt(localStorage.getItem("menuState"));
+  var menuState = parseInt(localStorage.getItem("menuState"));
   const menu = document.getElementById("context-menu");
   if (menuState !== 1) {
     menuState = 1;
@@ -498,7 +498,7 @@ function toggleMenuOn() {
 }
 
 function toggleMenuOff() {
-  const menuState = parseInt(localStorage.getItem("menuState"));
+  var menuState = parseInt(localStorage.getItem("menuState"));
   const menu = document.getElementById("context-menu");
   if (menuState !== 0) {
     menuState = 0;
@@ -613,7 +613,7 @@ function submitDisp(x) {
   var mimic = document.getElementById("mimic");
   var verifiedID = localStorage.getItem("verifyCalled");
   var selectedButton = document.getElementById(verifiedID);
-  const colorState = localStorage.getItem("colorState");
+  var colorState = localStorage.getItem("colorState");
   if (x == 'd') {
     mimic.innerHTML = "";
     localStorage.removeItem(verifiedID + "Display");
