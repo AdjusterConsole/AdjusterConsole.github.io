@@ -161,7 +161,7 @@ For inquiries regarding licensing or permission to use this code in ways not cov
   outline: none;
   border-radius: 5px;
   padding: 10px;
-  color: black; 
+  color: black;
   margin: 0px;
   color: black;
 }
@@ -286,10 +286,10 @@ For inquiries regarding licensing or permission to use this code in ways not cov
   padding: 10px;
   color: var(--glow-txt-color);
   margin: 10px;
-  text-shadow:   
-    1px 1px 1px var(--glow-outline-color), 
-   -1px -1px 1px var(--glow-outline-color), 
-   -1px 1px 1px var(--glow-outline-color), 
+  text-shadow:
+    1px 1px 1px var(--glow-outline-color),
+   -1px -1px 1px var(--glow-outline-color),
+   -1px 1px 1px var(--glow-outline-color),
     1px -1px 1px var(--glow-outline-color);
 }
 
@@ -446,34 +446,34 @@ For inquiries regarding licensing or permission to use this code in ways not cov
 
 @keyframes moveShine {
   0% {
-  box-shadow:   
-    1px 1px 1px red, 
-   -1px -1px 1px red, 
-   -1px 1px 1px red, 
+  box-shadow:
+    1px 1px 1px red,
+   -1px -1px 1px red,
+   -1px 1px 1px red,
     1px -1px 1px red;
   }
   25% {
-  box-shadow:   
-    1px 1px 1px red, 
-   -1px -1px 1px red, 
-   -1px 1px 1px red, 
+  box-shadow:
+    1px 1px 1px red,
+   -1px -1px 1px red,
+   -1px 1px 1px red,
     1px -1px 1px red,
     0px 0px 10px red,
     0px 0px 15px red,
     0px 0px 30px red;
   }
   50% {
-  box-shadow:   
-    1px 1px 1px red, 
-   -1px -1px 1px red, 
-   -1px 1px 1px red, 
+  box-shadow:
+    1px 1px 1px red,
+   -1px -1px 1px red,
+   -1px 1px 1px red,
     1px -1px 1px red;
   }
   100% {
-  box-shadow:   
-    1px 1px 1px red, 
-   -1px -1px 1px red, 
-   -1px 1px 1px red, 
+  box-shadow:
+    1px 1px 1px red,
+   -1px -1px 1px red,
+   -1px 1px 1px red,
     1px -1px 1px red;
   }
 }
