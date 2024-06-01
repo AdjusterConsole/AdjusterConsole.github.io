@@ -14,9 +14,6 @@
 //
 //For inquiries regarding licensing or permission to use this code in ways not covered by this license, please contact the author at AdjusterConsole.com.
 
-
-let newpartcount = 2;
-
 function swapPage(x) {
   if (x == '1') {
     window.location.href = "index.html";
@@ -874,13 +871,18 @@ function FormToTA() {
 }
 
 function AnotherOne() {
+  var newpartcountStr = localStorage.getItem("newpartcount");
+  var newpartcount = parseInt(newpartcountStr);
   if (newpartcount < 7){
     document.getElementById("partname" + newpartcount).style.display = "inline-block";
     newpartcount++;
+    localStorage.setItem("newpartcount",newpartcount);
   }
 }
 
 function NextPart() {  
+  var newpartcountStr = localStorage.getItem("newpartcount");
+  var newpartcount = parseInt(newpartcountStr);
   document.getElementById('partnum').value = "";
   document.getElementById('rfprice').value = "";
   document.getElementById('msrp').value = "";
@@ -895,6 +897,7 @@ function NextPart() {
     newpartcount = newpartcount - 1;
     document.getElementById("partname" + partMover).value = "";
     document.getElementById("partname" + partMover).style.display = "none";
+    localStorage.setItem("newpartcount",newpartcount);
   }
 }
 
@@ -970,6 +973,7 @@ window.onload = function PutItBack() {
   var didItRun = localStorage.getItem("Im The Boss");
   localStorage.setItem("toldem", "false");
   localStorage.setItem("menuOpen", "false");
+  localStorage.setItem("newpartcount","2");
   if (didItRun == null) {
     localStorage.setItem("Im The Boss", "It's Been Done");
     localStorage.setItem(selected + "STCB", '0');
