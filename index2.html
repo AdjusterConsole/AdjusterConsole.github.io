@@ -30,7 +30,7 @@ By using this code, you agree to abide by these terms and conditions. Failure to
 
 For inquiries regarding licensing or permission to use this code in ways not covered by this license, please contact the author at AdjusterConsole.com.  */
 
-body { 
+body {
   font-family: Verdana, sans-serif;
   background: var(--my-background-color);
 }
@@ -40,9 +40,9 @@ body {
   left: 0px;
   top: 0px;
   width: 330px;
-  height: 125px;  
+  height: 125px;
   z-index:2;
-} 
+}
 
 .textspace {
   font-size: 14px;
@@ -58,11 +58,11 @@ body {
   position: absolute;
   display: inline-block;
   color: var(--glow-txt-color);
-  font-size: 18px; 
-  text-shadow: 
-    1px 1px var(--glow-outline-color), 
-   -1px -1px var(--glow-outline-color), 
-   -1px 1px var(--glow-outline-color),  
+  font-size: 18px;
+  text-shadow:
+    1px 1px var(--glow-outline-color),
+   -1px -1px var(--glow-outline-color),
+   -1px 1px var(--glow-outline-color),
     1px -1px var(--glow-outline-color);
   top: 535px;
   left: 665px;
@@ -90,7 +90,7 @@ body {
   position: ABSOLUTE;
   display: inline-block;
 }
- 
+
 #TPDiv {
   display: inline-block;
   position: absolute;
@@ -340,7 +340,7 @@ body {
 
 <button id="statusNote" class="D R P s8dispStat" oncontextmenu="customMenu(this.id, event)" onclick="statNOTE()"><b>Status</b> Note</button>
 
-<button id="openScript2" class="D R P s4dispStat" oncontextmenu="customMenu(this.id, event)" onclick="openScript()">Labor Rate<br>Script</button> 
+<button id="openScript2" class="D R P s4dispStat" oncontextmenu="customMenu(this.id, event)" onclick="openScript()">Labor Rate<br>Script</button>
 
 <div id="Request" class="REQUESTDIV noShow">
   <button id="picR" class="D R P C s1dispStat" oncontextmenu="customMenu(this.id, event)" onclick="PICREQ(this.id)"><b>PICTURE</b> REQUEST</button>
@@ -374,10 +374,10 @@ body {
   <textarea autocomplete="off" title="MSRP" id="msrp" class="intakeboxes" name="name" placeholder="OEM MSRP" wrap="off"></textarea>
   <button id="SENDPART" class="senditnow D R P" oncontextmenu="customMenu(this.id, event)" onclick="FormToTA();">Part</button>
   <button id="SENDLABOR" class="senditnow D R P" oncontextmenu="customMenu(this.id, event)" onclick="SENDLABOR1()">Labor</button>
-  <button id="SENDDIAG" class="senditnow D R P" oncontextmenu="customMenu(this.id, event)" onclick="SENDDIAG1()">Diag</button> 
-  <button id="clearIntake" class="senditnow D R P" oncontextmenu="customMenu(this.id, event)" onclick="ClearIntake();">Clear</button> 
+  <button id="SENDDIAG" class="senditnow D R P" oncontextmenu="customMenu(this.id, event)" onclick="SENDDIAG1()">Diag</button>
+  <button id="clearIntake" class="senditnow D R P" oncontextmenu="customMenu(this.id, event)" onclick="ClearIntake();">Clear</button>
   <button id="DJKahlid" class="senditnow D R P" oncontextmenu="customMenu(this.id, event)" onclick="AnotherOne()">Add Box</button>
-  <button id="MTVsNEXT" class="senditnow D R P" oncontextmenu="customMenu(this.id, event)" onclick="NextPart()">Next</button> 
+  <button id="MTVsNEXT" class="senditnow D R P" oncontextmenu="customMenu(this.id, event)" onclick="NextPart()">Next</button>
 </div>
 
                                             <!-- Other Parts and Labor -->
@@ -472,7 +472,7 @@ body {
       <label for="yes9"">YES</label><input type="radio" onclick="advancePT(this.id)" class="Mradio ptRad"  id="yes9" name="ans9" value="YES"><br>
       <label for="no9"">NO</label><input type="radio" onclick="advancePT(this.id)" class="Mradio ptRad" id="no9" name="ans9" value="NO"></div>
     </div>
-    <div id="quest10" class="newStyle ptQuest" style="display:none;">     
+    <div id="quest10" class="newStyle ptQuest" style="display:none;">
       <div class="PT qs"><b>Have you provided the repair facility with the assigned adjusters name, direct extension, and e-mail?</b></div>
       <div class="PT as">
       <label for="yes10">YES</label><input type="radio" onclick="advancePT(this.id)" class="Mradio ptRad" id="yes10" name="ans10" value="YES"><br>
@@ -484,11 +484,11 @@ body {
       <label for="yes11">YES</label><input type="radio" onclick="advancePT(this.id)" class="Mradio ptRad" id="yes11" name="ans11" value="YES"><br>
       <label for="no11">NO</label><input type="radio" onclick="advancePT(this.id)" class="Mradio ptRad" id="no11" name="ans11" value="NO"></div>
     </div>
-    <div id="q11ansY" class="anotherGuess noShow" style="display:none;"> 
+    <div id="q11ansY" class="anotherGuess noShow" style="display:none;">
       <textarea id="q11ansExplain" placeholder="Additional Information" rows="5" cols="40" style="left:20px;box-shadow:none;border:2px solid black;resize:none;"></textarea>
       <button id="done11" class="ptLittle" onclick="advancePT(this.id)">Next</button>
     </div>
-    <div id="questBTNs" class="noShow"> 
+    <div id="questBTNs" class="noShow">
       <button id="backTemp" class="wefwefwef" onclick="backTEMP()">Back</button>
       <button id="cancelPT" class="wefwefwef" onclick="cancelPT()">Cancel</button>
     </div>
@@ -545,7 +545,7 @@ body {
       <input type="checkbox" id="pandlin" class="newStatus largerCheckbox">
       Parts and labor should be verified<br>and entered into claim. <br><br>
       <input type="checkbox" id="taskset" class="newStatus largerCheckbox">
-      A task should be set for follow up. 
+      A task should be set for follow up.
     </p>
   </div>
   <div id="littleHelp" class="noShow">In the Status Note section, select the options relevant to your claim. If you are waiting on additional items, click 'Another One?' and repeat.<br>Add anything you like in the text area at the top right of the screen.<br>In the section under that, click the boxes next to the procedures you have completed.<br>When finished click 'Submit' to generate your note.</div>
@@ -639,27 +639,27 @@ body {
       <button id="TGAFOBTN" class="IBOBC D R P" oncontextmenu="customMenu(this.id, event)" none" onclick="TGAFO(this.id)" style="display: none">OOPC</button>
       <button id="TGAFSBTN" class="IBOBC D R P" oncontextmenu="customMenu(this.id, event)" none" onclick="TGAFS(this.id)" style="display: none">SHIPPING</button>
       <button id="TGAFBBTN" class="IBOBC D R P" oncontextmenu="customMenu(this.id, event)" none" onclick="TGAFB(this.id)" style="display: none">BOTH</button>
-    </div> 
+    </div>
     <div id="CHthree" class="noShow">
       <button id="TGAFOABTN" class="IBOBC D R P C" oncontextmenu="customMenu(this.id, event)" none" onclick="TGAFOA(this.id)" style="display: none">AUTHED</button>
       <button id="TGAFODBTN" class="IBOBC D R P C" oncontextmenu="customMenu(this.id, event)" onclick="TGAFOD(this.id)" style="display: none">DECLINED</button>
       <button id="TGAFOCBTN" class="IBOBC D R P C" oncontextmenu="customMenu(this.id, event)" onclick="TGAFOC(this.id)" style="display: none">CH WILL CALL BACK</button>
-    </div> 
+    </div>
     <div id="CHfour" class="noShow">
       <button id="TGAFSABTN" class="IBOBC D R P C" oncontextmenu="customMenu(this.id, event)" onclick="TGAFSA(this.id)" style="display: none">AUTHED</button>
       <button id="TGAFSDBTN" class="IBOBC D R P C" oncontextmenu="customMenu(this.id, event)" onclick="TGAFSD(this.id)" style="display: none">DECLINED</button>
       <button id="TGAFSCBTN" class="IBOBC D R P C" oncontextmenu="customMenu(this.id, event)" onclick="TGAFSC(this.id)" style="display: none">CH WILL CALL BACK</button>
-    </div> 
+    </div>
     <div id="CHfive" class="noShow">
       <button id="TGAFOSABTN" class="IBOBC D R P C" oncontextmenu="customMenu(this.id, event)" onclick="TGAFOSA(this.id)" style="display: none">AUTHED BOTH</button>
       <button id="TGAFOSDSBTN" class="IBOBC D R P C" oncontextmenu="customMenu(this.id, event)" onclick="TGAFOSDS(this.id)" style="display: none">DECLINED SHIPPING <br>APPROVED OOP</button>
       <button id="TGAFOSDBBTN" class="IBOBC D R P C" oncontextmenu="customMenu(this.id, event)" onclick="TGAFOSDB(this.id)" style="display: none">DECLINED REPAIRS</button>
       <button id="TGAFOSCBTN" class="IBOBC D R P C" oncontextmenu="customMenu(this.id, event)" onclick="TGAFOSC(this.id)" style="display: none">CH WILL CALL BACK</button>
-    </div> 
+    </div>
     <div id="NoAnsDiv" class="noShow">
       <button id="NALVM" class="IBOBC D R P" oncontextmenu="customMenu(this.id, event)" onclick="NAV()" style="display: none">NO ANS<br>LEFT VM</button>
       <button id="NANVM" class="IBOBC D R P" oncontextmenu="customMenu(this.id, event)" onclick="NAN()" style="display: none">NO ANS<br>NO VM</button>
-    </div> 
+    </div>
   </div>
 </div>
 </div>
@@ -891,7 +891,7 @@ PAYMENT:&nbsp&nbsp
 ZIPCODE:&nbsp&nbsp
 MILEAGE:&nbsp&nbsp
 DISTANCE:&nbsp&nbsp
-TIME:&nbsp&nbsp</textarea> 
+TIME:&nbsp&nbsp</textarea>
 <button id="CopyPaymentBTN" class="astext" onclick="CopyIntakeForm('1')">PAYMENT: </button>
 <button id="CopyZipBTN" class="astext" onclick="CopyIntakeForm('2')">ZIPCODE: </button>
 <button id="CopyMileBTN" class="astext" onclick="CopyIntakeForm('3')">MILEAGE: </button>
@@ -904,7 +904,7 @@ TIME:&nbsp&nbsp</textarea>
 <textarea autocomplete="off" title="Hidden" id="textareadata" class="hideME noShow" name="name"></textarea>
 <textarea style="display: none;" id="EDITarea"></textarea>
 
-<div id="div6" class="dbacking div6" style="display: none">    
+<div id="div6" class="dbacking div6" style="display: none">
   REG OIL: 7.13<br>
   SYN OIL: 11.89<br><br>
   DEX III: 11.68<br>
@@ -1067,7 +1067,7 @@ TIME:&nbsp&nbsp</textarea>
 
   <div id="MileDiscrep" class="tabcontent">
     <h3 class="headerTab">Mileage Discrepancies</h3>
-    <div id="MileDiscrep1" class="mileage noShow"> 
+    <div id="MileDiscrep1" class="mileage noShow">
       <p><b>Is the contract a Term contract or a Month-to-Month Contract?</b>
         <input type="radio" class="mdguide" id="md1" name="discrep1"><label for="md1" style="float:right;" required><b>Term</b></label><br>
         <input type="radio" class="mdguide" id="md2" name="discrep1"><label for="md2" style="float:right;" required><b>M-2-M</b></label>
@@ -1132,19 +1132,19 @@ TIME:&nbsp&nbsp</textarea>
 
   <div id="PAPrice" class="tabcontent">
     <h3 class="headerTab">Parts Pricing - PA and Sourcing</h3>
-    <div id="authGuide1" class="authGuide noShow"> 
+    <div id="authGuide1" class="authGuide noShow">
       <p class="bodyTab"><b>Is the Repair Facility part OEM or AM?</b>
         <input type="radio" onclick="goGuide('am',this.name)" class="authGuideradio" id="AM1" name="guide1" value="AM"><label for="AM1" style="float:right;"><b>AM</b></label><br>
         <input type="radio" onclick="goGuide('oe',this.name)" class="authGuideradio" id="OE1" name="guide1" value="OE"><label for="OE1" style="float:right;"><b>OEM</b></label></p>
-      <div id="authGuideOE" class="authGuide noShow" style="display:none;"> 
+      <div id="authGuideOE" class="authGuide noShow" style="display:none;">
         <p class="bodyTab"><b>Is the MSRP over $250.00?</b>
           <input type="radio" onclick="goGuide('oeover',this.name)" class="authGuideradio" id="over1" name="guide2" value="over"><label for="over1" style="float:right;"><b>Yes</b></label><br>
           <input type="radio" onclick="goGuide('oeunder',this.name)" class="authGuideradio" id="under1" name="guide2" value="under"><label for="under1" style="float:right;"><b>No</b></label></p>
-         <div id="oeunder" class="authGuide noShow" style="display:none"> 
+         <div id="oeunder" class="authGuide noShow" style="display:none">
           <p class="bodyTab"><b>Is the RF charging more than OEM MSRP?</b>
           <input type="radio" onclick="goGuide('rfovrmsrp',this.name)" class="authGuideradio" id="rfovli34" name="gui"><label for="rfovli34" style="float:right;"><b>Yes</b></label><br>
           <input type="radio" onclick="goGuide('rfundmsrp',this.name)" class="authGuideradio" id="rfundli34" name="gui"><label for="rfundli34" style="float:right;"><b>No</b></label></p>
-         <div id="rfovrmsrp" class="authGuide noShow" style="display:none"> 
+         <div id="rfovrmsrp" class="authGuide noShow" style="display:none">
           <p class="bodyTab"><b>If the RF won't match, is shipping an option?</b>
           <input type="radio" onclick="goGuide('mayship3',this.name)" class="authGuideradio" id="yyyship" name="guid234" value="yes"><label for="yship" style="float:right;"><b>Yes</b></label><br>
           <input type="radio" onclick="goGuide('noship3',this.name)" class="authGuideradio" id="nnnship" name="guid234" value="no"><label for="nship" style="float:right;"><b>No</b></label></p>
@@ -1152,7 +1152,7 @@ TIME:&nbsp&nbsp</textarea>
       </div>
       </div>
     </div>
-    <div id="authGuideAM" class="authGuide noShow" style="display:none"> 
+    <div id="authGuideAM" class="authGuide noShow" style="display:none">
       <p><b>PA Sourcing</b></p>
       <p class="bodyTab">Enter the CH VIN into PA<br>
         If the RF is using OEM, search using the OEM part number<br>
@@ -1171,7 +1171,7 @@ TIME:&nbsp&nbsp</textarea>
         <input type="radio" onclick="goGuide('pricing',this.name)" class="authGuideradio" id="paopt1" name="guide3" value="yespa"><label for="paopt1" style="float:right;"><b>Yes</b></label><br>
         <input type="radio" onclick="goGuide('sourcing',this.name)" class="authGuideradio" id="noopt1" name="guide3" value="nopa"><label for="noopt1" style="float:right;"><b>No</b></label></p>
     </div>
-    <div id="paGuide" class="authGuide noShow" style="display:none"> 
+    <div id="paGuide" class="authGuide noShow" style="display:none">
       <p><b>PA Pricing</b></p>
       <p class="bodyTab"><b>Is the PA LIST price over $250.00?</b>
         <input type="radio" onclick="goGuide('listover',this.name)" class="authGuideradio" id="listov" name="guide4" value="over"><label for="listov" style="float:right;"><b>Yes</b></label><br>
@@ -1301,10 +1301,10 @@ TIME:&nbsp&nbsp</textarea>
       Dye Test for Engine: <b>.5</b> - <b>1</b><br>
       Cleaning: <b>.2 - .4</b> if covered by contract</p>
       <p><b>Additional Info</b></p>
-      <p class="bodyTab">Coolant flushes after water pump replacement are to be 
-      used only if there is contamination in the system from a covered 
+      <p class="bodyTab">Coolant flushes after water pump replacement are to be
+      used only if there is contamination in the system from a covered
       failure.<br><br>
-      Anything that is part of the R/R procedure cannot be counted 
+      Anything that is part of the R/R procedure cannot be counted
       towards diag as it is considered overlap.<br><br>
       Always check ProDemand FIRST.</p>
       </div>
@@ -1611,7 +1611,7 @@ TIME:&nbsp&nbsp</textarea>
       </table>
     </div>
     <div class="diagBot">
-      <textarea class="diag" placeholder="Notes..."></textarea> 
+      <textarea class="diag" placeholder="Notes..."></textarea>
     </div>
   </div>
   <div id="Turbo" class="diagcontent">
@@ -1664,7 +1664,7 @@ TIME:&nbsp&nbsp</textarea>
       </table>
     </div>
     <div class="diagBot">
-      <textarea class="diag" placeholder="Notes..."></textarea> 
+      <textarea class="diag" placeholder="Notes..."></textarea>
     </div>
   </div>
   <div id="Electrical" class="diagcontent">
@@ -1718,7 +1718,7 @@ TIME:&nbsp&nbsp</textarea>
       </table>
     </div>
     <div class="diagBot">
-      <textarea class="diag" placeholder="Notes..."></textarea> 
+      <textarea class="diag" placeholder="Notes..."></textarea>
     </div>
   </div>
   <div id="Fuel" class="diagcontent">
@@ -1771,7 +1771,7 @@ TIME:&nbsp&nbsp</textarea>
       </table>
     </div>
     <div class="diagBot">
-      <textarea class="diag" placeholder="Notes..."></textarea> 
+      <textarea class="diag" placeholder="Notes..."></textarea>
     </div>
   </div>
   <div id="Steering" class="diagcontent">
@@ -1825,7 +1825,7 @@ TIME:&nbsp&nbsp</textarea>
       </table>
     </div>
     <div class="diagBot">
-      <textarea class="diag" placeholder="Notes..."></textarea> 
+      <textarea class="diag" placeholder="Notes..."></textarea>
     </div>
   </div>
   <div id="Suspension" class="diagcontent">
@@ -1875,7 +1875,7 @@ TIME:&nbsp&nbsp</textarea>
       </table>
     </div>
     <div class="diagBot">
-      <textarea class="diag" placeholder="Notes..."></textarea> 
+      <textarea class="diag" placeholder="Notes..."></textarea>
     </div>
   </div>
   <div id="AC" class="diagcontent">
@@ -1934,7 +1934,7 @@ TIME:&nbsp&nbsp</textarea>
       </table>
     </div>
     <div class="diagBot">
-      <textarea class="diag" placeholder="Notes..."></textarea> 
+      <textarea class="diag" placeholder="Notes..."></textarea>
     </div>
   </div>
   <div id="Timing" class="diagcontent">
@@ -1991,7 +1991,7 @@ TIME:&nbsp&nbsp</textarea>
       </table>
     </div>
     <div class="diagBot">
-      <textarea class="diag" placeholder="Notes..."></textarea> 
+      <textarea class="diag" placeholder="Notes..."></textarea>
     </div>
   </div>
   <button id="exitRcrce2" class="wefwefwef" onclick="closeResource2()">Exit</button>
@@ -2015,7 +2015,7 @@ TIME:&nbsp&nbsp</textarea>
       </p>
       <p>
         Optional:<br>
-        Are they requesting more than the Labor Rate in CMS? 
+        Are they requesting more than the Labor Rate in CMS?
       </p>
     </div>
     <div class="side_div revert">
