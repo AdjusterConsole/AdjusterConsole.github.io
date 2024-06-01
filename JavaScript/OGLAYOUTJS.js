@@ -101,8 +101,7 @@ function ShowTemps() {
     return;
   }
   TPDiv.style.display = "inline-block";
-  const list = document.getElementById("mySidenav").classList;
-  list.replace("open_nav", "closed_nav");
+  document.getElementById("mySidenav").classList.remove("open_nav");
 }
 
 function MENU() {
@@ -121,8 +120,7 @@ function MENU() {
     buttonMaker.style.opacity = '1';
     tutorialSel.style.top = "120px";
     tutorialSel.style.opacity = '1';
-    const list = document.getElementById("mySidenav").classList;
-    list.replace("open_nav", "closed_nav");
+    document.getElementById("mySidenav").classList.remove("open_nav");
     localStorage.setItem("menuOpen", "true");
   } else {
     BtnBuilder.style.top = "20px";
@@ -150,8 +148,7 @@ function statNOTE() {
   }
   statNote.style.display = "inline-block";
   statNoteinner.style.height = "90%";
-  const list = document.getElementById("mySidenav").classList;
-  list.replace("open_nav", "closed_nav");
+  document.getElementById("mySidenav").classList.remove("open_nav");
 }
 
 function cancelStat() {
@@ -1082,13 +1079,9 @@ function trackerBlank() {
 
 function openNav() {
   if (checkOpen()) { return; }
-  const list = document.getElementById("mySidenav").classList;
-  list.toggle("open_nav");
-  document.getElementById("mySidenav").offsetWidth;
+  document.getElementById("mySidenav").classList.add("open_nav");
 }
 
 function closeNav() {
-  const list = document.getElementById("mySidenav").classList;
-  list.toggle("open_nav");
-  document.getElementById("mySidenav").offsetWidth;
+  document.getElementById("mySidenav").classList.remove("open_nav");
 }
