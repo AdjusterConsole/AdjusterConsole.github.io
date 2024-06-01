@@ -971,6 +971,8 @@ window.onload = function PutItBack() {
   localStorage.setItem("toldem", "false");
   localStorage.setItem("menuOpen", "false");
   localStorage.setItem("newpartcount","2");
+  localStorage.setItem("menuState", 0);
+  localStorage.setItem("colorState", 0);
   if (didItRun == null) {
     localStorage.setItem("Im The Boss", "It's Been Done");
     localStorage.setItem(selected + "STCB", '0');
