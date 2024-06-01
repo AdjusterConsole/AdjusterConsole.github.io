@@ -14,7 +14,6 @@
 //
 //For inquiries regarding licensing or permission to use this code in ways not covered by this license, please contact the author at AdjusterConsole.com.
 
-var IDset = [];
 const menu = document.getElementById("context-menu");
 var menuState = 0;
 var colorState = "0";
