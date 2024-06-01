@@ -530,7 +530,6 @@ function STMTTEMP(btnID) {
   textarea.select();
   document.execCommand("copy");
   ShowTemps();
-  imBusy = "false";
 }
 
 function REVIEW(btnID) {
@@ -547,7 +546,6 @@ function REVIEW(btnID) {
   textarea.select();
   document.execCommand("copy");
   ShowTemps();
-  imBusy = "false";
 }
 
 function RECREQ(btnID) {
@@ -594,7 +592,6 @@ function INSPTEMP(btnID) {
   textarea.select();
   document.execCommand("copy");
   ShowTemps();
-  imBusy = "false";
 }
 
 function PTXFER() {
