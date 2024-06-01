@@ -53,7 +53,7 @@ function RESET() {
   bothADDCB();
   hideSnip();
   ClearText();
-  newpartcount = 2;
+  localStorage.setItem("newpartcount","2");
   document.getElementById("transferTemplate").style.display = "none";
   document.getElementById("statNote").style.display = "none";
   document.getElementById("newAuthstyle").style.display = "none";
