@@ -26,9 +26,9 @@ f {
 
 div {
   background: white;
-  background: linear-gradient(35deg, 
-    var(--my-accent-color) 0%, 
-    white 30%, 
+  background: linear-gradient(35deg,
+    var(--my-accent-color) 0%,
+    white 30%,
     white 70%,
     var(--my-accent-color) 100%);
   border-radius: 5px;
@@ -61,10 +61,10 @@ input[type="color"] {
   display: inline-block;
   font-size: 30px;
   color: var(--glow-txt-color);
-  text-shadow:   
-    1px 1px 1px var(--glow-outline-color), 
-   -1px -1px 1px var(--glow-outline-color), 
-   -1px 1px 1px var(--glow-outline-color), 
+  text-shadow:
+    1px 1px 1px var(--glow-outline-color),
+   -1px -1px 1px var(--glow-outline-color),
+   -1px 1px 1px var(--glow-outline-color),
     1px -1px 1px var(--glow-outline-color),
     0px 0px 10px var(--my-glow-color),
     0px 0px 15px var(--my-glow-color),
@@ -74,20 +74,20 @@ input[type="color"] {
 
 @keyframes Shine {
   0% {
-  text-shadow:   
-    1px 1px 1px var(--glow-outline-color), 
-   -1px -1px 1px var(--glow-outline-color), 
-   -1px 1px 1px var(--glow-outline-color), 
+  text-shadow:
+    1px 1px 1px var(--glow-outline-color),
+   -1px -1px 1px var(--glow-outline-color),
+   -1px 1px 1px var(--glow-outline-color),
     1px -1px 1px var(--glow-outline-color),
     0px 0px 10px var(--my-glow-color),
     0px 0px 15px var(--my-glow-color),
     0px 0px 30px var(--my-glow-color);
   }
   50% {
-  text-shadow:   
-    1px 1px 1px var(--glow-outline-color), 
-   -1px -1px 1px var(--glow-outline-color), 
-   -1px 1px 1px var(--glow-outline-color), 
+  text-shadow:
+    1px 1px 1px var(--glow-outline-color),
+   -1px -1px 1px var(--glow-outline-color),
+   -1px 1px 1px var(--glow-outline-color),
     1px -1px 1px var(--glow-outline-color),
     0px 0px 10px var(--my-glow-color),
     0px 0px 17px var(--my-glow-color),
@@ -108,7 +108,7 @@ input[type="color"] {
 }
 
 .div6 {
-  font-size: 16px; 
+  font-size: 16px;
   top: 60px;
   left: 420px;
   position: absolute;
@@ -120,7 +120,7 @@ input[type="color"] {
 }
 
 .dbacking.div6 {
-  font-size: 17px; 
+  font-size: 17px;
   top: 40px;
   left: 420px;
   position: absolute;
@@ -177,9 +177,9 @@ input[type="color"] {
 .IBOBC {
   display: inline-block;
   position: absolute;
-  margin: 0px; 
-  font-size: 14px; 
-} 
+  margin: 0px;
+  font-size: 14px;
+}
 
 .RFinboundDIV {
   display: inline-block;
@@ -203,7 +203,7 @@ input[type="color"] {
 }
 
 #PNLCBTN {
-  height: 65px; 
+  height: 65px;
   width: 120px;
   top: 0px;
   left: 260px;
@@ -372,7 +372,7 @@ input[type="color"] {
   width: 120px;
   top: 0px;
   left: 0px;
-  font-size: 17px; 
+  font-size: 17px;
 }
 
 #RESET {
@@ -380,7 +380,7 @@ input[type="color"] {
   left: -5px;
   width: 60px;
   height: 35px;
-  font-size: 11px; 
+  font-size: 11px;
 }
 
 #COPY {
@@ -388,7 +388,7 @@ input[type="color"] {
   left: 65px;
   width: 60px;
   height: 35px;
-  font-size: 11px; 
+  font-size: 11px;
 }
 
 #CopyZipBTN {
