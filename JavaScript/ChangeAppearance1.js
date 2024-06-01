@@ -27,7 +27,7 @@ function colorObject() {
   this.shadow2 = "#1A2229";
   this.username = '';
   this.glow = "#ffffff";
-  this.text = "#324350";
+  this.text = "#000000";
   this.outline = "#ffffff";
   this.hover = "#7C878F32";
   this.active = "#7C878F60";
@@ -101,7 +101,7 @@ function setColor(colors) {
       colorSet.shadow1 = "#D4D7DA";
       colorSet.shadow2 = "#1A2229";
       colorSet.glow = "#ffffff";
-      colorSet.text = "#324350";
+      colorSet.text = "#000000";
       colorSet.outline = "#FFFFFF";
       colorSet.hover = "#7C878F32";
       colorSet.active = "#7C878F60";
