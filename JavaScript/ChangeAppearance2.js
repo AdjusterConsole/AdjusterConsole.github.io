@@ -206,7 +206,7 @@ function exitColor() {
 
 function saveColors() {
   getPicker();
-  setProperty();                           
+  setProperty();
   exitColor();
 }
 
