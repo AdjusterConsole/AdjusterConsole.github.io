@@ -423,7 +423,9 @@ function displayRecs(z) {
   if (document.getElementById('reportTable') != null) {
     document.getElementById('outputDiv').removeChild(document.getElementById('reportTable'));
     document.getElementById('msgDiv').innerHTML = "";
+    document.getElementById('alertDiv').innerHTML += "";
   }
+
   const objectArr = JSON.parse(localStorage.getItem("objectArr"));
   const table = document.createElement('table');
   table.classList.add('TheOutputtable');
@@ -444,6 +446,8 @@ function displayRecs(z) {
   let waitPeriod = false;
   let HMPD = false;
   let mileDis = false;
+  let hasMessage = false;
+  let displayMessage = false;
   for (i = 0; i < objectArr.length; i++) {
     const row = body.insertRow();
     row.classList.add('rowit');
@@ -481,47 +485,34 @@ function displayRecs(z) {
     }
     row.insertCell(7).innerText = tempRec.notes;
     document.getElementById('outputDiv').appendChild(table);
-    var hasMessage = false;
+    
     if (tempRec.isService) {
       if (overTime < 90 || distance < 700) {
-        if (overTime < 90 && !EIC) {
-          document.getElementById('msgDiv').innerHTML += "This vehicle has less than 90 days in coverage<br><br>";
-        }
-        if (distance < 700) {
-          document.getElementById('msgDiv').innerHTML += "This vehicle is within 700 miles of the inception mileage<br><br>";
-        }
         document.getElementById('alertDiv').innerHTML += "\u2757 ALERT: EARLY IN COVERAGE \u2757<br>";
         hasMessage = true;
         EIC = true;
       }
     }
     if (tempRec.waitperiod && !waitPeriod) {
-      document.getElementById('msgDiv').innerHTML += "The failure dated " + outputDate + " was on day " + overTime + " of coverage.<br>The vehicle travelled " + distance + " since inception before failure.<br><br>";
       document.getElementById('alertDiv').innerHTML += "\u2757 ALERT: WAITING PERIOD \u2757<br>";
       hasMessage = true;
       waitPeriod = true;
     }
     if (tempRec.discrepancy && !mileDis) {
-      document.getElementById('msgDiv').innerHTML += "Review The dates and mileages of the surrounding records for any discrepancies.<br><br>";
       document.getElementById('alertDiv').innerHTML += "\u2757 ALERT: MILEAGE DISCREPANCY \u2757<br>";
       hasMessage = true;
       mileDis = true;
     }
     if (milesper > 200 && !HMPD) {
-      document.getElementById('msgDiv').innerHTML += "This vehicle has travelled " + milesper + " miles per day.<br>";
       document.getElementById('alertDiv').innerHTML += "\u2757 ALERT: HMPD \u2757<br>";
       hasMessage = true;
       HMPD = true;
-      if (overTime < 90) {
-        document.getElementById('msgDiv').innerHTML += "Since they are on day " + overTime + " of coverage, please review the HMPD SOP.<br><br>";
-      } else if (overTime > 89) {
-        document.getElementById('msgDiv').innerHTML += "Since they are on day " + overTime + " of coverage, Continue the claim as normal.<br><br>";
-      }
     }
     if (z == '0' || z == '2' || z == '3') {
       displayOutput();
-      if (hasMessage) {
-        document.getElementById('alertDiv').innerHTML += "\u2757 CLICK TO SHOW MESSAGES \u2757<br>";
+      if (hasMessage && !displayMessage) {
+        var currentAlert = document.getElementById('alertDiv').innerHTML;
+        displayMessage = true;
       }
     }
   }
@@ -533,7 +524,7 @@ function displayRecs(z) {
   }
   priorMileage();
   if (z == '1' || z == '2' || z == '3') {
-    noteOutput(z, EIC, waitPeriod, HMPD, mileDis);
+    noteOutput(z);
     return;
   }
 }
@@ -580,38 +571,44 @@ function inceptEst(spot) {
   var daysIn = dayCalc(incDate, serDate);
 
   if (spot == 'both') {
-    document.getElementById('msgDiv').style.opacity = 1;
-    document.getElementById('msgDiv').innerHTML += "<b>The inception mileage is " + estimatedInception + "</b><br>";
-    document.getElementById('msgDiv').innerHTML += "Elapsed Days Claim/Maint: " + daysBtwnRecs + "<br>";
-    document.getElementById('msgDiv').innerHTML += "Elapsed Miles Claim/Maint: " + milesBtwnRecs + "<br>";
-    document.getElementById('msgDiv').innerHTML += "Miles Per Day (Average): " + milesperday.toFixed() + "<br>";
-    document.getElementById('msgDiv').innerHTML += "Elapsed Days Maint/Sale: " + daysBtwnMaintSale + "<br>";
-    document.getElementById('msgDiv').innerHTML += "Miles Elapased in Contract: " + milesIn + "<br>";
-    document.getElementById('msgDiv').innerHTML += "Days Elapsed In Contract: " + daysIn;
+    displayOutput();
+    var msgDiv = document.getElementById('msgDiv');
+    msgDiv.style.opacity = 1;
+    msgDiv.innerHTML += "<b>The inception mileage is " + estimatedInception + "</b><br>";
+    msgDiv.innerHTML += "Elapsed Days Claim/Maint: " + daysBtwnRecs + "<br>";
+    msgDiv.innerHTML += "Elapsed Miles Claim/Maint: " + milesBtwnRecs + "<br>";
+    msgDiv.innerHTML += "Miles Per Day (Average): " + milesperday.toFixed() + "<br>";
+    msgDiv.innerHTML += "Elapsed Days Maint/Sale: " + daysBtwnMaintSale + "<br>";
+    msgDiv.innerHTML += "Miles Elapased in Contract: " + milesIn + "<br>";
+    msgDiv.innerHTML += "Days Elapsed In Contract: " + daysIn;
   } else if (spot == 'all') {
+    var splitR = document.getElementById('splitR');
     document.getElementById('splitL').style.display = "inline-block";
-    document.getElementById('splitR').style.display = "inline-block";
-    document.getElementById('splitR').innerHTML += "<b>The inception mileage is " + estimatedInception + "</b><br>";
-    document.getElementById('splitR').innerHTML += "Elapsed Days Claim/Maint: " + daysBtwnRecs + "<br>";
-    document.getElementById('splitR').innerHTML += "Elapsed Miles Claim/Maint: " + milesBtwnRecs + "<br>";
-    document.getElementById('splitR').innerHTML += "Miles Per Day (Average): " + milesperday.toFixed() + "<br>";
-    document.getElementById('splitR').innerHTML += "Elapsed Days Maint/Sale: " + daysBtwnMaintSale + "<br>";
-    document.getElementById('splitR').innerHTML += "Miles Elapased in Contract: " + milesIn + "<br>";
-    document.getElementById('splitR').innerHTML += "Days Elapsed In Contract: " + daysIn;
+    splitR.style.display = "inline-block";
+    splitR.innerHTML += "<b>The inception mileage is " + estimatedInception + "</b><br>";
+    splitR.innerHTML += "Elapsed Days Claim/Maint: " + daysBtwnRecs + "<br>";
+    splitR.innerHTML += "Elapsed Miles Claim/Maint: " + milesBtwnRecs + "<br>";
+    splitR.innerHTML += "Miles Per Day (Average): " + milesperday.toFixed() + "<br>";
+    splitR.innerHTML += "Elapsed Days Maint/Sale: " + daysBtwnMaintSale + "<br>";
+    splitR.innerHTML += "Miles Elapased in Contract: " + milesIn + "<br>";
+    splitR.innerHTML += "Days Elapsed In Contract: " + daysIn;
   } else {
-    outputDiv2.classList.toggle("arise");
+    var outputDiv2 = document.getElementById('outputDiv2');
+    var outputDiv3 = document.getElementById('outputDiv3');
+    outputDiv2.classList.add("arise");
     outputDiv2.style.height = "700px";
-    document.getElementById('outputDiv3').innerHTML += "<b>The inception mileage is " + estimatedInception + "</b><br>";
-    document.getElementById('outputDiv3').innerHTML += "Elapsed Days Claim/Maint: " + daysBtwnRecs + "<br>";
-    document.getElementById('outputDiv3').innerHTML += "Elapsed Miles Claim/Maint: " + milesBtwnRecs + "<br>";
-    document.getElementById('outputDiv3').innerHTML += "Miles Per Day (Average): " + milesperday.toFixed() + "<br>";
-    document.getElementById('outputDiv3').innerHTML += "Elapsed Days Maint/Sale: " + daysBtwnMaintSale + "<br>";
-    document.getElementById('outputDiv3').innerHTML += "Miles Elapased in Contract: " + milesIn + "<br>";
-    document.getElementById('outputDiv3').innerHTML += "Days Elapsed In Contract: " + daysIn;
+    outputDiv3.style.opacity = 1;
+    outputDiv3.innerHTML += "<b>The inception mileage is " + estimatedInception + "</b><br>";
+    outputDiv3.innerHTML += "Elapsed Days Claim/Maint: " + daysBtwnRecs + "<br>";
+    outputDiv3.innerHTML += "Elapsed Miles Claim/Maint: " + milesBtwnRecs + "<br>";
+    outputDiv3.innerHTML += "Miles Per Day (Average): " + milesperday.toFixed() + "<br>";
+    outputDiv3.innerHTML += "Elapsed Days Maint/Sale: " + daysBtwnMaintSale + "<br>";
+    outputDiv3.innerHTML += "Miles Elapased in Contract: " + milesIn + "<br>";
+    outputDiv3.innerHTML += "Days Elapsed In Contract: " + daysIn;
   }
 }
 
-function noteOutput(z, EIC, waitPeriod, HMPD, mileDis) {
+function noteOutput(z) {
   var msgDiv = document.getElementById('msgDiv');
   var outputDiv3 = document.getElementById('outputDiv3');
   var splitL = document.getElementById('splitL');
@@ -638,20 +635,6 @@ function noteOutput(z, EIC, waitPeriod, HMPD, mileDis) {
     if (objectArr[i].notes == null) { objectArr[i].notes = "None"; }
     whereOut.innerHTML += "Notes: " + objectArr[i].notes + "<br>";
   }
-  whereOut.innerHTML += "<br>";
-  if (EIC) {
-    whereOut.innerHTML += "This contract is early into coverage.<br>";
-  }
-  if (waitPeriod) {
-    whereOut.innerHTML += "This Claim date is in the waiting period.<br>";
-  }
-  if (HMPD) {
-    whereOut.innerHTML += "This vehicle exhibited HMPD.<br>";
-  }
-  if (mileDis) {
-    whereOut.innerHTML += "There is a mileage discrepancy within the records.<br>";
-  }
-  whereOut.innerHTML += "<br>";
   hideTable();
   if (z == '1') {
     outputDiv2.classList.toggle("arise");
@@ -660,12 +643,26 @@ function noteOutput(z, EIC, waitPeriod, HMPD, mileDis) {
     whereOut.style.opacity = '1';
   }
   if (z == '3') {
+    var msgDiv = document.getElementById('msgDiv');
     document.getElementById('outputDiv').style.top = "25px";
     document.getElementById('outputDiv').style.left = "25px";
     document.getElementById('outputDiv').style.height = "90%";
     document.getElementById('outputDiv').style.width = "90%";
+    splitL.style.opacity = '0';
+    msgDiv.style.opacity = '1';
+    msgDiv.innerHTML = "Click to show note format";
   }
 }
+
+document.addEventListener('click', function(e) {
+  var msgDiv = document.getElementById('msgDiv');
+  var splitL = document.getElementById('splitL');
+  if (msgDiv.contains(e.target) && splitL.style.opacity == '0') {
+    splitL.style.opacity = '1';
+  } else if (msgDiv.contains(e.target) && splitL.style.opacity == '1') {
+    splitL.style.opacity = '0';
+  }
+});
 
 function displayOutput() {
   hideTable();
@@ -692,6 +689,8 @@ function closeOutput() {
 }
 
 function closeOutput2() {
+  document.getElementById('msgDiv').innerHTML = "";
+  document.getElementById('alertDiv').innerHTML = "";
   var outputDiv2 = document.getElementById('outputDiv2');
   outputDiv3.innerHTML = "";
   outputDiv2.classList.remove("arise");
@@ -700,6 +699,8 @@ function closeOutput2() {
 }
 
 function resetReport() {
+  document.getElementById('msgDiv').innerHTML = "";
+  document.getElementById('alertDiv').innerHTML = "";
   document.getElementById('trackerMsg').innerText = "";
   document.getElementById('trackerMini').innerText = "";
   document.getElementById('splitL').innerHTML = "";

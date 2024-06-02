@@ -166,9 +166,9 @@ function submitStat(again) {
   var isInformed = document.getElementById("informed");
   var isPandlin = document.getElementById("pandlin");
   var isTaskset = document.getElementById("taskset");
-  var ans1;
-  var ans2;
-  var ans3;
+  var ans1 = "";
+  var ans2 = "";
+  var ans3 = "";
   localStorage.removeItem("num0");
   localStorage.removeItem("num1");
   localStorage.removeItem("num2");
@@ -215,27 +215,29 @@ function submitStat(again) {
   document.getElementById("stat6text").value = "";
   document.getElementById("stat10text").value = "";
   document.getElementById("stat14text").value = "";
-  document.getElementById("textarea5").value += "Waiting on " + ans1 + " from " + ans2 + " in order to ";
-  var addon = 0;
-  if (document.getElementById("stat15").checked) {
-    localStorage.setItem("toldem", "true");
-  }
-  for (i = 0; i < 4; i++) {
-    var ans3 = localStorage.getItem("num" + i);
-    if (ans3 != null) {
-      if (addon != '0') {
-        if (i == '3') {
-          document.getElementById("textarea5").value += " as well as " + ans3;
+  if (ans1 != "" && ans2 != "" && ans3 != "") {
+    document.getElementById("textarea5").value += "Waiting on " + ans1 + " from " + ans2 + " in order to ";
+    var addon = 0;
+    if (document.getElementById("stat15").checked) {
+      localStorage.setItem("toldem", "true");
+    }
+    for (i = 0; i < 4; i++) {
+      var ans3 = localStorage.getItem("num" + i);
+      if (ans3 != null) {
+        if (addon != '0') {
+          if (i == '3') {
+            document.getElementById("textarea5").value += " as well as " + ans3;
+          } else {
+            document.getElementById("textarea5").value += " and " + ans3;
+            addon = addon + 1;
+          }
         } else {
-          document.getElementById("textarea5").value += " and " + ans3;
+          document.getElementById("textarea5").value += ans3;
           addon = addon + 1;
         }
-      } else {
-        document.getElementById("textarea5").value += ans3;
-        addon = addon + 1;
       }
+    localStorage.removeItem("num" + i);
     }
-  localStorage.removeItem("num" + i);
   }
   document.getElementById("textarea5").value += ".\r"
   document.getElementById("stat15").checked = false;
