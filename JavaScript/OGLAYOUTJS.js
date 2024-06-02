@@ -104,7 +104,8 @@ function ShowTemps() {
 function MENU() {
   var theMenu = document.getElementById("LOCK1");
   var BtnBuilder = document.getElementById("BtnBuilder");
-  var buttonMaker = document.getElementById("buttonMaker");
+  var appearance = document.getElementById("appearance");
+
   var menuOpen = localStorage.getItem("menuOpen");
   document.getElementById("EDITarea").value = "";
   if (menuOpen == 'false') {
@@ -113,20 +114,12 @@ function MENU() {
     appearance.style.opacity = '1';
     BtnBuilder.style.top = "70px";
     BtnBuilder.style.opacity = '1';
-    buttonMaker.style.top = "95px";
-    buttonMaker.style.opacity = '1';
-    tutorialSel.style.top = "120px";
-    tutorialSel.style.opacity = '1';
     localStorage.setItem("menuOpen", "true");
   } else {
     BtnBuilder.style.top = "20px";
     BtnBuilder.style.opacity = '0';
     appearance.style.top = "20px";
     appearance.style.opacity = '0';
-    buttonMaker.style.top = "20px";
-    buttonMaker.style.opacity = '0';
-    tutorialSel.style.top = "20px";
-    tutorialSel.style.opacity = '0';
     var page = localStorage.getItem('currentVer');
     theMenu.innerText = "\u2666 Settings \u2666";
     localStorage.setItem("menuOpen", "false");
