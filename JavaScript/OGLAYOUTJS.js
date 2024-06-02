@@ -145,6 +145,7 @@ function statNOTE() {
   }
   statNote.style.display = "inline-block";
   statNoteinner.style.height = "90%";
+  document.getElementById("textarea5").value = "";
   document.getElementById("mySidenav").classList.remove("open_nav");
 }
 
@@ -281,8 +282,7 @@ function showAuth() {
     return;
   }
   newAuthstyle.style.display = "inline-block";
-  const list = document.getElementById("mySidenav").classList;
-  list.replace("open_nav", "closed_nav");
+  document.getElementById("mySidenav").classList.remove("open_nav");
 }
 
 function moveAuth() {
