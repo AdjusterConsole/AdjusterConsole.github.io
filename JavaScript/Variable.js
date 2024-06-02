@@ -68,7 +68,7 @@ function whiteRabbit() {
   document.getElementById("resrcDiv").style.display = "none";
   document.getElementById("diagDiv").style.display = "none";
   document.getElementById("laborscriptDiv").style.display = "none";
-
+  RESETNOTE();
 }
 
 function CloseIt(){
