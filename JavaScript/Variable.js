@@ -12,7 +12,7 @@
 //
 //By using this code, you agree to abide by these terms and conditions. Failure to comply with these terms may result in legal action.
 //
-//For inquiries regarding licensing or permission to use this code in ways not covered by this license, please contact the author at adjusterconsole@gmail.com.
+//For inquiries regarding licensing or permission to use this code in ways not covered by this license, please contact the author at AdjusterConsole.com.
 
 function RESET() {
   document.getElementById("textarea3").value = "";
@@ -49,6 +49,26 @@ function RESET() {
   document.getElementById("statNote").style.display = "none";
   document.getElementById("newAuthstyle").style.display = "none";
   document.getElementById("TPDiv").style.display = "none";
+}
+
+function whiteRabbit() {
+  document.getElementById("transferTemplate").style.display = "none";
+  document.getElementById("statNote").style.display = "none";
+  document.getElementById("newAuthstyle").style.display = "none";
+  document.getElementById("TPDiv").style.display = "none";
+  const editMenus = document.getElementsByClassName("CMeditDIV");
+  for(i = 0; i < editMenus.length; i++) {
+    var tempId = editMenus[i].id;
+    document.getElementById(tempId).style.display = "none";
+  }
+  document.getElementById("toggleMaster").style.display = "none";
+  document.getElementById("infoDiv1").style.display = "none";
+  document.getElementById("infoDiv2").style.display = "none";
+  document.getElementById("div6").style.display = "none";
+  document.getElementById("resrcDiv").style.display = "none";
+  document.getElementById("diagDiv").style.display = "none";
+  document.getElementById("laborscriptDiv").style.display = "none";
+
 }
 
 function CloseIt(){
@@ -473,18 +493,18 @@ function hideSnip() {
 }
 
 function customMenu(sentID, event) {
-  event.preventDefault();
-  var menuNode = document.querySelectorAll(".CMeditDIV");
-  var menuList = Array.from(menuNode);
-  for (i = 0; i < menuList.length; i++) {
-    if (menuList[i].style.display != "none") {
-      console.log("issue");
+//  event.preventDefault();
+//  var menuNode = document.querySelectorAll(".CMeditDIV");
+//  var menuList = Array.from(menuNode);
+//  for (i = 0; i < menuList.length; i++) {
+//    if (menuList[i].style.display != "none") {
+//      console.log("issue");
       return;
-    }
-  }
-  toggleMenuOn();
-  positionMenu(event);
-  localStorage.setItem("lastCalled", sentID);
+//   }
+//  }
+//  toggleMenuOn();
+//  positionMenu(event);
+//  localStorage.setItem("lastCalled", sentID);
 }
 
 function toggleMenuOn() {
@@ -919,8 +939,9 @@ function infoCancel2() {
 }
 
 function showCustom() {
-  var infoDiv1 = document.getElementById("infoDiv1");
-  infoDiv1.style.display = "inline-block";
+//  var infoDiv1 = document.getElementById("infoDiv1");
+//  infoDiv1.style.display = "inline-block";
+alert("This function has been disabled");
 }
 
 function infoDone() {
@@ -1074,16 +1095,10 @@ document.onkeyup = function(e) {
   }
 };
 
-document.onkeydown = function(e) {
-  if (e.ctrlKey && e.shiftKey && e.which == 70) {
-    anotherView();
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape' || e.key === 'Esc') {
+    whiteRabbit();
   }
-};
-
-document.addEventListener('keydown', function(event) {
-    if (event.key === 'Escape' || event.key === 'Esc') {
-        location.reload();
-    }
 });
 
 function anotherView() {

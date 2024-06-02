@@ -12,7 +12,7 @@
 //
 //By using this code, you agree to abide by these terms and conditions. Failure to comply with these terms may result in legal action.
 //
-//For inquiries regarding licensing or permission to use this code in ways not covered by this license, please contact the author at adjusterconsole@gmail.com.
+//For inquiries regarding licensing or permission to use this code in ways not covered by this license, please contact the author at AdjusterConsole.com.
 
 
 function openInfo2(evt, cityName) {
@@ -27,8 +27,6 @@ function openInfo2(evt, cityName) {
   }
   document.getElementById(cityName).style.display = "block";
   evt.currentTarget.className += " active";
-  const list = document.getElementById("mySidenav").classList;
-  list.replace("open_nav", "closed_nav");
 }
 
 function closeResource2() {
@@ -53,7 +51,6 @@ function diagCenter() {
     var width1 = (widthpre / 4);
     var width = width1.toString() + "px";
     document.documentElement.style.setProperty('--div-width2', width);
-    document.getElementById("mySidenav").classList.remove("open_nav");
   } else {
     diagDiv.style.display = "none";
   }
@@ -118,7 +115,6 @@ function resrcCenter(x,y) {
     var width1 = (widthpre / w);
     var width = width1.toString() + "px";
     document.documentElement.style.setProperty('--div-width', width);
-    document.getElementById("mySidenav").classList.remove("open_nav");
     return;
   }
   resrcDiv.style.display = "none";
@@ -1032,7 +1028,6 @@ function openScript() {
   var isOpen = checkOpen();
   if (laborscriptDiv.style.display == "none" && !isOpen) {
     laborscriptDiv.style.display = "block";
-    document.getElementById("mySidenav").classList.remove("open_nav");
   } else {
     laborscriptDiv.style.display = "none";
   }
@@ -1230,11 +1225,30 @@ function buildLaborNote(result) {
   document.execCommand("copy");
 }
 
+
+document.addEventListener('click', function(e) {
+  var swap1 = document.getElementById('swap1');
+  var mySidenav = document.getElementById('mySidenav');
+  if (!mySidenav.contains(e.target) && !swap1.contains(e.target)) {
+    closeNav();
+  }
+});
+
+document.addEventListener('click', function(e) {
+  var sopnav = document.getElementById('sopnav');
+  var navtag = document.getElementById('navtag');
+  if (!navtag.contains(e.target) && !sopnav.contains(e.target)) {
+    closePDFmenu();
+  }
+});
+
+
 function closePDFmenu() {
   document.getElementById("navtag").style.display = "initial";
   document.getElementById("sopnav").classList.remove("open_sop");
   document.getElementById("sopnav2").classList.remove("open_sop");
   document.getElementById("sopnav3").classList.remove("open_sop");
+
 }
 
 function openSOPnav() {
@@ -1243,6 +1257,7 @@ function openSOPnav() {
   document.getElementById("sopnav").classList.add("open_sop");
   document.getElementById("sopnav2").classList.add("open_sop");
   document.getElementById("sopnav3").classList.add("open_sop");
+
 }
 
 function showSOP(id) {

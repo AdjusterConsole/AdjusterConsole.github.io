@@ -98,7 +98,7 @@ function ShowTemps() {
     return;
   }
   TPDiv.style.display = "inline-block";
-  document.getElementById("mySidenav").classList.remove("open_nav");
+
 }
 
 function MENU() {
@@ -117,7 +117,6 @@ function MENU() {
     buttonMaker.style.opacity = '1';
     tutorialSel.style.top = "120px";
     tutorialSel.style.opacity = '1';
-    document.getElementById("mySidenav").classList.remove("open_nav");
     localStorage.setItem("menuOpen", "true");
   } else {
     BtnBuilder.style.top = "20px";
@@ -146,7 +145,6 @@ function statNOTE() {
   statNote.style.display = "inline-block";
   statNoteinner.style.height = "90%";
   document.getElementById("textarea5").value = "";
-  document.getElementById("mySidenav").classList.remove("open_nav");
 }
 
 function cancelStat() {
@@ -282,7 +280,6 @@ function showAuth() {
     return;
   }
   newAuthstyle.style.display = "inline-block";
-  document.getElementById("mySidenav").classList.remove("open_nav");
 }
 
 function moveAuth() {
