@@ -1083,6 +1083,16 @@ function conjunctionJunction(buttonID) {
   }
 }
 
+document.addEventListener('contextmenu', function(e) {
+  e.preventDefault();
+  openNav();
+});
+
+document.ondblclick = function(e) {
+  e.preventDefault();
+  openSOPnav();
+};
+
 document.onkeydown = function(e) {
   if (e.ctrlKey && e.altKey && e.shiftKey && e.which == 85) {
     document.getElementById('myInfo').style.display = "inline-block";
