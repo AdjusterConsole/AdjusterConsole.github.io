@@ -2,11 +2,10 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
 <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload">
 <meta http-equiv="X-Content-Type-Options" content="nosniff">
 <meta name="referrer" content="no-referrer">
-<meta name="viewport" content="width=device-width">
-
 <link rel="stylesheet" href="CSS/Stable.css">
 <link rel="stylesheet" href="CSS/Common.css">
 <link rel="stylesheet" href="CSS/Orig/Buttons.css">
@@ -33,7 +32,7 @@ This code is provided under the following terms and conditions:
 
 By using this code, you agree to abide by these terms and conditions. Failure to comply with these terms may result in legal action.
 
-For inquiries regarding licensing or permission to use this code in ways not covered by this license, please contact the author at adjusterconsole@gmail.com.  */
+For inquiries regarding licensing or permission to use this code in ways not covered by this license, please contact the author at AdjusterConsole@gmail.com.  */
 
 body {
   font-family: Verdana, sans-serif;
@@ -115,7 +114,7 @@ body {
   --my-shadow-color1: #D4D7DA;
   --my-shadow-color2: #1A2229;
   --my-glow-color: #ffffff;
-  --glow-txt-color: #000000;
+  --glow-txt-color: #324350;
   --glow-outline-color: #FFFFFF;
   --hover-color: #7C878F32;
   --active-color: #7C878F60;
@@ -132,12 +131,12 @@ body {
 </head>
 <body>
 <div id="pdiv" class="noShow"><p></div>
-<div id="swap1" class="otherone" style="vertical-align: middle;" onclick="openNav()">&#9776;</div>
+<div id="swap1" class="otherone" onclick="openNav()">&#9776;</div>
 
                                                 <!-- Menu -->
 
 <div id="Mystery" class="TheGang noShow">
-  <button id="LOCK1" style="color: black;" class="astext" onclick="MENU()">&#x2666; Settings &#x2666;</button>
+  <button id="LOCK1" class="astext" onclick="MENU()">&#x2666; Settings &#x2666;</button>
   <button id="appearance" class="astext menu" onclick="personalize()">&#x2666; Appearance &#x2666;</button>
   <button id="BtnBuilder" class="astext menu" onclick="BuilderShow()">&#x2666; Toggle On/Off &#x2666;</button>
   <button id="buttonMaker" class="astext menu" onclick="showCustom()" >&#x2666; New Button &#x2666;</button>
@@ -830,7 +829,7 @@ body {
       <label for="LINK">Link Note</label><br>
       <input type="radio" id="ENDN" name="buttonType" value="ENDN">
       <label for="ENDN">End Note</label><br>
-   </div>
+    </div>
     <p><textarea id="BtnDisplay" placeholder="Button Display..." name="btnDisplay" rows="1" cols="35"></textarea></p>
     <p><textarea id="BtnContent" placeholder="Note Content..." name="btnContent" rows="5" cols="35"></textarea></p>
     <button id="infoCancel2" class="infoBtn" onclick="infoCancel2()">Cancel</button>
@@ -1082,7 +1081,6 @@ TIME:&nbsp&nbsp</textarea>
     </div>
   </div>
 
-
   <div id="PAPrice" class="tabcontent">
     <h3 class="headerTab">Parts Pricing - PA and Sourcing</h3>
     <div id="authGuide1" class="authGuide noShow">
@@ -1176,7 +1174,6 @@ TIME:&nbsp&nbsp</textarea>
   <button id="resetPA" class="wefwefwef D R P" onclick="resetGuide()">Reset</button>
   </div>
 
-
   <div id="PANoOrder" class="tabcontent">
   <h3 class="headerTab">Do Not Order These Parts From PA</h3>
     <div class="innerLeft">
@@ -1260,7 +1257,6 @@ TIME:&nbsp&nbsp</textarea>
       Always check ProDemand FIRST.</p>
       </div>
   </div>
-
 
   <div id="trackerTool" class="tabcontent">
   <div id="tableDiv" class="noteBins arise tableSize">
@@ -1369,7 +1365,6 @@ TIME:&nbsp&nbsp</textarea>
   </div>
 </div>
 
-
   <div id="DoNotUse" class="tabcontent noteBins arise">
     <h3 class="headerTab">Do Not Use vs STOP-NO CLAIMS ALLOWED</h3>
     <p class="bodyTab">Shops that have Do Not Use in the RF name are just duplicate accounts.<br>
@@ -1383,7 +1378,6 @@ TIME:&nbsp&nbsp</textarea>
     <p class="bodyTab">Do not share any details or speculation about the RF to the CH or anyone from the RF.</p>
     <p class="bodyTab">Document all actions taken in the notes.</p>
   </div>
-
 
   <div id="Tesla" class="tabcontent noteBins arise">
     <h3 class="headerTab">Tesla</h3>
@@ -1402,7 +1396,6 @@ TIME:&nbsp&nbsp</textarea>
       Advise the Repair Facility that the team that handles Tesla claims will reach out with-in 24 hours.</p>
   </div>
 
-
   <div id="xfer2790" class="tabcontent noteBins arise">
     <h3 class="headerTab">2790</h3>
     <p><b>Don't let the big red banner scare you off.</b></p>
@@ -1412,7 +1405,6 @@ TIME:&nbsp&nbsp</textarea>
     you should task the assigned ADJ with updates or actions needed.</p>
     <p class="bodyTab">And of course, if you are not sure of what steps you should take, reach out to your TL.</p>
   </div>
-
 
   <div id="partsRes" class="tabcontent noteBins arise">
     <h3 class="headerTab" style="margin-bottom:0px;">Parts Resolution</h3><br>
@@ -1441,7 +1433,6 @@ TIME:&nbsp&nbsp</textarea>
       </ul>
   </div>
 
-
   <div id="IsItPT" class="tabcontent noteBins arise">
     <h3 class="headerTab">Is It PT?</h3>
     <p><b>What Qualifies for PowerTrain Transfer:</b></p>
@@ -1462,7 +1453,6 @@ TIME:&nbsp&nbsp</textarea>
     A/C Concerns</p>
   </div>
 
-
   <div id="MBIClaims" class="tabcontent noteBins arise">
     <h3 class="headerTab">MBI Claims</h3>
     <p><b>Important</b></p>
@@ -1481,7 +1471,6 @@ TIME:&nbsp&nbsp</textarea>
   </div>
   <button id="exitRec" class="wefwefwef" onclick="closeResource()">Exit</button>
 </div>
-
 
   <div id="outputDiv" class="noteBins outputDiv">
     <div id="alertDiv" class="noShow" onclick="showMsg()"></div>

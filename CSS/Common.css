@@ -12,7 +12,7 @@ This code is provided under the following terms and conditions:
 
 By using this code, you agree to abide by these terms and conditions. Failure to comply with these terms may result in legal action.
 
-For inquiries regarding licensing or permission to use this code in ways not covered by this license, please contact the author at adjusterconsole@gmail.com.  */
+For inquiries regarding licensing or permission to use this code in ways not covered by this license, please contact the author at AdjusterConsole@gmail.com.  */
 /* LaborScript, SideNav, tutorial, toggle sliders */
 
 .ls_main {
@@ -286,7 +286,7 @@ For inquiries regarding licensing or permission to use this code in ways not cov
   width: 100%;
   height: 34px;
   text-align: center;
-  margin: -5px auto;
+  margin: -6px auto;
   box-shadow: none;
   border-radius: 0px;
   white-space: nowrap;
@@ -367,11 +367,11 @@ For inquiries regarding licensing or permission to use this code in ways not cov
   background: var(--my-background-color);
   z-index: 3;
   text-align: center;
-  padding: 0px;
-  transition: all 0s ease;
   box-shadow:
     0px 0px 15px black,
     0px 0px 30px black;
+  padding: 0px;
+  transition: all 0s ease;
  &:active {
   background: none;
   box-shadow: none;
@@ -384,6 +384,7 @@ For inquiries regarding licensing or permission to use this code in ways not cov
   top: 400px;
   height: 60px;
   width: 40px;
+  vertical-align: middle;
 }
 
 .sop_btn {
@@ -565,7 +566,9 @@ For inquiries regarding licensing or permission to use this code in ways not cov
   border-left: 2px solid var(--my-accent-color);
   border-right: 2px solid var(--my-accent-color);
   border-top: 2px solid var(--my-accent-color);
-  box-shadow: 0px 0px 50px black;
+  box-shadow:
+    0px 0px 15px black,
+    0px 0px 30px black;
   background: var(--my-background-color);
   z-index: 3;
   text-align: center;
