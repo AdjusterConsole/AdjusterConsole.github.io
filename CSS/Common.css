@@ -685,3 +685,20 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
+
+.swapVer {
+  cursor: pointer;
+  font-size: 14px;
+  position: absolute;
+  display: inline-block;
+  background: none;
+  text-decoration: none;
+  box-shadow: none;
+  left: 420px;
+  color: var(--glow-txt-color);
+  text-shadow:
+    1px 1px 1px var(--glow-outline-color),
+   -1px -1px 1px var(--glow-outline-color),
+   -1px 1px 1px var(--glow-outline-color),
+    1px -1px 1px var(--glow-outline-color);
+}
