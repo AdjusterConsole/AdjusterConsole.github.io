@@ -12,4 +12,4 @@ This code is provided under the following terms and conditions:
 
 By viewing this code, you agree to abide by these terms and conditions. Failure to comply with these terms may result in legal action.
 
-For inquiries regarding licensing or permission to use this code in ways not covered by this license, please contact the author at AdjusterConsole.com.
+For inquiries regarding licensing or permission to use this code in ways not covered by this license, please contact the author at adjusterconsole@gmail.com.
