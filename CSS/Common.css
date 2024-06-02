@@ -694,11 +694,18 @@ input:checked + .slider:before {
   background: none;
   text-decoration: none;
   box-shadow: none;
-  left: 420px;
+  top: 0px;
+  left: 410px;
   color: var(--glow-txt-color);
   text-shadow:
     1px 1px 1px var(--glow-outline-color),
    -1px -1px 1px var(--glow-outline-color),
    -1px 1px 1px var(--glow-outline-color),
     1px -1px 1px var(--glow-outline-color);
+}
+
+.swapVer:active {
+  transition: all 0s ease;
+  background: none;
+  box-shadow: none;
 }
