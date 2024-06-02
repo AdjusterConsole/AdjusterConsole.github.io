@@ -130,8 +130,8 @@ body {
 </style>
 </head>
 <body>
+<button class="swapVer" onclick="swapPage('2')" >&#x2666; Neumorphic &#x2666;</button>
 <div id="pdiv" class="noShow"><p></div>
-<div id="swap1" class="otherone" onclick="openNav()">&#9776;</div>
 
                                                 <!-- Menu -->
 
@@ -140,12 +140,11 @@ body {
   <button id="appearance" class="astext menu" onclick="personalize()">&#x2666; Appearance &#x2666;</button>
   <button id="BtnBuilder" class="astext menu" onclick="BuilderShow()">&#x2666; Toggle On/Off &#x2666;</button>
   <button id="buttonMaker" class="astext menu" onclick="showCustom()" >&#x2666; New Button &#x2666;</button>
-  <button id="tutorialSel" class="astext menu" onclick="swapPage('2')" >&#x2666; Neumorphic &#x2666;</button>
 </div>
 
                                                 <!-- File Things -->
 
-<div id="navtag" class="nav_tag" onclick="openSOPnav();">Browse Full SOPs</div>
+
 
 <div id="sopnav" class="sop_nav">
   <a href="javascript:void(0)" class="close_pdf" onclick="closePDFmenu()">&times;</a>
@@ -293,6 +292,10 @@ body {
 </div>
 
                                               <!-- Main Buttons -->
+
+<div id="swap1" class="otherone" onclick="openNav()">&#9776;</div>
+
+<div id="navtag" class="nav_tag" onclick="openSOPnav();">Browse Full SOPs</div>
 
 <button id="newAuthstarter" class="D R P s7dispStat" oncontextmenu="customMenu(this.id, event)" onclick="showAuth()"><b><f>Authorize</f></b> Claim</button>
 
