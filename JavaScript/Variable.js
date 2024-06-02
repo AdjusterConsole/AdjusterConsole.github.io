@@ -1080,6 +1080,12 @@ document.onkeydown = function(e) {
   }
 };
 
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape' || event.key === 'Esc') {
+        location.reload();
+    }
+});
+
 function anotherView() {
   var hlc = document.getElementById('hlc');
   var ITSBRITTNEY = document.getElementById('ITSBRITTNEY');
