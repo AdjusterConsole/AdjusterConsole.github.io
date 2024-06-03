@@ -82,7 +82,7 @@ function diagAction(action) {
   }
   whichIptclass = whichDivId + "in";
   var inputElems = document.getElementsByClassName(whichIptclass);
-  For (i = 0; i < inputElems.length; i++) {
+  for (i = 0; i < inputElems.length; i++) {
     if (action == 'clear') {
       inputElems[i].value = "";
     }
