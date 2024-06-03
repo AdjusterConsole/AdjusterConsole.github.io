@@ -1,5 +1,21 @@
 README
-Adjuster Console Version 1.0.0.0
+Adjuster Console Version 1.1.1.0
+
+Update:
+Minor Changes:
+ Disabled custom buttons and button modifications.
+ Removed those items from menu.
+ Disabled right-click menu.
+ Right-click now opens side-nav menu.
+ Double-click opens SOP menu.
+ Moved page style link to top-center of page.
+
+Bug Fixes:
+ Fixed Inception Calculation to AAS calculations formula.
+ Fixed certain output errors while performing Tracker Tasks.
+ Fixed spacing issue on side-nav menu.
+
+
 
 Story and Goals
 This program started as a way to copy and paste preset blocks of text by just clicking a button.
