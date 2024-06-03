@@ -69,6 +69,29 @@ function magnify(image) {
     document.getElementById('theDepot').style.display = "inline-block";
   }
 }
+
+function diagAction(action) {
+  let textarea = document.getElementById("textarea4");
+  textarea.value = "";
+  var whichDivId, whichIptclass;
+  var diagcontent = document.getElementsByClassName("diagcontent");
+  for (i = 0; i < diagcontent.length; i++) {
+    if (diagcontent[i].style.display === "block") {
+      whichDivId = diagcontent[i].id;
+    }
+  }
+  whichIptclass = whichDivId + "in";
+  var inputElems = document.getElementsByClassName(whichIptclass);
+  For (i = 0; i < inputElems.length; i++) {
+    if (action == 'clear') {
+      inputElems[i].value = "";
+    }
+    if (action == 'copy') {
+      textarea.value += inputElems[i].value;
+    }
+  }
+}
+
 //                                                                      RESOURCE DIV
 
 function openInfo(evt, cityName) {
