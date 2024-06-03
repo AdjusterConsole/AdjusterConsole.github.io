@@ -425,7 +425,6 @@ function displayRecs(z) {
     document.getElementById('msgDiv').innerHTML = "";
     document.getElementById('alertDiv').innerHTML += "";
   }
-
   const objectArr = JSON.parse(localStorage.getItem("objectArr"));
   const table = document.createElement('table');
   table.classList.add('TheOutputtable');
@@ -485,7 +484,6 @@ function displayRecs(z) {
     }
     row.insertCell(7).innerText = tempRec.notes;
     document.getElementById('outputDiv').appendChild(table);
-    
     if (tempRec.isService) {
       if (overTime < 90 || distance < 700) {
         document.getElementById('alertDiv').innerHTML += "\u2757 ALERT: EARLY IN COVERAGE \u2757<br>";
@@ -1195,7 +1193,6 @@ function buildLaborNote(result) {
   var aveRate = localStorage.getItem("aveRate");
   var current = localStorage.getItem("current");
   var custom = localStorage.getItem("custom");
-
   textarea.value = "Search Parameters:\rRadius: " + radius + "\rFacility Type: " + type + "\rNumber of Facilities: " + quant + "\r\r";
   textarea.value += "Average Labor Rate: $" + aveRate;
   if (asking != current) {
@@ -1226,7 +1223,6 @@ function buildLaborNote(result) {
   document.execCommand("copy");
 }
 
-
 document.addEventListener('click', function(e) {
   var swap1 = document.getElementById('swap1');
   var mySidenav = document.getElementById('mySidenav');
@@ -1243,13 +1239,11 @@ document.addEventListener('click', function(e) {
   }
 });
 
-
 function closePDFmenu() {
   document.getElementById("navtag").style.display = "initial";
   document.getElementById("sopnav").classList.remove("open_sop");
   document.getElementById("sopnav2").classList.remove("open_sop");
   document.getElementById("sopnav3").classList.remove("open_sop");
-
 }
 
 function openSOPnav() {
@@ -1258,7 +1252,6 @@ function openSOPnav() {
   document.getElementById("sopnav").classList.add("open_sop");
   document.getElementById("sopnav2").classList.add("open_sop");
   document.getElementById("sopnav3").classList.add("open_sop");
-
 }
 
 function showSOP(id) {
@@ -1311,7 +1304,6 @@ function showSOP(id) {
     "./SOP/Info/PT_First_Contact.pdf",
     "./SOP/Info/State_Tax.pdf"
         ];
-  console.log(sources);
   const index = parseInt(id.substring(3)) - 1;
   const src = sources[index];
   const iframe = document.createElement('iframe');
