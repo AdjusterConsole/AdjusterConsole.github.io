@@ -105,7 +105,6 @@ function MENU() {
   var theMenu = document.getElementById("LOCK1");
   var BtnBuilder = document.getElementById("BtnBuilder");
   var appearance = document.getElementById("appearance");
-
   var menuOpen = localStorage.getItem("menuOpen");
   document.getElementById("EDITarea").value = "";
   if (menuOpen == 'false') {
@@ -605,7 +604,6 @@ function advancePT(radioId) {
   var curId = "quest" + single;
   var nextIdnum = parseInt(single) + 1;
   var nextId = "quest" + nextIdnum;
-
   if (radioId == "no3" || radioId == "nr3") {
     document.getElementById("q3ansN").style.display = "block";
     document.getElementById("quest3").style.display = "none";
@@ -666,7 +664,6 @@ function submitTEMP() {
   var q10 = document.getElementsByName("ans10");
   var q11 = document.getElementsByName("ans11");
   var ans1, ans2, ans3, ans4, ans5, ans6, ans7, ans8, ans9, ans10, ans11;
-
   var checkedArr = [];
   for (i = 0; i < q1.length; i++) {
     if (q1[i].checked) {
@@ -738,7 +735,6 @@ function submitTEMP() {
   var q3ansExplain = document.getElementById("q3ansExplain").value;
   var contact1 = "Contact Name: " + document.getElementById("contact1").value;
   var contact2 = "Contact Info: " + document.getElementById("contact2").value;
-
   for (i = 0; i < checkedArr.length; i++) {
     checkedArr[i].checked = false;
   }
