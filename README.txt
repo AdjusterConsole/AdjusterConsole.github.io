@@ -1,12 +1,30 @@
 README
-Adjuster Console Version 1.1.1.0
 
+Adjuster Console Version 1.8.4
+Update:
+Minor Changes:
+ Removed double-click to open SOP menu.
+ Changed table in Diag Assistance
+  Removed inputs in favor of using cells innerText with contenteditable for notes.
+   Changed background of those cells to white.
+   Added border of page background color to those cells
+ Added buttons to Diag Assistance.
+  'Clear' button will reset all cells in the table to blank, as well as the note textarea at the bottom.
+  'Copy' button retrieves all questions, answers, and the note, compiles them, and sends them to the clipboard.
+ Removed note display from Tracker Tool output table.
+  Table will display 'True' if there is a note, 'False' if not.
+  Notes will be displayed in "Note Format' option.
+
+Bug Fixes:
+Used event handlers to stop enter key from adding a div in notes.
+
+Adjuster Console Version 1.4.3
 Update:
 Minor Changes:
  Disabled custom buttons and button modifications.
- Removed those items from menu.
+  Removed those items from menu.
  Disabled right-click menu.
- Right-click now opens side-nav menu.
+  Right-click now opens side-nav menu.
  Double-click opens SOP menu.
  Moved page style link to top-center of page.
 
