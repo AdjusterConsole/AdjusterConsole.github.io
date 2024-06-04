@@ -71,21 +71,21 @@ function whiteRabbit() {
   RESETNOTE();
 }
 
-function CloseIt(){
+function CloseIt() {
   document.getElementById("snipbox").style.display = "none";
 }
 
-function ClearText(){
+function ClearText() {
   document.getElementById("Snippings").value = "";
 }
 
-function COPYIt(){
+function COPYIt() {
   let textarea = document.getElementById("Snippings");
   textarea.select();
   document.execCommand("copy");
 }
 
-function authforOSB(){
+function authforOSB() {
   document.getElementById("TGAFOBTN").style.display = "none";
   document.getElementById("TGAFSBTN").style.display = "none";
   document.getElementById("TGAFBBTN").style.display = "none";
@@ -1087,11 +1087,6 @@ document.addEventListener('contextmenu', function(e) {
   e.preventDefault();
   openNav();
 });
-
-document.ondblclick = function(e) {
-  e.preventDefault();
-  openSOPnav();
-};
 
 document.onkeydown = function(e) {
   if (e.ctrlKey && e.altKey && e.shiftKey && e.which == 85) {

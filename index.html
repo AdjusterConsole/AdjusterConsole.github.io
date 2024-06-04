@@ -1489,6 +1489,7 @@ TIME:&nbsp&nbsp</textarea>
                                           <!-- Diagnostic -->
 
 <div id="diagDiv" style="display:none;">
+
   <div id="diagBtns" class="tab">
     <button class="tablinks2" onclick="openInfo2(event, 'Cooling')">Cooling</button>
     <button class="tablinks2" onclick="openInfo2(event, 'Turbo')">Turbo</button>
@@ -1499,6 +1500,7 @@ TIME:&nbsp&nbsp</textarea>
     <button class="tablinks2" onclick="openInfo2(event, 'Electrical')">Electrical</button>
     <button class="tablinks2 edgeButton" onclick="openInfo2(event, 'Fuel')">Fuel</button>
   </div>
+
   <div id="Cooling" class="diagcontent">
     <div class="diagTop">
       <div class="diagTop left">
@@ -1517,44 +1519,44 @@ TIME:&nbsp&nbsp</textarea>
         <img src="./Images/CoolingImg.PNG" alt="./imgBackup/CoolingImg.PNG" class="diagImg">
       </div>
     </div>
-    <div class="diagMid marginCall">
-      <table class="diagtable">
+    <div class="diagMid">
+      <table id="Coolingin" class="diagtable">
         <tr>
           <th class="diag">Fluids: Level, Condition, Contamination?</th>
-          <td class="diag"><input></td>
+          <td class="diag" contenteditable></td>
         </tr>
         <tr>
           <th class="diag">Was a pressure test completed? Where is the leak?</th>
-          <td class="diag"><input></td>
+          <td class="diag" contenteditable></td>
         </tr>
         <tr>
           <th class="diag">Any codes stored? List and define.</th>
-          <td class="diag"><input></td>
+          <td class="diag" contenteditable></td>
         </tr>
         <tr>
-          <th class="diag">Any freeze freame data available? Date/Mileage?</th>
-          <td class="diag"><input></td>
+          <th class="diag">Any freeze frame data available? Date/Mileage?</th>
+          <td class="diag" contenteditable></td>
         </tr>
         <tr>
           <th class="diag">Did the vehicle overheat? Any further damage?</th>
-          <td class="diag"><input></td>
+          <td class="diag" contenteditable></td>
         </tr>
         <tr>
           <th class="diag">Any previous engine repairs?</th>
-          <td class="diag"><input></td>
+          <td class="diag" contenteditable></td>
         </tr>
         <tr>
           <th class="diag">Any signs of impact damage or corrosion as the COF?</th>
-          <td class="diag"><input></td>
+          <td class="diag" contenteditable></td>
         </tr>
         <tr>
           <th class="diag">What is the root cause of overheating?</th>
-          <td class="diag"><input></td>
+          <td class="diag" contenteditable></td>
         </tr>
       </table>
     </div>
     <div class="diagBot">
-      <textarea class="diag" placeholder="Notes..."></textarea>
+      <textarea id="CoolingTA" class="diag" placeholder="Notes..."></textarea>
     </div>
   </div>
   <div id="Turbo" class="diagcontent">
@@ -1575,39 +1577,39 @@ TIME:&nbsp&nbsp</textarea>
       </div>
     </div>
     <div class="diagMid">
-      <table class="diagtable">
+      <table id="Turboin" class="diagtable">
         <tr>
           <th class="diag">Any codes stored? List and define.</th>
-          <td class="diag"><input></td>
+          <td class="diag" contenteditable></td>
         </tr>
         <tr>
           <th class="diag">Any freeze frame data available? Date/Mileage?</th>
-          <td class="diag"><input></td>
+          <td class="diag" contenteditable></td>
         </tr>
         <tr>
           <th class="diag">Any noise, smoke, etc?</th>
-          <td class="diag"><input></td>
+          <td class="diag" contenteditable></td>
         </tr>
         <tr>
           <th class="diag">Any play in the turbo shaft?</th>
-          <td class="diag"><input></td>
+          <td class="diag" contenteditable></td>
         </tr>
         <tr>
           <th class="diag">Wastegate and actuator operating properly?</th>
-          <td class="diag"><input></td>
+          <td class="diag" contenteditable></td>
         </tr>
         <tr>
           <th class="diag">Any previous engine repairs?</th>
-          <td class="diag"><input></td>
+          <td class="diag" contenteditable></td>
         </tr>
         <tr>
           <th class="diag">Oil or coolant leaks from turbo?</th>
-          <td class="diag"><input></td>
+          <td class="diag" contenteditable></td>
         </tr>
       </table>
     </div>
     <div class="diagBot">
-      <textarea class="diag" placeholder="Notes..."></textarea>
+      <textarea id="TurboTA" class="diag" placeholder="Notes..."></textarea>
     </div>
   </div>
   <div id="Electrical" class="diagcontent">
@@ -1629,39 +1631,39 @@ TIME:&nbsp&nbsp</textarea>
       </div>
     </div>
     <div class="diagMid">
-      <table class="diagtable">
+      <table id="Electricalin" class="diagtable">
         <tr>
           <th class="diag">Is there a Check engine light or other warning lights?</th>
-          <td class="diag"><input></td>
+          <td class="diag" contenteditable></td>
         </tr>
         <tr>
           <th class="diag">Any codes stored? List and define.</th>
-          <td class="diag"><input></td>
+          <td class="diag" contenteditable></td>
         </tr>
         <tr>
           <th class="diag">Alternator/Battery test results?</th>
-          <td class="diag"><input></td>
+          <td class="diag" contenteditable></td>
         </tr>
         <tr>
           <th class="diag">Verified power and ground?</th>
-          <td class="diag"><input></td>
+          <td class="diag" contenteditable></td>
         </tr>
         <tr>
           <th class="diag">Any other circuit/pinpoint tests?</th>
-          <td class="diag"><input></td>
+          <td class="diag" contenteditable></td>
         </tr>
         <tr>
           <th class="diag">Any other potential causes tested?</th>
-          <td class="diag"><input></td>
+          <td class="diag" contenteditable></td>
         </tr>
         <tr>
           <th class="diag">Fluid intrusion/corrosion/damaged wires?</th>
-          <td class="diag"><input></td>
+          <td class="diag" contenteditable></td>
         </tr>
       </table>
     </div>
     <div class="diagBot">
-      <textarea class="diag" placeholder="Notes..."></textarea>
+      <textarea id="ElectricalTA" class="diag" placeholder="Notes..."></textarea>
     </div>
   </div>
   <div id="Fuel" class="diagcontent">
@@ -1682,39 +1684,39 @@ TIME:&nbsp&nbsp</textarea>
       </div>
     </div>
     <div class="diagMid">
-      <table class="diagtable">
+      <table id="Fuelin" class="diagtable">
         <tr>
           <th class="diag">Is there fuel in the vehicle?  Has fuel filter been serviced?</th>
-          <td class="diag"><input></td>
+          <td class="diag" contenteditable></td>
         </tr>
         <tr>
           <th class="diag">Power and ground to pump?</th>
-          <td class="diag"><input></td>
+          <td class="diag" contenteditable></td>
         </tr>
         <tr>
           <th class="diag">Fuel pressure test results?</th>
-          <td class="diag"><input></td>
+          <td class="diag" contenteditable></td>
         </tr>
         <tr>
           <th class="diag">Any codes stored? List and define.</th>
-          <td class="diag"><input></td>
+          <td class="diag" contenteditable></td>
         </tr>
         <tr>
           <th class="diag">Fuel pressure at fuel rail - Actual/Spec?</th>
-          <td class="diag"><input></td>
+          <td class="diag" contenteditable></td>
         </tr>
         <tr>
           <th class="diag">Is the injector stuck open, clogged or not functioning?</th>
-          <td class="diag"><input></td>
+          <td class="diag" contenteditable></td>
         </tr>
         <tr>
           <th class="diag">Any other testing performed?</th>
-          <td class="diag"><input></td>
+          <td class="diag" contenteditable></td>
         </tr>
       </table>
     </div>
     <div class="diagBot">
-      <textarea class="diag" placeholder="Notes..."></textarea>
+      <textarea id="FuelTA" class="diag" placeholder="Notes..."></textarea>
     </div>
   </div>
   <div id="Steering" class="diagcontent">
@@ -1735,40 +1737,40 @@ TIME:&nbsp&nbsp</textarea>
         <img src="./Images/SteeringImg.PNG" alt="./imgBackup/SteeringImg.PNG" class="diagImg">
       </div>
     </div>
-    <div class="diagMid marginCall">
-      <table class="diagtable">
+    <div class="diagMid">
+      <table id="Steeringin" class="diagtable">
         <tr>
           <th class="diag">Any noises while turning, if so describe?</th>
-          <td class="diag"><input></td>
+          <td class="diag" contenteditable></td>
         </tr>
         <tr>
           <th class="diag">What is condition of tie rods, if damaged describe?</th>
-          <td class="diag"><input></td>
+          <td class="diag" contenteditable></td>
         </tr>
         <tr>
           <th class="diag">Power steering fluid level?</th>
-          <td class="diag"><input></td>
+          <td class="diag" contenteditable></td>
         </tr>
         <tr>
           <th class="diag">Any power steering leaks?</th>
-          <td class="diag"><input></td>
+          <td class="diag" contenteditable></td>
         </tr>
         <tr>
           <th class="diag">Any codes stored? List and define.</th>
-          <td class="diag"><input></td>
+          <td class="diag" contenteditable></td>
         </tr>
         <tr>
           <th class="diag">Any other testing performed?</th>
-          <td class="diag"><input></td>
+          <td class="diag" contenteditable></td>
         </tr>
         <tr>
           <th class="diag">Any signs of impact damage?</th>
-          <td class="diag"><input></td>
+          <td class="diag" contenteditable></td>
         </tr>
       </table>
     </div>
     <div class="diagBot">
-      <textarea class="diag" placeholder="Notes..."></textarea>
+      <textarea id="SteeringTA" class="diag" placeholder="Notes..."></textarea>
     </div>
   </div>
   <div id="Suspension" class="diagcontent">
@@ -1790,35 +1792,35 @@ TIME:&nbsp&nbsp</textarea>
       </div>
     </div>
     <div class="diagMid">
-      <table class="diagtable">
+      <table id="Suspensionin" class="diagtable">
         <tr>
           <th class="diag">Any suspension noises, if so describe?</th>
-          <td class="diag"><input></td>
+          <td class="diag" contenteditable></td>
         </tr>
         <tr>
           <th class="diag">Any signs of impact damage?</th>
-          <td class="diag"><input></td>
+          <td class="diag" contenteditable></td>
         </tr>
         <tr>
           <th class="diag">Signs of rust or corrosion as COF?</th>
-          <td class="diag"><input></td>
+          <td class="diag" contenteditable></td>
         </tr>
         <tr>
           <th class="diag">Any play in suspension components?</th>
-          <td class="diag"><input></td>
+          <td class="diag" contenteditable></td>
         </tr>
         <tr>
           <th class="diag">Are bushings worn, torn, cracked or dry rotted?</th>
-          <td class="diag"><input></td>
+          <td class="diag" contenteditable></td>
         </tr>
         <tr>
           <th class="diag">Was diag: test drive, visual inspection, leverage?</th>
-          <td class="diag"><input></td>
+          <td class="diag" contenteditable></td>
         </tr>
       </table>
     </div>
     <div class="diagBot">
-      <textarea class="diag" placeholder="Notes..."></textarea>
+      <textarea id="SuspensionTA" class="diag" placeholder="Notes..."></textarea>
     </div>
   </div>
   <div id="AC" class="diagcontent">
@@ -1826,13 +1828,13 @@ TIME:&nbsp&nbsp</textarea>
       <div class="diagTop left">
         <genopHead>General Operation Principals</genopHead>
         <p>
-          <li>There are 4 processes involved in air conditioning: compression, condensation, expansion, and evaporation.</li>
+          <li>The 4 processes in A/C: compression, condensation, expansion, and evaporation.</li>
           <li>The A/C compressor compresses incoming gas refrigerant increasing it's temperature and pressure.</li>
           <li>The compressed gas travels to the condenser where heat is released and the gas is condensed to liquid form.</li>
-          <li>The high pressure liquid refrigerant is passed through a drier to remove any moisture before arriving at the expansion device.</li>
-          <li>The expansion device is a restriction that controls flow in to a line of larger volume initiating the low pressure side cooling the liquid even more.</li>
-          <li>The cool, low pressure liquid enters the evaporator, boils as it absorbs the heat from the cabin, and becomes a gas again.</li>
-          <li>The low pressure, hot gas returns to the compressor to complete the cycle.</li>
+          <li>The high pressure liquid refrigerant is passed through a drier before arriving at the expansion device.</li>
+          <li>The expansion device is a restriction that controls flow in to a line of larger volume initiating the low pressure side, cooling the liquid even more.</li>
+          <li>The cool, low pressure liquid boils, becoming a gas in the evaporator as it absorbs heat from the cabin.</li>
+          <li>It returns to the compressor to complete the cycle.</li>
         </ul>
       </div>
       <div class="diagTop right" onclick="magnify('ac')">
@@ -1841,43 +1843,43 @@ TIME:&nbsp&nbsp</textarea>
       </div>
     </div>
     <div class="diagMid">
-      <table class="diagtable">
+      <table id="ACin" class="diagtable">
         <tr>
           <th class="diag">What is the ambient temperature/vent temperature?</th>
-          <td class="diag"><input></td>
+          <td class="diag" contenteditable></td>
         </tr>
         <tr>
           <th class="diag">Is there any refrigerant in the system?</th>
-          <td class="diag"><input></td>
+          <td class="diag" contenteditable></td>
         </tr>
         <tr>
           <th class="diag">How much refrigerant was recovered?  What is the system spec?</th>
-          <td class="diag"><input></td>
+          <td class="diag" contenteditable></td>
         </tr>
         <tr>
           <th class="diag">Is the A/C compressor clutch activating?</th>
-          <td class="diag"><input></td>
+          <td class="diag" contenteditable></td>
         </tr>
         <tr>
           <th class="diag">What are the H/L side pressures? Are they out of range?</th>
-          <td class="diag"><input></td>
+          <td class="diag" contenteditable></td>
         </tr>
         <tr>
           <th class="diag">Was a leak test performed?</th>
-          <td class="diag"><input></td>
+          <td class="diag" contenteditable></td>
         </tr>
         <tr>
           <th class="diag">If leaking, where from? Any further damage?</th>
-          <td class="diag"><input></td>
+          <td class="diag" contenteditable></td>
         </tr>
         <tr>
           <th class="diag">Contamination in system? If so, send photos.</th>
-          <td class="diag"><input></td>
+          <td class="diag" contenteditable></td>
         </tr>
       </table>
     </div>
     <div class="diagBot">
-      <textarea class="diag" placeholder="Notes..."></textarea>
+      <textarea id="ACTA" class="diag" placeholder="Notes..."></textarea>
     </div>
   </div>
   <div id="Timing" class="diagcontent">
@@ -1898,45 +1900,47 @@ TIME:&nbsp&nbsp</textarea>
       </div>
     </div>
     <div class="diagMid">
-      <table class="diagtable">
+      <table id="Timingin" class="diagtable">
         <tr>
           <th class="diag">Any codes stored? List and define.</th>
-          <td class="diag"><input></td>
+          <td class="diag" contenteditable></td>
         </tr>
         <tr>
           <th class="diag">Any freeze frame data available? Date/Mileage?</th>
-          <td class="diag"><input></td>
+          <td class="diag" contenteditable></td>
         </tr>
         <tr>
           <th class="diag">Does the vehicle have a timing chain or belt?</th>
-          <td class="diag"><input></td>
+          <td class="diag" contenteditable></td>
         </tr>
         <tr>
           <th class="diag">If a belt was there maintenance performed at correct mileage?</th>
-          <td class="diag"><input></td>
+          <td class="diag" contenteditable></td>
         </tr>
         <tr>
           <th class="diag">Was there any damage to the engine from this failure?</th>
-          <td class="diag"><input></td>
+          <td class="diag" contenteditable></td>
         </tr>
         <tr>
           <th class="diag">Is there any noises from the chain or belt area?</th>
-          <td class="diag"><input></td>
+          <td class="diag" contenteditable></td>
         </tr>
         <tr>
           <th class="diag">Any previous engine repairs?</th>
-          <td class="diag"><input></td>
+          <td class="diag" contenteditable></td>
         </tr>
         <tr>
           <th class="diag">What is the COF?</th>
-          <td class="diag"><input></td>
+          <td class="diag" contenteditable></td>
         </tr>
       </table>
     </div>
     <div class="diagBot">
-      <textarea class="diag" placeholder="Notes..."></textarea>
+      <textarea id="TimingTA" class="diag" placeholder="Notes..."></textarea>
     </div>
   </div>
+  <button id="clearDiag" class="wefwefwef D R P" onclick="diagAction('clear')">Clear</button>
+  <button id="copyDiag" class="wefwefwef D R P" onclick="diagAction('copy')">Copy</button>
   <button id="exitRcrce2" class="wefwefwef D R P" onclick="closeResource2()">Exit</button>
   <div id="theDepot" class="imageDepot" onclick="magnify('back')">
     <img src="./Images/CoolingImg.PNG" alt="./imgBackup/CoolingImg.PNG" class="depotImg" id="coolingDepot">

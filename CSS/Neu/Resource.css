@@ -94,6 +94,7 @@ For inquiries regarding licensing or permission to use this code in ways not cov
   width: 100%;
   background: none;
   box-shadow: none;
+  padding-bottom: 10px;
 }
 
 .left.diagTop {
@@ -115,10 +116,6 @@ For inquiries regarding licensing or permission to use this code in ways not cov
   float: right;
   width: 100%;
   height: 100%;
-}
-
-.marginCall {
-  padding: 30px 0px; 
 }
 
 .imageDepot {
@@ -156,10 +153,12 @@ For inquiries regarding licensing or permission to use this code in ways not cov
 }
 
 textarea.diag {
+  position: absolute;
+  display: inline-block;
+  bottom: 70px;
+  left: 230px;
   height: 100px;
-  width: 450px;
-  margin-left: 20px;
-  margin-top: 20px;
+  width: 400px;
   padding: 10px;
   resize: none;
 }
@@ -188,23 +187,18 @@ table.diagtable {
   box-shadow: none;
 }
 
-table.diagtable th,td {
-  border-bottom: 1px solid black;
-}
-
 th.diag {
   text-align: left;
-  height: 30px;
   margin-right: 15px;
+  border-bottom: 2px solid black;
 }
 
 td.diag {
-  width: 40%
-}
-
-.diag input {
-  width: 100%;
-  outline: none;
+  outline: 2px solid var(--my-background-color);
+  width: 50%;
+  background: white;
+  border-radius: 5px;
+  padding:7px;
 }
 
 genopHead {
@@ -223,10 +217,27 @@ genopHeadimg {
 #exitRcrce2 {
   display: inline-block;
   position: absolute;
-  bottom: 10px;
-  right: 10px;
+  bottom: 5px;
+  right: 5px;
   border-left: 2px solid var(--my-accent-color);
 }
+
+#clearDiag {
+  display: inline-block;
+  position: absolute;
+  bottom: 65px;
+  right: 5px;
+  border-left: 2px solid var(--my-accent-color);
+}
+
+#copyDiag {
+  display: inline-block;
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  border-right: 2px solid var(--my-accent-color);
+}
+
 .answerSlide {
   display: inline-block;
   position: absolute;
@@ -684,13 +695,16 @@ td.lastCell {
   bottom: 5px;
   border-left: 2px solid var(--my-accent-color);
 }
+
 #closeOutput2 {
   right: 5px;
   bottom: 5px;
   border-left: 2px solid var(--my-accent-color);
 }
 
-.TheOutputtable {
+
+#reportTable.TheOutputtable {
+  table-layout: fixed;
   width: 95%;
   border: none;
   outline: none;
@@ -704,9 +718,15 @@ td.lastCell {
   outline: none;
 }
 
-tr.rowit td{
-  border-bottom: 1px solid black;
+tr.rowit td {
+  border-top: 1px solid black;
   outline: none;
+  max-height: 25px;
+  word-wrap: break-word;
+}
+
+tbody tr.rowit {
+  max-height: 25px;
 }
 
 .headit td {

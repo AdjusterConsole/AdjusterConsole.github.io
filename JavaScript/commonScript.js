@@ -73,22 +73,35 @@ function magnify(image) {
 function diagAction(action) {
   let textarea = document.getElementById("textarea4");
   textarea.value = "";
-  var whichDivId, whichIptclass;
-  var diagcontent = document.getElementsByClassName("diagcontent");
+  var diagcontent, whichDivId, whichIptclass, textAreaid, notetextArea, i, tableTHs, tableTDs, table;
+  diagcontent = document.getElementsByClassName("diagcontent");
   for (i = 0; i < diagcontent.length; i++) {
     if (diagcontent[i].style.display === "block") {
       whichDivId = diagcontent[i].id;
     }
   }
-  whichIptclass = whichDivId + "in";
-  var inputElems = document.getElementsByClassName(whichIptclass);
-  for (i = 0; i < inputElems.length; i++) {
+  whichTblid = whichDivId + "in";
+  table = document.getElementById(whichTblid);
+  tableTDs = table.getElementsByTagName("td");
+  tableTHs = table.getElementsByTagName("th");
+
+  for (i = 0; i < tableTDs.length; i++) {
     if (action == 'clear') {
-      inputElems[i].value = "";
+      tableTDs[i].innerText = "";
     }
     if (action == 'copy') {
-      textarea.value += inputElems[i].value;
+      textarea.value += tableTHs[i].innerText + ": " + tableTDs[i].innerText + "\r";
     }
+  }
+  textAreaid = whichDivId + "TA";
+  notetextArea = document.getElementById(textAreaid);
+  if (action == 'clear') {
+    notetextArea.value = "";
+  }
+  if (action == 'copy') {
+    textarea.value += "\rNotes:\r" + notetextArea.value;
+    textarea.select();
+    document.execCommand("copy");
   }
 }
 
@@ -107,6 +120,15 @@ function openInfo(evt, cityName) {
   document.getElementById(cityName).style.display = "block";
   evt.currentTarget.className += " active";
   setDate();
+    for (var i = 0; i < 6; i++) {
+      var elemId = "rec" + i;
+      localStorage.removeItem(elemId + "Note");
+      document.getElementById(elemId + "Notebin").innerText = "";
+    }
+  localStorage.removeItem("incNote");
+  document.getElementById("incNotebin").innerText = "";
+  localStorage.removeItem("serNote");
+  document.getElementById("serNotebin").innerText = "";
 }
 
 function closeResource() {
@@ -430,6 +452,7 @@ function showNote(noteID) {
     binElem.style.height = "150px"
     document.getElementById(noteID).innerText = "Finished";
     localStorage.setItem("noteOpen", "true");
+    noteListen();
   } else if (binElem.style.height != "0px") {
     document.getElementById('trackerMsg').innerHTML = "";
     var noteText = binElem.innerText;
@@ -439,6 +462,54 @@ function showNote(noteID) {
     binElem.style.height = "0px";
     binElem.classList.toggle("arise");
     localStorage.setItem("noteOpen", "false");
+    noteForget();
+  }
+}
+
+function noteListen() {
+  var incNotebin = document.getElementById("incNotebin");
+  var serNotebin = document.getElementById("serNotebin");
+  var rec0Notebin = document.getElementById("rec0Notebin");
+  var rec1Notebin = document.getElementById("rec1Notebin");
+  var rec2Notebin = document.getElementById("rec2Notebin");
+  var rec3Notebin = document.getElementById("rec3Notebin");
+  var rec4Notebin = document.getElementById("rec4Notebin");
+  var rec5Notebin = document.getElementById("rec5Notebin");
+
+  incNotebin.addEventListener("keydown", addListen);
+  serNotebin.addEventListener("keydown", addListen);
+  rec0Notebin.addEventListener("keydown", addListen);
+  rec1Notebin.addEventListener("keydown", addListen);
+  rec2Notebin.addEventListener("keydown", addListen);
+  rec3Notebin.addEventListener("keydown", addListen);
+  rec4Notebin.addEventListener("keydown", addListen);
+  rec5Notebin.addEventListener("keydown", addListen);
+}
+
+function noteForget() {
+  var incNotebin = document.getElementById("incNotebin");
+  var serNotebin = document.getElementById("serNotebin");
+  var rec0Notebin = document.getElementById("rec0Notebin");
+  var rec1Notebin = document.getElementById("rec1Notebin");
+  var rec2Notebin = document.getElementById("rec2Notebin");
+  var rec3Notebin = document.getElementById("rec3Notebin");
+  var rec4Notebin = document.getElementById("rec4Notebin");
+  var rec5Notebin = document.getElementById("rec5Notebin");
+
+  incNotebin.removeEventListener("keydown", addListen);
+  serNotebin.removeEventListener("keydown", addListen);
+  rec0Notebin.removeEventListener("keydown", addListen);
+  rec1Notebin.removeEventListener("keydown", addListen);
+  rec2Notebin.removeEventListener("keydown", addListen);
+  rec3Notebin.removeEventListener("keydown", addListen);
+  rec4Notebin.removeEventListener("keydown", addListen);
+  rec5Notebin.removeEventListener("keydown", addListen);
+}
+
+function addListen(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    document.execCommand("insertLineBreak");
   }
 }
 
@@ -505,7 +576,11 @@ function displayRecs(z) {
     } else {
       row.insertCell(6).innerText = "\u2714";
     }
-    row.insertCell(7).innerText = tempRec.notes;
+    if (tempRec.notes != null) {
+      row.insertCell(7).innerText = "True";
+    } else {
+      row.insertCell(7).innerText = "False";
+    }
     document.getElementById('outputDiv').appendChild(table);
     if (tempRec.isService) {
       if (overTime < 90 || distance < 700) {
@@ -730,7 +805,7 @@ function resetReport() {
   var LineCount = parseInt(addLineCount);
   var inputElems = document.querySelectorAll(".tracker");
   var elemArr = Array.from(inputElems);
-  for (i = 0; i < elemArr.length; i++) {
+  for (var i = 0; i < elemArr.length; i++) {
     if(elemArr[i].value != null) {
       if(elemArr[i].checked) {
         elemArr[i].checked = false;
@@ -744,7 +819,7 @@ function resetReport() {
     document.getElementById(rowId).style.visibility = "hidden";
   }
   const recordArr = JSON.parse(localStorage.getItem("recordArr"));
-  for (i = 0; i < recordArr.length; i++) {
+  for (var i = 0; i < recordArr.length; i++) {
     var recName = recordArr[i];
     localStorage.removeItem(recName + "spot");
   }
@@ -755,9 +830,10 @@ function resetReport() {
   localStorage.removeItem("InceptionDate");
   localStorage.removeItem("incNote");
   localStorage.removeItem("serNote");
-  for (i = 0; i < 6; i++) {
-    var elemId = "rec" + i.toString;
+  for (var i = 0; i < 6; i++) {
+    var elemId = "rec" + i;
     localStorage.removeItem(elemId + "Note");
+    document.getElementById(elemId + "Notebin").innerText = "";
   }
   const blankArr = [];
   localStorage.setItem("objectArr", JSON.stringify(blankArr));
@@ -770,7 +846,7 @@ function resetReport() {
 
 function goGuide(option,name) {
   var usedBtn = document.getElementsByName(name);
-  for (i = 0; i < usedBtn.length; i++) {
+  for (var i = 0; i < usedBtn.length; i++) {
     usedBtn[i].disabled = true;
   }
   switch(option) {
