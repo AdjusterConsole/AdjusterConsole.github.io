@@ -1562,12 +1562,11 @@ TIME:&nbsp&nbsp</textarea>
     <button class="tablinks2" onclick="openInfo2(event, 'Electrical')">Electrical</button>
     <button class="tablinks2 edgeButton" onclick="openInfo2(event, 'Fuel')">Fuel</button>
   </div>
-
   <div id="Cooling" class="diagcontent">
     <div class="diagTop">
       <div class="diagTop left">
         <genopHead>General Operation Principals</genopHead>
-          <ul style="font-size:15px;">
+        <ul style="font-size:15px;">
           <li>The cooling system prevents the engine from overheating by absorbing heat generated from combustion and releasing it into the atmosphere through the radiator.</li>
           <li>The main components are the water pump, radiator, thermostat, and cooling fans.</li>
           <li>The water pump circulates the coolant through the system.</li>
@@ -1631,7 +1630,7 @@ TIME:&nbsp&nbsp</textarea>
           <li>The compressed air is cooled before being sent to the engine.</li>
           <li>Compressed air has a higher density of oxygen which allows more fuel to be burnt which increases power output.</li>
           <li>When there is more boost available than the engine needs, the wastegate opens to vent the uneeded boost pressure.</li>
-      </ul>
+        </ul>
       </div>
       <div class="diagTop right" onclick="magnify('turbo')">
         <genopHeadimg>Turbo</genopHeadimg>
@@ -1679,12 +1678,10 @@ TIME:&nbsp&nbsp</textarea>
       <div class="diagTop left">
         <genopHead>General Operation Principals</genopHead>
         <ul>
-           <li>The battery is used to power the starter while the vehicle is not running.
-           <li>While the engine is running, the alternator produces approximately 13.6 volts.</li>
-           <li>That voltage is what recharges the battery and provides power to all electrical
-           components of the vehicle.</li>
-           <li>For any electrical component to operate, there must be voltage supplied (+) and
-           a path for that voltage to return (-).</li>
+          <li>The battery is used to power the starter while the vehicle is not running.
+          <li>While the engine is running, the alternator produces approximately 13.6 volts.</li>
+          <li>That voltage is what recharges the battery and provides power to all electrical components of the vehicle.</li>
+          <li>For any electrical component to operate, there must be voltage supplied (+) and a path for that voltage to return (-).</li>
         </ul>
       </div>
       <div class="diagTop right" onclick="magnify('electrical')">
@@ -1889,7 +1886,7 @@ TIME:&nbsp&nbsp</textarea>
     <div class="diagTop">
       <div class="diagTop left">
         <genopHead>General Operation Principals</genopHead>
-        <p>
+        <ul>
           <li>The 4 processes in A/C: compression, condensation, expansion, and evaporation.</li>
           <li>The A/C compressor compresses incoming gas refrigerant increasing it's temperature and pressure.</li>
           <li>The compressed gas travels to the condenser where heat is released and the gas is condensed to liquid form.</li>
@@ -2004,7 +2001,6 @@ TIME:&nbsp&nbsp</textarea>
   <button id="clearDiag" class="wefwefwef D R P" onclick="diagAction('clear')">Clear</button>
   <button id="copyDiag" class="wefwefwef D R P" onclick="diagAction('copy')">Copy</button>
   <button id="exitRcrce2" class="wefwefwef D R P" onclick="closeResource2()">Exit</button>
-  <div id="theDepot" class="imageDepot" onclick="magnify('back')">
   <div id="theDepot" class="imageDepot" onclick="magnify('back')">
     <img src="./Images/CoolingImg.PNG" alt="./imgBackup/CoolingImg.PNG" class="depotImg" id="coolingDepot">
     <img src="./Images/TurboImg.PNG" alt="./imgBackup/TurboImg.PNG" class="depotImg" id="turboDepot">
