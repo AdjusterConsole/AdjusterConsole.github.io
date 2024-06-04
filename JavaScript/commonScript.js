@@ -675,7 +675,7 @@ function inceptEst(spot) {
     msgDiv.innerHTML += "Elapsed Miles Claim/Maint: " + milesBtwnRecs + "<br>";
     msgDiv.innerHTML += "Miles Per Day (Average): " + milesperday.toFixed() + "<br>";
     msgDiv.innerHTML += "Elapsed Days Maint/Sale: " + daysBtwnMaintSale + "<br>";
-    msgDiv.innerHTML += "Miles Elapased in Contract: " + milesIn + "<br>";
+    msgDiv.innerHTML += "Miles Elapsed in Contract: " + milesIn + "<br>";
     msgDiv.innerHTML += "Days Elapsed In Contract: " + daysIn;
   } else if (spot == 'all') {
     var splitR = document.getElementById('splitR');
@@ -686,7 +686,7 @@ function inceptEst(spot) {
     splitR.innerHTML += "Elapsed Miles Claim/Maint: " + milesBtwnRecs + "<br>";
     splitR.innerHTML += "Miles Per Day (Average): " + milesperday.toFixed() + "<br>";
     splitR.innerHTML += "Elapsed Days Maint/Sale: " + daysBtwnMaintSale + "<br>";
-    splitR.innerHTML += "Miles Elapased in Contract: " + milesIn + "<br>";
+    splitR.innerHTML += "Miles Elapsed in Contract: " + milesIn + "<br>";
     splitR.innerHTML += "Days Elapsed In Contract: " + daysIn;
   } else {
     var outputDiv2 = document.getElementById('outputDiv2');
@@ -699,7 +699,7 @@ function inceptEst(spot) {
     outputDiv3.innerHTML += "Elapsed Miles Claim/Maint: " + milesBtwnRecs + "<br>";
     outputDiv3.innerHTML += "Miles Per Day (Average): " + milesperday.toFixed() + "<br>";
     outputDiv3.innerHTML += "Elapsed Days Maint/Sale: " + daysBtwnMaintSale + "<br>";
-    outputDiv3.innerHTML += "Miles Elapased in Contract: " + milesIn + "<br>";
+    outputDiv3.innerHTML += "Miles Elapsed in Contract: " + milesIn + "<br>";
     outputDiv3.innerHTML += "Days Elapsed In Contract: " + daysIn;
   }
 }
