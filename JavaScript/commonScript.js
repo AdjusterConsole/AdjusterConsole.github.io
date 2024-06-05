@@ -182,24 +182,26 @@ function Record() {
 }
 
 function setDate() {
-//  var date = new Date();
-//  var day = date.getDate();
-//  var month = date.getMonth() + 1;
-//  var year = date.getFullYear();
-//  if (month < 10) month = "0" + month;
-//  if (day < 10) day = "0" + day;
-//  var today = year + "-" + month + "-" + day;
-//  document.getElementById("serDate").value = today;
+  var date = new Date();
+  var day = date.getDate();
+  var month = date.getMonth() + 1;
+  var year = date.getFullYear();
+  if (month < 10) month = "0" + month;
+  if (day < 10) day = "0" + day;
+  var today = year + "-" + month + "-" + day;
+  document.getElementById("serDate").value = today;
 //  document.getElementById("incDate").value = today;
 //  document.getElementById("rec0Date").value = today;
 
-  document.getElementById("incDate").value = "2024-01-31";
-  document.getElementById("serDate").value = "2024-03-01";
-  document.getElementById("rec0Date").value = "2024-01-01";
+//  document.getElementById("incDate").value = "2024-01-31";
+//  document.getElementById("serDate").value = "2024-03-01";
+//  document.getElementById("rec0Date").value = "2024-01-01";
 
-  document.getElementById("incMile").value = "104000";
-  document.getElementById("serMile").value = "110000";
-  document.getElementById("rec0Mile").value = "100000";
+//  document.getElementById("incMile").value = "104000";
+//  document.getElementById("serMile").value = "110000";
+//  document.getElementById("rec0Mile").value = "100000";
+
+
 }
 
 function convertToDate(str) {
@@ -265,9 +267,8 @@ function showTable() {
 
 function saveRecord(elemId) {
   var noteOpen = localStorage.getItem("noteOpen");
-  if (noteOpen == "true") {
-    document.getElementById('trackerMsg').innerHTML = "Close the note in order to proceed";
-    return;
+  if (noteOpen != "false") {
+    closeonFly();
   }
   document.getElementById('trackerMsg').innerText = "";
   document.getElementById('trackerMini').innerText = "";
@@ -433,6 +434,23 @@ function comsoCompan(z) {
   displayRecs(z);
 }
 
+function closeonFly() {
+  var noteOpen = localStorage.getItem("noteOpen");
+  var elemId2 = noteOpen.slice(0, -7);
+  var noteID2 = elemId2 + "N";
+  var binElem2 = document.getElementById(noteOpen);
+  var noteText2 = binElem2.innerText;
+  binElem2.innerText = "";
+  if (noteText != "") {
+    localStorage.setItem(elemId2 + "Note", noteText2);
+  }
+  document.getElementById(noteID2).innerText = "Add Note";
+  binElem2.style.height = "0px";
+  binElem2.classList.toggle("arise");
+  localStorage.setItem("noteOpen", "false");
+  noteForget();
+}
+
 function showNote(noteID) {
   var noteOpen = localStorage.getItem("noteOpen");
   var temp = noteID.length - 1;
@@ -440,9 +458,8 @@ function showNote(noteID) {
   var noteDivID = noteID + "otebin";
   var binElem = document.getElementById(noteDivID);
   if (binElem.style.height == "0px") {
-    if (noteOpen == "true") {
-      document.getElementById('trackerMsg').innerHTML = "Close the open note before opening another";
-      return;
+    if (noteOpen != "false") {
+      closeonFly();
     }
     var curNote = localStorage.getItem(elemId + "Note");
     if (curNote != null) {
@@ -451,13 +468,15 @@ function showNote(noteID) {
     binElem.classList.toggle("arise");
     binElem.style.height = "150px"
     document.getElementById(noteID).innerText = "Finished";
-    localStorage.setItem("noteOpen", "true");
+    localStorage.setItem("noteOpen", noteDivID);
     noteListen();
   } else if (binElem.style.height != "0px") {
     document.getElementById('trackerMsg').innerHTML = "";
     var noteText = binElem.innerText;
     binElem.innerText = "";
-    localStorage.setItem(elemId + "Note", noteText);
+    if (noteText != "") {
+      localStorage.setItem(elemId + "Note", noteText);
+    }
     document.getElementById(noteID).innerText = "Add Note";
     binElem.style.height = "0px";
     binElem.classList.toggle("arise");
@@ -675,7 +694,7 @@ function inceptEst(spot) {
     msgDiv.innerHTML += "Elapsed Miles Claim/Maint: " + milesBtwnRecs + "<br>";
     msgDiv.innerHTML += "Miles Per Day (Average): " + milesperday.toFixed() + "<br>";
     msgDiv.innerHTML += "Elapsed Days Maint/Sale: " + daysBtwnMaintSale + "<br>";
-    msgDiv.innerHTML += "Miles Elapsed in Contract: " + milesIn + "<br>";
+    msgDiv.innerHTML += "Miles Elapased in Contract: " + milesIn + "<br>";
     msgDiv.innerHTML += "Days Elapsed In Contract: " + daysIn;
   } else if (spot == 'all') {
     var splitR = document.getElementById('splitR');
@@ -718,18 +737,18 @@ function noteOutput(z) {
   }
   const objectArr = JSON.parse(localStorage.getItem("objectArr"));
   for (i = 0; i < objectArr.length; i++) {
-    if (i != 0) { whereOut.innerHTML += "<br>"; }
-    whereOut.innerHTML += "Date: " + objectArr[i].date;
+    if (i != 0) { whereOut.innerText += "\r"; }
+    whereOut.innerText += "Date: " + objectArr[i].date;
     if (objectArr[i].isInception) {
-      whereOut.innerHTML += " Inception<br>";
+      whereOut.innerText += " Inception\r";
     } else if (objectArr[i].isService) {
-      whereOut.innerHTML += " Claim<br>";
+      whereOut.innerText += " Claim\r";
     } else {
-      whereOut.innerHTML += "<br>";
+      whereOut.innerText += "\r";
     }
-    whereOut.innerHTML += "Mileage: " + objectArr[i].mileage + "<br>";
+    whereOut.innerText += "Mileage: " + objectArr[i].mileage + "\r";
     if (objectArr[i].notes == null) { objectArr[i].notes = "None"; }
-    whereOut.innerHTML += "Notes: " + objectArr[i].notes + "<br>";
+    whereOut.innerText += "Notes: " + objectArr[i].notes + "\r";
   }
   hideTable();
   if (z == '1') {

@@ -15,6 +15,114 @@ By using this code, you agree to abide by these terms and conditions. Failure to
 For inquiries regarding licensing or permission to use this code in ways not covered by this license, please contact the author at AdjusterConsole@gmail.com.  */
 /* LaborScript, SideNav, tutorial, toggle sliders */
 
+#cancelState {
+  bottom: 5px;
+  left: 175px;
+  border-right: 2px solid var(--my-accent-color);
+}
+
+#backState {
+  bottom: 5px;
+  left: 5px;
+  border-right: 2px solid var(--my-accent-color);
+}
+
+#advanceState {
+  bottom: 5px;
+  right: 5px;
+  border-left: 2px solid var(--my-accent-color);
+}
+
+.state_back {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: block;
+  width: 98%;
+  height: 98%;
+  z-index: 6;
+  background: none;
+  box-shadow: none;
+  border: none;
+  outline: none;
+}
+
+.Mradio.stmt_temp_rad {
+  float: right;
+  width: 16px;
+  height: 16px;
+  margin-right: 15px;
+}
+
+.CS_bot label {
+  float: right;
+  margin-right: 5px;
+}
+
+#time_owned {
+  margin: 5px;
+  width: 50px;
+  font-size: 17px;
+}
+
+option, select {
+  font-size: 17px;
+}
+
+#approx_mile {
+  margin: 5px;
+  width: 100px;
+  font-size: 17px;
+}
+
+.CS_bot {
+  line-height: 1.4;
+  margin-top: 10px;
+}
+
+.state_main {
+  position: absolute;
+  height: 50%;
+  width: 70%;
+  margin: 200px 125px;
+  padding: 15px;
+  background: var(--fancy-background);
+  box-shadow:
+   inset 0px 0px 10px 4px var(--my-shadow-color2),
+   0px 12px 70px 14px black;
+  overflow: hidden;
+}
+
+.CS_bot textarea {
+  display: inline-block;
+  position: absolute;
+  width: 307px;
+  height: 100px;
+  margin-top: 45px;
+  margin-left: 55px;
+  padding: 15px;
+  resize: none;
+}
+
+.chState_div {
+  padding: 15px;
+  margin: auto;
+  width: 70%;
+  height: 50%; 
+  background: linear-gradient(315deg, var(--fancy-meddark), var(--fancy-medlight));
+  box-shadow: -5px -5px 16px var(--fancy-dark), 5px 5px 16px var(--fancy-light)
+}
+
+.CS_top {
+  background: none;
+  box-shadow: none;
+}
+
+.CS_bot {
+  background: none;
+  box-shadow: none;
+}
+
 .ls_main {
   position: absolute;
   display: block;

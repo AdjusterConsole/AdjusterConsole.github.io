@@ -230,37 +230,37 @@ body {
 
 <div id="mySidenav" class="sidenav closed_nav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <button class="navHeader" onclick="resrcCenter('5','t')">Tools</button>
-  <button onclick="openScript()">Labor Rate Script</button>
-  <button onclick="resrcCenter('5','t');openInfo(event, 'trackerTool')">Tracker Tool</button>
-  <button onclick="resrcCenter('5','t');openInfo(event, 'PAPrice')">Pricing Guide</button>
-  <button onclick="resrcCenter('5','t');openInfo(event, 'MileDiscrep')">Mileage Issues</button>
-  <button class="navEnder" onclick="resrcCenter('5','t');openInfo(event, 'QuickAns')">Quick Answers</button>
-  <button class="navHeader" onclick="resrcCenter('4','p')">Policy</button>
-  <button onclick="resrcCenter('4','p');openInfo2(event, 'MBIClaims')">MBI</button>
-  <button onclick="resrcCenter('4','p');openInfo2(event, 'xfer2790')">2790 Xfer</button>
-  <button onclick="resrcCenter('4','p');openInfo2(event, 'Tesla')">Tesla</button>
-  <button onclick="resrcCenter('4','p');openInfo2(event, 'DoNotUse')">Do Not Use</button>
-  <button onclick="resrcCenter('4','p');openInfo2(event, 'IsItPT')">Is It PT?</button>
-  <button onclick="resrcCenter('4','p');openInfo2(event, 'partsRes')">Parts Resolution</button>
-  <button onclick="resrcCenter('4','p');openInfo2(event, 'Diagnostic')">Diagnostic Times</button>
-  <button class="navEnder" onclick="resrcCenter('4','p');openInfo2(event, 'PANoOrder')">Do Not Order</button>
-  <button class="navHeader" onclick="diagCenter()">Diagnostic Assistance</button>
-  <button onclick="diagCenter();openInfo2(event, 'Cooling')">Cooling</button>
-  <button onclick="diagCenter();openInfo2(event, 'Turbo')">Turbo</button>
-  <button onclick="diagCenter();openInfo2(event, 'Timing')">Timing</button>
-  <button onclick="diagCenter();openInfo2(event, 'Steering')">Steering</button>
-  <button onclick="diagCenter();openInfo2(event, 'Suspension')">Suspension</button>
-  <button onclick="diagCenter();openInfo2(event, 'AC')">AC</button>
-  <button onclick="diagCenter();openInfo2(event, 'Electrical')">Electrical</button>
-  <button class="navEnder" onclick="diagCenter();openInfo2(event, 'Fuel')">Fuel</button>
-  <button class="navHeader" onclick="ShowTemps()">Templates</button>
-  <button onclick="PTXFER()">PT Transfer</button>
-  <button onclick="STMTTEMP('T2')>CH Statement</button>
-  <button onclick="REVIEW('T3')">Insp/Pic Review</button>
-  <button onclick="INSPTEMP('T4')">Inspection Template</button>
-  <button onclick="showAuth()">Authorization</button>
-  <button onclick="statNOTE()">Status</button>
+  <button class="navHeader" onclick="resrcCenter('5','t');closeNav()">Tools</button>
+  <button onclick="openScript();closeNav()">Labor Rate Script</button>
+  <button onclick="resrcCenter('5','t');openInfo(event, 'trackerTool');closeNav()">Tracker Tool</button>
+  <button onclick="resrcCenter('5','t');openInfo(event, 'PAPrice');closeNav()">Pricing Guide</button>
+  <button onclick="resrcCenter('5','t');openInfo(event, 'MileDiscrep');closeNav()">Mileage Issues</button>
+  <button class="navEnder" onclick="resrcCenter('5','t');openInfo(event, 'QuickAns');closeNav()">Quick Answers</button>
+  <button class="navHeader" onclick="resrcCenter('4','p');closeNav()">Policy</button>
+  <button onclick="resrcCenter('4','p');openInfo2(event, 'MBIClaims');closeNav()">MBI</button>
+  <button onclick="resrcCenter('4','p');openInfo2(event, 'xfer2790');closeNav()">2790 Xfer</button>
+  <button onclick="resrcCenter('4','p');openInfo2(event, 'Tesla');closeNav()">Tesla</button>
+  <button onclick="resrcCenter('4','p');openInfo2(event, 'DoNotUse');closeNav()">Do Not Use</button>
+  <button onclick="resrcCenter('4','p');openInfo2(event, 'IsItPT');closeNav()">Is It PT?</button>
+  <button onclick="resrcCenter('4','p');openInfo2(event, 'partsRes');closeNav()">Parts Resolution</button>
+  <button onclick="resrcCenter('4','p');openInfo2(event, 'Diagnostic');closeNav()">Diagnostic Times</button>
+  <button class="navEnder" onclick="resrcCenter('4','p');openInfo2(event, 'PANoOrder');closeNav()">Do Not Order</button>
+  <button class="navHeader" onclick="diagCenter();closeNav()">Diagnostic Assistance</button>
+  <button onclick="diagCenter();openInfo2(event, 'Cooling');closeNav()">Cooling</button>
+  <button onclick="diagCenter();openInfo2(event, 'Turbo');closeNav()">Turbo</button>
+  <button onclick="diagCenter();openInfo2(event, 'Timing');closeNav()">Timing</button>
+  <button onclick="diagCenter();openInfo2(event, 'Steering');closeNav()">Steering</button>
+  <button onclick="diagCenter();openInfo2(event, 'Suspension');closeNav()">Suspension</button>
+  <button onclick="diagCenter();openInfo2(event, 'AC');closeNav()">AC</button>
+  <button onclick="diagCenter();openInfo2(event, 'Electrical');closeNav()">Electrical</button>
+  <button class="navEnder" onclick="diagCenter();openInfo2(event, 'Fuel');closeNav()">Fuel</button>
+  <button class="navHeader" onclick="ShowTemps();closeNav()">Templates</button>
+  <button onclick="PTXFER();ShowTemps();closeNav()">PT Transfer</button>
+  <button onclick="STMTTEMP('T2');ShowTemps();closeNav()">CH Statement</button>
+  <button onclick="REVIEW('T3');ShowTemps();closeNav()">Insp/Pic Review</button>
+  <button onclick="INSPTEMP('T4');ShowTemps();closeNav()">Inspection Template</button>
+  <button onclick="showAuth();closeNav()">Authorization</button>
+  <button onclick="statNOTE();closeNav()">Status</button>
 </div>
 
                                                 <!-- Appearance Settings -->
@@ -403,6 +403,119 @@ body {
     <button id="R13" class="D R P C" oncontextmenu="customMenu(this.id, event)" style="display: inline-block" name="edit" onclick="ALIGNMENT(this.id)">ALIGN</button>
     <button id="R16" class="D R P" oncontextmenu="customMenu(this.id, event)" style="display: inline-block" onclick="LABOR()">LABOR</button>
     <button id="R17" class="D R P" oncontextmenu="customMenu(this.id, event)" style="display: inline-block" onclick="DIAG()">DIAG</button>
+  </div>
+</div>
+
+                                                <!-- CH Statement Questions -->
+
+
+<div id="statement" class="state_back" style="display:none;">
+  <div id="statement" class="state_main">
+    <h3 class="headerTab" style="margin-bottom:30px;">CH Statement</h3>
+    <div id="state1" class="chState_div">
+      <div class="CS_top"><b>Can you describe what happened?</b>
+      </div>
+      <div class="CS_bot">
+        <textarea class="stmt_temp_ta" id="state1ans"></textarea>
+      </div>
+    </div>
+    <div id="state2" class="chState_div" style="display:none;">
+      <div class="CS_top"><b>When did the issue first occur?</b>
+      </div>
+      <div class="CS_bot">
+        <textarea class="stmt_temp_ta" id="state2ans"></textarea>
+      </div>
+    </div>
+    <div id="state3" class="chState_div" style="display:none;">
+      <div class="CS_top"><b>Were there any prior related issues?</b><br>
+      </div>
+      <div class="CS_bot">
+        <input type="radio" onclick="advanceState(this.id)" class="Mradio stmt_temp_rad" id="chyes3" name="stateN1"><label for="chyes3">Yes</label><br>
+        <input type="radio" onclick="advanceState(this.id)" class="Mradio stmt_temp_rad" id="chno3" name="stateN1"><label for="chno3">No</label>
+      </div>
+    </div>
+    <div id="state4" class="chState_div" style="display:none;">
+      <div class="CS_top"><b>What were they and when did they occur?</b>
+      </div>
+      <div class="CS_bot">
+        <textarea class="stmt_temp_ta" id="state4ans"></textarea>
+      </div>
+    </div>
+    <div id="state5" class="chState_div" style="display:none;">
+      <div class="CS_top"><b>Were there any warning lights?</b>
+      </div>
+      <div class="CS_bot">
+        <input type="radio" onclick="advanceState(this.id)" class="Mradio stmt_temp_rad" id="chyes5" name="stateN2"><label for="chyes5">Yes</label><br>
+        <input type="radio" onclick="advanceState(this.id)" class="Mradio stmt_temp_rad" id="chno5" name="stateN2"><label for="chno5">No</label>
+      </div>
+    </div>
+    <div id="state6" class="chState_div" style="display:none;">
+      <div class="CS_top"><b>Please describe:</b>
+      </div>
+      <div class="CS_bot">
+        <textarea class="stmt_temp_ta" id="state6ans"></textarea>
+      </div>
+    </div>
+    <div id="state7" class="chState_div" style="display:none;">
+      <div class="CS_top"><b>Was there any noise, smoke, or smell?</b>
+      </div>
+      <div class="CS_bot">
+        <input type="radio" onclick="advanceState(this.id)" class="Mradio stmt_temp_rad" id="chyes7" name="stateN3"><label for="chyes7">Yes</label><br>
+        <input type="radio" onclick="advanceState(this.id)" class="Mradio stmt_temp_rad" id="chno7" name="stateN3"><label for="chno7">No</label>
+      </div>
+    </div>
+    <div id="state8" class="chState_div" style="display:none;">
+      <div class="CS_top"><b>Please describe:</b>
+      </div>
+      <div class="CS_bot">
+        <textarea class="stmt_temp_ta" id="state8ans"></textarea>
+      </div>
+    </div>
+    <div id="state9" class="chState_div" style="display:none;">
+      <div class="CS_top"><b>How long have you owned the vehicle?</b>
+      </div>
+      <div class="CS_bot">
+        <input type="number" class="stmt_temp_ta" id="time_owned" step=".1">
+        <select id="time_unit" class="stmt_temp_ta">
+          <option selected value="">Select an Option</option>
+          <option value="Years">Years</option>
+          <option value="Months">Months</option>
+          <option value="Weeks">Weeks</option>
+        </select>
+      </div>
+    </div>
+    <div id="state10" class="chState_div" style="display:none;">
+      <div class="CS_top"><b>Do you know the approximate mileage when you purchased it?</b> &nbsp;(If unsure, leave blank.)
+      </div>
+      <div class="CS_bot">
+        <input type="number" class="stmt_temp_ta " id="approx_mile" step="1">
+      </div>
+    </div>
+    <div id="state11" class="chState_div" style="display:none;">
+      <div class="CS_top"><b>Was the vehicle towed to the repair facility?</b>
+      </div>
+      <div class="CS_bot">
+        <input type="radio" onclick="advanceState(this.id)" class="Mradio stmt_temp_rad" id="chyes11" name="stateN4"><label for="chyes11">Towed</label><br>
+        <input type="radio" onclick="advanceState(this.id)" class="Mradio stmt_temp_rad" id="chno11" name="stateN4"><label for="chno11">Driven</label>
+      </div>
+    </div>
+    <div id="state12" class="chState_div" style="display:none;">
+      <div class="CS_top"><b>Where was it towed from and what tow company did you use?</b>
+      </div>
+      <div class="CS_bot">
+        <textarea class="stmt_temp_ta" id="state12ans"></textarea>
+      </div>
+    </div>
+    <div id="state13" class="chState_div" style="display:none;">
+      <div class="CS_top"><b>Any additional comments or notes:</b>
+      </div>
+      <div class="CS_bot">
+        <textarea class="stmt_temp_ta" id="state13ans"></textarea>
+      </div>
+    </div>
+     <button id="backState" class="wefwefwef" onclick="backState()">Back</button>
+     <button id="cancelState" class="wefwefwef" onclick="cancelState()">Cancel</button>
+     <button id="advanceState" class="wefwefwef" onclick="advanceState()">Next</button>
   </div>
 </div>
 
@@ -1350,7 +1463,7 @@ TIME:&nbsp&nbsp</textarea>
       <th class="inptTbl">Record</th>
       <td class="inptTbl tblDate"><input type="date" id="rec0Date" class="tracker rec"></td>
       <td class="inptTbl tblMile"><input type="number" id="rec0Mile" class="tracker rec"></td>
-      <td class="inptTbl tblRadio"><input type="radio" id="rec0C" class="tracker rec" name="jeff"></input></td>
+      <td class="inptTbl tblRadio"><input type="radio" id="rec0C" class="tracker rec" name="jeff" checked></input></td>
       <td class="wider"><button id="rec0N" class="min rec" onclick="showNote(this.id)">Add Note</button></td>
       <td class="lastCell"><button id="rec0S" class="min rec" onclick="saveRecord(this.id)">Save</button></td>
       <td class="lastCell"><button id="rec0D" class="min rec" onclick="delRecord(this.id)">Del</button></td>
