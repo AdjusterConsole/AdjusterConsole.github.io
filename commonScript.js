@@ -393,10 +393,6 @@ function delRecord(elemId) {
   if (noteOpen != "false") {
     closeonFly();
   }
-
-  document.getElementById('whichA').checked = false;
-  document.getElementById('whichB').checked = false;
-  document.getElementById('whichC').checked = false;
   document.getElementById('trackerMsg').innerText = "";
   document.getElementById('trackerMini').innerText = "";
   var temp = elemId.length - 1;
@@ -857,6 +853,9 @@ function resetReport() {
   document.getElementById('trackerMini').innerText = "";
   document.getElementById('splitL').innerHTML = "";
   document.getElementById('splitR').innerHTML = "";
+  document.getElementById('whichA').checked = false;
+  document.getElementById('whichB').checked = false;
+  document.getElementById('whichC').checked = false;
   var addLineCount = localStorage.getItem("addLineCount");
   var LineCount = parseInt(addLineCount);
   var inputElems = document.querySelectorAll(".tracker");

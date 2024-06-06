@@ -141,7 +141,7 @@ body {
   <button id="BtnBuilder" class="astext menu" onclick="BuilderShow()">&#x2666; Toggle On/Off &#x2666;</button>
 </div>
 
-                                                <!-- File Things -->
+                                                <!-- SOP Menu -->
 
 <div id="sopnav" class="sop_nav">
   <a href="javascript:void(0)" class="close_pdf" onclick="closePDFmenu()">&times;</a>
@@ -291,13 +291,9 @@ body {
                                               <!-- Main Buttons -->
 
 <div id="navtag" class="nav_tag" onclick="openSOPnav();">Browse Full SOPs</div>
-
 <div id="swap1" class="otherone" onclick="openNav()">&#9776;</div>
-
 <button id="newAuthstarter" class="D R P s7dispStat" oncontextmenu="customMenu(this.id, event)" onclick="showAuth()"><b><f>Authorize</f></b> Claim</button>
-
 <button id="statusNote" class="D R P s8dispStat" oncontextmenu="customMenu(this.id, event)" onclick="statNOTE()"><b>Status</b> Note</button>
-
 <button id="openScript" class="D R P s4dispStat" oncontextmenu="customMenu(this.id, event)" onclick="openScript()">Labor Rate<br>Script</button>
 
 <div id="Request" class="REQUESTDIV noShow">
@@ -858,6 +854,8 @@ TIME:&nbsp&nbsp</textarea>
 <textarea autocomplete="off" title="Hidden" id="textareadata" class="hideME noShow" name="name"></textarea>
 <textarea style="display: none;" id="EDITarea"></textarea>
 
+                                                <!-- Bulk Prices -->
+
 <div id="div6" class="div6" style="display: none">
   REG OIL: 7.13<br>
   SYN OIL: 11.89<br><br>
@@ -882,6 +880,8 @@ TIME:&nbsp&nbsp</textarea>
   ENG/TRANS DYE: 12.49/OZ<br>
   SEALANT/RTV: 13.37 PER 3.5OZ<br>
 </div>
+
+                                                <!-- Numbers -->
 
 <div id="NUMBERS" class="div4 noShow"><b>PAYMENTS FAX<br>303-456-1039<br><br>
  RECORDS FAX<br>303-420-4722<br><br>
@@ -914,6 +914,7 @@ TIME:&nbsp&nbsp</textarea>
     <button class="tablinks edgeButton" onclick="openInfo(event, 'PANoOrder')">Do Not Order</button>
   </div>
 
+                                                <!-- Quick Ans -->
 
   <div id="QuickAns" class="tabcontent">
     <h3 class="headerTab" style="margin-bottom:0px;">Common questions</h3>
@@ -1016,6 +1017,7 @@ TIME:&nbsp&nbsp</textarea>
     </div>
   </div>
 
+                                                <!-- Labor Mileage Discrept -->
 
   <div id="MileDiscrep" class="tabcontent">
     <h3 class="headerTab">Mileage Discrepancies</h3>
@@ -1080,6 +1082,8 @@ TIME:&nbsp&nbsp</textarea>
       <button id="resetMD" class="wefwefwef D R P" onclick="resetMD()">Reset</button>
     </div>
   </div>
+
+                                                <!-- Price Guide -->
 
   <div id="PAPrice" class="tabcontent">
     <h3 class="headerTab">Parts Pricing - PA and Sourcing</h3>
@@ -1174,6 +1178,8 @@ TIME:&nbsp&nbsp</textarea>
   <button id="resetPA" class="wefwefwef D R P" onclick="resetGuide()">Reset</button>
   </div>
 
+                                                <!-- PA No Order -->
+
   <div id="PANoOrder" class="tabcontent">
   <h3 class="headerTab">Do Not Order These Parts From PA</h3>
     <div class="innerLeft">
@@ -1213,6 +1219,9 @@ TIME:&nbsp&nbsp</textarea>
     Power Steering Racks</p>
     </div>
   </div>
+
+                                                <!-- Diagnostic Times -->
+
   <div id="Diagnostic" class="tabcontent">
     <h3 class="headerTab">Common Diagnostic Times</h3>
       <div class="innerLeft noShow">
@@ -1258,6 +1267,8 @@ TIME:&nbsp&nbsp</textarea>
       </div>
   </div>
 
+                                                <!-- Tracker Tool -->
+
   <div id="trackerTool" class="tabcontent">
   <div id="tableDiv" class="noteBins arise tableSize">
   <table id="inputTable" class="inputClass">
@@ -1266,8 +1277,7 @@ TIME:&nbsp&nbsp</textarea>
       <th class="inptTbl">Date</th>
       <th class="inptTbl">Mileage</th>
       <th class="inptTbl">&imacr;</th>
-      <td colspan="2" class="lastCell"><button id="addLineBtn" class="min rec" onclick="addLine()">Add Line</button></td>
-      <th class="lastCell"></td>
+      <td colspan="3" class="lastCell"><button id="addLineBtn" class="min rec" onclick="addLine()">Add Line</button><button id="saveallRecs" class="min rec" onclick="saveAll()">Save All</button></td>
     </tr>
     <tr id="serTab">
       <th class="inptTbl">Service</th>
@@ -1365,6 +1375,8 @@ TIME:&nbsp&nbsp</textarea>
   </div>
 </div>
 
+                                                <!-- Do Not Use -->
+
   <div id="DoNotUse" class="tabcontent noteBins arise">
     <h3 class="headerTab">Do Not Use vs STOP-NO CLAIMS ALLOWED</h3>
     <p class="bodyTab">Shops that have Do Not Use in the RF name are just duplicate accounts.<br>
@@ -1378,6 +1390,8 @@ TIME:&nbsp&nbsp</textarea>
     <p class="bodyTab">Do not share any details or speculation about the RF to the CH or anyone from the RF.</p>
     <p class="bodyTab">Document all actions taken in the notes.</p>
   </div>
+
+                                                <!-- Tesla -->
 
   <div id="Tesla" class="tabcontent noteBins arise">
     <h3 class="headerTab">Tesla</h3>
@@ -1396,6 +1410,8 @@ TIME:&nbsp&nbsp</textarea>
       Advise the Repair Facility that the team that handles Tesla claims will reach out with-in 24 hours.</p>
   </div>
 
+                                                <!-- 2790 Xfer -->
+
   <div id="xfer2790" class="tabcontent noteBins arise">
     <h3 class="headerTab">2790</h3>
     <p><b>Don't let the big red banner scare you off.</b></p>
@@ -1405,6 +1421,8 @@ TIME:&nbsp&nbsp</textarea>
     you should task the assigned ADJ with updates or actions needed.</p>
     <p class="bodyTab">And of course, if you are not sure of what steps you should take, reach out to your TL.</p>
   </div>
+
+                                                <!-- Parts Res -->
 
   <div id="partsRes" class="tabcontent noteBins arise">
     <h3 class="headerTab" style="margin-bottom:0px;">Parts Resolution</h3><br>
@@ -1433,6 +1451,8 @@ TIME:&nbsp&nbsp</textarea>
       </ul>
   </div>
 
+                                                <!-- Is It PT -->
+
   <div id="IsItPT" class="tabcontent noteBins arise">
     <h3 class="headerTab">Is It PT?</h3>
     <p><b>What Qualifies for PowerTrain Transfer:</b></p>
@@ -1453,6 +1473,8 @@ TIME:&nbsp&nbsp</textarea>
     A/C Concerns</p>
   </div>
 
+                                                <!-- MBI Claims -->
+
   <div id="MBIClaims" class="tabcontent noteBins arise">
     <h3 class="headerTab">MBI Claims</h3>
     <p><b>Important</b></p>
@@ -1471,6 +1493,8 @@ TIME:&nbsp&nbsp</textarea>
   </div>
   <button id="exitRec" class="wefwefwef" onclick="closeResource()">Exit</button>
 </div>
+
+                                                <!-- Output Div -->
 
   <div id="outputDiv" class="noteBins outputDiv">
     <div id="alertDiv" class="noShow" onclick="showMsg()"></div>
