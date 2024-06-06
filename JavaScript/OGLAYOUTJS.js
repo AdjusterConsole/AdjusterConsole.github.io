@@ -90,17 +90,6 @@ function getContact(whichInfo) {
   return bananaMilkshake;
 }
 
-function ShowTemps() {
-  var TPDiv = document.getElementById("TPDiv");
-  var isOpen = checkOpen();
-  if (TPDiv.style.display == "inline-block" || isOpen) {
-    TPDiv.style.display = "none";
-    return;
-  }
-  TPDiv.style.display = "inline-block";
-
-}
-
 function MENU() {
   var theMenu = document.getElementById("LOCK1");
   var BtnBuilder = document.getElementById("BtnBuilder");
@@ -125,11 +114,177 @@ function MENU() {
   }
 }
 
+function STMTTEMP() {
+  var statement = document.getElementById("statement");
+  if (statement.style.display == "none") {
+    statement.style.display = "initial";
+    localStorage.setItem("statePage", "1");
+    ShowTemps();
+  } else {
+    return;
+  }
+}
+
+function cancelState() {
+  var stmttempta = document.getElementsByClassName("stmt_temp_ta");
+  for (i = 0; i < stmttempta.length; i++) {
+    stmttempta[i].value = "";
+  }
+  var stmt_temp_rad = document.getElementsByClassName("stmt_temp_rad");
+  for (i = 0; i < stmt_temp_rad.length; i++) {
+    stmt_temp_rad[i].checked = false;
+  }
+  document.getElementById("time_owned").value = "";
+  document.getElementById("time_unit").value = "";
+  document.getElementById("approx_mile").value = "";
+  textarea5.select();
+  document.execCommand("copy");
+  document.getElementById("state13").style.display = "none";
+  document.getElementById("state1").style.display = "inherit";
+  document.getElementById("statement").style.display = "none";
+  var chState_div = document.getElementsByClassName("chState_div");
+  for (i = 0; i < chState_div.length; i++) {
+    chState_div[i].style.display = "none";  
+  }
+  document.getElementById("state1").style.display = "inherit";
+  document.getElementById("statement").style.display = "none";
+}
+
+function advanceState(btnId) {
+  var page = parseInt(localStorage.getItem("statePage"));
+  var pageId = "state" + page;
+  var nextPage = page + 1;
+  var nextPageId;
+  
+  if (btnId == "chno3" || btnId == "chno5" || btnId == "chno7" || btnId == "chno11") {
+    nextPage = page + 2;
+  }
+  if (nextPage == "3" || nextPage == "5" || nextPage == "7" || nextPage == "11") {
+    document.getElementById("advanceState").style.display = "none";
+  }
+  if (nextPage == "4" || nextPage == "6" || nextPage == "8" || nextPage == "9" || nextPage == "12" || nextPage == "13") {
+    document.getElementById("advanceState").style.display = "inline-block";
+  }
+  console.log(page, nextPage);
+  if (nextPage > 13) {
+    stateFinish();
+    return;
+  }
+  nextPageId = "state" + nextPage;
+  console.log(nextPageId);
+  document.getElementById(pageId).style.display = "none";
+  document.getElementById(nextPageId).style.display = "inherit";
+  localStorage.setItem("statePage", nextPage);
+}
+
+function backState() {
+  var page = localStorage.getItem("statePage");
+  if (page == "1") { return; }
+  var pageId = "state" + page;
+  var pageInt = parseInt(page);
+  console.log(pageInt);
+  if (pageInt == 13 || pageInt == 9 || pageInt == 7 || pageInt == 5) {
+    pageInt = pageInt - 2;
+  } else {
+    pageInt = pageInt - 1;
+  }
+  if (pageInt == "3" || pageInt == "5" || pageInt == "7" || pageInt == "11") {
+    document.getElementById("advanceState").style.display = "none";
+  }
+  if (pageInt == "2" || pageInt == "4" || pageInt == "6" || pageInt == "8" || pageInt == "9" || pageInt == "10" || pageInt == "12" || pageInt == "13") {
+    document.getElementById("advanceState").style.display = "inline-block";
+  }
+  console.log(pageInt);
+  var nextId = "state" + pageInt;
+  localStorage.setItem("statePage", pageInt);
+  document.getElementById("state12").style.display = "none";
+  document.getElementById("state8").style.display = "none";
+  document.getElementById("state6").style.display = "none";
+  document.getElementById("state4").style.display = "none";
+  document.getElementById(pageId).style.display = "none";
+  document.getElementById(nextId).style.display = "block";
+}
+
+function stateFinish() {
+  document.getElementById("textarea5").value = "";
+  var textarea5 = document.getElementById("textarea5");
+  var stateQ1 = "Can you describe what happened?";
+  var stateQ2 = "When did the issue first occur?";
+  var stateQ3 = "Were there any prior related issues?";
+  var stateQ4 = "What were they and when did they occur?";
+  var stateQ5 = "Were there any warning lights?";
+  var stateQ6 = "Please describe:";
+  var stateQ7 = "Was there any noise, smoke, or smell?";
+  var stateQ8 = "Please describe:";
+  var stateQ9 = "How long have you owned the vehicle?";
+  var stateQ10 = "Do you know the approximate mileage when you purchased it?";
+  var stateQ11= "Was the vehicle towed to the repair facility?";
+  var stateQ12 = "Where was it towed from and what tow company did you use?";
+  var stateQ13 = "Any additional comments or notes:";state1ans
+  var state1ans = document.getElementById("state1ans").value;
+  var state2ans = document.getElementById("state2ans").value;
+  var state3ans = document.getElementById("chyes3").checked;
+  var state4ans = document.getElementById("state4ans").value;
+  var state5ans = document.getElementById("chyes5").checked;
+  var state6ans = document.getElementById("state6ans").value;
+  var state7ans = document.getElementById("chyes7").checked;
+  var state8ans = document.getElementById("state8ans").value;
+  var state9ansa = document.getElementById("time_owned").value;
+  var state9ansb = document.getElementById("time_unit").value;
+  var state10ans = document.getElementById("approx_mile").value;
+  var state11ans = document.getElementById("chyes11").checked;
+  var state12ans = document.getElementById("state12ans").value;
+  var state13ans = document.getElementById("state13ans").value;
+  textarea5.value = stateQ1 + "\r" + state1ans + "\r\r" + stateQ2 + "\r" + state2ans + "\r\r" + stateQ3 + "\r";
+  if (state3ans) {
+    textarea5.value += "Yes - " + state4ans + "\r\r" + stateQ5 + "\r";
+  } else {
+    textarea5.value += "No\r\r" + stateQ5 + "\r";
+  }
+  if (state5ans) {
+    textarea5.value += "Yes - " + state6ans + "\r\r" + stateQ7 + "\r";
+  } else {
+    textarea5.value += "No\r\r" + stateQ7 + "\r";
+  }
+  if (state7ans) {
+    textarea5.value += "Yes - " + state8ans + "\r\r" + stateQ9 + "\r";
+  } else {
+    textarea5.value += "No\r\r" + stateQ9 + "\r";
+  }
+  textarea5.value += state9ansa + " " + state9ansb + "\r\r" + stateQ10 + "\r";
+  if (state10ans == "" || state10ans == null) {
+    textarea5.value += "No\r\r" + stateQ11 + "\r";
+  } else {
+    textarea5.value += state10ans + "\r\r" + stateQ11 + "\r";
+  }
+  if (state11ans) {
+    textarea5.value += "Yes - " + state12ans + "\r\r" + stateQ13 + "\r";
+  } else {
+    textarea5.value += "No\r\r" + stateQ13 + "\r";
+  }
+  textarea5.value += state13ans;
+  var stmttempta = document.getElementsByClassName("stmt_temp_ta");
+  for (i = 0; i < stmttempta.length; i++) {
+    stmttempta[i].value = "";
+  }
+  var stmt_temp_rad = document.getElementsByClassName("stmt_temp_rad");
+  for (i = 0; i < stmt_temp_rad.length; i++) {
+    stmt_temp_rad[i].checked = false;
+  }
+  document.getElementById("time_owned").value = "";
+  document.getElementById("time_unit").value = "";
+  document.getElementById("approx_mile").value = "";
+  textarea5.select();
+  document.execCommand("copy");
+  document.getElementById("state13").style.display = "none";
+  document.getElementById("state1").style.display = "inherit";
+  document.getElementById("statement").style.display = "none";
+}
+
 function statNOTE() {
   var statNote = document.getElementById("statNote");
   var statNoteinner = document.getElementById("statNoteinner");
-  var isOpen = checkOpen();
-  if (statNote.style.display == "inline-block" || isOpen) {
+  if (statNote.style.display == "inline-block" || checkOpen()) {
     statNote.style.display = "none";
     statNoteinner.style.height = "0%";
     return;
@@ -507,22 +662,6 @@ function NEWOEM() {
   textarea.scrollTop = textarea.scrollHeight;
 }
 
-function STMTTEMP(btnID) {
-  var StTemp = "What happened:   \rWhen did the issue first occur:   \rHad the issue occurred before:   \rIf yes, when:   \rAny warning lights:   \rAny noise, smoke, or smell:   \rHow long has the CH owned the vehicle:   \rApproximate mileage when CH purchased:   \rWas vehicle towed to RF:   \rFrom where and by whom:   \r";
-  var Check = localStorage.getItem(btnID + "EDIT");
-  if (Check == null) {
-    document.getElementById("textarea5").value = StTemp;
-    document.getElementById("EDITarea").value = StTemp;
-  } else {
-    document.getElementById("textarea5").value = Check;
-    document.getElementById("EDITarea").value = Check;
-  }
-  let textarea = document.getElementById("textarea5");
-  textarea.select();
-  document.execCommand("copy");
-  ShowTemps();
-}
-
 function REVIEW(btnID) {
   var Rev = "Reviewed inspection photos and report.\rReviewed photos sent by repair facility.\rVerified vin.\rVerified mileage.\rNo indication of commercial use.\rNo indication of modification.\r\r";
   var Check = localStorage.getItem(btnID + "EDIT");
@@ -595,6 +734,16 @@ function PTXFER() {
   localStorage.setItem("PTpage", "1");
   document.getElementById("quest1").style.display = "block";
   ShowTemps();
+}
+
+function ShowTemps() {
+  var TPDiv = document.getElementById("TPDiv");
+  var isOpen = checkOpen();
+  if (TPDiv.style.display == "inline-block" || isOpen) {
+    TPDiv.style.display = "none";
+    return;
+  }
+  TPDiv.style.display = "inline-block";
 }
 
 function advancePT(radioId) {
