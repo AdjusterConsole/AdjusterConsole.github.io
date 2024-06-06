@@ -13,6 +13,7 @@ This code is provided under the following terms and conditions:
 By using this code, you agree to abide by these terms and conditions. Failure to comply with these terms may result in legal action.
 
 For inquiries regarding licensing or permission to use this code in ways not covered by this license, please contact the author at AdjusterConsole@gmail.com.  */
+
 #picR {
   font-size: 16px;
   width: 130px;
@@ -320,13 +321,11 @@ input.ptRad {
   border-left: 2px solid var(--my-accent-color);
 }
 
-
-
 .Submitbtn {
   display: inline-block;
   height: 60px;
   width: 140px;
-  margin-top:30px;
+  margin-top: 30px;
 }
 
 .Cancelbtn {
@@ -408,7 +407,7 @@ input.largerCheckbox {
 input.largerRadio {
   width: 15px;
   height: 15px;
-  border-radius: 9px
+  border-radius: 9px;
 }
 
 .TheGang {
@@ -615,7 +614,7 @@ input.largerRadio {
   font-size: 17px;
   top: -70px;
   left: 160px;
-  WIDTH: 120px;
+  width: 120px;
   height: 50px;
 }
 

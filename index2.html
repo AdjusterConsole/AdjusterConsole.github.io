@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width">
 <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload">
 <meta http-equiv="X-Content-Type-Options" content="nosniff">
-
 <meta name="referrer" content="no-referrer">
+
 <link rel="stylesheet" href="CSS/Stable.css">
 <link rel="stylesheet" href="CSS/Common.css">
 <link rel="stylesheet" href="CSS/Neu/Buttons.css">
@@ -145,16 +145,13 @@ body {
 <div id="pdiv" class="noShow"><p></div>
 <button class="swapVer" onclick="swapPage('1')">Original</button>
 
-
                                                 <!-- Menu -->
 
 <div id="Mystery" class="TheGang noShow">
   <button id="LOCK1" class="astext" onclick="MENU()">&#x2666; Settings &#x2666;</button>
   <button id="appearance" class="astext menu" onclick="personalize()">&#x2666; Appearance &#x2666;</button>
   <button id="BtnBuilder" class="astext menu" onclick="BuilderShow()">&#x2666; Toggle On/Off &#x2666;</button>
-
 </div>
-
 
                                                 <!-- File Things -->
 
@@ -173,7 +170,6 @@ body {
   <button class="sop_btn neu" id="pdf0010" onclick="showSOP(this.id)">Add Or Update RF</button>
   <button class="sop_btn neu" id="pdf0011" onclick="showSOP(this.id)">Finalizing Claims</button>
   <button class="sop_btn neu navEnder" id="pdf0012" onclick="showSOP(this.id)">Claim Documentation</button>
-
 </div>
 
 <div id="sopnav2" class="sop_nav">
@@ -271,7 +267,7 @@ body {
     <input id="background-picker" type="color">
   </div>
   <div id="ACpick" class="noShow">
-   <label for="accent-picker">Page Accent Color:</label><br>
+    <label for="accent-picker">Page Accent Color:</label><br>
     <input id="accent-picker" type="color">
   </div>
   <div id="shad2Pick" class="noShow">
@@ -279,7 +275,7 @@ body {
     <input id="shad2-picker" type="color">
   </div>
   <div id="shad3Pick" class="noShow">
-   <label for="shad3-picker">Gradient End:</label><br>
+    <label for="shad3-picker">Gradient End:</label><br>
     <input id="shad3-picker" type="color">
   </div>
   <div id="shad1Pick" class="noShow">
@@ -287,28 +283,28 @@ body {
     <input id="shad1-picker" type="color">
   </div>
   <div id="shad4Pick" class="noShow">
-   <label for="shad4-picker">Shadow: </label><br>
+    <label for="shad4-picker">Shadow: </label><br>
     <input id="shad4-picker" type="color">
   </div>
   <div id="secondaries" class="noShow">
   <div id="bg2Pick" class="noShow">
-   <label for="bg2-picker">Secondary Background Color:</label><br>
+    <label for="bg2-picker">Secondary Background Color:</label><br>
     <input id="bg2-picker" type="color">
   </div>
   <div id="flPick" class="noShow">
-   <label for="fl-picker">Secondary Highlight:</label><br>
+    <label for="fl-picker">Secondary Highlight:</label><br>
     <input id="fl-picker" type="color">
   </div>
   <div id="fdPick" class="noShow">
-   <label for="fd-picker">Secondary Shadow:</label><br>
+    <label for="fd-picker">Secondary Shadow:</label><br>
     <input id="fd-picker" type="color">
   </div>
   <div id="mlPick" class="noShow">
-   <label for="ml-picker">Seccondary Gradient Start:</label><br>
+    <label for="ml-picker">Seccondary Gradient Start:</label><br>
     <input id="ml-picker" type="color">
   </div>
   <div id="mdPick" class="noShow">
-   <label for="md-picker">Seccondary Gradient End:</label><br>
+    <label for="md-picker">Seccondary Gradient End:</label><br>
     <input id="md-picker" type="color" value="#a4aaae">
   </div>
   </div>
@@ -403,119 +399,6 @@ body {
     <button id="R13" class="D R P C" oncontextmenu="customMenu(this.id, event)" style="display: inline-block" name="edit" onclick="ALIGNMENT(this.id)">ALIGN</button>
     <button id="R16" class="D R P" oncontextmenu="customMenu(this.id, event)" style="display: inline-block" onclick="LABOR()">LABOR</button>
     <button id="R17" class="D R P" oncontextmenu="customMenu(this.id, event)" style="display: inline-block" onclick="DIAG()">DIAG</button>
-  </div>
-</div>
-
-                                                <!-- CH Statement Questions -->
-
-
-<div id="statement" class="state_back" style="display:none;">
-  <div id="statement" class="state_main">
-    <h3 class="headerTab" style="margin-bottom:30px;">CH Statement</h3>
-    <div id="state1" class="chState_div">
-      <div class="CS_top"><b>Can you describe what happened?</b>
-      </div>
-      <div class="CS_bot">
-        <textarea class="stmt_temp_ta" id="state1ans"></textarea>
-      </div>
-    </div>
-    <div id="state2" class="chState_div" style="display:none;">
-      <div class="CS_top"><b>When did the issue first occur?</b>
-      </div>
-      <div class="CS_bot">
-        <textarea class="stmt_temp_ta" id="state2ans"></textarea>
-      </div>
-    </div>
-    <div id="state3" class="chState_div" style="display:none;">
-      <div class="CS_top"><b>Were there any prior related issues?</b><br>
-      </div>
-      <div class="CS_bot">
-        <input type="radio" onclick="advanceState(this.id)" class="Mradio stmt_temp_rad" id="chyes3" name="stateN1"><label for="chyes3">Yes</label><br>
-        <input type="radio" onclick="advanceState(this.id)" class="Mradio stmt_temp_rad" id="chno3" name="stateN1"><label for="chno3">No</label>
-      </div>
-    </div>
-    <div id="state4" class="chState_div" style="display:none;">
-      <div class="CS_top"><b>What were they and when did they occur?</b>
-      </div>
-      <div class="CS_bot">
-        <textarea class="stmt_temp_ta" id="state4ans"></textarea>
-      </div>
-    </div>
-    <div id="state5" class="chState_div" style="display:none;">
-      <div class="CS_top"><b>Were there any warning lights?</b>
-      </div>
-      <div class="CS_bot">
-        <input type="radio" onclick="advanceState(this.id)" class="Mradio stmt_temp_rad" id="chyes5" name="stateN2"><label for="chyes5">Yes</label><br>
-        <input type="radio" onclick="advanceState(this.id)" class="Mradio stmt_temp_rad" id="chno5" name="stateN2"><label for="chno5">No</label>
-      </div>
-    </div>
-    <div id="state6" class="chState_div" style="display:none;">
-      <div class="CS_top"><b>Please describe:</b>
-      </div>
-      <div class="CS_bot">
-        <textarea class="stmt_temp_ta" id="state6ans"></textarea>
-      </div>
-    </div>
-    <div id="state7" class="chState_div" style="display:none;">
-      <div class="CS_top"><b>Was there any noise, smoke, or smell?</b>
-      </div>
-      <div class="CS_bot">
-        <input type="radio" onclick="advanceState(this.id)" class="Mradio stmt_temp_rad" id="chyes7" name="stateN3"><label for="chyes7">Yes</label><br>
-        <input type="radio" onclick="advanceState(this.id)" class="Mradio stmt_temp_rad" id="chno7" name="stateN3"><label for="chno7">No</label>
-      </div>
-    </div>
-    <div id="state8" class="chState_div" style="display:none;">
-      <div class="CS_top"><b>Please describe:</b>
-      </div>
-      <div class="CS_bot">
-        <textarea class="stmt_temp_ta" id="state8ans"></textarea>
-      </div>
-    </div>
-    <div id="state9" class="chState_div" style="display:none;">
-      <div class="CS_top"><b>How long have you owned the vehicle?</b>
-      </div>
-      <div class="CS_bot">
-        <input type="number" class="stmt_temp_ta" id="time_owned" step=".1">
-        <select id="time_unit" class="stmt_temp_ta">
-          <option selected value="">Select an Option</option>
-          <option value="Years">Years</option>
-          <option value="Months">Months</option>
-          <option value="Weeks">Weeks</option>
-        </select>
-      </div>
-    </div>
-    <div id="state10" class="chState_div" style="display:none;">
-      <div class="CS_top"><b>Do you know the approximate mileage when you purchased it?</b> &nbsp;(If unsure, leave blank.)
-      </div>
-      <div class="CS_bot">
-        <input type="number" class="stmt_temp_ta " id="approx_mile" step="1">
-      </div>
-    </div>
-    <div id="state11" class="chState_div" style="display:none;">
-      <div class="CS_top"><b>Was the vehicle towed to the repair facility?</b>
-      </div>
-      <div class="CS_bot">
-        <input type="radio" onclick="advanceState(this.id)" class="Mradio stmt_temp_rad" id="chyes11" name="stateN4"><label for="chyes11">Towed</label><br>
-        <input type="radio" onclick="advanceState(this.id)" class="Mradio stmt_temp_rad" id="chno11" name="stateN4"><label for="chno11">Driven</label>
-      </div>
-    </div>
-    <div id="state12" class="chState_div" style="display:none;">
-      <div class="CS_top"><b>Where was it towed from and what tow company did you use?</b>
-      </div>
-      <div class="CS_bot">
-        <textarea class="stmt_temp_ta" id="state12ans"></textarea>
-      </div>
-    </div>
-    <div id="state13" class="chState_div" style="display:none;">
-      <div class="CS_top"><b>Any additional comments or notes:</b>
-      </div>
-      <div class="CS_bot">
-        <textarea class="stmt_temp_ta" id="state13ans"></textarea>
-      </div>
-    </div>
-     <button id="backState" class="wefwefwef" onclick="backState()">Back</button>
-     <button id="cancelState" class="wefwefwef" onclick="cancelState()">Cancel</button>
-     <button id="advanceState" class="wefwefwef" onclick="advanceState()">Next</button>
   </div>
 </div>
 
@@ -1441,15 +1324,6 @@ TIME:&nbsp&nbsp</textarea>
       <td colspan="2" class="lastCell"><button id="addLineBtn" class="min rec" onclick="addLine()">Add Line</button></td>
       <th class="lastCell"></td>
     </tr>
-    <tr id="incTab">
-      <th class="inptTbl">Inception</th>
-      <td class="inptTbl tblDate"><input type="date" id="incDate" class="tracker inc"></td>
-      <td class="inptTbl tblMile"><input type="number" id="incMile" class="tracker inc"></td>
-      <td class="inptTbl tblRadio"><input type="radio" id="incC" class="tracker rec" style="visibility:hidden"></td>
-      <td class="wider"><button id="incN" class="min inc" onclick="showNote(this.id)">Add Note</button></td>
-      <td class="lastCell"><button id="incS" class="min inc" onclick="saveRecord(this.id)">Save</button></td>
-      <td class="lastCell"><button id="incD" class="min inc" onclick="delRecord(this.id)">Del</button></td>
-    </tr>
     <tr id="serTab">
       <th class="inptTbl">Service</th>
       <td class="inptTbl tblDate"><input type="date" id="serDate" class="tracker ser"></td>
@@ -1458,6 +1332,15 @@ TIME:&nbsp&nbsp</textarea>
       <td class="wider"><button id="serN" class="min ser" onclick="showNote(this.id)">Add Note</button></td>
       <td class="lastCell"><button id="serS" class="min ser" onclick="saveRecord(this.id)">Save</button></td>
       <td class="lastCell"><button id="serD" class="min ser" onclick="delRecord(this.id)">Del</button></td>
+    </tr>
+    <tr id="incTab">
+      <th class="inptTbl">Inception</th>
+      <td class="inptTbl tblDate"><input type="date" id="incDate" class="tracker inc"></td>
+      <td class="inptTbl tblMile"><input type="number" id="incMile" class="tracker inc"></td>
+      <td class="inptTbl tblRadio"><input type="radio" id="incC" class="tracker rec" style="visibility:hidden"></td>
+      <td class="wider"><button id="incN" class="min inc" onclick="showNote(this.id)">Add Note</button></td>
+      <td class="lastCell"><button id="incS" class="min inc" onclick="saveRecord(this.id)">Save</button></td>
+      <td class="lastCell"><button id="incD" class="min inc" onclick="delRecord(this.id)">Del</button></td>
     </tr>
     <tr id="recTab0">
       <th class="inptTbl">Record</th>
@@ -1552,7 +1435,7 @@ TIME:&nbsp&nbsp</textarea>
       <ul>
       <li>Note the RF contact name, mileage, labor rate, and labor time for the part.</li>
       <li>Select the 'Parts' tab in CMS and click 'Parts Ordered'.</li>
-      <li>Click the checkbox next to the part select 'Parts Resolution'.</li>
+      <li>Click the checkbox next to the part. Select 'Parts Resolution'.</li>
       <li>Select the repair facility and click 'Next'.</li>
       <li>Select the repair facility contact.</li>
       <li>Enter the mileage, labor rate and hours, if the part was installed, and the case reason.</li>
@@ -2125,6 +2008,9 @@ TIME:&nbsp&nbsp</textarea>
     <img src="./Images/ACImg.PNG" alt="./imgBackup/ACImg.PNG" class="depotImg" id="acDepot">
   </div>
 </div>
+
+                                                <!-- Labor Script Div -->
+
 <div id="laborscriptDiv" class="ls_main" style="display:none;">
   <div class="ls_sub2">
     <h3 class="head_labor">Labor Rate Script</h3>
@@ -2195,7 +2081,119 @@ TIME:&nbsp&nbsp</textarea>
       <button id="resetScript" class="script_btn2 D R P" onclick="negotiateScript('r')">Reset</button>
       </div>
     </div>
-    <button id="exitScript" class="script_btn2 D R P" onclick="negotiateScript('r');openScript()">Exit</button>
+    <button id="exitScript2" class="script_btn2 D R P" onclick="negotiateScript('r');openScript()">Exit</button>
+  </div>
+</div>
+
+                                                <!-- CH Statement Questions -->
+
+<div id="statement" class="state_back" style="display:none;">
+  <div id="statement" class="state_main">
+    <h3 class="headerTab" style="margin-bottom:30px;">CH Statement</h3>
+    <div id="state1" class="chState_div">
+      <div class="CS_top"><b>Can you describe what happened?</b>
+      </div>
+      <div class="CS_bot">
+        <textarea class="stmt_temp_ta" id="state1ans"></textarea>
+      </div>
+    </div>
+    <div id="state2" class="chState_div" style="display:none;">
+      <div class="CS_top"><b>When did the issue first occur?</b>
+      </div>
+      <div class="CS_bot">
+        <textarea class="stmt_temp_ta" id="state2ans"></textarea>
+      </div>
+    </div>
+    <div id="state3" class="chState_div" style="display:none;">
+      <div class="CS_top"><b>Were there any prior related issues?</b><br>
+      </div>
+      <div class="CS_bot">
+        <input type="radio" onclick="advanceState(this.id)" class="Mradio stmt_temp_rad" id="chyes3" name="stateN1"><label for="chyes3">Yes</label><br>
+        <input type="radio" onclick="advanceState(this.id)" class="Mradio stmt_temp_rad" id="chno3" name="stateN1"><label for="chno3">No</label>
+      </div>
+    </div>
+    <div id="state4" class="chState_div" style="display:none;">
+      <div class="CS_top"><b>What were they and when did they occur?</b>
+      </div>
+      <div class="CS_bot">
+        <textarea class="stmt_temp_ta" id="state4ans"></textarea>
+      </div>
+    </div>
+    <div id="state5" class="chState_div" style="display:none;">
+      <div class="CS_top"><b>Were there any warning lights?</b>
+      </div>
+      <div class="CS_bot">
+        <input type="radio" onclick="advanceState(this.id)" class="Mradio stmt_temp_rad" id="chyes5" name="stateN2"><label for="chyes5">Yes</label><br>
+        <input type="radio" onclick="advanceState(this.id)" class="Mradio stmt_temp_rad" id="chno5" name="stateN2"><label for="chno5">No</label>
+      </div>
+    </div>
+    <div id="state6" class="chState_div" style="display:none;">
+      <div class="CS_top"><b>Please describe:</b>
+      </div>
+      <div class="CS_bot">
+        <textarea class="stmt_temp_ta" id="state6ans"></textarea>
+      </div>
+    </div>
+    <div id="state7" class="chState_div" style="display:none;">
+      <div class="CS_top"><b>Was there any noise, smoke, or smell?</b>
+      </div>
+      <div class="CS_bot">
+        <input type="radio" onclick="advanceState(this.id)" class="Mradio stmt_temp_rad" id="chyes7" name="stateN3"><label for="chyes7">Yes</label><br>
+        <input type="radio" onclick="advanceState(this.id)" class="Mradio stmt_temp_rad" id="chno7" name="stateN3"><label for="chno7">No</label>
+      </div>
+    </div>
+    <div id="state8" class="chState_div" style="display:none;">
+      <div class="CS_top"><b>Please describe:</b>
+      </div>
+      <div class="CS_bot">
+        <textarea class="stmt_temp_ta" id="state8ans"></textarea>
+      </div>
+    </div>
+    <div id="state9" class="chState_div" style="display:none;">
+      <div class="CS_top"><b>How long have you owned the vehicle?</b>
+      </div>
+      <div class="CS_bot">
+        <input type="number" class="stmt_temp_ta" id="time_owned" step=".1">
+        <select id="time_unit" class="stmt_temp_ta">
+          <option selected value="">Select an Option</option>
+          <option value="Years">Years</option>
+          <option value="Months">Months</option>
+          <option value="Weeks">Weeks</option>
+        </select>
+      </div>
+    </div>
+    <div id="state10" class="chState_div" style="display:none;">
+      <div class="CS_top"><b>Do you know the approximate mileage when you purchased it?</b> &nbsp;(If unsure, leave blank.)
+      </div>
+      <div class="CS_bot">
+        <input type="number" class="stmt_temp_ta " id="approx_mile" step="1">
+      </div>
+    </div>
+    <div id="state11" class="chState_div" style="display:none;">
+      <div class="CS_top"><b>Was the vehicle towed to the repair facility?</b>
+      </div>
+      <div class="CS_bot">
+        <input type="radio" onclick="advanceState(this.id)" class="Mradio stmt_temp_rad" id="chyes11" name="stateN4"><label for="chyes11">Towed</label><br>
+        <input type="radio" onclick="advanceState(this.id)" class="Mradio stmt_temp_rad" id="chno11" name="stateN4"><label for="chno11">Driven</label>
+      </div>
+    </div>
+    <div id="state12" class="chState_div" style="display:none;">
+      <div class="CS_top"><b>Where was it towed from and what tow company did you use?</b>
+      </div>
+      <div class="CS_bot">
+        <textarea class="stmt_temp_ta" id="state12ans"></textarea>
+      </div>
+    </div>
+    <div id="state13" class="chState_div" style="display:none;">
+      <div class="CS_top"><b>Any additional comments or notes:</b>
+      </div>
+      <div class="CS_bot">
+        <textarea class="stmt_temp_ta" id="state13ans"></textarea>
+      </div>
+    </div>
+     <button id="backState" class="wefwefwef" onclick="backState()">Back</button>
+     <button id="cancelState" class="wefwefwef" onclick="cancelState()">Cancel</button>
+     <button id="advanceState" class="wefwefwef" onclick="advanceState()">Next</button>
   </div>
 </div>
 <script src="JavaScript/Variable.js"></script>

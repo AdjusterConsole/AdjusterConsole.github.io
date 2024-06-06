@@ -63,16 +63,19 @@ For inquiries regarding licensing or permission to use this code in ways not cov
   margin: 5px;
   width: 50px;
   font-size: 17px;
+
 }
 
 option, select {
   font-size: 17px;
+
 }
 
 #approx_mile {
   margin: 5px;
   width: 100px;
   font-size: 17px;
+  float: right;
 }
 
 .CS_bot {
@@ -110,7 +113,7 @@ option, select {
   width: 70%;
   height: 50%; 
   background: linear-gradient(315deg, var(--fancy-meddark), var(--fancy-medlight));
-  box-shadow: -5px -5px 16px var(--fancy-dark), 5px 5px 16px var(--fancy-light)
+  box-shadow: -5px -5px 16px var(--fancy-dark), 5px 5px 16px var(--fancy-light);
 }
 
 .CS_top {
@@ -137,14 +140,14 @@ option, select {
 
 .ls_sub {
   height: 75%;
-  width: 75%;
+  width: 78%;
   margin: auto;
-  padding: 15px
+  padding: 10px;
 }
 
 .ls_sub2 {
   height: 75%;
-  width: 75%;
+  width: 78%;
   margin: auto;
   padding: 15px
   border-radius: 20px;
@@ -197,6 +200,10 @@ option, select {
 
 .drop_sub {
   float: right;
+}
+
+.extralower {
+  margin-bottom: 15px;
 }
 
 .label_sub.drop_sub {
@@ -314,8 +321,8 @@ option, select {
 #exitScript2 {
   position: absolute;
   display: inline-block;
-  top: -10px;
-  left: 110px;
+  top: -5px;
+  left: 100px;
   border-top: none;
   border-left: none;
 }
