@@ -434,17 +434,17 @@ function comsoCompan(z) {
 
 function closeonFly() {
   var noteOpen = localStorage.getItem("noteOpen");
-  var elemId2 = noteOpen.slice(0, -7);
-  var noteID2 = elemId2 + "N";
-  var binElem2 = document.getElementById(noteOpen);
-  var noteText2 = binElem2.innerText;
-  binElem2.innerText = "";
+  var elemId = noteOpen.slice(0, -7);
+  var noteID = elemId + "N";
+  var binElem = document.getElementById(noteOpen);
+  var noteText = binElem.innerText;
+  binElem.innerText = "";
   if (noteText != "") {
-    localStorage.setItem(elemId2 + "Note", noteText2);
+    localStorage.setItem(elemId + "Note", noteText);
   }
-  document.getElementById(noteID2).innerText = "Add Note";
-  binElem2.style.height = "0px";
-  binElem2.classList.toggle("arise");
+  document.getElementById(noteID).innerText = "Add Note";
+  binElem.style.height = "0px";
+  binElem.classList.toggle("arise");
   localStorage.setItem("noteOpen", "false");
   noteForget();
 }
