@@ -60,21 +60,21 @@ Bug Fixes:
 
 
 
-Story and Goals
+Story and Goals:
 This program started as a way to copy and paste preset blocks of text by just clicking a button.
 It has grown to include templates, tools, SOPs, and dynamic note generation.
 Additionally, there are several auxillary components available which assist in other ways.
 The primary focus is consolidation of information and ease of use with the most comprehensive coverage possible.
 When all aspects are used in conjuction, they reduce call time and make the claims process easier by allowing the adjuster to get accurate answers quickly for policy and procedure, spending less time on notation, and speeding up the decision making process.
 
-The Operation
+The Operation:
 The text area in the upper left is for RF contact info.
 The payment line is for the email or fax used for payment
 Distance and time are miles and days in coverage.
 The bolded words can be clicked to copy that line.
 Clicking payment would copy the payment method, for example.
 
-Parts and Labor
+Parts and Labor:
 The first section which includes 'next', 'new', 'part', 'labor', and 'diag' buttons along with the text boxes is the 'parts intake' section.
 When entering the estimate into the claim, the 'parts intake' section can assist with verification, organization, and can automate certain aspects that greatly speed up the process.
 The failed component goes in the 'part name' box, the RF pn and price go in their respective boxes.
@@ -93,7 +93,7 @@ Click the 'X' to close.
 'Copy P&L' will copy the entire text area and send it to the clipboard.
 'Reset' will clear all templates, close all windows, and reset the whole program to starting position.
 
-Authorization
+Authorization:
 Clicking the 'Authorize Claim' button will start the Auth note builder.
 Select which parts were used at what pricing, if anything was requested, and if there were any oopc, shipping, noncovered, or denied components or concerns.
 If there was OOPC, enter the amount in the pop up along with the reason for the OOPC.
@@ -101,27 +101,32 @@ The text area to the bottom left will show the completed Auth note.
 The contact name and payment info will be automatically pulled from the upper text area and inserted into the note.
 Once 'Finish' is clicked, the note is copied to the clipboard.
 
-Status Note
+Status Note:
 Clicking the 'Status Note' button will show the status note builder.
 The left panel can be used as many times as needed per note.
 Click 'Another One' to reset the options.
 The two smaller panels on the right only get used once per note.
 Click 'Submit' when finished.
 
-PT Transfer
-Clicking 'Templates' then 'PT Transfer' with start the PT Transfer template.
+PT Transfer:
+Clicking 'Templates' then 'PT Transfer' will start the PT Transfer template.
 Answer the questions as they come.
 The RF name and payment info will automatically be imported and inserted into the appropriate places.
 The note is copied to the clipboard when the template is finished.
 
-Straight to Clipboard Notes
+CH Statement:
+Clicking 'Templates' then 'CH Statement' will start the CH Statement template.
+Answer the questions as they come.
+The note is copied to the clipboard when the template is finished.
+
+Straight to Clipboard Notes:
 The other template buttons as well as the request buttons all set a specific note to the clipboard.
 
-Information
+Information:
 The 'Policy' button is a grouping of general infomation for things like MBI claims, what not to order from PA, 'Special Handling' aka '2790' transfers, what is and isn't PT, etc.
 Click on the tabs at the top to display the information.
 
-Tools
+Tools:
 The 'Tools' button displays a set of tabs, each with it's own tool.
 
 The 'Quick Answers' tab lists questions which display the answer when clicked.
@@ -150,11 +155,24 @@ It will, also, output the same pertinent information that the AAS calulation pro
 
 All information is per AAS SOP guidelines.
 
-Note Creation
+Note Creation:
 The set of buttons labelled 'RF Inbound' and 'Called CH' are used to build 20+ dynamic notes in 3 clicks or less.
 They emcompass a large swath of common situations that ADJs encounter on a daily basis.
 Click through and read the labels clicked in order like a sentence.
 The note generated can be edited or pasted as is depending on the situation.
+*These notes are not a guide on what to do but a way to quickly document what you've done.
+
+Side Navigation Menu:
+Right-Click will open the Side Nav menu.
+All of the items in 'Tools' and 'Policy' can be accessed through the Side Nav.
+The headers can be clicked to get to the general area, as well.
+Click anywhere to close the menu.
+
+SOP Collection:
+Clicking 'Browse SOPs' will pull up every SOP related to claims available.
+Pick an SOP or click anywhere to close.
+If you click any SOP it will open in an internal window.
+Click 'Close' in the top right to exit.
 
 Toggle list:
 Selecting this will display a row of sliders that control the visibility of each button or a set of buttons.
@@ -164,16 +182,16 @@ Appearance:
 Accessed through the settings menu, the appearance option screen allows you to customize the whole color scheme from shadows to background and gradient colors.
 There are several preset color schemes, as well.
 
-Overall Style
+Overall Style:
 Above 'Authorize Claim' there is a word: 'Neumorphic'.
 Clicking it will show a slightly different set up for the buttons and a vastly different style for the buttons and other elements.
 Clicking the word 'original' that took its place will revert the display back to default.
 Neumorphic is the subtle realism style defined by it's use of soft contrasting shadows and the appearance that the elements are three dimentional extrusion of the environment.
 
-Storage
+Storage:
 All settings and custom colors are saved regarless of browser open/closed and computer restarts and updates.
 
-Optimal settings
+Optimal settings:
 Best:
 For best results, use the app.
 To install:
@@ -192,7 +210,7 @@ In regular or light mode. Anything but dark mode.
 Questions, concerns, issues, suggestions, etc
 AdjusterConsole@gmail.Com
 
-Licensing
+Licensing:
 Restricted Use License
 This code is provided under the following terms and conditions:
 1. You are not allowed to use, copy, modify, merge, publish, distribute, sublicense, or sell copies of this code in any form, modified or unmodified, without express written permission from the author.
