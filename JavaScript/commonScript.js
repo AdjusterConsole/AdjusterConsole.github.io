@@ -44,8 +44,7 @@ function closeResource2() {
 
 function diagCenter() {
   var diagDiv = document.getElementById("diagDiv");
-  var isOpen = checkOpen();
-  if (diagDiv.style.display == "none" && !isOpen) {
+  if (diagDiv.style.display == "none" && !checkOpen()) {
     diagDiv.style.display = "block";
     var widthpre = parseInt(window.getComputedStyle(diagDiv).width);
     var width1 = (widthpre / 4);
@@ -133,6 +132,10 @@ function openInfo(evt, cityName) {
 
 function closeResource() {
   var i, tabcontent, tablinks;
+  var noteOpen = localStorage.getItem("noteOpen");
+  if (noteOpen != "false") {
+    closeonFly();
+  }
   tabcontent = document.getElementsByClassName("tabcontent");
   for (i = 0; i < tabcontent.length; i++) {
     tabcontent[i].style.display = "none";
@@ -150,8 +153,7 @@ function closeResource() {
 function resrcCenter(x,y) {
   var w = parseInt(x);
   var resrcDiv = document.getElementById("resrcDiv");
-  var isOpen = checkOpen();
-  if (resrcDiv.style.display == "none" && !isOpen) {
+  if (resrcDiv.style.display == "none" && !checkOpen()) {
     resrcDiv.style.display = "inline-block";
     if (y == 'p') { document.getElementById("policyDiv").classList.remove("hide"); }
     if (y == 't') { document.getElementById("toolsDiv").classList.remove("hide"); }
@@ -190,6 +192,7 @@ function setDate() {
   if (day < 10) day = "0" + day;
   var today = year + "-" + month + "-" + day;
   document.getElementById("serDate").value = today;
+
 //  document.getElementById("incDate").value = today;
 //  document.getElementById("rec0Date").value = today;
 
@@ -263,6 +266,22 @@ function showTable() {
   tableDiv.style.opacity = "1";
 }
 
+function saveAll() {
+  var noteOpen = localStorage.getItem("noteOpen");
+  var addLineCount = localStorage.getItem("addLineCount");
+  if (noteOpen != "false") {
+    closeonFly();
+  }
+  saveRecord('incR');
+  saveRecord('serR');
+  saveRecord('rec0R');
+  for (i = 0; i < addLineCount; i++) {
+    var recId = "rec" + i + "R";
+console.log(recId);
+    saveRecord(recId);
+  }
+}
+
 function saveRecord(elemId) {
   var noteOpen = localStorage.getItem("noteOpen");
   if (noteOpen != "false") {
@@ -275,8 +294,8 @@ function saveRecord(elemId) {
   var newelemId = elemId.slice(0, indexF);
   var checkMileage = document.getElementById(newelemId + "Mile").value;
   var checkDate = document.getElementById(newelemId + "Date").value;
-  if (checkDate == null || checkMileage == null) {
-    alert("The minimum requirements are DATE and MILEAGE");
+  if (checkDate == null || checkMileage == "") {
+    alert("Enter Date and Mileage of record to save.");
     return;
   }
   record.date = document.getElementById(newelemId + "Date").value;
@@ -302,20 +321,16 @@ function saveRecord(elemId) {
   }
   if (newelemId != "inc") {
     var inceptStr = localStorage.getItem("InceptionMiles");
-    if (inceptStr == null) {
-      document.getElementById('trackerMsg').innerHTML += "Need Inception info first to perform calculations.";
-      return;
-    }
-    var inceptMiles = parseInt(inceptStr);
-    var tempMil = record.mileage - inceptMiles;
-    if (tempMil < 0) { tempMil = tempMil * -1; }
-    record.milesfrom = tempMil;
-    var inceptDate = localStorage.getItem("InceptionDate");
-    tempdayfr = dayCalc(inceptDate, record.date);
-    if (tempdayfr < 0) { tempdayfr = tempdayfr * -1; record.isPrior = true;}
-    record.daysfrom = tempdayfr;
-    if (isitWP(record)) {
-      record.waitperiod = true;
+    if (inceptStr != null) {
+      var inceptMiles = parseInt(inceptStr);
+      var tempMil = record.mileage - inceptMiles;
+      if (tempMil < 0) { tempMil = tempMil * -1; }
+      record.milesfrom = tempMil;
+      var inceptDate = localStorage.getItem("InceptionDate");
+      tempdayfr = dayCalc(inceptDate, record.date);
+      if (tempdayfr < 0) { tempdayfr = tempdayfr * -1; record.isPrior = true;}
+      record.daysfrom = tempdayfr;
+      if (isitWP(record)) { record.waitperiod = true; }
     }
   }
   var recordArr = [];
@@ -349,7 +364,39 @@ function saveRecord(elemId) {
   }
 }
 
+function otherCalcs() {
+  const objectArr = JSON.parse(localStorage.getItem("objectArr"));
+  var inceptDate = localStorage.getItem("InceptionDate");
+  var inceptStr = localStorage.getItem("InceptionMiles");
+  if (inceptDate == null) {
+    document.getElementById('trackerMsg').innerHTML += "Need Inception date to perform calculations.";
+    return;
+  }
+  for (i = 0; i < objectArr.length; i++) {
+    var record = objectArr[i];
+    if (record.isInception == false && record.milesfrom == '0') {
+      var inceptMiles = parseInt(inceptStr);
+      var tempMil = record.mileage - inceptMiles;
+      if (tempMil < 0) { tempMil = tempMil * -1; }
+      record.milesfrom = tempMil;
+      tempdayfr = dayCalc(inceptDate, record.date);
+      if (tempdayfr < 0) { tempdayfr = tempdayfr * -1; record.isPrior = true;}
+      record.daysfrom = tempdayfr;
+      if (isitWP(record)) { record.waitperiod = true; }
+    }
+  }
+  localStorage.setItem("objectArr", JSON.stringify(objectArr));
+}
+
 function delRecord(elemId) {
+  var noteOpen = localStorage.getItem("noteOpen");
+  if (noteOpen != "false") {
+    closeonFly();
+  }
+
+  document.getElementById('whichA').checked = false;
+  document.getElementById('whichB').checked = false;
+  document.getElementById('whichC').checked = false;
   document.getElementById('trackerMsg').innerText = "";
   document.getElementById('trackerMini').innerText = "";
   var temp = elemId.length - 1;
@@ -409,6 +456,7 @@ function whichRep() {
 }
 
 function comsoCompan(z) {
+  otherCalcs();
   var savedRecs = localStorage.getItem("savedRecs");
   var recCount = parseInt(savedRecs);
   if (recCount < 3) {
