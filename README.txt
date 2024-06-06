@@ -1,5 +1,20 @@
 README
 
+Adjuster Console Version 2.0.0
+Update:
+Created a CH Statement program to replace the simple copy/paste template.
+Minor spelling and spacing errors.
+
+Adjuster Console Version 1.8.9
+Update:
+Clicking 'Add Note' while there is a note open no longer shows an error.
+ The open note will save, close, and the other note will open.
+Clicking 'Save' for the record while a note is open will no longer show an error.
+ The open note will save and close.
+A blank note will no longer erroneously show as having a note stored.
+The default state for the inception marker on the first record is now 'checked'.
+The default for dates and mileage is now blank except for the Claim/Service date which displays todays date.
+
 Adjuster Console Version 1.8.4
 Update:
 Minor Changes:
