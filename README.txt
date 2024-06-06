@@ -1,23 +1,35 @@
 README
 
+Adjuster Console Version 2.2.2
+Update:
+Minor Change:
+ Added 'Save All' button in the tracker tool.
+ Changed Reset function to clear checkboxes in Tracker tool.
+Bug Fixes:
+ Removed error for needing to save inception first.
+ Cleaned up and labelled code sections.
+
 Adjuster Console Version 2.0.0
 Update:
-Created a CH Statement program to replace the simple copy/paste template.
-Minor spelling and spacing errors.
+Major Change:
+ Created a CH Statement program to replace the simple copy/paste template.
+Bug Fixes:
+ Minor spelling and spacing errors.
 
 Adjuster Console Version 1.8.9
 Update:
-Clicking 'Add Note' while there is a note open no longer shows an error.
- The open note will save, close, and the other note will open.
-Clicking 'Save' for the record while a note is open will no longer show an error.
- The open note will save and close.
-A blank note will no longer erroneously show as having a note stored.
-The default state for the inception marker on the first record is now 'checked'.
-The default for dates and mileage is now blank except for the Claim/Service date which displays todays date.
+Bug Fixes:
+ Clicking 'Add Note' while there is a note open no longer shows an error.
+  The open note will save, close, and the other note will open.
+ Clicking 'Save' for the record while a note is open will no longer show an error.
+  The open note will save and close.
+ A blank note will no longer erroneously show as having a note stored.
+ The default state for the inception marker on the first record is now 'checked'.
+ The default for dates and mileage is now blank except for the Claim/Service date which displays todays date.
 
 Adjuster Console Version 1.8.4
 Update:
-Minor Changes:
+Minor Change:
  Removed double-click to open SOP menu.
  Changed table in Diag Assistance
   Removed inputs in favor of using cells innerText with contenteditable for notes.
@@ -29,9 +41,8 @@ Minor Changes:
  Removed note display from Tracker Tool output table.
   Table will display 'True' if there is a note, 'False' if not.
   Notes will be displayed in "Note Format' option.
-
 Bug Fixes:
-Used event handlers to stop enter key from adding a div in notes.
+ Used event handlers to stop enter key from adding a div in notes.
 
 Adjuster Console Version 1.4.3
 Update:
@@ -42,7 +53,6 @@ Minor Changes:
   Right-click now opens side-nav menu.
  Double-click opens SOP menu.
  Moved page style link to top-center of page.
-
 Bug Fixes:
  Fixed Inception Calculation to AAS calculations formula.
  Fixed certain output errors while performing Tracker Tasks.
