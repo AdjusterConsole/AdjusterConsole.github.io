@@ -200,8 +200,6 @@ function setDate() {
 //  document.getElementById("incMile").value = "104000";
 //  document.getElementById("serMile").value = "110000";
 //  document.getElementById("rec0Mile").value = "100000";
-
-
 }
 
 function convertToDate(str) {
@@ -224,7 +222,7 @@ function addLine() {
     var nextId = "recTab" + lineNum.toString();
     document.getElementById(nextId).style.visibility = "visible";
     localStorage.setItem("addLineCount", lineNum);
-  } else { return;}
+  } else { return; }
 }
 
 function isitOlder(isOlder, thanThis) {
@@ -689,37 +687,28 @@ function inceptEst(spot) {
     displayOutput();
     var msgDiv = document.getElementById('msgDiv');
     msgDiv.style.opacity = 1;
-    msgDiv.innerHTML += "<b>The inception mileage is " + estimatedInception + "</b><br>";
-    msgDiv.innerHTML += "Elapsed Days Claim/Maint: " + daysBtwnRecs + "<br>";
-    msgDiv.innerHTML += "Elapsed Miles Claim/Maint: " + milesBtwnRecs + "<br>";
-    msgDiv.innerHTML += "Miles Per Day (Average): " + milesperday.toFixed() + "<br>";
-    msgDiv.innerHTML += "Elapsed Days Maint/Sale: " + daysBtwnMaintSale + "<br>";
-    msgDiv.innerHTML += "Miles Elapased in Contract: " + milesIn + "<br>";
-    msgDiv.innerHTML += "Days Elapsed In Contract: " + daysIn;
+    updateInnerHTML(msgDiv);
   } else if (spot == 'all') {
     var splitR = document.getElementById('splitR');
     document.getElementById('splitL').style.display = "inline-block";
     splitR.style.display = "inline-block";
-    splitR.innerHTML += "<b>The inception mileage is " + estimatedInception + "</b><br>";
-    splitR.innerHTML += "Elapsed Days Claim/Maint: " + daysBtwnRecs + "<br>";
-    splitR.innerHTML += "Elapsed Miles Claim/Maint: " + milesBtwnRecs + "<br>";
-    splitR.innerHTML += "Miles Per Day (Average): " + milesperday.toFixed() + "<br>";
-    splitR.innerHTML += "Elapsed Days Maint/Sale: " + daysBtwnMaintSale + "<br>";
-    splitR.innerHTML += "Miles Elapsed in Contract: " + milesIn + "<br>";
-    splitR.innerHTML += "Days Elapsed In Contract: " + daysIn;
+    updateInnerHTML(splitR);
   } else {
     var outputDiv2 = document.getElementById('outputDiv2');
     var outputDiv3 = document.getElementById('outputDiv3');
     outputDiv2.classList.add("arise");
     outputDiv2.style.height = "700px";
     outputDiv3.style.opacity = 1;
-    outputDiv3.innerHTML += "<b>The inception mileage is " + estimatedInception + "</b><br>";
-    outputDiv3.innerHTML += "Elapsed Days Claim/Maint: " + daysBtwnRecs + "<br>";
-    outputDiv3.innerHTML += "Elapsed Miles Claim/Maint: " + milesBtwnRecs + "<br>";
-    outputDiv3.innerHTML += "Miles Per Day (Average): " + milesperday.toFixed() + "<br>";
-    outputDiv3.innerHTML += "Elapsed Days Maint/Sale: " + daysBtwnMaintSale + "<br>";
-    outputDiv3.innerHTML += "Miles Elapsed in Contract: " + milesIn + "<br>";
-    outputDiv3.innerHTML += "Days Elapsed In Contract: " + daysIn;
+    updateInnerHTML(outputDiv3);
+  }
+  function updateInnerHTML(element) {
+    element.innerHTML += "<b>The inception mileage is " + estimatedInception.toFixed() + "</b><br>";
+    element.innerHTML += "Elapsed Days Claim/Maint: " + daysBtwnRecs.toFixed() + "<br>";
+    element.innerHTML += "Elapsed Miles Claim/Maint: " + milesBtwnRecs.toFixed() + "<br>";
+    element.innerHTML += "Miles Per Day (Average): " + milesperday.toFixed() + "<br>";
+    element.innerHTML += "Elapsed Days Maint/Sale: " + daysBtwnMaintSale.toFixed() + "<br>";
+    element.innerHTML += "Miles Elapsed in Contract: " + milesIn.toFixed() + "<br>";
+    element.innerHTML += "Days Elapsed In Contract: " + daysIn.toFixed();
   }
 }
 

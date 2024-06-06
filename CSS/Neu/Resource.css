@@ -13,10 +13,11 @@ This code is provided under the following terms and conditions:
 By using this code, you agree to abide by these terms and conditions. Failure to comply with these terms may result in legal action.
 
 For inquiries regarding licensing or permission to use this code in ways not covered by this license, please contact the author at AdjusterConsole@gmail.com.  */
+
 .tab {
   overflow: hidden;
   border: none;
-  background:none;
+  background: none;
   text-shadow: none;
   box-shadow: none;
   border-radius: 5px;
@@ -149,7 +150,7 @@ For inquiries regarding licensing or permission to use this code in ways not cov
   width: 100%;
   background: none;
   box-shadow: none;
-  margin:auto;
+  margin: auto;
 }
 
 textarea.diag {
@@ -198,7 +199,7 @@ td.diag {
   width: 50%;
   background: white;
   border-radius: 5px;
-  padding:7px;
+  padding: 7px;
 }
 
 genopHead {
@@ -290,7 +291,7 @@ li {
   float: right;
   margin-right: 60px;
   margin-left: 10px;
-  margin-top:5px;
+  margin-top: 5px;
   padding: 5px;
 }
 
@@ -298,7 +299,7 @@ li {
   float: right;
   margin-right: 60px;
   margin-left: 10px;
-  margin-top:5px;
+  margin-top: 5px;
   padding: 5px;
 }
 
@@ -558,8 +559,8 @@ td.lastCell {
   padding: 0px;
   margin-bottom: 2px;
   margin-left: 10px;
-  text-align:right;
-  white-space:nowrap;
+  text-align: right;
+  white-space: nowrap;
   overflow: visible;
   transition: .15s;
 }
@@ -616,7 +617,7 @@ td.lastCell {
 }
 
 #infoDispDiv {
-  bottom:15px;
+  bottom: 15px;
   left: 15px;
 }
 
