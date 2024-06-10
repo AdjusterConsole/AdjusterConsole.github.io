@@ -212,12 +212,23 @@ body {
 
   <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+    <button class="navHeader color_mod" onclick="ShowTemps();closeNav()">Templates</button>
+    <button class="color_mod" onclick="showAuth();closeNav()">Authorization</button>
+    <button class="color_mod" onclick="statNOTE();closeNav()">Status</button>
+    <button class="color_mod" onclick="PTXFER();ShowTemps();closeNav()">PT Transfer</button>
+    <button class="color_mod" onclick="STMTTEMP('T2');ShowTemps();closeNav()">CH Statement</button>
+    <button class="color_mod" onclick="REVIEW('T3');ShowTemps();closeNav()">Insp/Pic Review</button>
+    <button class="navEnder color_mod" onclick="INSPTEMP('T4');ShowTemps();closeNav()">Inspection Template</button>
+
+
     <button class="navHeader color_mod" onclick="resrcCenter('5','t');closeNav()">Tools</button>
     <button class="color_mod" onclick="openScript();closeNav()">Labor Rate Script</button>
     <button class="color_mod" onclick="resrcCenter('5','t');openInfo(event, 'trackerTool');closeNav()">Tracker Tool</button>
     <button class="color_mod" onclick="resrcCenter('5','t');openInfo(event, 'PAPrice');closeNav()">Pricing Guide</button>
     <button class="color_mod" class="color_mod" onclick="resrcCenter('5','t');openInfo(event, 'MileDiscrep');closeNav()">Mileage Issues</button>
     <button class="navEnder color_mod" onclick="resrcCenter('5','t');openInfo(event, 'QuickAns');closeNav()">Quick Answers</button>
+
     <button class="navHeader color_mod" onclick="resrcCenter('4','p')">Policy</button>
     <button class="color_mod" onclick="resrcCenter('4','p');openInfo2(event, 'MBIClaims');closeNav()">MBI</button>
     <button class="color_mod" onclick="resrcCenter('4','p');openInfo2(event, 'xfer2790');closeNav()">2790 Xfer</button>
@@ -227,6 +238,7 @@ body {
     <button class="color_mod" onclick="resrcCenter('4','p');openInfo2(event, 'partsRes');closeNav()">Parts Resolution</button>
     <button class="color_mod" onclick="resrcCenter('4','p');openInfo2(event, 'Diagnostic');closeNav()">Diagnostic Times</button>
     <button class="navEnder color_mod" onclick="resrcCenter('4','p');openInfo2(event, 'PANoOrder');closeNav()">Do Not Order</button>
+
     <button class="navHeader color_mod" onclick="diagCenter();closeNav()">Diagnostic Assistance</button>
     <button class="color_mod" onclick="diagCenter();openInfo2(event, 'Cooling');closeNav()">Cooling</button>
     <button class="color_mod" onclick="diagCenter();openInfo2(event, 'Turbo');closeNav()">Turbo</button>
@@ -235,14 +247,8 @@ body {
     <button class="color_mod" onclick="diagCenter();openInfo2(event, 'Suspension');closeNav()">Suspension</button>
     <button class="color_mod" onclick="diagCenter();openInfo2(event, 'AC');closeNav()">AC</button>
     <button class="color_mod" onclick="diagCenter();openInfo2(event, 'Electrical');closeNav()">Electrical</button>
-    <button class="navEnder color_mod" onclick="diagCenter();openInfo2(event, 'Fuel');closeNav()">Fuel</button>
-    <button class="navHeader color_mod" onclick="ShowTemps();closeNav()">Templates</button>
-    <button class="color_mod" onclick="PTXFER();ShowTemps();closeNav()">PT Transfer</button>
-    <button class="color_mod" onclick="STMTTEMP('T2');ShowTemps();closeNav()">CH Statement</button>
-    <button class="color_mod" onclick="REVIEW('T3');ShowTemps();closeNav()">Insp/Pic Review</button>
-    <button class="color_mod" onclick="INSPTEMP('T4');ShowTemps();closeNav()">Inspection Template</button>
-    <button class="color_mod" onclick="showAuth();closeNav()">Authorization</button>
-    <button class="color_mod" onclick="statNOTE();closeNav()">Status</button>
+    <button class="color_mod" onclick="diagCenter();openInfo2(event, 'Fuel');closeNav()">Fuel</button>
+
   </div>
 
                                                 <!-- Appearance Settings -->
@@ -307,15 +313,15 @@ body {
 <button id="tools" class="R P D g1dispStat" oncontextmenu="customMenu(this.id, event)" onclick="resrcCenter('5','t')"><f>Tools</f></button>
 
 <div id="TPDiv" class="noShow" style="display: none">
-  <button id="T1" class="D R P" oncontextmenu="customMenu(this.id, event)" name="name" onclick="PTXFER()"><b>PT TRANSFER</b> TEMPLATE</button>
-  <button id="T2" class="D R P C" oncontextmenu="customMenu(this.id, event)" onclick="STMTTEMP()">CH <b>STATEMENT</b> QUESTIONS</button>
-  <button id="T3" class="D R P C" oncontextmenu="customMenu(this.id, event)" onclick="REVIEW(this.id)">INPS/PIC <b>REVIEW</b> NOTE</button>
-  <button id="T4" class="D R P C" oncontextmenu="customMenu(this.id, event)" onclick="INSPTEMP(this.id)"><b>INSPECTION</b> TEMPLATE</button>
+  <button id="T1" class="D R P" oncontextmenu="customMenu(this.id, event)" name="name" onclick="PTXFER()"><b>PT Transfer</b> Template</button>
+  <button id="T2" class="D R P C" oncontextmenu="customMenu(this.id, event)" onclick="STMTTEMP()">CH <bStatement</b> Questions</button>
+  <button id="T3" class="D R P C" oncontextmenu="customMenu(this.id, event)" onclick="REVIEW(this.id)">INPS/PIC <b>Review</b> Note</button>
+  <button id="T4" class="D R P C" oncontextmenu="customMenu(this.id, event)" onclick="INSPTEMP(this.id)"><b>Inspection</b> Template</button>
 </div>
 
                                                 <!-- Parts Intake -->
 
-<div id="ITSBRITTNEY" class="ONEMORETIME noShow a0dispStat" style="display: inline-block">
+<div id="ITSBRITTNEY" class="ONEMORETIME noShow a0dispStat">
   <textarea autocomplete="off" title="Part Name" id="partname7" class="intakeboxes" name="name" placeholder="Part Name" wrap="off"></textarea>
   <textarea autocomplete="off" title="Part Name" id="partname6" class="intakeboxes" name="name" placeholder="Part Name" wrap="off"></textarea>
   <textarea autocomplete="off" title="Part Name" id="partname5" class="intakeboxes" name="name" placeholder="Part Name" wrap="off"></textarea>
@@ -359,19 +365,19 @@ body {
   <div id="transferTemplate" class="backing" style="display:none;">
     <h3 class="headerTab" style="margin-bottom:30px;">PT Transfer</h3>
     <div id="quest1" class="newStyle ptQuest">
-      <div class="PT qs"><b>Is the repair facility able to diagnose to cause of failure and overhaul if needed?</b></div>
+      <div class="PT qs"><b>Is the Repair Facility able to diagnose to cause of failure and overhaul if needed?</b></div>
       <div class="PT as">
       <label for="yes1">YES</label><input type="radio" onclick="advancePT(this.id)" class="Mradio ptRad" id="yes1" name="ans1" value="YES"><br>
       <label for="no1">NO</label><input type="radio" onclick="advancePT(this.id)" class="Mradio ptRad" id="no1" name="ans1" value="NO"></div>
     </div>
     <div id="quest2" class="newStyle ptQuest" style="display:none;">
-      <div class="PT qs"><b>Has the repair facility ever serviced the vehicle before?</b></div>
+      <div class="PT qs"><b>Has the Repair Facility ever serviced the vehicle before?</b></div>
       <div class="PT as">
       <label for="yes2">YES</label><input type="radio" onclick="advancePT(this.id)" class="Mradio ptRad" id="yes2" name="ans2" value="YES"><br>
       <label for="no2"">NO</label><input type="radio" onclick="advancePT(this.id)" class="Mradio ptRad" id="no2" name="ans2" value="NO"></div>
     </div>
     <div id="quest3" class="newStyle ptQuest" style="display:none;">
-      <div class="PT qs"><b>Can a test drive be performed if needed?</b></div>
+      <div class="PT qs"><b>Can a test drive be performed, if needed?</b></div>
       <div class="PT as">
       <label for="yes3">YES</label><input type="radio" onclick="advancePT(this.id)" class="Mradio ptRad" id="yes3" name="ans3" value="YES"><br>
       <label for="no3">NO</label><input type="radio" onclick="advancePT(this.id)" class="Mradio ptRad" id="no3" name="ans3" value="NO"><br>
@@ -385,7 +391,7 @@ body {
      </div>
     </div>
     <div id="quest4" class="newStyle ptQuest" style="display:none;">
-      <div class="PT qs"><b>Did the repair facility tow the vehicle?</b></div>
+      <div class="PT qs"><b>Did the Repair Facility tow the vehicle?</b></div>
       <div class="PT as">
       <label for="yes4" >YES</label><input type="radio" onclick="advancePT(this.id)" class="Mradio ptRad" id="yes4" name="ans4" value="YES"><br>
       <label for="no4">NO</label><input type="radio" onclick="advancePT(this.id)" class="Mradio ptRad" id="no4" name="ans4" value="NO"><br>
@@ -398,13 +404,13 @@ body {
       <label for="no5">NO</label><input type="radio" onclick="advancePT(this.id)" class="Mradio ptRad" id="no5" name="ans5" value="NO"></div>
     </div>
     <div id="quest6" class="newStyle ptQuest" style="display:none;">
-      <div class="PT qs"><b>Does the repair facility have an itemized estimate available?</b></div>
+      <div class="PT qs"><b>Does the Repair Facility have an itemized estimate available?</b></div>
       <div class="PT as">
       <label for="yes6">YES</label><input type="radio" onclick="advancePT(this.id)" class="Mradio ptRad" id="yes6" name="ans6" value="YES"><br>
       <label for="no6">NO</label><input type="radio" onclick="advancePT(this.id)" class="Mradio ptRad" id="no6" name="ans6" value="NO"></div>
     </div>
     <div id="quest7" class="newStyle ptQuest" style="display:none;">
-      <div class="PT qs"><b>Has the repair facility's info and contact info been verified?</b></div>
+      <div class="PT qs"><b>Has the Repair Facility's info and contact info been verified?</b></div>
       <div class="PT as">
       <label for="yes7">YES</label><input type="radio" onclick="advancePT(this.id)" class="Mradio ptRad" id="yes7" name="ans7" value="YES"><br>
       <label for="no7">NO</label><input type="radio" onclick="advancePT(this.id)" class="Mradio ptRad" id="no7" name="ans7" value="NO"></div>
@@ -421,13 +427,13 @@ body {
       <textarea id="contact2" class="taAuth" placeholder="E-mail, phone, etc" rows="1" cols="25"></textarea></div>
     </div>
     <div id="quest9" class="newStyle ptQuest" style="display:none;">
-      <div class="PT qs"><b>Have the PT claim expectations been reviewed with the repair facility contact?</b></div>
+      <div class="PT qs"><b>Have the PT claim expectations been reviewed with the Repair Facility contact?</b></div>
       <div class="PT as">
       <label for="yes9"">YES</label><input type="radio" onclick="advancePT(this.id)" class="Mradio ptRad"  id="yes9" name="ans9" value="YES"><br>
       <label for="no9"">NO</label><input type="radio" onclick="advancePT(this.id)" class="Mradio ptRad" id="no9" name="ans9" value="NO"></div>
     </div>
     <div id="quest10" class="newStyle ptQuest" style="display:none;">
-      <div class="PT qs"><b>Have you provided the repair facility with the assigned adjusters name, direct extension, and e-mail?</b></div>
+      <div class="PT qs"><b>Have you provided the Repair Facility with the assigned adjuster's name, direct extension, and e-mail?</b></div>
       <div class="PT as">
       <label for="yes10">YES</label><input type="radio" onclick="advancePT(this.id)" class="Mradio ptRad" id="yes10" name="ans10" value="YES"><br>
       <label for="no10">NO</label><input type="radio" onclick="advancePT(this.id)" class="Mradio ptRad" id="no10" name="ans10" value="NO"></div>
@@ -937,7 +943,7 @@ TIME:&nbsp&nbsp</textarea>
     </div>
     <div class="questions noShow" id="quest5" onclick="showAnswer(this.id)">
       &blacklozenge; The Repair Facility is saying they didn't get paid.<br>
-      It shows they were paid in CMS?<br>
+      It shows they were paid in CMS.<br>
       How can I help?<br>
     </div>
     </div>
@@ -946,7 +952,7 @@ TIME:&nbsp&nbsp</textarea>
       <li>Note the claim number.</li>
       <li>Go to the Parts Authority home tab.</li>
       <li>Click 'Track Orders and Invoices'.</li>
-      <li>Select the 'P.O. Number' search option</li>
+      <li>Select the 'P.O. Number' search option.</li>
       <li>Input the claim number into the search box and click 'Search'.</li>
       <li>Click on the order number.</li>
       <li>This will show relevant info such as the tracking number, address shipped to, etc.</li>
@@ -973,7 +979,7 @@ TIME:&nbsp&nbsp</textarea>
       <ul>
       <li>Reauthorize the claim using the 'Reauthorize' button in the actions tab of CMS.</li>
       <li>Go to the estimate in CMS and lock the claim.</li>
-      <li>Open the authorized section of the estimate and find the items that are no longed needed.</li>
+      <li>Open the 'Authorized' section of the estimate and find the items that are no longed needed.</li>
       <li>Select the checkbox next to each of those items.</li>
       <li>Click 'Modify Claim Item'.</li>
       <li>For part line items, set the Repair Facility, AAS, and Authorized prices to $0.00.</li>
@@ -1022,7 +1028,7 @@ TIME:&nbsp&nbsp</textarea>
   <div id="MileDiscrep" class="tabcontent">
     <h3 class="headerTab">Mileage Discrepancies</h3>
     <div id="MileDiscrep1" class="mileage noShow">
-      <p><b>Is the contract a Term contract or a Month-to-Month Contract?</b>
+      <p><b>Is the contract a 'Term' contract or a 'Month-to-Month' Contract?</b>
         <input type="radio" class="mdguide" id="md1" name="discrep1"><label for="md1" style="float:right;" required><b>Term</b></label><br>
         <input type="radio" class="mdguide" id="md2" name="discrep1"><label for="md2" style="float:right;" required><b>M-2-M</b></label>
       </p><br>
@@ -1045,7 +1051,7 @@ TIME:&nbsp&nbsp</textarea>
     </div>
     <div id="norideshare" class="mileage noShow" style="display:none;">
       <p>Contact the customer and ask about usage for potential Commercial/Rideshare use.<br>
-      <b>Did the customer admit to commercial or Ride Share use?</b>
+      <b>Did the customer admit to commercial or Rideshare use?</b>
         <input type="radio" onclick="crReview()" class="mdguide" id="md11" name="discrep4"><label for="md11" style="float:right;" required><b>Yes</b></label><br>
         <input type="radio" onclick="mileageCalc()" class="mdguide" id="md12" name="discrep4"><label for="md12" style="float:right;" required><b>No</b></label>
       </p>
@@ -1067,14 +1073,14 @@ TIME:&nbsp&nbsp</textarea>
       <p class="bodyTab">
         Verify the breakdown mileage with the Repair Facility.<br>
         If the Repair Facility has any records the fit the required criteria, request them.<br>
-        If the RF doesn't have a record available to be used immediately, request verifiable records from the customer.<br>
-        If none are available or they are uncooperative, a CARFAX report may be used.<br>
+        If the Repair Facility doesn't have a record available, request verifiable records from the customer.<br>
+        If no records are available or the Contract Holder is uncooperative, a CARFAX report may be used.<br>
         Records should be as close to date of sale as possible
         <ul>
         <li>No older than 12 months prior to date of sale.</li>
         <li>Must be prior to date of sale</li>
         </ul>
-        Perform a mileage calculation using the AAS SOP available in the Knowledge Base.
+        Perform a mileage calculation using the AAS SOP.
       </p>
     </div>
     <div id="buttons" class="noShow">
@@ -1096,11 +1102,11 @@ TIME:&nbsp&nbsp</textarea>
           <input type="radio" onclick="goGuide('oeover',this.name)" class="authGuideradio" id="over1" name="guide2" value="over"><label for="over1" style="float:right;"><b>Yes</b></label><br>
           <input type="radio" onclick="goGuide('oeunder',this.name)" class="authGuideradio" id="under1" name="guide2" value="under"><label for="under1" style="float:right;"><b>No</b></label></p>
          <div id="oeunder" class="authGuide noShow" style="display:none">
-          <p class="bodyTab"><b>Is the RF charging more than OEM MSRP?</b>
+          <p class="bodyTab"><b>Is the Repair Facility charging more than OEM MSRP?</b>
           <input type="radio" onclick="goGuide('rfovrmsrp',this.name)" class="authGuideradio" id="rfovli34" name="gui"><label for="rfovli34" style="float:right;"><b>Yes</b></label><br>
           <input type="radio" onclick="goGuide('rfundmsrp',this.name)" class="authGuideradio" id="rfundli34" name="gui"><label for="rfundli34" style="float:right;"><b>No</b></label></p>
          <div id="rfovrmsrp" class="authGuide noShow" style="display:none">
-          <p class="bodyTab"><b>If the RF won't match, is shipping an option?</b>
+          <p class="bodyTab"><b>If the Repair Facility won't match, is shipping an option?</b>
           <input type="radio" onclick="goGuide('mayship3',this.name)" class="authGuideradio" id="yyyship" name="guid234" value="yes"><label for="yship" style="float:right;"><b>Yes</b></label><br>
           <input type="radio" onclick="goGuide('noship3',this.name)" class="authGuideradio" id="nnnship" name="guid234" value="no"><label for="nship" style="float:right;"><b>No</b></label></p>
           </div>
@@ -1109,19 +1115,19 @@ TIME:&nbsp&nbsp</textarea>
     </div>
     <div id="authGuideAM" class="authGuide noShow" style="display:none">
       <p><b>PA Sourcing</b></p>
-      <p class="bodyTab">Enter the CH VIN into PA<br>
-        If the RF is using OEM, search using the OEM part number<br>
-        If the RF is using AM, seach using the part name<br><br>
+      <p class="bodyTab">Enter the Contract Holder's VIN into PA.<br>
+        If the Repair Facility is using OEM, search using the OEM part number.<br>
+        If the Repair Facility is using AM, search using the part name.<br><br>
         Filter results to show only <b>BETTER</b> or above Quality Rating.<br>
-        Sort by clicking 'price' near the top-right of the screen.<br><br>
-        First option will be any results that have an OES or OEM tag.<br>
-        If there are no parts with an OEM or OES tag, filter results to<br>
+        Sort by clicking 'Price' near the top-right of the screen.<br><br>
+        First option will be any results that have an <b>OEM</b> or <b>OES</b> tag.<br>
+        If there are no parts with an OES or OEM tag, filter results to<br>
         show only <b>BEST</b> or above Quality Rating.<br><br>
         <b>Remember:</b><br>
         Sort by price again after changing any filter options.<br>
         We can only use pricing from parts that are in stock.<br>
-        If RF is using OEM and there are no options searching by<br>
-        the OEM part number, search again using part name<p>
+        If Repair Facility is using OEM and there are no options searching by<br>
+        the OEM part number, search again using part name.<p>
       <p class="bodyTab"><b>Does PA have options?</b>
         <input type="radio" onclick="goGuide('pricing',this.name)" class="authGuideradio" id="paopt1" name="guide3" value="yespa"><label for="paopt1" style="float:right;"><b>Yes</b></label><br>
         <input type="radio" onclick="goGuide('sourcing',this.name)" class="authGuideradio" id="noopt1" name="guide3" value="nopa"><label for="noopt1" style="float:right;"><b>No</b></label></p>
@@ -1133,11 +1139,11 @@ TIME:&nbsp&nbsp</textarea>
         <input type="radio" onclick="goGuide('listunder',this.name)" class="authGuideradio" id="listund" name="guide4" value="under"><label for="listund" style="float:right;"><b>No</b></label></p>
       <div id="listUnder" class="noShow authGuide" style="display:none">
         <p class="bodyTab2"><b>This is your part.</b><br>- PA List is your MSRP.</p>
-        <p class="bodyTab"><b>Is the RF charging more than PA List?</b>
+        <p class="bodyTab"><b>Is the Repair Facility charging more than PA List?</b>
         <input type="radio" onclick="goGuide('rfovrlist',this.name)" class="authGuideradio" id="rfovli" name="guide5" value="over"><label for="rfovli" style="float:right;"><b>Yes</b></label><br>
         <input type="radio" onclick="goGuide('rfundlist',this.name)" class="authGuideradio" id="rfundli" name="guide5" value="under"><label for="rfundli" style="float:right;"><b>No</b></label></p>
         <div id="rfovrlist" class="noShow authGuide" style="display:none">
-          <p class="bodyTab"><b>If the RF won't match, is shipping an option?</b>
+          <p class="bodyTab"><b>If the Repair Facility won't match, is shipping an option?</b>
           <input type="radio" onclick="goGuide('mayship',this.name)" class="authGuideradio" id="yship" name="guide6" value="yes"><label for="yship" style="float:right;"><b>Yes</b></label><br>
           <input type="radio" onclick="goGuide('noship',this.name)" class="authGuideradio" id="nship" name="guide6" value="no"><label for="nship" style="float:right;"><b>No</b></label></p>
         </div>
@@ -1148,11 +1154,11 @@ TIME:&nbsp&nbsp</textarea>
         <input type="radio" onclick="goGuide('costund',this.name)" class="authGuideradio" id="costu" name="guide7" value="under"><label for="costund" style="float:right;"><b>No</b></label></p>
         <div id="costund" class="noShow authGuide" style="display:none">
           <p class="bodyTab2"><b>This is your part.</b><br>- PA List is your MSRP.<br>- PA Cost is MCE.</p>
-          <p class="bodyTab"><b>Is RF charging more than PA Cost</b>
+          <p class="bodyTab"><b>Is the Repair Facility charging more than PA Cost?</b>
           <input type="radio" onclick="goGuide('rfovrcost',this.name)" class="authGuideradio" id="rfovco" name="guide8" value="over"><label for="rfovco" style="float:right;"><b>Yes</b></label><br>
           <input type="radio" onclick="goGuide('rfundcost',this.name)" class="authGuideradio" id="rfundco" name="guide8" value="under"><label for="rfundco" style="float:right;"><b>No</b></label></p>
         <div id="rfovrcost" class="noShow authGuide" style="display:none">
-          <p class="bodyTab"><b>If the RF won't match, is shipping an option?</b>
+          <p class="bodyTab"><b>If the Repair Facility won't match, is shipping an option?</b>
           <input type="radio" onclick="goGuide('mayship2',this.name)" class="authGuideradio" id="yship2" name="guide9" value="yes"><label for="yship2" style="float:right;"><b>Yes</b></label><br>
           <input type="radio" onclick="goGuide('noship2',this.name)" class="authGuideradio" id="nship2" name="guide9" value="no"><label for="nship2" style="float:right;"><b>No</b></label></p>
         </div>
@@ -1162,18 +1168,18 @@ TIME:&nbsp&nbsp</textarea>
     <div id="IHSourcing" class="noShow authGuide" style="display:none">
       <p><b>In House Sourcing</b></p>
       <p class="bodyTab">
-        First, key in the MCE part from PA and source using the 'Parts Authority' button in CMS.<br><br>
+        Start by keying in the MCE part from PA and sourcing it using the 'Parts Authority' button in CMS.<br><br>
         <b>AM</b> - Obtain the OEM part number from ProDemand, PA, or Forte.<br>
-        Key in another instance of the part using the OEM PN as the RF part number.<br>
+        Key in another instance of the part using the OEM PN on the 'Estimate Intake' screen.<br>
         <b>OEM and AM</b> - Go to the estimate page and select the part.<br>
         Click the 'Source Parts' button<br><br>
         On the Estimate Adjudication page, click the down arrow next to the sourced part.<br>
         Select 'Choose Source'.<br>
         On the right side, the column listed under 'Total' will show the total cost of each source.<br><br>
         MCE is the best pricing available from all vendors.<br>
-        If MCE is over $1000.00, allow 2 hours for sourcing to complete.<br>
+        If MCE is over $1000.00, allow 2-3 hours for sourcing to complete.<br>
         If there are no PA options and nothing returns from in house, auth MSRP.<br><br>
-        Before shippping or calling the CH for OOPC, always give the RF a chance to match</p>
+        Before shippping or calling the Contract Holder to auth OOPC, always give the Repair Facility a chance to match</p>
     </div>
   <button id="resetPA" class="wefwefwef D R P" onclick="resetGuide()">Reset</button>
   </div>
@@ -1379,15 +1385,15 @@ TIME:&nbsp&nbsp</textarea>
 
   <div id="DoNotUse" class="tabcontent noteBins arise">
     <h3 class="headerTab">Do Not Use vs STOP-NO CLAIMS ALLOWED</h3>
-    <p class="bodyTab">Shops that have Do Not Use in the RF name are just duplicate accounts.<br>
-    The Do Not Use is in reference to that profile. The RF will have another<br>
-    without the Do Not Use tag.</p>
+    <p class="bodyTab">Shops that have Do Not Use in the Repair Facility name are just duplicate accounts.<br>
+    The Do Not Use is in reference to that profile.<br>
+    The Repair Facility will have another without the Do Not Use tag.</p>
     <p class="bodyTab">However, if you see STOP-NO CLAIMS ALLOWED, do not start a new claim.<br>
-    Inform the RF that you need to review coverage and will call them back.</p>
-    <p class="bodyTab">Call the CH and inform them that we are unable to open new claims with their RF.<br>
-    Apologize for the inconvenience, and help them with finding a new RF and towing.<br>
-    If the CH escalates, transfer the call to the Escalation team for handling.</p>
-    <p class="bodyTab">Do not share any details or speculation about the RF to the CH or anyone from the RF.</p>
+    Inform the Repair Facility that you need to review coverage and will call them back.</p>
+    <p class="bodyTab">Call the Contract Holder and inform them that we are unable to open new claims<br>with their Repair Facility.</p>
+    <p class="bodyTab">Apologize for the inconvenience, and help them with finding a new Repair Facility and towing.<br>
+    If the Contract Holder escalates, transfer the call to the Escalation team for handling.</p>
+    <p class="bodyTab">Do not share any details or speculation about the Repair Facility to the Contract Holder or anyone from the Repair Facility.</p>
     <p class="bodyTab">Document all actions taken in the notes.</p>
   </div>
 
@@ -1418,7 +1424,7 @@ TIME:&nbsp&nbsp</textarea>
     <p class="bodyTab">A transfer to 2790 is only required in order to start a new claim.<br>
     If they already have a claim, read the notes.</p>
     <p class="bodyTab">The notes will indicate if any adjuster can continue the claim or if<br>
-    you should task the assigned ADJ with updates or actions needed.</p>
+    you should task the assigned adjuster with updates or actions needed.</p>
     <p class="bodyTab">And of course, if you are not sure of what steps you should take, reach out to your TL.</p>
   </div>
 
@@ -1436,17 +1442,17 @@ TIME:&nbsp&nbsp</textarea>
       </ul><br><br>
     <p style="text-align:center;margin-top:10px;"><b>How is a Parts Resolution Done?</b></p>
       <ul>
-      <li>Note the RF contact name, mileage, labor rate, and labor time for the part.</li>
+      <li>Note the Contact name, mileage, labor rate, and labor time for the part.</li>
       <li>Select the 'Parts' tab in CMS and click 'Parts Ordered'.</li>
       <li>Click the checkbox next to the part. Select 'Parts Resolution'.</li>
-      <li>Select the repair facility and click 'Next'.</li>
-      <li>Select the repair facility contact.</li>
+      <li>Select the Repair Facility and click 'Next'.</li>
+      <li>Select the Repair Facility contact.</li>
       <li>Enter the mileage, labor rate and hours, if the part was installed, and the case reason.</li>
-      <li>Select that you have notified the RF about contact time.</li>
+      <li>Select that you have notified the Repair Facility about contact time.</li>
       <li>Enter a detailed description of why the part was wrong or how it failed.</li>
       <li>Be as specific as possible, especially for incorrect parts.</li>
       <li>Click 'Next' then 'Finish'</li>
-      <li>Upload anything the RF sent in to documents.</li>
+      <li>Upload anything the Repair Facility sent in to documents.</li>
       <li>Notate the claim</li>
       </ul>
   </div>
@@ -1480,16 +1486,13 @@ TIME:&nbsp&nbsp</textarea>
     <p><b>Important</b></p>
     <p>Do <b>NOT</b> request any disassembly or teardown unless notated to do so in the claim.<br>
     Do <b>NOT</b> disclose any information about coverage.</p>
-    <p class="bodyTab">If an RF calls in and the contract is an MBI variant,<br>
-    do not disclose any information about coverage whatsoever.<br>
+    <p class="bodyTab">If a Repair Facility calls in and the contract is an MBI variant, do not disclose any information about coverage whatsoever.
     Do not bother pulling the contract to check or verify.</p>
     <p class="bodyTab">Open a claim following standard SOP and your normal process.<br>
-    The difference is that you will key in and verify parts and labor<br>
-    on all items regardless of coverage.</p>
-    <p class="bodyTab">Once all items are keyed in and verified, click the Assign to MBI<br>
-    button in the actions tab of CMS. Once it has reassigned to an MBI<br>
-    adjuster, task that adjuster. Tell the RF that the claim is under<br>
-    review and that an adjuster will reach out to them within 24 hours.</p>
+    The difference is that you will key in and verify parts and labor on all items regardless of coverage.</p>
+    <p class="bodyTab">Once all items are keyed in and verified, click the 'Assign to MBI' button in the actions tab of CMS.<br>
+    Once it has reassigned to an MBI adjuster, task that adjuster.<br>
+    Tell the Repair Facility that the claim is under review and that an adjuster will reach out to them within 24 hours.</p>
   </div>
   <button id="exitRec" class="wefwefwef" onclick="closeResource()">Exit</button>
 </div>
@@ -1501,12 +1504,12 @@ TIME:&nbsp&nbsp</textarea>
     <div id="msgDiv" class="noShow"></div>
     <div id="splitL" class="noShow both leftSide" style="z-index:10;"></div>
     <div id="splitR" class="noShow both rightSide"></div>
-    <button id="closeOutput" class="wefwefwef" onclick="closeOutput()">close</button>
+    <button id="closeOutput" class="wefwefwef" onclick="closeOutput()">Close</button>
   </div>
 
   <div id="outputDiv2" class="noteBins outputDiv">
     <div id="outputDiv3" class="noShow"></div>
-    <button id="closeOutput2" class="wefwefwef" onclick="closeOutput2()">close</button>
+    <button id="closeOutput2" class="wefwefwef" onclick="closeOutput2()">Close</button>
   </div>
 <div class="noShow" id="reportData" style="display:none;"></div>
 
@@ -1861,6 +1864,7 @@ TIME:&nbsp&nbsp</textarea>
         <genopHeadimg>Air Conditioning</genopHeadimg>
         <img src="./Images/ACImg.PNG" alt="./imgBackup/ACImg.PNG" class="diagImg">
       </div>
+    <button class="astext acPress" onclick="magnify('ac2')">Pressure Chart</button>
     </div>
     <div class="diagMid">
       <table id="ACin" class="diagtable">
@@ -1971,6 +1975,7 @@ TIME:&nbsp&nbsp</textarea>
     <img src="./Images/SuspensionImg.PNG" alt="./imgBackup/SuspensionImg.PNG" class="depotImg" id="suspensionDepot">
     <img src="./Images/TimingImg.PNG" alt="./imgBackup/TimingImg.PNG" class="depotImg" id="timingDepot">
     <img src="./Images/ACImg.PNG" alt="./imgBackup/ACImg.PNG" class="depotImg" id="acDepot">
+    <img src="./Images/ACImg2.PNG" alt="./imgBackup/ACImg2.PNG" class="depotImg" id="ac2Depot">
   </div>
 </div>
 
@@ -2029,7 +2034,7 @@ TIME:&nbsp&nbsp</textarea>
           <label for="quant">Number of Facilities:</label>
         </div>
       </div>
-      <p>
+      <p class="aveRatep">
         <label for="aveRate">Average Labor Rate:</label><br>
         $<input type="number" id="aveRate" step=".01" required>
       </p>
@@ -2047,6 +2052,23 @@ TIME:&nbsp&nbsp</textarea>
       </div>
     </div>
     <button id="exitScript" class="script_btn D R P" onclick="negotiateScript('r');openScript()">Exit</button>
+    <button id="instructScript" class="script_btn D R P" onclick="instructScript()">Instructions</button>  <br>
+    <div id="instructL" class="instructLabor">
+      <b>Instructions:</b><br>
+      <ul>
+        <li>Enter the Repair Facility response into RF Posted Labor Rate.</li>
+        <li>*Optional: Enter the labor rate that is currently in CMS.*</li>
+        <li>Select the options for Radius, Facility Type, and Number of Facilities that you used for searching SWIS.</li>
+        <li>Enter the Average Labor Rate SWIS output.</li>
+        <li>Click 'My Response'.</li>
+        <li>It will show a dialog box containing the appropriate response or question.</li>
+        <li>Use the 'Yes' and 'No' buttons to input their response back.</li>
+        <li>*Optional: If they make an offer, enter it into the box and click 'Accept'.*</li>
+        <li>When completed, click 'Exit'.</li>
+        <li>The completed note is already in your clipboard ready to be pasted.</li>
+        <li>Use reset to clear the form and start over if needed.</li>
+      </ul>
+    </div>
   </div>
 </div>
 
@@ -2160,6 +2182,21 @@ TIME:&nbsp&nbsp</textarea>
      <button id="cancelState" class="wefwefwef" onclick="cancelState()">Cancel</button>
      <button id="advanceState" class="wefwefwef" onclick="advanceState()">Next</button>
   </div>
+</div>
+<div id="updated" class="updated_div">
+Updates:<br><br>
+1. The Labor Script has an instructions button.<br>
+Click to open, click again to close.<br>
+The Labor Script exit button was moved to the bottom right corner.<br><br>
+2. The General Notes will auto-close after 5 seconds once the note displays.<br>
+The note is still copied and ready to paste, you just no longer have to manually reset it.<br><br>
+3. The Authorization note will no longer display in the lower text area.<br>
+The note is still copied and ready to paste, it just doesn't display.<br>
+4. Fixed spelling, punctuation, and grammar.<br>
+5. Cleaned up and made the output of notes more readable.<br><br>
+6. Rearranged the order of the Side Menu to put the items used the most toward the top and lesser used tools further down.<br><br>
+7. Modified shadows and colors on Neumorphic to interfere less in close proximity.<br>
+<button id="updatedclose" class="wefwefwef" onclick="closeUpdate()">Close</button>
 </div>
 <script src="JavaScript/Variable.js"></script>
 <script src="JavaScript/OGLAYOUTJS.js"></script>

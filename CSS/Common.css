@@ -68,7 +68,6 @@ For inquiries regarding licensing or permission to use this code in ways not cov
 
 option, select {
   font-size: 17px;
-
 }
 
 #approx_mile {
@@ -130,7 +129,10 @@ option, select {
   position: absolute;
   display: block;
   width: 98%;
-  height: 98%;
+  height: 85%;
+  margin: 70px auto;
+  top: 0px;
+  left: 0px;
   z-index: 6;
   background: none;
   box-shadow: none;
@@ -139,17 +141,10 @@ option, select {
 }
 
 .ls_sub {
-  height: 75%;
+  height: 95%;
   width: 78%;
   margin: auto;
-  padding: 10px;
-}
-
-.ls_sub2 {
-  height: 75%;
-  width: 78%;
-  margin: auto;
-  padding: 15px
+  padding: 15px;
   border-radius: 20px;
   background: var(--fancy-background);
   box-shadow:
@@ -208,23 +203,20 @@ option, select {
 
 .label_sub.drop_sub {
   text-align: right;
-  line-height: 1.5;
+  line-height: 1.8;
 }
 
 .menu_sub.drop_sub {
   text-align: left;
   margin-left: 10px;
-  line-height: 1.5;
+  line-height: 1.8;
+}
+
+.aveRatep {
+  margin: 35px 0px;
 }
 
 .script_btn {
-  position: initial;
-  display: initial;
-  margin: 10px;
-  width: 100px;
-}
-
-.script_btn2 {
   position: initial;
   display: initial;
   border: 2px solid var(--my-accent-color);
@@ -251,24 +243,35 @@ option, select {
   margin-left: 45px;
 }
 
-.flt_lft.revert {
-  border: 2px solid black;
-  position: absolute;
-  display: block;
-  padding: 10px;
-  bottom: 230px;
-  left: -10px;
-  width: 65%;
-  height: 270px;
-  margin-left: 165px;
+#instructScript {
+  margin-left: 45px;
+  position: static;
+}
+      
+.instructLabor {
+  display: none;
 }
 
-.flt_lft2.revert {
+.instructLabor.showing {
+  display: inline-block;
+  position: absolute;
+  left: 20px;
+  padding: 35px;
+  border-radius: 20px;
+  background: var(--fancy-background);
+  box-shadow:
+    inset 0px 0px 4px black,
+    inset 0px 0px 22px black,
+    0px 20px 70px 10px black;
+  overflow: hidden;
+}
+
+.flt_lft.revert {
   border: 2px solid var(--my-accent-color);
   position: absolute;
   display: block;
   padding: 10px;
-  bottom: 270px;
+  bottom: 100px;
   left: 10px;
   width: 60%;
   height: 270px;
@@ -318,35 +321,20 @@ option, select {
   padding: 25px;
 }
 
-#exitScript2 {
-  position: absolute;
-  display: inline-block;
-  top: -5px;
-  left: 100px;
-  border-top: none;
-  border-left: none;
-}
-
 #exitScript {
   position: absolute;
   display: inline-block;
-  top: 0px;
-  left: 110px;
-  border-top: none;
-  border-left: none;
+  bottom: 10px;
+  right: 85px;
+  padding: 13px 16px;
+  border-bottom: none;
+  border-right: none;
 }
 
 #openScript {
   font-size: 17px;
   left: 250px;
   top: 170px;
-}
-
-#openScript2 {
-  font-size: 17px;
-  left: 250px;
-  top: 170px;
-  color: var(--glow-txt-color);
 }
 
 #closeResult {
@@ -457,7 +445,7 @@ option, select {
 }
 
 .sidenav .navHeader {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: bold;
   text-decoration-line: underline;
 }
@@ -825,3 +813,317 @@ input:checked + .slider:before {
   box-shadow: none;
 }
 
+.acPress {
+  font-size: 16px;
+  position: absolute;
+  display: inline-block;
+  top: 430px;
+  left: 655px;
+  font-weight: bold;
+}
+
+.module_backing {
+  position: absolute;
+  display: none;
+  width: 98%;
+  height: 85%;
+  margin: 70px auto;
+  top: 0px;
+  left: 0px;
+  z-index: 6;
+  background: none;
+  box-shadow: none;
+  border: none;
+  outline: none;
+}
+
+.module_main {
+  height: 85%;
+  width: 85%;
+  margin: auto;
+  padding: 15px;
+  border-radius: 20px;
+  background: var(--fancy-background);
+  box-shadow:
+    inset 0px 0px 4px black,
+    inset 0px 0px 22px black,
+    20px 10px 70px 20px black;
+  overflow: hidden;
+}
+
+.module_backing.trsnActive {
+  display: block;
+}
+
+.module_page.trsnActive {
+  display: block;
+}
+
+.module_page {
+  font-size: 17px;
+  display: none;
+  padding: 25px;
+  margin: auto;
+  width: 75%;
+  height: 65%; 
+  background: linear-gradient(315deg, var(--fancy-meddark), var(--fancy-medlight));
+  box-shadow: -5px -5px 16px var(--fancy-dark), 5px 5px 16px var(--fancy-light);
+}
+
+.module_top {
+  background: none;
+  box-shadow: none;
+  float: left;
+  width: 60%;
+}
+
+.module_bot {
+  background: none;
+  box-shadow: none;
+  margin-bottom: 10px;
+}
+
+#module_trans_labor, #module_trans_diag {
+  width: 70%;
+}
+
+.transNum {
+  width: 80px;
+}
+
+.trans_header {
+  text-align: center;
+}
+
+.module_bot input {
+  float: right;
+  margin-right: 15px;
+  font-size: 17px;
+}
+
+.transLabel {
+  float: right;
+  font-size: 17px;
+}
+
+.labelCheck {
+  vertical-align: middle;
+}
+
+.transCheck {
+  transform: scale(1.4);
+  margin-left: 5px;
+  margin-top: 5px;
+}
+
+.transRadio {
+  width: 17px;
+  height: 17px;
+}
+
+.trans_button {
+  position: initial;
+  display: initial;
+  margin: 5px 5px 5px 75px;
+  border: none;
+  background: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  box-shadow: none;
+  font-size: 17px;
+  font-weight: bold;
+  text-shadow:
+    1px 1px 1px var(--glow-outline-color),
+   -1px -1px 1px var(--glow-outline-color),
+   -1px 1px 1px var(--glow-outline-color),
+    1px -1px 1px var(--glow-outline-color);
+}
+
+.labor_top {
+  position: static;
+  display: inline-block;
+  background: none;
+  box-shadow: none;
+  width: 100%;
+}
+
+#nextDiag.labor_button {
+  display: inline-block;
+  position: absolute;
+  padding: 15px 30px;
+  right: 150px;
+  bottom: 160px;
+  border: 2px solid var(--my-accent-color);
+}
+
+.labor_button {
+  background: none;
+  box-shadow: none;
+  display: block;
+  position: relative;
+  margin-bottom: 7px;
+  padding: 3px 10px 3px 10px;
+  border-radius: 5px;
+  text-shadow: none;
+  color: var(--my-glow-outline);
+  border: 2px solid var(--my-accent-color);
+}
+
+.labor_right {
+  position: absolute;
+  background: none;
+  box-shadow: none;
+  right: 320px;
+  display: block;
+}
+
+.labor_right2 {
+  position: absolute;
+  background: none;
+  box-shadow: none;
+  right: 400px;
+  margin-top: -5px;
+  display: block;
+  text-align: right;
+  line-height: 2.18;
+}
+
+#trans_ans4a {
+  margin-top: 3px;
+  margin-left: 460px;
+}
+
+#trans_ans4b {
+  margin-top: 18px;
+  margin-left: 460px;
+}
+
+#trans_ans4c {
+  margin-top: 34px;
+  margin-left: 460px;
+}
+
+#trans_ans4d {
+  margin-top: 50px;
+  margin-left: 460px;
+}
+
+.labor_num {
+  display: block;
+  position: absolute;
+  width: 80px;
+}
+
+.ender.labor_button {
+  margin-bottom: 43px;
+}
+
+.labor_right_trans {
+  background: none;
+  box-shadow: none;
+}
+
+.module_top.last_top {
+  background: none;
+  box-shadow: none;
+  position: absolute:
+  display: inline-block;
+}
+
+.module_bot.last_bot {
+  position: absolute:
+  display: inline-block;
+  height: 40px;
+}
+
+.module_bot.last_bot1 {
+  position: absolute:
+  display: inline-block;
+  height: 80px;
+}
+
+.module_bot.last_bot2 {
+  position: absolute:
+  display: inline-block;
+  height: 100px;
+}
+
+.module_bot.last_bot3 {
+  position: absolute:
+  display: inline-block;
+  height: 100px;
+}
+
+#trans_ans9a {
+  position: absolute;
+  display: block;
+  right: 170px;
+  bottom: 300px;
+}
+
+#trans_ans9al {
+  position: absolute;
+  display: block;
+  right: 210px;
+  bottom: 300px;
+}
+
+#trans_ans8k {
+  margin-top: 5px;
+  width: 80px;
+}
+
+.trans_ans8kl {
+  float: right;
+  display: block;
+  position: absolute;
+}
+
+.module_button_div {
+  background: none;
+  box-shadow: none;
+}
+
+#submitDiag.labor_button {
+  border: 2px solid var(--my-accent-color);
+  padding: 15px 30px;
+  position: absolute;
+  right: 100px;
+  bottom: 120px;
+}
+
+.updated_div {
+  opacity = 0;
+  display: block;
+  position: absolute;
+  width: 80%;
+  height: 390px;
+  margin: auto;
+  top: 200px;
+  right: 60px;
+  padding: 45px;
+  border-radius: 20px;
+  background: var(--fancy-background);
+  box-shadow:
+    inset 0px 0px 4px black,
+    inset 0px 0px 22px black,
+    20px 10px 70px 20px black;
+  overflow: hidden;
+  z-index: 99;
+}
+
+.doneShow.updated_div {
+  display: none;
+}
+
+#updatedclose {
+  position: absolute;
+  display: inline-block;
+  top: 413px;
+  right: 2px;
+  height: 60px;
+  width: 150px;
+  border: 2px solid var(--my-accent-color);
+  border-bottom: none;
+  border-right: none;
+}
