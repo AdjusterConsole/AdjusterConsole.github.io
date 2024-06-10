@@ -1,18 +1,18 @@
-//Restricted Use License
+// Restricted Use License
 //
-//This code is provided under the following terms and conditions:
+// This code is provided under the following terms and conditions:
 //
-//1. You are not allowed to use, copy, modify, merge, publish, distribute, sublicense, or sell copies of this code in any form, modified or unmodified, without express written permission from the author.
+// 1. You are not allowed to use, copy, modify, merge, publish, distribute, sublicense, or sell copies of this code in any form, modified or unmodified, without express written permission from the author.
 //
-//2. You are not allowed to use this code for any illegal or unethical purpose.
+// 2. You are not allowed to use this code for any illegal or unethical purpose.
 //
-//3. This license applies to all versions of the code previously released, as well as all future versions. Any prior statements made about permission given are hereby revoked.
+// 3. This license applies to all versions of the code previously released, as well as all future versions. Any prior statements made about permission given are hereby revoked.
 //
-//4. This code is provided "as is", without warranty of any kind, express or implied. The author shall not be liable for any damages arising from the use of this code.
+// 4. This code is provided "as is", without warranty of any kind, express or implied. The author shall not be liable for any damages arising from the use of this code.
 //
-//By viewing this code, you agree to abide by these terms and conditions. Failure to comply with these terms may result in legal action.
+// By viewing this code, you agree to abide by these terms and conditions. Failure to comply with these terms may result in legal action.
 //
-//For inquiries regarding licensing or permission to use this code in ways not covered by this license, please contact the author at AdjusterConsole@gmail.com.
+// For inquiries regarding licensing or permission to use this code in ways not covered by this license, please contact the author at AdjusterConsole@gmail.com.
 
 function sanitizeInput(value) {
   const tempDiv = document.createElement("div");
@@ -20,26 +20,28 @@ function sanitizeInput(value) {
   return tempDiv.innerHTML;
 }
 
-function colorObject() {
-  this.background = "#324350";
-  this.accent = "#7C878F";
-  this.shadow1 = "#D4D7DA";
-  this.shadow2 = "#1A2229";
-  this.username = '';
-  this.glow = "#ffffff";
-  this.text = "#000000";
-  this.outline = "#ffffff";
-  this.hover = "#7C878F32";
-  this.active = "#7C878F60";
-  this.light = "#ffffff";
-  this.medlight = "#c3cacf";
-  this.meddark = "#a4aaae";
-  this.dark = "#6d7174";
-  this.lightbackground = "#B6BDC1";
+class ColorObject {
+  constructor() {
+    this.background = "#324350";
+    this.accent = "#7C878F";
+    this.shadow1 = "#D4D7DA";
+    this.shadow2 = "#1A2229";
+    this.username = '';
+    this.glow = "#ffffff";
+    this.text = "#000000";
+    this.outline = "#ffffff";
+    this.hover = "#7C878F32";
+    this.active = "#7C878F60";
+    this.light = "#ffffff";
+    this.medlight = "#c3cacf";
+    this.meddark = "#a4aaae";
+    this.dark = "#6d7174";
+    this.lightbackground = "#B6BDC1";
+  }
 }
 
 function getPicker() {
-  const colorSet = JSON.parse(localStorage.getItem("colorSet1")) || new colorObject();
+  const colorSet = JSON.parse(localStorage.getItem("colorSet1")) || new ColorObject();
 
   colorSet.background = sanitizeInput(document.getElementById("background-picker").value);
   colorSet.accent = sanitizeInput(document.getElementById("accent-picker").value);
@@ -54,22 +56,20 @@ function getPicker() {
 }
 
 function setPicker() {
-  const colorSet = JSON.parse(localStorage.getItem("colorSet1")) || new colorObject();
+  const colorSet = JSON.parse(localStorage.getItem("colorSet1")) || new ColorObject();
 
   document.getElementById("background-picker").value = colorSet.background;
   document.getElementById("accent-picker").value = colorSet.accent;
   document.getElementById("shad1-picker").value = colorSet.shadow1;
   document.getElementById("shad2-picker").value = colorSet.shadow2;
-  if (colorSet.username != null) {
-    document.getElementById("userName").value = colorSet.username;
-  }
+  document.getElementById("userName").value = colorSet.username || '';
   document.getElementById("nameGlow").value = colorSet.glow;
   document.getElementById("nameColor").value = colorSet.text;
   document.getElementById("outlineColor").value = colorSet.outline;
 }
 
 function setProperty() {
-  const colorSet = JSON.parse(localStorage.getItem("colorSet1")) || new colorObject();
+  const colorSet = JSON.parse(localStorage.getItem("colorSet1")) || new ColorObject();
 
   document.documentElement.style.setProperty('--my-background-color', colorSet.background);
   document.documentElement.style.setProperty('--my-accent-color', colorSet.accent);
@@ -86,78 +86,86 @@ function setProperty() {
   document.documentElement.style.setProperty('--fancy-dark', colorSet.dark);
   document.documentElement.style.setProperty('--fancy-background', colorSet.lightbackground);
 
-  if (colorSet.username != null) {
+  if (colorSet.username) {
     document.getElementById("userName").value = colorSet.username;
     document.getElementById("glowDiv").innerHTML = sanitizeInput(colorSet.username);
   }
 }
 
 function setColor(colors) {
-  const colorSet = new colorObject();
+  const colorSet = new ColorObject();
   switch (colors) {
     case "default":
-      colorSet.background = "#324350";
-      colorSet.accent = "#7C878F";
-      colorSet.shadow1 = "#D4D7DA";
-      colorSet.shadow2 = "#1A2229";
-      colorSet.glow = "#ffffff";
-      colorSet.text = "#000000";
-      colorSet.outline = "#FFFFFF";
-      colorSet.hover = "#7C878F32";
-      colorSet.active = "#7C878F60";
-      colorSet.light = "#ffffff";
-      colorSet.medlight = "#c3cacf";
-      colorSet.meddark = "#a4aaae";
-      colorSet.dark = "#6d7174";
-      colorSet.lightbackground = "#B6BDC1";
+      Object.assign(colorSet, {
+        background: "#324350",
+        accent: "#7C878F",
+        shadow1: "#D4D7DA",
+        shadow2: "#1A2229",
+        glow: "#ffffff",
+        text: "#000000",
+        outline: "#FFFFFF",
+        hover: "#7C878F32",
+        active: "#7C878F60",
+        light: "#ffffff",
+        medlight: "#c3cacf",
+        meddark: "#a4aaae",
+        dark: "#6d7174",
+        lightbackground: "#B6BDC1"
+      });
       break;
     case "grey":
-      colorSet.background = "#4f4f4f";
-      colorSet.accent = "#707070";
-      colorSet.shadow1 = "#cecece";
-      colorSet.shadow2 = "#141414";
-      colorSet.glow = "#ffffff";
-      colorSet.text = "#000000";
-      colorSet.outline = "#ffffff";
-      colorSet.hover = "#70707032";
-      colorSet.active = "#70707060";
-      colorSet.light = "#fafafa";
-      colorSet.medlight = "#cccccc";
-      colorSet.meddark = "#acacac";
-      colorSet.dark = "#848484";
-      colorSet.lightbackground = "#bfbfbf";
+      Object.assign(colorSet, {
+        background: "#4f4f4f",
+        accent: "#707070",
+        shadow1: "#cecece",
+        shadow2: "#141414",
+        glow: "#ffffff",
+        text: "#000000",
+        outline: "#ffffff",
+        hover: "#70707032",
+        active: "#70707060",
+        light: "#fafafa",
+        medlight: "#cccccc",
+        meddark: "#acacac",
+        dark: "#848484",
+        lightbackground: "#bfbfbf"
+      });
       break;
     case "red":
-      colorSet.background = "#622823";
-      colorSet.accent = "#81524E";
-      colorSet.shadow1 = "#CFBEBD";
-      colorSet.shadow2 = "#130807";
-      colorSet.glow = "#ffffff";
-      colorSet.text = "#000000";
-      colorSet.outline = "#2f9844";
-      colorSet.hover = "#81524E32";
-      colorSet.active = "#81524E60";
-      colorSet.light = "#fafafa";
-      colorSet.medlight = "#cccccc";
-      colorSet.meddark = "#acacac";
-      colorSet.dark = "#848484";
-      colorSet.lightbackground = "#bfbfbf";
+      Object.assign(colorSet, {
+        background: "#622823",
+        accent: "#81524E",
+        shadow1: "#CFBEBD",
+        shadow2: "#130807",
+        glow: "#ffffff",
+        text: "#000000",
+        outline: "#2f9844",
+        hover: "#81524E32",
+        active: "#81524E60",
+        light: "#fafafa",
+        medlight: "#cccccc",
+        meddark: "#acacac",
+        dark: "#848484",
+        lightbackground: "#bfbfbf"
+      });
       break;
     case "green":
-      colorSet.background = "#2f9844";
-      colorSet.accent = "#58ac69";
-      colorSet.shadow1 = "#c0e0c6";
-      colorSet.shadow2 = "#040f06";
-      colorSet.glow = "#ffffff";
-      colorSet.text = "#98422f";
-      colorSet.outline = "#98422f";
-      colorSet.hover = "#58ac6932";
-      colorSet.active = "#58ac6960";
-      colorSet.light = "#fafafa";
-      colorSet.medlight = "#cccccc";
-      colorSet.meddark = "#acacac";
-      colorSet.dark = "#848484";
-      colorSet.lightbackground = "#bfbfbf";
+      Object.assign(colorSet, {
+        background: "#2f9844",
+        accent: "#58ac69",
+        shadow1: "#c0e0c6",
+        shadow2: "#040f06",
+        glow: "#ffffff",
+        text: "#98422f",
+        outline: "#98422f",
+        hover: "#58ac6932",
+        active: "#58ac6960",
+        light: "#fafafa",
+        medlight: "#cccccc",
+        meddark: "#acacac",
+        dark: "#848484",
+        lightbackground: "#bfbfbf"
+      });
       break;
   }
   localStorage.setItem("colorSet1", JSON.stringify(colorSet));
@@ -182,10 +190,10 @@ function saveColors() {
 }
 
 function resetColors() {
-  if (localStorage.getItem("colorSet1") === null) {
+  if (!localStorage.getItem("colorSet1")) {
     setColor("default");
   } else {
-    const colorSet = JSON.parse(localStorage.getItem("colorSet1")) || new colorObject();
+    const colorSet = JSON.parse(localStorage.getItem("colorSet1")) || new ColorObject();
     setPicker();
     setProperty();
   }

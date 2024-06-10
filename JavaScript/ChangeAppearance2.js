@@ -1,28 +1,27 @@
-//Restricted Use License
+// Restricted Use License
 //
-//This code is provided under the following terms and conditions:
+// This code is provided under the following terms and conditions:
 //
-//1. You are not allowed to use, copy, modify, merge, publish, distribute, sublicense, or sell copies of this code in any form, modified or unmodified, without express written permission from the author.
+// 1. You are not allowed to use, copy, modify, merge, publish, distribute, sublicense, or sell copies of this code in any form, modified or unmodified, without express written permission from the author.
 //
-//2. You are not allowed to use this code for any illegal or unethical purpose.
+// 2. You are not allowed to use this code for any illegal or unethical purpose.
 //
-//3. This license applies to all versions of the code previously released, as well as all future versions. Any prior statements made about permission given are hereby revoked.
+// 3. This license applies to all versions of the code previously released, as well as all future versions. Any prior statements made about permission given are hereby revoked.
 //
-//4. This code is provided "as is", without warranty of any kind, express or implied. The author shall not be liable for any damages arising from the use of this code.
+// 4. This code is provided "as is", without warranty of any kind, express or implied. The author shall not be liable for any damages arising from the use of this code.
 //
-//By viewing this code, you agree to abide by these terms and conditions. Failure to comply with these terms may result in legal action.
+// By viewing this code, you agree to abide by these terms and conditions. Failure to comply with these terms may result in legal action.
 //
-//For inquiries regarding licensing or permission to use this code in ways not covered by this license, please contact the author at AdjusterConsole@gmail.com.
-
+// For inquiries regarding licensing or permission to use this code in ways not covered by this license, please contact the author at AdjusterConsole@gmail.com.
 
 function colorObject() {
-  this.background = "#324350";
-  this.accent = "#7C878F";
-  this.shadow1 = "#506b7f";
-  this.shadow2 = "#2d3c48";
-  this.shadow3 = "#364856";
-  this.shadow4 = "#151b21";
-  this.username;
+  this.background = "#2d4252";
+  this.accent = "#7c878f";
+  this.shadow1 = "#688da6";
+  this.shadow2 = "#1c2a35";
+  this.shadow3 = "#425e70";
+  this.shadow4 = "#0e1315";
+  this.username = '';
   this.glow = "#ffffff";
   this.text = "#ffffff";
   this.outline = "#000000";
@@ -112,80 +111,88 @@ function setProperty() {
 }
 
 function setColor(colors) {
-  const colorSet = {};
+  const colorSet = new colorObject();
 
-  switch(colors) {
+  switch (colors) {
     case "default":
-      colorSet.background = "#324350";
-      colorSet.accent = "#7C878F";
-      colorSet.shadow1 = "#506b7f";
-      colorSet.shadow2 = "#2d3c48";
-      colorSet.shadow3 = "#364856";
-      colorSet.shadow4 = "#151b21";
-      colorSet.glow = "#ffffff";
-      colorSet.text = "#ffffff";
-      colorSet.outline = "#000000";
-      colorSet.hover = "#7C878F32";
-      colorSet.active = "#7C878F60";
-      colorSet.light = "#ffffff";
-      colorSet.medlight = "#c3cacf";
-      colorSet.meddark = "#a4aaae";
-      colorSet.dark = "#6d7174";
-      colorSet.lightbackground = "#B6BDC1";
+      Object.assign(colorSet, {
+        background: "#2d4252",
+        accent: "#7c878f",
+        shadow1: "#68869c",
+        shadow2: "#1c2a35",
+        shadow3: "#425e70",
+        shadow4: "#0e1315",
+        glow: "#ffffff",
+        text: "#ffffff",
+        outline: "#000000",
+        hover: "#7C878F32",
+        active: "#7C878F60",
+        light: "#ffffff",
+        medlight: "#c3cacf",
+        meddark: "#a4aaae",
+        dark: "#6d7174",
+        lightbackground: "#B6BDC1"
+      });
       break;
     case "grey":
-      colorSet.background = "#4f4f4f";
-      colorSet.accent = "#707070";
-      colorSet.shadow1 = "#7e7e7e";
-      colorSet.shadow2 = "#555555";
-      colorSet.shadow3 = "#474747";
-      colorSet.shadow4 = "#202020";
-      colorSet.glow = "#ffffff";
-      colorSet.text = "#000000";
-      colorSet.outline = "#ffffff";
-      colorSet.hover = "#70707032";
-      colorSet.active = "#70707060";
-      colorSet.light = "#ffffff";
-      colorSet.medlight = "#cccccc";
-      colorSet.meddark = "#acacac";
-      colorSet.dark = "#737373";
-      colorSet.lightbackground = "#bfbfbf";
+      Object.assign(colorSet, {
+        background: "#4f4f4f",
+        accent: "#707070",
+        shadow1: "#7e7e7e",
+        shadow2: "#555555",
+        shadow3: "#474747",
+        shadow4: "#202020",
+        glow: "#ffffff",
+        text: "#000000",
+        outline: "#ffffff",
+        hover: "#70707032",
+        active: "#70707060",
+        light: "#ffffff",
+        medlight: "#cccccc",
+        meddark: "#acacac",
+        dark: "#737373",
+        lightbackground: "#bfbfbf"
+      });
       break;
     case "red":
-      colorSet.background = "#622823";
-      colorSet.accent = "#81524E";
-      colorSet.shadow1 = "#9d4038";
-      colorSet.shadow2 = "#692b25";
-      colorSet.shadow3 = "#582420";
-      colorSet.shadow4 = "#27100e";
-      colorSet.glow = "#ffffff";
-      colorSet.text = "#000000";
-      colorSet.outline = "#ffffff";
-      colorSet.hover = "#81524E32";
-      colorSet.active = "#81524E60";
-      colorSet.light = "#ffffff";
-      colorSet.medlight = "#ffdada";
-      colorSet.meddark = "#e6b8b8";
-      colorSet.dark = "#997a7a";
-      colorSet.lightbackground = "#ffcccc";
+      Object.assign(colorSet, {
+        background: "#622823",
+        accent: "#81524E",
+        shadow1: "#9d4038",
+        shadow2: "#692b25",
+        shadow3: "#582420",
+        shadow4: "#27100e",
+        glow: "#ffffff",
+        text: "#000000",
+        outline: "#ffffff",
+        hover: "#81524E32",
+        active: "#81524E60",
+        light: "#ffffff",
+        medlight: "#ffdada",
+        meddark: "#e6b8b8",
+        dark: "#997a7a",
+        lightbackground: "#ffcccc"
+      });
       break;
     case "green":
-      colorSet.background = "#2f9844";
-      colorSet.accent = "#58ac69";
-      colorSet.shadow1 = "#4bf36d";
-      colorSet.shadow2 = "#32a349";
-      colorSet.shadow3 = "#2a893d";
-      colorSet.shadow4 = "#133d1b";
-      colorSet.glow = "#E3FFE4";
-      colorSet.text = "#000000";
-      colorSet.outline = "#FFFFFF";
-      colorSet.hover = "#58ac6932";
-      colorSet.active = "#58ac6960";
-      colorSet.light = "#ffffff";
-      colorSet.medlight = "#e3ffe4";
-      colorSet.meddark = "#bfdac0";
-      colorSet.dark = "#7f9180";
-      colorSet.lightbackground = "#c5edc6";
+      Object.assign(colorSet, {
+        background: "#2f9844",
+        accent: "#58ac69",
+        shadow1: "#4bf36d",
+        shadow2: "#32a349",
+        shadow3: "#2a893d",
+        shadow4: "#133d1b",
+        glow: "#E3FFE4",
+        text: "#000000",
+        outline: "#FFFFFF",
+        hover: "#58ac6932",
+        active: "#58ac6960",
+        light: "#ffffff",
+        medlight: "#e3ffe4",
+        meddark: "#bfdac0",
+        dark: "#7f9180",
+        lightbackground: "#c5edc6"
+      });
       break;
   }
 

@@ -922,7 +922,7 @@ function goGuide(option,name) {
   case "noship3":
     const pElem43 = document.createElement("p");
     pElem43.classList.add("bodyTab2");
-    const textNode43 = document.createTextNode("Auth MSRP. CH will have OOPC.");
+    const textNode43 = document.createTextNode("Authorize MSRP. Contract Holder will have OOPC.");
     var div = document.getElementById("authGuideOE");
     pElem43.appendChild(textNode43);
     div.appendChild(pElem43);
@@ -930,7 +930,7 @@ function goGuide(option,name) {
   case "mayship3":
     const pElem8 = document.createElement("p");
     pElem8.classList.add("bodyTab2");
-    const textNode8 = document.createTextNode("Ship part with permision from CH.");
+    const textNode8 = document.createTextNode("Ship part with permision from the Contract Holder.");
     var div = document.getElementById("rfovrmsrp");
     pElem8.appendChild(textNode8);
     div.appendChild(pElem8);
@@ -938,7 +938,7 @@ function goGuide(option,name) {
   case "rfundmsrp":
     const pElem9 = document.createElement("p");
     pElem9.classList.add("bodyTab2");
-    const textNode9 = document.createTextNode("Auth MSRP.");
+    const textNode9 = document.createTextNode("Authorize MSRP.");
     var div = document.getElementById("authGuideOE");
     pElem9.appendChild(textNode9);
     div.appendChild(pElem9);
@@ -956,7 +956,7 @@ function goGuide(option,name) {
   case "rfundlist":
     const pElem1 = document.createElement("p");
     pElem1.classList.add("bodyTab2");
-    const textNode1 = document.createTextNode("Auth RF price as its MCE");
+    const textNode1 = document.createTextNode("Authorize Repair Facility price as it's MCE");
     var div = document.getElementById("listUnder");
     pElem1.appendChild(textNode1);
     div.appendChild(pElem1);
@@ -964,7 +964,7 @@ function goGuide(option,name) {
   case "mayship":
     const pElem2 = document.createElement("p");
     pElem2.classList.add("bodyTab2");
-    const textNode2 = document.createTextNode("Ship part with permision from CH.");
+    const textNode2 = document.createTextNode("Ship part with permision from the Contract Holder.");
     var div = document.getElementById("rfovrlist");
     pElem2.appendChild(textNode2);
     div.appendChild(pElem2);
@@ -972,7 +972,7 @@ function goGuide(option,name) {
   case "noship":
     const pElem3 = document.createElement("p");
     pElem3.classList.add("bodyTab2");
-    const textNode3 = document.createTextNode("Auth PA List under $250.00 and the remaining balance is OOPC.");
+    const textNode3 = document.createTextNode("Authorize PA list price under $250.00 and the remaining balance will be OOPC.");
     var div = document.getElementById("rfovrlist");
     pElem3.appendChild(textNode3);
     div.appendChild(pElem3);
@@ -986,7 +986,7 @@ function goGuide(option,name) {
   case "rfundcost":
     const pElem4 = document.createElement("p");
     pElem4.classList.add("bodyTab2");
-    const textNode4 = document.createTextNode("Auth RF price as its MCE.");
+    const textNode4 = document.createTextNode("Authorize Repair Facility price as it's MCE");
     var div = document.getElementById("costund");
     pElem4.appendChild(textNode4);
     div.appendChild(pElem4);
@@ -997,7 +997,7 @@ function goGuide(option,name) {
   case "mayship2":
     const pElem5 = document.createElement("p");
     pElem5.classList.add("bodyTab2");
-    const textNode5 = document.createTextNode("Ship part with permission from CH.");
+    const textNode5 = document.createTextNode("Ship part with permission from the Contract Holder.");
     var div = document.getElementById("rfovrcost");
     pElem5.appendChild(textNode5);
     div.appendChild(pElem5);
@@ -1005,7 +1005,7 @@ function goGuide(option,name) {
   case "noship2":
     const pElem6 = document.createElement("p");
     pElem6.classList.add("bodyTab2");
-    const textNode6 = document.createTextNode("Auth PA Cost under $250.00 and the remaining balance is OOP.");
+    const textNode6 = document.createTextNode("Authorize PA cost price under $250.00 and the remaining balance will be OOPC.")
     var div = document.getElementById("rfovrcost");
     pElem6.appendChild(textNode6);
     div.appendChild(pElem6);
@@ -1219,6 +1219,17 @@ function scriptInfo() {
   localStorage.setItem("current", current);
   localStorage.setItem("custom", custom);
 }
+function instructScript() {
+  let instructL = document.getElementById("instructL");
+  let instructScript = document.getElementById("instructScript");
+  if (!instructL.classList.contains("showing")) {
+    instructL.classList.add("showing") ;
+    instructScript.innerText = "Hide"
+  } else {
+    instructL.classList.remove("showing") ;
+    instructScript.innerText = "Instructions"
+  }
+}
 
 function laborScript() {
   var radius = document.getElementById("radius").value;
@@ -1237,6 +1248,8 @@ function laborScript() {
   localStorage.setItem("weTried", "notYet");
   if (whatDo == "allow") {
     document.getElementById("responseDiv_text").innerHTML = "Your Response is:<br>I have updated your repair facility profile and set the labor rate at that amount.";
+    document.getElementById("noScript").style.display = "none";
+    document.getElementById("yesScript").style.display = "none";
     buildLaborNote('underAve');
     return;
   } else {

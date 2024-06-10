@@ -406,7 +406,7 @@ function submitStat(again) {
       isPandlin.checked = false;
     }
     if (isInformed.checked){
-      document.getElementById("textarea5").value += "RF and CH are informed of claim status.\r";
+      document.getElementById("textarea5").value += "The Repair Facility and Contact Holder have been informed of the claim status.\r";
       isInformed.checked = false;
     }
     if (isTaskset.checked){
@@ -466,22 +466,22 @@ function newAuth() {
   document.getElementById("authRequests").style.display = "none";
   document.getElementById("authOopcs").style.display = "none";
   document.getElementById("newAuthstyle").style.display = "none";
-  var stage = document.getElementById("textarea2");
+  let stage = '';
   var bananaMilkshake = getContact('1');
   var rfContact = getContact('0');
-  stage.value = newauthLine0 + rfContact + "\r";
+  stage = newauthLine0 + rfContact + "\r";
   var firstAuthline = newauthLine1;
   if (document.getElementById("auth6").checked) { firstAuthline = newauthLine1a; }
   if (document.getElementById("auth7").checked) { firstAuthline = newauthLine1b; }
-  stage.value += firstAuthline + "\r" + newauthLine2 + "\r" + newauthLine3 + "\r" + newauthLine4  + "\r" + newauthLine5 + bananaMilkshake + "\r";
+  stage += firstAuthline + "\r" + newauthLine2 + "\r" + newauthLine3 + "\r" + newauthLine4  + "\r" + newauthLine5 + bananaMilkshake + "\r";
   partsOptions(stage);
 }
 
 function setValue() {
-  document.getElementById("auth1").value = "Using repair facility OEM parts at or under $250.00.";
-  document.getElementById("auth2").value = "Using repair facility parts at or under sourcing MCE.";
-  document.getElementById("auth3").value = "Using sourcing MCE as a credit toward repair facility parts.";
-  document.getElementById("auth4").value = "Using sourcing MCE as a credit toward repair facility parts or shipping in.";
+  document.getElementById("auth1").value = "Using Repair Facility OEM parts at or under $250.00.";
+  document.getElementById("auth2").value = "Using Repair Facility parts at or under sourcing MCE.";
+  document.getElementById("auth3").value = "Using sourcing MCE as a credit toward Repair Facility parts.";
+  document.getElementById("auth4").value = "Using sourcing MCE as a credit toward Repair Facility parts or shipping in.";
   document.getElementById("auth5").value = "Adjusted price to reasonable amount near MCE.\rThis was done considering all factors including claim delays, shipping costs, liability for future failures, time and mileage in coverage, number of prior claims and their cost, etc.";
 }
 
@@ -490,7 +490,7 @@ function partsOptions(stage) {
   var partOpts = document.getElementsByName("authparts");
   for (i = 0; i < partOpts.length; i++) {
     if (partOpts[i].checked == true) {
-      stage.value += partOpts[i].value + "\r";
+      stage += partOpts[i].value + "\r";
     }
   }
   requestOptions(stage);
@@ -499,73 +499,73 @@ function partsOptions(stage) {
 function requestOptions(stage) {
   var inspAuth1 = "No inspection needed as RF diagnostic matches CH concern.";
   var inspAuth2 = "Sent inspection to verify failures.\rReviewed report and inspection photos.\rInspection review note is completed.";
-  var inspAuth3 = "Requested and reviewed photos from repair facility.\rPhoto review note is completed.";
+  var inspAuth3 = "Requested and reviewed photos from Repair Facility.\rPhoto review note is completed.";
   var recordsAuth1 = "No records requested as history will not change claim decision.\rVehicle is not in waiting period.\rConcern is not maintenance related.\rNo prior related claims.\rNo recalls, TSBs, or mileage concerns.";
   var recordsAuth2 = "Requested and reviewed records and statement.\rRecord review note is completed.";
   var requestedAuth1 = "After reviewing all relevant documentation, we are moving forward with verified failures.";
 
   if (document.getElementById("auth9").checked == true) {
-    stage.value += inspAuth1 + "\r" + recordsAuth1 + "\r";
+    stage += inspAuth1 + "\r" + recordsAuth1 + "\r";
     issuesOptions(stage);
     return;
   }
   if (document.getElementById("auth6").checked == true) {
-    stage.value += inspAuth2 + "\r";
+    stage += inspAuth2 + "\r";
   }
   if (document.getElementById("auth7").checked == true) {
-    stage.value += inspAuth3 + "\r";
+    stage += inspAuth3 + "\r";
   }
   if (document.getElementById("auth8").checked == true) {
-    stage.value += recordsAuth2 + "\r";
+    stage += recordsAuth2 + "\r";
   }
-  stage.value += requestedAuth1 + "\r";
+  stage += requestedAuth1 + "\r";
   issuesOptions(stage);
 }
 
 function issuesOptions(stage) {
-  var oopcsAuth1 = "Need to review OOPC of $";
-  var oopcsAuth2a = " with contract holder.";
-  var oopcsAuth2b = " and shipping option with contract holder.";
-  var oopcsAuth2c = "OOPC is due to differences in ";
-  var oopcsAuth3 = "Need to review shipping option with contract holder.";
-  var oopcsAuth3a = "Have not given authorization info to RF at this time.";
-  var oopcsAuth4 = "Contract holder has no OOPC besides deductible.";
-  var oopcsAuth4a = "Gave authorization info and payment instructions to ";
+    var oopcsAuth1 = "Need to review OOPC of $";
+    var oopcsAuth2a = " with Contract Holder.";
+    var oopcsAuth2b = " and shipping option with Contract Holder.";
+    var oopcsAuth2c = "OOPC is due to differences in ";
+    var oopcsAuth3 = "Need to review shipping option with Contract Holder.";
+    var oopcsAuth3a = "Have not given authorization info to the Repair Facility at this time.";
+    var oopcsAuth4 = "Contract Holder has no OOPC besides deductible.";
+    var oopcsAuth4a = "Gave authorization info and payment instructions to ";
 
-  var rfName = getContact('0');
-  if (document.getElementById("auth13").checked == true) {
-    stage.value += oopcsAuth4 + "\r" + oopcsAuth4a + rfName + "\r";
-    finishAuth(stage);
-    return;
-  }
-  if (document.getElementById("auth11").checked == true) {
-    stage.value += oopcsAuth3 + "\r" + oopcsAuth3a + "\r";
-    finishAuth(stage);
-    return;
-  }
-  if (document.getElementById("auth10").checked == true || document.getElementById("auth12").checked == true) {
-    var oopcCausep = document.getElementById("auth14");
-    var oopcCausel = document.getElementById("auth15");
-    var oopcCauseb = document.getElementById("auth16");
-    var oopcAmt1 = document.getElementById("auth17").value;
-    document.getElementById("auth17").value = "";
-    var num = parseInt(oopcAmt1);
-    var oopcAmt2 = num.toFixed(2);
-    var oopcAmt = oopcAmt2.toString();
-    var oopcCausedBy;
-    if (oopcCauseb.checked == true) { oopcCausedBy = "parts and labor."; }
-    if (oopcCausel.checked == true) { oopcCausedBy = "labor."; }
-    if (oopcCausep.checked == true) { oopcCausedBy = "parts."; }
-    if (oopcAmt == null) { alert("Please enter the amount of OOPC"); return; }
-    stage.value += oopcsAuth1 + oopcAmt;
-    if (document.getElementById("auth12").checked == true) {
-      stage.value += oopcsAuth2b + "\r" + oopcsAuth2c + oopcCausedBy + "\r" + oopcsAuth3a + "\r";
-    } else {
-      stage.value += oopcsAuth2a + "\r" + oopcsAuth2c + oopcCausedBy + "\r" + oopcsAuth3a + "\r";
+    var rfName = getContact('0');
+    if (document.getElementById("auth13").checked) {
+        stage += oopcsAuth4 + "\r" + oopcsAuth4a + rfName + "\r";
+        finishAuth(stage);
+        return;
     }
-    finishAuth(stage);
-    return;
-  }
+    if (document.getElementById("auth11").checked) {
+        stage += oopcsAuth3 + "\r" + oopcsAuth3a + "\r";
+        finishAuth(stage);
+        return;
+    }
+    if (document.getElementById("auth10").checked || document.getElementById("auth12").checked) {
+        var oopcCausep = document.getElementById("auth14");
+        var oopcCausel = document.getElementById("auth15");
+        var oopcCauseb = document.getElementById("auth16");
+        var oopcAmt1 = document.getElementById("auth17").value;
+        document.getElementById("auth17").value = "";
+        var num = parseFloat(oopcAmt1);
+        if (isNaN(num)) {
+            alert("Please enter a valid amount for OOPC");
+            return;
+        }
+        var oopcAmt2 = num.toFixed(2);
+        var oopcAmt = oopcAmt2.toString();
+        var oopcCausedBy;
+        if (oopcCauseb.checked) { oopcCausedBy = "parts and labor."; }
+        if (oopcCausel.checked) { oopcCausedBy = "labor."; }
+        if (oopcCausep.checked) { oopcCausedBy = "parts."; }
+        stage += oopcsAuth1 + oopcAmt;
+        stage += (document.getElementById("auth12").checked ? oopcsAuth2b : oopcsAuth2a) + "\r";
+        stage += oopcsAuth2c + oopcCausedBy + "\r" + oopcsAuth3a + "\r";
+        finishAuth(stage);
+        return;
+    }
 }
 
 function showOOPopt() {
@@ -573,17 +573,20 @@ function showOOPopt() {
 }
 
 function finishAuth(stage) {
-  var noncovAuth1 = "Will inform CH of non-covered components";
+  var noncovAuth1 = "Will inform Contract Holder of non-covered components";
   var noncovAuth2 = "There were denied items on this claim.\rReview denial note for more details";
   document.getElementById("OOPoptDiv").style.display = "none";
   var noncovComps = document.getElementById("auth18");
-  if (noncovComps.checked) { stage.value += noncovAuth1 + "\r"; }
+  if (noncovComps.checked) {
+    stage += noncovAuth1 + "\r";
+  }
   var deniedComps = document.getElementById("auth18a");
-  if (deniedComps.checked) { stage.value += noncovAuth2; }
-  stage.select();
-  document.execCommand("copy");
+  if (deniedComps.checked) {
+    stage += noncovAuth2;
+  }
+  copy(stage);
   var boxes = document.querySelectorAll(".FNA");
-  for (i = 0; i < boxes.length; i++) {
+  for (var i = 0; i < boxes.length; i++) {
     boxes[i].checked = false;
   }
 }
@@ -679,7 +682,7 @@ function REVIEW(btnID) {
 }
 
 function RECREQ(btnID) {
-  var RecReq = "Requesting CH statement regarding issues.\rRequesting past 12 months of service records from CH.\rSent records request using SRS action button.\rWill call CH to inform.";
+  var RecReq = "Requesting Contract Holder statement regarding issues.\rRequesting past 12 months of service records from the Contract Holder.\rSent records request using SRS action button.\rWill call the Contract Holder to inform.";
   var Check = localStorage.getItem(btnID + "EDIT");
   if (Check == null) {
     document.getElementById("textarea5").value = RecReq;
@@ -694,7 +697,7 @@ function RECREQ(btnID) {
 }
 
 function NOANSREC(btnID) {
-  var NoAns = "Called CH to request records.\rCalled CH to request statement.\rNo answer – left voicemail.\rTasked to CS callbacks.";
+  var NoAns = "Called Contract Holder to request records.\rCalled Contract Holder to request statement.\rNo answer – left voicemail.\rTasked to CS callbacks.";
   var Check = localStorage.getItem(btnID + "EDIT");
   if (Check == null) {
     document.getElementById("textarea5").value = NoAns;
@@ -790,16 +793,16 @@ function backTEMP() {
 }
 
 function submitTEMP() {
-  var PtTransfer1 = "Is the repair facility able to diagnose to cause of failure and overhaul if needed?   ";
-  var PtTransfer2 = "Has the repair facility ever serviced the vehicle before?   ";
+  var PtTransfer1 = "Is the Repair Facility able to diagnose to cause of failure and overhaul if needed?   ";
+  var PtTransfer2 = "Has the Repair Facility ever serviced the vehicle before?   ";
   var PtTransfer3 = "Can a test drive be performed if needed?   ";
-  var PtTransfer4 = "Did the repair facility tow the vehicle?   ";
+  var PtTransfer4 = "Did the Repair Facility tow the vehicle?   ";
   var PtTransfer5 = "Has the cause of failure been identified?   ";
-  var PtTransfer6 = "Does the repair facility have an itemized estimate available?   ";
-  var PtTransfer7 = "Has the repair facility's info and contact info been verified?   ";
+  var PtTransfer6 = "Does the Repair Facility have an itemized estimate available?   ";
+  var PtTransfer7 = "Has the Repair Facility's info and contact info been verified?   ";
   var PtTransfer8 = "What is the preferred method of contact?   ";
-  var PtTransfer9  = "Have the PT claim expectations been reviewed with the repair facility contact?   ";
-  var PtTransfer10 = "Have you provided the repair facility with the assigned adjusters name, direct extension, and e-mail?   ";
+  var PtTransfer9  = "Have the PT claim expectations been reviewed with the Repair Facility contact?   ";
+  var PtTransfer10 = "Have you provided the Repair Facility with the assigned adjusters name, direct extension, and e-mail?   ";
   var PtTransfer11 = "Is there any other relevant info that will assist the adjuster?   ";
   var q1 = document.getElementsByName("ans1");
   var q2 = document.getElementsByName("ans2");
@@ -920,7 +923,7 @@ function cancelPT() {
 }
 
 function PICREQ(btnID) {
-  var PicReq = "Requesting photos from RF to verify failure and avoid inspection delay.\rInforming RF to include pics of all 4 corners of the vehicle, VIN plate, odometer, and pictures of the failure.\rSent request via SRS action button.";
+  var PicReq = "Requesting photos from Repair Facility to verify failure and avoid inspection delay.\rInforming Repair Facility to include pics of all 4 corners of the vehicle, VIN plate, odometer, and pictures of the failure.\rSent request via SRS action button.";
   var Check = localStorage.getItem(btnID + "EDIT");
   if (Check == null) {
     document.getElementById("textarea5").value = PicReq;
@@ -1102,6 +1105,7 @@ function toggleConductor(boxId) {
 }
 
 window.onload = function PutItBack() {
+  localStorage.setItem("viewNum", "normal");
   var selected = "holder1";
   var selectedElem = document.getElementById(selected);
   var didItRun = localStorage.getItem("Im The Boss");
@@ -1191,6 +1195,12 @@ window.onload = function PutItBack() {
   localStorage.setItem("pageNum", "0");
   resetColors();
   trackerBlank();
+  let updated = localStorage.getItem("updated");
+  if (updated === "yes") {
+    document.getElementById("updated").style.display = "none";
+  } else {
+    document.getElementById("updated").style.opacity = "1";
+  }
 }
 
 function trackerBlank() {
@@ -1224,4 +1234,21 @@ function openNav() {
 
 function closeNav() {
   document.getElementById("mySidenav").classList.remove("open_nav");
+}
+
+function opentransAuth() {
+  if (checkOpen()) { return; }
+  document.getElementById("module_trans_backing").classList.add("trsnActive");
+  document.getElementById("module_trans_1").classList.add("trsnActive");
+}
+
+function closetransAuth() {
+  document.getElementById("module_trans_backing").classList.remove("trsnActive");
+  document.getElementById("module_trans_7").classList.remove("trsnActive");
+  document.getElementById("module_trans_4").classList.remove("trsnActive");
+}
+
+function closeUpdate() {
+  document.getElementById("updated").style.display = "none";
+  localStorage.setItem("updated", "yes");
 }

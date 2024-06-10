@@ -14,120 +14,149 @@
 //
 //For inquiries regarding licensing or permission to use this code in ways not covered by this license, please contact the author at AdjusterConsole@gmail.com.
 
-function RESET() {
-  document.getElementById("textarea3").value = "";
-  document.getElementById("textarea2").value = "";
-  document.getElementById("textarea1").value = "CONTACT:   \rPAYMENT:   \rZIPCODE:   \rMILEAGE:   \rDISTANCE:   \rTIME:   ";
-  document.getElementById("partname1").value = "";
-  document.getElementById("partname2").value = "";
-  document.getElementById("partname3").value = "";
-  document.getElementById("partname4").value = "";
-  document.getElementById("partname5").value = "";
-  document.getElementById("partname6").value = "";
-  document.getElementById("partname7").value = "";
-  document.getElementById("partnum").value = "";
-  document.getElementById("rfprice").value = "";
-  document.getElementById("msrp").value = "";
-  document.getElementById("partname2").style.display = "none";
-  document.getElementById("partname3").style.display = "none";
-  document.getElementById("partname4").style.display = "none";
-  document.getElementById("partname5").style.display = "none";
-  document.getElementById("partname6").style.display = "none";
-  document.getElementById("partname7").style.display = "none";
-  document.getElementById("RFIBBTN").style.display = "inline-block";
-  document.getElementById("TGAFBTN").style.display = "inline-block";
-  didntHave();
-  rfbaseFour();
-  authforOSB();
-  OOPADCB();
-  shipADCB();
-  bothADDCB();
-  hideSnip();
-  ClearText();
-  localStorage.setItem("newpartcount","2");
-  document.getElementById("transferTemplate").style.display = "none";
-  document.getElementById("statNote").style.display = "none";
-  document.getElementById("newAuthstyle").style.display = "none";
-  document.getElementById("TPDiv").style.display = "none";
+function setButtonDisplay(buttonIds, displayStyle) {
+  buttonIds.forEach(function(btnId) {
+    document.getElementById(btnId).style.display = displayStyle;
+  });
 }
 
-function whiteRabbit() {
-  document.getElementById("transferTemplate").style.display = "none";
-  document.getElementById("statNote").style.display = "none";
-  document.getElementById("newAuthstyle").style.display = "none";
-  document.getElementById("TPDiv").style.display = "none";
-  const editMenus = document.getElementsByClassName("CMeditDIV");
-  for(i = 0; i < editMenus.length; i++) {
-    var tempId = editMenus[i].id;
-    document.getElementById(tempId).style.display = "none";
+function setVMReason(reason) {
+  localStorage.setItem("VMREASON", reason);
+}
+
+function showSnipAndUpdateEditArea(value) {
+  document.getElementById("Snippings").value = value;
+  document.getElementById("EDITarea").value = value;
+}
+
+function setLocalStorageItem(key, value) {
+  localStorage.setItem(key, value);
+}
+
+function getElementValue(id) {
+  return document.getElementById(id).value;
+}
+
+function setElementValue(buttonId, value) {
+  buttonId.forEach(function(btnIds) {
+    document.getElementById(btnIds).value = value;
+  });
+}
+
+function commonFunctionality(btnID, defaultText) {
+  var Check = localStorage.getItem(btnID + "EDIT") || defaultText;
+  setElementValue(["Snippings", "EDITarea"], Check);
+  copyText();
+  setButtonDisplay(["Snippings"], "inline-block");
+}
+
+function TGAFO() {
+  setButtonDisplay(["TGAFOABTN", "TGAFODBTN", "TGAFOCBTN", "NALVM", "NANVM"], "inline-block");
+  setButtonDisplay(["TGAFOBTN", "TGAFSBTN", "TGAFBBTN"], "none");
+  setVMReason("I called the Contract Holder to get authorization for the OOPC.\r");
+}
+
+function TGAFS() {
+  setButtonDisplay(["TGAFSABTN", "TGAFSDBTN", "TGAFSCBTN", "NALVM", "NANVM"], "inline-block");
+  setButtonDisplay(["TGAFOBTN", "TGAFSBTN", "TGAFBBTN"], "none");
+  setVMReason("I called the Contract Holder to get authorization for shipping.\r");
+}
+
+function TGAFB() {
+  changeVMpos();
+  setButtonDisplay(["TGAFOSABTN", "TGAFOSDSBTN", "TGAFOSDBBTN", "TGAFOSCBTN", "NALVM", "NANVM"], "inline-block");
+  setButtonDisplay(["TGAFOBTN", "TGAFSBTN", "TGAFBBTN"], "none");
+  setVMReason("I called the Contract Holder to get authorization for the OOPC and shipping.\r");
+}
+
+function TGAFOA(btnID) {
+  var defaultText = "I called the Contract Holder to get authorization for the OOPC.\rThe Contract Holder has approved the OOPC.\rI will call the Repair Facility to give authorization and payment info.\r";
+  commonFunctionality(btnID, defaultText);
+  common_hide();
+  setVMpos();
+}
+
+function TGAFOD(btnID) {
+  var defaultText = "I called the Contract Holder to get authorization for the OOPC.\rThe Contract Holder has declined repairs at this time.\r";
+  commonFunctionality(btnID, defaultText);
+  common_hide();
+}
+
+function TGAFOC(btnID) {
+  var defaultText = "I called the Contract Holder to get authorization for the OOPC.\rThe Contract Holder will call back with a decision.\r";
+  commonFunctionality(btnID, defaultText);
+  common_hide();
+}
+
+function TGAFSA(btnID) {
+  var defaultText = "I called the Contract Holder to get authorization for shipping.\rThe Contract Holder has approved shipping.\rI will call the Repair Facility to inform and order part";
+  commonFunctionality(btnID, defaultText);
+  common_hide();
+}
+
+function TGAFSD(btnID) {
+  var defaultText = "I called the Contract Holder to get authorization for shipping.\rThe Contract Holder has declined shipping and will use the Repair Facility parts.\rThe Contract Holder has agreed to the OOPC.\rI will call the Repair Facility to inform and give authorization.";
+  commonFunctionality(btnID, defaultText);
+  common_hide();
+}
+
+function TGAFSC(btnID) {
+  var defaultText = "I called the Contract Holder to get authorization for shipping.\rThe Contract Holder will call back with a decision\r";
+  commonFunctionality(btnID, defaultText);
+  common_hide();
+}
+
+function TGAFOSA(btnID) {
+  var defaultText = "I called the Contract Holder to get authorization for the OOPC and shipping.\rThe Contract Holder has approved the OOPC and shipping.\rI will call Repair Facility to inform and order parts.\r";
+  commonFunctionality(btnID, defaultText);
+  common_hide();
+}
+
+function TGAFOSDS(btnID) {
+  var defaultText = "I called the Contract Holder to get authorization for the OOPC and shipping.\rThe Contract Holder has declined shipping and will use the Repair Facility parts.\rThe Contract Holder has agreed to the OOPC.\rI will call Repair Facility to inform and give authorization";
+  commonFunctionality(btnID, defaultText);
+  common_hide();
+}
+
+function TGAFOSDB(btnID) {
+  var defaultText = "I called the Contract Holder to get authorization for the OOPC and shipping.\rThe Contract Holder has declined repairs at this time.\r";
+  commonFunctionality(btnID, defaultText);
+  common_hide();
+}
+
+function TGAFOSC(btnID) {
+  var defaultText = "I called the Contract Holder to get authorization for the OOPC and shipping.\rThe Contract Holder will call back with a decision.\r";
+  commonFunctionality(btnID, defaultText);
+  common_hide();
+}
+
+async function copyText() {
+  let text = document.getElementById("Snippings").value;
+  try {
+    await navigator.clipboard.writeText(text);
+    setTimeout(function(){ setButtonDisplay(["Snippings"], "none"); }, 5000);
+  } catch (err) {
+    console.error('Failed to copy text: ', err);
   }
-  document.getElementById("toggleMaster").style.display = "none";
-  document.getElementById("infoDiv1").style.display = "none";
-  document.getElementById("infoDiv2").style.display = "none";
-  document.getElementById("div6").style.display = "none";
-  document.getElementById("resrcDiv").style.display = "none";
-  document.getElementById("diagDiv").style.display = "none";
-  document.getElementById("laborscriptDiv").style.display = "none";
-  RESETNOTE();
 }
 
-function CloseIt() {
-  document.getElementById("snipbox").style.display = "none";
+async function copy(text) {
+  try {
+    await navigator.clipboard.writeText(text);
+  } catch (err) {
+    console.error('Failed to copy text: ', err);
+  }
 }
 
-function ClearText() {
-  document.getElementById("Snippings").value = "";
-}
-
-function COPYIt() {
-  let textarea = document.getElementById("Snippings");
-  textarea.select();
-  document.execCommand("copy");
-}
-
-function authforOSB() {
-  document.getElementById("TGAFOBTN").style.display = "none";
-  document.getElementById("TGAFSBTN").style.display = "none";
-  document.getElementById("TGAFBBTN").style.display = "none";
-}
-
-function OOPADCB() {
-  document.getElementById("TGAFOABTN").style.display = "none";
-  document.getElementById("TGAFODBTN").style.display = "none";
-  document.getElementById("TGAFOCBTN").style.display = "none";
-}
-
-function shipADCB() {
-  document.getElementById("TGAFSABTN").style.display = "none";
-  document.getElementById("TGAFSDBTN").style.display = "none";
-  document.getElementById("TGAFSCBTN").style.display = "none";
-}
-
-function bothADDCB() {
-  document.getElementById("TGAFOSABTN").style.display = "none";
-  document.getElementById("TGAFOSDSBTN").style.display = "none";
-  document.getElementById("TGAFOSDBBTN").style.display = "none";
-  document.getElementById("TGAFOSCBTN").style.display = "none";
+function common_hide() {
+  setButtonDisplay(["TGAFOSABTN", "TGAFOSDSBTN", "TGAFOSDBBTN", "TGAFOSCBTN", "TGAFOABTN", "TGAFODBTN", "TGAFOCBTN", "TGAFSABTN", "TGAFSDBTN", "TGAFSCBTN", "NALVM", "NANVM"], "none");
 }
 
 function TGAF(){
   if (checkOpen()) { return; }
-  ClearText();
-  hideSnip();
-  document.getElementById("TGAFBTN").style.display = "inline-block";
-  document.getElementById("TGAFOBTN").style.display = "inline-block";
-  document.getElementById("TGAFSBTN").style.display = "inline-block";
-  document.getElementById("TGAFBBTN").style.display = "inline-block";
-}
-
-function showVM() {
-  document.getElementById("NALVM").style.display = "inline-block";
-  document.getElementById("NANVM").style.display = "inline-block";
-}
-
-function hideVM() {
-  document.getElementById("NALVM").style.display = "none";
-  document.getElementById("NANVM").style.display = "none";
+  setElementValue(["Snippings"], "");
+  setButtonDisplay(["TGAFBTN", "TGAFOBTN", "TGAFSBTN", "TGAFBBTN"], "inline-block");
+  setButtonDisplay(["Snippings"], "none");
 }
 
 function setVMpos() {
@@ -140,356 +169,103 @@ function changeVMpos() {
   document.getElementById("NANVM").style.left = "400px";
 }
 
-function rfbaseFour() {
-  document.getElementById("RFIBDH").style.display = "none";
-  document.getElementById("PNLCBTN").style.display = "none";
-  document.getElementById("TOTALBTN").style.display = "none";
-  document.getElementById("RFAUTHBTN").style.display = "none";
-}
-
-function didntHave() {
-  document.getElementById("RFIBND").style.display = "none";
-  document.getElementById("RFIBNE").style.display = "none";
-  document.getElementById("RFIBNF").style.display = "none";
-  document.getElementById("RFIBNV").style.display = "none";
-}
-
-function TGAFO() {
-  document.getElementById("TGAFOABTN").style.display = "inline-block";
-  document.getElementById("TGAFODBTN").style.display = "inline-block";
-  document.getElementById("TGAFOCBTN").style.display = "inline-block";
-  showVM();
-  var VMREASON = "Called CH to get auth for OOPC.\r";
-  localStorage.setItem("VMREASON",VMREASON);
-}
-
-function TGAFS() {
-  document.getElementById("TGAFSABTN").style.display = "inline-block";
-  document.getElementById("TGAFSDBTN").style.display = "inline-block";
-  document.getElementById("TGAFSCBTN").style.display = "inline-block";
-  showVM();
-  authforOSB();
-  var VMREASON = "Called CH to get auth for shipping.\r";
-  localStorage.setItem("VMREASON",VMREASON);
-}
-
-function TGAFB() {
-  changeVMpos();
-  document.getElementById("TGAFOSABTN").style.display = "inline-block";
-  document.getElementById("TGAFOSDSBTN").style.display = "inline-block";
-  document.getElementById("TGAFOSDBBTN").style.display = "inline-block";
-  document.getElementById("TGAFOSCBTN").style.display = "inline-block";
-  showVM();
-  authforOSB();
-  var VMREASON = "Called CH to get auth for OOPC and shipping.\r";
-  localStorage.setItem("VMREASON",VMREASON);
-}
-
-function TGAFOA(btnID) {
-  var Check = localStorage.getItem(btnID + "EDIT");
-  showSnip();
-  if (Check == null) {
-    document.getElementById("Snippings").value = "Called CH to get auth for OOPC.\rCH approved OOPC.\rWill call RF to give auth info\r";
-  } else {
-    document.getElementById("Snippings").value = Check;
-  }
-  document.getElementById("EDITarea").value = document.getElementById("Snippings").value;
-  COPYIt();
-  OOPADCB();
-  authforOSB();
-  hideVM();
-}
-
-function TGAFOD(btnID) {
-  var Check = localStorage.getItem(btnID + "EDIT");
-  showSnip();
-  if (Check == null) {
-    document.getElementById("Snippings").value = "Called CH to get auth for OOPC.\rCH declined repairs at this time.\r";
-  } else {
-    document.getElementById("Snippings").value = Check;
-  }
-  document.getElementById("EDITarea").value = document.getElementById("Snippings").value;
-  COPYIt();
-  OOPADCB();
-  authforOSB();
-  hideVM();
-}
-
-function TGAFOC(btnID) {
-  var Check = localStorage.getItem(btnID + "EDIT");
-  showSnip();
-  if (Check == null) {
-    document.getElementById("Snippings").value = "Called CH to get auth for OOPC.\rCH will call back with decision.\r";
-  } else {
-    document.getElementById("Snippings").value = Check;
-  }
-  document.getElementById("EDITarea").value = document.getElementById("Snippings").value;
-  COPYIt();
-  OOPADCB();
-  authforOSB();
-  hideVM();
-}
-
-function TGAFSA(btnID) {
-  var Check = localStorage.getItem(btnID + "EDIT");
-  showSnip();
-  if (Check == null) {
-    document.getElementById("Snippings").value = "Called CH to get auth for shipping.\rCH approved shipping.\rWill call RF to inform and order part\r";
-  } else {
-    document.getElementById("Snippings").value = Check;
-  }
-  document.getElementById("EDITarea").value = document.getElementById("Snippings").value;
-  COPYIt();
-  shipADCB();
-  hideVM();
-}
-
-function TGAFSD(btnID) {
-  var Check = localStorage.getItem(btnID + "EDIT");
-  showSnip();
-  if (Check == null) {
-    document.getElementById("Snippings").value = "Called CH to get auth for shipping.\rCH declined shipping and will use RF parts.\rCH has agreed to the OOPC.\rWill call RF to inform and give auth";
-  } else {
-  document.getElementById("Snippings").value = Check;
-  }
-  document.getElementById("EDITarea").value = document.getElementById("Snippings").value;
-  COPYIt();
-  shipADCB();
-  hideVM();
-}
-
-function TGAFSC(btnID) {
-  var Check = localStorage.getItem(btnID + "EDIT");
-  showSnip();
-  if (Check == null) {
-    document.getElementById("Snippings").value = "Called CH to get auth for shipping.\rCH will call back with decision\r";
-  } else {
-    document.getElementById("Snippings").value = Check;
-  }
-  document.getElementById("EDITarea").value = document.getElementById("Snippings").value;
-  COPYIt();
-  shipADCB();
-  hideVM();
-}
-
-function TGAFOSA(btnID) {
-  var Check = localStorage.getItem(btnID + "EDIT");
-  showSnip();
-  if (Check == null) {
-    document.getElementById("Snippings").value = "Called CH to get auth for OOPC and shipping.\rCH approved OOPC and shipping.\rWill call RF to inform and order parts.\r";
-  } else {
-    document.getElementById("Snippings").value = Check;
-  }
-  document.getElementById("EDITarea").value = document.getElementById("Snippings").value;
-  COPYIt();
-  bothADDCB();
-  hideVM();
-  setVMpos();
-}
-
-function TGAFOSDS(btnID) {
-  var Check = localStorage.getItem(btnID + "EDIT");
-  showSnip();
-  if (Check == null) {
-    document.getElementById("Snippings").value = "Called CH to get auth for OOPC and shipping.\rCH declined shipping and will use RF parts.\rCH has agreed to the OOPC.\rWill call RF to inform and give auth";
-  } else {
-    document.getElementById("Snippings").value = Check;
-  }
-  document.getElementById("EDITarea").value = document.getElementById("Snippings").value;
-  COPYIt();
-  bothADDCB();
-  hideVM();
-  setVMpos();
-}
-
-function TGAFOSDB(btnID) {
-  var Check = localStorage.getItem(btnID + "EDIT");
-  showSnip();
-  if (Check == null) {
-    document.getElementById("Snippings").value = "Called CH to get auth for OOPC and shipping.\rCH declined repairs at  this time.\r";
-  } else {
-    document.getElementById("Snippings").value = Check;
-  }
-  document.getElementById("EDITarea").value = document.getElementById("Snippings").value;
-  COPYIt();
-  bothADDCB();
-  hideVM();
-  setVMpos();
-}
-
-function TGAFOSC(btnID) {
-  var Check = localStorage.getItem(btnID + "EDIT");
-  showSnip();
-  if (Check == null) {
-    document.getElementById("Snippings").value = "Called CH to get auth for OOPC and shipping.\rCH will call back with decision.\r";
-  } else {
-    document.getElementById("Snippings").value = Check;
-  }
-  document.getElementById("EDITarea").value = document.getElementById("Snippings").value;
-  COPYIt();
-  bothADDCB();
-  hideVM();
-  setVMpos();
-}
-
 function RFIB() {
   if (checkOpen()) { return; }
-  ClearText();
-  hideSnip();
-  document.getElementById("RFIBDH").style.display = "inline-block";
-  document.getElementById("PNLCBTN").style.display = "inline-block";
-  document.getElementById("TOTALBTN").style.display = "inline-block";
-  document.getElementById("RFAUTHBTN").style.display = "inline-block";
+  setElementValue(["Snippings"], "");
+  setButtonDisplay(["Snippings"], "none");
+  setButtonDisplay(["RFIBDH", "PNLCBTN", "TOTALBTN", "RFAUTHBTN"], "inline-block");
 }
 
-
 function RFIBDH(){
-  document.getElementById("RFIBND").style.display = "inline-block";
-  document.getElementById("RFIBNE").style.display = "inline-block";
-  document.getElementById("RFIBNF").style.display = "inline-block";
-  document.getElementById("RFIBNV").style.display = "inline-block";
-  rfbaseFour();
+  setButtonDisplay(["RFIBND", "RFIBNE", "RFIBNF", "RFIBNV"], "inline-block");
+  setButtonDisplay(["RFIBDH", "PNLCBTN", "TOTALBTN", "RFAUTHBTN"], "none");
 }
 
 function RFIBND(btnID) {
-  var Check = localStorage.getItem(btnID + "EDIT");
-  showSnip();
-  if (Check === null) {
-    document.getElementById("Snippings").value = "RF called in to start a claim.\rRF doesn't have a complete diagnostic\rADV RF of requirements to open claim\rRF understood and will call back when diag is complete\r";
-  } else {
-    document.getElementById("Snippings").value = Check;
-  }
-  document.getElementById("EDITarea").value = document.getElementById("Snippings").value;
-  COPYIt();
-  didntHave();
+  var defaultText = "A Repair Facility called in to start a claim.\rThe Repair Facility doesn't have a complete diagnostic.\rI advised the Repair Facility of the requirements to open a claim\rThe Repair Facility understood and will call back when the diagnostic is complete.\r";
+  commonFunctionality(btnID, defaultText);
+  setButtonDisplay(["RFIBND", "RFIBNE", "RFIBNF", "RFIBNV"], "none");
 }
 
 function RFIBNE(btnID) {
-  var Check = localStorage.getItem(btnID + "EDIT");
-  showSnip();
-  if (Check == null) {
-    document.getElementById("Snippings").value = "RF called in to start a claim.\rRF doesn't have estimate ready\rADV RF of requirements to open claim\rRF understood and will call back with estimate\r";
-  } else {
-    document.getElementById("Snippings").value = Check;
-  }
-  document.getElementById("EDITarea").value = document.getElementById("Snippings").value;
-  COPYIt();
-  didntHave();
+  var defaultText = "A Repair Facility called in to start a claim.\rThe Repair Facility doesn't have an estimate ready.\rI advised the Repair Facility of the requirements to open a claim\rThe Repair Facility understood and will call back with an estimate.\r";
+  commonFunctionality(btnID, defaultText);
+  setButtonDisplay(["RFIBND", "RFIBNE", "RFIBNF", "RFIBNV"], "none");
 }
 
 function RFIBNF(btnID) {
-  var Check = localStorage.getItem(btnID + "EDIT");
-  showSnip();
-  if (Check == null) {
-    document.getElementById("Snippings").value = "RF called in to start a claim.\rRF doesn't have verified cause of failure\rADV RF of requirements to open claim\rRF understood and will call back when ready\r";
-  } else {
-    document.getElementById("Snippings").value = Check;
-  }
-  document.getElementById("EDITarea").value = document.getElementById("Snippings").value;
-  COPYIt();
-  didntHave();
+  var defaultText = "A Repair Facility called in to start a claim.\rThe Repair Facility doesn't have a verified cause of failure.\rI advised the Repair Facility of the requirements to a open claim\rThe Repair Facility understood and will call back when they are ready.\r";
+  commonFunctionality(btnID, defaultText);
+  setButtonDisplay(["RFIBND", "RFIBNE", "RFIBNF", "RFIBNV"], "none");
 }
 
 function RFIBNV(btnID) {
-  var Check = localStorage.getItem(btnID + "EDIT");
-  showSnip();
-  if (Check == null) {
-    document.getElementById("Snippings").value = "RF called in to start a claim.\rCH vehicle is not at RF\rADV RF of requirements to open claim\rRF understood and will call back when vehicle has returned\r";
-  } else {
-    document.getElementById("Snippings").value = Check;
-  }
-  document.getElementById("EDITarea").value = document.getElementById("Snippings").value;
-  COPYIt();
-  didntHave();
+  var defaultText = "A Repair Facility called in to start a claim.\rThe Contract Holder's vehicle is not at Repair Facility.\rI advised the Repair Facility of the requirements to open a claim\rThe Repair Facility understood and will call back when the vehicle has returned.\r";
+  commonFunctionality(btnID, defaultText);
+  setButtonDisplay(["RFIBND", "RFIBNE", "RFIBNF", "RFIBNV"], "none");
 }
 
 function PNLC(btnID) {
-  var Check = localStorage.getItem(btnID + "EDIT");
-  showSnip();
-  document.getElementById("Snippings").style.visibility = "visible";
-  if (Check == null) {
-    document.getElementById("Snippings").value = "RF called in with the following concerns:\r\rADV PNLC";
-  } else {
-    document.getElementById("Snippings").value = Check;
-  }
-  document.getElementById("EDITarea").value = document.getElementById("Snippings").value;
-  rfbaseFour();
+  var defaultText = "A Repair Facility called in with the following concerns:\r\rI advised the Repair Faility the parts were not listed for coverage - PNLC\rI will call the Contract Holder to inform of coverage.";
+  commonFunctionality(btnID, defaultText);
+  setButtonDisplay(["RFIBDH", "PNLCBTN", "TOTALBTN", "RFAUTHBTN"], "none");
 }
 
 function TOTAL(btnID) {
-  var Check = localStorage.getItem(btnID + "EDIT");
-  showSnip();
-  if (Check == null) {
-    document.getElementById("Snippings").value = "RF called in to go over totals.\rADV RF of totals. RF understood.";
-  } else {
-    document.getElementById("Snippings").value = Check;
-  }
-  document.getElementById("EDITarea").value = document.getElementById("Snippings").value;
-  COPYIt();
-  rfbaseFour();
+  var defaultText = "A Repair Facility called in to go over totals.\rI advised the Repair Facility of totals.\rThe Repair Facility understood.";
+  commonFunctionality(btnID, defaultText);
+  setButtonDisplay(["RFIBDH", "PNLCBTN", "TOTALBTN", "RFAUTHBTN"], "none");
 }
 
 function GAR(btnID) {
-  var Check = localStorage.getItem(btnID + "EDIT");
-  showSnip();
-  if (Check == null) {
-    document.getElementById("Snippings").value = "RF called in to get auth info.\rVerified OOPC was authed via notes.\rGave RF auth and payment details.";
-  } else {
-    document.getElementById("Snippings").value = Check;
-  }
-  document.getElementById("EDITarea").value = document.getElementById("Snippings").value;
-  COPYIt();
-  rfbaseFour();
+  var defaultText = "A Repair Facility called in to get authorization info.\rI verified the Contract Holder has authorized the OOPC via the notes.\rI gave the Repair Facility authorization and payment details.";
+  commonFunctionality(btnID, defaultText);
+  setButtonDisplay(["RFIBDH", "PNLCBTN", "TOTALBTN", "RFAUTHBTN"], "none");
 }
 
 function NAV() {
-  showSnip();
-  document.getElementById("Snippings").value = localStorage.getItem("VMREASON");
-  document.getElementById("Snippings").value += "No answer - Left voicemail\rTasked to CS callbacks\r";
-  COPYIt();
-  OOPADCB();
-  authforOSB();
-  shipADCB();
-  bothADDCB();
-  hideVM();
+  setButtonDisplay(["Snippings"], "inline-block");
+  setElementValue(["Snippings"], localStorage.getItem("VMREASON") + "There was no answer.\rI left a voicemail and tasked Customer Service to callback.\r");
+  copyText();
+  auth_Close();
   setVMpos();
 }
 
 function NAN() {
-  showSnip();
-  document.getElementById("Snippings").value = localStorage.getItem("VMREASON");
-  document.getElementById("Snippings").value += "No answer - No voicemail available\rTasked to CS callbacks\r";
-  COPYIt();
-  OOPADCB();
-  authforOSB();
-  shipADCB();
-  bothADDCB();
-  hideVM();
+  setButtonDisplay(["Snippings"], "inline-block");
+  setElementValue(["Snippings"], localStorage.getItem("VMREASON") + "There was no answer.\r There was no voicemail available\rI have tasked Customer Service to callback.\r");
+  copyText();
+  auth_Close();
   setVMpos();
 }
 
 function RESETNOTE() {
-  document.getElementById("RFIBBTN").style.display = "inline-block";
-  document.getElementById("TGAFBTN").style.display = "inline-block";
-  rfbaseFour();
-  didntHave();
-  authforOSB();
-  OOPADCB();
-  shipADCB();
-  bothADDCB();
-  hideSnip();
-  hideVM();
+  setButtonDisplay(["RFIBBTN", "TGAFBTN"], "inline-block");
+  setButtonDisplay(["RFIBDH", "PNLCBTN", "TOTALBTN", "RFAUTHBTN", "RFIBND", "RFIBNE", "RFIBNF", "RFIBNV", "Snippings"], "none");
+  auth_Close();
   localStorage.removeItem("VMREASON");
-  ClearText();
+  setElementValue(["Snippings"], "");
   setVMpos();
 }
 
-function showSnip() {
-  document.getElementById("Snippings").style.display = "inline-block";
-}
-
-function hideSnip() {
-  document.getElementById("Snippings").style.display = "none";
+function auth_Close() {
+  setButtonDisplay( [
+  "TGAFOBTN",
+  "TGAFSBTN",
+  "TGAFBBTN",
+  "TGAFOABTN",
+  "TGAFODBTN",
+  "TGAFOCBTN",
+  "TGAFSABTN",
+  "TGAFSDBTN",
+  "TGAFSCBTN",
+  "TGAFOSABTN",
+  "TGAFOSDSBTN",
+  "TGAFOSDBBTN",
+  "TGAFOSCBTN",
+  "NALVM", 
+  "NANVM"],
+  "none");
 }
 
 function customMenu(sentID, event) {
@@ -1100,29 +876,50 @@ document.onkeyup = function(e) {
   }
 };
 
+
+function RESET() {
+  localStorage.setItem("newpartcount","2");
+  document.getElementById("textarea1").value = "CONTACT:   \rPAYMENT:   \rZIPCODE:   \rMILEAGE:   \rDISTANCE:   \rTIME:   ";
+  setElementValue(["partname1","partname2","partname3","partname4", "partname5", "partname6", "partname7", "partnum", "rfprice", "msrp", "textarea2", "textarea3"], "");
+  setButtonDisplay(["partname2", "partname3", "partname4", "partname5", "partname6", "partname7", "transferTemplate", "statNote", "newAuthstyle", "TPDiv"], "none");
+  RESETNOTE();
+  cancelState();
+  cancelStat();
+  cancelNewauth();
+  cancelPT();
+}
+
+
 document.addEventListener('keydown', function(e) {
   if (e.key === 'Escape' || e.key === 'Esc') {
     whiteRabbit();
   }
 });
 
-function anotherView() {
-  var hlc = document.getElementById('hlc');
-  var ITSBRITTNEY = document.getElementById('ITSBRITTNEY');
-
-  var allBut = document.getElementById('allBut');
-  var snipbox2 = document.getElementById('snipbox2');
-  var textarea = document.getElementById('textarea2');
-  var NUMBERS2 = document.getElementById('NUMBERS2');
-
-  if (ITSBRITTNEY.style.display == 'inline-block') {
-    ITSBRITTNEY.style.display = "none";
-    textarea.style.display = "none";
-
-  } else {
-
-    hlc.style.display = "inline-block";
-    ITSBRITTNEY.style.display = "inline-block";
-    textarea.style.display = "inline-block";
+function whiteRabbit() {
+  closeResource2();
+  closeResource();
+  setZero();
+  openScript('close');
+  cancelState();
+  cancelNewauth();
+  cancelPT();
+  closeNav();
+  closeSOP();
+  closePDFmenu();
+  setButtonDisplay( [ 
+    "transferTemplate", "statNote", "newAuthstyle", "TPDiv", "toggleMaster",
+     "infoDiv1", "infoDiv2", "div6", "resrcDiv", "diagDiv", "laborscriptDiv" ], "none");
+  const editMenus = document.getElementsByClassName("CMeditDIV");
+  for(i = 0; i < editMenus.length; i++) {
+    var tempId = editMenus[i].id;
+    document.getElementById(tempId).style.display = "none";
   }
+  RESETNOTE();
 }
+
+function partyMode() {
+
+
+}
+
