@@ -1,5 +1,21 @@
 README
 
+Adjuster Console Version 2.7.5
+Update:
+Minor Change:
+ The Labor Script has an instructions button.
+  Click to open, click again to close.
+ The Labor Script exit button was moved to the bottom right corner.
+ The General Notes will auto-close after 5 seconds once the note displays.
+  The note is still copied and ready to paste, you just no longer have to manually reset it.
+ The Authorization note will no longer display in the lower text area.
+  The note is still copied and ready to paste, it just doesn't display.
+ Rearranged the order of the Side Menu to put the items used the most toward the top and lesser used tools further down.
+Bug Fixes:
+ Modified shadows and colors on Neumorphic to interfere less in close proximity.
+ Fixed spelling, punctuation, and grammar.
+ Cleaned up and made the output of notes more readable.
+
 Adjuster Console Version 2.2.2
 Update:
 Minor Change:
