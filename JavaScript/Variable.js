@@ -268,20 +268,20 @@ function auth_Close() {
   "none");
 }
 
-function customMenu(sentID, event) {
+//function customMenu(sentID, event) {
 //  event.preventDefault();
 //  var menuNode = document.querySelectorAll(".CMeditDIV");
 //  var menuList = Array.from(menuNode);
 //  for (i = 0; i < menuList.length; i++) {
-//    if (menuList[i].style.display != "none") {
-//      console.log("issue");
-      return;
+//  if (menuList[i].style.display != "none") {
+//    console.log("issue");
+//   return;
 //   }
 //  }
 //  toggleMenuOn();
 //  positionMenu(event);
 //  localStorage.setItem("lastCalled", sentID);
-}
+//}
 
 function toggleMenuOn() {
   var menuState = parseInt(localStorage.getItem("menuState"));
@@ -715,9 +715,9 @@ function infoCancel2() {
 }
 
 function showCustom() {
-//  var infoDiv1 = document.getElementById("infoDiv1");
-//  infoDiv1.style.display = "inline-block";
-alert("This function has been disabled");
+  var infoDiv1 = document.getElementById("infoDiv1");
+  infoDiv1.style.display = "inline-block";
+//alert("This function has been disabled");
 }
 
 function infoDone() {
@@ -918,8 +918,4 @@ function whiteRabbit() {
   RESETNOTE();
 }
 
-function partyMode() {
-
-
-}
 
