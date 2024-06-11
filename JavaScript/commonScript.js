@@ -16,7 +16,7 @@
 
 
 function openInfo2(evt, cityName) {
-  var i, diagcontent, tablinks2;
+  let i, diagcontent, tablinks2;
   diagcontent = document.getElementsByClassName("diagcontent");
   for (i = 0; i < diagcontent.length; i++) {
     diagcontent[i].style.display = "none";
@@ -30,7 +30,7 @@ function openInfo2(evt, cityName) {
 }
 
 function closeResource2() {
-  var i, diagcontent, tablinks2;
+  let i, diagcontent, tablinks2;
   diagcontent = document.getElementsByClassName("diagcontent");
   for (i = 0; i < diagcontent.length; i++) {
     diagcontent[i].style.display = "none";
@@ -43,12 +43,12 @@ function closeResource2() {
 }
 
 function diagCenter() {
-  var diagDiv = document.getElementById("diagDiv");
+  let diagDiv = document.getElementById("diagDiv");
   if (diagDiv.style.display == "none" && !checkOpen()) {
     diagDiv.style.display = "block";
-    var widthpre = parseInt(window.getComputedStyle(diagDiv).width);
-    var width1 = (widthpre / 4);
-    var width = width1.toString() + "px";
+    let widthpre = parseInt(window.getComputedStyle(diagDiv).width);
+    let width1 = (widthpre / 4);
+    let width = width1.toString() + "px";
     document.documentElement.style.setProperty('--div-width2', width);
   } else {
     diagDiv.style.display = "none";
@@ -56,13 +56,13 @@ function diagCenter() {
 }
 
 function magnify(image) {
-  var lastImageId = localStorage.getItem("lastImageId");
+  let lastImageId = localStorage.getItem("lastImageId");
   if (image == 'back') {
     document.getElementById(lastImageId).style.display = "none";
     document.getElementById('theDepot').style.display = "none";
     localStorage.removeItem("lastImageId");
   } else {
-    var imageId = image + "Depot";
+    let imageId = image + "Depot";
     localStorage.setItem("lastImageId", imageId);
     document.getElementById(imageId).style.display = "block";
     document.getElementById('theDepot').style.display = "inline-block";
@@ -70,9 +70,8 @@ function magnify(image) {
 }
 
 function diagAction(action) {
-  let textarea = document.getElementById("textarea4");
-  textarea.value = "";
-  var diagcontent, whichDivId, whichIptclass, textAreaid, notetextArea, i, tableTHs, tableTDs, table;
+  let textarea = "";
+  let diagcontent, whichDivId, whichIptclass, textAreaid, notetextArea, i, tableTHs, tableTDs, table;
   diagcontent = document.getElementsByClassName("diagcontent");
   for (i = 0; i < diagcontent.length; i++) {
     if (diagcontent[i].style.display === "block") {
@@ -89,7 +88,7 @@ function diagAction(action) {
       tableTDs[i].innerText = "";
     }
     if (action == 'copy') {
-      textarea.value += tableTHs[i].innerText + ": " + tableTDs[i].innerText + "\r";
+      textarea += tableTHs[i].innerText + ": " + tableTDs[i].innerText + "\r";
     }
   }
   textAreaid = whichDivId + "TA";
@@ -98,16 +97,15 @@ function diagAction(action) {
     notetextArea.value = "";
   }
   if (action == 'copy') {
-    textarea.value += "\rNotes:\r" + notetextArea.value;
-    textarea.select();
-    document.execCommand("copy");
+    textarea += "\rNotes:\r" + notetextArea.value;
+    copy(textarea);
   }
 }
 
 //                                                                      RESOURCE DIV
 
 function openInfo(evt, cityName) {
-  var i, tabcontent, tablinks;
+  let i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");
   for (i = 0; i < tabcontent.length; i++) {
     tabcontent[i].style.display = "none";
@@ -119,8 +117,8 @@ function openInfo(evt, cityName) {
   document.getElementById(cityName).style.display = "block";
   evt.currentTarget.className += " active";
   setDate();
-    for (var i = 0; i < 6; i++) {
-      var elemId = "rec" + i;
+    for (let i = 0; i < 6; i++) {
+      let elemId = "rec" + i;
       localStorage.removeItem(elemId + "Note");
       document.getElementById(elemId + "Notebin").innerText = "";
     }
@@ -131,8 +129,8 @@ function openInfo(evt, cityName) {
 }
 
 function closeResource() {
-  var i, tabcontent, tablinks;
-  var noteOpen = localStorage.getItem("noteOpen");
+  let i, tabcontent, tablinks;
+  let noteOpen = localStorage.getItem("noteOpen");
   if (noteOpen != "false") {
     closeonFly();
   }
@@ -151,16 +149,16 @@ function closeResource() {
 }
 
 function resrcCenter(x,y) {
-  var w = parseInt(x);
-  var resrcDiv = document.getElementById("resrcDiv");
+  let w = parseInt(x);
+  let resrcDiv = document.getElementById("resrcDiv");
   if (resrcDiv.style.display == "none" && !checkOpen()) {
     resrcDiv.style.display = "inline-block";
     if (y == 'p') { document.getElementById("policyDiv").classList.remove("hide"); }
     if (y == 't') { document.getElementById("toolsDiv").classList.remove("hide"); }
     document.getElementById('trackerMsg').innerText = "";
-    var widthpre = parseInt(window.getComputedStyle(resrcDiv).width);
-    var width1 = (widthpre / w);
-    var width = width1.toString() + "px";
+    let widthpre = parseInt(window.getComputedStyle(resrcDiv).width);
+    let width1 = (widthpre / w);
+    let width = width1.toString() + "px";
     document.documentElement.style.setProperty('--div-width', width);
     return;
   }
@@ -184,13 +182,13 @@ function Record() {
 }
 
 function setDate() {
-  var date = new Date();
-  var day = date.getDate();
-  var month = date.getMonth() + 1;
-  var year = date.getFullYear();
+  let date = new Date();
+  let day = date.getDate();
+  let month = date.getMonth() + 1;
+  let year = date.getFullYear();
   if (month < 10) month = "0" + month;
   if (day < 10) day = "0" + day;
-  var today = year + "-" + month + "-" + day;
+  let today = year + "-" + month + "-" + day;
   document.getElementById("serDate").value = today;
 
 //  document.getElementById("incDate").value = today;
@@ -206,31 +204,31 @@ function setDate() {
 }
 
 function convertToDate(str) {
-  var dateArr = str.split("-");
+  let dateArr = str.split("-");
   return new Date(dateArr[0], dateArr[1], dateArr[2]);
 }
 
 function dayCalc(inceptDate, recordDate) {
-  var incDate = convertToDate(inceptDate);
-  var recDate = convertToDate(recordDate);
+  let incDate = convertToDate(inceptDate);
+  let recDate = convertToDate(recordDate);
   return Math.round((recDate.getTime() - incDate.getTime()) / 86400000);
 }
 
 function addLine() {
   document.getElementById('trackerMsg').innerText = "";
   document.getElementById('trackerMini').innerText = "";
-  var addLineCount = localStorage.getItem("addLineCount");
-  var lineNum = parseInt(addLineCount) + 1;
+  let addLineCount = localStorage.getItem("addLineCount");
+  let lineNum = parseInt(addLineCount) + 1;
   if (lineNum < 6) {
-    var nextId = "recTab" + lineNum.toString();
+    let nextId = "recTab" + lineNum.toString();
     document.getElementById(nextId).style.visibility = "visible";
     localStorage.setItem("addLineCount", lineNum);
   } else { return; }
 }
 
 function isitOlder(isOlder, thanThis) {
-  var isOlder1 = convertToDate(isOlder);
-  var thanThis1 = convertToDate(thanThis);
+  let isOlder1 = convertToDate(isOlder);
+  let thanThis1 = convertToDate(thanThis);
   if (isOlder1.getTime() > thanThis1.getTime()) {
     return true;
   } else {
@@ -257,18 +255,18 @@ function isitWP(record) {
 }
 
 function hideTable() {
-  var tableDiv = document.getElementById('tableDiv');
+  let tableDiv = document.getElementById('tableDiv');
   tableDiv.style.opacity = "0";
 }
 
 function showTable() {
-  var tableDiv = document.getElementById('tableDiv');
+  let tableDiv = document.getElementById('tableDiv');
   tableDiv.style.opacity = "1";
 }
 
 function saveAll() {
-  var noteOpen = localStorage.getItem("noteOpen");
-  var addLineCount = localStorage.getItem("addLineCount");
+  let noteOpen = localStorage.getItem("noteOpen");
+  let addLineCount = localStorage.getItem("addLineCount");
   if (noteOpen != "false") {
     closeonFly();
   }
@@ -276,24 +274,23 @@ function saveAll() {
   saveRecord('serR');
   saveRecord('rec0R');
   for (i = 0; i < addLineCount; i++) {
-    var recId = "rec" + i + "R";
-console.log(recId);
+    let recId = "rec" + i + "R";
     saveRecord(recId);
   }
 }
 
 function saveRecord(elemId) {
-  var noteOpen = localStorage.getItem("noteOpen");
+  let noteOpen = localStorage.getItem("noteOpen");
   if (noteOpen != "false") {
     closeonFly();
   }
   document.getElementById('trackerMsg').innerText = "";
   document.getElementById('trackerMini').innerText = "";
-  var record = new Record();
-  var indexF = elemId.length - 1;
-  var newelemId = elemId.slice(0, indexF);
-  var checkMileage = document.getElementById(newelemId + "Mile").value;
-  var checkDate = document.getElementById(newelemId + "Date").value;
+  let record = new Record();
+  let indexF = elemId.length - 1;
+  let newelemId = elemId.slice(0, indexF);
+  let checkMileage = document.getElementById(newelemId + "Mile").value;
+  let checkDate = document.getElementById(newelemId + "Date").value;
   if (checkDate == null || checkMileage == "") {
     alert("Enter Date and Mileage of record to save.");
     return;
@@ -320,34 +317,34 @@ function saveRecord(elemId) {
     localStorage.setItem("InceptionDate", record.date);
   }
   if (newelemId != "inc") {
-    var inceptStr = localStorage.getItem("InceptionMiles");
+    let inceptStr = localStorage.getItem("InceptionMiles");
     if (inceptStr != null) {
-      var inceptMiles = parseInt(inceptStr);
-      var tempMil = record.mileage - inceptMiles;
+      let inceptMiles = parseInt(inceptStr);
+      let tempMil = record.mileage - inceptMiles;
       if (tempMil < 0) { tempMil = tempMil * -1; }
       record.milesfrom = tempMil;
-      var inceptDate = localStorage.getItem("InceptionDate");
+      let inceptDate = localStorage.getItem("InceptionDate");
       tempdayfr = dayCalc(inceptDate, record.date);
       if (tempdayfr < 0) { tempdayfr = tempdayfr * -1; record.isPrior = true;}
       record.daysfrom = tempdayfr;
       if (isitWP(record)) { record.waitperiod = true; }
     }
   }
-  var recordArr = [];
+  let recordArr = [];
   recordArr = JSON.parse(localStorage.getItem("recordArr"));
-  var objectArr = [];
+  let objectArr = [];
   objectArr = JSON.parse(localStorage.getItem("objectArr"));
-  var savedRecs = localStorage.getItem("savedRecs");
-  var recIndex = 0;
+  let savedRecs = localStorage.getItem("savedRecs");
+  let recIndex = 0;
   if (objectArr.length != null) {
-    var recIndex = objectArr.length;
+    let recIndex = objectArr.length;
   }
-  var recName = newelemId + "Rcrd";
+  let recName = newelemId + "Rcrd";
   if (!recordArr.includes(recName)) {
     if (!objectArr.includes("empty")) {
       objectArr.push(record);
     } else {
-      var indexA = objectArr.indexOf("empty");
+      let indexA = objectArr.indexOf("empty");
       objectArr.splice(indexA, 1, record);
       recIndex = indexA;
     }
@@ -355,10 +352,10 @@ function saveRecord(elemId) {
     localStorage.setItem(recName + "spot", recIndex);
     localStorage.setItem("objectArr", JSON.stringify(objectArr));
     localStorage.setItem("recordArr", JSON.stringify(recordArr));
-    var newCount = parseInt(savedRecs) + 1;
+    let newCount = parseInt(savedRecs) + 1;
     localStorage.setItem("savedRecs", newCount);
   } else {
-    var indexSaved = localStorage.getItem(recName + "spot");
+    let indexSaved = localStorage.getItem(recName + "spot");
     objectArr.splice(indexSaved, 1, record);
     localStorage.setItem("objectArr", JSON.stringify(objectArr));
   }
@@ -366,17 +363,17 @@ function saveRecord(elemId) {
 
 function otherCalcs() {
   const objectArr = JSON.parse(localStorage.getItem("objectArr"));
-  var inceptDate = localStorage.getItem("InceptionDate");
-  var inceptStr = localStorage.getItem("InceptionMiles");
+  let inceptDate = localStorage.getItem("InceptionDate");
+  let inceptStr = localStorage.getItem("InceptionMiles");
   if (inceptDate == null) {
     document.getElementById('trackerMsg').innerHTML += "Need Inception date to perform calculations.";
     return;
   }
   for (i = 0; i < objectArr.length; i++) {
-    var record = objectArr[i];
+    let record = objectArr[i];
     if (record.isInception == false && record.milesfrom == '0') {
-      var inceptMiles = parseInt(inceptStr);
-      var tempMil = record.mileage - inceptMiles;
+      let inceptMiles = parseInt(inceptStr);
+      let tempMil = record.mileage - inceptMiles;
       if (tempMil < 0) { tempMil = tempMil * -1; }
       record.milesfrom = tempMil;
       tempdayfr = dayCalc(inceptDate, record.date);
@@ -389,18 +386,18 @@ function otherCalcs() {
 }
 
 function delRecord(elemId) {
-  var noteOpen = localStorage.getItem("noteOpen");
+  let noteOpen = localStorage.getItem("noteOpen");
   if (noteOpen != "false") {
     closeonFly();
   }
   document.getElementById('trackerMsg').innerText = "";
   document.getElementById('trackerMini').innerText = "";
-  var temp = elemId.length - 1;
-  var newelemId = elemId.slice(0, temp);
+  let temp = elemId.length - 1;
+  let newelemId = elemId.slice(0, temp);
   const recordArr = JSON.parse(localStorage.getItem("recordArr"));
   const objectArr = JSON.parse(localStorage.getItem("objectArr"));
-  var recName = newelemId + "Rcrd";
-  var objectIndex = localStorage.getItem(recName + "spot");
+  let recName = newelemId + "Rcrd";
+  let objectIndex = localStorage.getItem(recName + "spot");
   if (recordArr.includes(recName)) {
     if (recName == "incRcrd") {
       localStorage.removeItem("InceptionMiles");
@@ -409,8 +406,8 @@ function delRecord(elemId) {
     localStorage.removeItem(newelemId + "Note");
     objectArr.splice(objectIndex, 1, "empty");
     localStorage.setItem("objectArr", JSON.stringify(objectArr));
-    var savedRecs = localStorage.getItem("savedRecs");
-    var newCount = parseInt(savedRecs) - 1;
+    let savedRecs = localStorage.getItem("savedRecs");
+    let newCount = parseInt(savedRecs) - 1;
     localStorage.setItem("savedRecs", newCount);
     localStorage.removeItem(recName);
     const index = recordArr.indexOf(recName);
@@ -453,19 +450,19 @@ function whichRep() {
 
 function comsoCompan(z) {
   otherCalcs();
-  var savedRecs = localStorage.getItem("savedRecs");
-  var recCount = parseInt(savedRecs);
+  let savedRecs = localStorage.getItem("savedRecs");
+  let recCount = parseInt(savedRecs);
   if (recCount < 3) {
     document.getElementById('trackerMsg').innerHTML += "Enter at least 3 records to continue.";
     return;
   }
   const objectArr = JSON.parse(localStorage.getItem("objectArr"));
   objectArr.sort(compare);
-  var looped = objectArr.length - 1;
+  let looped = objectArr.length - 1;
   for (i = 0; i < looped; i++) {
-    var x = i + 1;
-    var firDate = objectArr[i].date;
-    var secDate = objectArr[x].date;
+    let x = i + 1;
+    let firDate = objectArr[i].date;
+    let secDate = objectArr[x].date;
     if (isitOlder(firDate, secDate)) {
       objectArr[i].discrepancy = true;
       objectArr[x].discrepancy = true;
@@ -477,11 +474,11 @@ function comsoCompan(z) {
 }
 
 function closeonFly() {
-  var noteOpen = localStorage.getItem("noteOpen");
-  var elemId = noteOpen.slice(0, -7);
-  var noteID = elemId + "N";
-  var binElem = document.getElementById(noteOpen);
-  var noteText = binElem.innerText;
+  let noteOpen = localStorage.getItem("noteOpen");
+  let elemId = noteOpen.slice(0, -7);
+  let noteID = elemId + "N";
+  let binElem = document.getElementById(noteOpen);
+  let noteText = binElem.innerText;
   binElem.innerText = "";
   if (noteText != "") {
     localStorage.setItem(elemId + "Note", noteText);
@@ -494,16 +491,16 @@ function closeonFly() {
 }
 
 function showNote(noteID) {
-  var noteOpen = localStorage.getItem("noteOpen");
-  var temp = noteID.length - 1;
-  var elemId = noteID.slice(0, temp);
-  var noteDivID = noteID + "otebin";
-  var binElem = document.getElementById(noteDivID);
+  let noteOpen = localStorage.getItem("noteOpen");
+  let temp = noteID.length - 1;
+  let elemId = noteID.slice(0, temp);
+  let noteDivID = noteID + "otebin";
+  let binElem = document.getElementById(noteDivID);
   if (binElem.style.height == "0px") {
     if (noteOpen != "false") {
       closeonFly();
     }
-    var curNote = localStorage.getItem(elemId + "Note");
+    let curNote = localStorage.getItem(elemId + "Note");
     if (curNote != null) {
       binElem.innerText = curNote;
     }
@@ -514,7 +511,7 @@ function showNote(noteID) {
     noteListen();
   } else if (binElem.style.height != "0px") {
     document.getElementById('trackerMsg').innerHTML = "";
-    var noteText = binElem.innerText;
+    let noteText = binElem.innerText;
     binElem.innerText = "";
     if (noteText != "") {
       localStorage.setItem(elemId + "Note", noteText);
@@ -528,14 +525,14 @@ function showNote(noteID) {
 }
 
 function noteListen() {
-  var incNotebin = document.getElementById("incNotebin");
-  var serNotebin = document.getElementById("serNotebin");
-  var rec0Notebin = document.getElementById("rec0Notebin");
-  var rec1Notebin = document.getElementById("rec1Notebin");
-  var rec2Notebin = document.getElementById("rec2Notebin");
-  var rec3Notebin = document.getElementById("rec3Notebin");
-  var rec4Notebin = document.getElementById("rec4Notebin");
-  var rec5Notebin = document.getElementById("rec5Notebin");
+  let incNotebin = document.getElementById("incNotebin");
+  let serNotebin = document.getElementById("serNotebin");
+  let rec0Notebin = document.getElementById("rec0Notebin");
+  let rec1Notebin = document.getElementById("rec1Notebin");
+  let rec2Notebin = document.getElementById("rec2Notebin");
+  let rec3Notebin = document.getElementById("rec3Notebin");
+  let rec4Notebin = document.getElementById("rec4Notebin");
+  let rec5Notebin = document.getElementById("rec5Notebin");
 
   incNotebin.addEventListener("keydown", addListen);
   serNotebin.addEventListener("keydown", addListen);
@@ -548,14 +545,14 @@ function noteListen() {
 }
 
 function noteForget() {
-  var incNotebin = document.getElementById("incNotebin");
-  var serNotebin = document.getElementById("serNotebin");
-  var rec0Notebin = document.getElementById("rec0Notebin");
-  var rec1Notebin = document.getElementById("rec1Notebin");
-  var rec2Notebin = document.getElementById("rec2Notebin");
-  var rec3Notebin = document.getElementById("rec3Notebin");
-  var rec4Notebin = document.getElementById("rec4Notebin");
-  var rec5Notebin = document.getElementById("rec5Notebin");
+  let incNotebin = document.getElementById("incNotebin");
+  let serNotebin = document.getElementById("serNotebin");
+  let rec0Notebin = document.getElementById("rec0Notebin");
+  let rec1Notebin = document.getElementById("rec1Notebin");
+  let rec2Notebin = document.getElementById("rec2Notebin");
+  let rec3Notebin = document.getElementById("rec3Notebin");
+  let rec4Notebin = document.getElementById("rec4Notebin");
+  let rec5Notebin = document.getElementById("rec5Notebin");
 
   incNotebin.removeEventListener("keydown", addListen);
   serNotebin.removeEventListener("keydown", addListen);
@@ -605,15 +602,15 @@ function displayRecs(z) {
   for (i = 0; i < objectArr.length; i++) {
     const row = body.insertRow();
     row.classList.add('rowit');
-    var tempRec = objectArr[i];
-    var dateStr = tempRec.date;
-    var year = dateStr.substr(0,4);
-    var month = dateStr.substr(5,2);
-    var day = dateStr.substr(8,2);
-    var milesper;
-    var distance;
-    var overTime;
-    var outputDate = month + "-" + day + "-" + year;
+    let tempRec = objectArr[i];
+    let dateStr = tempRec.date;
+    let year = dateStr.substr(0,4);
+    let month = dateStr.substr(5,2);
+    let day = dateStr.substr(8,2);
+    let milesper;
+    let distance;
+    let overTime;
+    let outputDate = month + "-" + day + "-" + year;
     tempRec.date = outputDate;
     if (!tempRec.isInception) {
       distance = parseInt(tempRec.milesfrom);
@@ -668,12 +665,12 @@ function displayRecs(z) {
     if (z == '0' || z == '2' || z == '3') {
       displayOutput();
       if (hasMessage && !displayMessage) {
-        var currentAlert = document.getElementById('alertDiv').innerHTML;
+        let currentAlert = document.getElementById('alertDiv').innerHTML;
         displayMessage = true;
       }
     }
   }
-  var allCells = document.getElementsByTagName("td");
+  let allCells = document.getElementsByTagName("td");
   for (i = 0; i < allCells.length; i++) {
     if (allCells[i].innerText == "\u2714") {
       allCells[i].style.color = "green";
@@ -691,7 +688,7 @@ function priorMileage() {
   const objectArr = JSON.parse(localStorage.getItem("objectArr"));
   for (i = 0; i < objectArr.length; i++) {
     if(objectArr[i].isPrior) {
-      var x = i + 1;
+      let x = i + 1;
       table.rows[x].cells[2].style.color = "red";
       table.rows[x].cells[3].style.color = "red";
     }
@@ -705,41 +702,41 @@ function showMsg() {
 function inceptEst(spot) {
   document.getElementById('trackerMsg').innerHTML = "";
   document.getElementById('trackerMini').innerHTML = "";
-  var elemId = localStorage.getItem("IDforCor");
-  var recMileage1 = localStorage.getItem(elemId + "mileage");
-  var recDate = localStorage.getItem(elemId + "date");
-  var serMileage1 = localStorage.getItem("sermileage");
-  var serDate = localStorage.getItem("serdate");
-  var incMileage1 = localStorage.getItem("InceptionMiles");
-  var incDate = localStorage.getItem("InceptionDate");
+  let elemId = localStorage.getItem("IDforCor");
+  let recMileage1 = localStorage.getItem(elemId + "mileage");
+  let recDate = localStorage.getItem(elemId + "date");
+  let serMileage1 = localStorage.getItem("sermileage");
+  let serDate = localStorage.getItem("serdate");
+  let incMileage1 = localStorage.getItem("InceptionMiles");
+  let incDate = localStorage.getItem("InceptionDate");
   if (elemId == null || recMileage1 == null || recDate == null || serMileage1 == null || serDate == null || incMileage1 == null || incDate == null) {
     document.getElementById('trackerMsg').innerHTML += "Information is incomplete. Try Again";
     return;
   }
-  var recMileage = parseInt(recMileage1);
-  var serMileage = parseInt(serMileage1);
-  var incMileage = parseInt(incMileage1);
-  var daysBtwnRecs = dayCalc(recDate, serDate);
-  var milesBtwnRecs = serMileage - recMileage;
-  var milesperday = milesBtwnRecs / daysBtwnRecs;
-  var daysBtwnMaintSale = dayCalc(recDate, incDate);
-  var estimatedInception = (milesperday * daysBtwnMaintSale) + recMileage;
-  var milesIn = serMileage - estimatedInception;
-  var daysIn = dayCalc(incDate, serDate);
+  let recMileage = parseInt(recMileage1);
+  let serMileage = parseInt(serMileage1);
+  let incMileage = parseInt(incMileage1);
+  let daysBtwnRecs = dayCalc(recDate, serDate);
+  let milesBtwnRecs = serMileage - recMileage;
+  let milesperday = milesBtwnRecs / daysBtwnRecs;
+  let daysBtwnMaintSale = dayCalc(recDate, incDate);
+  let estimatedInception = (milesperday * daysBtwnMaintSale) + recMileage;
+  let milesIn = serMileage - estimatedInception;
+  let daysIn = dayCalc(incDate, serDate);
 
   if (spot == 'both') {
     displayOutput();
-    var msgDiv = document.getElementById('msgDiv');
+    let msgDiv = document.getElementById('msgDiv');
     msgDiv.style.opacity = 1;
     updateInnerHTML(msgDiv);
   } else if (spot == 'all') {
-    var splitR = document.getElementById('splitR');
+    let splitR = document.getElementById('splitR');
     document.getElementById('splitL').style.display = "inline-block";
     splitR.style.display = "inline-block";
     updateInnerHTML(splitR);
   } else {
-    var outputDiv2 = document.getElementById('outputDiv2');
-    var outputDiv3 = document.getElementById('outputDiv3');
+    let outputDiv2 = document.getElementById('outputDiv2');
+    let outputDiv3 = document.getElementById('outputDiv3');
     outputDiv2.classList.add("arise");
     outputDiv2.style.height = "700px";
     outputDiv3.style.opacity = 1;
@@ -757,10 +754,10 @@ function inceptEst(spot) {
 }
 
 function noteOutput(z) {
-  var msgDiv = document.getElementById('msgDiv');
-  var outputDiv3 = document.getElementById('outputDiv3');
-  var splitL = document.getElementById('splitL');
-  var whereOut;
+  let msgDiv = document.getElementById('msgDiv');
+  let outputDiv3 = document.getElementById('outputDiv3');
+  let splitL = document.getElementById('splitL');
+  let whereOut;
   if (z == '1') {
     whereOut = outputDiv3;
   } else if (z == '2') {
@@ -791,7 +788,7 @@ function noteOutput(z) {
     whereOut.style.opacity = '1';
   }
   if (z == '3') {
-    var msgDiv = document.getElementById('msgDiv');
+    let msgDiv = document.getElementById('msgDiv');
     document.getElementById('outputDiv').style.top = "25px";
     document.getElementById('outputDiv').style.left = "25px";
     document.getElementById('outputDiv').style.height = "90%";
@@ -803,8 +800,8 @@ function noteOutput(z) {
 }
 
 document.addEventListener('click', function(e) {
-  var msgDiv = document.getElementById('msgDiv');
-  var splitL = document.getElementById('splitL');
+  let msgDiv = document.getElementById('msgDiv');
+  let splitL = document.getElementById('splitL');
   if (msgDiv.contains(e.target) && splitL.style.opacity == '0') {
     splitL.style.opacity = '1';
   } else if (msgDiv.contains(e.target) && splitL.style.opacity == '1') {
@@ -814,7 +811,7 @@ document.addEventListener('click', function(e) {
 
 function displayOutput() {
   hideTable();
-  var outputDiv = document.getElementById('outputDiv');
+  let outputDiv = document.getElementById('outputDiv');
   outputDiv.classList.add("arise");
   outputDiv.style.height = "700px";
 }
@@ -827,7 +824,7 @@ function closeOutput() {
   document.getElementById('msgDiv').innerHTML = "";
   document.getElementById('alertDiv').innerHTML = "";
   document.getElementById('msgDiv').style.opacity = 0;
-  var outputDiv = document.getElementById('outputDiv');
+  let outputDiv = document.getElementById('outputDiv');
   outputDiv.classList.remove("arise");
   outputDiv.style.height = "0px";
   outputDiv.style.width = "800px";
@@ -839,7 +836,7 @@ function closeOutput() {
 function closeOutput2() {
   document.getElementById('msgDiv').innerHTML = "";
   document.getElementById('alertDiv').innerHTML = "";
-  var outputDiv2 = document.getElementById('outputDiv2');
+  let outputDiv2 = document.getElementById('outputDiv2');
   outputDiv3.innerHTML = "";
   outputDiv2.classList.remove("arise");
   outputDiv2.style.height = "0px";
@@ -856,11 +853,11 @@ function resetReport() {
   document.getElementById('whichA').checked = false;
   document.getElementById('whichB').checked = false;
   document.getElementById('whichC').checked = false;
-  var addLineCount = localStorage.getItem("addLineCount");
-  var LineCount = parseInt(addLineCount);
-  var inputElems = document.querySelectorAll(".tracker");
-  var elemArr = Array.from(inputElems);
-  for (var i = 0; i < elemArr.length; i++) {
+  let addLineCount = localStorage.getItem("addLineCount");
+  let LineCount = parseInt(addLineCount);
+  let inputElems = document.querySelectorAll(".tracker");
+  let elemArr = Array.from(inputElems);
+  for (let i = 0; i < elemArr.length; i++) {
     if(elemArr[i].value != null) {
       if(elemArr[i].checked) {
         elemArr[i].checked = false;
@@ -870,12 +867,12 @@ function resetReport() {
     }
   }
   for (; LineCount > 0; LineCount--) {
-    var rowId = "recTab" + LineCount;
+    let rowId = "recTab" + LineCount;
     document.getElementById(rowId).style.visibility = "hidden";
   }
   const recordArr = JSON.parse(localStorage.getItem("recordArr"));
-  for (var i = 0; i < recordArr.length; i++) {
-    var recName = recordArr[i];
+  for (let i = 0; i < recordArr.length; i++) {
+    let recName = recordArr[i];
     localStorage.removeItem(recName + "spot");
   }
   localStorage.removeItem("serdate");
@@ -885,8 +882,8 @@ function resetReport() {
   localStorage.removeItem("InceptionDate");
   localStorage.removeItem("incNote");
   localStorage.removeItem("serNote");
-  for (var i = 0; i < 6; i++) {
-    var elemId = "rec" + i;
+  for (let i = 0; i < 6; i++) {
+    let elemId = "rec" + i;
     localStorage.removeItem(elemId + "Note");
     document.getElementById(elemId + "Notebin").innerText = "";
   }
@@ -900,8 +897,8 @@ function resetReport() {
 //                                                                         AUTH GUIDE
 
 function goGuide(option,name) {
-  var usedBtn = document.getElementsByName(name);
-  for (var i = 0; i < usedBtn.length; i++) {
+  let usedBtn = document.getElementsByName(name);
+  for (let i = 0; i < usedBtn.length; i++) {
     usedBtn[i].disabled = true;
   }
   switch(option) {
@@ -923,7 +920,7 @@ function goGuide(option,name) {
     const pElem43 = document.createElement("p");
     pElem43.classList.add("bodyTab2");
     const textNode43 = document.createTextNode("Authorize MSRP. Contract Holder will have OOPC.");
-    var div = document.getElementById("authGuideOE");
+    let div = document.getElementById("authGuideOE");
     pElem43.appendChild(textNode43);
     div.appendChild(pElem43);
     break;
@@ -931,17 +928,17 @@ function goGuide(option,name) {
     const pElem8 = document.createElement("p");
     pElem8.classList.add("bodyTab2");
     const textNode8 = document.createTextNode("Ship part with permision from the Contract Holder.");
-    var div = document.getElementById("rfovrmsrp");
+    let div8 = document.getElementById("rfovrmsrp");
     pElem8.appendChild(textNode8);
-    div.appendChild(pElem8);
+    div8.appendChild(pElem8);
     break;
   case "rfundmsrp":
     const pElem9 = document.createElement("p");
     pElem9.classList.add("bodyTab2");
     const textNode9 = document.createTextNode("Authorize MSRP.");
-    var div = document.getElementById("authGuideOE");
+    let div9 = document.getElementById("authGuideOE");
     pElem9.appendChild(textNode9);
-    div.appendChild(pElem9);
+    div9.appendChild(pElem9);
     break;
   case "pricing":
     document.getElementById('authGuideAM').style.display = "none";
@@ -957,25 +954,25 @@ function goGuide(option,name) {
     const pElem1 = document.createElement("p");
     pElem1.classList.add("bodyTab2");
     const textNode1 = document.createTextNode("Authorize Repair Facility price as it's MCE");
-    var div = document.getElementById("listUnder");
+    let div10 = document.getElementById("listUnder");
     pElem1.appendChild(textNode1);
-    div.appendChild(pElem1);
+    div10.appendChild(pElem1);
     break;
   case "mayship":
     const pElem2 = document.createElement("p");
     pElem2.classList.add("bodyTab2");
     const textNode2 = document.createTextNode("Ship part with permision from the Contract Holder.");
-    var div = document.getElementById("rfovrlist");
+    let div11 = document.getElementById("rfovrlist");
     pElem2.appendChild(textNode2);
-    div.appendChild(pElem2);
+    div11.appendChild(pElem2);
     break;
   case "noship":
     const pElem3 = document.createElement("p");
     pElem3.classList.add("bodyTab2");
     const textNode3 = document.createTextNode("Authorize PA list price under $250.00 and the remaining balance will be OOPC.");
-    var div = document.getElementById("rfovrlist");
+    let div12 = document.getElementById("rfovrlist");
     pElem3.appendChild(textNode3);
-    div.appendChild(pElem3);
+    div12.appendChild(pElem3);
     break;
   case "listover":
     document.getElementById('listOver').style.display = "inline-block";
@@ -987,9 +984,9 @@ function goGuide(option,name) {
     const pElem4 = document.createElement("p");
     pElem4.classList.add("bodyTab2");
     const textNode4 = document.createTextNode("Authorize Repair Facility price as it's MCE");
-    var div = document.getElementById("costund");
+    let div13 = document.getElementById("costund");
     pElem4.appendChild(textNode4);
-    div.appendChild(pElem4);
+    div13.appendChild(pElem4);
     break;
   case "rfovrcost":
     document.getElementById('rfovrcost').style.display = "inline-block";
@@ -998,17 +995,17 @@ function goGuide(option,name) {
     const pElem5 = document.createElement("p");
     pElem5.classList.add("bodyTab2");
     const textNode5 = document.createTextNode("Ship part with permission from the Contract Holder.");
-    var div = document.getElementById("rfovrcost");
+    let div15 = document.getElementById("rfovrcost");
     pElem5.appendChild(textNode5);
-    div.appendChild(pElem5);
+    div15.appendChild(pElem5);
     break;
   case "noship2":
     const pElem6 = document.createElement("p");
     pElem6.classList.add("bodyTab2");
     const textNode6 = document.createTextNode("Authorize PA cost price under $250.00 and the remaining balance will be OOPC.")
-    var div = document.getElementById("rfovrcost");
+    let div16 = document.getElementById("rfovrcost");
     pElem6.appendChild(textNode6);
-    div.appendChild(pElem6);
+    div16.appendChild(pElem6);
     break;
   case "sourcing":
     document.getElementById('authGuide1').style.display = "none";
@@ -1022,14 +1019,14 @@ function goGuide(option,name) {
 //                                                                    MILEAGE DISCREP
 
 function mileDiscrep() {
-  var isTerm = document.getElementById('md1').checked;
-  var isM2m = document.getElementById('md2').checked;
-  var over90 = document.getElementById('md3').checked;
-  var under90 = document.getElementById('md4').checked;
-  var negMile = document.getElementById('md5').checked;
-  var inaccMile = document.getElementById('md6').checked;
-  var rollBack = document.getElementById('md7').checked;
-  var hasHmpd = document.getElementById('md8').checked;
+  let isTerm = document.getElementById('md1').checked;
+  let isM2m = document.getElementById('md2').checked;
+  let over90 = document.getElementById('md3').checked;
+  let under90 = document.getElementById('md4').checked;
+  let negMile = document.getElementById('md5').checked;
+  let inaccMile = document.getElementById('md6').checked;
+  let rollBack = document.getElementById('md7').checked;
+  let hasHmpd = document.getElementById('md8').checked;
   if (isTerm) {
     if (negMile || inaccMile || rollBack) {
       crReview();
@@ -1162,8 +1159,8 @@ function questOpen() {
 }
 
 function showAnswer(questID) {
-  var answerDivID = "ansto" + questID;
-  var answerDiv = document.getElementById(answerDivID);
+  let answerDivID = "ansto" + questID;
+  let answerDiv = document.getElementById(answerDivID);
   if (answerDiv.classList.contains('active')) {
     answerDiv.classList.remove('active');
     return;
@@ -1177,8 +1174,8 @@ function showAnswer(questID) {
 //                                                                       LABOR RATE SCRIPT
 
 function openScript() {
-  var laborscriptDiv = document.getElementById("laborscriptDiv");
-  var isOpen = checkOpen();
+  let laborscriptDiv = document.getElementById("laborscriptDiv");
+  let isOpen = checkOpen();
   if (laborscriptDiv.style.display == "none" && !isOpen) {
     laborscriptDiv.style.display = "block";
   } else {
@@ -1201,16 +1198,16 @@ function setZero() {
 }
 
 function scriptInfo() {
-  var askingstr = document.getElementById("asking").value;
-  var currentstr = document.getElementById("current").value;
-  var asking = parseInt(askingstr);
-  var current = parseInt(currentstr);
+  let askingstr = document.getElementById("asking").value;
+  let currentstr = document.getElementById("current").value;
+  let asking = parseInt(askingstr);
+  let current = parseInt(currentstr);
   if (current < 1) { current = asking; }
-  var radius = document.getElementById("radius").value;
-  var type = document.getElementById("type").value;
-  var quant = document.getElementById("quant").value;
-  var aveRate = document.getElementById("aveRate").value;
-  var custom = document.getElementById("custom").value;
+  let radius = document.getElementById("radius").value;
+  let type = document.getElementById("type").value;
+  let quant = document.getElementById("quant").value;
+  let aveRate = document.getElementById("aveRate").value;
+  let custom = document.getElementById("custom").value;
   localStorage.setItem("asking", asking);
   localStorage.setItem("radius", radius);
   localStorage.setItem("type", type);
@@ -1232,17 +1229,17 @@ function instructScript() {
 }
 
 function laborScript() {
-  var radius = document.getElementById("radius").value;
-  var type = document.getElementById("type").value;
-  var quant = document.getElementById("quant").value;
+  let radius = document.getElementById("radius").value;
+  let type = document.getElementById("type").value;
+  let quant = document.getElementById("quant").value;
   if (radius == "" || type == "" || quant == "") { return; }
-  var askingstr = document.getElementById("asking").value;
-  var aveRate = document.getElementById("aveRate").value;
-  var currentstr = document.getElementById("current").value;
-  var current = parseInt(currentstr);
-  var asking = parseInt(askingstr);
+  let askingstr = document.getElementById("asking").value;
+  let aveRate = document.getElementById("aveRate").value;
+  let currentstr = document.getElementById("current").value;
+  let current = parseInt(currentstr);
+  let asking = parseInt(askingstr);
   if (current < 1) { current = asking; }
-  var whatDo = laborReview(asking, current, aveRate);
+  let whatDo = laborReview(asking, current, aveRate);
   document.getElementById("myScript").style.display = "none";
   document.getElementById("responseDiv").style.display = "block";
   localStorage.setItem("weTried", "notYet");
@@ -1262,20 +1259,20 @@ function negotiateScript(x) {
     setZero();
     return;
   }
-  var askingElem = document.getElementById("asking");
-  var asking = sanitizeInput(document.getElementById("asking").value);
-  var aveRateElem = document.getElementById("aveRate");
-  var aveRate =  sanitizeInput(document.getElementById("aveRate").value);
-  var currentElem = document.getElementById("current");
-  var current =  sanitizeInput(document.getElementById("current").value);
-  var responseDiv_text = document.getElementById("responseDiv_text");
-  var responseDiv = document.getElementById("responseDiv");
+  let askingElem = document.getElementById("asking");
+  let asking = sanitizeInput(document.getElementById("asking").value);
+  let aveRateElem = document.getElementById("aveRate");
+  let aveRate =  sanitizeInput(document.getElementById("aveRate").value);
+  let currentElem = document.getElementById("current");
+  let current =  sanitizeInput(document.getElementById("current").value);
+  let responseDiv_text = document.getElementById("responseDiv_text");
+  let responseDiv = document.getElementById("responseDiv");
   document.getElementById("noScript").style.display = "initial";
   document.getElementById("yesScript").style.display = "initial";
-  var whatDo = laborReview(asking, current, aveRate);
-  var tryHarder = localStorage.getItem("weTried");
+  let whatDo = laborReview(asking, current, aveRate);
+  let tryHarder = localStorage.getItem("weTried");
   if (x == 'y') {
-    var agreed;
+    let agreed;
     if (tryHarder != "notYet") {
       agreed = tryHarder;
       buildLaborNote('halfway');
@@ -1290,8 +1287,8 @@ function negotiateScript(x) {
     return;
   }
   if (x == 'a') {
-    var customstr = document.getElementById("custom").value;
-    var custom = parseInt(customstr);
+    let customstr = document.getElementById("custom").value;
+    let custom = parseInt(customstr);
     if (custom < 1) { return; }
     responseDiv_text.innerHTML = "Your Response is:<br>Thank you. I have updated your repair facility profile and set the labor rate at $" + custom + ".";
     document.getElementById("noScript").style.display = "none";
@@ -1300,8 +1297,8 @@ function negotiateScript(x) {
     return;
   }
   if (x == 'n' &&  tryHarder == "notYet") {
-    var pleaseD = (parseInt(asking) + parseInt(aveRate)) / 2;
-    var please = pleaseD.toFixed(2);
+    let pleaseD = (parseInt(asking) + parseInt(aveRate)) / 2;
+    let please = pleaseD.toFixed(2);
     responseDiv_text.innerHTML =  "Your Response is:<br>Are you able to match us at $" + please + "?";
     localStorage.setItem("weTried", please);
     return;
@@ -1328,16 +1325,16 @@ function negotiateScript(x) {
 }
 
 function laborReview(askingStr, currentStr = 0, averageStr) {
-  var asking = parseInt(askingStr);
-  var current = parseInt(currentStr);
-  var average = parseInt(averageStr);
+  let asking = parseInt(askingStr);
+  let current = parseInt(currentStr);
+  let average = parseInt(averageStr);
   if (current == 0) {
     current = asking;
   }
-  var normal = "normal";
-  var alt = "alt";
-  var allow = "allow";
-  var diffInRate = asking - current;
+  let normal = "normal";
+  let alt = "alt";
+  let allow = "allow";
+  let diffInRate = asking - current;
   if (asking <= average) {
     return allow;
   } else if (asking <= current) {
@@ -1351,15 +1348,15 @@ function laborReview(askingStr, currentStr = 0, averageStr) {
 
 function buildLaborNote(result) {
   scriptInfo();
-  var textarea = document.getElementById("textarea5");
-  var please = localStorage.getItem("weTried");
-  var asking = localStorage.getItem("asking");
-  var radius = localStorage.getItem("radius");
-  var type = localStorage.getItem("type");
-  var quant = localStorage.getItem("quant");
-  var aveRate = localStorage.getItem("aveRate");
-  var current = localStorage.getItem("current");
-  var custom = localStorage.getItem("custom");
+  let textarea = document.getElementById("textarea5");
+  let please = localStorage.getItem("weTried");
+  let asking = localStorage.getItem("asking");
+  let radius = localStorage.getItem("radius");
+  let type = localStorage.getItem("type");
+  let quant = localStorage.getItem("quant");
+  let aveRate = localStorage.getItem("aveRate");
+  let current = localStorage.getItem("current");
+  let custom = localStorage.getItem("custom");
   textarea.value = "Search Parameters:\rRadius: " + radius + "\rFacility Type: " + type + "\rNumber of Facilities: " + quant + "\r\r";
   textarea.value += "Average Labor Rate: $" + aveRate;
   if (asking != current) {
@@ -1391,16 +1388,16 @@ function buildLaborNote(result) {
 }
 
 document.addEventListener('click', function(e) {
-  var swap1 = document.getElementById('swap1');
-  var mySidenav = document.getElementById('mySidenav');
+  let swap1 = document.getElementById('swap1');
+  let mySidenav = document.getElementById('mySidenav');
   if (!mySidenav.contains(e.target) && !swap1.contains(e.target)) {
     closeNav();
   }
 });
 
 document.addEventListener('click', function(e) {
-  var sopnav = document.getElementById('sopnav');
-  var navtag = document.getElementById('navtag');
+  let sopnav = document.getElementById('sopnav');
+  let navtag = document.getElementById('navtag');
   if (!navtag.contains(e.target) && !sopnav.contains(e.target)) {
     closePDFmenu();
   }
@@ -1469,7 +1466,8 @@ function showSOP(id) {
     "./SOP/Info/CMS_Emails.pdf",
     "./SOP/Info/Text_Notifications.pdf",
     "./SOP/Info/PT_First_Contact.pdf",
-    "./SOP/Info/State_Tax.pdf"
+    "./SOP/Info/State_Tax.pdf",
+    "./SOP/Info/Employee_Handbook.pdf"
         ];
   const index = parseInt(id.substring(3)) - 1;
   const src = sources[index];
