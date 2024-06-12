@@ -89,7 +89,7 @@ function TGAFOC(btnID) {
 }
 
 function TGAFSA(btnID) {
-  var defaultText = "I called the Contract Holder to get authorization for shipping.\rThe Contract Holder has approved shipping.\rI will call the Repair Facility to inform and order part";
+  var defaultText = "I called the Contract Holder to get authorization for shipping.\rThe Contract Holder has approved shipping.\rI will call the Repair Facility to inform and order part.";
   commonFunctionality(btnID, defaultText);
   common_hide();
 }
@@ -101,7 +101,7 @@ function TGAFSD(btnID) {
 }
 
 function TGAFSC(btnID) {
-  var defaultText = "I called the Contract Holder to get authorization for shipping.\rThe Contract Holder will call back with a decision\r";
+  var defaultText = "I called the Contract Holder to get authorization for shipping.\rThe Contract Holder will call back with a decision.\r";
   commonFunctionality(btnID, defaultText);
   common_hide();
 }
@@ -113,7 +113,7 @@ function TGAFOSA(btnID) {
 }
 
 function TGAFOSDS(btnID) {
-  var defaultText = "I called the Contract Holder to get authorization for the OOPC and shipping.\rThe Contract Holder has declined shipping and will use the Repair Facility parts.\rThe Contract Holder has agreed to the OOPC.\rI will call Repair Facility to inform and give authorization";
+  var defaultText = "I called the Contract Holder to get authorization for the OOPC and shipping.\rThe Contract Holder has declined shipping and will use the Repair Facility parts.\rThe Contract Holder has agreed to the OOPC.\rI will call Repair Facility to inform and give authorization.";
   commonFunctionality(btnID, defaultText);
   common_hide();
 }
@@ -182,31 +182,31 @@ function RFIBDH(){
 }
 
 function RFIBND(btnID) {
-  var defaultText = "A Repair Facility called in to start a claim.\rThe Repair Facility doesn't have a complete diagnostic.\rI advised the Repair Facility of the requirements to open a claim\rThe Repair Facility understood and will call back when the diagnostic is complete.\r";
+  var defaultText = "A Repair Facility called in to start a claim.\rThe Repair Facility doesn't have a complete diagnostic.\rI advised the Repair Facility of the requirements to open a claim.\rThe Repair Facility understood and will call back when the diagnostic is complete.\r";
   commonFunctionality(btnID, defaultText);
   setButtonDisplay(["RFIBND", "RFIBNE", "RFIBNF", "RFIBNV"], "none");
 }
 
 function RFIBNE(btnID) {
-  var defaultText = "A Repair Facility called in to start a claim.\rThe Repair Facility doesn't have an estimate ready.\rI advised the Repair Facility of the requirements to open a claim\rThe Repair Facility understood and will call back with an estimate.\r";
+  var defaultText = "A Repair Facility called in to start a claim.\rThe Repair Facility doesn't have an estimate ready.\rI advised the Repair Facility of the requirements to open a claim.\rThe Repair Facility understood and will call back with an estimate.\r";
   commonFunctionality(btnID, defaultText);
   setButtonDisplay(["RFIBND", "RFIBNE", "RFIBNF", "RFIBNV"], "none");
 }
 
 function RFIBNF(btnID) {
-  var defaultText = "A Repair Facility called in to start a claim.\rThe Repair Facility doesn't have a verified cause of failure.\rI advised the Repair Facility of the requirements to a open claim\rThe Repair Facility understood and will call back when they are ready.\r";
+  var defaultText = "A Repair Facility called in to start a claim.\rThe Repair Facility doesn't have a verified cause of failure.\rI advised the Repair Facility of the requirements to open a claim.\rThe Repair Facility understood and will call back when they are ready.\r";
   commonFunctionality(btnID, defaultText);
   setButtonDisplay(["RFIBND", "RFIBNE", "RFIBNF", "RFIBNV"], "none");
 }
 
 function RFIBNV(btnID) {
-  var defaultText = "A Repair Facility called in to start a claim.\rThe Contract Holder's vehicle is not at Repair Facility.\rI advised the Repair Facility of the requirements to open a claim\rThe Repair Facility understood and will call back when the vehicle has returned.\r";
+  var defaultText = "A Repair Facility called in to start a claim.\rThe Contract Holder's vehicle is not at Repair Facility.\rI advised the Repair Facility of the requirements to open a claim.\rThe Repair Facility understood and will call back when the vehicle has returned.\r";
   commonFunctionality(btnID, defaultText);
   setButtonDisplay(["RFIBND", "RFIBNE", "RFIBNF", "RFIBNV"], "none");
 }
 
 function PNLC(btnID) {
-  var defaultText = "A Repair Facility called in with the following concerns:\r\rI advised the Repair Faility the parts were not listed for coverage - PNLC\rI will call the Contract Holder to inform of coverage.";
+  var defaultText = "A Repair Facility called in with the following concerns:\r\rI advised the Repair Facility that the parts were not listed for coverage - PNLC\rI will call the Contract Holder to inform of coverage.";
   commonFunctionality(btnID, defaultText);
   setButtonDisplay(["RFIBDH", "PNLCBTN", "TOTALBTN", "RFAUTHBTN"], "none");
 }
@@ -866,7 +866,7 @@ document.addEventListener('contextmenu', function(e) {
 
 document.onkeydown = function(e) {
   if (e.ctrlKey && e.altKey && e.shiftKey && e.which == 85) {
-    document.getElementById('myInfo').style.display = "inline-block";
+    document.getElementById('myInfo').style.display = "itnline-block";
   }
 };
 
@@ -917,5 +917,50 @@ function whiteRabbit() {
   }
   RESETNOTE();
 }
+
+document.onkeyup = function(e) {
+  if (e.ctrlKey && e.altKey && e.shiftKey && e.which == 80) {
+    modePT();
+  }
+};
+
+function modePT() {
+  let mode = localStorage.getItem("mode");
+  if (mode === '1') {
+    localStorage.setItem("mode", "2");
+    document.getElementById("ITSBRITTNEY").style.display = "none";
+    document.getElementById("openScript").style.display = "none";
+    document.getElementById("PTModeDiv").style.display = "inline-block";
+    document.getElementById("newAuthstarter").style.top = "230px";
+    document.getElementById("newAuthstarter").style.left = "20px";
+    document.getElementById("statusNote").style.left = "200px";
+    document.getElementById("snipbox").style.left = "-135px";
+    document.getElementById("snipbox").style.top = "325px";
+    document.getElementById("SOPs").style.display = "none";
+    document.getElementById("tools").style.display = "none";
+    document.getElementById("T0").style.display = "none";
+    document.getElementById("Request").style.left = "400px";
+    document.getElementById("Request").style.top = "50px";
+  } else  if (mode === '2') {
+    localStorage.setItem("mode", "1");
+    document.getElementById("ITSBRITTNEY").style.display = "inline-block";
+    document.getElementById("openScript").style.display = "inline-block";
+    document.getElementById("PTModeDiv").style.display = "none";
+    document.getElementById("newAuthstarter").style.top = "";
+    document.getElementById("newAuthstarter").style.left = "";
+    document.getElementById("statusNote").style.left = "";
+    document.getElementById("snipbox").style.left = "";
+    document.getElementById("snipbox").style.top = "";
+    document.getElementById("SOPs").style.display = "";
+    document.getElementById("tools").style.display = "";
+    document.getElementById("T0").style.display = "";
+    document.getElementById("Request").style.left = "";
+    document.getElementById("Request").style.top = "";
+  }
+
+}
+
+
+
 
 

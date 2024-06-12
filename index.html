@@ -314,10 +314,22 @@ body {
 <button id="tools" class="R P D g1dispStat" oncontextmenu="customMenu(this.id, event)" onclick="resrcCenter('5','t')"><f>Tools</f></button>
 
 <div id="TPDiv" class="noShow" style="display: none">
-  <button id="T1" class="D R P" oncontextmenu="customMenu(this.id, event)" name="name" onclick="PTXFER()"><b>PT Transfer</b> Template</button>
-  <button id="T2" class="D R P C" oncontextmenu="customMenu(this.id, event)" onclick="STMTTEMP()">CH <bStatement</b> Questions</button>
-  <button id="T3" class="D R P C" oncontextmenu="customMenu(this.id, event)" onclick="REVIEW(this.id)">INPS/PIC <b>Review</b> Note</button>
-  <button id="T4" class="D R P C" oncontextmenu="customMenu(this.id, event)" onclick="INSPTEMP(this.id)"><b>Inspection</b> Template</button>
+  <button id="T1" class="D R P" oncontextmenu="customMenu(this.id, event)" name="name" onclick="PTXFER()"><b>PT TRANSFER</b> TEMPLATE</button>
+  <button id="T2" class="D R P C" oncontextmenu="customMenu(this.id, event)" onclick="STMTTEMP(this.id)">CH <b>STATEMENT</b> QUESTIONS</button>
+  <button id="T3" class="D R P C" oncontextmenu="customMenu(this.id, event)" onclick="REVIEW(this.id)">INPS/PIC <b>REVIEW</b> NOTE</button>
+  <button id="T4" class="D R P C" oncontextmenu="customMenu(this.id, event)" onclick="INSPTEMP(this.id)"><b>INSPECTION</b> TEMPLATE</button>
+</div>
+
+                                                <!-- PT Mode -->
+
+<div id="PTModeDiv" class="noShow" style="display: none">
+  <button id="transAuthBtn" onclick="transAuth()">Trans Auth</button>
+  <button id="ringfailDeny" onclick="ringDeny()">Denial-Carbon<br>Piston Rings</button>
+  <button id="T21" onclick="STMTTEMP(this.id)"><b>STATEMENT</b> QUESTIONS</button>
+  <button id="T31" onclick="INSPTEMP(this.id)"><b>INSPECTION</b> TEMPLATE</button>
+  <button id="T41" onclick="inspREVIEW(this.id)">INPSECT <b>REVIEW</b></button>
+  <button id="T51" onclick="REVIEW(this.id)">PICTURE <b>REVIEW</b></button>
+  <button id="T61" onclick="carfaxREVIEW(this.id)">CARFAX <b>REVIEW</b></button>
 </div>
 
                                                 <!-- Parts Intake -->
@@ -2184,23 +2196,110 @@ TIME:&nbsp&nbsp</textarea>
      <button id="advanceState" class="wefwefwef" onclick="advanceState()">Next</button>
   </div>
 </div>
-<!--
-<div id="updated" class="updated_div">
-Updates:<br><br>
-1. The Labor Script has an instructions button.<br>
-Click to open, click again to close.<br>
-The Labor Script exit button was moved to the bottom right corner.<br><br>
-2. The General Notes will auto-close after 5 seconds once the note displays.<br>
-The note is still copied and ready to paste, you just no longer have to manually reset it.<br><br>
-3. The Authorization note will no longer display in the lower text area.<br>
-The note is still copied and ready to paste, it just doesn't display.<br>
-4. Fixed spelling, punctuation, and grammar.<br>
-5. Cleaned up and made the output of notes more readable.<br><br>
-6. Rearranged the order of the Side Menu to put the items used the most toward the top and lesser used tools further down.<br><br>
-7. Modified shadows and colors on Neumorphic to interfere less in close proximity.<br>
-<button id="updatedclose" class="wefwefwef" onclick="closeUpdate()">Close</button>
+                                                <!-- Trans Auth -->
+
+<div id="module_trans_backing" class="module_backing">
+  <div id="module_trans_main" class="module_main">
+  <h3 class="trans_header">Transmission Authorization</h3>
+
+    <div id="module_trans_1" class="module_page trsnActive">
+      <div class="module_top">What type of unit was MCE?</div>
+      <div class="module_bot">
+        <input type="radio" id="trans_ans1a" name="trans_ans1" class="transRadio" value="remanufactured"><label for="trans_ans1a" class="transLabel">Remanufactured</label><br>
+        <input type="radio" id="trans_ans1b" name="trans_ans1" class="transRadio" value="used"><label for="trans_ans1b" class="transLabel">Used</label><br>
+        <input type="radio" id="trans_ans1c" name="trans_ans1" class="transRadio" value="new"><label for="trans_ans1c" class="transLabel">New</label><br><br>
+      </div>
+      <div class="module_top">What source had the MCE option?</div>
+      <div class="module_bot">
+        <input type="radio" id="trans_ans2a" name="trans_ans2" class="transRadio" value="C&K"><label for="trans_ans2a" class="transLabel">C&K</label><br>
+        <input type="radio" id="trans_ans2b" name="trans_ans2" class="transRadio" value="LKQ"><label for="trans_ans2b" class="transLabel">LKQ</label><br>
+        <input type="radio" id="trans_ans2c" name="trans_ans2" class="transRadio" value="AutoNation"><label for="trans_ans2c" class="transLabel">AutoNation</label><br>
+        <input type="radio" id="trans_ans2d" name="trans_ans2" class="transRadio" value="Teal"><label for="trans_ans2d" class="transLabel">Teal</label><br>
+        <input type="radio" id="trans_ans2d" name="trans_ans2" class="transRadio" value="American Auto Salvage"><label for="trans_ans2d" class="transLabel">American Auto Salvage</label><br><br>
+      </div>
+      <div class="module_top">Did you request an inspection, photos, or records?</div>
+      <div class="module_bot">
+        <input type="checkbox" id="trans_ans3a" name="trans_ans3a" class="transCheck" onclick="requestorNo('y')"><label for="trans_ans3a" class="labelCheck transLabel">Inspection</label><br>
+        <input type="checkbox" id="trans_ans3b" name="trans_ans3b" class="transCheck" onclick="requestorNo('y')"><label for="trans_ans3b" class="labelCheck transLabel">Photos</label><br>
+        <input type="checkbox" id="trans_ans3c" name="trans_ans3c" class="transCheck" onclick="requestorNo('y')"><label for="trans_ans3c" class="labelCheck transLabel">Records</label><br><br>
+        <input type="checkbox" id="trans_ans3d" name="trans_ans3d" class="transCheck" onclick="requestorNo('n')"><label for="trans_ans3d" class="labelCheck transLabel">No Requests</label><br><br>
+      </div>
+      <div class="module_top">What was our cost?</div>
+      <div class="module_bot">
+        <input type="number" id="trans_ans4" step=".01" class="transNum">
+        <label for="trans_ans3" class="translab transLabel">$</label>
+      </div>
+    </div>
+    <div id="module_trans_4" class="module_page">
+      <div id="module_trans_labor" class="labor_top">Labor Hours:
+        <div class="labor_right">
+          <button id="saveDiagT" class="labor_button" onclick="saveDiag('trans',this.id)">Add</button>
+          <button id="saveDiagL" class="labor_button" onclick="saveDiag('diag',this.id)">Add</button>
+          <button id="saveDiagF" class="labor_button ender" onclick="saveDiag('flush',this.id)">Add</button>
+          <button id="saveDiagC" class="labor_button" onclick="saveDiag('pull',this.id)">Add</button>
+          <button id="saveDiagD" class="labor_button" onclick="saveDiag('data',this.id)">Add</button>
+          <button id="saveDiagS" class="labor_button sideBy" onclick="saveDiag('sparkplus')">Add</button>
+          <button id="saveDiagS" class="labor_button sideBy" onclick="saveDiag('sparkminus')">Del</button><div id="totalspark">0</div>
+          <button id="saveDiagE" class="labor_button" onclick="saveDiag('point',this.id)">Add</button>
+          <button id="saveDiagP" class="labor_button" onclick="saveDiag('press',this.id)">Add</button>
+          <button id="saveDiagPan" class="labor_button" onclick="saveDiag('pan',this.id)">Add</button>
+        </div>
+        <div class="labor_right2">
+          R/R Transmission:<br>
+          Transmission Diagnostic:<br>
+          Flush Cooler:<br>
+          Diagnostic consisted of: <br>
+          Code Pull:<br>
+          Data Monitoring Add-on:<br>
+          Electrical Test:<br>
+          Pinpoint Test:<br>
+          Line Pressure test:<br>
+          Pan Drop:<br>
+        </div>
+        <div class="labor_right_trans">
+          <input type="number" id="trans_ans4a" class="labor_num" step=".01" placeholder="R/R"></input><br>
+          <input type="number" id="trans_ans4b" class="labor_num" step=".01" placeholder="Diag"></input><br>
+          <input type="number" id="trans_ans4c" class="labor_num" step=".01" placeholder="Flush"></input><br>
+        </div>
+      </div>
+    </div>
+    <div id="module_trans_7" class="module_page">
+      <div class="module_top last_top">How many months in coverage?</div>
+      <div class="module_bot last_bot">
+        <label for="trans_ans7" class="transLabel">Months</label>
+        <input type="number" id="trans_ans7" step="1" class="transNum">
+      </div>
+      <div class="module_top last_top">Any non-covered or denied components?</div>
+      <div class="module_bot last_bot1">
+        <input type="checkbox" id="trans_ans8e" name="trans_ans81" class="transCheck" onclick="noncovcomp('y')"><label for="trans_ans8e" class="transLabel">Non-Covered</label><br>
+        <input type="checkbox" id="trans_ans8f" name="trans_ans81" class="transCheck" onclick="noncovcomp('y')"><label for="trans_ans8f" class="transLabel">Denied</label><br>
+        <input type="checkbox" id="trans_ans8g" name="trans_ans81" class="transCheck" onclick="noncovcomp('n')"><label for="trans_ans8g" class="transLabel">No</label>
+      </div>
+      <div class="module_top last_top">Is OOPC or shipping a concern?</div>
+      <div class="module_bot last_bot2">
+        <input type="radio" id="trans_ans8a" name="trans_ans8" class="transRadio" onclick="showtransOop()"><label for="trans_ans8a" class="transLabel">OOPC</label><br>
+        <input type="radio" id="trans_ans8b" name="trans_ans8" class="transRadio" onclick="hidetransOop()"><label for="trans_ans8b" class="transLabel">Shipping</label><br>
+        <input type="radio" id="trans_ans8c" name="trans_ans8" class="transRadio" onclick="showtransOop()"><label for="trans_ans8c" class="transLabel">Both</label><br>
+        <input type="radio" id="trans_ans8d" name="trans_ans8" class="transRadio" onclick="hidetransOop()"><label for="trans_ans8d" class="transLabel">No Concerns</label><br><br>
+      </div>
+
+      <div id="module_trans_8qdiv" class="module_top last_top invisible">What is the cause of OOPC?</div>
+      <div id="module_trans_8adiv" class="module_bot last_bot3 invisible">
+        <input type="radio" id="trans_ans8h" name="trans_ans82" class="transRadio"><label for="trans_ans8h" class="transLabel">Parts</label><br>
+        <input type="radio" id="trans_ans8i" name="trans_ans82" class="transRadio"><label for="trans_ans8i" class="transLabel">Labor</label><br>
+        <input type="radio" id="trans_ans8j" name="trans_ans82" class="transRadio"><label for="trans_ans8j" class="transLabel">Both</label><br><br>
+        <label for="trans_ans8k" id="trans_ans8kl">OOPC Including DED</label><br>
+        <input type="number" id="trans_ans8k" name="trans_ans9" step="0.01"><br>
+        <input type="radio" id="trans_ans9a" name="trans_ans9a" class="transRadio"><label id="trans_ans9al" for="trans_ans9a" class="transLabel">OOPC Total Unknown</label>
+      </div>
+    </div>
+    <div class="module_button_div">
+      <button id="submittDiag" class="labor_button" onclick="saveDiag('next')">Next</button>
+      <button id="backtDiag" class="labor_button" onclick="saveDiag('back')">Back</button>
+      <button id="canceltDiag" class="labor_button" onclick="saveDiag('cancel')">Cancel</button>
+    </div>
+  </div>
 </div>
--->
 <script src="JavaScript/Variable.js"></script>
 <script src="JavaScript/OGLAYOUTJS.js"></script>
 <script src="JavaScript/ChangeAppearance1.js"></script>

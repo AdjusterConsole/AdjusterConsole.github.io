@@ -114,12 +114,290 @@ function MENU() {
   }
 }
 
+function transAuth() {
+  document.getElementById("module_trans_backing").classList.add("trsnActive");
+  localStorage.setItem('transauthPage', '1');
+  localStorage.removeItem("Diag");
+}
+
+function showtransOop() {
+  document.getElementById("module_trans_8qdiv").classList.remove("invisible");
+  document.getElementById("module_trans_8adiv").classList.remove("invisible");
+}
+
+function hidetransOop() {
+  document.getElementById("module_trans_8qdiv").classList.add("invisible");
+  document.getElementById("module_trans_8adiv").classList.add("invisible");
+}
+
+function requestorNo(x) {
+  if (x === 'y') {
+    if (document.getElementById("trans_ans3d").checked) {
+      document.getElementById("trans_ans3d").checked = false;
+    }
+  }
+  if (x === 'n') {
+    if (document.getElementById("trans_ans3c").checked) {
+      document.getElementById("trans_ans3c").checked = false;
+    }
+    if (document.getElementById("trans_ans3b").checked) {
+      document.getElementById("trans_ans3b").checked = false;
+    }
+    if (document.getElementById("trans_ans3a").checked) {
+      document.getElementById("trans_ans3a").checked = false;
+    }
+  }
+}
+
+function noncovcomp(x) {
+  if (x === 'y') {
+    if (document.getElementById("trans_ans8g").checked) {
+      document.getElementById("trans_ans8g").checked = false;
+    }
+  }
+  if (x === 'n') {
+    if (document.getElementById("trans_ans8e").checked) {
+      document.getElementById("trans_ans8e").checked = false;
+    }
+    if (document.getElementById("trans_ans8f").checked) {
+      document.getElementById("trans_ans8f").checked = false;
+    }
+  }
+}
+
+function saveDiag(property,id) {
+  let Diag = JSON.parse(localStorage.getItem('Diag'));
+  let totalspark = document.getElementById("totalspark");
+  if (!Diag) {
+    Diag = {
+      trans: false,
+      diag: false,
+      flush: false,
+      press: false,
+      pan: false,
+      pull: false,
+      data: false,
+      spark: 0,
+      point: false
+    };
+  }
+  if (property === 'sparkplus') {
+    Diag.spark += 1;
+    totalspark.innerHTML = Diag.spark;
+  } else if (property === 'sparkminus' && Diag.spark > 0) {
+    Diag.spark -= 1;
+    totalspark.innerHTML = Diag.spark;
+  } else if (property && property !== 'next') {
+    if (Diag.hasOwnProperty(property) && Diag[property] === false) {
+      Diag[property] = true;
+      var elem = document.getElementById(id);
+      elem.innerHTML = "Del";
+      elem.classList.add("butswap");
+    } else if (Diag.hasOwnProperty(property) && Diag[property] === true) {
+      Diag[property] = false;
+      var elem = document.getElementById(id);
+      elem.innerHTML = "Add";
+      elem.classList.remove("butswap");
+    }
+  }
+  localStorage.setItem('Diag', JSON.stringify(Diag));
+  if (property === 'next') {
+    let transauthPage = localStorage.getItem('transauthPage');
+    if (transauthPage === '1') {
+      document.getElementById('module_trans_1').classList.remove('trsnActive');
+      document.getElementById('module_trans_4').classList.add('trsnActive');
+      localStorage.setItem('transauthPage', '2');
+    } else if (transauthPage === '2') {
+      document.getElementById('module_trans_4').classList.remove('trsnActive');
+      document.getElementById('module_trans_7').classList.add('trsnActive');
+      localStorage.setItem('transauthPage', '3');
+    } else if (transauthPage === '3') {
+      finishtransAuth();
+    }
+  }
+  if (property === 'back') {
+    let transauthPage = localStorage.getItem('transauthPage');
+    if (transauthPage === '3') {
+      document.getElementById('module_trans_7').classList.remove('trsnActive');
+      document.getElementById('module_trans_4').classList.add('trsnActive');
+      localStorage.setItem('transauthPage', '2');
+    } else if (transauthPage === '2') {
+      document.getElementById('module_trans_4').classList.remove('trsnActive');
+      document.getElementById('module_trans_1').classList.add('trsnActive');
+      localStorage.setItem('transauthPage', '1');
+    } else if (transauthPage === '1') {
+      return;
+    }
+  }
+  if (property === 'cancel') {
+    document.getElementById('module_trans_7').classList.remove('trsnActive');
+    document.getElementById('module_trans_4').classList.remove('trsnActive');
+    document.getElementById('module_trans_1').classList.add('trsnActive');
+    document.getElementById("module_trans_backing").classList.remove("trsnActive");
+  }
+}
+
+function finishtransAuth() {
+  let rfName = getContact('0');
+  let isDiag = false;
+  let isDiag2 = false;
+  let addOn = false;
+  let addOnrec = false;
+  let Diag = JSON.parse(localStorage.getItem('Diag'));
+  for (let property in Diag) {
+    if (property !== 'trans' && property !== 'diag' && property !== 'flush') {
+      if ((property !== 'spark' && Diag[property] === true) || (property === 'spark' && Diag[property] > 0)) {
+        isDiag = true;
+        isDiag2 = true;
+      }
+    }
+  }
+  let transLabor = document.getElementById("trans_ans4a").value
+  let diagLabor = document.getElementById("trans_ans4b").value
+  let flushLabor = document.getElementById("trans_ans4c").value
+  const trans_Ans_1 = document.querySelector('input[name="trans_ans1"]:checked');
+  const trans_Ans_2 = document.querySelector('input[name="trans_ans2"]:checked');
+  let cost = parseInt(document.getElementById("trans_ans4").value);
+  let trans_ans7 = document.getElementById("trans_ans7").value;
+  let testElec = .3 * Diag.spark;
+  const propertyStrings = {
+    trans: "Pro Demand shows " + transLabor + " hours to R/R transmission.\r",
+    diag: "Pro Demand shows " +  diagLabor + " hours for diagnostics.\r",
+    flush: "Pro Demand shows " +  flushLabor + " hours to the flush the cooler.\r",
+    press: ".X for line pressure test ",
+    pan: ".X for pan drop ",
+    pull: ".3 for code pull ",
+    data: ".2 for data monitoring ",
+    spark: " Electrical tests: " + Diag.spark + " @ .3 each is " + testElec + " ",
+    point: ".4 for pinpoint test. "
+    };
+  let transAuth1 = "No inspection needed as the Repair Facility diagnostic matches Contract Holder concern.\rThe repair Facility sent supporting photos showing excessive metal debris present.";
+  let transAuth2 = "An inspection was sent to verify failures.\rI have reviewed report and inspection photos.\rThe inspection review note is completed.";
+  let transAuth3 = "Requested and reviewed photos from Repair Facility.\rPhoto review note is completed.";
+  let recordsTrans1 = "No records requested as history will not change claim decision.\rVehicle is not in waiting period. No prior related claims.\rNo recalls, TSBs, or unresolved mileage concerns.\rContract Holder is in sequence " + trans_ans7 + ".";
+  let recordsTrans2 = "Requested and reviewed records and statement.\rRecord review note is completed.";
+  let requestedTrans1 = "After reviewing all relevant documentation, we are moving forward with verified failures.";
+  let beenVerified = "Verified labor, fluid type, and capacities in ProDemand.\r";
+  let oopcsTrans1 = "Need to review OOPC of $";
+  let oopcsTrans1a = "Need to review OOPC when OOPC is determined";
+  let oopcsTrans2a = " with Contract Holder.";
+  let oopcsTrans2b = " and shipping option with Contract Holder.";
+  let oopcsTrans2c = "OOPC is due to differences in ";
+  let oopcsTrans3 = "Need to review shipping option with Contract Holder.";
+  let oopcsTrans3a = "Have not given authorization info to the Repair Facility at this time.";
+  let oopcsTrans4 = "Contract Holder has no OOPC besides deductible.";
+  let oopcsTrans4a = "Gave authorization info and payment instructions to ";
+  let noncovTrans1 = "Will inform Contract Holder of non-covered components";
+  let noncovTrans2 = "There were denied items on this claim.\rReview denial note for more details";
+  let outputString = "Verified internal failure to the transmission using the Repair Facility supplied diagnostic and photos.\rThe transmission has coverage under the terms of the contract.\rVerified OEM parts using Forte and AM parts using PA.\rUsed in-house sourcing to determine the MCE option.\rThe MCE option is a ";
+  outputString += trans_Ans_1.value + " unit from " + trans_Ans_2.value + " for $" + cost.toFixed(2) + ".\r" + beenVerified;
+  for (let property in Diag) {
+    if (Diag.hasOwnProperty(property)) {
+      if ((property !== 'spark' && Diag[property] === true) || (property === 'spark' && Diag[property] > 0)) {
+        outputString += propertyStrings[property];
+        if (isDiag && property === 'flush') {
+          outputString += "Diag completed: "
+          isDiag = false;
+        }
+      }
+    }
+  }
+  if (isDiag2) {
+    outputString += "\r";
+  }
+  if (document.getElementById("trans_ans3d").checked == true) {
+    outputString += transAuth1 + "\r" + recordsTrans1 + "\r";
+    document.getElementById("trans_ans3d").checked = false;
+  } 
+  if (document.getElementById("trans_ans3a").checked == true) {
+    outputString += transAuth2 + "\r";
+    addOn = true;
+    addOnrec = true;
+    document.getElementById("trans_ans3a").checked = false;
+  } 
+  if (document.getElementById("trans_ans3b").checked == true) {
+    outputString += transAuth3 + "\r";
+    addOn = true;
+    addOnrec = true;
+    document.getElementById("trans_ans3b").checked = false;
+  } 
+  if (document.getElementById("trans_ans3c").checked == true) {
+    outputString += recordsTrans2 + "\r";
+    addOn = true;
+    document.getElementById("trans_ans3c").checked = false;
+  } 
+  if(addOnrec) {
+    outputString += recordsTrans1 + "\r";
+  }
+  if(addOn) {
+    outputString += requestedTrans1 + "\r";
+  }
+  let trans_ans9a = document.getElementById("trans_ans9a");
+  if (!trans_ans9a.checked) {
+    if (document.getElementById("trans_ans8d").checked) {
+      outputString += oopcsTrans4 + "\r" + oopcsTrans4a + rfName + "\r";
+      document.getElementById("trans_ans8d").checked = false;
+    } else if (document.getElementById("trans_ans8b").checked) {
+      outputString += oopcsTrans3 + "\r" + oopcsTrans3a + "\r";
+      document.getElementById("trans_ans8b").checked = false;
+    } else if (document.getElementById("trans_ans8a").checked || document.getElementById("trans_ans8c").checked) {
+      let oopcCausep = document.getElementById("trans_ans8h");
+      let oopcCausel = document.getElementById("trans_ans8i");
+      let oopcCauseb = document.getElementById("trans_ans8j");
+      let oopcAmt1 = document.getElementById("trans_ans8k").value;
+      document.getElementById("trans_ans8k").value = "";
+      let num = parseFloat(oopcAmt1);
+      if (isNaN(num)) {
+        alert("Please enter a valid amount for OOPC");
+        return;
+      }
+      let oopcAmt2 = num.toFixed(2);
+      let oopcAmt = oopcAmt2.toString();
+      let oopcCausedBy;
+      if (oopcCauseb.checked) { oopcCausedBy = "parts and labor."; }
+      if (oopcCausel.checked) { oopcCausedBy = "labor."; }
+      if (oopcCausep.checked) { oopcCausedBy = "parts."; }
+      outputString += oopcsTrans1 + oopcAmt;
+      outputString += (document.getElementById("trans_ans8c").checked ? oopcsTrans2b : oopcsTrans2a) + "\r";
+      outputString += oopcsTrans2c + oopcCausedBy + "\r" + oopcsTrans3a + "\r";
+      document.getElementById("trans_ans8a").checked = false;
+      document.getElementById("trans_ans8c").checked = false;
+    }
+  }
+  if (document.getElementById("trans_ans8a").checked || document.getElementById("trans_ans8c").checked) {
+    if (trans_ans9a.checked) {
+      outputString += oopcsTrans1a;
+    }
+  }
+  trans_ans9a.checked = false;
+  document.getElementById("trans_ans8a").checked = false;
+  document.getElementById("trans_ans8c").checked = false;
+  let noncovComps = document.getElementById("trans_ans8e");
+  if (noncovComps.checked) {
+    outputString += noncovAuth1 + "\r";
+    noncovComps.checked = false;     
+  }
+  let deniedComps = document.getElementById("trans_ans8f");
+  if (deniedComps.checked) {
+    outputString += noncovAuth2;
+    deniedComps.checked = false;
+  }
+  copy(outputString);
+  document.getElementById("module_trans_backing").classList.remove("trsnActive");
+  return;
+}
+
 function STMTTEMP() {
   let statement = document.getElementById("statement");
   if (statement.style.display == "none") {
     statement.style.display = "initial";
     localStorage.setItem("statePage", "1");
-    ShowTemps();
+    let mode = localStorage.getItem("mode");
+    if (mode === '2') {
+      return;
+    } else {
+      ShowTemps();
+    }
   } else {
     return;
   }
@@ -660,7 +938,7 @@ function NEWOEM() {
 }
 
 function REVIEW(btnID) {
-  let Rev = "Reviewed inspection photos and report.\rReviewed photos sent by repair facility.\rVerified vin.\rVerified mileage.\rNo indication of commercial use.\rNo indication of modification.\r\r";
+  let Rev = "Reviewed photos sent by repair facility.\rVerified vin.\rVerified mileage.\rNo indication of commercial use.\rNo indication of modification.\r\r";
   let Check = localStorage.getItem(btnID + "EDIT");
   if (Check == null) {
     document.getElementById("textarea5").value = Rev;
@@ -671,7 +949,22 @@ function REVIEW(btnID) {
   }
   let outputString = document.getElementById("textarea5").value;
   copy(outputString);
-  ShowTemps();
+  let mode = localStorage.getItem("mode");
+  if (mode === '2') {
+    return;
+  } else {
+    ShowTemps();
+  }
+}
+
+function inspREVIEW() {
+  let Rev = "Inspection Review\rReason for inspection:\rLabor rate:\rMileage:\rFluid condition:\rModifications/Collision/Commercial:\rInspector findings/photo review:";
+  copy(Rev);
+}
+
+function carfaxREVIEW() {
+  let Rev = "CARFAX Report Review:\r1.) What I was looking for:\r2.) Red flags or Mileage Discrepancy:\r3.) Does it relate to the claim:\r4.) What is needed now:";
+  copy(Rev);
 }
 
 function RECREQ(btnID) {
@@ -703,7 +996,8 @@ function NOANSREC(btnID) {
 }
 
 function INSPTEMP(btnID) {
-  let InsTemp = "Please verify all failures.\rPlease contact 1-2 hours prior to arrival.\rContact:   \rPhone:   \rEmail:   ";
+  let InsTemp = "Technician states:\r\rPart failure\rPart failure\rPart failure\r\rPlease have the technician demonstrate the failures listed above.\r\rNotate if rust, corrosion, or any outside influence is the cause of failure.\rNotate available fluid levels and conditions.\rFor electrical components, have technician verify power and ground.\r\rPlease take pictures of the following:\r";
+  InsTemp += "All failures.\rAll 4 sides of vehicle, vin, and odometer.\rInspection stickers and oil change stickers.\rWheels, tires, and rotors.\rAny dash light that are on, current or history DTCs, and any freeze frame data available.\rAny signs of commercial use or modifications.\rAny rust, corrosion, or collision damage.\rAny other information relevant to the failures.\r\rPlease contact the Repair Facility 1-2 hours before arrival.\r\rContact Name:\rEmail:\rDirect Line:";
   let Check = localStorage.getItem(btnID + "EDIT");
   if (Check == null) {
     document.getElementById("textarea5").value = InsTemp;
@@ -714,10 +1008,17 @@ function INSPTEMP(btnID) {
   }
   let outputString = document.getElementById("textarea5").value;
   copy(outputString);
-  ShowTemps();
+  let mode = localStorage.getItem("mode");
+  if (mode === '2') {
+    return;
+  } else {
+    ShowTemps();
+  }
 }
 
 function PTXFER() {
+  let mode = localStorage.getItem("mode");
+  if (mode === '2') { return; }
   let showTemp = document.getElementById("transferTemplate");
   showTemp.style.display = "inline-block";
   let rfEmail = getContact('1');
@@ -1181,6 +1482,9 @@ window.onload = function PutItBack() {
   localStorage.setItem("pageNum", "0");
   resetColors();
   trackerBlank();
+  localStorage.setItem("mode", 1);
+  let Rev = "Reviewed inspection photos and report.\rReviewed photos sent by repair facility.\rVerified vin.\rVerified mileage.\rNo indication of commercial use.\rNo indication of modification.\r\r";
+  localStorage.setItem("Rev", Rev);
 }
 
 function trackerBlank() {
@@ -1231,4 +1535,13 @@ function closetransAuth() {
 function closeUpdate() {
   document.getElementById("updated").style.display = "none";
   localStorage.setItem("updated", "yes");
+}
+
+function ringDeny() {
+  let text = "After review of borescope provided photos, there are obvious signs of excessive carbon.\rThis carbon is a biproduct of a fuel/spark related issue.\r";
+  text += "Per the leak-down test performed, we have air bypass from piston rings (air escaping to crank case).\rWe know the piston rings are stuck, and have made marks/scoring on the cylinder walls.\r";
+  text += "The stuck piston rings can be attributed to the carbon.\rCarbon is an exclusion on this policy.\rThe engine portion of this claim will be denied.\r";
+  text += "The following items and conditions are not covered by this CONTRACT:\r\r";
+  text += "17. BREAKDOWNS resulting from engine sludge, carbon, pre-ignition, detonation, varnish, corrosion, foreign objects, dirt, dust, liquid, cracked rubber and/or neoprene parts, dry-rot, road chemicals, lack of proper fluids or use of additives or fuel grades not recommended by the manufacturer.";
+  copy(text);
 }
