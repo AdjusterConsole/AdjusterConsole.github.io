@@ -63,7 +63,6 @@ For inquiries regarding licensing or permission to use this code in ways not cov
   margin: 5px;
   width: 50px;
   font-size: 17px;
-
 }
 
 option, select {
@@ -969,11 +968,24 @@ input:checked + .slider:before {
   border: 2px solid var(--my-accent-color);
 }
 
+.sideBy.labor_button {
+  display: inline-block;
+}
+
+.butswap.labor_button {
+  background-color: rgba(0,0,0,.15);
+}
+
+.labor_right button {
+  height: 30px;
+  width: 55px;
+}
+
 .labor_right {
   position: absolute;
   background: none;
   box-shadow: none;
-  right: 320px;
+  right: 260px;
   display: block;
 }
 
@@ -1052,6 +1064,7 @@ input:checked + .slider:before {
   position: absolute:
   display: inline-block;
   height: 100px;
+  opacity: 1;
 }
 
 #trans_ans9a {
@@ -1084,7 +1097,7 @@ input:checked + .slider:before {
   box-shadow: none;
 }
 
-#submitDiag.labor_button {
+#submittDiag.labor_button {
   border: 2px solid var(--my-accent-color);
   padding: 15px 30px;
   position: absolute;
@@ -1092,38 +1105,110 @@ input:checked + .slider:before {
   bottom: 120px;
 }
 
-.updated_div {
-  opacity = 0;
-  display: block;
-  position: absolute;
-  width: 80%;
-  height: 390px;
-  margin: auto;
-  top: 200px;
-  right: 60px;
-  padding: 45px;
-  border-radius: 20px;
-  background: var(--fancy-background);
-  box-shadow:
-    inset 0px 0px 4px black,
-    inset 0px 0px 22px black,
-    20px 10px 70px 20px black;
-  overflow: hidden;
-  z-index: 99;
-}
-
-.doneShow.updated_div {
-  display: none;
-}
-
-#updatedclose {
-  position: absolute;
-  display: inline-block;
-  top: 413px;
-  right: 2px;
-  height: 60px;
-  width: 150px;
+#backtDiag.labor_button {
   border: 2px solid var(--my-accent-color);
-  border-bottom: none;
-  border-right: none;
+  padding: 15px 30px;
+  position: absolute;
+  right: 220px;
+  bottom: 120px;
 }
+
+#canceltDiag.labor_button {
+  border: 2px solid var(--my-accent-color);
+  padding: 15px 30px;
+  position: absolute;
+  left: 100px;
+  bottom: 120px;
+}
+
+#totalspark {
+  background: none;
+  box-shadow: none;
+  display: inline-block;
+  margin-left: 5px;
+}
+
+#transAuthBtn {
+  left: 20px;
+  top:  340px;
+  white-space: nowrap;
+  width: 150px;
+  height: 45px;
+}
+
+.module_top.last_top.invisible {
+  opacity: 0;
+}
+
+.module_bot.last_bot3.invisible {
+  opacity: 0;
+}
+
+#PTModeDiv {
+  display: none;
+  background: none;
+  box-shadow: none;
+  position: absolute;
+}
+
+#ringfailDeny {
+  left: 20px;
+  top:  420px;
+  white-space: nowrap;
+  width: 150px;
+  height: 65px;
+}
+
+#T41 {
+  font-size: 15px;
+  left: 570px;
+  top:  50px;
+  width: 110px;
+  height: 70px;
+}
+
+#T51 {
+  font-size: 15px;
+  left: 570px;
+  top: 140px;
+  width: 110px;
+  height: 70px;
+}
+
+#T61 {
+  font-size: 15px;
+  left: 570px;
+  top: 230px;
+  width: 110px;
+  height: 70px;
+}
+
+#T21 {
+  font-size: 15px;
+  left: 720px;
+  top: 50px;
+  width: 120px;
+  height: 70px;
+}
+
+#T31 {
+  font-size: 15px;
+  left: 720px;
+  top: 140px;
+  width: 120px;
+  height: 70px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

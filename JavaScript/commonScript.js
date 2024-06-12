@@ -525,44 +525,25 @@ function showNote(noteID) {
 }
 
 function noteListen() {
-  let incNotebin = document.getElementById("incNotebin");
-  let serNotebin = document.getElementById("serNotebin");
-  let rec0Notebin = document.getElementById("rec0Notebin");
-  let rec1Notebin = document.getElementById("rec1Notebin");
-  let rec2Notebin = document.getElementById("rec2Notebin");
-  let rec3Notebin = document.getElementById("rec3Notebin");
-  let rec4Notebin = document.getElementById("rec4Notebin");
-  let rec5Notebin = document.getElementById("rec5Notebin");
-
-  incNotebin.addEventListener("keydown", addListen);
-  serNotebin.addEventListener("keydown", addListen);
-  rec0Notebin.addEventListener("keydown", addListen);
-  rec1Notebin.addEventListener("keydown", addListen);
-  rec2Notebin.addEventListener("keydown", addListen);
-  rec3Notebin.addEventListener("keydown", addListen);
-  rec4Notebin.addEventListener("keydown", addListen);
-  rec5Notebin.addEventListener("keydown", addListen);
+  const notebins = ["incNotebin", "serNotebin", "rec0Notebin", "rec1Notebin", "rec2Notebin", "rec3Notebin", "rec4Notebin", "rec5Notebin"];
+  notebins.forEach(id => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.addEventListener("keydown", addListen);
+    }
+  });
 }
 
 function noteForget() {
-  let incNotebin = document.getElementById("incNotebin");
-  let serNotebin = document.getElementById("serNotebin");
-  let rec0Notebin = document.getElementById("rec0Notebin");
-  let rec1Notebin = document.getElementById("rec1Notebin");
-  let rec2Notebin = document.getElementById("rec2Notebin");
-  let rec3Notebin = document.getElementById("rec3Notebin");
-  let rec4Notebin = document.getElementById("rec4Notebin");
-  let rec5Notebin = document.getElementById("rec5Notebin");
-
-  incNotebin.removeEventListener("keydown", addListen);
-  serNotebin.removeEventListener("keydown", addListen);
-  rec0Notebin.removeEventListener("keydown", addListen);
-  rec1Notebin.removeEventListener("keydown", addListen);
-  rec2Notebin.removeEventListener("keydown", addListen);
-  rec3Notebin.removeEventListener("keydown", addListen);
-  rec4Notebin.removeEventListener("keydown", addListen);
-  rec5Notebin.removeEventListener("keydown", addListen);
+  const notebins = ["incNotebin", "serNotebin", "rec0Notebin", "rec1Notebin", "rec2Notebin", "rec3Notebin", "rec4Notebin", "rec5Notebin"];
+  notebins.forEach(id => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.removeEventListener("keydown", addListen);
+    }
+  });
 }
+
 
 function addListen(event) {
   if (event.key === "Enter") {
@@ -1216,6 +1197,7 @@ function scriptInfo() {
   localStorage.setItem("current", current);
   localStorage.setItem("custom", custom);
 }
+
 function instructScript() {
   let instructL = document.getElementById("instructL");
   let instructScript = document.getElementById("instructScript");
