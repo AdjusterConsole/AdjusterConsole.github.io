@@ -149,6 +149,23 @@ function requestorNo(x) {
   }
 }
 
+function uncheck_All() {
+  let checkboxes = document.querySelectorAll('input[type="checkbox"]');
+  checkboxes.forEach(function(checkbox) {
+    checkbox.checked = false;
+  });
+
+  let radios = document.querySelectorAll('input[type="radio"]');
+    radios.forEach(function(radio) {
+    radio.checked = false;
+  });
+
+  let trans_ansNum = document.getElementsByName("ftrans_ansNum");
+  trans_ansNum.forEach(function(inputNumber) {
+    inputNumber.value = '';
+  });
+}
+
 function noncovcomp(x) {
   if (x === 'y') {
     if (document.getElementById("trans_ans8g").checked) {
@@ -213,6 +230,7 @@ function saveDiag(property,id) {
       localStorage.setItem('transauthPage', '3');
     } else if (transauthPage === '3') {
       finishtransAuth();
+      return;
     }
   }
   if (property === 'back') {
@@ -230,10 +248,12 @@ function saveDiag(property,id) {
     }
   }
   if (property === 'cancel') {
+    uncheck_All();
     document.getElementById('module_trans_7').classList.remove('trsnActive');
     document.getElementById('module_trans_4').classList.remove('trsnActive');
     document.getElementById('module_trans_1').classList.add('trsnActive');
     document.getElementById("module_trans_backing").classList.remove("trsnActive");
+    return;
   }
 }
 
@@ -268,7 +288,7 @@ function finishtransAuth() {
     pan: ".X for pan drop ",
     pull: ".3 for code pull ",
     data: ".2 for data monitoring ",
-    spark: " Electrical tests: " + Diag.spark + " @ .3 each is " + testElec + " ",
+    spark: " Electrical tests: " + Diag.spark + " @ .3 each is " + Math.round(testElec) + " ",
     point: ".4 for pinpoint test. "
     };
   let transAuth1 = "No inspection needed as the Repair Facility diagnostic matches Contract Holder concern.\rThe repair Facility sent supporting photos showing excessive metal debris present.";
@@ -290,6 +310,11 @@ function finishtransAuth() {
   let noncovTrans1 = "Will inform Contract Holder of non-covered components";
   let noncovTrans2 = "There were denied items on this claim.\rReview denial note for more details";
   let outputString = "Verified internal failure to the transmission using the Repair Facility supplied diagnostic and photos.\rThe transmission has coverage under the terms of the contract.\rVerified OEM parts using Forte and AM parts using PA.\rUsed in-house sourcing to determine the MCE option.\rThe MCE option is a ";
+
+  if (trans_Ans_1.value === null) {
+    uncheck_All();
+    return;
+  }
   outputString += trans_Ans_1.value + " unit from " + trans_Ans_2.value + " for $" + cost.toFixed(2) + ".\r" + beenVerified;
   for (let property in Diag) {
     if (Diag.hasOwnProperty(property)) {
@@ -307,24 +332,20 @@ function finishtransAuth() {
   }
   if (document.getElementById("trans_ans3d").checked == true) {
     outputString += transAuth1 + "\r" + recordsTrans1 + "\r";
-    document.getElementById("trans_ans3d").checked = false;
   } 
   if (document.getElementById("trans_ans3a").checked == true) {
     outputString += transAuth2 + "\r";
     addOn = true;
     addOnrec = true;
-    document.getElementById("trans_ans3a").checked = false;
   } 
   if (document.getElementById("trans_ans3b").checked == true) {
     outputString += transAuth3 + "\r";
     addOn = true;
     addOnrec = true;
-    document.getElementById("trans_ans3b").checked = false;
   } 
   if (document.getElementById("trans_ans3c").checked == true) {
     outputString += recordsTrans2 + "\r";
     addOn = true;
-    document.getElementById("trans_ans3c").checked = false;
   } 
   if(addOnrec) {
     outputString += recordsTrans1 + "\r";
@@ -336,16 +357,13 @@ function finishtransAuth() {
   if (!trans_ans9a.checked) {
     if (document.getElementById("trans_ans8d").checked) {
       outputString += oopcsTrans4 + "\r" + oopcsTrans4a + rfName + "\r";
-      document.getElementById("trans_ans8d").checked = false;
     } else if (document.getElementById("trans_ans8b").checked) {
       outputString += oopcsTrans3 + "\r" + oopcsTrans3a + "\r";
-      document.getElementById("trans_ans8b").checked = false;
     } else if (document.getElementById("trans_ans8a").checked || document.getElementById("trans_ans8c").checked) {
       let oopcCausep = document.getElementById("trans_ans8h");
       let oopcCausel = document.getElementById("trans_ans8i");
       let oopcCauseb = document.getElementById("trans_ans8j");
       let oopcAmt1 = document.getElementById("trans_ans8k").value;
-      document.getElementById("trans_ans8k").value = "";
       let num = parseFloat(oopcAmt1);
       if (isNaN(num)) {
         alert("Please enter a valid amount for OOPC");
@@ -384,6 +402,7 @@ function finishtransAuth() {
   }
   copy(outputString);
   document.getElementById("module_trans_backing").classList.remove("trsnActive");
+  uncheck_All();
   return;
 }
 
@@ -568,6 +587,11 @@ function statNOTE() {
 }
 
 function cancelStat() {
+  uncheck_All();
+  document.getElementById("optionalNote").value = "";
+  document.getElementById("stat6text").value = "";
+  document.getElementById("stat10text").value = "";
+  document.getElementById("stat14text").value = "";
   let statNote = document.getElementById("statNote");
   let statNoteinner = document.getElementById("statNoteinner");
   statNote.style.display = "none";
@@ -997,7 +1021,7 @@ function NOANSREC(btnID) {
 
 function INSPTEMP(btnID) {
   let InsTemp = "Technician states:\r\rPart failure\rPart failure\rPart failure\r\rPlease have the technician demonstrate the failures listed above.\r\rNotate if rust, corrosion, or any outside influence is the cause of failure.\rNotate available fluid levels and conditions.\rFor electrical components, have technician verify power and ground.\r\rPlease take pictures of the following:\r";
-  InsTemp += "All failures.\rAll 4 sides of vehicle, vin, and odometer.\rInspection stickers and oil change stickers.\rWheels, tires, and rotors.\rAny dash light that are on, current or history DTCs, and any freeze frame data available.\rAny signs of commercial use or modifications.\rAny rust, corrosion, or collision damage.\rAny other information relevant to the failures.\r\rPlease contact the Repair Facility 1-2 hours before arrival.\r\rContact Name:\rEmail:\rDirect Line:";
+  InsTemp += "All failures.\rAll 4 sides of vehicle, vin, and odometer.\rInspection stickers and oil change stickers.\rWheels, tires, and rotors.\rAny dash light that are on, current or history DTCs, and any freeze frame data available.\rAny signs of commercial use or modifications.\rAny rust, corrosion, or collision damage.\rAny other information relevant to the failures.\r\rIf the failure is related to drivability or verification is noise based, please provide video verification.\r\rPlease contact the Repair Facility 1-2 hours before arrival.\r\rContact Name:\rEmail:\rDirect Line:";
   let Check = localStorage.getItem(btnID + "EDIT");
   if (Check == null) {
     document.getElementById("textarea5").value = InsTemp;
