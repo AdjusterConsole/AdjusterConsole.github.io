@@ -1,5 +1,18 @@
 README
 
+Adjuster Console Version 3.0.0
+Update:
+Major Change:
+ For PT Adjusters, there is a key combo that you can press to activate a different view.
+ There are several additional buttons and a few modified.
+ There is a Transmission Auth note.
+ There is a 'one-click' denial note specifically for rings stuck due to carbon.
+ There are now 3 individual review notes.
+ The inspection template was expanded and rewritten.
+Minor Change:
+ Modified colors to be more crisp in Neumorphic.
+ Spelling and punctuation errors fixed.
+
 Adjuster Console Version 2.7.5
 Update:
 Minor Change:
