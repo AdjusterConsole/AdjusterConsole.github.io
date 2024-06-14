@@ -25,12 +25,7 @@ f {
 }
 
 div {
-  background: white;
-  background: linear-gradient(35deg,
-    var(--my-accent-color) 0%,
-    white 30%,
-    white 70%,
-    var(--my-accent-color) 100%);
+  background: var(--my-accent-color);
   border-radius: 5px;
   box-shadow:
   inset 0px 0px 10px 4px var(--my-shadow-color2),
@@ -161,6 +156,9 @@ input[type="color"] {
 
 .astext:active {
   box-shadow: none;
+  text-decoration:none;
+  background: none;
+  border: none;
   text-shadow: 1px 1px 2px red;
 }
 

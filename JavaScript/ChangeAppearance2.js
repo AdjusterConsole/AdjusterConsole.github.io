@@ -194,6 +194,26 @@ function setColor(colors) {
         lightbackground: "#c5edc6"
       });
       break;
+    case "pink":
+      Object.assign(colorSet, {
+        background: "#d585d3",
+        accent: "#330031",
+        shadow1: "#ffb9ff",
+        shadow2: "#ed9deb",
+        shadow3: "#bd6dbb",
+        shadow4: "#a14b9f",
+        glow: "#FFFFFF",
+        text: "#FFFFFF",
+        outline: "#000000",
+        hover: "#33003132",
+        active: "#33003160",
+        light: "#ffdaff",
+        medlight: "#ffcbff",
+        meddark: "#eda7ed",
+        dark: "#de98de",
+        lightbackground: "#ffb9ff"
+      });
+      break;
   }
 
   localStorage.setItem("colorSet2", JSON.stringify(colorSet));
