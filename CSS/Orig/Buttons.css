@@ -348,6 +348,7 @@ input.ptRad {
 #newAuthstyle {
   position: absolute;
   display: inline-block;
+  background: var(--fancy-background);
   padding: 15px;
   top: 150px;
   left: 40px;
