@@ -35,43 +35,20 @@ function setVer(x) {
 }
 
 function checkOpen() {
-  let TPDiv = document.getElementById("TPDiv");
-  let statNote = document.getElementById("statNote");
-  let Snippings = document.getElementById("Snippings");
-  let RFIBDH = document.getElementById("RFIBDH");
-  let RFIBND = document.getElementById("RFIBND");
-  let TGAFOBTN = document.getElementById("TGAFOBTN");
-  let TGAFOABTN = document.getElementById("TGAFOABTN");
-  let TGAFSABTN = document.getElementById("TGAFSABTN");
-  let TGAFOSABTN = document.getElementById("TGAFOSABTN");
-  let newAuthstyle = document.getElementById("newAuthstyle");
-  let resrcDiv = document.getElementById("resrcDiv");
-
-  if (Snippings.style.display == "inline-block") {
-    return true;
-  } else if (RFIBDH.style.display == "inline-block") {
-    return true;
-  } else if (TGAFOSABTN.style.display == "inline-block") {
-    return true;
-  } else if (RFIBND.style.display == "inline-block") {
-    return true;
-  } else if (TGAFOBTN.style.display == "inline-block") {
-    return true;
-  } else if (TGAFOABTN.style.display == "inline-block") {
-    return true;
-  } else if (TGAFSABTN.style.display == "inline-block") {
-    return true;
-  } else if (statNote.style.display == "inline-block") {
-    return true;
-  } else if (newAuthstyle.style.display == "inline-block") {
-    return true;
-  } else if (TPDiv.style.display == "inline-block") {
-    return true;
-  } else if (resrcDiv.style.display == "inline-block") {
-    return true;
-  } else {
-  return false;
-  }
+  const elements = [
+    document.getElementById("TPDiv"),
+    document.getElementById("statNote"),
+    document.getElementById("Snippings"),
+    document.getElementById("RFIBDH"),
+    document.getElementById("RFIBND"),
+    document.getElementById("TGAFOBTN"),
+    document.getElementById("TGAFOABTN"),
+    document.getElementById("TGAFSABTN"),
+    document.getElementById("TGAFOSABTN"),
+    document.getElementById("newAuthstyle"),
+    document.getElementById("resrcDiv")
+  ];
+  return elements.some(el => el.style.display === "inline-block");
 }
 
 function getContact(whichInfo) {
@@ -82,21 +59,20 @@ function getContact(whichInfo) {
   let end = start + lines[whichOne].length;
   textarea.focus();
   textarea.setSelectionRange(start, end);
-  let tempStr = window.getSelection();
-  document.getElementById("textarea4").value = tempStr;
-  let fullString = document.getElementById("textarea4").value;
-  let contactString = fullString.slice(9);
-  let bananaMilkshake = contactString.trim();
-  return bananaMilkshake;
+  let tempStr = textarea.value.substring(start, end).trim();
+  return tempStr.slice(9).trim();
 }
 
 function MENU() {
-  let theMenu = document.getElementById("LOCK1");
-  let BtnBuilder = document.getElementById("BtnBuilder");
-  let appearance = document.getElementById("appearance");
-  let menuOpen = localStorage.getItem("menuOpen");
-  document.getElementById("EDITarea").value = "";
-  if (menuOpen == 'false') {
+  const theMenu = document.getElementById("LOCK1");
+  const BtnBuilder = document.getElementById("BtnBuilder");
+  const appearance = document.getElementById("appearance");
+  const menuOpen = localStorage.getItem("menuOpen") === 'true';
+  const editArea = document.getElementById("EDITarea");
+
+  editArea.value = "";
+
+  if (!menuOpen) {
     theMenu.innerText = "\u2666 Close \u2666";
     appearance.style.top = "45px";
     appearance.style.opacity = '1';
@@ -108,11 +84,11 @@ function MENU() {
     BtnBuilder.style.opacity = '0';
     appearance.style.top = "20px";
     appearance.style.opacity = '0';
-    let page = localStorage.getItem('currentVer');
     theMenu.innerText = "\u2666 Settings \u2666";
     localStorage.setItem("menuOpen", "false");
   }
 }
+
 
 function transAuth() {
   document.getElementById("module_trans_backing").classList.add("trsnActive");

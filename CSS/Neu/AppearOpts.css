@@ -116,6 +116,13 @@ button:active {
   left: 90px;
 }
 
+#presetPink {
+  position: absolute;
+  display: inline-block;
+  top: 755px;
+  left: 90px;
+}
+
 #appearDiv {
   font-size: 18px;
   top: 50px;
