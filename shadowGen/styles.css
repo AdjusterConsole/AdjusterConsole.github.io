@@ -280,7 +280,7 @@ input[type="text"] {
 }
 
 .input-with-buttons input[type="number"] {
-  width: 30px;
+  width: 35px;
   padding: 8px;
   font-size: 14px;
   border: 1px solid #ccc;
