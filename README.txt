@@ -1,94 +1,5 @@
 README
 
-Adjuster Console Version 3.0.0
-Update:
-Major Change:
- For PT Adjusters, there is a key combo that you can press to activate a different view.
- There are several additional buttons and a few modified.
- There is a Transmission Auth note.
- There is a 'one-click' denial note specifically for rings stuck due to carbon.
- There are now 3 individual review notes.
- The inspection template was expanded and rewritten.
-Minor Change:
- Modified colors to be more crisp in Neumorphic.
- Spelling and punctuation errors fixed.
-
-Adjuster Console Version 2.7.5
-Update:
-Minor Change:
- The Labor Script has an instructions button.
-  Click to open, click again to close.
- The Labor Script exit button was moved to the bottom right corner.
- The General Notes will auto-close after 5 seconds once the note displays.
-  The note is still copied and ready to paste, you just no longer have to manually reset it.
- The Authorization note will no longer display in the lower text area.
-  The note is still copied and ready to paste, it just doesn't display.
- Rearranged the order of the Side Menu to put the items used the most toward the top and lesser used tools further down.
-Bug Fixes:
- Modified shadows and colors on Neumorphic to interfere less in close proximity.
- Fixed spelling, punctuation, and grammar.
- Cleaned up and made the output of notes more readable.
-
-Adjuster Console Version 2.2.2
-Update:
-Minor Change:
- Added 'Save All' button in the tracker tool.
- Changed Reset function to clear checkboxes in Tracker tool.
-Bug Fixes:
- Removed error for needing to save inception first.
- Cleaned up and labelled code sections.
-
-Adjuster Console Version 2.0.0
-Update:
-Major Change:
- Created a CH Statement program to replace the simple copy/paste template.
-Bug Fixes:
- Minor spelling and spacing errors.
-
-Adjuster Console Version 1.8.9
-Update:
-Bug Fixes:
- Clicking 'Add Note' while there is a note open no longer shows an error.
-  The open note will save, close, and the other note will open.
- Clicking 'Save' for the record while a note is open will no longer show an error.
-  The open note will save and close.
- A blank note will no longer erroneously show as having a note stored.
- The default state for the inception marker on the first record is now 'checked'.
- The default for dates and mileage is now blank except for the Claim/Service date which displays todays date.
-
-Adjuster Console Version 1.8.4
-Update:
-Minor Change:
- Removed double-click to open SOP menu.
- Changed table in Diag Assistance
-  Removed inputs in favor of using cells innerText with contenteditable for notes.
-   Changed background of those cells to white.
-   Added border of page background color to those cells
- Added buttons to Diag Assistance.
-  'Clear' button will reset all cells in the table to blank, as well as the note textarea at the bottom.
-  'Copy' button retrieves all questions, answers, and the note, compiles them, and sends them to the clipboard.
- Removed note display from Tracker Tool output table.
-  Table will display 'True' if there is a note, 'False' if not.
-  Notes will be displayed in "Note Format' option.
-Bug Fixes:
- Used event handlers to stop enter key from adding a div in notes.
-
-Adjuster Console Version 1.4.3
-Update:
-Minor Changes:
- Disabled custom buttons and button modifications.
-  Removed those items from menu.
- Disabled right-click menu.
-  Right-click now opens side-nav menu.
- Double-click opens SOP menu.
- Moved page style link to top-center of page.
-Bug Fixes:
- Fixed Inception Calculation to AAS calculations formula.
- Fixed certain output errors while performing Tracker Tasks.
- Fixed spacing issue on side-nav menu.
-
-
-
 Story and Goals:
 This program started as a way to copy and paste preset blocks of text by just clicking a button.
 It has grown to include templates, tools, SOPs, and dynamic note generation.
@@ -238,6 +149,93 @@ In regular or light mode. Anything but dark mode.
 
 Questions, concerns, issues, suggestions, etc
 AdjusterConsole@gmail.Com
+
+Adjuster Console Version 3.0.0
+Update:
+Major Change:
+ For PT Adjusters, there is a key combo that you can press to activate a different view.
+ There are several additional buttons and a few modified.
+ There is a Transmission Auth note.
+ There is a 'one-click' denial note specifically for rings stuck due to carbon.
+ There are now 3 individual review notes.
+ The inspection template was expanded and rewritten.
+Minor Change:
+ Modified colors to be more crisp in Neumorphic.
+ Spelling and punctuation errors fixed.
+
+Adjuster Console Version 2.7.5
+Update:
+Minor Change:
+ The Labor Script has an instructions button.
+  Click to open, click again to close.
+ The Labor Script exit button was moved to the bottom right corner.
+ The General Notes will auto-close after 5 seconds once the note displays.
+  The note is still copied and ready to paste, you just no longer have to manually reset it.
+ The Authorization note will no longer display in the lower text area.
+  The note is still copied and ready to paste, it just doesn't display.
+ Rearranged the order of the Side Menu to put the items used the most toward the top and lesser used tools further down.
+Bug Fixes:
+ Modified shadows and colors on Neumorphic to interfere less in close proximity.
+ Fixed spelling, punctuation, and grammar.
+ Cleaned up and made the output of notes more readable.
+
+Adjuster Console Version 2.2.2
+Update:
+Minor Change:
+ Added 'Save All' button in the tracker tool.
+ Changed Reset function to clear checkboxes in Tracker tool.
+Bug Fixes:
+ Removed error for needing to save inception first.
+ Cleaned up and labelled code sections.
+
+Adjuster Console Version 2.0.0
+Update:
+Major Change:
+ Created a CH Statement program to replace the simple copy/paste template.
+Bug Fixes:
+ Minor spelling and spacing errors.
+
+Adjuster Console Version 1.8.9
+Update:
+Bug Fixes:
+ Clicking 'Add Note' while there is a note open no longer shows an error.
+  The open note will save, close, and the other note will open.
+ Clicking 'Save' for the record while a note is open will no longer show an error.
+  The open note will save and close.
+ A blank note will no longer erroneously show as having a note stored.
+ The default state for the inception marker on the first record is now 'checked'.
+ The default for dates and mileage is now blank except for the Claim/Service date which displays todays date.
+
+Adjuster Console Version 1.8.4
+Update:
+Minor Change:
+ Removed double-click to open SOP menu.
+ Changed table in Diag Assistance
+  Removed inputs in favor of using cells innerText with contenteditable for notes.
+   Changed background of those cells to white.
+   Added border of page background color to those cells
+ Added buttons to Diag Assistance.
+  'Clear' button will reset all cells in the table to blank, as well as the note textarea at the bottom.
+  'Copy' button retrieves all questions, answers, and the note, compiles them, and sends them to the clipboard.
+ Removed note display from Tracker Tool output table.
+  Table will display 'True' if there is a note, 'False' if not.
+  Notes will be displayed in "Note Format' option.
+Bug Fixes:
+ Used event handlers to stop enter key from adding a div in notes.
+
+Adjuster Console Version 1.4.3
+Update:
+Minor Changes:
+ Disabled custom buttons and button modifications.
+  Removed those items from menu.
+ Disabled right-click menu.
+  Right-click now opens side-nav menu.
+ Double-click opens SOP menu.
+ Moved page style link to top-center of page.
+Bug Fixes:
+ Fixed Inception Calculation to AAS calculations formula.
+ Fixed certain output errors while performing Tracker Tasks.
+ Fixed spacing issue on side-nav menu.
 
 Licensing:
 Restricted Use License
