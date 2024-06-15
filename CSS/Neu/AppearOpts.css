@@ -123,11 +123,18 @@ button:active {
   left: 90px;
 }
 
+#shadMaker {
+  position: absolute;
+  display: inline-block;
+  top: 805px;
+  left: 90px;
+}
+
 #appearDiv {
   font-size: 18px;
-  top: 50px;
+  top: 25px;
   left: 150px;
-  height: 800px;
+  height: 850px;
   width: 600px;
   position: absolute;
   display: inline-block;

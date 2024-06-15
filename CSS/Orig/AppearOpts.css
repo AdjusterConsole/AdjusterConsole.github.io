@@ -216,3 +216,12 @@ button:active {
   width: 300px;
   text-align: center;
 }
+
+#shadMaker {
+  position: absolute;
+  display: inline-block;
+  top: 400px;
+  right: 85px;
+  width: 150px;
+  height: 50px;
+}

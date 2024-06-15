@@ -24,6 +24,10 @@ function swapPage(x) {
   }
 }
 
+function shadMaker() {
+  window.location.href = "shadowGen/shadIndex.html";
+}
+
 function setVer(x) {
   if (x == '1') {
     localStorage.setItem('currentVer', '1');
