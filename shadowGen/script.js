@@ -86,12 +86,20 @@ sizeIncrementBtn.addEventListener('click', () => adjustSize(1));
 function updateCSS(sortedShadows = []) {
   const xOffset = parseInt(xOffsetInput.value);
   const yOffset = parseInt(yOffsetInput.value);
+  const xOffset2 = xOffset * -1;
+  const yOffset2 = yOffset * -1;
+
   const blur = parseInt(blurInput.value);
   const spread = parseInt(spreadInput.value);
   const baseColorInput = document.getElementById('baseColor');
+
+
+
   const boxShadow = shadowToggle.checked ?
-    `\n${xOffset}px ${yOffset}px ${blur}px ${spread}px ${color2Display.style.backgroundColor},\n-${xOffset}px -${yOffset}px ${blur}px ${spread}px ${color1Display.style.backgroundColor}` :
+    `\n${xOffset}px ${yOffset}px ${blur}px ${spread}px ${color2Display.style.backgroundColor},\n${xOffset2}px ${yOffset2}px ${blur}px ${spread}px ${color1Display.style.backgroundColor}` :
     `\n${xOffset}px ${yOffset}px ${blur}px ${spread}px ${color2Display.style.backgroundColor}`;
+
+
 
   let background;
   if (backgroundToggle.checked) {
