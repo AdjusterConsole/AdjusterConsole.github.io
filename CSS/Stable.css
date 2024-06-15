@@ -204,7 +204,7 @@ input[type="color"] {
 
 .IBOBC2:active {
   transition: all 0.2s ease;
-  background: var(--my-background-color));
+  background: var(--my-background-color);
   box-shadow:
     inset -2px -2px 5px var(--my-shadow-color1),
     inset 2px 2px 5px var(--my-shadow-color4);

@@ -93,7 +93,6 @@ function MENU() {
   }
 }
 
-
 function transAuth() {
   document.getElementById("module_trans_backing").classList.add("trsnActive");
   localStorage.setItem('transauthPage', '1');
@@ -270,7 +269,7 @@ function finishtransAuth() {
     data: ".2 for data monitoring ",
     spark: " Electrical tests: " + Diag.spark + " @ .3 each is " + Math.round(testElec) + " ",
     point: ".4 for pinpoint test. "
-    };
+  };
   let transAuth1 = "No inspection needed as the Repair Facility diagnostic matches Contract Holder concern.\rThe repair Facility sent supporting photos showing excessive metal debris present.";
   let transAuth2 = "An inspection was sent to verify failures.\rI have reviewed report and inspection photos.\rThe inspection review note is completed.";
   let transAuth3 = "Requested and reviewed photos from Repair Facility.\rPhoto review note is completed.";
@@ -724,49 +723,49 @@ function requestOptions(stage) {
 }
 
 function issuesOptions(stage) {
-    let oopcsAuth1 = "Need to review OOPC of $";
-    let oopcsAuth2a = " with Contract Holder.";
-    let oopcsAuth2b = " and shipping option with Contract Holder.";
-    let oopcsAuth2c = "OOPC is due to differences in ";
-    let oopcsAuth3 = "Need to review shipping option with Contract Holder.";
-    let oopcsAuth3a = "Have not given authorization info to the Repair Facility at this time.";
-    let oopcsAuth4 = "Contract Holder has no OOPC besides deductible.";
-    let oopcsAuth4a = "Gave authorization info and payment instructions to ";
+  let oopcsAuth1 = "Need to review OOPC of $";
+  let oopcsAuth2a = " with Contract Holder.";
+  let oopcsAuth2b = " and shipping option with Contract Holder.";
+  let oopcsAuth2c = "OOPC is due to differences in ";
+  let oopcsAuth3 = "Need to review shipping option with Contract Holder.";
+  let oopcsAuth3a = "Have not given authorization info to the Repair Facility at this time.";
+  let oopcsAuth4 = "Contract Holder has no OOPC besides deductible.";
+  let oopcsAuth4a = "Gave authorization info and payment instructions to ";
 
-    let rfName = getContact('0');
-    if (document.getElementById("auth13").checked) {
-        stage += oopcsAuth4 + "\r" + oopcsAuth4a + rfName + "\r";
-        finishAuth(stage);
-        return;
+  let rfName = getContact('0');
+  if (document.getElementById("auth13").checked) {
+    stage += oopcsAuth4 + "\r" + oopcsAuth4a + rfName + "\r";
+    finishAuth(stage);
+    return;
+  }
+  if (document.getElementById("auth11").checked) {
+    stage += oopcsAuth3 + "\r" + oopcsAuth3a + "\r";
+    finishAuth(stage);
+    return;
+  }
+  if (document.getElementById("auth10").checked || document.getElementById("auth12").checked) {
+    let oopcCausep = document.getElementById("auth14");
+    let oopcCausel = document.getElementById("auth15");
+    let oopcCauseb = document.getElementById("auth16");
+    let oopcAmt1 = document.getElementById("auth17").value;
+    document.getElementById("auth17").value = "";
+    let num = parseFloat(oopcAmt1);
+    if (isNaN(num)) {
+      alert("Please enter a valid amount for OOPC");
+      return;
     }
-    if (document.getElementById("auth11").checked) {
-        stage += oopcsAuth3 + "\r" + oopcsAuth3a + "\r";
-        finishAuth(stage);
-        return;
-    }
-    if (document.getElementById("auth10").checked || document.getElementById("auth12").checked) {
-        let oopcCausep = document.getElementById("auth14");
-        let oopcCausel = document.getElementById("auth15");
-        let oopcCauseb = document.getElementById("auth16");
-        let oopcAmt1 = document.getElementById("auth17").value;
-        document.getElementById("auth17").value = "";
-        let num = parseFloat(oopcAmt1);
-        if (isNaN(num)) {
-            alert("Please enter a valid amount for OOPC");
-            return;
-        }
-        let oopcAmt2 = num.toFixed(2);
-        let oopcAmt = oopcAmt2.toString();
-        let oopcCausedBy;
-        if (oopcCauseb.checked) { oopcCausedBy = "parts and labor."; }
-        if (oopcCausel.checked) { oopcCausedBy = "labor."; }
-        if (oopcCausep.checked) { oopcCausedBy = "parts."; }
-        stage += oopcsAuth1 + oopcAmt;
-        stage += (document.getElementById("auth12").checked ? oopcsAuth2b : oopcsAuth2a) + "\r";
-        stage += oopcsAuth2c + oopcCausedBy + "\r" + oopcsAuth3a + "\r";
-        finishAuth(stage);
-        return;
-    }
+    let oopcAmt2 = num.toFixed(2);
+    let oopcAmt = oopcAmt2.toString();
+    let oopcCausedBy;
+    if (oopcCauseb.checked) { oopcCausedBy = "parts and labor."; }
+    if (oopcCausel.checked) { oopcCausedBy = "labor."; }
+    if (oopcCausep.checked) { oopcCausedBy = "parts."; }
+    stage += oopcsAuth1 + oopcAmt;
+    stage += (document.getElementById("auth12").checked ? oopcsAuth2b : oopcsAuth2a) + "\r";
+    stage += oopcsAuth2c + oopcCausedBy + "\r" + oopcsAuth3a + "\r";
+    finishAuth(stage);
+    return;
+  }
 }
 
 function showOOPopt() {

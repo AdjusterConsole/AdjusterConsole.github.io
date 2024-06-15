@@ -101,12 +101,10 @@ For inquiries regarding licensing or permission to use this code in ways not cov
 .left.diagTop {
   float: left;
   width: 55%;
-  display: inline-block;
 }
 
 .right.diagTop {
   float: right;
-  display: inline-block;
   background: none;
   box-shadow: none;
   background-repeat: no-repeat;
