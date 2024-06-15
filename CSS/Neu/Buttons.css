@@ -78,12 +78,6 @@ For inquiries regarding licensing or permission to use this code in ways not cov
   top: 280px;
 }
 
-#theHoldup {
-  left: 235px;
-  bottom: 55px;
-  border-left: 2px solid var(--my-accent-color);
-}
-
 .backing {
   position: absolute;
   display: inline-block;
@@ -106,19 +100,11 @@ For inquiries regarding licensing or permission to use this code in ways not cov
 #statNoteinner {
   font-size: 16px;
   width: 40%;
-  height: 80%;
+  height: 88%;
   padding: 15px;
   margin: 15px;
   transition: .4s;
   transition-delay: .1s;
-}
-
-.newStyle.lftmid {
-  bottom: 300px;
-  right: 70px;
-  position: absolute;
-  display: inline-block;
-  padding: 15px;
 }
 
 .newStatus {
@@ -135,23 +121,13 @@ For inquiries regarding licensing or permission to use this code in ways not cov
   outline: none;
 }
 
-#littleHelp {
-  position: absolute;
-  display: inline-block;
-  font-size: 13px;
-  width: 40%;
-  height: 20%;
-  bottom: 75px;
-  right: 60px;
-}
-
 .newStyle.rgtupr {
-  top: 30px;
+  top: 90px;
   right: 45px;
   position: absolute;
   display: inline-block;
   padding: 10px;
-  height: 30%;
+  height: 55%;
   width: 40%;
 }
 
@@ -165,7 +141,7 @@ For inquiries regarding licensing or permission to use this code in ways not cov
   top: 15px;
   left: 15px;
   width: 92%;
-  height: 90%;
+  height: 60%;
 }
 
 #statusNote {

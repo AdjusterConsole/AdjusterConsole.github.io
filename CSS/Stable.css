@@ -582,3 +582,28 @@ input[type="color"] {
   position: ABSOLUTE;
   display: inline-block;
 }
+
+#copy-notification {
+  position: fixed;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 140px;
+  height: 40px;
+  background-color: var(--my-background-color);
+  color: var(--glow-txt-color);
+  font-size: 18px;
+  text-shadow:
+    1px 1px var(--glow-outline-color),
+   -1px -1px var(--glow-outline-color),
+   -1px 1px var(--glow-outline-color),
+    1px -1px var(--glow-outline-color);
+  border: 2px solid var(--my-accent-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  transition: top 0.4s ease-in-out;
+  box-shadow:none;
+  z-index:1000000;
+}

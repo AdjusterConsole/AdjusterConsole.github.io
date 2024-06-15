@@ -131,18 +131,30 @@ function TGAFOSC(btnID) {
 }
 
 async function copyText() {
+  const notification = document.getElementById('copy-notification');
   let text = document.getElementById("Snippings").value;
   try {
     await navigator.clipboard.writeText(text);
+
     setTimeout(function(){ setButtonDisplay(["Snippings"], "none"); }, 5000);
+      notification.style.top = '0';
+      setTimeout(() => {
+      notification.style.top = '-50px';
+    }, 800);
+
   } catch (err) {
     console.error('Failed to copy text: ', err);
   }
 }
 
 async function copy(text) {
+  const notification = document.getElementById('copy-notification');
   try {
     await navigator.clipboard.writeText(text);
+    notification.style.top = '0';
+    setTimeout(() => {
+      notification.style.top = '-50px';
+    }, 800);
   } catch (err) {
     console.error('Failed to copy text: ', err);
   }
@@ -876,7 +888,6 @@ document.onkeyup = function(e) {
   }
 };
 
-
 function RESET() {
   localStorage.setItem("newpartcount","2");
   document.getElementById("textarea1").value = "CONTACT:   \rPAYMENT:   \rZIPCODE:   \rMILEAGE:   \rDISTANCE:   \rTIME:   ";
@@ -888,7 +899,6 @@ function RESET() {
   cancelNewauth();
   cancelPT();
 }
-
 
 document.addEventListener('keydown', function(e) {
   if (e.key === 'Escape' || e.key === 'Esc') {
@@ -920,14 +930,23 @@ function whiteRabbit() {
 
 document.onkeyup = function(e) {
   if (e.ctrlKey && e.altKey && e.shiftKey && e.which == 80) {
+
+    let mode = localStorage.getItem("mode");
+  if (mode === '2') {
+    localStorage.setItem('mode', '1');
     modePT();
+    return;   
+  } else {
+    localStorage.setItem('mode', '2');
+    modePT();
+    return;
   }
+ }
 };
 
 function modePT() {
   let mode = localStorage.getItem("mode");
   if (mode === '1') {
-    localStorage.setItem("mode", "2");
     document.getElementById("ITSBRITTNEY").style.display = "none";
     document.getElementById("openScript").style.display = "none";
     document.getElementById("PTModeDiv").style.display = "inline-block";
@@ -941,8 +960,9 @@ function modePT() {
     document.getElementById("T0").style.display = "none";
     document.getElementById("Request").style.left = "400px";
     document.getElementById("Request").style.top = "50px";
-  } else  if (mode === '2') {
-    localStorage.setItem("mode", "1");
+    return;
+  } 
+  if (mode === '2') {
     document.getElementById("ITSBRITTNEY").style.display = "inline-block";
     document.getElementById("openScript").style.display = "inline-block";
     document.getElementById("PTModeDiv").style.display = "none";
@@ -956,8 +976,9 @@ function modePT() {
     document.getElementById("T0").style.display = "";
     document.getElementById("Request").style.left = "";
     document.getElementById("Request").style.top = "";
+    return;
   }
-
+ alert("You Broke It.");
 }
 
 

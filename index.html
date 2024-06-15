@@ -130,6 +130,7 @@ body {
 </style>
 </head>
 <body>
+<div id="copy-notification">Copied!</div>
 <div id="pdiv" class="noShow"><p></div>
 <button class="swapVer" onclick="swapPage('2')">Neumorphic</button>
 
@@ -471,58 +472,35 @@ body {
                                                 <!-- Status Note -->
 
   <div id="statNote" class="backing">
-  <div id="statNoteinner" class="newStyle">
-    <p style="text-align:center;margin-top:10px;"><b>Status Note</b></p>
-    <p>What are we waiting on?</p>
-    <p class="bodyTab">
-      <input type="radio" value="inspection" class="newStatus Mradio" name="waitfor" id="stat1"><label for="stat1">Inspection</label><br>
-      <input type="radio" value="photos" class="newStatus Mradio" name="waitfor" id="stat2"><label for="stat2">Photos</label><br>
-      <input type="radio" value="records" class="newStatus Mradio" name="waitfor" id="stat3"><label for="stat3">Records</label><br>
-      <input type="radio" value="CH statement" class="newStatus Mradio" name="waitfor" id="stat4"><label for="stat4">CH statement</label><br>
-      <input type="radio" value="review" class="newStatus Mradio" name="waitfor" id="stat5"><label for="stat5">Review</label><br>
-      <input type="radio" class="newStatus Mradio" name="waitfor" id="stat6"><label for="stat6">Other</label><input type="text" class="newStatus" id="stat6text" style="margin-left:15px;">
-    </p>
-    <p>From whom?</p>
-    <p class="bodyTab">
-      <input type="radio" value="Contract Holder" class="newStatus Mradio" name="onwho" id="stat7" required><label for="stat7">Contract Holder</label><br>
-      <input type="radio" value="Repair Facility" class="newStatus Mradio" name="onwho" id="stat8"><label for="stat8">Repair Facility</label><br>
-      <input type="radio" value="AAS" class="newStatus Mradio" name="onwho" id="stat9"><label for="stat9">AAS</label><br>
-      <input type="radio" class="newStatus Mradio" name="onwho" id="stat10"><label for="stat10">Other</label><input type="text" class="newStatus" id="stat10text" style="margin-left:15px;">
-    </p>
-    <p>Why?</p>
-    <p class="bodyTab">
-      <input type="checkbox" value="rule out pre-x" class="newStatus largerCheckbox" name="butYtho" id="stat11"><label for="stat11">To rule out pre-x</label><br>
-      <input type="checkbox" value="verify failure" class="newStatus largerCheckbox" name="butYtho" id="stat12"><label for="stat12">To verify failure</label><br>
-      <input type="checkbox" value="correct VIN or mileage issue" class="newStatus largerCheckbox" name="butYtho" id="stat13"><label for="stat13">To correct VIN or mileage issue</label><br>
-      <input type="checkbox" class="newStatus largerCheckbox" name="butYtho" id="stat14"><label for="stat14">Other</label><input type="text" class="newStatus" id="stat14text" style="margin-left:15px;">
-    </p>
-    <p>Do they know what we're looking for<br>and how to get it to us?</p>
-    <p class="bodyTab">
-      <input type="radio" value="yes" class="newStatus Mradio" name="aware" id="stat15" required><label for="stat15">Yes</label><br>
-      <input type="radio" value="no" class="newStatus Mradio" name="aware" id="stat16"><label for="stat16">No</label><br>
-    </p>
-    <button id="theHoldup" class="wefwefwef" onclick="submitStat('1')">Another One?</button>
-  </div>
-  <div id="optional" class="newStyle rgtupr">
-    <p class="bodyTab" style="font-size:16px;">
-      Any relevant info?<br>
-      What are the next steps?<br>
-      Anything to look out for?<br>
-      Any notes, in general?<br>
-    <textarea id="optionalNote" class="statText"></textarea>
-    </p>
+    <div id="statNoteinner" class="newStyle">
+      <p style="text-align:center;margin-top:10px;"><b>Status Note</b></p>
+      <p>What are we waiting on?</p>
+      <p class="bodyTab">
+        <input type="checkbox" class="newStatus largerCheckbox" name="statNotebox" id="stat1"><label for="stat1">Inspection to Verify Failure.</label><br>
+        <input type="checkbox" class="newStatus largerCheckbox" name="statNotebox" id="stat2"><label for="stat2">Records from the CH.</label><br>
+        <input type="checkbox" class="newStatus largerCheckbox" name="statNotebox" id="stat3"><label for="stat3">Statement from CH.</label><br>
+        Photos from the RF to<br>
+        <input type="checkbox" class="newStatus largerCheckbox" name="statNotebox" id="stat4"><label for="stat4">Verify Failure</label><br>    
+        <input type="checkbox" class="newStatus largerCheckbox" name="statNotebox" id="stat5"><label for="stat5">Correct VIN or Mileage Issue</label><br> 
+      </p>
+      <p>Do they know what we're looking for<br>and how to get it to us?</p>
+      <p class="bodyTab">
+        <input type="checkbox" class="newStatus largerCheckbox" name="statNotebox" id="stat6"><label for="stat6">RF knows</label><br>
+        <input type="checkbox" class="newStatus largerCheckbox" name="statNotebox" id="stat7" onclick="highlander('stat8')"><label for="stat7">CH knows</label><br>
+        <input type="checkbox" class="newStatus largerCheckbox" name="statNotebox" id="stat8" onclick="highlander('stat7')"><label for="stat8">Left VM for CH. Tasked CS.</label><br>
+      </p>
+      <p>Have parts and labor been verified<br>and entered into the claim? </p>
+      <p class="bodyTab"><input type="checkbox" id="stat9" class="newStatus largerCheckbox" name="statNotebox">Yes</p>
     </div>
-    <div id="optional2" class="newStyle lftmid" style="font-size:16px;">
-      <p>
-        <input type="checkbox" id="informed" class="newStatus largerCheckbox">
-        The CH and RF should be informed<br>of requests and claim status.<br><br>
-        <input type="checkbox" id="pandlin" class="newStatus largerCheckbox">
-        Parts and labor should be verified<br>and entered into claim. <br><br>
-        <input type="checkbox" id="taskset" class="newStatus largerCheckbox">
-        A task should be set for follow up.
+    <div id="optional" class="newStyle rgtupr">
+      <p class="bodyTab" style="font-size:16px;">
+        Any relevant info?<br>
+        What are the next steps?<br>
+        Anything to look out for?<br>
+        Any notes, in general?<br>
+        <textarea id="optionalNote" class="statText" style="box-shadow:none;"></textarea>
       </p>
     </div>
-    <div id="littleHelp" class="noShow">In the Status Note section, select the options relevant to your claim. If you are waiting on additional items, click 'Another One?' and repeat.<br>Add anything you like in the text area at the top right of the screen.<br>In the section under that, click the boxes next to the procedures you have completed.<br>When finished click 'Submit' to generate your note.</div>
     <button id="submitStat" class="wefwefwef" onclick="submitStat('0')">Submit</button>
     <button id="cancelStat" class="wefwefwef" onclick="cancelStat()">Cancel</button>
   </div>

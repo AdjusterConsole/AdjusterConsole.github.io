@@ -24,10 +24,6 @@ function swapPage(x) {
   }
 }
 
-function shadMaker() {
-  window.location.href = "shadowGen/shadIndex.html";
-}
-
 function setVer(x) {
   if (x == '1') {
     localStorage.setItem('currentVer', '1');
@@ -36,6 +32,10 @@ function setVer(x) {
   } else {
     return;
   }
+}
+
+function shadMaker() {
+  window.location.href = "shadowGen/shadIndex.html";
 }
 
 function checkOpen() {
@@ -559,142 +559,67 @@ function statNOTE() {
   let statNoteinner = document.getElementById("statNoteinner");
   if (statNote.style.display == "inline-block" || checkOpen()) {
     statNote.style.display = "none";
-    statNoteinner.style.height = "0%";
     return;
   }
   statNote.style.display = "inline-block";
-  statNoteinner.style.height = "90%";
 }
 
 function cancelStat() {
   uncheck_All();
   document.getElementById("optionalNote").value = "";
-  document.getElementById("stat6text").value = "";
-  document.getElementById("stat10text").value = "";
-  document.getElementById("stat14text").value = "";
   let statNote = document.getElementById("statNote");
   let statNoteinner = document.getElementById("statNoteinner");
   statNote.style.display = "none";
-  statNoteinner.style.height = "0%";
 }
 
-function submitStat(again) {
-  let optionalNote = document.getElementById("optionalNote").value;
-  let statNote = document.getElementById("statNote");
-  let q1 = document.getElementsByName("waitfor");
-  let q2 = document.getElementsByName("onwho");
-  let q3 = document.getElementsByName("butYtho");
-  let stat6text = document.getElementById("stat6text").value;
-  let stat10text = document.getElementById("stat10text").value;
-  let stat14text = document.getElementById("stat14text").value;
-  let isInformed = document.getElementById("informed");
-  let isPandlin = document.getElementById("pandlin");
-  let isTaskset = document.getElementById("taskset");
-  let ans1 = "";
-  let ans2 = "";
-  let ans3 = "";
-  localStorage.removeItem("num0");
-  localStorage.removeItem("num1");
-  localStorage.removeItem("num2");
-  localStorage.removeItem("num3");
-  let checkedArr = [];
-  for (i = 0; i < q1.length; i++) {
-    if (q1[i].checked) {
-      if(q1[i].id == "stat6") {
-        ans1 = stat6text;
-        checkedArr.push(q1[i]);
-      } else {
-        ans1 = q1[i].value;
-        checkedArr.push(q1[i]);
-      }
+function highlander(elemId) {
+  document.getElementById(elemId).checked = false;
+}
+
+function submitStat() {
+  const checkboxes = ['stat1', 'stat2', 'stat3', 'stat4', 'stat5', 'stat6', 'stat7', 'stat8', 'stat9'];
+  const noteStrings = {
+    'stat1note': 'We are waiting on the inspection to verify failure.\n',
+    'stat2note': 'We are waiting on records from the Contract Holder to determine Pre-X.\n',
+    'stat3note': 'We are waiting for the Contract Holders statement as it may influence the claim outcome.\n',
+    'stat4note': 'verify failure.',
+    'stat5note': 'correct VIN or mileage issue.',
+    'stat6note': 'The Repair facility has been notified.\n',
+    'stat7note': 'The Contract Holder has been notified.\n',
+    'stat8note': 'I was unable to reach the Contract Holder but I left a VM and tasked callbacks.\n',
+    'stat9note': 'Parts and labor are keyed in and verified.\n',
+    'stat4and5CommonNote': 'We are waiting on photos from the Repair Facility to '
+  };
+  let output = '';
+  checkboxes.slice(0, 3).forEach(id => {
+    if (document.getElementById(id).checked) {
+      output += noteStrings[id + 'note'];
+    }
+  });
+  const stat4Checked = document.getElementById('stat4').checked;
+  const stat5Checked = document.getElementById('stat5').checked;
+  const stat9Checked = document.getElementById('stat9').checked;
+  if (stat4Checked || stat5Checked) {
+    output += noteStrings['stat4and5CommonNote'];
+    if (stat4Checked && stat5Checked) {
+      output += noteStrings['stat4note'] + ' and ' + noteStrings['stat5note'] + '\n';
+    } else if (stat4Checked) {
+      output += noteStrings['stat4note'] + '\n';
+    } else if (stat5Checked) {
+      output += noteStrings['stat5note'] + '\n';
     }
   }
-  for (i = 0; i < q2.length; i++) {
-    if (q2[i].checked) {
-      if(q2[i].id == "stat10") {
-        ans2 = stat10text;
-        checkedArr.push(q2[i]);
-      } else {
-        ans2 = q2[i].value;
-        checkedArr.push(q2[i]);
-      }
+  checkboxes.slice(6).forEach(id => {
+    if (document.getElementById(id).checked) {
+      output += noteStrings[id + 'note'];
     }
+  });
+  const optionalText = document.getElementById('optionalNote').value.trim();
+  if (optionalText !== '') {
+    output += optionalText + '\n';
   }
-  for (i = 0; i < q3.length; i++) {
-    if (q3[i].checked) {
-      if(q3[i].id == "stat14") {
-        ans3 = stat14text;
-        localStorage.setItem("num" + i, ans3);
-        checkedArr.push(q3[i]);
-      } else {
-        ans3 = q3[i].value;
-        localStorage.setItem("num" + i, ans3);
-        checkedArr.push(q3[i]);
-      }
-    }
-  }
-  for (i = 0; i < checkedArr.length; i++) {
-    checkedArr[i].checked = false;
-  }
-  document.getElementById("stat6text").value = "";
-  document.getElementById("stat10text").value = "";
-  document.getElementById("stat14text").value = "";
-  if (ans1 != "" && ans2 != "" && ans3 != "") {
-    document.getElementById("textarea5").value += "Waiting on " + ans1 + " from " + ans2 + " in order to ";
-    let addon = 0;
-    if (document.getElementById("stat15").checked) {
-      localStorage.setItem("toldem", "true");
-    }
-    for (i = 0; i < 4; i++) {
-      let ans3 = localStorage.getItem("num" + i);
-      if (ans3 != null) {
-        if (addon != '0') {
-          if (i == '3') {
-            document.getElementById("textarea5").value += " as well as " + ans3;
-          } else {
-            document.getElementById("textarea5").value += " and " + ans3;
-            addon = addon + 1;
-          }
-        } else {
-          document.getElementById("textarea5").value += ans3;
-          addon = addon + 1;
-        }
-      }
-    localStorage.removeItem("num" + i);
-    }
-  }
-  document.getElementById("textarea5").value += ".\r"
-  document.getElementById("stat15").checked = false;
-  document.getElementById("stat16").innerHTML = false;
-  if (again == '1') {
-    return;
-  }
-  if (again == '0') {
-    let toldem = localStorage.getItem("toldem");
-    if (toldem == "true") {
-      document.getElementById("textarea5").value += "They have been informed of the request and given instructions on how to submit.\r";
-      localStorage.setItem("toldem", "false");
-    }
-    if (optionalNote != null) {
-      document.getElementById("textarea5").value += "\r" + optionalNote + "\r\r";
-    }
-    if (isPandlin.checked){
-      document.getElementById("textarea5").value += "Parts and labor are verified and keyed in.\r";
-      isPandlin.checked = false;
-    }
-    if (isInformed.checked){
-      document.getElementById("textarea5").value += "The Repair Facility and Contact Holder have been informed of the claim status.\r";
-      isInformed.checked = false;
-    }
-    if (isTaskset.checked){
-      document.getElementById("textarea5").value += "A task has been set for follow-up.\r\r";
-      isTaskset.checked = false;
-    }
-    let outputString = document.getElementById("textarea5").value;
-    copy(outputString);
-    statNote.style.display = "none";
-    statNoteinner.style.height = "0%";
-  }
+  copy(output);
+  cancelStat();
 }
 
 function showAuth() {
@@ -1486,9 +1411,9 @@ window.onload = function PutItBack() {
   localStorage.setItem("pageNum", "0");
   resetColors();
   trackerBlank();
-  localStorage.setItem("mode", 1);
   let Rev = "Reviewed inspection photos and report.\rReviewed photos sent by repair facility.\rVerified vin.\rVerified mileage.\rNo indication of commercial use.\rNo indication of modification.\r\r";
   localStorage.setItem("Rev", Rev);
+  modePT();
 }
 
 function trackerBlank() {

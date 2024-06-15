@@ -1071,14 +1071,14 @@ input:checked + .slider:before {
   position: absolute;
   display: block;
   right: 170px;
-  bottom: 300px;
+  bottom: 280px;
 }
 
 #trans_ans9al {
   position: absolute;
   display: block;
   right: 210px;
-  bottom: 300px;
+  bottom: 280px;
 }
 
 #trans_ans8k {
