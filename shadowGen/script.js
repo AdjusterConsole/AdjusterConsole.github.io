@@ -116,7 +116,7 @@ function updateCSS(sortedShadows = []) {
 
 function adjustValue(input, increment) {
   let value = parseInt(input.value) + increment;
-  input.value = value; 
+  input.value = value;
   updateCSS();
 }
 
@@ -317,6 +317,7 @@ function updateRGBInputs2() {
     blueInput2.value = b;
   }
 }
+
 
 function updateHexInput() {
   const r = parseInt(redInput.value);

@@ -269,7 +269,7 @@ function finishtransAuth() {
     data: ".2 for data monitoring ",
     spark: " Electrical tests: " + Diag.spark + " @ .3 each is " + Math.round(testElec) + " ",
     point: ".4 for pinpoint test. "
-  };
+    };
   let transAuth1 = "No inspection needed as the Repair Facility diagnostic matches Contract Holder concern.\rThe repair Facility sent supporting photos showing excessive metal debris present.";
   let transAuth2 = "An inspection was sent to verify failures.\rI have reviewed report and inspection photos.\rThe inspection review note is completed.";
   let transAuth3 = "Requested and reviewed photos from Repair Facility.\rPhoto review note is completed.";
@@ -391,9 +391,7 @@ function STMTTEMP() {
     statement.style.display = "initial";
     localStorage.setItem("statePage", "1");
     let mode = localStorage.getItem("mode");
-    if (mode === '2') {
-      return;
-    } else {
+    if(checkOpen()) {
       ShowTemps();
     }
   } else {
@@ -878,9 +876,7 @@ function REVIEW(btnID) {
   let outputString = document.getElementById("textarea5").value;
   copy(outputString);
   let mode = localStorage.getItem("mode");
-  if (mode === '2') {
-    return;
-  } else {
+  if(checkOpen()) {
     ShowTemps();
   }
 }
@@ -936,17 +932,12 @@ function INSPTEMP(btnID) {
   }
   let outputString = document.getElementById("textarea5").value;
   copy(outputString);
-  let mode = localStorage.getItem("mode");
-  if (mode === '2') {
-    return;
-  } else {
+  if(checkOpen()) {
     ShowTemps();
   }
 }
 
 function PTXFER() {
-  let mode = localStorage.getItem("mode");
-  if (mode === '2') { return; }
   let showTemp = document.getElementById("transferTemplate");
   showTemp.style.display = "inline-block";
   let rfEmail = getContact('1');
@@ -955,7 +946,9 @@ function PTXFER() {
   document.getElementById("contact2").value = rfEmail;
   localStorage.setItem("PTpage", "1");
   document.getElementById("quest1").style.display = "block";
-  ShowTemps();
+  if(checkOpen()) {
+    ShowTemps();
+  }
 }
 
 function ShowTemps() {
