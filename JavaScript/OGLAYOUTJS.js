@@ -1405,6 +1405,7 @@ window.onload = function PutItBack() {
   trackerBlank();
   let Rev = "Reviewed inspection photos and report.\rReviewed photos sent by repair facility.\rVerified vin.\rVerified mileage.\rNo indication of commercial use.\rNo indication of modification.\r\r";
   localStorage.setItem("Rev", Rev);
+  localStorage.setItem("mode", '2');
   modePT();
 }
 
