@@ -6,12 +6,11 @@
 <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload">
 <meta http-equiv="X-Content-Type-Options" content="nosniff">
 <meta name="referrer" content="no-referrer">
-<link rel="stylesheet" href="CSS/Stable.css">
-<link rel="stylesheet" href="CSS/Common.css">
-<link rel="stylesheet" href="CSS/Orig/Buttons.css">
-<link rel="stylesheet" href="CSS/contextMenu.css">
-<link rel="stylesheet" href="CSS/Orig/AppearOpts.css">
-<link rel="stylesheet" href="CSS/Orig/Resource.css">
+<link rel="stylesheet" href="CSS/Stable.css?v=20240617232144">
+<link rel="stylesheet" href="CSS/Common.css?v=20240617232144">
+<link rel="stylesheet" href="CSS/Orig/Buttons.css?v=20240617232144">
+<link rel="stylesheet" href="CSS/Orig/AppearOpts.css?v=20240617232144">
+<link rel="stylesheet" href="CSS/Orig/Resource.css?v=20240617232144">
 
 
 	<title>Adjuster Console</title>
@@ -301,25 +300,25 @@ body {
 
 <div id="navtag" class="nav_tag" onclick="openSOPnav();">Browse Full SOPs</div>
 <div id="swap1" class="otherone" onclick="openNav()">&#9776;</div>
-<button id="newAuthstarter" class="D R P s7dispStat" oncontextmenu="customMenu(this.id, event)" onclick="showAuth()"><b><f>Authorize</f></b> Claim</button>
-<button id="statusNote" class="D R P s8dispStat" oncontextmenu="customMenu(this.id, event)" onclick="statNOTE()"><b>Status</b> Note</button>
-<button id="openScript" class="D R P s4dispStat" oncontextmenu="customMenu(this.id, event)" onclick="openScript()">Labor Rate<br>Script</button>
+<button id="newAuthstarter" class="D R P s7dispStat" onclick="showAuth()"><b><f>Authorize</f></b> Claim</button>
+<button id="statusNote" class="D R P s8dispStat" onclick="statNOTE()"><b>Status</b> Note</button>
+<button id="openScript" class="D R P s4dispStat" onclick="openScript()">Labor Rate<br>Script</button>
 
 <div id="Request" class="REQUESTDIV noShow">
-  <button id="picR" class="D R P C s1dispStat" oncontextmenu="customMenu(this.id, event)" onclick="PICREQ(this.id);"><b>PICTURE</b> REQUEST</button>
-  <button id="recR" class="D R P C s2dispStat" oncontextmenu="customMenu(this.id, event)" onclick="RECREQ(this.id)"><b>RECORDS</b> REQUEST</button>
-  <button id="noansR" class="D R P C s3dispStat" oncontextmenu="customMenu(this.id, event)" onclick="NOANSREC(this.id)">RECDS REQST <b>NO ANSWER</b></button>
-  <button id="T0" class="D R P s6dispStat" oncontextmenu="customMenu(this.id, event)" onclick="ShowTemps()"><b>TEMPLATES</b></button>
+  <button id="picR" class="D R P C s1dispStat" onclick="PICREQ(this.id);"><b>PICTURE</b> REQUEST</button>
+  <button id="recR" class="D R P C s2dispStat" onclick="RECREQ(this.id)"><b>RECORDS</b> REQUEST</button>
+  <button id="noansR" class="D R P C s3dispStat" onclick="NOANSREC(this.id)">RECDS REQST <b>NO ANSWER</b></button>
+  <button id="T0" class="D R P s6dispStat" onclick="ShowTemps()"><b>TEMPLATES</b></button>
 </div>
 
-<button id="SOPs" class="R P D g0dispStat" oncontextmenu="customMenu(this.id, event)" onclick="resrcCenter('4','p')"><f>Policy</f></button>
-<button id="tools" class="R P D g1dispStat" oncontextmenu="customMenu(this.id, event)" onclick="resrcCenter('5','t')"><f>Tools</f></button>
+<button id="SOPs" class="R P D g0dispStat" onclick="resrcCenter('4','p')"><f>Policy</f></button>
+<button id="tools" class="R P D g1dispStat" onclick="resrcCenter('5','t')"><f>Tools</f></button>
 
 <div id="TPDiv" class="noShow" style="display: none">
-  <button id="T1" class="D R P" oncontextmenu="customMenu(this.id, event)" name="name" onclick="PTXFER()"><b>PT TRANSFER</b> TEMPLATE</button>
-  <button id="T2" class="D R P C" oncontextmenu="customMenu(this.id, event)" onclick="STMTTEMP(this.id)">CH <b>STATEMENT</b> QUESTIONS</button>
-  <button id="T3" class="D R P C" oncontextmenu="customMenu(this.id, event)" onclick="REVIEW(this.id)">INPS/PIC <b>REVIEW</b> NOTE</button>
-  <button id="T4" class="D R P C" oncontextmenu="customMenu(this.id, event)" onclick="INSPTEMP(this.id)"><b>INSPECTION</b> TEMPLATE</button>
+  <button id="T1" class="D R P" name="name" onclick="PTXFER()"><b>PT TRANSFER</b> TEMPLATE</button>
+  <button id="T2" class="D R P C" onclick="STMTTEMP(this.id)">CH <b>STATEMENT</b> QUESTIONS</button>
+  <button id="T3" class="D R P C" onclick="REVIEW(this.id)">INPS/PIC <b>REVIEW</b> NOTE</button>
+  <button id="T4" class="D R P C" onclick="INSPTEMP(this.id)"><b>INSPECTION</b> TEMPLATE</button>
 </div>
 
                                                 <!-- PT Mode -->
@@ -347,31 +346,31 @@ body {
   <textarea autocomplete="off" title="Part Number" id="partnum" class="intakeboxes" name="name" placeholder="Part Number" wrap="off"></textarea>
   <textarea autocomplete="off" title="RF Price" id="rfprice" class="intakeboxes" name="name" placeholder="RF Price" wrap="off"></textarea>
   <textarea autocomplete="off" title="MSRP" id="msrp" class="intakeboxes" name="name" placeholder="OEM MSRP" wrap="off"></textarea>
-  <button id="SENDPART" class="senditnow D R P" oncontextmenu="customMenu(this.id, event)" onclick="FormToTA();">Part</button>
-  <button id="SENDLABOR" class="senditnow D R P" oncontextmenu="customMenu(this.id, event)" onclick="SENDLABOR1()">Labor</button>
-  <button id="SENDDIAG" class="senditnow D R P" oncontextmenu="customMenu(this.id, event)" onclick="SENDDIAG1()">Diag</button>
-  <button id="clearIntake" class="senditnow D R P" oncontextmenu="customMenu(this.id, event)" onclick="ClearIntake();">Clear</button>
-  <button id="DJKahlid" class="senditnow D R P" oncontextmenu="customMenu(this.id, event)" onclick="AnotherOne()">Add Box</button>
-  <button id="MTVsNEXT" class="senditnow D R P" oncontextmenu="customMenu(this.id, event)" onclick="NextPart()">Next</button>
+  <button id="SENDPART" class="senditnow D R P" onclick="FormToTA();">Part</button>
+  <button id="SENDLABOR" class="senditnow D R P" onclick="SENDLABOR1()">Labor</button>
+  <button id="SENDDIAG" class="senditnow D R P" onclick="SENDDIAG1()">Diag</button>
+  <button id="clearIntake" class="senditnow D R P" onclick="ClearIntake();">Clear</button>
+  <button id="DJKahlid" class="senditnow D R P" onclick="AnotherOne()">Add Box</button>
+  <button id="MTVsNEXT" class="senditnow D R P" onclick="NextPart()">Next</button>
 </div>
 
                                             <!-- Other Parts and Labor -->
 
 <div id="hlc" class="HardLaborCamp noShow">
-  <button id="R2" class="PartsAndLabor D R P a1dispStat" oncontextmenu="customMenu(this.id, event)" onclick="COPYNOTE()">Copy P&L</button>
-  <button id="R15" class="Reset D R P a4dispStat" oncontextmenu="customMenu(this.id, event)" style="display: inline-block" onclick="RESET()"><f>RESET</f></button>
+  <button id="R2" class="PartsAndLabor D R P a1dispStat" onclick="COPYNOTE()">Copy P&L</button>
+  <button id="R15" class="Reset D R P a4dispStat" style="display: inline-block" onclick="RESET()"><f>RESET</f></button>
   <div id="subPL2" class="noShow a2dispStat">
-    <button id="R8" class="D R P" oncontextmenu="customMenu(this.id, event)" style="display: inline-block" onclick="NEWOEM()"><f>OEM</f></button>
-    <button id="R9" class="D R P" oncontextmenu="customMenu(this.id, event)" style="display: inline-block" onclick="NEWAM()"><f>AM</f></button>
-    <button id="R10" class="D R P" oncontextmenu="customMenu(this.id, event)" style="display: inline-block" onclick="OEMOVER()">Over 250</button>
-    <button id="R11" class="D R P" oncontextmenu="customMenu(this.id, event)" style="display: inline-block" name="edit" onclick="BULK(this.id)">BULK</button>
-    <button id="fluid" class="P astext" oncontextmenu="customMenu(this.id, event)" style="display: inline-block" onclick="FLUIDLEAK()">$</button>
+    <button id="R8" class="D R P" style="display: inline-block" onclick="NEWOEM()"><f>OEM</f></button>
+    <button id="R9" class="D R P" style="display: inline-block" onclick="NEWAM()"><f>AM</f></button>
+    <button id="R10" class="D R P" style="display: inline-block" onclick="OEMOVER()">Over 250</button>
+    <button id="R11" class="D R P" style="display: inline-block" name="edit" onclick="BULK(this.id)">BULK</button>
+    <button id="fluid" class="P astext" style="display: inline-block" onclick="FLUIDLEAK()">$</button>
   </div>
   <div id="subPL1" class="noShow a3dispStat">
-    <button id="R12" class="D R P C" oncontextmenu="customMenu(this.id, event)" style="display: inline-block" name="edit" onclick="EVACRECH(this.id)">EVAC</button>
-    <button id="R13" class="D R P C" oncontextmenu="customMenu(this.id, event)" style="display: inline-block" name="edit" onclick="ALIGNMENT(this.id)">ALIGN</button>
-    <button id="R16" class="D R P" oncontextmenu="customMenu(this.id, event)" style="display: inline-block" onclick="LABOR()">LABOR</button>
-    <button id="R17" class="D R P" oncontextmenu="customMenu(this.id, event)" style="display: inline-block" onclick="DIAG()">DIAG</button>
+    <button id="R12" class="D R P C" style="display: inline-block" name="edit" onclick="EVACRECH(this.id)">EVAC</button>
+    <button id="R13" class="D R P C" style="display: inline-block" name="edit" onclick="ALIGNMENT(this.id)">ALIGN</button>
+    <button id="R16" class="D R P" style="display: inline-block" onclick="LABOR()">LABOR</button>
+    <button id="R17" class="D R P" style="display: inline-block" onclick="DIAG()">DIAG</button>
   </div>
 </div>
 
@@ -565,109 +564,51 @@ body {
        <textarea autocomplete="off" title="Snips Appear Here" id="Snippings" class="SnipArea" name="name" style="display: none" oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'></textarea>
     </div>
     <div id="RFone noShow">
-      <button id="RFIBBTN" class="IBOBC R D P" oncontextmenu="customMenu(this.id, event)" onclick="RFIB()"><f>RF</f><br><b>INBOUND</b></button>
-      <button id="TGAFBTN" class="IBOBC R D P" oncontextmenu="customMenu(this.id, event)" onclick="TGAF()"><f>CALLED CH</f> <b>TO GET AUTH FOR</b></button>
-      <button id="RESET" class="IBOBC R D P" oncontextmenu="customMenu(this.id, event)" onclick="RESETNOTE()">RESET</button>
-      <button id="COPY" class="IBOBC R D P" oncontextmenu="customMenu(this.id, event)" onclick="COPYIt()">COPY</button>
+      <button id="RFIBBTN" class="IBOBC R D P" onclick="RFIB()"><f>RF</f><br><b>INBOUND</b></button>
+      <button id="TGAFBTN" class="IBOBC R D P" onclick="TGAF()"><f>CALLED CH</f> <b>TO GET AUTH FOR</b></button>
+      <button id="RESET" class="IBOBC R D P" onclick="RESETNOTE()">RESET</button>
+      <button id="COPY" class="IBOBC R D P" onclick="COPYIt()">COPY</button>
     </div>
   </div>
   <div id="chobcall" class="CHoutboundDIV noShow">
     <div id="RFtwo" class="noShow">
-     <button id="RFIBDH" class="IBOBC D R P" oncontextmenu="customMenu(this.id, event)" onclick="RFIBDH()" style="display: none;">DIDN'T HAVE</button>
-     <button id="PNLCBTN" class="IBOBC D R P C" oncontextmenu="customMenu(this.id, event)" onclick="PNLC(this.id)" style="display: none">CHECK COVERAGE <br>ADV PNLC</button>
-     <button id="TOTALBTN" class="IBOBC D R P C" oncontextmenu="customMenu(this.id, event)" onclick="TOTAL(this.id)" style="display: none">TO GET <br>TOTALS</button>
-     <button id="RFAUTHBTN" class="IBOBC D R P C" oncontextmenu="customMenu(this.id, event)" onclick="GAR(this.id)" style="display: none">TO GET <br>AUTH</button>
+     <button id="RFIBDH" class="IBOBC D R P" onclick="RFIBDH()" style="display: none;">DIDN'T HAVE</button>
+     <button id="PNLCBTN" class="IBOBC D R P C" onclick="PNLC(this.id)" style="display: none">CHECK COVERAGE <br>ADV PNLC</button>
+     <button id="TOTALBTN" class="IBOBC D R P C" onclick="TOTAL(this.id)" style="display: none">TO GET <br>TOTALS</button>
+     <button id="RFAUTHBTN" class="IBOBC D R P C" onclick="GAR(this.id)" style="display: none">TO GET <br>AUTH</button>
     </div>
     <div id="RFthree" class="noShow">
-      <button id="RFIBND" class="IBOBC D R P C" oncontextmenu="customMenu(this.id, event)" onclick="RFIBND(this.id)" style="display: none">DIAGNOSTIC</button>
-      <button id="RFIBNE" class="IBOBC D R P C" oncontextmenu="customMenu(this.id, event)" onclick="RFIBNE(this.id)" style="display: none">ESTIMATE</button>
-      <button id="RFIBNF" class="IBOBC D R P C" oncontextmenu="customMenu(this.id, event)" onclick="RFIBNF(this.id)" style="display: none">FAILURE</button>
-      <button id="RFIBNV" class="IBOBC D R P C" oncontextmenu="customMenu(this.id, event)" onclick="RFIBNV(this.id)" style="display: none">THE VEHICLE</button>
+      <button id="RFIBND" class="IBOBC D R P C" onclick="RFIBND(this.id)" style="display: none">DIAGNOSTIC</button>
+      <button id="RFIBNE" class="IBOBC D R P C" onclick="RFIBNE(this.id)" style="display: none">ESTIMATE</button>
+      <button id="RFIBNF" class="IBOBC D R P C" onclick="RFIBNF(this.id)" style="display: none">FAILURE</button>
+      <button id="RFIBNV" class="IBOBC D R P C" onclick="RFIBNV(this.id)" style="display: none">THE VEHICLE</button>
     </div>
     <div id="CHtwo" class="noShow">
-      <button id="TGAFOBTN" class="IBOBC D R P" oncontextmenu="customMenu(this.id, event)" none" onclick="TGAFO(this.id)" style="display: none">OOPC</button>
-      <button id="TGAFSBTN" class="IBOBC D R P" oncontextmenu="customMenu(this.id, event)" none" onclick="TGAFS(this.id)" style="display: none">SHIPPING</button>
-      <button id="TGAFBBTN" class="IBOBC D R P" oncontextmenu="customMenu(this.id, event)" none" onclick="TGAFB(this.id)" style="display: none">BOTH</button>
+      <button id="TGAFOBTN" class="IBOBC D R P" none" onclick="TGAFO(this.id)" style="display: none">OOPC</button>
+      <button id="TGAFSBTN" class="IBOBC D R P" none" onclick="TGAFS(this.id)" style="display: none">SHIPPING</button>
+      <button id="TGAFBBTN" class="IBOBC D R P" none" onclick="TGAFB(this.id)" style="display: none">BOTH</button>
     </div>
     <div id="CHthree" class="noShow">
-      <button id="TGAFOABTN" class="IBOBC D R P C" oncontextmenu="customMenu(this.id, event)" none" onclick="TGAFOA(this.id)" style="display: none">AUTHED</button>
-      <button id="TGAFODBTN" class="IBOBC D R P C" oncontextmenu="customMenu(this.id, event)" onclick="TGAFOD(this.id)" style="display: none">DECLINED</button>
-      <button id="TGAFOCBTN" class="IBOBC D R P C" oncontextmenu="customMenu(this.id, event)" onclick="TGAFOC(this.id)" style="display: none">CH WILL CALL BACK</button>
+      <button id="TGAFOABTN" class="IBOBC D R P C" none" onclick="TGAFOA(this.id)" style="display: none">AUTHED</button>
+      <button id="TGAFODBTN" class="IBOBC D R P C" onclick="TGAFOD(this.id)" style="display: none">DECLINED</button>
+      <button id="TGAFOCBTN" class="IBOBC D R P C" onclick="TGAFOC(this.id)" style="display: none">CH WILL CALL BACK</button>
     </div>
     <div id="CHfour" class="noShow">
-      <button id="TGAFSABTN" class="IBOBC D R P C" oncontextmenu="customMenu(this.id, event)" onclick="TGAFSA(this.id)" style="display: none">AUTHED</button>
-      <button id="TGAFSDBTN" class="IBOBC D R P C" oncontextmenu="customMenu(this.id, event)" onclick="TGAFSD(this.id)" style="display: none">DECLINED</button>
-      <button id="TGAFSCBTN" class="IBOBC D R P C" oncontextmenu="customMenu(this.id, event)" onclick="TGAFSC(this.id)" style="display: none">CH WILL CALL BACK</button>
+      <button id="TGAFSABTN" class="IBOBC D R P C" onclick="TGAFSA(this.id)" style="display: none">AUTHED</button>
+      <button id="TGAFSDBTN" class="IBOBC D R P C" onclick="TGAFSD(this.id)" style="display: none">DECLINED</button>
+      <button id="TGAFSCBTN" class="IBOBC D R P C" onclick="TGAFSC(this.id)" style="display: none">CH WILL CALL BACK</button>
     </div>
     <div id="CHfive" class="noShow">
-      <button id="TGAFOSABTN" class="IBOBC D R P C" oncontextmenu="customMenu(this.id, event)" onclick="TGAFOSA(this.id)" style="display: none">AUTHED BOTH</button>
-      <button id="TGAFOSDSBTN" class="IBOBC D R P C" oncontextmenu="customMenu(this.id, event)" onclick="TGAFOSDS(this.id)" style="display: none">DECLINED SHIPPING <br>APPROVED OOP</button>
-      <button id="TGAFOSDBBTN" class="IBOBC D R P C" oncontextmenu="customMenu(this.id, event)" onclick="TGAFOSDB(this.id)" style="display: none">DECLINED REPAIRS</button>
-      <button id="TGAFOSCBTN" class="IBOBC D R P C" oncontextmenu="customMenu(this.id, event)" onclick="TGAFOSC(this.id)" style="display: none">CH WILL CALL BACK</button>
+      <button id="TGAFOSABTN" class="IBOBC D R P C" onclick="TGAFOSA(this.id)" style="display: none">AUTHED BOTH</button>
+      <button id="TGAFOSDSBTN" class="IBOBC D R P C" onclick="TGAFOSDS(this.id)" style="display: none">DECLINED SHIPPING <br>APPROVED OOP</button>
+      <button id="TGAFOSDBBTN" class="IBOBC D R P C" onclick="TGAFOSDB(this.id)" style="display: none">DECLINED REPAIRS</button>
+      <button id="TGAFOSCBTN" class="IBOBC D R P C" onclick="TGAFOSC(this.id)" style="display: none">CH WILL CALL BACK</button>
     </div>
     <div id="NoAnsDiv" class="noShow">
-      <button id="NALVM" class="IBOBC D R P" oncontextmenu="customMenu(this.id, event)" onclick="NAV()" style="display: none">NO ANS<br>LEFT VM</button>
-      <button id="NANVM" class="IBOBC D R P" oncontextmenu="customMenu(this.id, event)" onclick="NAN()" style="display: none">NO ANS<br>NO VM</button>
+      <button id="NALVM" class="IBOBC D R P" onclick="NAV()" style="display: none">NO ANS<br>LEFT VM</button>
+      <button id="NANVM" class="IBOBC D R P" onclick="NAN()" style="display: none">NO ANS<br>NO VM</button>
     </div>
   </div>
-</div>
-
-                                                <!-- Context Menu -->
-
-  <div id="context-menu">
-    <div class="item" onclick="editDisplay()">Display</div>
-    <div class="item" onclick="editContent()">Content</div>
-    <div class="item" onclick="editSize()">Size</div>
-    <div class="item" onclick="editPos()">Position</div>
-    <div class="item" onclick="showCustom()">New Button</div>
-    <div class="item" onclick="BuilderShow('o')">Toggle List</div>
-  </div>
-
-<div class="CMeditDIV" id="disEdit" style="display:none; text-align: center;">
-  <div id="TitleDisplay" class="noShow"><b>Edit Display</b></div>
-  <div id="Instruction" class="noShow"> Highlight the text you would like to modify.<br>
-    Press the button to apply the effect<br>
-    Change the font size using the + and - buttons<br><br>
-  </div>
-  <button id="color" onclick="submitDisp('c')">Color Change</button>
-  <button id="bold" onclick="submitDisp('b')">Toggle Bold</button>
-  <button id="mimic" contenteditable></button>
-  <div id="fontSizer" class="noShow"></div>
-  <button id="plus" onclick="fontChange('1')"> <b>+</b> </button>
-  <button id="minus" onclick="fontChange('-1')"> <b>-</b> </button>
-  <button id="dispCancel" onclick="submitDisp('s')">Exit</button>
-  <button id="dispSubmit" onclick="submitDisp('s')">Submit</button>
-  <button id="dispDefault" onclick="submitDisp('d')">Default</button>
-</div>
-<div class="CMeditDIV" id="contEdit" style="display:none; text-align: center;">
-  <div id="ContentDisplay" class="noShow"><br><br><b>Edit Content</b></div>
-  <div id="ContentEditor" style="box-shadow:none; border:3px dashed var(--my-background-color); background:white;" contenteditable></div>
-  <button id="contSubmit" onclick="submitCont()">Submit</button>
-  <button id="contCancel" onclick="cancelCont()">Exit</button>
-  <button id="contDefault" onclick="defaultCont()">Default</button>
-</div>
-<div class="CMeditDIV" id="sizeEdit" style="display:none; text-align: center;">
-  <div id="heightMod" class="noShow" style="text-align: center;">
-    <button id="hplus" class="moveBTNS" onclick="heightChange('5')">&#x2B9E;</button><br><br>
-    <button id="hminus" class="moveBTNS" onclick="heightChange('-5')">&#x2B9C;</button>
-  </div>
-  <div id="widthMod" class="noShow" style="text-align: center;">
-    <button  id="wplus" class="moveBTNS" onclick="widthChange('5')">&#x2B9E;</button>
-    <button  id="wminus" class="moveBTNS" onclick="widthChange('-5')">&#x2B9C;</button>
-  </div>
-    <button id="sizeShow"></button>
-    <button id="sizeSubmit" onclick="sizeSubmit('s')">Submit</button>
-    <button id="sizeDefault" onclick="sizeSubmit('d')">Default</button>
-  <button id="sizeCancel" onclick="sizeSubmit()">Exit</button>
-</div>
-<div class="CMeditDIV" id="posEdit" style="display:none">
-  <button class="moveBTNS" id="upBTN" onclick="udMove('-5')">&#x2B9E;</button>
-  <button class="moveBTNS" id="downBTN" onclick="udMove('5')">&#x2B9C;</button>
-  <button class="moveBTNS" id="leftBTN" onclick="lrMove('-5')">&#x2B9C;</button>
-  <button class="moveBTNS" id="rightBTN" onclick="lrMove('5')">&#x2B9E;</button>
-  <button id="posSubmit" class="astext" onclick="posSubmit('s')">Submit</button>
-  <button id="posDefault" class="astext" onclick="posSubmit('d')">Default</button>
-  <button id="posCancel" class="astext" onclick="posSubmit('s')">Exit</button>
 </div>
 
                                                 <!-- Toggle Menu -->
@@ -756,80 +697,6 @@ body {
  </div>
 </div>
 
-                                                <!-- Custom Buttons -->
-
-<div id="custBtns" class="noShow">
-  <div id="custBtn0" class="noShow u0dispStat">
-    <button id="cust0" class="custom0 D R P C X"  oncontextmenu="customMenu(this.id, event)" onclick="conjunctionJunction(this.id)">CUSTOM0</button>
-  </div>
-  <div id="custBtn1" class="noShow u1dispStat">
-    <button id="cust1" class="custom0 D R P C X" oncontextmenu="customMenu(this.id, event)" onclick="conjunctionJunction(this.id)">CUSTOM1</button>
-  </div>
-  <div id="custBtn2" class="noShow u2dispStat">
-    <button id="cust2" class="custom0 D R P C X" oncontextmenu="customMenu(this.id, event)" onclick="conjunctionJunction(this.id)">CUSTOM2</button>
-  </div>
-  <div id="custBtn3" class="noShow u3dispStat">
-    <button id="cust3" class="custom0 D R P C X" oncontextmenu="customMenu(this.id, event)" onclick="conjunctionJunction(this.id)">CUSTOM3</button>
-  </div>
-  <div id="custBtn4" class="noShow u4dispStat">
-    <button id="cust4" class="custom0 D R P C X" oncontextmenu="customMenu(this.id, event)" onclick="conjunctionJunction(this.id)">CUSTOM4</button>
-  </div>
-  <div id="custBtn5" class="noShow u5dispStat">
-    <button id="cust5" class="custom0 D R P C X" oncontextmenu="customMenu(this.id, event)" onclick="conjunctionJunction(this.id)">CUSTOM5</button>
-  </div>
-  <div id="custBtn6" class="noShow u6dispStat">
-    <button id="cust6" class="custom0 D R P C X" oncontextmenu="customMenu(this.id, event)" onclick="conjunctionJunction(this.id)">CUSTOM6</button>
-  </div>
-  <div id="custBtn7" class="noShow u7dispStat">
-    <button id="cust7" class="custom0 D R P C X" oncontextmenu="customMenu(this.id, event)" onclick="conjunctionJunction(this.id)">CUSTOM7</button>
-  </div>
-  <div id="custBtn8" class="noShow u8dispStat">
-    <button id="cust8" class="custom0 D R P C X" oncontextmenu="customMenu(this.id, event)" onclick="conjunctionJunction(this.id)">CUSTOM8</button>
-  </div>
-  <div id="custBtn9" class="noShow u9dispStat">
-    <button id="cust9" class="custom0 D R P C X" oncontextmenu="customMenu(this.id, event)" onclick="conjunctionJunction(this.id)">CUSTOM9</button>
-  </div>
-</div>
-
-<div id="buttonSpot" class="noShow"></div>
-  <div id="infoDiv1" style="display: none">
-    <b>Button Types:</b><br><br>
-    <b>Solo Note:</b> This is for adding text to the text area.<br>
-    This will not clear the text area or copy to the clipboard.<br>
-    There will be space before and after the inserted text.<br><br>
-    <b>Send Directly to Clipboard:</b> This will send your designated<br>
-    text to the clipboard. It will not display anything or affect <br>
-    any other text.<br><br><br>
-    <b>Note Chains</b><br><br>
-    <b>Primary Note</b>: This is for a starting a Chain Note that you can build upon<br>
-    This will clear the text area and insert your text but not copy it.<br><br>
-    <b>Link Note:</b> This is for a note used to continue the Chain.<br>
-    This will add text to the end of a Starter Note or another Link Note.<br><br>
-    <b>End Note:</b> This is for the last note in a Chain. This will add text<br>
-    to the existing note and copy all of it to the clipboard.<br>
-    <button id="infoDone" class="infoBtn" onclick="infoDone()">Ready</button>
-    <button id="infoCancel" class="infoBtn" onclick="infoCancel()">Cancel</button>
-  </div>
-  <div id="infoDiv2" style="display: none"><br><br>
-    <div id="radioLine" class="noShow">
-      <b>Select the Button Type</b><br><br>
-      <input type="radio" id="SOLO" name="buttonType" value="SOLO">
-      <label for="SOLO">Solo Note</label><br>
-      <input type="radio" id="STCB" name="buttonType" value="STCB">
-      <label for="STCB">Send Directly to Clipboard</label><br>
-      <input type="radio" id="PRIN" name="buttonType" value="PRIN">
-      <label for="PRIN">Primary Note</label><br>
-      <input type="radio" id="LINK" name="buttonType" value="LINK">
-      <label for="LINK">Link Note</label><br>
-      <input type="radio" id="ENDN" name="buttonType" value="ENDN">
-      <label for="ENDN">End Note</label><br>
-    </div>
-    <p><textarea id="BtnDisplay" placeholder="Button Display..." name="btnDisplay" rows="1" cols="35"></textarea></p>
-    <p><textarea id="BtnContent" placeholder="Note Content..." name="btnContent" rows="5" cols="35"></textarea></p>
-    <button id="infoCancel2" class="infoBtn" onclick="infoCancel2()">Cancel</button>
-    <button id="infoDone2" class="infoBtn" onclick="infoDone2()">Done</button>
-  </div>
-</div>
 
                                         <!-- Textareas and Hidden-->
 
@@ -2279,12 +2146,13 @@ TIME:&nbsp&nbsp</textarea>
     </div>
   </div>
 </div>
-<script src="JavaScript/Variable.js"></script>
-<script src="JavaScript/OGLAYOUTJS.js"></script>
-<script src="JavaScript/ChangeAppearance1.js"></script>
-<script src="JavaScript/commonScript.js"></script>
+<script src="JavaScript/Variable.js?v=20240617232144"></script>
+<script src="JavaScript/OGLAYOUTJS.js?v=20240617232144"></script>
+<script src="JavaScript/ChangeAppearance1.js?v=20240617232144"></script>
+<script src="JavaScript/commonScript.js?v=20240617232144"></script>
 <script>
   setVer('1');
 </script>
 </body>
 </html>
+

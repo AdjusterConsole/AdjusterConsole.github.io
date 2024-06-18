@@ -71,26 +71,27 @@ function MENU() {
   const theMenu = document.getElementById("LOCK1");
   const BtnBuilder = document.getElementById("BtnBuilder");
   const appearance = document.getElementById("appearance");
-  const menuOpen = localStorage.getItem("menuOpen") === 'true';
-  const editArea = document.getElementById("EDITarea");
+  const menuOpen = localStorage.getItem("menuOpen");
 
-  editArea.value = "";
-
-  if (!menuOpen) {
+  if (menuOpen === 'false') {
     theMenu.innerText = "\u2666 Close \u2666";
     appearance.style.top = "45px";
     appearance.style.opacity = '1';
     BtnBuilder.style.top = "70px";
     BtnBuilder.style.opacity = '1';
     localStorage.setItem("menuOpen", "true");
-  } else {
+    return;
+  } else if (menuOpen === 'true') {
     BtnBuilder.style.top = "20px";
     BtnBuilder.style.opacity = '0';
     appearance.style.top = "20px";
     appearance.style.opacity = '0';
     theMenu.innerText = "\u2666 Settings \u2666";
     localStorage.setItem("menuOpen", "false");
+    return;
   }
+  localStorage.setItem("menuOpen", "false");
+  MENU();
 }
 
 function transAuth() {
