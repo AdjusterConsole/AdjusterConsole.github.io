@@ -555,26 +555,26 @@ option, select {
 
 #sopnav2 {
   height: 0px;
-  width: 240px;
+  width: 280px;
   bottom: 0px;
-  right: 30px;
+  left: 340px;
 }
 
 #sopnav3 {
   height: 0px;
-  width: 240px;
+  width: 280px;
   bottom: 0px;
-  right: 300px;
+  left: 30px;
 }
 
 #sopnav2.open_sop {
-  height: 90%;
+  height: 95%;
   z-index: 1001;
   padding-top: 35px;
 }
 
 #sopnav3.open_sop {
-  height: 90%;
+  height: 95%;
   z-index: 1001;
   padding-top: 35px;
 }
@@ -610,7 +610,10 @@ option, select {
   font-size: 23px;
   font-weight: bold;
   letter-spacing: 2.5px;
-  text-decoration-line: underline;
+  border-bottom: 2px solid var(--my-glow-color);
+  border-radius: 0px;
+  margin-bottom: 15px;
+  width: 80%;
 }
 
 .sop_nav .navHeader:hover {
@@ -618,7 +621,7 @@ option, select {
 }
 
 .sop_nav .navEnder {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .PDF_depot {
