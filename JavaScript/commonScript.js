@@ -505,7 +505,7 @@ function showNote(noteID) {
       binElem.innerText = curNote;
     }
     binElem.classList.toggle("arise");
-    binElem.style.height = "150px"
+    binElem.style.height = "150px";
     document.getElementById(noteID).innerText = "Finished";
     localStorage.setItem("noteOpen", noteDivID);
     noteListen();
@@ -983,7 +983,7 @@ function goGuide(option,name) {
   case "noship2":
     const pElem6 = document.createElement("p");
     pElem6.classList.add("bodyTab2");
-    const textNode6 = document.createTextNode("Authorize PA cost price under $250.00 and the remaining balance will be OOPC.")
+    const textNode6 = document.createTextNode("Authorize PA cost price under $250.00 and the remaining balance will be OOPC.");
     let div16 = document.getElementById("rfovrcost");
     pElem6.appendChild(textNode6);
     div16.appendChild(pElem6);
@@ -1203,10 +1203,10 @@ function instructScript() {
   let instructScript = document.getElementById("instructScript");
   if (!instructL.classList.contains("showing")) {
     instructL.classList.add("showing") ;
-    instructScript.innerText = "Hide"
+    instructScript.innerText = "Hide";
   } else {
     instructL.classList.remove("showing") ;
-    instructScript.innerText = "Instructions"
+    instructScript.innerText = "Instructions";
   }
 }
 
@@ -1346,19 +1346,19 @@ function buildLaborNote(result) {
   }
   textarea.value += "\rRepair Facility Posted Labor Rate: $" + asking;
   if (result == "underAve") {
-    textarea.value += "\r\rThe Repair Facility posted labor rate is under the average labor rate for comparable shops in the vicinity."
+    textarea.value += "\r\rThe Repair Facility posted labor rate is under the average labor rate for comparable shops in the vicinity.";
     textarea.value += "\rUpdated Repair Facility labor rate at: $" + asking;
   }
   if (result == "declined") {
-    textarea.value += "\r\rThe Repair Facility is unwilling to negotiate the labor rate."
+    textarea.value += "\r\rThe Repair Facility is unwilling to negotiate the labor rate.";
     textarea.value += "\rUpdated Repair Facility labor rate at: $" + asking;
   }
   if (result == "atAve") {
-    textarea.value += "\r\rThe Repair Facility is willing to negotiate.\rThey agreed to the average rate for the area."
+    textarea.value += "\r\rThe Repair Facility is willing to negotiate.\rThey agreed to the average rate for the area.";
     textarea.value += "\rUpdated Repair Facility labor rate at: $" + aveRate;
   }
   if (result == "halfway") {
-    textarea.value += "\r\rThe Repair Facility is willing to negotiate.\rThey agreed on midway between average and asking."
+    textarea.value += "\r\rThe Repair Facility is willing to negotiate.\rThey agreed on midway between average and asking.";
     textarea.value += "\rUpdated Repair Facility labor rate at: $" + please;
   }
   if (result == "custom") {
@@ -1372,22 +1372,24 @@ function buildLaborNote(result) {
 document.addEventListener('click', function(e) {
   let swap1 = document.getElementById('swap1');
   let mySidenav = document.getElementById('mySidenav');
+  let sopnav2 = document.getElementById('sopnav2');
+  let navtag = document.getElementById('navtag');
+  let LOCK1 = document.getElementById("LOCK1");
+
   if (!mySidenav.contains(e.target) && !swap1.contains(e.target)) {
     closeNav();
   }
-});
-
-document.addEventListener('click', function(e) {
-  let sopnav = document.getElementById('sopnav');
-  let navtag = document.getElementById('navtag');
-  if (!navtag.contains(e.target) && !sopnav.contains(e.target)) {
+  if (!navtag.contains(e.target) && !sopnav2.contains(e.target)) {
     closePDFmenu();
+  }
+  if (!LOCK1.contains(e.target)) {
+   localStorage.setItem("menuOpen", "true");
+   MENU();
   }
 });
 
 function closePDFmenu() {
   document.getElementById("navtag").style.display = "initial";
-  document.getElementById("sopnav").classList.remove("open_sop");
   document.getElementById("sopnav2").classList.remove("open_sop");
   document.getElementById("sopnav3").classList.remove("open_sop");
 }
@@ -1395,7 +1397,6 @@ function closePDFmenu() {
 function openSOPnav() {
   if (checkOpen()) { return; }
   document.getElementById("navtag").style.display = "none";
-  document.getElementById("sopnav").classList.add("open_sop");
   document.getElementById("sopnav2").classList.add("open_sop");
   document.getElementById("sopnav3").classList.add("open_sop");
 }
@@ -1472,3 +1473,5 @@ function closeSOP() {
   }
   PDFdepot.style.display = 'none';
 }
+
+

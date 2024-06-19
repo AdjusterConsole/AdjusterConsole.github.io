@@ -462,3 +462,65 @@ input[type="color"] {
   box-shadow:none;
   z-index:1000000;
 }
+
+.countdown-container, .timer-container {
+  position: absolute;
+  display: inline-block;
+  background: none;
+  box-shadow: none;
+  border: none;
+  font-size: 18px;
+  height: 45px;
+  margin-right: 5px;
+  color: var(--glow-txt-color);
+  text-shadow:
+    1px 1px var(--glow-outline-color),
+   -1px -1px var(--glow-outline-color),
+   -1px 1px var(--glow-outline-color),
+    1px -1px var(--glow-outline-color);
+}
+
+.timerstart {
+  width: 110px;
+  margin: 10px;
+  font-size: 14px; 
+  background: none;
+  border-top: none;
+  border-bottom: none;
+  border-left:  2px solid var(--my-accent-color);
+  border-right:  2px solid var(--my-accent-color);
+  box-shadow: none;
+  border-radius: 5px;
+  transition: 0.15s;
+&:active {
+    border-left:  2px solid var(--my-glow-color);
+    border-right:  2px solid var(--my-glow-color);
+    box-shadow: none;
+    background: none;
+  }
+}
+
+#start_stop_button {
+  bottom: 350px;
+  right: 120px;
+}
+
+#start_call {
+  bottom: 300px;
+  right: 120px;
+}
+
+#reset_button {
+  bottom: 250px;
+  right: 120px;
+}
+
+#start_break_button {
+  bottom: 150px;
+  right: 120px;
+}
+
+#break_info {
+  bottom: 100px;
+  right: 80px;
+}
