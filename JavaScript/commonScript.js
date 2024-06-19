@@ -73,7 +73,7 @@ function diagAction(action) {
   let textarea = "";
   let diagcontent, whichDivId, whichIptclass, textAreaid, notetextArea, i, tableTHs, tableTDs, table;
   diagcontent = document.getElementsByClassName("diagcontent");
-  for (i = 0; i < diagcontent.length; i++) {
+  for (let i = 0; i < diagcontent.length; i++) {
     if (diagcontent[i].style.display === "block") {
       whichDivId = diagcontent[i].id;
     }
@@ -83,7 +83,7 @@ function diagAction(action) {
   tableTDs = table.getElementsByTagName("td");
   tableTHs = table.getElementsByTagName("th");
 
-  for (i = 0; i < tableTDs.length; i++) {
+  for (let i = 0; i < tableTDs.length; i++) {
     if (action == 'clear') {
       tableTDs[i].innerText = "";
     }
@@ -117,7 +117,7 @@ function openInfo(evt, cityName) {
   document.getElementById(cityName).style.display = "block";
   evt.currentTarget.className += " active";
   setDate();
-    for (let i = 0; i < 6; i++) {
+    for (i = 0; i < 6; i++) {
       let elemId = "rec" + i;
       localStorage.removeItem(elemId + "Note");
       document.getElementById(elemId + "Notebin").innerText = "";
@@ -273,7 +273,7 @@ function saveAll() {
   saveRecord('incR');
   saveRecord('serR');
   saveRecord('rec0R');
-  for (i = 0; i < addLineCount; i++) {
+  for (let i = 0; i < addLineCount; i++) {
     let recId = "rec" + i + "R";
     saveRecord(recId);
   }
@@ -369,7 +369,7 @@ function otherCalcs() {
     document.getElementById('trackerMsg').innerHTML += "Need Inception date to perform calculations.";
     return;
   }
-  for (i = 0; i < objectArr.length; i++) {
+  for (let i = 0; i < objectArr.length; i++) {
     let record = objectArr[i];
     if (record.isInception == false && record.milesfrom == '0') {
       let inceptMiles = parseInt(inceptStr);
@@ -459,7 +459,7 @@ function comsoCompan(z) {
   const objectArr = JSON.parse(localStorage.getItem("objectArr"));
   objectArr.sort(compare);
   let looped = objectArr.length - 1;
-  for (i = 0; i < looped; i++) {
+  for (let i = 0; i < looped; i++) {
     let x = i + 1;
     let firDate = objectArr[i].date;
     let secDate = objectArr[x].date;
@@ -580,7 +580,7 @@ function displayRecs(z) {
   let mileDis = false;
   let hasMessage = false;
   let displayMessage = false;
-  for (i = 0; i < objectArr.length; i++) {
+  for (let i = 0; i < objectArr.length; i++) {
     const row = body.insertRow();
     row.classList.add('rowit');
     let tempRec = objectArr[i];
@@ -652,7 +652,7 @@ function displayRecs(z) {
     }
   }
   let allCells = document.getElementsByTagName("td");
-  for (i = 0; i < allCells.length; i++) {
+  for (let i = 0; i < allCells.length; i++) {
     if (allCells[i].innerText == "\u2714") {
       allCells[i].style.color = "green";
     }
@@ -667,7 +667,7 @@ function displayRecs(z) {
 function priorMileage() {
   const table = document.querySelector(".TheOutputtable");
   const objectArr = JSON.parse(localStorage.getItem("objectArr"));
-  for (i = 0; i < objectArr.length; i++) {
+  for (let i = 0; i < objectArr.length; i++) {
     if(objectArr[i].isPrior) {
       let x = i + 1;
       table.rows[x].cells[2].style.color = "red";
@@ -747,7 +747,7 @@ function noteOutput(z) {
     whereOut = splitL;
   }
   const objectArr = JSON.parse(localStorage.getItem("objectArr"));
-  for (i = 0; i < objectArr.length; i++) {
+  for (let i = 0; i < objectArr.length; i++) {
     if (i != 0) { whereOut.innerText += "\r"; }
     whereOut.innerText += "Date: " + objectArr[i].date;
     if (objectArr[i].isInception) {
@@ -1085,7 +1085,7 @@ function mileageCalc() {
 
 function resetMD() {
   const mileRadios = document.getElementsByClassName("mdguide");
-  for (i = 0; i < mileRadios.length; i++) {
+  for (let i = 0; i < mileRadios.length; i++) {
     mileRadios[i].checked = false;
   }
   document.getElementById('mileageCalc').style.display = "none";
@@ -1098,7 +1098,7 @@ function resetMD() {
 
 function resetGuide() {
   const radioBtns = document.getElementsByClassName("authGuideradio");
-  for (i = 0; i < radioBtns.length; i++) {
+  for (let i = 0; i < radioBtns.length; i++) {
     radioBtns[i].checked = false;
     radioBtns[i].disabled = false;
   }

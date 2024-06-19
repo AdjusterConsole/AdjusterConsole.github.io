@@ -402,3 +402,75 @@ function modePT() {
  alert("You Broke It.");
 }
 
+//    "Notify your Team Lead that your call is ongoing, how much time\ryou have left, and if there are any issues with the call."
+
+
+
+let start_call = document.getElementById('start_call');
+start_call.innerText = '00 : 00 : 00'; 
+let timer = false;
+let start_stop_button = document.getElementById('start_stop_button');
+let reset_button = document.getElementById('reset_button');
+
+let hour = 00; 
+let minute = 00; 
+let second = 00; 
+
+start_call.addEventListener('click', function () {
+  if (timer) {
+    timer = false;
+//    start_stop_button.innerText = "Start Call";
+  } else if (!timer) {
+    timer = true;
+//    start_stop_button.innerText = "End Call";
+    setTimeout(stopWatch, 1000);
+  }
+}); 
+
+start_call.addEventListener('dblclick', function () { 
+  timer = false; 
+  let hour = 00; 
+  let minute = 00; 
+  let second = 00; 
+  start_call.innerText = '00 : 00 : 00';
+//  start_stop_button.innerText = "Start Call";
+}); 
+
+function stopWatch() {
+  if (minute > 12 && minute < 16) {
+    start_call.style.color = 'yellow';
+  } else if (minute > 15) {
+    start_call.style.color = 'red';
+  } else {
+    start_call.style.color = 'var(--glow-txt-color)';
+  }
+  if (minute > 24) {
+    start_call.classList.add('glowing');
+  }
+  if (timer) { 
+      second++; 
+    if (second == 60) { 
+      minute++; 
+      second = 0; 
+    } 
+    if (minute == 60) { 
+      hour++; 
+      minute = 0; 
+      second = 0; 
+    } 
+    let hrString = hour; 
+    let minString = minute; 
+    let secString = second;  
+    if (hour < 10) { 
+      hrString = "0" + hrString; 
+    } 
+    if (minute < 10) { 
+      minString = "0" + minString; 
+    } 
+    if (second < 10) { 
+      secString = "0" + secString; 
+    } 
+    start_call.innerText = hrString + ' : ' + minString + ' : ' + secString; 
+    setTimeout(stopWatch, 1000); 
+  } 
+}
