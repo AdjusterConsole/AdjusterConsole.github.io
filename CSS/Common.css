@@ -419,6 +419,7 @@ option, select {
 }
 
 .sidenav button:hover {
+  transform: scale(1.1);
   background: var(--fancy-background);
   color: var(--glow-outline-color);
   text-shadow:
@@ -447,6 +448,10 @@ option, select {
   font-size: 22px;
   font-weight: bold;
   text-decoration-line: underline;
+}
+
+.sidenav .navHeader:hover {
+  transform: scale(1);
 }
 
 .sidenav .navEnder {
@@ -534,6 +539,7 @@ option, select {
 }
 
 .sop_nav button:hover {
+  transform: scale(1.1);
   background: var(--fancy-background);
   color: var(--glow-txt-color);
   text-shadow:
@@ -547,41 +553,28 @@ option, select {
   margin-bottom: 15px;
 }
 
-#sopnav {
-  height: 0px;
-  width: 275px;
-  bottom: 0px;
-  right: 50px;
-}
-
 #sopnav2 {
   height: 0px;
-  width: 275px;
+  width: 240px;
   bottom: 0px;
-  right: 350px;
+  right: 30px;
 }
 
 #sopnav3 {
   height: 0px;
-  width: 275px;
+  width: 240px;
   bottom: 0px;
-  right: 650px;
-}
-
-#sopnav.open_sop {
-  height: 500px;
-  z-index: 1001;
-  padding-top: 35px;
+  right: 300px;
 }
 
 #sopnav2.open_sop {
-  height: 560px;
+  height: 90%;
   z-index: 1001;
   padding-top: 35px;
 }
 
 #sopnav3.open_sop {
-  height: 620px;
+  height: 90%;
   z-index: 1001;
   padding-top: 35px;
 }
@@ -594,7 +587,7 @@ option, select {
   padding-top: 0px;
   background: var(--my-background-color);
   overflow: hidden;
-  transition: all 0.5s ease;
+  transition: all 0.6s ease;
   z-index: 2;
   border-left: 2px solid var(--my-accent-color);
   border-right: 2px solid var(--my-accent-color);
@@ -606,7 +599,7 @@ option, select {
     0px 0px 15px black,
     0px 0px 30px black;
   z-index: 4;
-  transition: all 0.5s ease;
+  transition: all 0.6s ease;
   border-left: 2px solid var(--my-glow-color);
   border-right: 2px solid var(--my-glow-color);
   border-top: 2px solid var(--my-glow-color);
@@ -614,9 +607,14 @@ option, select {
 }
 
 .sop_nav .navHeader {
-  font-size: 20px;
+  font-size: 23px;
   font-weight: bold;
+  letter-spacing: 2.5px;
   text-decoration-line: underline;
+}
+
+.sop_nav .navHeader:hover {
+  transform: scale(1);
 }
 
 .sop_nav .navEnder {
@@ -658,7 +656,7 @@ option, select {
 
 .nav_tag {
   bottom: 0px;
-  right: 60px;
+  right: 40px;
   display: inline-block;
   position: absolute;
   cursor: pointer;
