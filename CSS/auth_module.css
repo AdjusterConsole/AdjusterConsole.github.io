@@ -1,0 +1,85 @@
+.auth_container {
+  display: none;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: none;
+  box-shadow: none;
+  overflow: hidden;
+  z-index: 7;
+  font-size: 18px;
+}
+
+.auth_container.show {
+  display: block;
+}
+
+.auth_main {
+  margin: 20px auto;
+  width: 90%;
+  height: 68%;
+  background: var(--fancy-background);
+  padding: 35px;
+}
+
+.auth_header {
+  text-align: center;
+}
+
+#auth_inner {
+  height: 601px;
+}
+
+#auth20 {
+  font-size: 17px;
+  width: 90px;
+}
+
+.auth_style {
+  margin: auto;
+  padding: 15px;
+  background: linear-gradient(315deg, var(--fancy-meddark), var(--fancy-medlight));
+  box-shadow: -5px -5px 16px var(--fancy-dark), 5px 5px 16px var(--fancy-light);
+}
+
+.float_auth {
+  float: left;
+  background: none;
+  box-shadow: none;
+  width: 33%;
+}
+
+.auth_oop {
+  background: none;
+  box-shadow: none;
+  margin: auto;
+  width: 300px;
+  display: none;
+}
+
+.auth_oop input[type="number"] {
+  margin-bottom: 10px;
+}
+
+.auth_button {
+  width: 110px;
+  height: 60px;
+  background: none;
+  box-shadow: none;
+  border: 2px solid var(--my-accent-color);
+  border-radius: 5px;
+  bottom: 340px;
+&:hover {
+    background: rgba(0,0,0,0.15);
+  }
+}
+
+#cancel_auth {
+  left: 115px;
+}
+
+#finish_auth {
+  right: 115px;
+}

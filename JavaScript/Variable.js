@@ -429,10 +429,12 @@ start_call.addEventListener('click', function () {
 
 start_call.addEventListener('dblclick', function () { 
   timer = false; 
-  let hour = 00; 
-  let minute = 00; 
-  let second = 00; 
+  hour = 00; 
+  minute = 00; 
+  second = 00; 
   start_call.innerText = '00 : 00 : 00';
+  start_call.style.color = '';
+  start_call.classList.remove('glowing');
 //  start_stop_button.innerText = "Start Call";
 }); 
 
