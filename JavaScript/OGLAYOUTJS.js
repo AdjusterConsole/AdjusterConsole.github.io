@@ -144,6 +144,13 @@ function uncheck_All() {
   trans_ansNum.forEach(function(inputNumber) {
     inputNumber.value = '';
   });
+  const authMode = localStorage.getItem('authMode');
+  if (authMode === 'newAuth') { 
+    document.getElementById('newauthSelect').checked = true;
+  }
+  if (authMode === 'oldAuth' || authMode == null) { 
+    document.getElementById('newauthSelect').checked = true;
+  }
 }
 
 function noncovcomp(x) {
@@ -1331,7 +1338,7 @@ window.onload = function PutItBack() {
   const authMode = localStorage.getItem('authMode');
   if (authMode === 'newAuth') {
     document.getElementById('newauthSelect').checked = true;
-  } else if (authMode === 'oldAuth' || authMode === null) {
+  } else if (authMode === 'oldAuth' || authMode == null) {
     document.getElementById('newauthSelect').checked = false;
   }
   localStorage.setItem("viewNum", "normal");
