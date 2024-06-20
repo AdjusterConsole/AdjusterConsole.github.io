@@ -364,7 +364,6 @@ document.onkeyup = function(e) {
   }
  }
 };
-
 document.onkeyup = function(e) {
   if (e.ctrlKey && e.altKey && e.shiftKey && e.which == 76) {
     document.location.href = 'https://theadjusterconsole.github.io/',true;
