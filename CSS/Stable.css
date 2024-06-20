@@ -138,6 +138,7 @@ input[type="color"] {
   text-shadow: none;
   color: black;
   &:before {
+    background: none;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -147,8 +148,12 @@ input[type="color"] {
     z-index: -1;
   }
   &:hover {
+    background: none;
+    box-shadow: none;
     color: black;
     &:before {
+      box-shadow: none; 
+      background: none;
       width: 0%;
     }
   }

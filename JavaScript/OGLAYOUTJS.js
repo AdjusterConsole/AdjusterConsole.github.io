@@ -49,7 +49,7 @@ function checkOpen() {
     document.getElementById("TGAFOABTN"),
     document.getElementById("TGAFSABTN"),
     document.getElementById("TGAFOSABTN"),
-    document.getElementById("newAuthstyle"),
+    document.getElementById("auth_module"),
     document.getElementById("resrcDiv")
   ];
   return elements.some(el => el.style.display === "inline-block");
@@ -1463,4 +1463,160 @@ function ringDeny() {
   text += "The following items and conditions are not covered by this CONTRACT:\r\r";
   text += "17. BREAKDOWNS resulting from engine sludge, carbon, pre-ignition, detonation, varnish, corrosion, foreign objects, dirt, dust, liquid, cracked rubber and/or neoprene parts, dry-rot, road chemicals, lack of proper fluids or use of additives or fuel grades not recommended by the manufacturer.";
   copy(text);
+}
+
+function cancel_auth() {
+  uncheck_All();
+  document.getElementById('auth20').value = '';
+  document.getElementById('oopc_option').style.display = "none";
+  document.getElementById('auth9').checked = true;
+  document.getElementById('auth16').checked = true;
+  document.getElementById('auth13').checked = true;
+  document.getElementById('auth_module').classList.remove('show');
+}
+
+function concerned(x) {
+  if (x === 'n') {
+    document.getElementById('auth6').checked = false;
+    document.getElementById('auth7').checked = false;
+    document.getElementById('auth8').checked = false;
+    return;
+  }
+  if (x === 'y') {
+    document.getElementById('auth9').checked = false;
+    return;
+  }
+  if (x === 'd') {
+    document.getElementById('auth16').checked = false;
+    return;
+  }
+  if (x === 'c') {
+    document.getElementById('auth14').checked = false;
+    document.getElementById('auth15').checked = false;
+    return;
+  }
+}
+
+function show_oopc_option(x) {
+  if (x === 'n') {
+    document.getElementById('oopc_option').style.display = "none";
+  }
+  if (x === 'y') {
+    document.getElementById('oopc_option').style.display = "block";
+  }
+}
+
+function auth_run() {
+  if (!checkOpen()) {
+    document.getElementById('auth_module').classList.add('show');
+  }
+}
+
+function auth_initialize() {
+
+  const contact_name = getContact('0');
+  const contact_email = getContact('1');
+
+  const auth1Note = "Repair Facility Contact name: ";
+  const auth2Note = "Verified failures using Repair Facility diagnostic";
+  const auth3Note = " and inspection report";
+  const auth4Note = " and RF supplied photos";
+  const auth5Note = "Contract has coverage for failed components.\r";
+  const auth6Note = "Verified OEM parts using Forte and AM parts using PA.\r";
+  const auth7Note = "Verified labor using Pro Demand.\r";
+  const auth8Note = "Verified payment info with Repair Facility contact at: ";   
+  const auth9Note = "Using Repair Facility OEM parts at or under $250.00.\r";
+  const auth10Note = "Using Repair Facility parts at or under sourcing MCE.\r";
+  const auth11Note = "Using sourcing MCE as a credit toward Repair Facility parts.\r";
+  const auth12Note = "Using sourcing MCE as a credit toward Repair Facility parts or shipping in.\r";
+  const auth13Note = "Using Repair Facility's parts. Adjusted price to reasonable amount near MCE.\rThis was done considering all factors including claim delays, shipping costs, liability for future failures, time and mileage in coverage, number of prior claims and their cost, etc.\r";
+  const auth14Note = "No inspection needed as Repair Facility diagnostic matches CH concern.\r";
+  const auth15Note = "Sent inspection to verify failures.\rReviewed report and inspection photos.\rInspection review note is completed.\r";
+  const auth16Note = "Requested and reviewed photos from Repair Facility.\rPhoto review note is completed.\r";
+  const auth17Note = "No records requested as history will not change claim decision.\rVehicle is not in waiting period.\rConcern is not maintenance related.\rNo prior related claims.\rNo recalls, TSBs, or mileage concerns.\r";
+  const auth18Note = "Requested and reviewed records and statement.\rRecord review note is completed.\r";
+  const auth19Note = "After reviewing all relevant documentation, we are moving forward with verified failures.\r";
+  const auth20Note = "Need to review OOPC of $";
+  const auth21Note = " with Contract Holder.\r";
+  const auth22Note = " and shipping option with Contract Holder.\r";
+  const auth23Note = "OOPC is due to differences in ";
+  const auth24Note = "Need to review shipping option with Contract Holder.\r";
+  const auth25Note = "Have not given authorization info to the Repair Facility at this time.\r";
+  const auth26Note = "Contract Holder has no OOPC besides deductible.\r";
+  const auth27Note = "Gave authorization info and payment instructions to ";
+  const auth28Note = "Will inform Contract Holder of non-covered components.\r";
+  const auth29Note = "There were denied items on this claim.\rReview denial note for more details.\r";
+  const auth30Note = "Haven't determined OOPC at this time.\rWill review with RF prior to calling Contract Holder.\r";
+
+  let output = '';
+
+  output += auth1Note + contact_name + '\r' + auth2Note;
+
+  const inspection = document.getElementById('auth6').checked;
+  const photos = document.getElementById('auth7').checked;
+  const records = document.getElementById('auth8').checked;
+  const notNeeded = document.getElementById('auth9').checked;
+
+  output += inspection ? auth3Note : '';
+  output += photos ? auth4Note : '';
+  output += '.\r' + auth5Note + auth6Note + auth7Note + auth8Note + contact_email + '.\r';
+
+  const parts1 = document.getElementById('auth1').checked;
+  const parts2 = document.getElementById('auth2').checked;
+  const parts3 = document.getElementById('auth3').checked;
+  const parts4 = document.getElementById('auth4').checked;
+  const parts5 = document.getElementById('auth5').checked;
+
+  output += parts1 ? auth9Note : '';
+  output += parts2 ? auth10Note : '';
+  output += parts3 ? auth11Note : '';
+  output += parts4 ? auth12Note : '';
+  output += parts5 ? auth13Note : '';
+
+  if (!notNeeded) {
+    output += inspection ? auth15Note : auth14Note;
+    output += photos ? auth16Note : '';
+    output += records ? auth18Note : auth17Note;
+    output += auth19Note;
+  } else {
+    output += auth14Note + auth17Note;
+  }
+
+  const oopc = document.getElementById('auth10').checked;
+  const shipping = document.getElementById('auth11').checked;
+  const both = document.getElementById('auth12').checked;
+  const none = document.getElementById('auth13').checked;
+  const oopcamount1 = document.getElementById('auth20').value;
+  const oopcamount = parseInt(oopcamount1);
+
+  const noncovered = document.getElementById('auth14').checked;
+  const denied = document.getElementById('auth15').checked;
+  const neither = document.getElementById('auth16').checked;
+
+  if (oopc || both) {
+    const partoop = document.getElementById('auth17').checked;
+    const laboroop = document.getElementById('auth18').checked;
+    const bothoop = document.getElementById('auth19').checked;
+    const amountUnknown = document.getElementById('auth21').checked;
+    if (amountUnknown) {
+      output += auth30Note
+      output += shipping ? auth24Note : '';
+    } else {
+      output += auth20Note + oopcamount.toFixed(2);
+      output += shipping ? auth22Note : auth21Note;
+      output += auth23Note;
+      if (bothoop) output += "parts and labor.\r"
+      if (partoop) output += "parts.\r"
+      if (laboroop) output += "labor.\r"
+    }
+    output += auth25Note;
+  }
+  if (!oopc && shipping) output += auth24Note + auth26Note + auth25Note;
+
+  const auth27NoteA = auth26Note + auth27Note + contact_name + '.\r';
+  output += none ? auth27NoteA : '';
+  output += noncovered ? auth28Note : '';
+  output += denied ? auth29Note : '';
+  copy(output);
+  cancel_auth();
 }

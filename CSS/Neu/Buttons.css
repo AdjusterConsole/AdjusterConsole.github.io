@@ -443,6 +443,26 @@ input.largerRadio {
     0px 0px 26px var(--my-glow-color);
   overflow: visible;
   opacity: 0;
+  &:before {
+    background: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    transition: all .4s;
+    z-index: -1;
+  }
+  &:hover {
+    background: none;
+    box-shadow: none;
+    color: black;
+    &:before {
+      box-shadow: none; 
+      background: none;
+      width: 0%;
+    }
+  }
 }
 
 #appearance {
