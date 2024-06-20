@@ -369,6 +369,7 @@ document.onkeyup = function(e) {
 };
 
 
+
 function modePT() {
   let mode = localStorage.getItem("mode");
   if (mode === '1') {

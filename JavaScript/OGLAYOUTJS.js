@@ -618,6 +618,24 @@ function submitStat() {
   cancelStat();
 }
 
+document.getElementById("newAuthstarter").addEventListener('click', function(e) {
+  if (document.getElementById("newauthSelect").checked) {
+    auth_run();
+  } else {
+    showAuth();
+  }
+});
+
+function saveAuth() {
+  const newauthSelect = document.getElementById("newauthSelect");
+  if (newauthSelect) { 
+    localStorage.setItem('authMode', 'newAuth');
+  }
+  if (!newauthSelect) { 
+    localStorage.setItem('authMode', 'oldAuth');
+  }
+}
+
 function showAuth() {
   const newAuthstyle = document.getElementById("newAuthstyle");
   if (newAuthstyle.style.display == "inline-block" || checkOpen()) {
@@ -1310,6 +1328,12 @@ function toggleConductor(boxId) {
 }
 
 window.onload = function PutItBack() {
+  const authMode = localStorage.getItem('authMode');
+  if (authMode === 'newAuth') {
+    document.getElementById('newauthSelect').checked = true;
+  } else if (authMode === 'oldAuth' || authMode === null) {
+    document.getElementById('newauthSelect').checked = false;
+  }
   localStorage.setItem("viewNum", "normal");
   const selected = "holder1";
   const selectedElem = document.getElementById(selected);
@@ -1467,32 +1491,32 @@ function ringDeny() {
 
 function cancel_auth() {
   uncheck_All();
-  document.getElementById('auth20').value = '';
+  document.getElementById('nauth20').value = '';
   document.getElementById('oopc_option').style.display = "none";
-  document.getElementById('auth9').checked = true;
-  document.getElementById('auth16').checked = true;
-  document.getElementById('auth13').checked = true;
+  document.getElementById('nauth9').checked = true;
+  document.getElementById('nauth16').checked = true;
+  document.getElementById('nauth13').checked = true;
   document.getElementById('auth_module').classList.remove('show');
 }
 
 function concerned(x) {
   if (x === 'n') {
-    document.getElementById('auth6').checked = false;
-    document.getElementById('auth7').checked = false;
-    document.getElementById('auth8').checked = false;
+    document.getElementById('nauth6').checked = false;
+    document.getElementById('nauth7').checked = false;
+    document.getElementById('nauth8').checked = false;
     return;
   }
   if (x === 'y') {
-    document.getElementById('auth9').checked = false;
+    document.getElementById('nauth9').checked = false;
     return;
   }
   if (x === 'd') {
-    document.getElementById('auth16').checked = false;
+    document.getElementById('nauth16').checked = false;
     return;
   }
   if (x === 'c') {
-    document.getElementById('auth14').checked = false;
-    document.getElementById('auth15').checked = false;
+    document.getElementById('nauth14').checked = false;
+    document.getElementById('nauth15').checked = false;
     return;
   }
 }
@@ -1552,20 +1576,20 @@ function auth_initialize() {
 
   output += auth1Note + contact_name + '\r' + auth2Note;
 
-  const inspection = document.getElementById('auth6').checked;
-  const photos = document.getElementById('auth7').checked;
-  const records = document.getElementById('auth8').checked;
-  const notNeeded = document.getElementById('auth9').checked;
+  const inspection = document.getElementById('nauth6').checked;
+  const photos = document.getElementById('nauth7').checked;
+  const records = document.getElementById('nauth8').checked;
+  const notNeeded = document.getElementById('nauth9').checked;
 
   output += inspection ? auth3Note : '';
   output += photos ? auth4Note : '';
   output += '.\r' + auth5Note + auth6Note + auth7Note + auth8Note + contact_email + '.\r';
 
-  const parts1 = document.getElementById('auth1').checked;
-  const parts2 = document.getElementById('auth2').checked;
-  const parts3 = document.getElementById('auth3').checked;
-  const parts4 = document.getElementById('auth4').checked;
-  const parts5 = document.getElementById('auth5').checked;
+  const parts1 = document.getElementById('nauth1').checked;
+  const parts2 = document.getElementById('nauth2').checked;
+  const parts3 = document.getElementById('nauth3').checked;
+  const parts4 = document.getElementById('nauth4').checked;
+  const parts5 = document.getElementById('nauth5').checked;
 
   output += parts1 ? auth9Note : '';
   output += parts2 ? auth10Note : '';
@@ -1582,22 +1606,22 @@ function auth_initialize() {
     output += auth14Note + auth17Note;
   }
 
-  const oopc = document.getElementById('auth10').checked;
-  const shipping = document.getElementById('auth11').checked;
-  const both = document.getElementById('auth12').checked;
-  const none = document.getElementById('auth13').checked;
-  const oopcamount1 = document.getElementById('auth20').value;
+  const oopc = document.getElementById('nauth10').checked;
+  const shipping = document.getElementById('nauth11').checked;
+  const both = document.getElementById('nauth12').checked;
+  const none = document.getElementById('nauth13').checked;
+  const oopcamount1 = document.getElementById('nauth20').value;
   const oopcamount = parseInt(oopcamount1);
 
-  const noncovered = document.getElementById('auth14').checked;
-  const denied = document.getElementById('auth15').checked;
-  const neither = document.getElementById('auth16').checked;
+  const noncovered = document.getElementById('nauth14').checked;
+  const denied = document.getElementById('nauth15').checked;
+  const neither = document.getElementById('nauth16').checked;
 
   if (oopc || both) {
-    const partoop = document.getElementById('auth17').checked;
-    const laboroop = document.getElementById('auth18').checked;
-    const bothoop = document.getElementById('auth19').checked;
-    const amountUnknown = document.getElementById('auth21').checked;
+    const partoop = document.getElementById('nauth17').checked;
+    const laboroop = document.getElementById('nauth18').checked;
+    const bothoop = document.getElementById('nauth19').checked;
+    const amountUnknown = document.getElementById('nauth21').checked;
     if (amountUnknown) {
       output += auth30Note
       output += shipping ? auth24Note : '';

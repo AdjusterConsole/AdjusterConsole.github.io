@@ -15,6 +15,21 @@ By using this code, you agree to abide by these terms and conditions. Failure to
 For inquiries regarding licensing or permission to use this code in ways not covered by this license, please contact the author at AdjusterConsole@gmail.com.  */
 /* LaborScript, SideNav, tutorial, toggle sliders */
 
+#newauthSelect {
+  position: absolute;
+  display: inline-block;
+  top: 35px;
+  left: 400px;
+}
+
+#newauthLabel {
+  position: absolute;
+  display: inline-block;
+  top: 35px;
+  left: 430px;
+  font-size: 15px;
+}
+
 #cancelState {
   bottom: 5px;
   left: 175px;
