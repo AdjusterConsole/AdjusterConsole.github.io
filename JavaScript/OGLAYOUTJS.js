@@ -151,6 +151,7 @@ function uncheck_All() {
   if (authMode === 'oldAuth' || authMode == null) { 
     document.getElementById('newauthSelect').checked = true;
   }
+
 }
 
 function noncovcomp(x) {
@@ -1541,6 +1542,9 @@ function auth_run() {
   if (!checkOpen()) {
     document.getElementById('auth_module').classList.add('show');
   }
+  document.getElementById('nauth9').checked = true;
+  document.getElementById('nauth16').checked = true;
+  document.getElementById('nauth13').checked = true;
 }
 
 function auth_initialize() {

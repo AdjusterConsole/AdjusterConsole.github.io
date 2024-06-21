@@ -1054,30 +1054,29 @@ input:checked + .slider:before {
 .module_top.last_top {
   background: none;
   box-shadow: none;
-  position: absolute;
+  position: absolute
   display: inline-block;
 }
 
 .module_bot.last_bot {
-  position: absolute;
+ margin-left: 60px;
   display: inline-block;
   height: 40px;
 }
 
 .module_bot.last_bot1 {
-  position: absolute;
   display: inline-block;
   height: 80px;
+ margin-left: 60px;
 }
 
 .module_bot.last_bot2 {
-  position: absolute;
   display: inline-block;
   height: 100px;
+ margin-left: 60px;
 }
 
 .module_bot.last_bot3 {
-  position: absolute;
   display: inline-block;
   height: 100px;
   opacity: 1;
