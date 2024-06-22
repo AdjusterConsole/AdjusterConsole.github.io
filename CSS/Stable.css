@@ -128,17 +128,18 @@ input[type="color"] {
 .astext {
   font-size: 15px;
   background: none;
+  box-shadow: none;
   border: none;
   margin: 0;
   padding: 0;
   cursor: pointer;
-  text-decoration:none;
-  box-shadow: none;
+  text-decoration: none;
   transition: all .1s ease;
   text-shadow: none;
   color: black;
   &:before {
     background: none;
+    box-shadow: none;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -159,9 +160,14 @@ input[type="color"] {
   }
 }
 
-.astext:active {
+.orig.astext {
+  background: none;
   box-shadow: none;
-  text-decoration:none;
+} 
+
+.orig.astext:active {
+  box-shadow: none;
+  text-decoration: none;
   background: none;
   border: none;
   text-shadow: 1px 1px 2px red;

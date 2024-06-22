@@ -14,23 +14,37 @@
 //
 //For inquiries regarding licensing or permission to use this code in ways not covered by this license, please contact the author at adjusterconsole@gmail.com.
 
-function swapPage(x) {
-  if (x == '1') {
-    window.location.href = "index.html";
-  } else if (x == '2') {
-    window.location.href = "index2.html";
-  } else {
-    return;
-  }
-}
-
-function setVer(x) {
-  if (x == '1') {
-    localStorage.setItem('currentVer', '1');
-  } else if (x == '2') {
+function setVer() {
+  const buttons = document.querySelectorAll('button');
+  const intakeboxes = document.getElementsByClassName('intakeboxes');
+  const currentVer = localStorage.getItem('currentVer');
+  if (currentVer === '1') {
     localStorage.setItem('currentVer', '2');
-  } else {
+    document.getElementById('swapper').innerText = 'Neumorphic';
+    document.getElementById('textarea2').classList.add('origText');
+    document.getElementById('textarea1').classList.add('origText');
+    for(let i = 0; i < buttons.length; i++) {
+      buttons[i].classList.add('orig');
+    }
+    for(let i = 0; i < intakeboxes.length; i++) {
+      intakeboxes[i].classList.add('origText');
+    }
     return;
+  } else if (currentVer == '2') {
+    localStorage.setItem('currentVer', '1');
+    document.getElementById('swapper').innerText = 'Original';
+    document.getElementById('textarea2').classList.remove('origText');
+    document.getElementById('textarea1').classList.remove('origText');
+    for(let i = 0; i < buttons.length; i++) {
+      buttons[i].classList.remove('orig');
+    }
+    for(let i = 0; i < intakeboxes.length; i++) {
+      intakeboxes[i].classList.remove('origText');
+    }
+    return;
+  } else {
+    localStorage.setItem('currentVer', '1');
+    setVer();
   }
 }
 
@@ -1336,6 +1350,13 @@ function toggleConductor(boxId) {
 }
 
 window.onload = function PutItBack() {
+  const freshStart = localStorage.getItem("freshStart");
+  if(!freshStart) {
+    localStorage.clear();
+    localStorage.setItem('freshStart','freshStart');
+    location.reload();
+    return;
+  }
   const authMode = localStorage.getItem('authMode');
   if (authMode === 'newAuth') {
     document.getElementById('newauthSelect').checked = true;
@@ -1345,7 +1366,7 @@ window.onload = function PutItBack() {
   localStorage.setItem("viewNum", "normal");
   const selected = "holder1";
   const selectedElem = document.getElementById(selected);
-  const didItRun = localStorage.getItem("Im The Boss");
+  const didItRun = localStorage.getItem('Im The Boss');
   localStorage.setItem("toldem", "false");
   localStorage.setItem("menuOpen", "false");
   localStorage.setItem("newpartcount","2");
@@ -1435,6 +1456,7 @@ window.onload = function PutItBack() {
   const Rev = "Reviewed inspection photos and report.\rReviewed photos sent by repair facility.\rVerified vin.\rVerified mileage.\rNo indication of commercial use.\rNo indication of modification.\r\r";
   localStorage.setItem("Rev", Rev);
   localStorage.setItem("mode", '2');
+  localStorage.setItem('currentVer', '1');
   modePT();
 }
 
