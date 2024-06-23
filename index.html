@@ -7,12 +7,12 @@
 <meta http-equiv="X-Content-Type-Options" content="nosniff">
 <meta name="referrer" content="no-referrer">
 
-<link rel="stylesheet" href="CSS/Common.css?v=20240622063757">
-<link rel="stylesheet" href="CSS/Stable.css?v=20240622063757">
-<link rel="stylesheet" href="CSS/auth_module.css?v=20240622063757">
-<link rel="stylesheet" href="CSS/Buttons.css?v=20240622063757">
-<link rel="stylesheet" href="CSS/AppearOpts.css?v=20240622063757">
-<link rel="stylesheet" href="CSS/Resource.css?v=20240622063757">
+<link rel="stylesheet" href="CSS/Common.css?v=20240623082948">
+<link rel="stylesheet" href="CSS/Stable.css?v=20240623082948">
+<link rel="stylesheet" href="CSS/auth_module.css?v=20240623082948">
+<link rel="stylesheet" href="CSS/Buttons.css?v=20240623082948">
+<link rel="stylesheet" href="CSS/AppearOpts.css?v=20240623082948">
+<link rel="stylesheet" href="CSS/Resource.css?v=20240623082948">
 
 	<title>Adjuster Console</title>
 
@@ -44,6 +44,9 @@ body {
   height: 100%;
   font-family: Verdana, sans-serif;
   background: var(--my-background-color);
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
 }
 
 .textareamain {
@@ -89,6 +92,7 @@ body {
   display: none;
   background: none;
   box-shadow: none;
+  opacity: 0;
 }
 
 #ITSBRITTNEY {
@@ -348,7 +352,7 @@ body {
 </div>
 
                                               <!-- Main Buttons -->
-<div id="original" class="default">
+<div id="original" class="default noShow">
 <div id="swap1" class="otherone" onclick="openNav()">&#9776;</div>
 <div id="navtag" class="nav_tag neu_style" onclick="openSOPnav();">Browse Full SOPs</div>
 <button id="newAuthstarter" class="D R P s7dispStat"><b><f>Authorize</f></b> Claim</button>
@@ -2264,13 +2268,20 @@ TIME:&nbsp&nbsp</textarea>
     </div>
   </div>
 </div>
+<div id="fileUploaderDiv" class="noShow hide">
+  <input type="file" id="fileInput" accept=".json">
+  <button id="autocopy">Auto Copy</button>
+</div>
 <div id="pdiv" class="noShow"><p></div>
-<script src="JavaScript/Variable.js?v=20240622063757"></script>
-<script src="JavaScript/OGLAYOUTJS.js?v=20240622063757"></script>
-<script src="JavaScript/ChangeAppearance2.js?v=20240622063757"></script>
-<script src="JavaScript/commonScript.js?v=20240622063757"></script>
+<script src="JavaScript/snipDiv.js?v=20240623082948"></script>
+<script src="JavaScript/keyEvents.js?v=20240623082948"></script>
+<script src="JavaScript/OGLAYOUTJS.js?v=20240623082948"></script>
+<script src="JavaScript/ChangeAppearance2.js?v=20240623082948"></script>
+<script src="JavaScript/commonScript.js?v=20240623082948"></script>
+<script src="JavaScript/jsonParse.js?v=20240623082948"></script>
 </body>
 </html>
+
 
 
 

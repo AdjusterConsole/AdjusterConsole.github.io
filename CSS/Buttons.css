@@ -649,12 +649,18 @@ input.largerRadio {
 .default button#fluid.orig.P.astext {
   background: none;
   box-shadow: none;
+  text-shadow:
+    1px 1px 1px var(--glow-txt-color),
+   -1px -1px 1px var(--glow-txt-color),
+   -1px 1px 1px var(--glow-txt-color),
+    1px -1px 1px var(--glow-txt-color);
 }
 
 #fluid {
   font-size: 24px;
   top: 90px;
   left: 190px;
+  color: var(--glow-outline-color);
   text-shadow:
     1px 1px 1px var(--glow-txt-color),
    -1px -1px 1px var(--glow-txt-color),

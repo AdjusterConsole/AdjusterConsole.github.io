@@ -476,7 +476,7 @@ input[type="color"] {
 
 .timer-container {
   position: absolute;
-  display: inline-block;
+  display: none;
   cursor: pointer;
   bottom: 20px;
   left: 120px;
@@ -534,4 +534,29 @@ input[type="color"] {
     0px 0px 15px red,
     0px 0px 20px red;
   }
+}
+
+#fileUploaderDiv {
+  position: absolute;
+  display: inline-block;
+  top: 450px;
+  left: 150px;
+  z-index: 7;
+  cursor: pointer;
+}
+
+#fileUploaderDiv input {
+  font-size: 14px;
+  cursor: pointer;
+}
+
+#autocopy {
+  position: absolute;
+  display: inline-block;
+  cursor: pointer;
+  bottom: -10px;
+  background: var(--my-background-color);
+  box-shadow:none;
+  border: 2px solid var(--my-shadow-color3);
+  left: -120px;
 }

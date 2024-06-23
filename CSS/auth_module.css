@@ -19,7 +19,7 @@
 .auth_main {
   margin: 20px auto;
   width: 90%;
-  height: 68%;
+  height: 75%;
   background: var(--fancy-background);
   padding: 35px;
 }
@@ -29,7 +29,7 @@
 }
 
 #auth_inner {
-  height: 601px;
+  height: 640px;
 }
 
 #auth20 {
@@ -61,6 +61,7 @@
 
 .auth_oop input[type="number"] {
   margin-bottom: 10px;
+  width: 90px;
 }
 
 .auth_button {
@@ -70,16 +71,16 @@
   box-shadow: none;
   border: 2px solid var(--my-accent-color);
   border-radius: 5px;
-  bottom: 340px;
+  bottom: 255px;
 &:hover {
     background: rgba(0,0,0,0.15);
   }
 }
 
 #cancel_auth {
-  left: 115px;
+  left: 80px;
 }
 
 #finish_auth {
-  right: 115px;
+  right: 80px;
 }
