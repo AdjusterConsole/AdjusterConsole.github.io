@@ -71,7 +71,7 @@
   box-shadow: none;
   border: 2px solid var(--my-accent-color);
   border-radius: 5px;
-  bottom: 255px;
+  bottom: 310px;
 &:hover {
     background: rgba(0,0,0,0.15);
   }
