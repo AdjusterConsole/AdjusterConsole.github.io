@@ -1,8 +1,14 @@
-document.getElementById('fileInput').addEventListener('change', processUploadedFile);
-document.getElementById('autocopy').addEventListener('click', autoCopyAndDelete);
-document.getElementById('pncopy').addEventListener('click', partnumberCopyAndDelete);
-document.getElementById('pricecopy').addEventListener('click', partpriceCopyAndDelete);
-document.getElementById('resetFile').addEventListener('click', resetAutoCopyComponents);
+import { downloadFile } from './firebase.js';
+
+document.getElementById('downloadMostRecent').addEventListener('click', async () => {
+  const jsonContent = await downloadFile('data.json');  // The file name is 'data.json'
+  if (jsonContent) {
+    const fakeEvent = { target: { files: [new File([JSON.stringify(jsonContent)], "latest.json", { type: "application/json" })] } };
+    processUploadedFile(fakeEvent);
+  } else {
+    alert("No file found or an error occurred.");
+  }
+});
 
 function processUploadedFile(event) {
   const file = event.target.files[0];
@@ -25,7 +31,6 @@ function processUploadedFile(event) {
       localStorage.setItem("countPrice", countLeft);
       const countStr = countInt.toString();
       document.getElementById('left1').innerHTML = 'Remaining<br>' + countStr;
-
     } catch (error) {
       alert("Error parsing JSON file: " + error.message);
     }
@@ -80,7 +85,7 @@ function formatJson(jsonContent, indent = 0) {
       }
     }
   }
-  return result;
+  return JSON.stringify(jsonContent, null, 2);
 }
 
 function formatPart(part, indent) {
@@ -140,6 +145,7 @@ function autoCopyAndDelete() {
         const updatedText = lines.slice(1).join('\n');
         document.getElementById('textarea5').value = updatedText;
         document.getElementById('next1').innerHTML = "Next<br>" + NextLine;
+
         document.getElementById('left1').innerHTML = "Remaining<br>" + countAll;
         localStorage.setItem("countAll", countAll);
       }).catch(err => {
@@ -206,3 +212,17 @@ function partpriceCopyAndDelete() {
     }
   }
 }
+
+function setElementValue(elementIds, value) {
+  elementIds.forEach(id => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.value = value;
+    }
+  });
+}
+
+document.getElementById('autocopy').addEventListener('click', autoCopyAndDelete);
+document.getElementById('pncopy').addEventListener('click', partnumberCopyAndDelete);
+document.getElementById('pricecopy').addEventListener('click', partpriceCopyAndDelete);
+document.getElementById('resetFile').addEventListener('click', resetAutoCopyComponents);

@@ -1,26 +1,27 @@
-document.onkeyup = function(e) {
-  if (e.ctrlKey && e.altKey && e.shiftKey && e.which == 80) {
+document.addEventListener('keyup', function(e) {
+  if (e.ctrlKey && e.altKey && e.shiftKey && e.key === 'P') {
     let mode = localStorage.getItem("mode");
-  if (mode === '2') {
-    localStorage.setItem('mode', '1');
-    modePT();
-    return;   
-  } else {
-    localStorage.setItem('mode', '2');
-    modePT();
-    return;
+    if (mode === '2') {
+      localStorage.setItem('mode', '1');
+      modePT();
+    } else {
+      localStorage.setItem('mode', '2');
+      modePT();
+    }
   }
- }
-  if (e.ctrlKey && e.altKey && e.shiftKey && e.which == 76) {
-    document.location.href = 'https://theadjusterconsole.github.io/',true;
- }
-  if (e.key === 'Escape' || e.key === 'Esc') {
+  if (e.ctrlKey && e.altKey && e.shiftKey && e.key === 'L') {
+    window.location.href = 'https://theadjusterconsole.github.io/';
+  }
+  if (e.key === 'Escape') {
     whiteRabbit();
   }
-  if (e.ctrlKey && e.altKey && e.shiftKey && e.which == 65) {
+  if (e.ctrlKey && e.altKey && e.shiftKey && e.key === 'A') {
     autoEnable();
   }
-};
+  if (e.ctrlKey && e.altKey && e.shiftKey && e.key === 'M') {
+    downloadAndProcessLatestFile();
+  }
+});
 
 document.addEventListener('contextmenu', function(e) {
   e.preventDefault();

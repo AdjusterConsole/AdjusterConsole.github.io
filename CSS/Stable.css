@@ -550,6 +550,7 @@ input[type="color"] {
   box-shadow: none;
 }
 
+
 #fileUploaderDiv.hideFile {
   display: none;
   background: none;
@@ -570,6 +571,11 @@ input[type="color"] {
   margin: auto;
 }
 
+.copyTrio button {
+  padding: 15px 25px;
+  width: 135px;
+}
+
 .last.copyTrio button {
   font-size: 14px;
   background: none;
@@ -586,9 +592,8 @@ input[type="color"] {
   transition: all .3s ease;
 }
 
-.copyTrio button {
-  padding: 15px 25px;
-  width: 135px;
+#downloadMostRecent {
+  margin-top: 45px;
 }
 
 #fileUploaderDiv input {
@@ -627,4 +632,3 @@ input[type="color"] {
   width: 90px;
   height: 45px;
 }
-

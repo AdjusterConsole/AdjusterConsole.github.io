@@ -6,13 +6,12 @@
 <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload">
 <meta http-equiv="X-Content-Type-Options" content="nosniff">
 <meta name="referrer" content="no-referrer">
-
-<link rel="stylesheet" href="CSS/Common.css?v=20240627015723">
-<link rel="stylesheet" href="CSS/Stable.css?v=20240627015723">
-<link rel="stylesheet" href="CSS/auth_module.css?v=20240627015723">
-<link rel="stylesheet" href="CSS/Buttons.css?v=20240627015723">
-<link rel="stylesheet" href="CSS/AppearOpts.css?v=20240627015723">
-<link rel="stylesheet" href="CSS/Resource.css?v=20240627015723">
+<link rel="stylesheet" href="CSS/Common.css?v=20240626141230">
+<link rel="stylesheet" href="CSS/Stable.css?v=20240626141230">
+<link rel="stylesheet" href="CSS/auth_module.css?v=20240626141230">
+<link rel="stylesheet" href="CSS/Buttons.css?v=20240626141230">
+<link rel="stylesheet" href="CSS/AppearOpts.css?v=20240626141230">
+<link rel="stylesheet" href="CSS/Resource.css?v=20240626141230">
 
 	<title>Adjuster Console</title>
 
@@ -172,6 +171,8 @@ body {
 
                                                 <!-- Auto Copy -->
 
+
+
 <div id="fileUploaderDiv" class="noShow hideFile">
   <div class="noShow">
     <div class="noShow copyTrio rightHead">
@@ -201,20 +202,21 @@ body {
         Remaining<br>--
       </div>
     </div>
+    <div class="noShow copyTrio last">
+        <button class="autoCopiers" id="downloadMostRecent">Auto Upload</button> 
+        <label for="fileInput"><input type="file" id="fileInput" accept=".json">
+        <button class="autoCopiers" id="resetFile">Reset</button>
+    </div>
   </div>
-  <div class="lonelyInput noShow">
-    <input type="file" id="fileInput" accept=".json">
-    <button id="resetFile">Reset</button>
+  <div class="lonelyInput noShow" style="display:none;">
   </div>
 </div>
 
 
+<!--  
 
-<!--
 
-       <button class="autoCopiers" id="downloadMostRecent">Auto Upload</button>
-        <label for="fileInput"><input type="file" id="fileInput" accept=".json">
-        <button class="autoCopiers" id="resetFile">Reset</button>     
+
 
 -->
 
@@ -482,6 +484,8 @@ body {
     <button id="R17" class="D R P" style="display: inline-block" onclick="DIAG()">DIAG</button>
   </div>
 </div>
+
+
 
                                                 <!-- Note Builder -->
 
@@ -2402,12 +2406,26 @@ TIME:&nbsp&nbsp</textarea>
 </div>
 
 <div id="pdiv" class="noShow"><p></div>
-<script src="JavaScript/snipDiv.js?v=20240627015723"></script>
-<script src="JavaScript/keyEvents.js?v=20240627015723"></script>
-<script src="JavaScript/OGLAYOUTJS.js?v=20240627015723"></script>
-<script src="JavaScript/ChangeAppearance2.js?v=20240627015723"></script>
-<script src="JavaScript/commonScript.js?v=20240627015723"></script>
-<script src="JavaScript/jsonParse.js?v=20240627015723"></script>
+<script type="module" src="JavaScript/firebase.js?v=20240626141230"></script>
+<script type="module" src="JavaScript/script.js?v=20240626141230"></script>
+<script src="JavaScript/snipDiv.js?v=20240626141230"></script>
+<script src="JavaScript/keyEvents.js?v=20240626141230"></script>
+<script src="JavaScript/OGLAYOUTJS.js?v=20240626141230"></script>
+<script src="JavaScript/ChangeAppearance2.js?v=20240626141230"></script>
+<script src="JavaScript/commonScript.js?v=20240626141230"></script>
+<script src="JavaScript/jsonParse.js?v=20240626141230"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
 
