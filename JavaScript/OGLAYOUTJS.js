@@ -53,6 +53,7 @@ function shadMaker() {
 }
 
 function checkOpen() {
+  if (!document.getElementById("fileUploaderDiv").classList.contains('hideFile')) return true;
   const elements = [
     document.getElementById("TPDiv"),
     document.getElementById("statNote"),
@@ -64,7 +65,7 @@ function checkOpen() {
     document.getElementById("TGAFSABTN"),
     document.getElementById("TGAFOSABTN"),
     document.getElementById("auth_module"),
-    document.getElementById("resrcDiv")
+    document.getElementById("resrcDiv"),
   ];
   return elements.some(el => el.style.display === "inline-block");
 }
@@ -1457,6 +1458,7 @@ window.onload = function PutItBack() {
   localStorage.setItem("Rev", Rev);
   localStorage.setItem("mode", '2');
   localStorage.setItem('currentVer', '1');
+  localStorage.setItem("countLeft", '0');
   modePT();
 }
 
