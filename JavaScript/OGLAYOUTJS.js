@@ -17,12 +17,16 @@
 function setVer() {
   const buttons = document.querySelectorAll('button');
   const intakeboxes = document.getElementsByClassName('intakeboxes');
+
   const currentVer = localStorage.getItem('currentVer');
   if (currentVer === '1') {
     localStorage.setItem('currentVer', '2');
     document.getElementById('swapper').innerText = 'Neumorphic';
     document.getElementById('textarea2').classList.add('origText');
     document.getElementById('textarea1').classList.add('origText');
+    document.getElementById('sizeEdit').classList.add('orig');
+    document.getElementById('disEdit').classList.add('orig');
+
     for(let i = 0; i < buttons.length; i++) {
       buttons[i].classList.add('orig');
     }
@@ -35,6 +39,8 @@ function setVer() {
     document.getElementById('swapper').innerText = 'Original';
     document.getElementById('textarea2').classList.remove('origText');
     document.getElementById('textarea1').classList.remove('origText');
+    document.getElementById('sizeEdit').classList.remove('orig');
+    document.getElementById('disEdit').classList.remove('orig');
     for(let i = 0; i < buttons.length; i++) {
       buttons[i].classList.remove('orig');
     }

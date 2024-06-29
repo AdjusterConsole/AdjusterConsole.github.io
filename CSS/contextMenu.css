@@ -47,6 +47,16 @@ For inquiries regarding licensing or permission to use this code in ways not cov
 
 .CMeditDIV {
   z-index: 9;
+  background-color: var(--my-background-color);
+}
+
+.orig.CMeditDIV {
+  z-index: 9;
+  background: linear-gradient(165deg,
+    var(--my-accent-color) 8%,
+    white 20%,
+    white 80%,
+    var(--my-accent-color) 92%);
 }
 
 #contEdit {
