@@ -23,10 +23,10 @@ document.addEventListener('keyup', function(e) {
   }
 });
 
-document.addEventListener('contextmenu', function(e) {
-  e.preventDefault();
-  openNav();
-});
+//document.addEventListener('contextmenu', function(e) {
+//  e.preventDefault();
+//  openNav();
+//});
 
 function autoEnable() {
   document.getElementById("ITSBRITTNEY").classList.toggle('hide');

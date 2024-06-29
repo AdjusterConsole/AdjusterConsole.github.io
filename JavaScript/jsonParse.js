@@ -14,18 +14,22 @@ function processUploadedFile(event) {
   reader.onload = function(e) {
     try {
       const jsonContent = JSON.parse(e.target.result);
-      const output = formatJson(jsonContent);
-      document.getElementById('textarea2').value = output;
-      const countLeft = localStorage.getItem("countLeft");
-      document.getElementById('left2').innerHTML = 'Remaining<br>' + countLeft;
-      document.getElementById('left3').innerHTML = 'Remaining<br>' + countLeft; 
-      const countInt = parseInt(countLeft) * 4;
-      localStorage.setItem("countAll", countInt);
-      localStorage.setItem("countPN", countLeft);
-      localStorage.setItem("countPrice", countLeft);
-      const countStr = countInt.toString();
-      document.getElementById('left1').innerHTML = 'Remaining<br>' + countStr;
-
+      if (jsonContent.claim_info && jsonContent.claim_info.length > 0) {
+        const claimInfo = jsonContent.claim_info[0]; // Isolate claim_info
+        const output = formatJsons(claimInfo); // Pass only claim_info to formatJson
+        document.getElementById('textarea2').value = output;
+        const countLefts = localStorage.getItem("countLefts");
+        document.getElementById('left2').innerHTML = 'Remaining<br>' + countLefts;
+        document.getElementById('left3').innerHTML = 'Remaining<br>' + countLefts; 
+        const countInts = parseInt(countLefts) * 4;
+        localStorage.setItem("countAlls", countInts);
+        localStorage.setItem("countPNs", countLefts);
+        localStorage.setItem("countPrices", countLefts);
+        const countStrs = countInts.toString();
+        document.getElementById('left1').innerHTML = 'Remaining<br>' + countStrs;
+      } else {
+        alert("Invalid JSON structure.");
+      }
     } catch (error) {
       alert("Error parsing JSON file: " + error.message);
     }
@@ -33,7 +37,8 @@ function processUploadedFile(event) {
   reader.readAsText(file);
 }
 
-function formatJson(jsonContent, indent = 0) {
+
+function formatJsons(jsonContent, indent = 0) {
   let result = '';
   for (let key in jsonContent) {
     if (jsonContent.hasOwnProperty(key)) {
@@ -51,16 +56,6 @@ function formatJson(jsonContent, indent = 0) {
           value.forEach(labor => {
             result += `${' '.repeat(indent + 2)}Description: ${labor.laborDescription}\n`;
             result += `${' '.repeat(indent + 2)}Hours: ${labor.hours}\n\n`;
-          });
-          break;
-        case 'moneyData':
-          result += `${indentation}Money Data:\n`;
-          value.forEach(money => {
-            result += `${' '.repeat(indent + 2)}Total Parts: ${money.totalParts}\n`;
-            result += `${' '.repeat(indent + 2)}Total Labor: ${money.totalLabor}\n`;
-            result += `${' '.repeat(indent + 2)}Subtotal: ${money.subTotal}\n`;
-            result += `${' '.repeat(indent + 2)}Tax Total: ${money.taxTotal}\n`;
-            result += `${' '.repeat(indent + 2)}Grand Total: ${money.grandTotal}\n\n`;
           });
           break;
         case 'totals':
@@ -92,21 +87,21 @@ function formatPart(part, indent) {
   document.getElementById('textarea5').value += part.partNumber + '\n' + part.partName + '\n' + part.quantity + '\n' + parseFloat(part.priceEach).toFixed(2) + '\n';
   document.getElementById('textarea4').value += parseFloat(part.priceEach).toFixed(2) + '\n';
   document.getElementById('textarea3').value += part.partNumber + '\n';
-  let countLeft = parseInt(localStorage.getItem("countLeft")) + 1;
-  if (countLeft === 1) {
+  let countLefts = parseInt(localStorage.getItem("countLefts")) + 1;
+  if (countLefts === 1) {
     document.getElementById('next1').innerHTML = 'Next<br>' + part.partNumber;
     document.getElementById('next2').innerHTML = 'Next<br>' + part.partNumber;
     document.getElementById('next3').innerHTML = 'Next<br>' + parseFloat(part.priceEach).toFixed(2);
   }
-  localStorage.setItem("countLeft", countLeft);
+  localStorage.setItem("countLefts", countLefts);
   return result;
 }
 
 function resetAutoCopyComponents() {
-  localStorage.setItem("countLeft", '0');
-  localStorage.setItem("countAll", '0');
-  localStorage.setItem("countPN", '0');
-  localStorage.setItem("countPrice", '0');
+  localStorage.setItem("countLefts", '0');
+  localStorage.setItem("countAlls", '0');
+  localStorage.setItem("countPNs", '0');
+  localStorage.setItem("countPrices", '0');
   setElementValue([ 
     'fileInput', 'textarea5', 'textarea4', 'textarea3', 'textarea2' ], "");
   document.getElementById('next1').innerHTML = "Next<br>--";
@@ -128,8 +123,8 @@ function autoCopyAndDelete() {
 
     if (firstLine !== '') {
       navigator.clipboard.writeText(firstLine).then(() => {
-        let countAll = parseInt(localStorage.getItem("countAll")) - 1;
-        if (countAll === 0) {
+        let countAlls = parseInt(localStorage.getItem("countAlls")) - 1;
+        if (countAlls === 0) {
           document.getElementById('next1').innerHTML = "Next<br>--";
           document.getElementById('left1').innerHTML = "Remaining<br>--";
           document.getElementById('textarea5').value = '';
@@ -140,8 +135,8 @@ function autoCopyAndDelete() {
         const updatedText = lines.slice(1).join('\n');
         document.getElementById('textarea5').value = updatedText;
         document.getElementById('next1').innerHTML = "Next<br>" + NextLine;
-        document.getElementById('left1').innerHTML = "Remaining<br>" + countAll;
-        localStorage.setItem("countAll", countAll);
+        document.getElementById('left1').innerHTML = "Remaining<br>" + countAlls;
+        localStorage.setItem("countAlls", countAlls);
       }).catch(err => {
         console.error('Failed to copy text: ', err);
       });
@@ -157,8 +152,8 @@ function partnumberCopyAndDelete() {
 
     if (firstLine !== '') {
       navigator.clipboard.writeText(firstLine).then(() => {
-        let countPN = parseInt(localStorage.getItem("countPN")) - 1;
-        if (countPN === 0) {
+        let countPNs = parseInt(localStorage.getItem("countPNs")) - 1;
+        if (countPNs === 0) {
           document.getElementById('next2').innerHTML = "Next<br>--";
           document.getElementById('left2').innerHTML = "Remaining<br>--";
           document.getElementById('textarea3').value = '';
@@ -169,8 +164,8 @@ function partnumberCopyAndDelete() {
         const updatedText = lines.slice(1).join('\n');
         document.getElementById('textarea3').value = updatedText;
         document.getElementById('next2').innerHTML = "Next<br>" + NextLine;
-        document.getElementById('left2').innerHTML = "Remaining<br>" + countPN;
-        localStorage.setItem("countPN", countPN);
+        document.getElementById('left2').innerHTML = "Remaining<br>" + countPNs;
+        localStorage.setItem("countPNs", countPNs);
       }).catch(err => {
         console.error('Failed to copy text: ', err);
       });
@@ -186,8 +181,8 @@ function partpriceCopyAndDelete() {
 
     if (firstLine !== '') {
       navigator.clipboard.writeText(firstLine).then(() => {
-        let countPrice = parseInt(localStorage.getItem("countPrice")) - 1;
-        if (countPrice === 0) {
+        let countPrices = parseInt(localStorage.getItem("countPrices")) - 1;
+        if (countPrices === 0) {
           document.getElementById('next3').innerHTML = "Next<br>--";
           document.getElementById('left3').innerHTML = "Remaining<br>--";
           document.getElementById('textarea4').value = '';
@@ -198,11 +193,21 @@ function partpriceCopyAndDelete() {
         const updatedText = lines.slice(1).join('\n');
         document.getElementById('textarea4').value = updatedText;
         document.getElementById('next3').innerHTML = "Next<br>" + NextLine;
-        document.getElementById('left3').innerHTML = "Remaining<br>" + countPrice;
-        localStorage.setItem("countPrice", countPrice);
+        document.getElementById('left3').innerHTML = "Remaining<br>" + countPrices;
+        localStorage.setItem("countPrices", countPrices);
       }).catch(err => {
         console.error('Failed to copy text: ', err);
       });
     }
   }
+}
+
+
+function setElementValue(elementIds, value) {
+  elementIds.forEach(id => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.value = value;
+    }
+  });
 }

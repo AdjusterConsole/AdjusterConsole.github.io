@@ -1458,7 +1458,7 @@ window.onload = function PutItBack() {
   localStorage.setItem("Rev", Rev);
   localStorage.setItem("mode", '2');
   localStorage.setItem('currentVer', '1');
-  localStorage.setItem("countLeft", '0');
+  localStorage.setItem("countLefts", '0');
   modePT();
 }
 
