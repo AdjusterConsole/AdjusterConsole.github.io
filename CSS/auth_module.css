@@ -4,10 +4,10 @@
   top: 0px;
   left: 0px;
   width: 100%;
-  height: 100%;
+  height: 85%;
   background: none;
   box-shadow: none;
-  overflow: hidden;
+  overflow: visible;
   z-index: 7;
   font-size: 18px;
 }
@@ -19,7 +19,7 @@
 .auth_main {
   margin: 20px auto;
   width: 90%;
-  height: 75%;
+  height: 95%;
   background: var(--fancy-background);
   padding: 35px;
 }
@@ -59,7 +59,7 @@
   display: none;
 }
 
-.auth_oop input[type="number"] {
+.flex_list input[type="number"] {
   margin-bottom: 10px;
   width: 90px;
 }
@@ -71,16 +71,63 @@
   box-shadow: none;
   border: 2px solid var(--my-accent-color);
   border-radius: 5px;
-  bottom: 310px;
+  bottom: 0px;
 &:hover {
     background: rgba(0,0,0,0.15);
   }
 }
 
+#oopc_option {
+  opacity: 0;
+}
+
+#oopc_option2 {
+  opacity: 0;
+  width: 35%;
+}
+
+.flex_contain {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background: none;
+  box-shadow: none;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.flex_list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 33%;
+  justify-content: center;
+  align-content: space-around;
+  background: none;
+  box-shadow: none;
+  margin: 20px auto;
+}
+
+.flex_list.slim {
+  width: 28%;
+}
+
+.flex_list.last {
+  align-items: center;
+}
+
+.flex_list label {
+  margin: 5px 5px 5px 15px;
+}
+
+label.top {
+  margin: 20px 5px 5px 15px;
+}
+
 #cancel_auth {
-  left: 80px;
+  left: 70px;
 }
 
 #finish_auth {
-  right: 80px;
+  right: 70px;
 }
