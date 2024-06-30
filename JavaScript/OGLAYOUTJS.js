@@ -54,6 +54,10 @@ function setVer() {
   }
 }
 
+function removeBlankLines(text) { 
+   return text.replace(/^\s*$/gm, ''); 
+}
+
 function shadMaker() {
   window.location.href = "shadowGen/shadIndex.html";
 }
@@ -168,11 +172,9 @@ function uncheck_All() {
   const authMode = localStorage.getItem('authMode');
   if (authMode === 'newAuth') { 
     document.getElementById('newauthSelect').checked = true;
+  } else {
+    document.getElementById('newauthSelect').checked = false;
   }
-  if (authMode === 'oldAuth' || authMode == null) { 
-    document.getElementById('newauthSelect').checked = true;
-  }
-
 }
 
 function noncovcomp(x) {
@@ -645,193 +647,6 @@ function submitStat() {
   }
   copy(output);
   cancelStat();
-}
-
-document.getElementById("newAuthstarter").addEventListener('click', function(e) {
-  if (document.getElementById("newauthSelect").checked) {
-    auth_run();
-  } else {
-    showAuth();
-  }
-});
-
-function saveAuth() {
-  const newauthSelect = document.getElementById("newauthSelect");
-  if (newauthSelect) { 
-    localStorage.setItem('authMode', 'newAuth');
-  }
-  if (!newauthSelect) { 
-    localStorage.setItem('authMode', 'oldAuth');
-  }
-}
-
-function showAuth() {
-  const newAuthstyle = document.getElementById("newAuthstyle");
-  if (newAuthstyle.style.display == "inline-block" || checkOpen()) {
-    newAuthstyle.style.display = "none";
-    return;
-  }
-  newAuthstyle.style.display = "inline-block";
-}
-
-function moveAuth() {
-  document.getElementById("authParts").style.display = "none";
-  document.getElementById("authRequests").style.display = "inline-block";
-}
-
-function moveAuth2() {
-  document.getElementById("authRequests").style.display = "none";
-  document.getElementById("authOopcs").style.display = "inline-block";
-}
-
-function cancelNewauth() {
-  document.getElementById("authParts").style.display = "inline-block";
-  document.getElementById("authRequests").style.display = "none";
-  document.getElementById("authOopcs").style.display = "none";
-  document.getElementById("newAuthstyle").style.display = "none";
-  document.getElementById("OOPoptDiv").style.display = "none";
-  const boxes = document.querySelectorAll(".FNA");
-  for (i = 0; i < boxes.length; i++) {
-    boxes[i].checked = false;
-  }
-}
-
-function newAuth() {
-  const newauthLine0 = "RF Contact name: ";
-  const newauthLine1 = "Verified failures using RF diagnostic.";
-  const newauthLine1a = "Verified failures using RF diagnostic and inspection report.";
-  const newauthLine1b = "Verified failures using RF diagnostic and RF supplied photos.";
-  const newauthLine2 = "Contract has coverage for failed components.";
-  const newauthLine3 = "Verified OEM parts using Forte and AM parts using PA.";
-  const newauthLine4 = "Verified labor using Pro Demand.";
-  const newauthLine5 = "Verified payment info with RF contact at: ";
-  document.getElementById("authParts").style.display = "inline-block";
-  document.getElementById("authRequests").style.display = "none";
-  document.getElementById("authOopcs").style.display = "none";
-  document.getElementById("newAuthstyle").style.display = "none";
-  let stage = '';
-  const bananaMilkshake = getContact('1');
-  const rfContact = getContact('0');
-  stage = newauthLine0 + rfContact + "\r";
-  let firstAuthline = newauthLine1;
-  if (document.getElementById("auth6").checked) { firstAuthline = newauthLine1a; }
-  if (document.getElementById("auth7").checked) { firstAuthline = newauthLine1b; }
-  stage += firstAuthline + "\r" + newauthLine2 + "\r" + newauthLine3 + "\r" + newauthLine4  + "\r" + newauthLine5 + bananaMilkshake + "\r";
-  partsOptions(stage);
-}
-
-function setValue() {
-  document.getElementById("auth1").value = "Using Repair Facility OEM parts at or under $250.00.";
-  document.getElementById("auth2").value = "Using Repair Facility parts at or under sourcing MCE.";
-  document.getElementById("auth3").value = "Using sourcing MCE as a credit toward Repair Facility parts.";
-  document.getElementById("auth4").value = "Using sourcing MCE as a credit toward Repair Facility parts or shipping in.";
-  document.getElementById("auth5").value = "Adjusted price to reasonable amount near MCE.\rThis was done considering all factors including claim delays, shipping costs, liability for future failures, time and mileage in coverage, number of prior claims and their cost, etc.";
-}
-
-function partsOptions(stage) {
-  setValue();
-  const partOpts = document.getElementsByName("authparts");
-  for (i = 0; i < partOpts.length; i++) {
-    if (partOpts[i].checked == true) {
-      stage += partOpts[i].value + "\r";
-    }
-  }
-  requestOptions(stage);
-}
-
-function requestOptions(stage) {
-  const inspAuth1 = "No inspection needed as RF diagnostic matches CH concern.";
-  const inspAuth2 = "Sent inspection to verify failures.\rReviewed report and inspection photos.\rInspection review note is completed.";
-  const inspAuth3 = "Requested and reviewed photos from Repair Facility.\rPhoto review note is completed.";
-  const recordsAuth1 = "No records requested as history will not change claim decision.\rVehicle is not in waiting period.\rConcern is not maintenance related.\rNo prior related claims.\rNo recalls, TSBs, or mileage concerns.";
-  const recordsAuth2 = "Requested and reviewed records and statement.\rRecord review note is completed.";
-  const requestedAuth1 = "After reviewing all relevant documentation, we are moving forward with verified failures.";
-
-  if (document.getElementById("auth9").checked == true) {
-    stage += inspAuth1 + "\r" + recordsAuth1 + "\r";
-    issuesOptions(stage);
-    return;
-  }
-  if (document.getElementById("auth6").checked == true) {
-    stage += inspAuth2 + "\r";
-  }
-  if (document.getElementById("auth7").checked == true) {
-    stage += inspAuth3 + "\r";
-  }
-  if (document.getElementById("auth8").checked == true) {
-    stage += recordsAuth2 + "\r";
-  }
-  stage += requestedAuth1 + "\r";
-  issuesOptions(stage);
-}
-
-function issuesOptions(stage) {
-  const oopcsAuth1 = "Need to review OOPC of $";
-  const oopcsAuth2a = " with Contract Holder.";
-  const oopcsAuth2b = " and shipping option with Contract Holder.";
-  const oopcsAuth2c = "OOPC is due to differences in ";
-  const oopcsAuth3 = "Need to review shipping option with Contract Holder.";
-  const oopcsAuth3a = "Have not given authorization info to the Repair Facility at this time.";
-  const oopcsAuth4 = "Contract Holder has no OOPC besides deductible.";
-  const oopcsAuth4a = "Gave authorization info and payment instructions to ";
-
-  const rfName = getContact('0');
-  if (document.getElementById("auth13").checked) {
-    stage += oopcsAuth4 + "\r" + oopcsAuth4a + rfName + "\r";
-    finishAuth(stage);
-    return;
-  }
-  if (document.getElementById("auth11").checked) {
-    stage += oopcsAuth3 + "\r" + oopcsAuth3a + "\r";
-    finishAuth(stage);
-    return;
-  }
-  if (document.getElementById("auth10").checked || document.getElementById("auth12").checked) {
-    const oopcCausep = document.getElementById("auth14");
-    const oopcCausel = document.getElementById("auth15");
-    const oopcCauseb = document.getElementById("auth16");
-    const oopcAmt1 = document.getElementById("auth17").value;
-    document.getElementById("auth17").value = "";
-    const num = parseFloat(oopcAmt1);
-    if (isNaN(num)) {
-      alert("Please enter a valid amount for OOPC");
-      return;
-    }
-    const oopcAmt2 = num.toFixed(2);
-    const oopcAmt = oopcAmt2.toString();
-    let oopcCausedBy;
-    if (oopcCauseb.checked) { oopcCausedBy = "parts and labor."; }
-    if (oopcCausel.checked) { oopcCausedBy = "labor."; }
-    if (oopcCausep.checked) { oopcCausedBy = "parts."; }
-    stage += oopcsAuth1 + oopcAmt;
-    stage += (document.getElementById("auth12").checked ? oopcsAuth2b : oopcsAuth2a) + "\r";
-    stage += oopcsAuth2c + oopcCausedBy + "\r" + oopcsAuth3a + "\r";
-    finishAuth(stage);
-    return;
-  }
-}
-
-function showOOPopt() {
-  document.getElementById("OOPoptDiv").style.display = "inline-block";
-}
-
-function finishAuth(stage) {
-  const noncovAuth1 = "Will inform Contract Holder of non-covered components";
-  const noncovAuth2 = "There were denied items on this claim.\rReview denial note for more details";
-  document.getElementById("OOPoptDiv").style.display = "none";
-  const noncovComps = document.getElementById("auth18");
-  if (noncovComps.checked) {
-    stage += noncovAuth1 + "\r";
-  }
-  const deniedComps = document.getElementById("auth18a");
-  if (deniedComps.checked) {
-    stage += noncovAuth2;
-  }
-  copy(stage);
-  const boxes = document.querySelectorAll(".FNA");
-  for (let i = 0; i < boxes.length; i++) {
-    boxes[i].checked = false;
-  }
 }
 
 function EVACRECH(btnID) {
@@ -1357,13 +1172,6 @@ function toggleConductor(boxId) {
 }
 
 window.onload = function PutItBack() {
-  const freshStart = localStorage.getItem("freshStart");
-  if(!freshStart) {
-    localStorage.clear();
-    localStorage.setItem('freshStart','freshStart');
-    location.reload();
-    return;
-  }
   const authMode = localStorage.getItem('authMode');
   if (authMode === 'newAuth') {
     document.getElementById('newauthSelect').checked = true;
@@ -1525,163 +1333,4 @@ function ringDeny() {
   text += "The following items and conditions are not covered by this CONTRACT:\r\r";
   text += "17. BREAKDOWNS resulting from engine sludge, carbon, pre-ignition, detonation, varnish, corrosion, foreign objects, dirt, dust, liquid, cracked rubber and/or neoprene parts, dry-rot, road chemicals, lack of proper fluids or use of additives or fuel grades not recommended by the manufacturer.";
   copy(text);
-}
-
-function cancel_auth() {
-  uncheck_All();
-  document.getElementById('nauth20').value = '';
-  document.getElementById('oopc_option').style.display = "none";
-  document.getElementById('nauth9').checked = true;
-  document.getElementById('nauth16').checked = true;
-  document.getElementById('nauth13').checked = true;
-  document.getElementById('auth_module').classList.remove('show');
-}
-
-function concerned(x) {
-  if (x === 'n') {
-    document.getElementById('nauth6').checked = false;
-    document.getElementById('nauth7').checked = false;
-    document.getElementById('nauth8').checked = false;
-    return;
-  }
-  if (x === 'y') {
-    document.getElementById('nauth9').checked = false;
-    return;
-  }
-  if (x === 'd') {
-    document.getElementById('nauth16').checked = false;
-    return;
-  }
-  if (x === 'c') {
-    document.getElementById('nauth14').checked = false;
-    document.getElementById('nauth15').checked = false;
-    return;
-  }
-}
-
-function show_oopc_option(x) {
-  if (x === 'n') {
-    document.getElementById('oopc_option').style.display = "none";
-  }
-  if (x === 'y') {
-    document.getElementById('oopc_option').style.display = "block";
-  }
-}
-
-function auth_run() {
-  if (!checkOpen()) {
-    document.getElementById('auth_module').classList.add('show');
-  }
-  document.getElementById('nauth9').checked = true;
-  document.getElementById('nauth16').checked = true;
-  document.getElementById('nauth13').checked = true;
-}
-
-function auth_initialize() {
-
-  const contact_name = getContact('0');
-  const contact_email = getContact('1');
-
-  const auth1Note = "Repair Facility Contact name: ";
-  const auth2Note = "Verified failures using Repair Facility diagnostic";
-  const auth3Note = " and inspection report";
-  const auth4Note = " and RF supplied photos";
-  const auth5Note = "Contract has coverage for failed components.\r";
-  const auth6Note = "Verified OEM parts using Forte and AM parts using PA.\r";
-  const auth7Note = "Verified labor using Pro Demand.\r";
-  const auth8Note = "Verified payment info with Repair Facility contact at: ";   
-  const auth9Note = "Using Repair Facility OEM parts at or under $250.00.\r";
-  const auth10Note = "Using Repair Facility parts at or under sourcing MCE.\r";
-  const auth11Note = "Using sourcing MCE as a credit toward Repair Facility parts.\r";
-  const auth12Note = "Using sourcing MCE as a credit toward Repair Facility parts or shipping in.\r";
-  const auth13Note = "Using Repair Facility's parts. Adjusted price to reasonable amount near MCE.\rThis was done considering all factors including claim delays, shipping costs, liability for future failures, time and mileage in coverage, number of prior claims and their cost, etc.\r";
-  const auth14Note = "No inspection needed as Repair Facility diagnostic matches CH concern.\r";
-  const auth15Note = "Sent inspection to verify failures.\rReviewed report and inspection photos.\rInspection review note is completed.\r";
-  const auth16Note = "Requested and reviewed photos from Repair Facility.\rPhoto review note is completed.\r";
-  const auth17Note = "No records requested as history will not change claim decision.\rVehicle is not in waiting period.\rConcern is not maintenance related.\rNo prior related claims.\rNo recalls, TSBs, or mileage concerns.\r";
-  const auth18Note = "Requested and reviewed records and statement.\rRecord review note is completed.\r";
-  const auth19Note = "After reviewing all relevant documentation, we are moving forward with verified failures.\r";
-  const auth20Note = "Need to review OOPC of $";
-  const auth21Note = " with Contract Holder.\r";
-  const auth22Note = " and shipping option with Contract Holder.\r";
-  const auth23Note = "OOPC is due to differences in ";
-  const auth24Note = "Need to review shipping option with Contract Holder.\r";
-  const auth25Note = "Have not given authorization info to the Repair Facility at this time.\r";
-  const auth26Note = "Contract Holder has no OOPC besides deductible.\r";
-  const auth27Note = "Gave authorization info and payment instructions to ";
-  const auth28Note = "Will inform Contract Holder of non-covered components.\r";
-  const auth29Note = "There were denied items on this claim.\rReview denial note for more details.\r";
-  const auth30Note = "Haven't determined OOPC at this time.\rWill review with RF prior to calling Contract Holder.\r";
-
-  let output = '';
-
-  output += auth1Note + contact_name + '\r' + auth2Note;
-
-  const inspection = document.getElementById('nauth6').checked;
-  const photos = document.getElementById('nauth7').checked;
-  const records = document.getElementById('nauth8').checked;
-  const notNeeded = document.getElementById('nauth9').checked;
-
-  output += inspection ? auth3Note : '';
-  output += photos ? auth4Note : '';
-  output += '.\r' + auth5Note + auth6Note + auth7Note + auth8Note + contact_email + '.\r';
-
-  const parts1 = document.getElementById('nauth1').checked;
-  const parts2 = document.getElementById('nauth2').checked;
-  const parts3 = document.getElementById('nauth3').checked;
-  const parts4 = document.getElementById('nauth4').checked;
-  const parts5 = document.getElementById('nauth5').checked;
-
-  output += parts1 ? auth9Note : '';
-  output += parts2 ? auth10Note : '';
-  output += parts3 ? auth11Note : '';
-  output += parts4 ? auth12Note : '';
-  output += parts5 ? auth13Note : '';
-
-  if (!notNeeded) {
-    output += inspection ? auth15Note : auth14Note;
-    output += photos ? auth16Note : '';
-    output += records ? auth18Note : auth17Note;
-    output += auth19Note;
-  } else {
-    output += auth14Note + auth17Note;
-  }
-
-  const oopc = document.getElementById('nauth10').checked;
-  const shipping = document.getElementById('nauth11').checked;
-  const both = document.getElementById('nauth12').checked;
-  const none = document.getElementById('nauth13').checked;
-  const oopcamount1 = document.getElementById('nauth20').value;
-  const oopcamount = parseInt(oopcamount1);
-
-  const noncovered = document.getElementById('nauth14').checked;
-  const denied = document.getElementById('nauth15').checked;
-  const neither = document.getElementById('nauth16').checked;
-
-  if (oopc || both) {
-    const partoop = document.getElementById('nauth17').checked;
-    const laboroop = document.getElementById('nauth18').checked;
-    const bothoop = document.getElementById('nauth19').checked;
-    const amountUnknown = document.getElementById('nauth21').checked;
-    if (amountUnknown) {
-      output += auth30Note
-      output += shipping ? auth24Note : '';
-    } else {
-      output += auth20Note + oopcamount.toFixed(2);
-      output += shipping ? auth22Note : auth21Note;
-      output += auth23Note;
-      if (bothoop) output += "parts and labor.\r"
-      if (partoop) output += "parts.\r"
-      if (laboroop) output += "labor.\r"
-    }
-    output += auth25Note;
-  }
-  if (!oopc && shipping) output += auth24Note + auth26Note + auth25Note;
-
-  const auth27NoteA = auth26Note + auth27Note + contact_name + '.\r';
-  output += none ? auth27NoteA : '';
-  output += noncovered ? auth28Note : '';
-  output += denied ? auth29Note : '';
-  copy(output);
-  cancel_auth();
 }

@@ -341,7 +341,7 @@ input.ptRad {
 }
 
 .authStyle {
-  margin-top: 40px;
+  margin-top: 25px;
   text-align: left;
   display: inline-block;
   width: auto;
@@ -358,6 +358,18 @@ input.ptRad {
 
 #authOopcs {
   width: 100%;
+}
+
+#OOPoptDiv2 {
+  display:none;
+  font-size:18px;
+  bottom: 0px;
+  right: 0px;
+}
+
+#OOPoptDiv {
+  display:none;
+  font-size:18px;
 }
 
 #newAuthstarter {
