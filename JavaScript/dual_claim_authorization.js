@@ -52,7 +52,7 @@ function showAuth() {
 }
 
 function cancel_auth(x) {
-  if (x === 'o') {
+  if (x === 'c') {
     uncheck_All();
     document.getElementById('nauth20').value = '';
     document.getElementById('oopc_option').style.opacity = "0";
@@ -62,7 +62,7 @@ function cancel_auth(x) {
     document.getElementById('nauth13').checked = true;
     document.getElementById('auth_module').classList.remove('show');
   }
-  if (x === 'c') {
+  if (x === 'o') {
     uncheck_All();
     document.getElementById("authParts").style.display = "inline-block";
     document.getElementById('auth20').value = '';
@@ -268,7 +268,7 @@ function auth_initialize2() {
   output += noncovered ? auth28Note : '';
   output += denied ? auth29Note : '';
   copy(output);
-  cancel_auth();
+  cancel_auth('o');
 }
 
 function auth_initialize() {
@@ -388,5 +388,5 @@ function auth_initialize() {
   output += noncovered ? auth28Note : '';
   output += denied ? auth29Note : '';
   copy(output);
-  cancel_auth();
+  cancel_auth('c');
 }
