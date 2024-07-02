@@ -361,10 +361,10 @@ input.ptRad {
 }
 
 #OOPoptDiv2 {
-
+  position: absolute;
   font-size:18px;
-  bottom: 0px;
-  right: 0px;
+  bottom: 100px;
+  right: 120px;
 }
 
 #OOPoptDiv {

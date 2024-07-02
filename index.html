@@ -393,6 +393,7 @@ body {
   <button id="presetRed" class="picker" onclick="setColor('red')">Red Preset</button>
   <button id="presetGreen" class="picker" onclick="setColor('green')">Green Preset</button>
   <button id="presetPink" class="picker" onclick="setColor('pink')">Pink Preset</button>
+  <button id="ConsoleDefault" class="picker" onclick="setColor('ACDF')">Console Clrs</button>
   <button id="shadMaker" class="picker" onclick="shadMaker()">Shadow Maker</button>
 </div>
 
@@ -2443,6 +2444,10 @@ TIME:&nbsp&nbsp</textarea>
     <button id="sizeSubmit" class="bones" onclick="sizeSubmit('s')">Submit</button>
     <button id="sizeDefault" class="bones" onclick="sizeSubmit('d')">Default</button>
   <button id="sizeCancel" class="bones" onclick="sizeSubmit()">Exit</button>
+</div>
+
+<div id="logoDiv" class="noShow">
+  <img src="./manifest/logo1.PNG" id="logo">
 </div>
 <div id="pdiv" class="noShow"><p></div>
 <script type="module" src="JavaScript/firebase.js?v=20240702045526"></script>
