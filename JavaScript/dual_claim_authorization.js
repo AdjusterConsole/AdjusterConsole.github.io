@@ -24,10 +24,10 @@ document.getElementById("newAuthstarter").addEventListener('click', function(e) 
 
 function resetChecks() {
   document.getElementById("auth19").checked = true;
-  document.getElementById("auth22o").checked = true;
+  document.getElementById("auth22").checked = true;
   document.getElementById("auth13").checked = true;
   document.getElementById("nauth19").checked = true;
-  document.getElementById("nauth22o").checked = true;
+  document.getElementById("nauth22").checked = true;
   document.getElementById("nauth13").checked = true;
 }
 
@@ -52,25 +52,21 @@ function showAuth() {
 }
 
 function cancel_auth(x) {
-  if (x === 'c') {
     uncheck_All();
     document.getElementById('nauth20').value = '';
+    document.getElementById('auth20').value = '';
     document.getElementById('oopc_option').style.opacity = "0";
-    document.getElementById('oopc_option2').style.opacity = "0";
     document.getElementById('nauth9').checked = true;
     document.getElementById('nauth16').checked = true;
     document.getElementById('nauth13').checked = true;
-    document.getElementById('auth_module').classList.remove('show');
-  }
-  if (x === 'o') {
-    uncheck_All();
-    document.getElementById("authParts").style.display = "inline-block";
-    document.getElementById('auth20').value = '';
     document.getElementById('auth9').checked = true;
     document.getElementById('auth16').checked = true;
     document.getElementById('auth13').checked = true;
-    setButtonDisplay([ 'OOPoptDiv', 'OOPoptDiv2', 'newAuthstyle', 'authOopcs', 'authRequests' ], "none");
-  }
+    document.getElementById("authParts").style.display = "inline-block";
+    setButtonDisplay([ 'OOPoptDiv', 'newAuthstyle', 'authOopcs', 'authRequests' ], "none");
+    if (document.getElementById('auth_module').classList.contains('show')){
+       document.getElementById('auth_module').classList.remove('show');
+    }
 }
 
 function concerned(x) {
@@ -116,19 +112,15 @@ function show_oopc_option(x) {
   if (x === 'n') {
     if (document.getElementById("newauthSelect").checked) {
       document.getElementById('oopc_option').style.opacity = "0";
-      document.getElementById('oopc_option2').style.opacity = "0";
     } else {
       document.getElementById('OOPoptDiv').style.display = "none";
-      document.getElementById('OOPoptDiv2').style.display = "none";
     }
   }
   if (x === 'y') {
      if (document.getElementById("newauthSelect").checked) {
        document.getElementById('oopc_option').style.opacity = "1";
-       document.getElementById('oopc_option2').style.opacity = "1";
      } else {
       document.getElementById('OOPoptDiv').style.display = "inline-block";
-      document.getElementById('OOPoptDiv2').style.display = "inline-block";
     }
   }
 }
@@ -268,7 +260,7 @@ function auth_initialize2() {
   output += noncovered ? auth28Note : '';
   output += denied ? auth29Note : '';
   copy(output);
-  cancel_auth('o');
+  cancel_auth();
 }
 
 function auth_initialize() {
