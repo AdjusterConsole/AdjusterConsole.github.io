@@ -11,7 +11,7 @@ const firebaseConfig = {
   appId: "1:76107438642:web:1901ed4ba7801c3d147a2b",
   measurementId: "G-QLXRDC8KWY"
 };
-
+console.log(window.FIREBASE_API_KEY);
 const app = initializeApp(firebaseConfig);
 const storage = getStorage(app);
 
