@@ -1,4 +1,4 @@
-import { initializeFirebase } from './module.js';
+import { initializeFirebase } from './firebase.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   const api_Key = window.FIREBASE_API_KEY;
