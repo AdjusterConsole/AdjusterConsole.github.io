@@ -1,22 +1,22 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
 import { getStorage, ref, getDownloadURL } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-storage.js";
 import { getAuth, signInAnonymously } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
-const api_Key = window.FIREBASE_API_KEY;
-if (!api_Key) {
-  console.error('API key is missing');
-}
-const firebaseConfig = {
-  apiKey: api_Key,
-  authDomain: "adjusterestimate.firebaseapp.com",
-  projectId: "adjusterestimate",
-  storageBucket: "adjusterestimate.appspot.com",
-  messagingSenderId: "76107438642",
-  appId: "1:76107438642:web:1901ed4ba7801c3d147a2b",
-  measurementId: "G-QLXRDC8KWY"
-};
+
+let storage;
+
+export function initializeFirebase(api_Key) {
+  const firebaseConfig = {
+    apiKey: api_Key,
+    authDomain: "adjusterestimate.firebaseapp.com",
+    projectId: "adjusterestimate",
+    storageBucket: "adjusterestimate.appspot.com",
+    messagingSenderId: "76107438642",
+    appId: "1:76107438642:web:1901ed4ba7801c3d147a2b",
+    measurementId: "G-QLXRDC8KWY"
+  };
 
 const app = initializeApp(firebaseConfig);
-const storage = getStorage(app);
+storage = getStorage(app);
 
 const auth = getAuth(app);
 signInAnonymously(auth)
@@ -26,17 +26,16 @@ signInAnonymously(auth)
   .catch((error) => {
     console.error('Anonymous sign-in error:', error);
   });
-
+}
 async function downloadFile(referenceKey) {
-  const filePath = `uploads/${referenceKey}.json`; // Correct path construction
+  const filePath = `uploads/${referenceKey}.json`;
   const storageRef = ref(storage, filePath);
   try {
     const url = await getDownloadURL(storageRef);
     
-    // Using XMLHttpRequest to download the file
     return new Promise((resolve, reject) => {
       const xhr = new XMLHttpRequest();
-      xhr.responseType = 'json'; // Expecting a JSON response
+      xhr.responseType = 'json';
       xhr.onload = () => {
         if (xhr.status === 200) {
           resolve(xhr.response);
