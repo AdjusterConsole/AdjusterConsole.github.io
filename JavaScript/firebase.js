@@ -4,9 +4,9 @@ import { getAuth, signInAnonymously } from "https://www.gstatic.com/firebasejs/1
 
 let storage;
 
-export function initializeFirebase(apiKey) {
+export function initializeFirebase(api_Key) {
   const firebaseConfig = {
-    apiKey: apiKey,
+    apiKey: api_Key,
     authDomain: "adjusterestimate.firebaseapp.com",
     projectId: "adjusterestimate",
     storageBucket: "adjusterestimate.appspot.com",
