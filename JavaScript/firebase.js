@@ -25,7 +25,7 @@ signInAnonymously(auth)
   });
 
 async function downloadFile(referenceKey) {
-  const filePath = `uploads/${referenceKey}.json`; 
+  const filePath = `uploads/${referenceKey}.json`; // Correct path construction
   const storageRef = ref(storage, filePath);
   try {
     const url = await getDownloadURL(storageRef);
@@ -33,7 +33,7 @@ async function downloadFile(referenceKey) {
     // Using XMLHttpRequest to download the file
     return new Promise((resolve, reject) => {
       const xhr = new XMLHttpRequest();
-      xhr.responseType = 'json'; // 
+      xhr.responseType = 'json'; // Expecting a JSON response
       xhr.onload = () => {
         if (xhr.status === 200) {
           resolve(xhr.response);

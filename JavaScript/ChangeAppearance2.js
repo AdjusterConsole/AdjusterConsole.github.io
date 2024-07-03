@@ -216,12 +216,12 @@ function setColor(colors) {
       break;
    case "ACDF":
       Object.assign(colorSet, {
-        background: "#0f3461",
-        accent: "#00284D",
-        shadow1: "#3d6ba4",
-        shadow2: "#134076",
-        shadow3: "#0C2B50",
-        shadow4: "#081A30",
+        background: "#0D274A",
+        accent: "#1D4D8B",
+        shadow1: "#1D4D8B",
+        shadow2: "#153E75",
+        shadow3: "#08172B",
+        shadow4: "#030912",
         username: '',
         glow: "#ffffff",
         text: "#ffffff",
