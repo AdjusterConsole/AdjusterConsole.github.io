@@ -3,7 +3,7 @@ import { getStorage, ref, getDownloadURL } from "https://www.gstatic.com/firebas
 import { getAuth, signInAnonymously } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
 
 const firebaseConfig = {
-  apiKey: window.FIREBASE_API_KEY,  
+  apiKey: "AIzaSyBbIDO_A-2sqnNP8qQC9OCJ2hOvfwwY050",
   authDomain: "adjusterestimate.firebaseapp.com",
   projectId: "adjusterestimate",
   storageBucket: "adjusterestimate.appspot.com",
@@ -11,7 +11,7 @@ const firebaseConfig = {
   appId: "1:76107438642:web:1901ed4ba7801c3d147a2b",
   measurementId: "G-QLXRDC8KWY"
 };
-console.log(window.FIREBASE_API_KEY);
+
 const app = initializeApp(firebaseConfig);
 const storage = getStorage(app);
 
@@ -30,9 +30,10 @@ async function downloadFile(referenceKey) {
   try {
     const url = await getDownloadURL(storageRef);
     
+    // Using XMLHttpRequest to download the file
     return new Promise((resolve, reject) => {
       const xhr = new XMLHttpRequest();
-      xhr.responseType = 'json'; 
+      xhr.responseType = 'json'; // 
       xhr.onload = () => {
         if (xhr.status === 200) {
           resolve(xhr.response);
