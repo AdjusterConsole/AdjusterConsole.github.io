@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - main 
-      
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -12,6 +12,9 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
+
+    - name: Debug secrets
+      run: echo "FIREBASE_API_KEY=${{ secrets.FIREBASE_API_KEY }}"
 
     - name: Create config.js with API key
       env:
@@ -23,6 +26,5 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: .
-        
         publish_branch: gh-pages
         force_orphan: true
