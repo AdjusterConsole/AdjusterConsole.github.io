@@ -1,9 +1,12 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
 import { getStorage, ref, getDownloadURL } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-storage.js";
 import { getAuth, signInAnonymously } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
-
+const api_Key = window.FIREBASE_API_KEY;
+if (!api_Key) {
+  console.error('API key is missing');
+}
 const firebaseConfig = {
-  apiKey: "AIzaSyBbIDO_A-2sqnNP8qQC9OCJ2hOvfwwY050",
+  apiKey: api_Key,
   authDomain: "adjusterestimate.firebaseapp.com",
   projectId: "adjusterestimate",
   storageBucket: "adjusterestimate.appspot.com",
