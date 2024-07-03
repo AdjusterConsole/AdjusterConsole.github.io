@@ -15,20 +15,73 @@
 //For inquiries regarding licensing or permission to use this code in ways not covered by this license, please contact the author at adjusterconsole@gmail.com.
 
 document.getElementById("newAuthstarter").addEventListener('click', function(e) {
-  if (document.getElementById("newauthSelect").checked) {
-    auth_run();
-  } else {
-    showAuth();
-  }
+    if (document.getElementById("newauthSelect").checked) {
+      auth_run('new');
+    } else {
+      auth_run('old');
+    }
 });
 
+function check_Ready() {
+  const new_partsboxes = ['nauth1', 'nauth2', 'nauth3', 'nauth4', 'nauth5'];
+  const old_partsboxes = ['auth1', 'auth2', 'auth3', 'auth4', 'auth5'];
+  const new_oop = document.getElementById('nauth10').checked;
+  const old_oop = document.getElementById('auth10').checked;
+  const new_both = document.getElementById('nauth12').checked;
+  const old_both = document.getElementById('auth12').checked;
+  const new_oop_known = document.getElementById('nauth21').checked;
+  const old_oop_known = document.getElementById('auth21').checked;
+  const new_oop_amt = document.getElementById('nauth20').value;
+  const old_oop_amt = document.getElementById('auth20').value;
+  let check_Parts = false;
+  if (document.getElementById("newauthSelect").checked) {
+    new_partsboxes.forEach(id => {
+      if (document.getElementById(id).checked) {
+        check_Parts = true;
+      }
+    });
+    if (new_oop || new_both) {
+      if (!new_oop_known && new_oop_amt === '') {
+        alert('Enter OOPC amount or declare unknown.');
+        return false;
+      }
+    } 
+  }
+  if (!document.getElementById("newauthSelect").checked) {
+    old_partsboxes.forEach(id => {
+      if (document.getElementById(id).checked) {
+        check_Parts = true;
+      }
+    });
+    if (old_oop || old_both) {
+      if (!old_oop_known && old_oop_amt === '') {
+        alert('Enter OOPC amount or declare unknown.');
+        return false;
+      }
+    } 
+  }
+  if (!check_Parts) { 
+    if (!confirm('No part options selected. Continue?')) { return false; }
+  }
+ return true;
+}
+
+function auth_run(version) {
+  if (!checkOpen()) {
+    if (version === 'new') {
+      document.getElementById('auth_module').classList.add('show');
+    } else if (version === 'old') {
+      document.getElementById("newAuthstyle").style.display = "inline-block";
+    }
+  resetChecks();
+  }
+}
+
 function resetChecks() {
-  document.getElementById("auth19").checked = true;
-  document.getElementById("auth22").checked = true;
-  document.getElementById("auth13").checked = true;
-  document.getElementById("nauth19").checked = true;
-  document.getElementById("nauth22").checked = true;
-  document.getElementById("nauth13").checked = true;
+  const checkboxes = ['auth9', 'auth13', 'auth16', 'auth23', 'nauth9', 'nauth13', 'nauth16', 'nauth23' ];
+  checkboxes.forEach(id => {
+    document.getElementById(id).checked = true;
+  });
 }
 
 function saveAuth() {
@@ -41,17 +94,9 @@ function saveAuth() {
   }
 }
 
-function showAuth() {
-  const newAuthstyle = document.getElementById("newAuthstyle");
-  if (newAuthstyle.style.display == "inline-block" || checkOpen()) {
-    newAuthstyle.style.display = "none";
-    return;
-  }
-  newAuthstyle.style.display = "inline-block";
-  resetChecks();
-}
 
-function cancel_auth(x) {
+
+function cancel_auth() {
     uncheck_All();
     document.getElementById('nauth20').value = '';
     document.getElementById('auth20').value = '';
@@ -112,6 +157,7 @@ function show_oopc_option(x) {
   if (x === 'n') {
     if (document.getElementById("newauthSelect").checked) {
       document.getElementById('oopc_option').style.opacity = "0";
+      document.getElementById('oopc_option2').style.opacity = "0";
     } else {
       document.getElementById('OOPoptDiv').style.display = "none";
     }
@@ -119,32 +165,16 @@ function show_oopc_option(x) {
   if (x === 'y') {
      if (document.getElementById("newauthSelect").checked) {
        document.getElementById('oopc_option').style.opacity = "1";
+       document.getElementById('oopc_option2').style.opacity = "1";
      } else {
       document.getElementById('OOPoptDiv').style.display = "inline-block";
     }
   }
 }
 
-function auth_run2() {
-  if (!checkOpen()) {
-    document.getElementById('newAuthstyle').style.display = 'inline-block';
-  }
-  document.getElementById('auth9').checked = true;
-  document.getElementById('auth16').checked = true;
-  document.getElementById('auth13').checked = true;
-}
-
-function auth_run() {
-  if (!checkOpen()) {
-    document.getElementById('auth_module').classList.add('show');
-  }
-  document.getElementById('nauth9').checked = true;
-  document.getElementById('nauth16').checked = true;
-  document.getElementById('nauth13').checked = true;
-}
 
 function auth_initialize2() {
-
+  if (!check_Ready()) { return; }
   const contact_name = getContact('0');
   const contact_email = getContact('1');
 
@@ -264,7 +294,7 @@ function auth_initialize2() {
 }
 
 function auth_initialize() {
-
+  if (!check_Ready()) { return; }
   const contact_name = getContact('0');
   const contact_email = getContact('1');
 

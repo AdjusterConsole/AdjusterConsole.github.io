@@ -87,7 +87,7 @@ function whiteRabbit() {
   setZero();
   openScript('close');
   cancelState();
-  cancelNewauth();
+  cancel_auth();
   cancelPT();
   closeNav();
   closeSOP();

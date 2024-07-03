@@ -730,7 +730,7 @@ body {
           <label for="nauth21"><input type="radio" id="nauth21" name="authoops51" class="largerRadio">Don't Know Yet.</label>
         </div>
       </div>
-      <button id="cancel_auth" class="auth_button" onclick="cancel_auth('c')">Cancel</button>
+      <button id="cancel_auth" class="auth_button" onclick="cancel_auth()">Cancel</button>
       <button id="finish_auth" class="auth_button" onclick="auth_initialize()">Finish</button>
     </div>
   </div>
@@ -748,7 +748,7 @@ body {
     <input type="checkbox" id="auth3" name="authparts" class="FNA largerCheckbox"><label for="auth3"> <b>Sourcing MCE as Credit</b><br>&nbsp&nbsp&nbsp&nbsp&nbspUsing sourcing MCE as a credit toward repair facility parts. Shipping is not an option.</label><br>
     <input type="checkbox" id="auth4" name="authparts" class="FNA largerCheckbox"><label for="auth4"> <b>MCE as Credit or Shipped</b><br>&nbsp&nbsp&nbsp&nbsp&nbspUsing sourcing MCE as a credit toward repair facility parts or shipping in.</label><br>
     <input type="checkbox" id="auth5" name="authparts" class="FNA largerCheckbox"><label for="auth5"> <b>Negotiated for No OOPC</b><br>&nbsp&nbsp&nbsp&nbsp&nbspUsing RF's parts. Adjusted price to reasonable amount near MCE.</label></p>
-    <button id="cancelNewauth" class="wefwefwef" onclick="cancel_auth('c')">Cancel</button>
+    <button id="cancelNewauth" class="wefwefwef" onclick="cancel_auth()">Cancel</button>
     <button id="authMove" class="wefwefwef" onclick="moveAuth()">Continue</button>
   </div>
   <div id="authRequests" class="newStyle authStyle" style="display:none;">
@@ -759,7 +759,7 @@ body {
     <input type="checkbox" id="auth7" name="authreqs" class="FNA largerCheckbox" onclick="concerned('y')"><label for="auth7"><b>Photos</b></label><br>
     <input type="checkbox" id="auth8" name="authreqs" class="FNA largerCheckbox" onclick="concerned('y')"><label for="auth8"><b>Records</b></label><br><br>
     <input type="checkbox" id="auth9" name="authreqs" class="FNA largerCheckbox" onclick="concerned('n')"><label for="auth9" style="font-size:20px;"><b>No Requests</b></label><br></p>
-    <button id="cancelNewauth" class="wefwefwef" onclick="cancel_auth('c')">Cancel</button>
+    <button id="cancelNewauth" class="wefwefwef" onclick="cancel_auth()">Cancel</button>
     <button id="authMove2" class="wefwefwef" onclick="moveAuth2()">Continue</button>
   </div>
   <div id="authOopcs" class="noShow" style="display:none;font-size:18px;">
@@ -786,7 +786,6 @@ body {
       <label for="auth20"><b>OOPC = $</b></label><input type="number" style="padding:5px;width:90px;" id="auth20" name="authoops" class="FNA" step="0.01"><br>
       <input type="checkbox" id="auth21" name="authoops2a" class="FNA largerCheckbox"><label for="auth21"><b>Don't Know OOPC.</b></label>
     </div>
-
     <div id="OOPoptDiv2" class="newStyle authStyle">
           <b>DED Amount:</b><br>
           <input type="radio" id="auth22" name="authoopcs61o" class="FNA largerRadio" value="$0.00"><label for="auth22">$0.00</label><br>
@@ -795,9 +794,8 @@ body {
           <input type="radio" id="auth25" name="authoopcs61o" class="FNA largerRadio" value="$500.00"><label for="auth25">$500.00</label><br>
           <input type="radio" id="auth26" name="authoopcs61o" class="FNA largerRadio" value="Void"><label for="auth26">See Notes</label>
     </div>
-
     <div id="authbtns" class="noShow">
-      <button id="cancelNewauth" class="wefwefwef" onclick="cancel_auth('o')">Cancel</button>
+      <button id="cancelNewauth" class="wefwefwef" onclick="cancel_auth()">Cancel</button>
       <button id="finishAuth"  class="wefwefwef" onclick="auth_initialize2()">Finish</button>
     </div>
   </div>
@@ -2460,6 +2458,7 @@ TIME:&nbsp&nbsp</textarea>
 <script src="JavaScript/trackerScript.js?v=20240702045526"></script>
 </body>
 </html>
+
 
 
 
