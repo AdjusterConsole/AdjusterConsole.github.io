@@ -196,22 +196,22 @@ function setColor(colors) {
       break;
     case "pink":
       Object.assign(colorSet, {
-        background: "#d585d3",
-        accent: "#330031",
-        shadow1: "#ffb9ff",
-        shadow2: "#ed9deb",
-        shadow3: "#bd6dbb",
-        shadow4: "#a14b9f",
+        background: "#fbc1fa",
+        accent: "#FF52FC",
+        shadow1: "#FFE5FF",
+        shadow2: "#FFDBFE",
+        shadow3: "#DEABDD",
+        shadow4: "#C392C2",
         glow: "#FFFFFF",
         text: "#FFFFFF",
         outline: "#000000",
-        hover: "#33003132",
-        active: "#33003160",
-        light: "#ffdaff",
-        medlight: "#ffcbff",
-        meddark: "#eda7ed",
-        dark: "#de98de",
-        lightbackground: "#ffb9ff"
+        hover: "#FFDBFE32",
+        active: "#FFDBFE60",
+        light: "#FFE5FF",
+        medlight: "#FFDBFE",
+        meddark: "#DEABDD",
+        dark: "#C392C2",
+        lightbackground: "#fbc1fa"
       });
       break;
    case "ACDF":
@@ -226,8 +226,8 @@ function setColor(colors) {
         glow: "#ffffff",
         text: "#ffffff",
         outline: "#000000",
-        hover: "#7C878F32",
-        active: "#7C878F60",
+        hover: "#1D4D8B32",
+        active: "#1D4D8B60",
         light: "#b8def5",
         medlight: "#aed1e5",
         meddark: "#86a1b1",
