@@ -691,31 +691,37 @@ body {
       <div class="flex_contain">
         <div class="flex_list">
           Was Anything Requested?
-          <label for="nauth6" class="top"><input type="checkbox" id="nauth6" name="authreqs1" class="largerCheckbox" onclick="concerned('y')">Inspection</label>
-          <label for="nauth7"><input type="checkbox" id="nauth7" name="authreqs1" class="largerCheckbox" onclick="concerned('y')">Photos</label>
-          <label for="nauth8"><input type="checkbox" id="nauth8" name="authreqs1" class="largerCheckbox" onclick="concerned('y')">Records</label>
-          <label for="nauth9"><input type="checkbox" id="nauth9" name="authreqs1" class="largerCheckbox" onclick="concerned('n')" checked>No Requests</label>
+          <label for="nauth6" class="top"><input type="checkbox" id="nauth6" name="authreqs1" class="largerCheckbox">Inspection</label>
+          <label for="nauth7"><input type="checkbox" id="nauth7" name="authreqs1" class="largerCheckbox">Photos</label>
+          <label for="nauth8"><input type="checkbox" id="nauth8" name="authreqs1" class="largerCheckbox">Records</label>
         </div>
         <div class="flex_list">
           Is there OOPC or Shipping?
-          <label for="nauth10" class="top"><input type="radio" id="nauth10" name="authoopcs11" class="largerRadio" onclick="show_oopc_option('y')">OOPC</label>
-          <label for="nauth11"><input type="radio" id="nauth11" name="authoopcs11" class="largerRadio" onclick="show_oopc_option('n')">Shipping</label>
-          <label for="nauth12"><input type="radio" id="nauth12" name="authoopcs11" class="largerRadio" onclick="show_oopc_option('y')">Both</label>
-          <label for="nauth13"><input type="radio" id="nauth13" name="authoopcs11" class="largerRadio" onclick="show_oopc_option('n')" checked>No Concerns</label>
+          <label for="nauth9" class="top"><input type="radio" id="nauth9" name="authoopcs11" class="largerRadio" onclick="show_oopc_option('y')">OOPC</label>
+          <label for="nauth10"><input type="radio" id="nauth10" name="authoopcs11" class="largerRadio" onclick="show_oopc_option()">Shipping</label>
+          <label for="nauth11"><input type="radio" id="nauth11" name="authoopcs11" class="largerRadio" onclick="show_oopc_option('y')">Both</label>
+          <label for="nauth12"><input type="radio" id="nauth12" name="authoopcs11" class="largerRadio" onclick="show_oopc_option()" checked>No Concerns</label>
         </div>
         <div class="flex_list">
-          Any non-covered or<br>denied components?
-          <label for="nauth14" class="top"><input type="checkbox" id="nauth14" name="authoops21" class="largerCheckbox" onclick="concerned('d')">Non-Covered</label>
-          <label for="nauth15"><input type="checkbox" id="nauth15" name="authoops21" class="largerCheckbox" onclick="concerned('d')">Denied</label>
-          <label for="nauth16"><input type="checkbox" id="nauth16" name="authoops21" class="largerCheckbox" onclick="concerned('c')" checked>No</label>
+          Special circumstances?
+          <label for="nauth13" class="top"><input type="checkbox" id="nauth13" name="authoops21" class="largerCheckbox">Non-Covered Component</label>
+          <label for="nauth14"><input type="checkbox" id="nauth14" name="authoops21" class="largerCheckbox">Denied Component</label>
+          <label for="nauth15"><input type="checkbox" id="nauth15" name="authoops21" class="largerCheckbox">TSB/Recall</label>
+          <label for="nauth16"><input type="checkbox" id="nauth16" name="authoops21" class="largerCheckbox">Prior Related</label>
+          <label for="nauth16a"><input type="checkbox" id="nauth16a" name="authoops21" class="largerCheckbox">Mileage/Vin Issue</label>
         </div>
         <div class="flex_list slim">
           DED Amount:
-          <label for="nauth22" class="top"><input type="radio" id="nauth22" name="authoopcs61" class="largerRadio" value="$0.00">$0.00</label>
-          <label for="nauth23"><input type="radio" id="nauth23" name="authoopcs61" class="largerRadio" value="$100.00" checked>$100.00</label>
-          <label for="nauth24"><input type="radio" id="nauth24" name="authoopcs61" class="largerRadio" value="$200.00">$200.00</label>
-          <label for="nauth25"><input type="radio" id="nauth25" name="authoopcs61" class="largerRadio" value="$500.00">$500.00</label>
-          <label for="nauth26"><input type="radio" id="nauth26" name="authoopcs61" class="largerRadio" value="Void">See Notes</label>
+          <select id="nauth25" name="authoopcs61" class="largerSelect">
+            <option value="$100.00">$100.00</option>
+            <option value="$0.00">$0.00</option>
+            <option value="$50.00">$50.00</option>
+            <option value="$100.00">$100.00</option>
+            <option value="$150.00">$150.00</option>
+            <option value="$200.00">$200.00</option>
+            <option value="$250.00">$250.00</option>
+            <option value="$500.00">$500.00</option>
+          </select>
         </div>
         <div id="oopc_option" class="flex_list">
           What is the cause of OOPC?
@@ -730,7 +736,7 @@ body {
         </div>
       </div>
       <button id="cancel_auth" class="auth_button" onclick="cancel_auth()">Cancel</button>
-      <button id="finish_auth" class="auth_button" onclick="auth_initialize()">Finish</button>
+      <button id="finish_auth" class="auth_button" onclick="auth_initialize(2)">Finish</button>
     </div>
   </div>
 </div>
@@ -742,11 +748,11 @@ body {
     <p style="text-align:center;"><b>Who's parts at what pricing?</b><br>
     Select all that apply...</p>
     <p class="bodyTab">
-    <input type="checkbox" id="auth1" name="authparts" class="FNA largerCheckbox"><label for="auth1"> <b>OEM Under 250</b><br>&nbsp&nbsp&nbsp&nbsp&nbspUsing RF's OEM parts at or under $250.00.</label><br>
-    <input type="checkbox" id="auth2" name="authparts" class="FNA largerCheckbox"><label for="auth2"> <b>RF Parts at MCE</b><br>&nbsp&nbsp&nbsp&nbsp&nbspUsing RF's parts at or under sourcing MCE.</label><br>
-    <input type="checkbox" id="auth3" name="authparts" class="FNA largerCheckbox"><label for="auth3"> <b>Sourcing MCE as Credit</b><br>&nbsp&nbsp&nbsp&nbsp&nbspUsing sourcing MCE as a credit toward repair facility parts. Shipping is not an option.</label><br>
-    <input type="checkbox" id="auth4" name="authparts" class="FNA largerCheckbox"><label for="auth4"> <b>MCE as Credit or Shipped</b><br>&nbsp&nbsp&nbsp&nbsp&nbspUsing sourcing MCE as a credit toward repair facility parts or shipping in.</label><br>
-    <input type="checkbox" id="auth5" name="authparts" class="FNA largerCheckbox"><label for="auth5"> <b>Negotiated for No OOPC</b><br>&nbsp&nbsp&nbsp&nbsp&nbspUsing RF's parts. Adjusted price to reasonable amount near MCE.</label></p>
+    <input type="checkbox" id="auth1" name="authparts" class="FNA largerCheckbox"><label for="auth1"><b>OEM Under 250</b><br>&nbsp&nbsp&nbsp&nbsp&nbspUsing RF's OEM parts at or under $250.00.</label><br>
+    <input type="checkbox" id="auth2" name="authparts" class="FNA largerCheckbox"><label for="auth2"><b>RF Parts at MCE</b><br>&nbsp&nbsp&nbsp&nbsp&nbspUsing RF's parts at or under sourcing MCE.</label><br>
+    <input type="checkbox" id="auth3" name="authparts" class="FNA largerCheckbox"><label for="auth3"><b>Sourcing MCE as Credit</b><br>&nbsp&nbsp&nbsp&nbsp&nbspUsing sourcing MCE as a credit toward repair facility parts. Shipping is not an option.</label><br>
+    <input type="checkbox" id="auth4" name="authparts" class="FNA largerCheckbox"><label for="auth4"><b>MCE as Credit or Shipped</b><br>&nbsp&nbsp&nbsp&nbsp&nbspUsing sourcing MCE as a credit toward repair facility parts or shipping in.</label><br>
+    <input type="checkbox" id="auth5" name="authparts" class="FNA largerCheckbox"><label for="auth5"><b>Negotiated for No OOPC</b><br>&nbsp&nbsp&nbsp&nbsp&nbspUsing RF's parts. Adjusted price to reasonable amount near MCE.</label></p>
     <button id="cancelNewauth" class="wefwefwef" onclick="cancel_auth()">Cancel</button>
     <button id="authMove" class="wefwefwef" onclick="moveAuth()">Continue</button>
   </div>
@@ -754,10 +760,9 @@ body {
     <p style="text-align:center;"><b>Did you request anything?</b><br>
     Select all that apply...</p>
     <p class="bodyTab">
-    <input type="checkbox" id="auth6" name="authreqs" class="FNA largerCheckbox" onclick="concerned('y')"><label for="auth6"><b>Inspection</b></label><br>
-    <input type="checkbox" id="auth7" name="authreqs" class="FNA largerCheckbox" onclick="concerned('y')"><label for="auth7"><b>Photos</b></label><br>
-    <input type="checkbox" id="auth8" name="authreqs" class="FNA largerCheckbox" onclick="concerned('y')"><label for="auth8"><b>Records</b></label><br><br>
-    <input type="checkbox" id="auth9" name="authreqs" class="FNA largerCheckbox" onclick="concerned('n')"><label for="auth9" style="font-size:20px;"><b>No Requests</b></label><br></p>
+    <input type="checkbox" id="auth6" name="authreqs" class="FNA largerCheckbox"><label for="auth6"><b>Inspection</b></label><br>
+    <input type="checkbox" id="auth7" name="authreqs" class="FNA largerCheckbox"><label for="auth7"><b>Photos</b></label><br>
+    <input type="checkbox" id="auth8" name="authreqs" class="FNA largerCheckbox"><label for="auth8"><b>Records</b></label><br><br>
     <button id="cancelNewauth" class="wefwefwef" onclick="cancel_auth()">Cancel</button>
     <button id="authMove2" class="wefwefwef" onclick="moveAuth2()">Continue</button>
   </div>
@@ -765,16 +770,18 @@ body {
     <div class="noShow" style="width:50%;float:left;">
     <div class="newStyle authStyle" style="font-size:18px;">
       <b>Is OOPC or shipping a concern?</b><br>
-      <input type="radio" id="auth10" name="authoops" class="FNA largerRadio" onclick="show_oopc_option('y')"><label for="auth10"><b>OOPC</b></label><br>
-      <input type="radio" id="auth11" name="authoops" class="FNA largerRadio" onclick="show_oopc_option('n')"><label for="auth11"><b>Shipping</b></label><br>
-      <input type="radio" id="auth12" name="authoops" class="FNA largerRadio" onclick="show_oopc_option('y')"><label for="auth12"><b>Both</b></label><br><br>
-      <input type="radio" id="auth13" name="authoops" class="FNA largerRadio" onclick="show_oopc_option('n')")><label for="auth13"><b>No Concerns</b></label><br><br>
+      <input type="radio" id="auth9" name="authoops" class="FNA largerRadio" onclick="show_oopc_option('y')"><label for="auth9"><b>OOPC</b></label><br>
+      <input type="radio" id="auth10" name="authoops" class="FNA largerRadio" onclick="show_oopc_option()"><label for="auth10"><b>Shipping</b></label><br>
+      <input type="radio" id="auth11" name="authoops" class="FNA largerRadio" onclick="show_oopc_option('y')"><label for="auth11"><b>Both</b></label><br><br>
+      <input type="radio" id="auth12" name="authoops" class="FNA largerRadio" onclick="show_oopc_option()")><label for="auth12"><b>No Concerns</b></label><br><br>
     </div><br>
     <div class="newStyle authStyle" style="font-size:18px;margin-left:20px;">
       <b>Any non-covered or denied components?</b><br>
-      <input type="checkbox" id="auth14" name="authoops3" class="FNA largerCheckbox"onclick="concerned('d')"><label for="auth14"><b>Non-Covered</b></label><br>
-      <input type="checkbox" id="auth15" name="authoops3" class="FNA largerCheckbox"onclick="concerned('d')"><label for="auth15"><b>Denied</b></label><br>
-      <input type="checkbox" id="auth16" name="authoops3" class="FNA largerCheckbox"onclick="concerned('c')" checked><label for="auth16"><b>No</b></label>
+      <input type="checkbox" id="auth13" name="authoops3" class="FNA largerCheckbox"><label for="auth13"><b>Non-Covered</b></label><br>
+      <input type="checkbox" id="auth14" name="authoops3" class="FNA largerCheckbox"><label for="auth14"><b>Denied</b></label><br>
+      <input type="checkbox" id="auth15" name="authoops3" class="FNA largerCheckbox"><label for="auth15"><b>TSB/Recall</b></label><br>
+      <input type="checkbox" id="auth16" name="authoops3" class="FNA largerCheckbox"><label for="auth16"><b>Prior Related</b></label><br>
+      <input type="checkbox" id="auth16a" name="authoops3" class="FNA largerCheckbox"><label for="auth16a"><b>Mileage/Vin Issue</b></label>
     </div>
     </div>
     <div id="OOPoptDiv" class="newStyle authStyle">
@@ -786,16 +793,21 @@ body {
       <input type="checkbox" id="auth21" name="authoops2a" class="FNA largerCheckbox"><label for="auth21"><b>Don't Know OOPC.</b></label>
     </div>
     <div id="OOPoptDiv2" class="newStyle authStyle">
-          <b>DED Amount:</b><br>
-          <input type="radio" id="auth22" name="authoopcs61o" class="FNA largerRadio" value="$0.00"><label for="auth22">$0.00</label><br>
-          <input type="radio" id="auth23" name="authoopcs61o" class="FNA largerRadio" value="$100.00" checked><label for="auth23">$100.00</label><br>
-          <input type="radio" id="auth24" name="authoopcs61o" class="FNA largerRadio" value="$200.00"><label for="auth24">$200.00</label><br>
-          <input type="radio" id="auth25" name="authoopcs61o" class="FNA largerRadio" value="$500.00"><label for="auth25">$500.00</label><br>
-          <input type="radio" id="auth26" name="authoopcs61o" class="FNA largerRadio" value="Void"><label for="auth26">See Notes</label>
-    </div>
+          DED Amount:
+          <select id="auth25" name="authoopcs61" class="largerSelect">
+            <option value="$100.00">$100.00</option>
+            <option value="$0.00">$0.00</option>
+            <option value="$50.00">$50.00</option>
+            <option value="$100.00">$100.00</option>
+            <option value="$150.00">$150.00</option>
+            <option value="$200.00">$200.00</option>
+            <option value="$250.00">$250.00</option>
+            <option value="$500.00">$500.00</option>
+          </select>
+        </div>
     <div id="authbtns" class="noShow">
       <button id="cancelNewauth" class="wefwefwef" onclick="cancel_auth()">Cancel</button>
-      <button id="finishAuth"  class="wefwefwef" onclick="auth_initialize2()">Finish</button>
+      <button id="finishAuth"  class="wefwefwef" onclick="auth_initialize(1)">Finish</button>
     </div>
   </div>
 </div>
