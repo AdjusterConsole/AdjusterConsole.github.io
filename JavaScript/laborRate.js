@@ -118,6 +118,7 @@ function laborScript() {
   let askingstr = document.getElementById("asking").value;
   let aveRate = document.getElementById("aveRate").value;
   let currentstr = document.getElementById("current").value;
+   if (!askingstr || !aveRate) return;
   let current = parseInt(currentstr);
   let asking = parseInt(askingstr);
   if (current < 1) current = asking;
