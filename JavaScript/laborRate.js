@@ -30,31 +30,47 @@ function exitScript() {
 }
 
 function setZero() {
-  const one = localStorage.getItem('selectedIdR');
-  const two = localStorage.getItem('selectedIdT');
-  const three = localStorage.getItem('selectedIdQ');
-  if (one) document.getElementById(one).classList.remove('selected');
-  if (two) document.getElementById(two).classList.remove('selected');
-  if (three) document.getElementById(three).classList.remove('selected');
-  document.getElementById("asking").value = "";
-  document.getElementById("current").value = "";
-  document.getElementById("aveRate").value = "";
   document.getElementById("responseDiv_text").innerHTML = "";
-  document.getElementById("noScript").style.display = "none";
-  document.getElementById("yesScript").style.display = "none";
-  document.getElementById("responseDiv").style.display = "none";
-  localStorage.removeItem('radius');
-  localStorage.removeItem('type');
-  localStorage.removeItem('quant');
-  localStorage.removeItem('selectedIdR');
-  localStorage.removeItem('selectedIdQ');
-  localStorage.removeItem('selectedIdT');
+  document.getElementById("noScript").style.opacity = "0";
+  document.getElementById("yesScript").style.opacity = "0";
+  document.getElementById("responseDiv").style.opacity = "0";
+  document.getElementById('asking').value = '';
+  document.getElementById('current').value = '';
+  document.getElementById('custom').value = '';
+  document.getElementById('aveRate').value = '';
+  let priorRadius = localStorage.getItem('radius');
+  let priorIdr = localStorage.getItem('selectedIdR');
+  if (priorIdr) {
+    if (document.getElementById(priorIdr).classList.contains('selected'))  {
+      document.getElementById(priorIdr).classList.remove('selected');
+      localStorage.removeItem('radius');
+      localStorage.removeItem('selectedIdR');
+    }
+  }
+  let priorType = localStorage.getItem('type');
+  let priorIdt = localStorage.getItem('selectedIdT');
+  if (priorType) {
+    if (document.getElementById(priorIdt).classList.contains('selected')) {
+      document.getElementById(priorIdt).classList.remove('selected');
+      localStorage.removeItem('type');
+      localStorage.removeItem('selectedIdT');
+    }
+  }
+  let priorQuant = localStorage.getItem('quant');
+  let priorIdq = localStorage.getItem('selectedIdQ');
+  if (priorQuant) {
+    if (document.getElementById(priorIdq).classList.contains('selected')) {
+      document.getElementById(priorIdq).classList.remove('selected');
+      localStorage.removeItem('quant');
+      localStorage.removeItem('selectedIdQ');
+    }
+  }
 }
 
 function radiusSelect(x, id) {
   let priorRadius = localStorage.getItem('radius');
   let priorId = localStorage.getItem('selectedIdR');
-  if (priorRadius) {
+  if (priorRadius !== null && priorId !== null) {
     document.getElementById(priorId).classList.remove('selected');
     localStorage.removeItem('radius');
     localStorage.removeItem('selectedIdR');
@@ -67,7 +83,7 @@ function radiusSelect(x, id) {
 function typeSelect(x, id) {
   let priorType = localStorage.getItem('type');
   let priorId = localStorage.getItem('selectedIdT');
-  if (priorType) {
+  if (priorType !== null && priorId !== null) {
     document.getElementById(priorId).classList.remove('selected');
     localStorage.removeItem('type');
     localStorage.removeItem('selectedIdT');
@@ -80,7 +96,7 @@ function typeSelect(x, id) {
 function quantSelect(x, id) {
   let priorQuant = localStorage.getItem('quant');
   let priorId = localStorage.getItem('selectedIdQ');
-  if (priorQuant) {
+  if (priorQuant !== null && priorId !== null)  {
     document.getElementById(priorId).classList.remove('selected');
     localStorage.removeItem('quant');
     localStorage.removeItem('selectedIdQ');
@@ -98,10 +114,14 @@ function scriptInfo() {
   if (current < 1) current = asking;
   let aveRate = document.getElementById("aveRate").value;
   let custom = document.getElementById("custom").value;
-  localStorage.setItem("asking", asking);
-  localStorage.setItem("aveRate", aveRate);
-  localStorage.setItem("current", current);
-  localStorage.setItem("custom", custom);
+  if (asking !== '' && aveRate !== '') {
+    localStorage.setItem("aveRate", aveRate);
+    localStorage.setItem("asking", asking);
+  } else {
+    return;
+  }
+  if (current !== '') localStorage.setItem("current", current);
+  if (custom !== '') localStorage.setItem("custom", custom);
 }
 
 function instructScript() {
@@ -114,11 +134,11 @@ function laborScript() {
   let radius = localStorage.getItem('radius');
   let type = localStorage.getItem('type');
   let quant = localStorage.getItem('quant');
-  if (!radius || !type || !quant) return;
+  if (radius === '0' || type === '0' || quant === '0') return;
   let askingstr = document.getElementById("asking").value;
   let aveRate = document.getElementById("aveRate").value;
   let currentstr = document.getElementById("current").value;
-   if (!askingstr || !aveRate) return;
+  if (askingstr === '0' || aveRate === '0') return;
   let current = parseInt(currentstr);
   let asking = parseInt(askingstr);
   if (current < 1) current = asking;
@@ -235,11 +255,11 @@ function negotiateScript(x) {
   }
 }
 
-function laborReview(askingStr, currentStr = 0, averageStr) {
+function laborReview(askingStr, currentStr, averageStr) {
   let asking = parseInt(askingStr);
   let current = parseInt(currentStr);
   let average = parseInt(averageStr);
-  if (current == 0) {
+  if (current === '0') {
     current = asking;
   }
   let normal = "normal";
@@ -259,7 +279,7 @@ function laborReview(askingStr, currentStr = 0, averageStr) {
 
 function buildLaborNote(result) {
   scriptInfo();
-  let textarea = document.getElementById("textarea5");
+  let textarea;
   let please = localStorage.getItem("weTried");
   let asking = localStorage.getItem("asking");
   let radius = localStorage.getItem("radius");
@@ -268,38 +288,45 @@ function buildLaborNote(result) {
   let aveRate = localStorage.getItem("aveRate");
   let current = localStorage.getItem("current");
   let custom = localStorage.getItem("custom");
-  textarea.value = "Search Parameters:\rRadius: " + radius + "\rFacility Type: " + type + "\rNumber of Facilities: " + quant + "\r\r";
-  textarea.value += "Average Labor Rate: $" + aveRate;
+
+  textarea = "Search Parameters:\rRadius: " + radius + "\rFacility Type: " + type + "\rNumber of Facilities: " + quant + "\r\r";
+  textarea += "Average Labor Rate: $" + aveRate;
   if (asking != current) {
-    textarea.value += "\rRepair Facility Previous Labor Rate: $" + current;
+    textarea += "\rRepair Facility Previous Labor Rate: $" + current;
   }
-  textarea.value += "\rRepair Facility Posted Labor Rate: $" + asking;
+  textarea += "\rRepair Facility Posted Labor Rate: $" + asking;
   if (result == "negunderAve") {
-    textarea.value += "\r\rThe Repair Facility posted labor rate is under the average labor rate for comparable shops in the vicinity.";
-    textarea.value += "\r\rThe Repair Facility is willing to negotiate.\rThey agreed to lower their rate to an agreed upon amount.";
-    textarea.value += "\rUpdated Repair Facility labor rate at: $" + custom;
+    textarea += "\r\rThe Repair Facility posted labor rate is under the average labor rate for comparable shops in the vicinity.";
+    textarea += "\r\rThe Repair Facility is willing to negotiate.\rThey agreed to lower their rate to an agreed upon amount.";
+    textarea += "\rUpdated Repair Facility labor rate at: $" + custom;
   }
   if (result == "declineunderAve") {
-    textarea.value += "\r\rThe Repair Facility posted labor rate is under the average labor rate for comparable shops in the vicinity.";
-    textarea.value += "\r\rThe Repair Facility is unwilling to negotiate the labor rate.";
-    textarea.value += "\rUpdated Repair Facility labor rate at: $" + asking;
+    textarea += "\r\rThe Repair Facility posted labor rate is under the average labor rate for comparable shops in the vicinity.";
+    textarea += "\r\rThe Repair Facility is unwilling to negotiate the labor rate.";
+    textarea += "\rUpdated Repair Facility labor rate at: $" + asking;
   }
   if (result == "declined") {
-    textarea.value += "\r\rThe Repair Facility is unwilling to negotiate the labor rate.";
-    textarea.value += "\rUpdated Repair Facility labor rate at: $" + asking;
+    textarea += "\r\rThe Repair Facility is unwilling to negotiate the labor rate.";
+    textarea += "\rUpdated Repair Facility labor rate at: $" + asking;
   }
   if (result == "atAve") {
-    textarea.value += "\r\rThe Repair Facility is willing to negotiate.\rThey agreed to the average rate for the area.";
-    textarea.value += "\rUpdated Repair Facility labor rate at: $" + aveRate;
+    textarea += "\r\rThe Repair Facility is willing to negotiate.\rThey agreed to the average rate for the area.";
+    textarea += "\rUpdated Repair Facility labor rate at: $" + aveRate;
   }
   if (result == "halfway") {
-    textarea.value += "\r\rThe Repair Facility is willing to negotiate.\rThey agreed on midway between average and asking.";
-    textarea.value += "\rUpdated Repair Facility labor rate at: $" + please;
+    textarea += "\r\rThe Repair Facility is willing to negotiate.\rThey agreed on midway between average and asking.";
+    textarea += "\rUpdated Repair Facility labor rate at: $" + please;
   }
   if (result == "custom") {
-    textarea.value += "\r\rThe Repair Facility is willing to negotiate.\rThey made an offer under the current posted labor rate which we accepted";
-    textarea.value += "\rUpdated Repair Facility labor rate at: $" + custom;
+    textarea += "\r\rThe Repair Facility is willing to negotiate.\rThey made an offer under the current posted labor rate which we accepted";
+    textarea += "\rUpdated Repair Facility labor rate at: $" + custom;
   }
-  textarea.select();
-  document.execCommand("copy");
+  copy(textarea);
+  localStorage.setItem('asking','0');
+  localStorage.setItem('radius','0');
+  localStorage.setItem('type','0');
+  localStorage.setItem('quant','0');
+  localStorage.setItem('aveRate','0');
+  localStorage.setItem('current','0');
+  localStorage.setItem('custom','0');
 }
