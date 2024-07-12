@@ -52,18 +52,39 @@ function setZero() {
 }
 
 function radiusSelect(x, id) {
+  let priorRadius = localStorage.getItem('radius');
+  let priorId = localStorage.getItem('selectedIdR');
+  if (priorRadius) {
+    document.getElementById(priorId).classList.remove('selected');
+    localStorage.removeItem('radius');
+    localStorage.removeItem('selectedIdR');
+  }
   localStorage.setItem('radius', x);
   localStorage.setItem('selectedIdR', id);
   document.getElementById(id).classList.add('selected');
 }
 
 function typeSelect(x, id) {
+  let priorType = localStorage.getItem('type');
+  let priorId = localStorage.getItem('selectedIdT');
+  if (priorType) {
+    document.getElementById(priorId).classList.remove('selected');
+    localStorage.removeItem('type');
+    localStorage.removeItem('selectedIdT');
+  }
   localStorage.setItem('type', x);
   localStorage.setItem('selectedIdT', id);
   document.getElementById(id).classList.add('selected');
 }
 
 function quantSelect(x, id) {
+  let priorQuant = localStorage.getItem('quant');
+  let priorId = localStorage.getItem('selectedIdQ');
+  if (priorQuant) {
+    document.getElementById(priorId).classList.remove('selected');
+    localStorage.removeItem('quant');
+    localStorage.removeItem('selectedIdQ');
+  }
   localStorage.setItem('quant', x);
   localStorage.setItem('selectedIdQ', id);
   document.getElementById(id).classList.add('selected');
