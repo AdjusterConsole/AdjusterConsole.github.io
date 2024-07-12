@@ -1,1 +1,487 @@
-const _0x25528d=_0x1261;function _0x3b76(){const _0x1c5381=['inline-block','./SOP/Info/Fluid_Pricing_Sheet.pdf','./SOP/Reviewing/Reviewing_Modifications.pdf','style','bodyTab2','1775837JKVpCy','listOver','md3','./SOP/Info/CMS_Emails.pdf','menuOpen','./SOP/Reviewing/Reviewing_Commerical_Usage.pdf','./SOP/HowTo/Make_A_3Way_Call.pdf','./SOP/HowTo/Reach_Out_To_DataManagement.pdf','IHSourcing','./SOP/ClaimsBasic/Labor_Verification.pdf','createTextNode','listover','opacity','./SOP/HowTo/Request_Tracking.pdf','md6','rfundcost','lastImageId','Ship\x20part\x20with\x20permission\x20from\x20the\x20Contract\x20Holder.','mileageCalc','addEventListener','innerText','src','contains','replace','./SOP/ClaimsBasic/Assign_A_Task.pdf','getElementsByClassName','mySidenav','./SOP/ClaimsBasic/Add_Or_Update_Repair_Facilites.pdf','rfovrmsrp','classList','./SOP/ClaimsIssues/Escalating_Misrepresentation_to_Legal.pdf','getComputedStyle','./SOP/Reviewing/Reviewing_Mileage_Discrepancies.pdf','./SOP/Info/PT_Or_General_Claim.pdf','width','md1','./SOP/Reviewing/Reviewing_Oversized_Tires.pdf','none','./SOP/ClaimsBasic/Set_An_Inspection.pdf','disabled','authGuideAM','swap1','./SOP/ClaimsBasic/Parts_Verification.pdf','./SOP/ClaimsBasic/Contract_Holder_Verification.pdf','click','toString','querySelector','setProperty','anstoquest4','./SOP/HowTo/Handle_MBI_Claims.pdf','./SOP/Info/PRF_Location.pdf','--div-width2','initial','248gMrIHf','value','Authorize\x20PA\x20list\x20price\x20under\x20$250.00\x20and\x20the\x20remaining\x20balance\x20will\x20be\x20OOPC.','md5','md4','./SOP/ClaimsIssues/Parts_Resolution.pdf','sopnav2','back','mayship','./SOP/ClaimsIssues/TL_Help_Request_Vendor_Network.pdf','mayship2','add','\x20active','./SOP/ClaimsIssues/Close_Or_Set_Inactive.pdf','./SOP/HowTo/Key_Roadside_Reimbursement.pdf','Depot','diagDiv','tablinks2','theDepot','md2','mayship3','open_sop','./SOP/ClaimsIssues/Handling_Escalations.pdf','./SOP/Reviewing/Reviewing_Branded_Title.pdf','rfundlist','PDFdepot','getElementById','\x0dNotes:\x0d','734086AxcgGv','54597vDtAuf','ansto','./SOP/ClaimsBasic/Upload_Documents.pdf','display','paGuide','checked','className','copy','appendChild','getElementsByTagName','Authorize\x20Repair\x20Facility\x20price\x20as\x20it\x27s\x20MCE','getElementsByName','Authorize\x20MSRP.\x20Contract\x20Holder\x20will\x20have\x20OOPC.','./SOP/ClaimsBasic/Start_a_Claim.pdf','anstoquest2','Authorize\x20PA\x20cost\x20price\x20under\x20$250.00\x20and\x20the\x20remaining\x20balance\x20will\x20be\x20OOPC.','authGuideradio','sopnav3','rfovrcost','removeChild','proceed','./SOP/ClaimsBasic/Search_For_Claims.pdf','3ibjybw','MileDiscrep1','./SOP/Info/Employee_Handbook.pdf','anstoquest3','2142560Cgqfyu','removeItem','remove','target','pricing','block','413236ZoEFel','anstoquest1','./SOP/HowTo/Key_And_Authorize_Tow.pdf','under90hmpd','./SOP/ClaimsIssues/Recognizing_Altered_Records.pdf','anstoquest5','Ship\x20part\x20with\x20permision\x20from\x20the\x20Contract\x20Holder.','active','./SOP/ClaimsIssues/Warranties_Recalls_TSBs.pdf','crReview','./SOP/Info/Terms_And_Abbreviations.pdf','./SOP/HowTo/Key_Rental_Reimbursement.pdf','navtag','true','./SOP/ClaimsIssues/RF_Management_Case.pdf','./SOP/ClaimsIssues/TL_Request_Support_Regarding_Network_RF.pdf','length','diagcontent','listUnder','420165qcUesY','noship2','authGuide1','./SOP/Info/Enhanced_Deductible.pdf','1847256aKjqMF','costund','authGuideOE','LOCK1','currentTarget','oeunder','listunder','createElement','clear','documentElement','./SOP/ClaimsBasic/Request_Records.pdf','norideshare'];_0x3b76=function(){return _0x1c5381;};return _0x3b76();}function _0x1261(_0x3caac1,_0x5df8fb){const _0x3b7686=_0x3b76();return _0x1261=function(_0x126165,_0x2a5c9b){_0x126165=_0x126165-0xa5;let _0x191ffa=_0x3b7686[_0x126165];return _0x191ffa;},_0x1261(_0x3caac1,_0x5df8fb);}(function(_0x3d59c7,_0x34507e){const _0x476a57=_0x1261,_0x532f8b=_0x3d59c7();while(!![]){try{const _0x2e6880=parseInt(_0x476a57(0x102))/0x1+parseInt(_0x476a57(0x101))/0x2*(-parseInt(_0x476a57(0x118))/0x3)+parseInt(_0x476a57(0x122))/0x4+-parseInt(_0x476a57(0x11c))/0x5+-parseInt(_0x476a57(0x139))/0x6+-parseInt(_0x476a57(0xb0))/0x7+-parseInt(_0x476a57(0xe5))/0x8*(-parseInt(_0x476a57(0x135))/0x9);if(_0x2e6880===_0x34507e)break;else _0x532f8b['push'](_0x532f8b['shift']());}catch(_0x4230b6){_0x532f8b['push'](_0x532f8b['shift']());}}}(_0x3b76,0x3c8d3));function openInfo2(_0x285275,_0x476d74){const _0x359710=_0x1261;let _0x5caf75,_0x282a7c,_0x537e14;_0x282a7c=document[_0x359710(0xc9)]('diagcontent');for(_0x5caf75=0x0;_0x5caf75<_0x282a7c[_0x359710(0x132)];_0x5caf75++){_0x282a7c[_0x5caf75]['style'][_0x359710(0x105)]=_0x359710(0xd5);}_0x537e14=document[_0x359710(0xc9)]('tablinks2');for(_0x5caf75=0x0;_0x5caf75<_0x537e14[_0x359710(0x132)];_0x5caf75++){_0x537e14[_0x5caf75][_0x359710(0x108)]=_0x537e14[_0x5caf75][_0x359710(0x108)][_0x359710(0xc7)](_0x359710(0xf1),'');}document[_0x359710(0xff)](_0x476d74)[_0x359710(0xae)][_0x359710(0x105)]=_0x359710(0x121),_0x285275[_0x359710(0x13d)][_0x359710(0x108)]+='\x20active';}function closeResource2(){const _0x3c14e4=_0x1261;let _0x314e48,_0x4cb5d9,_0x5ead42;_0x4cb5d9=document[_0x3c14e4(0xc9)](_0x3c14e4(0x133));for(_0x314e48=0x0;_0x314e48<_0x4cb5d9[_0x3c14e4(0x132)];_0x314e48++){_0x4cb5d9[_0x314e48][_0x3c14e4(0xae)]['display']=_0x3c14e4(0xd5);}_0x5ead42=document['getElementsByClassName'](_0x3c14e4(0xf6));for(_0x314e48=0x0;_0x314e48<_0x5ead42[_0x3c14e4(0x132)];_0x314e48++){_0x5ead42[_0x314e48]['className']=_0x5ead42[_0x314e48][_0x3c14e4(0x108)]['replace'](_0x3c14e4(0xf1),'');}document[_0x3c14e4(0xff)](_0x3c14e4(0xf5))[_0x3c14e4(0xae)][_0x3c14e4(0x105)]=_0x3c14e4(0xd5);}function diagCenter(){const _0x3e9349=_0x1261;let _0x5abd19=document[_0x3e9349(0xff)](_0x3e9349(0xf5));if(_0x5abd19[_0x3e9349(0xae)][_0x3e9349(0x105)]=='none'&&!checkOpen()){_0x5abd19[_0x3e9349(0xae)][_0x3e9349(0x105)]=_0x3e9349(0x121);let _0x544d1d=parseInt(window[_0x3e9349(0xcf)](_0x5abd19)[_0x3e9349(0xd2)]),_0x4f651=_0x544d1d/0x4,_0x30e6f2=_0x4f651[_0x3e9349(0xdd)]()+'px';document[_0x3e9349(0xa8)][_0x3e9349(0xae)][_0x3e9349(0xdf)](_0x3e9349(0xe3),_0x30e6f2);}else _0x5abd19[_0x3e9349(0xae)]['display']='none';}function magnify(_0x54bc95){const _0xf73fb6=_0x1261;let _0x1278cb=localStorage['getItem'](_0xf73fb6(0xc0));if(_0x54bc95==_0xf73fb6(0xec))document['getElementById'](_0x1278cb)['style'][_0xf73fb6(0x105)]=_0xf73fb6(0xd5),document[_0xf73fb6(0xff)](_0xf73fb6(0xf7))['style'][_0xf73fb6(0x105)]=_0xf73fb6(0xd5),localStorage[_0xf73fb6(0x11d)](_0xf73fb6(0xc0));else{let _0x342a87=_0x54bc95+_0xf73fb6(0xf4);localStorage['setItem'](_0xf73fb6(0xc0),_0x342a87),document['getElementById'](_0x342a87)[_0xf73fb6(0xae)][_0xf73fb6(0x105)]=_0xf73fb6(0x121),document[_0xf73fb6(0xff)](_0xf73fb6(0xf7))['style'][_0xf73fb6(0x105)]=_0xf73fb6(0xab);}}function diagAction(_0x139505){const _0xaa7296=_0x1261;let _0x15347d='',_0x546717,_0x52f330,_0x2bab29,_0x3a95de,_0x568a17,_0x1af746,_0x4f0ede,_0x1fdf86,_0x3b2af0;_0x546717=document['getElementsByClassName']('diagcontent');for(let _0x397089=0x0;_0x397089<_0x546717[_0xaa7296(0x132)];_0x397089++){_0x546717[_0x397089][_0xaa7296(0xae)][_0xaa7296(0x105)]==='block'&&(_0x52f330=_0x546717[_0x397089]['id']);}whichTblid=_0x52f330+'in',_0x3b2af0=document[_0xaa7296(0xff)](whichTblid),_0x1fdf86=_0x3b2af0['getElementsByTagName']('td'),_0x4f0ede=_0x3b2af0[_0xaa7296(0x10b)]('th');for(let _0x257cb6=0x0;_0x257cb6<_0x1fdf86['length'];_0x257cb6++){_0x139505==_0xaa7296(0xa7)&&(_0x1fdf86[_0x257cb6][_0xaa7296(0xc4)]=''),_0x139505==_0xaa7296(0x109)&&(_0x15347d+=_0x4f0ede[_0x257cb6][_0xaa7296(0xc4)]+':\x20'+_0x1fdf86[_0x257cb6][_0xaa7296(0xc4)]+'\x0d');}_0x3a95de=_0x52f330+'TA',_0x568a17=document[_0xaa7296(0xff)](_0x3a95de),_0x139505==_0xaa7296(0xa7)&&(_0x568a17['value']=''),_0x139505==_0xaa7296(0x109)&&(_0x15347d+=_0xaa7296(0x100)+_0x568a17[_0xaa7296(0xe6)],copy(_0x15347d));}function goGuide(_0x1b5d99,_0x5e571f){const _0x340ed0=_0x1261;let _0x180415=document[_0x340ed0(0x10d)](_0x5e571f);for(let _0x5a26f5=0x0;_0x5a26f5<_0x180415[_0x340ed0(0x132)];_0x5a26f5++){_0x180415[_0x5a26f5][_0x340ed0(0xd7)]=!![];}switch(_0x1b5d99){case'oeover':case'am':document[_0x340ed0(0xff)](_0x340ed0(0x137))[_0x340ed0(0xae)][_0x340ed0(0x105)]=_0x340ed0(0xd5),document[_0x340ed0(0xff)](_0x340ed0(0xd8))['style'][_0x340ed0(0x105)]=_0x340ed0(0xab);break;case'oe':document[_0x340ed0(0xff)]('authGuideOE')['style'][_0x340ed0(0x105)]=_0x340ed0(0xab);break;case _0x340ed0(0x13e):document[_0x340ed0(0xff)](_0x340ed0(0x13e))['style'][_0x340ed0(0x105)]=_0x340ed0(0xab);break;case'rfovrmsrp':document['getElementById'](_0x340ed0(0xcc))[_0x340ed0(0xae)][_0x340ed0(0x105)]='inline-block';break;case'noship3':const _0x1e5c1e=document[_0x340ed0(0xa6)]('p');_0x1e5c1e['classList'][_0x340ed0(0xf0)](_0x340ed0(0xaf));const _0x98f68e=document['createTextNode'](_0x340ed0(0x10e));let _0x59d958=document[_0x340ed0(0xff)](_0x340ed0(0x13b));_0x1e5c1e[_0x340ed0(0x10a)](_0x98f68e),_0x59d958[_0x340ed0(0x10a)](_0x1e5c1e);break;case _0x340ed0(0xf9):const _0x5abd1c=document['createElement']('p');_0x5abd1c['classList'][_0x340ed0(0xf0)](_0x340ed0(0xaf));const _0x3a63fb=document['createTextNode']('Ship\x20part\x20with\x20permision\x20from\x20the\x20Contract\x20Holder.');let _0x363d87=document[_0x340ed0(0xff)](_0x340ed0(0xcc));_0x5abd1c[_0x340ed0(0x10a)](_0x3a63fb),_0x363d87[_0x340ed0(0x10a)](_0x5abd1c);break;case'rfundmsrp':const _0x4906aa=document['createElement']('p');_0x4906aa[_0x340ed0(0xcd)][_0x340ed0(0xf0)](_0x340ed0(0xaf));const _0x53ce72=document[_0x340ed0(0xba)]('Authorize\x20MSRP.');let _0x4bc64d=document[_0x340ed0(0xff)](_0x340ed0(0x13b));_0x4906aa['appendChild'](_0x53ce72),_0x4bc64d[_0x340ed0(0x10a)](_0x4906aa);break;case _0x340ed0(0x120):document[_0x340ed0(0xff)]('authGuideAM')[_0x340ed0(0xae)][_0x340ed0(0x105)]=_0x340ed0(0xd5),document['getElementById'](_0x340ed0(0x106))[_0x340ed0(0xae)]['display']=_0x340ed0(0xab);break;case _0x340ed0(0xa5):document[_0x340ed0(0xff)](_0x340ed0(0x134))[_0x340ed0(0xae)]['display']=_0x340ed0(0xab);break;case'rfovrlist':document[_0x340ed0(0xff)]('rfovrlist')[_0x340ed0(0xae)][_0x340ed0(0x105)]=_0x340ed0(0xab);break;case _0x340ed0(0xfd):const _0x295be8=document[_0x340ed0(0xa6)]('p');_0x295be8[_0x340ed0(0xcd)][_0x340ed0(0xf0)](_0x340ed0(0xaf));const _0x1c5347=document[_0x340ed0(0xba)](_0x340ed0(0x10c));let _0xd66e58=document[_0x340ed0(0xff)](_0x340ed0(0x134));_0x295be8[_0x340ed0(0x10a)](_0x1c5347),_0xd66e58[_0x340ed0(0x10a)](_0x295be8);break;case _0x340ed0(0xed):const _0x2624e6=document[_0x340ed0(0xa6)]('p');_0x2624e6['classList'][_0x340ed0(0xf0)](_0x340ed0(0xaf));const _0x23d764=document[_0x340ed0(0xba)](_0x340ed0(0x128));let _0x50038f=document[_0x340ed0(0xff)]('rfovrlist');_0x2624e6[_0x340ed0(0x10a)](_0x23d764),_0x50038f[_0x340ed0(0x10a)](_0x2624e6);break;case'noship':const _0x4c3b94=document['createElement']('p');_0x4c3b94['classList'][_0x340ed0(0xf0)](_0x340ed0(0xaf));const _0x4daa0e=document[_0x340ed0(0xba)](_0x340ed0(0xe7));let _0x2b7358=document[_0x340ed0(0xff)]('rfovrlist');_0x4c3b94[_0x340ed0(0x10a)](_0x4daa0e),_0x2b7358[_0x340ed0(0x10a)](_0x4c3b94);break;case _0x340ed0(0xbb):document['getElementById'](_0x340ed0(0xb1))[_0x340ed0(0xae)]['display']=_0x340ed0(0xab);break;case _0x340ed0(0x13a):document[_0x340ed0(0xff)](_0x340ed0(0x13a))[_0x340ed0(0xae)][_0x340ed0(0x105)]=_0x340ed0(0xab);break;case _0x340ed0(0xbf):const _0x1c291f=document['createElement']('p');_0x1c291f['classList'][_0x340ed0(0xf0)](_0x340ed0(0xaf));const _0x5c471d=document[_0x340ed0(0xba)]('Authorize\x20Repair\x20Facility\x20price\x20as\x20it\x27s\x20MCE');let _0x1742f8=document[_0x340ed0(0xff)](_0x340ed0(0x13a));_0x1c291f['appendChild'](_0x5c471d),_0x1742f8['appendChild'](_0x1c291f);break;case _0x340ed0(0x114):document['getElementById'](_0x340ed0(0x114))['style'][_0x340ed0(0x105)]=_0x340ed0(0xab);break;case _0x340ed0(0xef):const _0x16ecb3=document[_0x340ed0(0xa6)]('p');_0x16ecb3[_0x340ed0(0xcd)][_0x340ed0(0xf0)](_0x340ed0(0xaf));const _0x563371=document[_0x340ed0(0xba)](_0x340ed0(0xc1));let _0x4542ff=document[_0x340ed0(0xff)](_0x340ed0(0x114));_0x16ecb3[_0x340ed0(0x10a)](_0x563371),_0x4542ff[_0x340ed0(0x10a)](_0x16ecb3);break;case _0x340ed0(0x136):const _0x92d759=document[_0x340ed0(0xa6)]('p');_0x92d759[_0x340ed0(0xcd)]['add']('bodyTab2');const _0x255dee=document[_0x340ed0(0xba)](_0x340ed0(0x111));let _0x57c3b5=document[_0x340ed0(0xff)](_0x340ed0(0x114));_0x92d759[_0x340ed0(0x10a)](_0x255dee),_0x57c3b5['appendChild'](_0x92d759);break;case'sourcing':document['getElementById']('authGuide1')[_0x340ed0(0xae)][_0x340ed0(0x105)]=_0x340ed0(0xd5),document[_0x340ed0(0xff)](_0x340ed0(0x13b))[_0x340ed0(0xae)][_0x340ed0(0x105)]=_0x340ed0(0xd5),document['getElementById'](_0x340ed0(0xd8))[_0x340ed0(0xae)][_0x340ed0(0x105)]=_0x340ed0(0xd5),document[_0x340ed0(0xff)](_0x340ed0(0x106))[_0x340ed0(0xae)]['display']=_0x340ed0(0xd5),document[_0x340ed0(0xff)](_0x340ed0(0xb8))[_0x340ed0(0xae)][_0x340ed0(0x105)]=_0x340ed0(0xab);break;}}function mileDiscrep(){const _0x56ec8b=_0x1261;let _0x55fbef=document[_0x56ec8b(0xff)](_0x56ec8b(0xd3))[_0x56ec8b(0x107)],_0x1c7fbc=document[_0x56ec8b(0xff)](_0x56ec8b(0xf8))['checked'],_0xdc908f=document['getElementById'](_0x56ec8b(0xb2))[_0x56ec8b(0x107)],_0x21322c=document['getElementById'](_0x56ec8b(0xe9))[_0x56ec8b(0x107)],_0x54386c=document[_0x56ec8b(0xff)](_0x56ec8b(0xe8))[_0x56ec8b(0x107)],_0x352190=document[_0x56ec8b(0xff)](_0x56ec8b(0xbe))['checked'],_0x25dfbe=document[_0x56ec8b(0xff)]('md7')[_0x56ec8b(0x107)],_0x3a2976=document['getElementById']('md8')[_0x56ec8b(0x107)];_0x55fbef&&((_0x54386c||_0x352190||_0x25dfbe)&&crReview()),_0x1c7fbc&&(_0x21322c&&(_0x25dfbe&&crReview())),_0x1c7fbc&&((_0x54386c||_0x352190)&&mileageCalc()),_0x1c7fbc&&(_0xdc908f&&((_0x25dfbe||_0x3a2976)&&proceed())),_0x55fbef&&(_0xdc908f&&(_0x3a2976&&proceed())),_0x1c7fbc&&(_0x21322c&&(_0x3a2976&&(document['getElementById'](_0x56ec8b(0x125))[_0x56ec8b(0xae)]['display']='block')));}function proceed(){const _0x42e4c1=_0x1261;document['getElementById']('proceed')[_0x42e4c1(0xae)][_0x42e4c1(0x105)]==_0x42e4c1(0xd5)?document[_0x42e4c1(0xff)](_0x42e4c1(0x116))[_0x42e4c1(0xae)][_0x42e4c1(0x105)]=_0x42e4c1(0x121):document[_0x42e4c1(0xff)](_0x42e4c1(0x116))['style'][_0x42e4c1(0x105)]=_0x42e4c1(0xd5);}function noride(){const _0x59ff07=_0x1261;document[_0x59ff07(0xff)](_0x59ff07(0xaa))['style'][_0x59ff07(0x105)]=='none'?document['getElementById'](_0x59ff07(0xaa))[_0x59ff07(0xae)]['display']='block':document[_0x59ff07(0xff)]('norideshare')[_0x59ff07(0xae)][_0x59ff07(0x105)]=_0x59ff07(0xd5);}function crReview(){const _0x17d6ee=_0x1261;document[_0x17d6ee(0xff)](_0x17d6ee(0x12b))[_0x17d6ee(0xae)][_0x17d6ee(0x105)]==_0x17d6ee(0xd5)?document['getElementById'](_0x17d6ee(0x12b))[_0x17d6ee(0xae)]['display']=_0x17d6ee(0x121):document[_0x17d6ee(0xff)](_0x17d6ee(0x12b))['style'][_0x17d6ee(0x105)]=_0x17d6ee(0xd5);}function mileageCalc(){const _0x66cad1=_0x1261;document[_0x66cad1(0xff)](_0x66cad1(0xc2))['style'][_0x66cad1(0x105)]==_0x66cad1(0xd5)?(document[_0x66cad1(0xff)]('under90hmpd')[_0x66cad1(0xae)][_0x66cad1(0x105)]=_0x66cad1(0xd5),document[_0x66cad1(0xff)](_0x66cad1(0x119))['style'][_0x66cad1(0x105)]=_0x66cad1(0xd5),document[_0x66cad1(0xff)]('norideshare')['style'][_0x66cad1(0x105)]=_0x66cad1(0xd5),document[_0x66cad1(0xff)](_0x66cad1(0xc2))[_0x66cad1(0xae)][_0x66cad1(0x105)]=_0x66cad1(0x121)):document['getElementById'](_0x66cad1(0xc2))[_0x66cad1(0xae)][_0x66cad1(0x105)]=_0x66cad1(0xd5);}function resetMD(){const _0x27b5b9=_0x1261,_0x8ea2d1=document[_0x27b5b9(0xc9)]('mdguide');for(let _0x5a0ea6=0x0;_0x5a0ea6<_0x8ea2d1[_0x27b5b9(0x132)];_0x5a0ea6++){_0x8ea2d1[_0x5a0ea6][_0x27b5b9(0x107)]=![];}document[_0x27b5b9(0xff)](_0x27b5b9(0xc2))[_0x27b5b9(0xae)][_0x27b5b9(0x105)]=_0x27b5b9(0xd5),document[_0x27b5b9(0xff)](_0x27b5b9(0x12b))['style'][_0x27b5b9(0x105)]=_0x27b5b9(0xd5),document[_0x27b5b9(0xff)](_0x27b5b9(0xaa))[_0x27b5b9(0xae)][_0x27b5b9(0x105)]='none',document[_0x27b5b9(0xff)](_0x27b5b9(0x116))[_0x27b5b9(0xae)][_0x27b5b9(0x105)]='none',document['getElementById'](_0x27b5b9(0x125))[_0x27b5b9(0xae)][_0x27b5b9(0x105)]=_0x27b5b9(0xd5),document[_0x27b5b9(0xff)](_0x27b5b9(0x119))[_0x27b5b9(0xae)][_0x27b5b9(0x105)]='block';}function resetGuide(){const _0xc58393=_0x1261,_0x3974b9=document[_0xc58393(0xc9)](_0xc58393(0x112));for(let _0x3cb39f=0x0;_0x3cb39f<_0x3974b9[_0xc58393(0x132)];_0x3cb39f++){_0x3974b9[_0x3cb39f][_0xc58393(0x107)]=![],_0x3974b9[_0x3cb39f][_0xc58393(0xd7)]=![];}document[_0xc58393(0xff)](_0xc58393(0x137))['style']['display']='inline-block',document['getElementById'](_0xc58393(0xd8))['style'][_0xc58393(0x105)]=_0xc58393(0xd5),document[_0xc58393(0xff)](_0xc58393(0xcc))[_0xc58393(0xae)][_0xc58393(0x105)]=_0xc58393(0xd5),document[_0xc58393(0xff)](_0xc58393(0x13e))['style']['display']=_0xc58393(0xd5),document['getElementById'](_0xc58393(0x13b))[_0xc58393(0xae)][_0xc58393(0x105)]=_0xc58393(0xd5),document['getElementById'](_0xc58393(0x106))[_0xc58393(0xae)][_0xc58393(0x105)]=_0xc58393(0xd5),document[_0xc58393(0xff)]('listUnder')['style']['display']='none',document[_0xc58393(0xff)]('rfovrlist')['style'][_0xc58393(0x105)]='none',document['getElementById'](_0xc58393(0xb1))['style'][_0xc58393(0x105)]=_0xc58393(0xd5),document['getElementById']('costund')['style']['display']=_0xc58393(0xd5),document[_0xc58393(0xff)](_0xc58393(0x114))[_0xc58393(0xae)][_0xc58393(0x105)]=_0xc58393(0xd5),document['getElementById'](_0xc58393(0xb8))[_0xc58393(0xae)][_0xc58393(0x105)]=_0xc58393(0xd5);}function questAnswered(_0x4939c3){const _0x2708e1=_0x1261;if(_0x4939c3[_0x2708e1(0xae)][_0x2708e1(0xbc)]=='1')return!![];}function questOpen(){const _0x2c7ad5=_0x1261;if(document[_0x2c7ad5(0xff)](_0x2c7ad5(0x123))[_0x2c7ad5(0xcd)]['contains'](_0x2c7ad5(0x129)))return!![];else{if(document[_0x2c7ad5(0xff)](_0x2c7ad5(0x110))[_0x2c7ad5(0xcd)][_0x2c7ad5(0xc6)](_0x2c7ad5(0x129)))return!![];else{if(document[_0x2c7ad5(0xff)](_0x2c7ad5(0x11b))['classList'][_0x2c7ad5(0xc6)](_0x2c7ad5(0x129)))return!![];else{if(document[_0x2c7ad5(0xff)](_0x2c7ad5(0xe0))['classList']['contains'](_0x2c7ad5(0x129)))return!![];else return document[_0x2c7ad5(0xff)](_0x2c7ad5(0x127))[_0x2c7ad5(0xcd)][_0x2c7ad5(0xc6)](_0x2c7ad5(0x129))?!![]:![];}}}}function showAnswer(_0x3cc1d0){const _0x21dca2=_0x1261;let _0x2acafb=_0x21dca2(0x103)+_0x3cc1d0,_0x375236=document['getElementById'](_0x2acafb);if(_0x375236['classList'][_0x21dca2(0xc6)](_0x21dca2(0x129))){_0x375236[_0x21dca2(0xcd)][_0x21dca2(0x11e)](_0x21dca2(0x129));return;}else{if(!questOpen()){_0x375236[_0x21dca2(0xcd)]['add'](_0x21dca2(0x129));return;}else return;}}document[_0x25528d(0xc3)](_0x25528d(0xdc),function(_0x15ed61){const _0x5c6052=_0x25528d;let _0x4a5f3d=document['getElementById'](_0x5c6052(0xd9)),_0xc03175=document[_0x5c6052(0xff)](_0x5c6052(0xca)),_0x5f575d=document['getElementById'](_0x5c6052(0xeb)),_0x5b459b=document[_0x5c6052(0xff)]('navtag'),_0x24f464=document[_0x5c6052(0xff)](_0x5c6052(0x13c));!_0xc03175[_0x5c6052(0xc6)](_0x15ed61[_0x5c6052(0x11f)])&&!_0x4a5f3d[_0x5c6052(0xc6)](_0x15ed61[_0x5c6052(0x11f)])&&closeNav(),!_0x5b459b[_0x5c6052(0xc6)](_0x15ed61[_0x5c6052(0x11f)])&&!_0x5f575d['contains'](_0x15ed61['target'])&&closePDFmenu(),!_0x24f464[_0x5c6052(0xc6)](_0x15ed61[_0x5c6052(0x11f)])&&(localStorage['setItem'](_0x5c6052(0xb4),_0x5c6052(0x12f)),MENU());});function closePDFmenu(){const _0x1fdcb7=_0x25528d;document[_0x1fdcb7(0xff)](_0x1fdcb7(0x12e))[_0x1fdcb7(0xae)][_0x1fdcb7(0x105)]=_0x1fdcb7(0xe4),document[_0x1fdcb7(0xff)](_0x1fdcb7(0xeb))[_0x1fdcb7(0xcd)][_0x1fdcb7(0x11e)](_0x1fdcb7(0xfa)),document[_0x1fdcb7(0xff)](_0x1fdcb7(0x113))[_0x1fdcb7(0xcd)][_0x1fdcb7(0x11e)](_0x1fdcb7(0xfa));}function openSOPnav(){const _0x546568=_0x25528d;if(checkOpen())return;document[_0x546568(0xff)](_0x546568(0x12e))[_0x546568(0xae)][_0x546568(0x105)]=_0x546568(0xd5),document[_0x546568(0xff)]('sopnav2')[_0x546568(0xcd)]['add']('open_sop'),document[_0x546568(0xff)](_0x546568(0x113))[_0x546568(0xcd)]['add']('open_sop');}function showSOP(_0x3626c7){const _0x1c2937=_0x25528d;closePDFmenu();const _0x378ff3=[_0x1c2937(0x10f),_0x1c2937(0x117),_0x1c2937(0xdb),_0x1c2937(0xda),_0x1c2937(0xb9),_0x1c2937(0xc8),_0x1c2937(0xd6),_0x1c2937(0xa9),_0x1c2937(0x104),_0x1c2937(0xcb),'./SOP/ClaimsBasic/Finalizing_Claims.pdf','./SOP/ClaimsBasic/Claim_Notes.pdf',_0x1c2937(0xfb),_0x1c2937(0xea),'./SOP/ClaimsIssues/Part_Returns_and_Freight.pdf',_0x1c2937(0xf2),_0x1c2937(0x12a),_0x1c2937(0x126),_0x1c2937(0xce),_0x1c2937(0x130),_0x1c2937(0x131),_0x1c2937(0xee),_0x1c2937(0xfc),_0x1c2937(0xb5),_0x1c2937(0xd0),_0x1c2937(0xad),_0x1c2937(0xd4),'./SOP/Reviewing/Reviewing_Suspension_Modification.pdf',_0x1c2937(0xe1),'./SOP/HowTo/Handle_Preferred_Customers.pdf',_0x1c2937(0x124),_0x1c2937(0x12d),_0x1c2937(0xf3),_0x1c2937(0xbd),_0x1c2937(0xb6),_0x1c2937(0xb7),_0x1c2937(0x12c),_0x1c2937(0x138),_0x1c2937(0xac),_0x1c2937(0xd1),'./SOP/Info/Repair_Facility_Types.pdf',_0x1c2937(0xe2),_0x1c2937(0xb3),'./SOP/Info/Text_Notifications.pdf','./SOP/Info/PT_First_Contact.pdf','./SOP/Info/State_Tax.pdf',_0x1c2937(0x11a)],_0xdd7424=parseInt(_0x3626c7['substring'](0x3))-0x1,_0x554de6=_0x378ff3[_0xdd7424],_0x2acb22=document[_0x1c2937(0xa6)]('iframe');_0x2acb22[_0x1c2937(0xc5)]=_0x554de6;const _0xa9ac7a=document[_0x1c2937(0xff)](_0x1c2937(0xfe)),_0x494a55=_0xa9ac7a['querySelector']('iframe');_0x494a55&&_0xa9ac7a['removeChild'](_0x494a55),_0xa9ac7a['appendChild'](_0x2acb22),_0xa9ac7a[_0x1c2937(0xae)]['display']=_0x1c2937(0x121);}function closeSOP(){const _0x525494=_0x25528d,_0x1edbc8=document['getElementById'](_0x525494(0xfe)),_0x39fa1c=_0x1edbc8[_0x525494(0xde)]('iframe');_0x39fa1c&&_0x1edbc8[_0x525494(0x115)](_0x39fa1c),_0x1edbc8['style'][_0x525494(0x105)]='none';}
+//Restricted Use License
+//
+//This code is provided under the following terms and conditions:
+//
+//1. You are not allowed to use, copy, modify, merge, publish, distribute, sublicense, or sell copies of this code in any form, modified or unmodified, without express written permission from the author.
+//
+//2. You are not allowed to use this code for any illegal or unethical purpose.
+//
+//3. This license applies to all versions of the code previously released, as well as all future versions. Any prior statements made about permission given are hereby revoked.
+//
+//4. This code is provided "as is", without warranty of any kind, express or implied. The author shall not be liable for any damages arising from the use of this code.
+//
+//By using this code, you agree to abide by these terms and conditions. Failure to comply with these terms may result in legal action.
+//
+//For inquiries regarding licensing or permission to use this code in ways not covered by this license, please contact the author at AdjusterConsole@gmail.com.
+
+function openInfo2(evt, cityName) {
+  let i, diagcontent, tablinks2;
+  diagcontent = document.getElementsByClassName("diagcontent");
+  for (i = 0; i < diagcontent.length; i++) {
+    diagcontent[i].style.display = "none";
+  }
+  tablinks2 = document.getElementsByClassName("tablinks2");
+  for (i = 0; i < tablinks2.length; i++) {
+    tablinks2[i].className = tablinks2[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+function closeResource2() {
+  let i, diagcontent, tablinks2;
+  diagcontent = document.getElementsByClassName("diagcontent");
+  for (i = 0; i < diagcontent.length; i++) {
+    diagcontent[i].style.display = "none";
+  }
+  tablinks2 = document.getElementsByClassName("tablinks2");
+  for (i = 0; i < tablinks2.length; i++) {
+    tablinks2[i].className = tablinks2[i].className.replace(" active", "");
+  }
+ document.getElementById('diagDiv').style.display = "none";
+}
+
+function diagCenter() {
+  let diagDiv = document.getElementById("diagDiv");
+  if (diagDiv.style.display == "none" && !checkOpen()) {
+    diagDiv.style.display = "block";
+    let widthpre = parseInt(window.getComputedStyle(diagDiv).width);
+    let width1 = (widthpre / 4);
+    let width = width1.toString() + "px";
+    document.documentElement.style.setProperty('--div-width2', width);
+  } else {
+    diagDiv.style.display = "none";
+  }
+}
+
+function magnify(image) {
+  let lastImageId = localStorage.getItem("lastImageId");
+  if (image == 'back') {
+    document.getElementById(lastImageId).style.display = "none";
+    document.getElementById('theDepot').style.display = "none";
+    localStorage.removeItem("lastImageId");
+  } else {
+    let imageId = image + "Depot";
+    localStorage.setItem("lastImageId", imageId);
+    document.getElementById(imageId).style.display = "block";
+    document.getElementById('theDepot').style.display = "inline-block";
+  }
+}
+
+function diagAction(action) {
+  let textarea = "";
+  let diagcontent, whichDivId, whichIptclass, textAreaid, notetextArea, i, tableTHs, tableTDs, table;
+  diagcontent = document.getElementsByClassName("diagcontent");
+  for (let i = 0; i < diagcontent.length; i++) {
+    if (diagcontent[i].style.display === "block") {
+      whichDivId = diagcontent[i].id;
+    }
+  }
+  whichTblid = whichDivId + "in";
+  table = document.getElementById(whichTblid);
+  tableTDs = table.getElementsByTagName("td");
+  tableTHs = table.getElementsByTagName("th");
+
+  for (let i = 0; i < tableTDs.length; i++) {
+    if (action == 'clear') {
+      tableTDs[i].innerText = "";
+    }
+    if (action == 'copy') {
+      textarea += tableTHs[i].innerText + ": " + tableTDs[i].innerText + "\r";
+    }
+  }
+  textAreaid = whichDivId + "TA";
+  notetextArea = document.getElementById(textAreaid);
+  if (action == 'clear') {
+    notetextArea.value = "";
+  }
+  if (action == 'copy') {
+    textarea += "\rNotes:\r" + notetextArea.value;
+    copy(textarea);
+  }
+}
+
+//                                                                         AUTH GUIDE
+
+function goGuide(option,name) {
+  let usedBtn = document.getElementsByName(name);
+  for (let i = 0; i < usedBtn.length; i++) {
+    usedBtn[i].disabled = true;
+  }
+  switch(option) {
+  case "oeover":
+  case "am":
+    document.getElementById('authGuide1').style.display = "none";
+    document.getElementById('authGuideAM').style.display = "inline-block";
+    break;
+  case "oe":
+    document.getElementById('authGuideOE').style.display = "inline-block";
+    break;
+  case "oeunder":
+    document.getElementById('oeunder').style.display = "inline-block";
+    break;
+  case "rfovrmsrp":
+    document.getElementById('rfovrmsrp').style.display = "inline-block";
+    break;
+  case "noship3":
+    const pElem43 = document.createElement("p");
+    pElem43.classList.add("bodyTab2");
+    const textNode43 = document.createTextNode("Authorize MSRP. Contract Holder will have OOPC.");
+    let div = document.getElementById("authGuideOE");
+    pElem43.appendChild(textNode43);
+    div.appendChild(pElem43);
+    break;
+  case "mayship3":
+    const pElem8 = document.createElement("p");
+    pElem8.classList.add("bodyTab2");
+    const textNode8 = document.createTextNode("Ship part with permision from the Contract Holder.");
+    let div8 = document.getElementById("rfovrmsrp");
+    pElem8.appendChild(textNode8);
+    div8.appendChild(pElem8);
+    break;
+  case "rfundmsrp":
+    const pElem9 = document.createElement("p");
+    pElem9.classList.add("bodyTab2");
+    const textNode9 = document.createTextNode("Authorize MSRP.");
+    let div9 = document.getElementById("authGuideOE");
+    pElem9.appendChild(textNode9);
+    div9.appendChild(pElem9);
+    break;
+  case "pricing":
+    document.getElementById('authGuideAM').style.display = "none";
+    document.getElementById('paGuide').style.display = "inline-block";
+    break;
+  case "listunder":
+    document.getElementById('listUnder').style.display = "inline-block";
+    break;
+  case "rfovrlist":
+    document.getElementById('rfovrlist').style.display = "inline-block";
+    break;
+  case "rfundlist":
+    const pElem1 = document.createElement("p");
+    pElem1.classList.add("bodyTab2");
+    const textNode1 = document.createTextNode("Authorize Repair Facility price as it's MCE");
+    let div10 = document.getElementById("listUnder");
+    pElem1.appendChild(textNode1);
+    div10.appendChild(pElem1);
+    break;
+  case "mayship":
+    const pElem2 = document.createElement("p");
+    pElem2.classList.add("bodyTab2");
+    const textNode2 = document.createTextNode("Ship part with permision from the Contract Holder.");
+    let div11 = document.getElementById("rfovrlist");
+    pElem2.appendChild(textNode2);
+    div11.appendChild(pElem2);
+    break;
+  case "noship":
+    const pElem3 = document.createElement("p");
+    pElem3.classList.add("bodyTab2");
+    const textNode3 = document.createTextNode("Authorize PA list price under $250.00 and the remaining balance will be OOPC.");
+    let div12 = document.getElementById("rfovrlist");
+    pElem3.appendChild(textNode3);
+    div12.appendChild(pElem3);
+    break;
+  case "listover":
+    document.getElementById('listOver').style.display = "inline-block";
+    break;
+  case "costund":
+    document.getElementById('costund').style.display = "inline-block";
+    break;
+  case "rfundcost":
+    const pElem4 = document.createElement("p");
+    pElem4.classList.add("bodyTab2");
+    const textNode4 = document.createTextNode("Authorize Repair Facility price as it's MCE");
+    let div13 = document.getElementById("costund");
+    pElem4.appendChild(textNode4);
+    div13.appendChild(pElem4);
+    break;
+  case "rfovrcost":
+    document.getElementById('rfovrcost').style.display = "inline-block";
+    break;
+  case "mayship2":
+    const pElem5 = document.createElement("p");
+    pElem5.classList.add("bodyTab2");
+    const textNode5 = document.createTextNode("Ship part with permission from the Contract Holder.");
+    let div15 = document.getElementById("rfovrcost");
+    pElem5.appendChild(textNode5);
+    div15.appendChild(pElem5);
+    break;
+  case "noship2":
+    const pElem6 = document.createElement("p");
+    pElem6.classList.add("bodyTab2");
+    const textNode6 = document.createTextNode("Authorize PA cost price under $250.00 and the remaining balance will be OOPC.");
+    let div16 = document.getElementById("rfovrcost");
+    pElem6.appendChild(textNode6);
+    div16.appendChild(pElem6);
+    break;
+  case "sourcing":
+    document.getElementById('authGuide1').style.display = "none";
+    document.getElementById('authGuideOE').style.display = "none";
+    document.getElementById('authGuideAM').style.display = "none";
+    document.getElementById('paGuide').style.display = "none";
+    document.getElementById('IHSourcing').style.display = "inline-block";
+    break;
+  }
+}
+
+//                                                                    MILEAGE DISCREP
+
+function mileDiscrep() {
+  let isTerm = document.getElementById('md1').checked;
+  let isM2m = document.getElementById('md2').checked;
+  let over90 = document.getElementById('md3').checked;
+  let under90 = document.getElementById('md4').checked;
+  let negMile = document.getElementById('md5').checked;
+  let inaccMile = document.getElementById('md6').checked;
+  let rollBack = document.getElementById('md7').checked;
+  let hasHmpd = document.getElementById('md8').checked;
+  if (isTerm) {
+    if (negMile || inaccMile || rollBack) {
+      crReview();
+    }
+  }
+  if (isM2m) {
+    if (under90) {
+      if (rollBack) {
+        crReview();
+      }
+    }
+  }
+  if (isM2m) {
+    if (negMile || inaccMile) {
+      mileageCalc();
+    }
+  }
+  if (isM2m) {
+    if (over90) {
+      if (rollBack || hasHmpd) {
+        proceed();
+      }
+    }
+  }
+  if (isTerm) {
+    if (over90) {
+      if (hasHmpd) {
+        proceed();
+      }
+    }
+  }
+  if (isM2m) {
+    if (under90) {
+      if (hasHmpd) {
+        document.getElementById('under90hmpd').style.display = "block";
+      }
+    }
+  }
+}
+
+function proceed() {
+  if (document.getElementById('proceed').style.display == "none") {
+    document.getElementById('proceed').style.display = "block";
+  } else {
+    document.getElementById('proceed').style.display = "none";
+  }
+}
+
+function noride() {
+  if (document.getElementById('norideshare').style.display == "none") {
+    document.getElementById('norideshare').style.display = "block";
+  } else {
+    document.getElementById('norideshare').style.display = "none";
+  }
+}
+
+function crReview() {
+  if (document.getElementById('crReview').style.display == "none") {
+    document.getElementById('crReview').style.display = "block";
+  } else {
+    document.getElementById('crReview').style.display = "none";
+  }
+}
+
+function mileageCalc() {
+  if (document.getElementById('mileageCalc').style.display == "none") {
+    document.getElementById('under90hmpd').style.display = "none";
+    document.getElementById('MileDiscrep1').style.display = "none";
+    document.getElementById('norideshare').style.display = "none";
+    document.getElementById('mileageCalc').style.display = "block";
+  } else {
+    document.getElementById('mileageCalc').style.display = "none";
+  }
+}
+
+function resetMD() {
+  const mileRadios = document.getElementsByClassName("mdguide");
+  for (let i = 0; i < mileRadios.length; i++) {
+    mileRadios[i].checked = false;
+  }
+  document.getElementById('mileageCalc').style.display = "none";
+  document.getElementById('crReview').style.display = "none";
+  document.getElementById('norideshare').style.display = "none";
+  document.getElementById('proceed').style.display = "none";
+  document.getElementById('under90hmpd').style.display = "none";
+  document.getElementById('MileDiscrep1').style.display = "block";
+}
+
+function resetGuide() {
+  const radioBtns = document.getElementsByClassName("authGuideradio");
+  for (let i = 0; i < radioBtns.length; i++) {
+    radioBtns[i].checked = false;
+    radioBtns[i].disabled = false;
+  }
+  document.getElementById('authGuide1').style.display = "inline-block";
+  document.getElementById('authGuideAM').style.display = "none";
+  document.getElementById('rfovrmsrp').style.display = "none";
+  document.getElementById('oeunder').style.display = "none";
+  document.getElementById('authGuideOE').style.display = "none";
+  document.getElementById('paGuide').style.display = "none";
+  document.getElementById('listUnder').style.display = "none";
+  document.getElementById('rfovrlist').style.display = "none";
+  document.getElementById('listOver').style.display = "none";
+  document.getElementById('costund').style.display = "none";
+  document.getElementById('rfovrcost').style.display = "none";
+  document.getElementById('IHSourcing').style.display = "none";
+}
+
+//                                                                        Q AND A
+
+function questAnswered(answerDiv) {
+  if (answerDiv.style.opacity == "1") {
+    return true;
+  }
+}
+
+function questOpen() {
+  if (document.getElementById("anstoquest1").classList.contains('active')) {
+    return true;
+  } else if (document.getElementById("anstoquest2").classList.contains('active')) {
+    return true;
+  } else if (document.getElementById("anstoquest3").classList.contains('active')) {
+    return true;
+  } else if (document.getElementById("anstoquest4").classList.contains('active')) {
+    return true;
+  } else if (document.getElementById("anstoquest5").classList.contains('active')) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+function showAnswer(questID) {
+  let answerDivID = "ansto" + questID;
+  let answerDiv = document.getElementById(answerDivID);
+  if (answerDiv.classList.contains('active')) {
+    answerDiv.classList.remove('active');
+    return;
+  } else if (!questOpen()) {
+    answerDiv.classList.add('active');
+    return;
+  } else {
+    return;
+  }
+}
+
+document.addEventListener('click', function(e) {
+  let swap1 = document.getElementById('swap1');
+  let mySidenav = document.getElementById('mySidenav');
+  let sopnav2 = document.getElementById('sopnav2');
+  let navtag = document.getElementById('navtag');
+  let LOCK1 = document.getElementById("LOCK1");
+
+  if (!mySidenav.contains(e.target) && !swap1.contains(e.target)) {
+    closeNav();
+  }
+  if (!navtag.contains(e.target) && !sopnav2.contains(e.target)) {
+    closePDFmenu();
+  }
+  if (!LOCK1.contains(e.target)) {
+   localStorage.setItem("menuOpen", "true");
+   MENU();
+  }
+});
+
+function closePDFmenu() {
+  document.getElementById("navtag").style.display = "initial";
+  document.getElementById("sopnav2").classList.remove("open_sop");
+  document.getElementById("sopnav3").classList.remove("open_sop");
+}
+
+function openSOPnav() {
+  if (checkOpen()) { return; }
+  document.getElementById("navtag").style.display = "none";
+  document.getElementById("sopnav2").classList.add("open_sop");
+  document.getElementById("sopnav3").classList.add("open_sop");
+}
+
+function showSOP(id) {
+  closePDFmenu();
+  const sources = [
+    "./SOP/ClaimsBasic/Start_a_Claim.pdf",
+    "./SOP/ClaimsBasic/Search_For_Claims.pdf",
+    "./SOP/ClaimsBasic/Contract_Holder_Verification.pdf",
+    "./SOP/ClaimsBasic/Parts_Verification.pdf",
+    "./SOP/ClaimsBasic/Labor_Verification.pdf",
+    "./SOP/ClaimsBasic/Assign_A_Task.pdf",
+    "./SOP/ClaimsBasic/Set_An_Inspection.pdf",
+    "./SOP/ClaimsBasic/Request_Records.pdf",
+    "./SOP/ClaimsBasic/Upload_Documents.pdf",
+    "./SOP/ClaimsBasic/Add_Or_Update_Repair_Facilites.pdf",
+    "./SOP/ClaimsBasic/Finalizing_Claims.pdf",
+    "./SOP/ClaimsBasic/Claim_Notes.pdf",
+    "./SOP/ClaimsIssues/Handling_Escalations.pdf",
+    "./SOP/ClaimsIssues/Parts_Resolution.pdf",
+    "./SOP/ClaimsIssues/Part_Returns_and_Freight.pdf",
+    "./SOP/ClaimsIssues/Close_Or_Set_Inactive.pdf",
+    "./SOP/ClaimsIssues/Warranties_Recalls_TSBs.pdf",
+    "./SOP/ClaimsIssues/Recognizing_Altered_Records.pdf",
+    "./SOP/ClaimsIssues/Escalating_Misrepresentation_to_Legal.pdf",
+    "./SOP/ClaimsIssues/RF_Management_Case.pdf",
+    "./SOP/ClaimsIssues/TL_Request_Support_Regarding_Network_RF.pdf",
+    "./SOP/ClaimsIssues/TL_Help_Request_Vendor_Network.pdf",
+    "./SOP/Reviewing/Reviewing_Branded_Title.pdf",
+    "./SOP/Reviewing/Reviewing_Commerical_Usage.pdf",
+    "./SOP/Reviewing/Reviewing_Mileage_Discrepancies.pdf",
+    "./SOP/Reviewing/Reviewing_Modifications.pdf",
+    "./SOP/Reviewing/Reviewing_Oversized_Tires.pdf",
+    "./SOP/Reviewing/Reviewing_Suspension_Modification.pdf",
+    "./SOP/HowTo/Handle_MBI_Claims.pdf",
+    "./SOP/HowTo/Handle_Preferred_Customers.pdf",
+    "./SOP/HowTo/Key_And_Authorize_Tow.pdf",
+    "./SOP/HowTo/Key_Rental_Reimbursement.pdf",
+    "./SOP/HowTo/Key_Roadside_Reimbursement.pdf",
+    "./SOP/HowTo/Request_Tracking.pdf",
+    "./SOP/HowTo/Make_A_3Way_Call.pdf",
+    "./SOP/HowTo/Reach_Out_To_DataManagement.pdf",
+    "./SOP/Info/Terms_And_Abbreviations.pdf",
+    "./SOP/Info/Enhanced_Deductible.pdf",
+    "./SOP/Info/Fluid_Pricing_Sheet.pdf",
+    "./SOP/Info/PT_Or_General_Claim.pdf",
+    "./SOP/Info/Repair_Facility_Types.pdf",
+    "./SOP/Info/PRF_Location.pdf",
+    "./SOP/Info/CMS_Emails.pdf",
+    "./SOP/Info/Text_Notifications.pdf",
+    "./SOP/Info/PT_First_Contact.pdf",
+    "./SOP/Info/State_Tax.pdf",
+    "./SOP/Info/Employee_Handbook.pdf"
+        ];
+  const index = parseInt(id.substring(3)) - 1;
+  const src = sources[index];
+  const iframe = document.createElement('iframe');
+  iframe.src = src;
+  const PDFdepot = document.getElementById('PDFdepot');
+  const existingIframe = PDFdepot.querySelector('iframe');
+  if (existingIframe) {
+    PDFdepot.removeChild(existingIframe);
+  }
+  PDFdepot.appendChild(iframe);
+  PDFdepot.style.display = 'block';
+}
+
+function closeSOP() {
+  const PDFdepot = document.getElementById('PDFdepot');
+  const iframe = PDFdepot.querySelector('iframe');
+  if (iframe) {
+    PDFdepot.removeChild(iframe);
+  }
+  PDFdepot.style.display = 'none';
+}
