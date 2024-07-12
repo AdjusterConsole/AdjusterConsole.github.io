@@ -1,1 +1,792 @@
-const _0x5100cf=_0x1b82;(function(_0x5a8d4b,_0x176a3f){const _0xa98053=_0x1b82,_0x574641=_0x5a8d4b();while(!![]){try{const _0x46f64c=-parseInt(_0xa98053(0x1f3))/0x1+parseInt(_0xa98053(0x24b))/0x2+-parseInt(_0xa98053(0x1e2))/0x3+-parseInt(_0xa98053(0x1f5))/0x4*(parseInt(_0xa98053(0x1d5))/0x5)+-parseInt(_0xa98053(0x207))/0x6+parseInt(_0xa98053(0x267))/0x7*(-parseInt(_0xa98053(0x286))/0x8)+parseInt(_0xa98053(0x20c))/0x9;if(_0x46f64c===_0x176a3f)break;else _0x574641['push'](_0x574641['shift']());}catch(_0x2055d2){_0x574641['push'](_0x574641['shift']());}}}(_0x2123,0xecc0b));function openInfo(_0x1e5f47,_0x1ebd15){const _0x1a1636=_0x1b82;let _0xb5b09,_0x5da431,_0x34b5ad;_0x5da431=document['getElementsByClassName'](_0x1a1636(0x25a));for(_0xb5b09=0x0;_0xb5b09<_0x5da431[_0x1a1636(0x1d3)];_0xb5b09++){_0x5da431[_0xb5b09][_0x1a1636(0x1dc)][_0x1a1636(0x1fe)]='none';}_0x34b5ad=document[_0x1a1636(0x1f8)](_0x1a1636(0x1cf));for(_0xb5b09=0x0;_0xb5b09<_0x34b5ad['length'];_0xb5b09++){_0x34b5ad[_0xb5b09][_0x1a1636(0x1fc)]=_0x34b5ad[_0xb5b09]['className'][_0x1a1636(0x1f2)](_0x1a1636(0x1e9),'');}document[_0x1a1636(0x27a)](_0x1ebd15)[_0x1a1636(0x1dc)][_0x1a1636(0x1fe)]=_0x1a1636(0x27e),_0x1e5f47[_0x1a1636(0x277)][_0x1a1636(0x1fc)]+=_0x1a1636(0x1e9),setDate();for(_0xb5b09=0x0;_0xb5b09<0x6;_0xb5b09++){let _0xd6188c=_0x1a1636(0x257)+_0xb5b09;localStorage['removeItem'](_0xd6188c+_0x1a1636(0x1ce)),document[_0x1a1636(0x27a)](_0xd6188c+_0x1a1636(0x244))['innerText']='';}localStorage[_0x1a1636(0x1e1)](_0x1a1636(0x272)),document[_0x1a1636(0x27a)](_0x1a1636(0x243))[_0x1a1636(0x253)]='',localStorage[_0x1a1636(0x1e1)](_0x1a1636(0x203)),document['getElementById']('serNotebin')[_0x1a1636(0x253)]='';}function closeResource(){const _0x1ab9e0=_0x1b82;let _0x4e86d4,_0x42b49b,_0x329753,_0x4a337b=localStorage[_0x1ab9e0(0x246)](_0x1ab9e0(0x251));_0x4a337b!=_0x1ab9e0(0x222)&&closeonFly();_0x42b49b=document['getElementsByClassName']('tabcontent');for(_0x4e86d4=0x0;_0x4e86d4<_0x42b49b['length'];_0x4e86d4++){_0x42b49b[_0x4e86d4][_0x1ab9e0(0x1dc)]['display']=_0x1ab9e0(0x206);}_0x329753=document['getElementsByClassName']('tablinks');for(_0x4e86d4=0x0;_0x4e86d4<_0x329753[_0x1ab9e0(0x1d3)];_0x4e86d4++){_0x329753[_0x4e86d4][_0x1ab9e0(0x1fc)]=_0x329753[_0x4e86d4]['className']['replace']('\x20active','');}document[_0x1ab9e0(0x27a)](_0x1ab9e0(0x218))[_0x1ab9e0(0x253)]='',document[_0x1ab9e0(0x27a)](_0x1ab9e0(0x225))[_0x1ab9e0(0x253)]='',resetGuide(),resrcCenter();}function resrcCenter(_0x4abd0b,_0x5f5719){const _0x411cda=_0x1b82;let _0x439a53=parseInt(_0x4abd0b),_0xbdfce2=document['getElementById'](_0x411cda(0x22f));if(_0xbdfce2[_0x411cda(0x1dc)][_0x411cda(0x1fe)]==_0x411cda(0x206)&&!checkOpen()){_0xbdfce2[_0x411cda(0x1dc)]['display']=_0x411cda(0x281);_0x5f5719=='p'&&document[_0x411cda(0x27a)](_0x411cda(0x241))[_0x411cda(0x26b)][_0x411cda(0x20f)]('hide');_0x5f5719=='t'&&document[_0x411cda(0x27a)](_0x411cda(0x223))[_0x411cda(0x26b)][_0x411cda(0x20f)]('hide');document['getElementById'](_0x411cda(0x218))[_0x411cda(0x253)]='';let _0x59962f=parseInt(window[_0x411cda(0x23f)](_0xbdfce2)[_0x411cda(0x24d)]),_0x430aef=_0x59962f/_0x439a53,_0x28ab60=_0x430aef['toString']()+'px';document[_0x411cda(0x248)][_0x411cda(0x1dc)]['setProperty'](_0x411cda(0x232),_0x28ab60);return;}_0xbdfce2[_0x411cda(0x1dc)][_0x411cda(0x1fe)]=_0x411cda(0x206),document[_0x411cda(0x27a)](_0x411cda(0x241))[_0x411cda(0x26b)][_0x411cda(0x1d9)](_0x411cda(0x220)),document['getElementById']('toolsDiv')['classList']['add'](_0x411cda(0x220));}function Record(){const _0x1e6de8=_0x1b82;this['date'],this['mileage']=0x0,this[_0x1e6de8(0x209)]='',this[_0x1e6de8(0x259)]=![],this['correction']=![],this[_0x1e6de8(0x1fa)]=0x0,this['milesfrom']=0x0,this['discrepancy']=![],this[_0x1e6de8(0x276)]=![],this[_0x1e6de8(0x261)]=![],this[_0x1e6de8(0x25c)]=![];}function setDate(){const _0x54f43d=_0x1b82;let _0xb34249=new Date(),_0x256866=_0xb34249[_0x54f43d(0x1ff)](),_0x75cc6c=_0xb34249[_0x54f43d(0x25b)]()+0x1,_0x48f378=_0xb34249[_0x54f43d(0x271)]();if(_0x75cc6c<0xa)_0x75cc6c='0'+_0x75cc6c;if(_0x256866<0xa)_0x256866='0'+_0x256866;let _0x58d819=_0x48f378+'-'+_0x75cc6c+'-'+_0x256866;document[_0x54f43d(0x27a)](_0x54f43d(0x27c))[_0x54f43d(0x250)]=_0x58d819;}function convertToDate(_0x894a85){const _0x5980a3=_0x1b82;let _0x411caf=_0x894a85[_0x5980a3(0x256)]('-');return new Date(_0x411caf[0x0],_0x411caf[0x1],_0x411caf[0x2]);}function dayCalc(_0x4fdb24,_0x19a717){const _0x349a62=_0x1b82;let _0x45f589=convertToDate(_0x4fdb24),_0x312d39=convertToDate(_0x19a717);return Math[_0x349a62(0x26d)]((_0x312d39[_0x349a62(0x25f)]()-_0x45f589[_0x349a62(0x25f)]())/0x5265c00);}function addLine(){const _0x29f146=_0x1b82;document[_0x29f146(0x27a)](_0x29f146(0x218))['innerText']='',document[_0x29f146(0x27a)](_0x29f146(0x225))[_0x29f146(0x253)]='';let _0x1cb689=localStorage[_0x29f146(0x246)](_0x29f146(0x23b)),_0x46fb55=parseInt(_0x1cb689)+0x1;if(_0x46fb55<0x6){let _0x178afb=_0x29f146(0x228)+_0x46fb55[_0x29f146(0x1d4)]();document[_0x29f146(0x27a)](_0x178afb)[_0x29f146(0x1dc)]['visibility']=_0x29f146(0x21d),localStorage[_0x29f146(0x1f9)](_0x29f146(0x23b),_0x46fb55);}else return;}function isitOlder(_0x34729e,_0x23d306){const _0x25abfe=_0x1b82;let _0x3afbc5=convertToDate(_0x34729e),_0x28d726=convertToDate(_0x23d306);return _0x3afbc5[_0x25abfe(0x25f)]()>_0x28d726[_0x25abfe(0x25f)]()?!![]:![];}function _0x2123(){const _0x166732=['DIS','add','insertCell','parse','style','toggle','M/D','splice','\x20Claim\x0d','removeItem','177513SQxeqc','empty','Elapsed\x20Days\x20Claim/Maint:\x20','savedRecs','whichA','rec0Notebin','Add\x20Note','\x20active','tbody','\x20Inception\x0d','arise','addEventListener','milesfrom','getElementsByTagName','Mile','serdate','replace','319355vsUutw','createTHead','324pscGVI','False','whichC','getElementsByClassName','setItem','daysfrom','preventDefault','className','rows','display','getDate','from','<b>The\x20inception\x20mileage\x20is\x20','Mileage:\x20','serNote','700px','red','none','5059596XwFXgb','objectArr','notes','target','25px','20454579KLJrTG','date','insertRow','remove','rec4Notebin','whichB','❗\x20ALERT:\x20MILEAGE\x20DISCREPANCY\x20❗<br>','sermileage','all','90%','otebin','None','trackerMsg','substr','Date','slice','cells','visible','green','removeChild','hide','0px','false','toolsDiv','splitL','trackerMini','Enter','Miles\x20Elapsed\x20in\x20Contract:\x20','recTab','InceptionMiles','visibility','Need\x20Inception\x20date\x20to\x20perform\x20calculations.','color','querySelector','rec5Notebin','resrcDiv','Miles\x20Per\x20Day\x20(Average):\x20','tableDiv','--div-width','rec3Notebin','stringify','❗\x20ALERT:\x20EARLY\x20IN\x20COVERAGE\x20❗<br>','rowit','push','outputDiv','True','checked','addLineCount','serNotebin','<br>','Rcrd','getComputedStyle','rec3','policyDiv','Enter\x20at\x20least\x203\x20records\x20to\x20continue.','incNotebin','Notebin','createElement','getItem','opacity','documentElement','outputDiv3','</b><br>','2415564PWjljG','recordArr','width','includes','Elapsed\x20Days\x20Maint/Sale:\x20','value','noteOpen','forEach','innerText','click','rec1Notebin','split','rec','mileage','isInception','tabcontent','getMonth','isPrior','outputDiv2','Mileage','getTime','Click\x20to\x20show\x20note\x20format','isService','discrepancy','Elapsed\x20Miles\x20Claim/Maint:\x20','toFixed','reportTable','spot','7TFSWQr','height','rec2','top','classList','msgDiv','round','hidden','headit','indexOf','getFullYear','incNote','sort','log','130px','waitperiod','currentTarget','ser','alertDiv','getElementById','left','serDate','50px','block','innerHTML','❗\x20ALERT:\x20HMPD\x20❗<br>','inline-block','inc','keydown','key','Enter\x20Date\x20and\x20Mileage\x20of\x20record\x20to\x20save.','1039624KXbxOf','150px','IDforCor','Finished','InceptionDate','splitR','querySelectorAll','Note','tablinks','appendChild','both','Days','length','toString','71545RBIBgC','rec1','rec4'];_0x2123=function(){return _0x166732;};return _0x2123();}function compare(_0x2d9e27,_0x2cd99c){const _0x26634a=_0x1b82;return _0x2d9e27[_0x26634a(0x258)]-_0x2cd99c[_0x26634a(0x258)];}function isitWP(_0x49e211){const _0x38598b=_0x1b82;if(_0x49e211[_0x38598b(0x261)]){if(_0x49e211['daysfrom']<0x1a)return!![];if(_0x49e211['milesfrom']<0xfa)return!![];if(_0x49e211[_0x38598b(0x1fa)]<0x29&&_0x49e211['milesfrom']<0x1f4)return!![];}}function hideTable(){const _0x579cdf=_0x1b82;let _0x119592=document[_0x579cdf(0x27a)]('tableDiv');_0x119592[_0x579cdf(0x1dc)][_0x579cdf(0x247)]='0';}function showTable(){const _0x4134dc=_0x1b82;let _0x107ebe=document[_0x4134dc(0x27a)](_0x4134dc(0x231));_0x107ebe[_0x4134dc(0x1dc)][_0x4134dc(0x247)]='1';}function saveAll(){const _0x51d416=_0x1b82;let _0x2bdfed=localStorage[_0x51d416(0x246)](_0x51d416(0x251));_0x2bdfed!=_0x51d416(0x222)&&closeonFly();const _0x865efa=[_0x51d416(0x282),_0x51d416(0x278),'rec0',_0x51d416(0x1d6),_0x51d416(0x269),_0x51d416(0x240),_0x51d416(0x1d7),'rec5'];let _0x19ac3a=![];for(const _0x111cd3 of _0x865efa){const _0x567211=document[_0x51d416(0x27a)](_0x111cd3+_0x51d416(0x21a))[_0x51d416(0x250)],_0x309b66=document[_0x51d416(0x27a)](_0x111cd3+_0x51d416(0x1f0))[_0x51d416(0x250)];_0x309b66&&_0x567211&&saveRecord(_0x111cd3+'S');}}function saveRecord(_0x226144){const _0x60ae45=_0x1b82;let _0x31a6b3=localStorage[_0x60ae45(0x246)](_0x60ae45(0x251));_0x31a6b3!=_0x60ae45(0x222)&&closeonFly();document[_0x60ae45(0x27a)]('trackerMsg')[_0x60ae45(0x253)]='',document[_0x60ae45(0x27a)]('trackerMini')['innerText']='';let _0x2ee302=new Record(),_0x34d0f4=_0x226144[_0x60ae45(0x1d3)]-0x1,_0x1a61f5=_0x226144[_0x60ae45(0x21b)](0x0,_0x34d0f4),_0x24ddad=document[_0x60ae45(0x27a)](_0x1a61f5+_0x60ae45(0x1f0))[_0x60ae45(0x250)],_0x432528=document[_0x60ae45(0x27a)](_0x1a61f5+'Date')[_0x60ae45(0x250)];if(_0x432528==null||_0x24ddad==''){alert(_0x60ae45(0x285));return;}_0x2ee302[_0x60ae45(0x20d)]=document['getElementById'](_0x1a61f5+_0x60ae45(0x21a))[_0x60ae45(0x250)],_0x2ee302['mileage']=document[_0x60ae45(0x27a)](_0x1a61f5+_0x60ae45(0x1f0))[_0x60ae45(0x250)],_0x2ee302['notes']=localStorage[_0x60ae45(0x246)](_0x1a61f5+_0x60ae45(0x1ce));document[_0x60ae45(0x27a)](_0x1a61f5+'C')['checked']&&_0x1a61f5!=_0x60ae45(0x278)&&(localStorage['setItem'](_0x60ae45(0x288),_0x1a61f5),localStorage[_0x60ae45(0x1f9)](_0x1a61f5+_0x60ae45(0x258),_0x2ee302[_0x60ae45(0x258)]),localStorage[_0x60ae45(0x1f9)](_0x1a61f5+'date',_0x2ee302[_0x60ae45(0x20d)]));_0x1a61f5=='ser'&&(_0x2ee302[_0x60ae45(0x261)]=!![],localStorage['setItem']('sermileage',_0x2ee302['mileage']),localStorage[_0x60ae45(0x1f9)]('serdate',_0x2ee302[_0x60ae45(0x20d)]));_0x1a61f5==_0x60ae45(0x282)&&(_0x2ee302[_0x60ae45(0x259)]=!![],_0x2ee302['correction']=![],_0x2ee302[_0x60ae45(0x1fa)]=0x0,_0x2ee302[_0x60ae45(0x1ee)]=0x0,localStorage[_0x60ae45(0x1f9)](_0x60ae45(0x229),_0x2ee302[_0x60ae45(0x258)]),localStorage['setItem']('InceptionDate',_0x2ee302[_0x60ae45(0x20d)]));if(_0x1a61f5!=_0x60ae45(0x282)){let _0x420c16=localStorage[_0x60ae45(0x246)](_0x60ae45(0x229));if(_0x420c16!=null){let _0x18745d=parseInt(_0x420c16),_0x13cf4d=_0x2ee302[_0x60ae45(0x258)]-_0x18745d;_0x13cf4d<0x0&&(_0x13cf4d=_0x13cf4d*-0x1);_0x2ee302[_0x60ae45(0x1ee)]=_0x13cf4d;let _0x1be3b8=localStorage[_0x60ae45(0x246)](_0x60ae45(0x28a));tempdayfr=dayCalc(_0x1be3b8,_0x2ee302['date']),tempdayfr<0x0&&(tempdayfr=tempdayfr*-0x1,_0x2ee302[_0x60ae45(0x25c)]=!![]),_0x2ee302[_0x60ae45(0x1fa)]=tempdayfr,isitWP(_0x2ee302)&&(_0x2ee302[_0x60ae45(0x276)]=!![]);}}let _0x17fed0=[];_0x17fed0=JSON['parse'](localStorage['getItem']('recordArr'));let _0x46c690=[];_0x46c690=JSON['parse'](localStorage['getItem']('objectArr'));let _0x105f57=localStorage[_0x60ae45(0x246)]('savedRecs'),_0x45c679=0x0;_0x46c690[_0x60ae45(0x1d3)]!=null&&(_0x45c679=_0x46c690[_0x60ae45(0x1d3)]);let _0x3de416=_0x1a61f5+_0x60ae45(0x23e);if(!_0x17fed0[_0x60ae45(0x24e)](_0x3de416)){if(!_0x46c690[_0x60ae45(0x24e)]('empty'))_0x46c690[_0x60ae45(0x237)](_0x2ee302);else{let _0x460bf1=_0x46c690['indexOf'](_0x60ae45(0x1e3));_0x46c690[_0x60ae45(0x1df)](_0x460bf1,0x1,_0x2ee302),_0x45c679=_0x460bf1;}_0x17fed0[_0x60ae45(0x237)](_0x3de416),localStorage[_0x60ae45(0x1f9)](_0x3de416+_0x60ae45(0x266),_0x45c679),localStorage[_0x60ae45(0x1f9)]('objectArr',JSON[_0x60ae45(0x234)](_0x46c690)),localStorage['setItem']('recordArr',JSON[_0x60ae45(0x234)](_0x17fed0));let _0x319626=parseInt(_0x105f57)+0x1;localStorage[_0x60ae45(0x1f9)](_0x60ae45(0x1e5),_0x319626);}else{let _0x5778dc=localStorage['getItem'](_0x3de416+_0x60ae45(0x266));_0x46c690['splice'](_0x5778dc,0x1,_0x2ee302),localStorage[_0x60ae45(0x1f9)](_0x60ae45(0x208),JSON[_0x60ae45(0x234)](_0x46c690));}}function _0x1b82(_0x58e536,_0x2eebf8){const _0x21232c=_0x2123();return _0x1b82=function(_0x1b8204,_0x4cd759){_0x1b8204=_0x1b8204-0x1cd;let _0x3018ed=_0x21232c[_0x1b8204];return _0x3018ed;},_0x1b82(_0x58e536,_0x2eebf8);}function checkExisting(_0x4ba4dc){const _0x5931c3=_0x1b82;let _0x3b7a39=[];_0x3b7a39=JSON[_0x5931c3(0x1db)](localStorage[_0x5931c3(0x246)](_0x5931c3(0x208)));}function otherCalcs(){const _0x988da8=_0x1b82,_0x3e55e0=JSON[_0x988da8(0x1db)](localStorage[_0x988da8(0x246)]('objectArr'));let _0x307b9c=localStorage[_0x988da8(0x246)](_0x988da8(0x28a)),_0x1a3e82=localStorage[_0x988da8(0x246)](_0x988da8(0x229));if(_0x307b9c==null){document[_0x988da8(0x27a)]('trackerMsg')[_0x988da8(0x27f)]+=_0x988da8(0x22b);return;}for(let _0x20d720=0x0;_0x20d720<_0x3e55e0[_0x988da8(0x1d3)];_0x20d720++){let _0x3a7161=_0x3e55e0[_0x20d720];if(_0x3a7161[_0x988da8(0x259)]==![]&&_0x3a7161[_0x988da8(0x1ee)]=='0'){let _0x427e08=parseInt(_0x1a3e82),_0x32bfac=_0x3a7161[_0x988da8(0x258)]-_0x427e08;_0x32bfac<0x0&&(_0x32bfac=_0x32bfac*-0x1),_0x3a7161[_0x988da8(0x1ee)]=_0x32bfac,tempdayfr=dayCalc(_0x307b9c,_0x3a7161[_0x988da8(0x20d)]),tempdayfr<0x0&&(tempdayfr=tempdayfr*-0x1,_0x3a7161[_0x988da8(0x25c)]=!![]),_0x3a7161['daysfrom']=tempdayfr,isitWP(_0x3a7161)&&(_0x3a7161[_0x988da8(0x276)]=!![]);}}localStorage['setItem']('objectArr',JSON[_0x988da8(0x234)](_0x3e55e0));}function delRecord(_0x44b2bd){const _0x7aeeaf=_0x1b82;let _0x44d541=localStorage[_0x7aeeaf(0x246)]('noteOpen');_0x44d541!=_0x7aeeaf(0x222)&&closeonFly();document[_0x7aeeaf(0x27a)](_0x7aeeaf(0x218))['innerText']='',document['getElementById']('trackerMini')[_0x7aeeaf(0x253)]='';let _0xc541b2=_0x44b2bd[_0x7aeeaf(0x1d3)]-0x1,_0x347861=_0x44b2bd['slice'](0x0,_0xc541b2);const _0x313e97=JSON[_0x7aeeaf(0x1db)](localStorage[_0x7aeeaf(0x246)](_0x7aeeaf(0x24c))),_0x4da05c=JSON[_0x7aeeaf(0x1db)](localStorage[_0x7aeeaf(0x246)](_0x7aeeaf(0x208)));let _0x20410e=_0x347861+'Rcrd',_0x5a49b3=localStorage[_0x7aeeaf(0x246)](_0x20410e+_0x7aeeaf(0x266));if(_0x313e97[_0x7aeeaf(0x24e)](_0x20410e)){_0x20410e=='incRcrd'&&(localStorage[_0x7aeeaf(0x1e1)]('InceptionMiles'),localStorage[_0x7aeeaf(0x1e1)]('InceptionDate'));localStorage[_0x7aeeaf(0x1e1)](_0x347861+_0x7aeeaf(0x1ce)),_0x4da05c[_0x7aeeaf(0x1df)](_0x5a49b3,0x1,_0x7aeeaf(0x1e3)),localStorage[_0x7aeeaf(0x1f9)](_0x7aeeaf(0x208),JSON[_0x7aeeaf(0x234)](_0x4da05c));let _0x24b350=localStorage[_0x7aeeaf(0x246)]('savedRecs'),_0x1ddd03=parseInt(_0x24b350)-0x1;localStorage['setItem'](_0x7aeeaf(0x1e5),_0x1ddd03),localStorage[_0x7aeeaf(0x1e1)](_0x20410e);const _0x315858=_0x313e97[_0x7aeeaf(0x270)](_0x20410e);document['getElementById'](_0x347861+_0x7aeeaf(0x21a))[_0x7aeeaf(0x250)]='',document['getElementById'](_0x347861+_0x7aeeaf(0x1f0))[_0x7aeeaf(0x250)]='',_0x315858>-0x1&&(_0x313e97['splice'](_0x315858,0x1),localStorage[_0x7aeeaf(0x1f9)](_0x7aeeaf(0x24c),JSON[_0x7aeeaf(0x234)](_0x313e97)));}}function whichRep(){const _0x192009=_0x1b82,_0x5358b3=document[_0x192009(0x27a)](_0x192009(0x1e6))['checked'],_0x1f5550=document[_0x192009(0x27a)](_0x192009(0x211))['checked'],_0x32f826=document['getElementById'](_0x192009(0x1f7))[_0x192009(0x23a)];if(_0x5358b3&&!_0x1f5550&&!_0x32f826){comsoCompan('0');return;}if(_0x1f5550&&!_0x5358b3&&!_0x32f826){inceptEst();return;}if(_0x32f826&&!_0x5358b3&&!_0x1f5550){comsoCompan('1');return;}if(_0x5358b3&&_0x1f5550&&!_0x32f826){comsoCompan('0'),inceptEst(_0x192009(0x1d1));return;}if(_0x5358b3&&_0x32f826&&!_0x1f5550){comsoCompan('2');return;}if(_0x1f5550&&_0x32f826&&!_0x5358b3){comsoCompan('1'),inceptEst('note');return;}if(_0x5358b3&&_0x1f5550&&_0x32f826){inceptEst(_0x192009(0x214)),comsoCompan('3');return;}}function comsoCompan(_0x92a54e){const _0x401bcf=_0x1b82;otherCalcs();let _0x13210f=localStorage[_0x401bcf(0x246)](_0x401bcf(0x1e5)),_0x398441=parseInt(_0x13210f);if(_0x398441<0x3){document[_0x401bcf(0x27a)](_0x401bcf(0x218))[_0x401bcf(0x27f)]+=_0x401bcf(0x242);return;}const _0x41e9c0=JSON['parse'](localStorage[_0x401bcf(0x246)]('objectArr'));_0x41e9c0[_0x401bcf(0x273)](compare);let _0x34bbf5=_0x41e9c0['length']-0x1;for(let _0x9a8afe=0x0;_0x9a8afe<_0x34bbf5;_0x9a8afe++){let _0x469835=_0x9a8afe+0x1,_0x5a7d3d=_0x41e9c0[_0x9a8afe]['date'],_0x32a8d6=_0x41e9c0[_0x469835][_0x401bcf(0x20d)];isitOlder(_0x5a7d3d,_0x32a8d6)&&(_0x41e9c0[_0x9a8afe]['discrepancy']=!![],_0x41e9c0[_0x469835]['discrepancy']=!![],console[_0x401bcf(0x274)](_0x41e9c0[_0x9a8afe][_0x401bcf(0x258)]));}localStorage[_0x401bcf(0x1f9)](_0x401bcf(0x208),JSON['stringify'](_0x41e9c0)),displayRecs(_0x92a54e);}function closeonFly(){const _0x3f0ae3=_0x1b82;let _0x54fee2=localStorage[_0x3f0ae3(0x246)](_0x3f0ae3(0x251)),_0x473b10=_0x54fee2[_0x3f0ae3(0x21b)](0x0,-0x7),_0x4a1437=_0x473b10+'N',_0xb079fb=document['getElementById'](_0x54fee2),_0x4e1fd3=_0xb079fb[_0x3f0ae3(0x253)];_0xb079fb['innerText']='',_0x4e1fd3!=''&&localStorage[_0x3f0ae3(0x1f9)](_0x473b10+_0x3f0ae3(0x1ce),_0x4e1fd3),document[_0x3f0ae3(0x27a)](_0x4a1437)['innerText']=_0x3f0ae3(0x1e8),_0xb079fb[_0x3f0ae3(0x1dc)][_0x3f0ae3(0x268)]='0px',_0xb079fb[_0x3f0ae3(0x26b)][_0x3f0ae3(0x1dd)]('arise'),localStorage[_0x3f0ae3(0x1f9)](_0x3f0ae3(0x251),_0x3f0ae3(0x222)),noteForget();}function showNote(_0x144839){const _0x522905=_0x1b82;let _0x53e93e=localStorage[_0x522905(0x246)]('noteOpen'),_0x3f0815=_0x144839['length']-0x1,_0x330c69=_0x144839[_0x522905(0x21b)](0x0,_0x3f0815),_0x5bccbd=_0x144839+_0x522905(0x216),_0x3663b6=document['getElementById'](_0x5bccbd);if(_0x3663b6[_0x522905(0x1dc)][_0x522905(0x268)]=='0px'){_0x53e93e!='false'&&closeonFly();let _0xa3b885=localStorage[_0x522905(0x246)](_0x330c69+_0x522905(0x1ce));_0xa3b885!=null&&(_0x3663b6[_0x522905(0x253)]=_0xa3b885),_0x3663b6[_0x522905(0x26b)][_0x522905(0x1dd)](_0x522905(0x1ec)),_0x3663b6[_0x522905(0x1dc)][_0x522905(0x268)]=_0x522905(0x287),document[_0x522905(0x27a)](_0x144839)[_0x522905(0x253)]=_0x522905(0x289),localStorage[_0x522905(0x1f9)]('noteOpen',_0x5bccbd),noteListen();}else{if(_0x3663b6[_0x522905(0x1dc)][_0x522905(0x268)]!='0px'){document['getElementById'](_0x522905(0x218))['innerHTML']='';let _0x43d430=_0x3663b6[_0x522905(0x253)];_0x3663b6['innerText']='',_0x43d430!=''&&localStorage['setItem'](_0x330c69+'Note',_0x43d430),document[_0x522905(0x27a)](_0x144839)['innerText']=_0x522905(0x1e8),_0x3663b6[_0x522905(0x1dc)][_0x522905(0x268)]='0px',_0x3663b6[_0x522905(0x26b)][_0x522905(0x1dd)](_0x522905(0x1ec)),localStorage[_0x522905(0x1f9)]('noteOpen','false'),noteForget();}}}function noteListen(){const _0x25649b=_0x1b82,_0x488825=[_0x25649b(0x243),_0x25649b(0x23c),_0x25649b(0x1e7),_0x25649b(0x255),'rec2Notebin',_0x25649b(0x233),_0x25649b(0x210),_0x25649b(0x22e)];_0x488825[_0x25649b(0x252)](_0x50a76a=>{const _0x204835=_0x25649b,_0x3170d4=document[_0x204835(0x27a)](_0x50a76a);_0x3170d4&&_0x3170d4['addEventListener'](_0x204835(0x283),addListen);});}function noteForget(){const _0x26129e=_0x1b82,_0x342c4d=[_0x26129e(0x243),_0x26129e(0x23c),_0x26129e(0x1e7),'rec1Notebin','rec2Notebin',_0x26129e(0x233),_0x26129e(0x210),'rec5Notebin'];_0x342c4d[_0x26129e(0x252)](_0x525f54=>{const _0x2fc870=_0x26129e,_0x514a58=document[_0x2fc870(0x27a)](_0x525f54);_0x514a58&&_0x514a58['removeEventListener'](_0x2fc870(0x283),addListen);});}function addListen(_0xf81785){const _0x492974=_0x1b82;_0xf81785[_0x492974(0x284)]===_0x492974(0x226)&&(_0xf81785[_0x492974(0x1fb)](),document['execCommand']('insertLineBreak'));}function displayRecs(_0x307eba){const _0x43a338=_0x1b82;document[_0x43a338(0x27a)](_0x43a338(0x265))!=null&&(document[_0x43a338(0x27a)](_0x43a338(0x238))[_0x43a338(0x21f)](document[_0x43a338(0x27a)](_0x43a338(0x265))),document[_0x43a338(0x27a)](_0x43a338(0x26c))[_0x43a338(0x27f)]='',document[_0x43a338(0x27a)](_0x43a338(0x279))[_0x43a338(0x27f)]+='');const _0x48a728=JSON['parse'](localStorage[_0x43a338(0x246)](_0x43a338(0x208))),_0x444b57=document[_0x43a338(0x245)]('table');_0x444b57[_0x43a338(0x26b)][_0x43a338(0x1d9)]('TheOutputtable'),_0x444b57['id']='reportTable';const _0x46b373=_0x444b57[_0x43a338(0x1f4)]()[_0x43a338(0x20e)]();_0x46b373['classList'][_0x43a338(0x1d9)](_0x43a338(0x26f)),_0x46b373['insertCell'](0x0)[_0x43a338(0x253)]=_0x43a338(0x21a),_0x46b373[_0x43a338(0x1da)](0x1)[_0x43a338(0x253)]=_0x43a338(0x25e),_0x46b373[_0x43a338(0x1da)](0x2)[_0x43a338(0x253)]='Miles',_0x46b373[_0x43a338(0x1da)](0x3)[_0x43a338(0x253)]=_0x43a338(0x1d2),_0x46b373[_0x43a338(0x1da)](0x4)[_0x43a338(0x253)]=_0x43a338(0x1de),_0x46b373['insertCell'](0x5)[_0x43a338(0x253)]='WP',_0x46b373[_0x43a338(0x1da)](0x6)[_0x43a338(0x253)]=_0x43a338(0x1d8),_0x46b373[_0x43a338(0x1da)](0x7)[_0x43a338(0x253)]='Notes';const _0x44c88f=document['createElement'](_0x43a338(0x1ea));_0x444b57[_0x43a338(0x1d0)](_0x44c88f);let _0x468859=![],_0x168132=![],_0x42a7e7=![],_0x315644=![],_0x39a8d1=![],_0x1556ed=![];for(let _0x2a0122=0x0;_0x2a0122<_0x48a728[_0x43a338(0x1d3)];_0x2a0122++){const _0x2bae54=_0x44c88f[_0x43a338(0x20e)]();_0x2bae54[_0x43a338(0x26b)][_0x43a338(0x1d9)](_0x43a338(0x236));let _0x41b755=_0x48a728[_0x2a0122],_0x19e2dc=_0x41b755[_0x43a338(0x20d)],_0x32116e=_0x19e2dc['substr'](0x0,0x4),_0x553c25=_0x19e2dc[_0x43a338(0x219)](0x5,0x2),_0x5cf45e=_0x19e2dc[_0x43a338(0x219)](0x8,0x2),_0x56026f,_0x11850a,_0x17887d,_0x4ee63f=_0x553c25+'-'+_0x5cf45e+'-'+_0x32116e;_0x41b755[_0x43a338(0x20d)]=_0x4ee63f;!_0x41b755[_0x43a338(0x259)]?(_0x11850a=parseInt(_0x41b755[_0x43a338(0x1ee)]),_0x17887d=parseInt(_0x41b755[_0x43a338(0x1fa)]),_0x56026f=Math['round'](_0x11850a/_0x17887d)):_0x56026f=0x0;_0x2bae54[_0x43a338(0x1da)](0x0)['innerText']=_0x4ee63f,_0x2bae54[_0x43a338(0x1da)](0x1)[_0x43a338(0x253)]=_0x41b755[_0x43a338(0x258)],_0x2bae54[_0x43a338(0x1da)](0x2)[_0x43a338(0x253)]=_0x41b755[_0x43a338(0x1ee)],_0x2bae54[_0x43a338(0x1da)](0x3)[_0x43a338(0x253)]=_0x41b755[_0x43a338(0x1fa)],_0x2bae54[_0x43a338(0x1da)](0x4)[_0x43a338(0x253)]=_0x56026f;_0x41b755['waitperiod']?_0x2bae54['insertCell'](0x5)[_0x43a338(0x253)]='⛔':_0x2bae54[_0x43a338(0x1da)](0x5)[_0x43a338(0x253)]='✔';_0x41b755['discrepancy']?_0x2bae54[_0x43a338(0x1da)](0x6)['innerText']='⛔':_0x2bae54[_0x43a338(0x1da)](0x6)[_0x43a338(0x253)]='✔';_0x41b755[_0x43a338(0x209)]!=null?_0x2bae54[_0x43a338(0x1da)](0x7)['innerText']=_0x43a338(0x239):_0x2bae54[_0x43a338(0x1da)](0x7)[_0x43a338(0x253)]=_0x43a338(0x1f6);document[_0x43a338(0x27a)](_0x43a338(0x238))[_0x43a338(0x1d0)](_0x444b57);_0x41b755[_0x43a338(0x261)]&&((_0x17887d<0x5a||_0x11850a<0x2bc)&&(document[_0x43a338(0x27a)](_0x43a338(0x279))[_0x43a338(0x27f)]+=_0x43a338(0x235),_0x39a8d1=!![],_0x468859=!![]));_0x41b755[_0x43a338(0x276)]&&!_0x168132&&(document[_0x43a338(0x27a)](_0x43a338(0x279))[_0x43a338(0x27f)]+='❗\x20ALERT:\x20WAITING\x20PERIOD\x20❗<br>',_0x39a8d1=!![],_0x168132=!![]);_0x41b755[_0x43a338(0x262)]&&!_0x315644&&(document[_0x43a338(0x27a)](_0x43a338(0x279))[_0x43a338(0x27f)]+=_0x43a338(0x212),_0x39a8d1=!![],_0x315644=!![]);_0x56026f>0xc8&&!_0x42a7e7&&(document[_0x43a338(0x27a)](_0x43a338(0x279))['innerHTML']+=_0x43a338(0x280),_0x39a8d1=!![],_0x42a7e7=!![]);if(_0x307eba=='0'||_0x307eba=='2'||_0x307eba=='3'){displayOutput();if(_0x39a8d1&&!_0x1556ed){let _0x33d424=document[_0x43a338(0x27a)]('alertDiv')['innerHTML'];_0x1556ed=!![];}}}let _0x14a093=document[_0x43a338(0x1ef)]('td');for(let _0x4dfbf0=0x0;_0x4dfbf0<_0x14a093[_0x43a338(0x1d3)];_0x4dfbf0++){_0x14a093[_0x4dfbf0][_0x43a338(0x253)]=='✔'&&(_0x14a093[_0x4dfbf0][_0x43a338(0x1dc)][_0x43a338(0x22c)]=_0x43a338(0x21e));}priorMileage();if(_0x307eba=='1'||_0x307eba=='2'||_0x307eba=='3'){noteOutput(_0x307eba);return;}}function priorMileage(){const _0x332aad=_0x1b82,_0x52180d=document[_0x332aad(0x22d)]('.TheOutputtable'),_0x1246a3=JSON['parse'](localStorage[_0x332aad(0x246)](_0x332aad(0x208)));for(let _0x1818b7=0x0;_0x1818b7<_0x1246a3[_0x332aad(0x1d3)];_0x1818b7++){if(_0x1246a3[_0x1818b7][_0x332aad(0x25c)]){let _0x49cbe3=_0x1818b7+0x1;_0x52180d[_0x332aad(0x1fd)][_0x49cbe3]['cells'][0x2][_0x332aad(0x1dc)][_0x332aad(0x22c)]='red',_0x52180d['rows'][_0x49cbe3][_0x332aad(0x21c)][0x3][_0x332aad(0x1dc)][_0x332aad(0x22c)]=_0x332aad(0x205);}}}function showMsg(){const _0x3b5efd=_0x1b82;document[_0x3b5efd(0x27a)]('msgDiv')[_0x3b5efd(0x1dc)][_0x3b5efd(0x247)]=0x1;}function inceptEst(_0x1cd6b6){const _0x523d84=_0x1b82;document[_0x523d84(0x27a)](_0x523d84(0x218))[_0x523d84(0x27f)]='',document[_0x523d84(0x27a)](_0x523d84(0x225))[_0x523d84(0x27f)]='';let _0x5cbb5b=localStorage[_0x523d84(0x246)](_0x523d84(0x288)),_0x316aae=localStorage[_0x523d84(0x246)](_0x5cbb5b+_0x523d84(0x258)),_0x2172a3=localStorage[_0x523d84(0x246)](_0x5cbb5b+'date'),_0x2fb4d5=localStorage[_0x523d84(0x246)](_0x523d84(0x213)),_0x58d71f=localStorage[_0x523d84(0x246)](_0x523d84(0x1f1)),_0x325091=localStorage[_0x523d84(0x246)](_0x523d84(0x229)),_0x424e38=localStorage[_0x523d84(0x246)](_0x523d84(0x28a));if(_0x5cbb5b==null||_0x316aae==null||_0x2172a3==null||_0x2fb4d5==null||_0x58d71f==null||_0x325091==null||_0x424e38==null){document[_0x523d84(0x27a)](_0x523d84(0x218))[_0x523d84(0x27f)]+='Information\x20is\x20incomplete.\x20Try\x20Again';return;}let _0x544b0a=parseInt(_0x316aae),_0x247bb8=parseInt(_0x2fb4d5),_0xee7368=parseInt(_0x325091),_0x14c2a9=dayCalc(_0x2172a3,_0x58d71f),_0x2f03d5=_0x247bb8-_0x544b0a,_0x3c0826=_0x2f03d5/_0x14c2a9,_0x4498c6=dayCalc(_0x2172a3,_0x424e38),_0x16509d=_0x3c0826*_0x4498c6+_0x544b0a,_0x233f87=_0x247bb8-_0x16509d,_0xef3b9f=dayCalc(_0x424e38,_0x58d71f);if(_0x1cd6b6==_0x523d84(0x1d1)){displayOutput();let _0x55d208=document['getElementById'](_0x523d84(0x26c));_0x55d208[_0x523d84(0x1dc)][_0x523d84(0x247)]=0x1,_0x5dd4ae(_0x55d208);}else{if(_0x1cd6b6==_0x523d84(0x214)){let _0xdd0d8f=document['getElementById']('splitR');document[_0x523d84(0x27a)](_0x523d84(0x224))[_0x523d84(0x1dc)][_0x523d84(0x1fe)]=_0x523d84(0x281),_0xdd0d8f[_0x523d84(0x1dc)][_0x523d84(0x1fe)]=_0x523d84(0x281),_0x5dd4ae(_0xdd0d8f);}else{let _0x59a024=document['getElementById'](_0x523d84(0x25d)),_0x29b470=document['getElementById'](_0x523d84(0x249));_0x59a024[_0x523d84(0x26b)][_0x523d84(0x1d9)](_0x523d84(0x1ec)),_0x59a024['style'][_0x523d84(0x268)]=_0x523d84(0x204),_0x29b470['style'][_0x523d84(0x247)]=0x1,_0x5dd4ae(_0x29b470);}}function _0x5dd4ae(_0x3b1c4a){const _0x11aeda=_0x523d84;_0x3b1c4a[_0x11aeda(0x27f)]+=_0x11aeda(0x201)+_0x16509d[_0x11aeda(0x264)]()+_0x11aeda(0x24a),_0x3b1c4a['innerHTML']+=_0x11aeda(0x1e4)+_0x14c2a9[_0x11aeda(0x264)]()+'<br>',_0x3b1c4a[_0x11aeda(0x27f)]+=_0x11aeda(0x263)+_0x2f03d5[_0x11aeda(0x264)]()+_0x11aeda(0x23d),_0x3b1c4a[_0x11aeda(0x27f)]+=_0x11aeda(0x230)+_0x3c0826[_0x11aeda(0x264)]()+_0x11aeda(0x23d),_0x3b1c4a[_0x11aeda(0x27f)]+=_0x11aeda(0x24f)+_0x4498c6[_0x11aeda(0x264)]()+_0x11aeda(0x23d),_0x3b1c4a[_0x11aeda(0x27f)]+=_0x11aeda(0x227)+_0x233f87[_0x11aeda(0x264)]()+_0x11aeda(0x23d),_0x3b1c4a[_0x11aeda(0x27f)]+='Days\x20Elapsed\x20In\x20Contract:\x20'+_0xef3b9f[_0x11aeda(0x264)]();}}function noteOutput(_0x352d03){const _0x2f1709=_0x1b82;let _0x4e9afb=document[_0x2f1709(0x27a)]('msgDiv'),_0x1af3dd=document['getElementById'](_0x2f1709(0x249)),_0x122159=document[_0x2f1709(0x27a)](_0x2f1709(0x224)),_0x2e7cd8;if(_0x352d03=='1')_0x2e7cd8=_0x1af3dd;else{if(_0x352d03=='2')_0x2e7cd8=_0x4e9afb;else _0x352d03=='3'&&(_0x2e7cd8=_0x122159);}const _0x5be559=JSON['parse'](localStorage[_0x2f1709(0x246)](_0x2f1709(0x208)));for(let _0x5391ef=0x0;_0x5391ef<_0x5be559[_0x2f1709(0x1d3)];_0x5391ef++){_0x5391ef!=0x0&&(_0x2e7cd8[_0x2f1709(0x253)]+='\x0d');_0x2e7cd8[_0x2f1709(0x253)]+='Date:\x20'+_0x5be559[_0x5391ef][_0x2f1709(0x20d)];if(_0x5be559[_0x5391ef][_0x2f1709(0x259)])_0x2e7cd8[_0x2f1709(0x253)]+=_0x2f1709(0x1eb);else _0x5be559[_0x5391ef][_0x2f1709(0x261)]?_0x2e7cd8['innerText']+=_0x2f1709(0x1e0):_0x2e7cd8[_0x2f1709(0x253)]+='\x0d';_0x2e7cd8[_0x2f1709(0x253)]+=_0x2f1709(0x202)+_0x5be559[_0x5391ef][_0x2f1709(0x258)]+'\x0d',_0x5be559[_0x5391ef][_0x2f1709(0x209)]==null&&(_0x5be559[_0x5391ef]['notes']=_0x2f1709(0x217)),_0x2e7cd8[_0x2f1709(0x253)]+='Notes:\x20'+_0x5be559[_0x5391ef][_0x2f1709(0x209)]+'\x0d';}hideTable();if(_0x352d03=='1')outputDiv2[_0x2f1709(0x26b)][_0x2f1709(0x1dd)](_0x2f1709(0x1ec)),outputDiv2['style'][_0x2f1709(0x268)]='700px';else _0x352d03=='2'&&(_0x2e7cd8['style']['opacity']='1');if(_0x352d03=='3'){let _0x4ee050=document['getElementById'](_0x2f1709(0x26c));document[_0x2f1709(0x27a)](_0x2f1709(0x238))[_0x2f1709(0x1dc)][_0x2f1709(0x26a)]=_0x2f1709(0x20b),document[_0x2f1709(0x27a)](_0x2f1709(0x238))[_0x2f1709(0x1dc)]['left']=_0x2f1709(0x20b),document['getElementById'](_0x2f1709(0x238))['style']['height']='90%',document['getElementById'](_0x2f1709(0x238))[_0x2f1709(0x1dc)][_0x2f1709(0x24d)]=_0x2f1709(0x215),_0x122159[_0x2f1709(0x1dc)][_0x2f1709(0x247)]='0',_0x4ee050[_0x2f1709(0x1dc)]['opacity']='1',_0x4ee050[_0x2f1709(0x27f)]=_0x2f1709(0x260);}}document[_0x5100cf(0x1ed)](_0x5100cf(0x254),function(_0x5e798e){const _0x1a955e=_0x5100cf;let _0x3538c8=document[_0x1a955e(0x27a)]('msgDiv'),_0x553728=document[_0x1a955e(0x27a)](_0x1a955e(0x224));if(_0x3538c8['contains'](_0x5e798e[_0x1a955e(0x20a)])&&_0x553728[_0x1a955e(0x1dc)]['opacity']=='0')_0x553728[_0x1a955e(0x1dc)][_0x1a955e(0x247)]='1';else _0x3538c8['contains'](_0x5e798e[_0x1a955e(0x20a)])&&_0x553728[_0x1a955e(0x1dc)][_0x1a955e(0x247)]=='1'&&(_0x553728[_0x1a955e(0x1dc)][_0x1a955e(0x247)]='0');});function displayOutput(){const _0x231db9=_0x5100cf;hideTable();let _0x527803=document[_0x231db9(0x27a)](_0x231db9(0x238));_0x527803[_0x231db9(0x26b)][_0x231db9(0x1d9)](_0x231db9(0x1ec)),_0x527803[_0x231db9(0x1dc)][_0x231db9(0x268)]=_0x231db9(0x204);}function closeOutput(){const _0xacd643=_0x5100cf;document[_0xacd643(0x27a)]('splitL')[_0xacd643(0x27f)]='',document[_0xacd643(0x27a)](_0xacd643(0x28b))[_0xacd643(0x27f)]='',document[_0xacd643(0x27a)](_0xacd643(0x224))[_0xacd643(0x1dc)][_0xacd643(0x1fe)]=_0xacd643(0x206),document['getElementById'](_0xacd643(0x28b))[_0xacd643(0x1dc)][_0xacd643(0x1fe)]=_0xacd643(0x206),document[_0xacd643(0x27a)](_0xacd643(0x26c))[_0xacd643(0x27f)]='',document[_0xacd643(0x27a)](_0xacd643(0x279))[_0xacd643(0x27f)]='',document['getElementById'](_0xacd643(0x26c))[_0xacd643(0x1dc)][_0xacd643(0x247)]=0x0;let _0x6c05ce=document[_0xacd643(0x27a)](_0xacd643(0x238));_0x6c05ce['classList'][_0xacd643(0x20f)]('arise'),_0x6c05ce[_0xacd643(0x1dc)]['height']=_0xacd643(0x221),_0x6c05ce[_0xacd643(0x1dc)]['width']='800px',_0x6c05ce[_0xacd643(0x1dc)][_0xacd643(0x26a)]=_0xacd643(0x275),_0x6c05ce[_0xacd643(0x1dc)][_0xacd643(0x27b)]=_0xacd643(0x27d),showTable();}function closeOutput2(){const _0x3fbb15=_0x5100cf;document['getElementById']('msgDiv')[_0x3fbb15(0x27f)]='',document[_0x3fbb15(0x27a)]('alertDiv')['innerHTML']='';let _0x117792=document['getElementById'](_0x3fbb15(0x25d));outputDiv3[_0x3fbb15(0x27f)]='',_0x117792[_0x3fbb15(0x26b)]['remove'](_0x3fbb15(0x1ec)),_0x117792[_0x3fbb15(0x1dc)][_0x3fbb15(0x268)]=_0x3fbb15(0x221),showTable();}function resetReport(){const _0x292cc2=_0x5100cf;document['getElementById']('msgDiv')[_0x292cc2(0x27f)]='',document['getElementById']('alertDiv')[_0x292cc2(0x27f)]='',document[_0x292cc2(0x27a)](_0x292cc2(0x218))[_0x292cc2(0x253)]='',document['getElementById']('trackerMini')[_0x292cc2(0x253)]='',document['getElementById']('splitL')[_0x292cc2(0x27f)]='',document[_0x292cc2(0x27a)]('splitR')[_0x292cc2(0x27f)]='',document['getElementById'](_0x292cc2(0x1e6))[_0x292cc2(0x23a)]=![],document[_0x292cc2(0x27a)](_0x292cc2(0x211))[_0x292cc2(0x23a)]=![],document[_0x292cc2(0x27a)]('whichC')[_0x292cc2(0x23a)]=![];let _0x511a28=localStorage[_0x292cc2(0x246)]('addLineCount'),_0x570db9=parseInt(_0x511a28),_0x193392=document[_0x292cc2(0x1cd)]('.tracker'),_0x307dc5=Array[_0x292cc2(0x200)](_0x193392);for(let _0x4fea9b=0x0;_0x4fea9b<_0x307dc5['length'];_0x4fea9b++){_0x307dc5[_0x4fea9b][_0x292cc2(0x250)]!=null&&(_0x307dc5[_0x4fea9b][_0x292cc2(0x23a)]?_0x307dc5[_0x4fea9b][_0x292cc2(0x23a)]=![]:_0x307dc5[_0x4fea9b][_0x292cc2(0x250)]='');}for(;_0x570db9>0x0;_0x570db9--){let _0x1cdece='recTab'+_0x570db9;document[_0x292cc2(0x27a)](_0x1cdece)[_0x292cc2(0x1dc)][_0x292cc2(0x22a)]=_0x292cc2(0x26e);}const _0x48fe09=JSON['parse'](localStorage['getItem']('recordArr'));for(let _0x168534=0x0;_0x168534<_0x48fe09[_0x292cc2(0x1d3)];_0x168534++){let _0x45296b=_0x48fe09[_0x168534];localStorage['removeItem'](_0x45296b+'spot');}localStorage[_0x292cc2(0x1e1)](_0x292cc2(0x1f1)),localStorage[_0x292cc2(0x1e1)](_0x292cc2(0x213)),localStorage[_0x292cc2(0x1e1)](_0x292cc2(0x288)),localStorage[_0x292cc2(0x1e1)](_0x292cc2(0x229)),localStorage[_0x292cc2(0x1e1)](_0x292cc2(0x28a)),localStorage[_0x292cc2(0x1e1)](_0x292cc2(0x272)),localStorage[_0x292cc2(0x1e1)](_0x292cc2(0x203));for(let _0x4b114d=0x0;_0x4b114d<0x6;_0x4b114d++){let _0x1155ee=_0x292cc2(0x257)+_0x4b114d;localStorage[_0x292cc2(0x1e1)](_0x1155ee+_0x292cc2(0x1ce)),document[_0x292cc2(0x27a)](_0x1155ee+_0x292cc2(0x244))[_0x292cc2(0x253)]='';}const _0x546bd0=[];localStorage[_0x292cc2(0x1f9)]('objectArr',JSON[_0x292cc2(0x234)](_0x546bd0)),localStorage['setItem']('recordArr',JSON[_0x292cc2(0x234)](_0x546bd0)),localStorage[_0x292cc2(0x1f9)](_0x292cc2(0x23b),'0'),localStorage['setItem'](_0x292cc2(0x1e5),'0'),setDate();}
+//Restricted Use License
+//
+//This code is provided under the following terms and conditions:
+//
+//1. You are not allowed to use, copy, modify, merge, publish, distribute, sublicense, or sell copies of this code in any form, modified or unmodified, without express written permission from the author.
+//
+//2. You are not allowed to use this code for any illegal or unethical purpose.
+//
+//3. This license applies to all versions of the code previously released, as well as all future versions. Any prior statements made about permission given are hereby revoked.
+//
+//4. This code is provided "as is", without warranty of any kind, express or implied. The author shall not be liable for any damages arising from the use of this code.
+//
+//By using this code, you agree to abide by these terms and conditions. Failure to comply with these terms may result in legal action.
+//
+//For inquiries regarding licensing or permission to use this code in ways not covered by this license, please contact the author at AdjusterConsole@gmail.com.
+
+function openInfo(evt, cityName) {
+  let i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+  setDate();
+    for (i = 0; i < 6; i++) {
+      let elemId = "rec" + i;
+      localStorage.removeItem(elemId + "Note");
+      document.getElementById(elemId + "Notebin").innerText = "";
+    }
+  localStorage.removeItem("incNote");
+  document.getElementById("incNotebin").innerText = "";
+  localStorage.removeItem("serNote");
+  document.getElementById("serNotebin").innerText = "";
+}
+
+function closeResource() {
+  let i, tabcontent, tablinks;
+  let noteOpen = localStorage.getItem("noteOpen");
+  if (noteOpen != "false") {
+    closeonFly();
+  }
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById('trackerMsg').innerText = "";
+  document.getElementById('trackerMini').innerText = "";
+  resetGuide();
+  resrcCenter();
+}
+
+function resrcCenter(x,y) {
+  let w = parseInt(x);
+  let resrcDiv = document.getElementById("resrcDiv");
+  if (resrcDiv.style.display == "none" && !checkOpen()) {
+    resrcDiv.style.display = "inline-block";
+    if (y == 'p') { document.getElementById("policyDiv").classList.remove("hide"); }
+    if (y == 't') { document.getElementById("toolsDiv").classList.remove("hide"); }
+    document.getElementById('trackerMsg').innerText = "";
+    let widthpre = parseInt(window.getComputedStyle(resrcDiv).width);
+    let width1 = (widthpre / w);
+    let width = width1.toString() + "px";
+    document.documentElement.style.setProperty('--div-width', width);
+    return;
+  }
+  resrcDiv.style.display = "none";
+  document.getElementById("policyDiv").classList.add("hide");
+  document.getElementById("toolsDiv").classList.add("hide");
+}
+
+function Record() {
+  this.date;
+  this.mileage = 0;
+  this.notes = "";
+  this.isInception = false;
+  this.correction = false;
+  this.daysfrom = 0;
+  this.milesfrom = 0;
+  this.discrepancy = false;
+  this.waitperiod = false;
+  this.isService = false;
+  this.isPrior = false;
+}
+
+function setDate() {
+  let date = new Date();
+  let day = date.getDate();
+  let month = date.getMonth() + 1;
+  let year = date.getFullYear();
+  if (month < 10) month = "0" + month;
+  if (day < 10) day = "0" + day;
+  let today = year + "-" + month + "-" + day;
+  document.getElementById("serDate").value = today;
+
+//  document.getElementById("incDate").value = today;
+//  document.getElementById("rec0Date").value = today;
+
+//  document.getElementById("incDate").value = "2024-01-31";
+//  document.getElementById("serDate").value = "2024-03-01";
+//  document.getElementById("rec0Date").value = "2024-01-01";
+
+//  document.getElementById("incMile").value = "104000";
+//  document.getElementById("serMile").value = "110000";
+//  document.getElementById("rec0Mile").value = "100000";
+}
+
+function convertToDate(str) {
+  let dateArr = str.split("-");
+  return new Date(dateArr[0], dateArr[1], dateArr[2]);
+}
+
+function dayCalc(inceptDate, recordDate) {
+  let incDate = convertToDate(inceptDate);
+  let recDate = convertToDate(recordDate);
+  return Math.round((recDate.getTime() - incDate.getTime()) / 86400000);
+}
+
+function addLine() {
+  document.getElementById('trackerMsg').innerText = "";
+  document.getElementById('trackerMini').innerText = "";
+  let addLineCount = localStorage.getItem("addLineCount");
+  let lineNum = parseInt(addLineCount) + 1;
+  if (lineNum < 6) {
+    let nextId = "recTab" + lineNum.toString();
+    document.getElementById(nextId).style.visibility = "visible";
+    localStorage.setItem("addLineCount", lineNum);
+  } else { return; }
+}
+
+function isitOlder(isOlder, thanThis) {
+  let isOlder1 = convertToDate(isOlder);
+  let thanThis1 = convertToDate(thanThis);
+  if (isOlder1.getTime() > thanThis1.getTime()) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+function compare (rec1, rec2) {
+  return rec1.mileage - rec2.mileage;
+}
+
+function isitWP(record) {
+  if (record.isService) {
+    if (record.daysfrom < 26) {
+      return true;
+    }
+    if (record.milesfrom < 250) {
+      return true;
+    }
+    if (record.daysfrom < 41 && record.milesfrom < 500) {
+      return true;
+    }
+  }
+}
+
+function hideTable() {
+  let tableDiv = document.getElementById('tableDiv');
+  tableDiv.style.opacity = "0";
+}
+
+function showTable() {
+  let tableDiv = document.getElementById('tableDiv');
+  tableDiv.style.opacity = "1";
+}
+
+function saveAll() {
+  let noteOpen = localStorage.getItem("noteOpen");
+  if (noteOpen != "false") {
+    closeonFly();
+  }
+  const records = [ 'inc', 'ser', 'rec0', 'rec1', 'rec2', 'rec3', 'rec4', 'rec5' ];
+  let missedOne = false;
+  for (const rec of records) {
+    const dateData = document.getElementById(rec + 'Date').value;
+    const mileageData = document.getElementById(rec + 'Mile').value;
+    if (mileageData && dateData) {
+      saveRecord(rec + 'S');
+    }
+  }
+}
+
+function saveRecord(elemId) {
+  let noteOpen = localStorage.getItem("noteOpen");
+  if (noteOpen != "false") {
+    closeonFly();
+  }
+  document.getElementById('trackerMsg').innerText = "";
+  document.getElementById('trackerMini').innerText = "";
+  let record = new Record();
+  let indexF = elemId.length - 1;
+  let newelemId = elemId.slice(0, indexF);
+  let checkMileage = document.getElementById(newelemId + "Mile").value;
+  let checkDate = document.getElementById(newelemId + "Date").value;
+  if (checkDate == null || checkMileage == "") {
+    alert("Enter Date and Mileage of record to save.");
+    return;
+  }
+  record.date = document.getElementById(newelemId + "Date").value;
+  record.mileage = document.getElementById(newelemId + "Mile").value;
+  record.notes = localStorage.getItem(newelemId + "Note");
+  if (document.getElementById(newelemId + "C").checked && newelemId != "ser") {
+    localStorage.setItem("IDforCor", newelemId);
+    localStorage.setItem(newelemId + "mileage", record.mileage);
+    localStorage.setItem(newelemId + "date", record.date);
+  }
+  if (newelemId == "ser") {
+    record.isService = true;
+    localStorage.setItem("sermileage", record.mileage);
+    localStorage.setItem("serdate", record.date);
+  }
+  if (newelemId == "inc") {
+    record.isInception = true;
+    record.correction = false;
+    record.daysfrom = 0;
+    record.milesfrom = 0;
+    localStorage.setItem("InceptionMiles", record.mileage);
+    localStorage.setItem("InceptionDate", record.date);
+  }
+  if (newelemId != "inc") {
+    let inceptStr = localStorage.getItem("InceptionMiles");
+    if (inceptStr != null) {
+      let inceptMiles = parseInt(inceptStr);
+      let tempMil = record.mileage - inceptMiles;
+      if (tempMil < 0) { tempMil = tempMil * -1; }
+      record.milesfrom = tempMil;
+      let inceptDate = localStorage.getItem("InceptionDate");
+      tempdayfr = dayCalc(inceptDate, record.date);
+      if (tempdayfr < 0) { tempdayfr = tempdayfr * -1; record.isPrior = true;}
+      record.daysfrom = tempdayfr;
+      if (isitWP(record)) { record.waitperiod = true; }
+    }
+  }
+  let recordArr = [];
+  recordArr = JSON.parse(localStorage.getItem("recordArr"));
+  let objectArr = [];
+  objectArr = JSON.parse(localStorage.getItem("objectArr"));
+  let savedRecs = localStorage.getItem("savedRecs");
+  let recIndex = 0;
+  if (objectArr.length != null) {
+    recIndex = objectArr.length;
+  }
+  let recName = newelemId + "Rcrd";
+  if (!recordArr.includes(recName)) {
+    if (!objectArr.includes("empty")) {
+      objectArr.push(record);
+    } else {
+      let indexA = objectArr.indexOf("empty");
+      objectArr.splice(indexA, 1, record);
+      recIndex = indexA;
+    }
+    recordArr.push(recName);
+    localStorage.setItem(recName + "spot", recIndex);
+    localStorage.setItem("objectArr", JSON.stringify(objectArr));
+    localStorage.setItem("recordArr", JSON.stringify(recordArr));
+    let newCount = parseInt(savedRecs) + 1;
+    localStorage.setItem("savedRecs", newCount);
+  } else {
+    let indexSaved = localStorage.getItem(recName + "spot");
+    objectArr.splice(indexSaved, 1, record);
+    localStorage.setItem("objectArr", JSON.stringify(objectArr));
+  }
+}
+
+function checkExisting(newelemId) {
+  let objectArr = [];
+  objectArr = JSON.parse(localStorage.getItem("objectArr"));
+}
+
+function otherCalcs() {
+  const objectArr = JSON.parse(localStorage.getItem("objectArr"));
+  let inceptDate = localStorage.getItem("InceptionDate");
+  let inceptStr = localStorage.getItem("InceptionMiles");
+  if (inceptDate == null) {
+    document.getElementById('trackerMsg').innerHTML += "Need Inception date to perform calculations.";
+    return;
+  }
+  for (let i = 0; i < objectArr.length; i++) {
+    let record = objectArr[i];
+    if (record.isInception == false && record.milesfrom == '0') {
+      let inceptMiles = parseInt(inceptStr);
+      let tempMil = record.mileage - inceptMiles;
+      if (tempMil < 0) { tempMil = tempMil * -1; }
+      record.milesfrom = tempMil;
+      tempdayfr = dayCalc(inceptDate, record.date);
+      if (tempdayfr < 0) { tempdayfr = tempdayfr * -1; record.isPrior = true;}
+      record.daysfrom = tempdayfr;
+      if (isitWP(record)) { record.waitperiod = true; }
+    }
+  }
+  localStorage.setItem("objectArr", JSON.stringify(objectArr));
+}
+
+function delRecord(elemId) {
+  let noteOpen = localStorage.getItem("noteOpen");
+  if (noteOpen != "false") {
+    closeonFly();
+  }
+  document.getElementById('trackerMsg').innerText = "";
+  document.getElementById('trackerMini').innerText = "";
+  let temp = elemId.length - 1;
+  let newelemId = elemId.slice(0, temp);
+  const recordArr = JSON.parse(localStorage.getItem("recordArr"));
+  const objectArr = JSON.parse(localStorage.getItem("objectArr"));
+  let recName = newelemId + "Rcrd";
+  let objectIndex = localStorage.getItem(recName + "spot");
+  if (recordArr.includes(recName)) {
+    if (recName == "incRcrd") {
+      localStorage.removeItem("InceptionMiles");
+      localStorage.removeItem("InceptionDate");
+    }
+    localStorage.removeItem(newelemId + "Note");
+    objectArr.splice(objectIndex, 1, "empty");
+    localStorage.setItem("objectArr", JSON.stringify(objectArr));
+    let savedRecs = localStorage.getItem("savedRecs");
+    let newCount = parseInt(savedRecs) - 1;
+    localStorage.setItem("savedRecs", newCount);
+    localStorage.removeItem(recName);
+    const index = recordArr.indexOf(recName);
+    document.getElementById(newelemId + "Date").value = "";
+    document.getElementById(newelemId + "Mile").value = "";
+    if (index > -1) {
+      recordArr.splice(index, 1);
+      localStorage.setItem("recordArr", JSON.stringify(recordArr));
+    }
+  }
+}
+
+function whichRep() {
+  const whichA = document.getElementById('whichA').checked;
+  const whichB = document.getElementById('whichB').checked;
+  const whichC = document.getElementById('whichC').checked;
+  if (whichA && !whichB && !whichC) { comsoCompan('0'); return; }
+  if (whichB && !whichA && !whichC) { inceptEst(); return; }
+  if (whichC && !whichA && !whichB) { comsoCompan('1'); return; }
+  if (whichA && whichB && !whichC) {
+    comsoCompan('0');
+    inceptEst('both');
+    return;
+  }
+  if (whichA && whichC && !whichB) {
+    comsoCompan('2');
+    return;
+  }
+  if (whichB && whichC && !whichA) {
+    comsoCompan('1');
+    inceptEst('note');
+    return;
+  }
+  if (whichA && whichB && whichC) {
+    inceptEst('all');
+    comsoCompan('3');
+    return;
+  }
+}
+
+function comsoCompan(z) {
+  otherCalcs();
+  let savedRecs = localStorage.getItem("savedRecs");
+  let recCount = parseInt(savedRecs);
+  if (recCount < 3) {
+    document.getElementById('trackerMsg').innerHTML += "Enter at least 3 records to continue.";
+    return;
+  }
+  const objectArr = JSON.parse(localStorage.getItem("objectArr"));
+  objectArr.sort(compare);
+  let looped = objectArr.length - 1;
+  for (let i = 0; i < looped; i++) {
+    let x = i + 1;
+    let firDate = objectArr[i].date;
+    let secDate = objectArr[x].date;
+    if (isitOlder(firDate, secDate)) {
+      objectArr[i].discrepancy = true;
+      objectArr[x].discrepancy = true;
+      console.log(objectArr[i].mileage);
+    }
+  }
+  localStorage.setItem("objectArr", JSON.stringify(objectArr));
+  displayRecs(z);
+}
+
+function closeonFly() {
+  let noteOpen = localStorage.getItem("noteOpen");
+  let elemId = noteOpen.slice(0, -7);
+  let noteID = elemId + "N";
+  let binElem = document.getElementById(noteOpen);
+  let noteText = binElem.innerText;
+  binElem.innerText = "";
+  if (noteText != "") {
+    localStorage.setItem(elemId + "Note", noteText);
+  }
+  document.getElementById(noteID).innerText = "Add Note";
+  binElem.style.height = "0px";
+  binElem.classList.toggle("arise");
+  localStorage.setItem("noteOpen", "false");
+  noteForget();
+}
+
+function showNote(noteID) {
+  let noteOpen = localStorage.getItem("noteOpen");
+  let temp = noteID.length - 1;
+  let elemId = noteID.slice(0, temp);
+  let noteDivID = noteID + "otebin";
+  let binElem = document.getElementById(noteDivID);
+  if (binElem.style.height == "0px") {
+    if (noteOpen != "false") {
+      closeonFly();
+    }
+    let curNote = localStorage.getItem(elemId + "Note");
+    if (curNote != null) {
+      binElem.innerText = curNote;
+    }
+    binElem.classList.toggle("arise");
+    binElem.style.height = "150px";
+    document.getElementById(noteID).innerText = "Finished";
+    localStorage.setItem("noteOpen", noteDivID);
+    noteListen();
+  } else if (binElem.style.height != "0px") {
+    document.getElementById('trackerMsg').innerHTML = "";
+    let noteText = binElem.innerText;
+    binElem.innerText = "";
+    if (noteText != "") {
+      localStorage.setItem(elemId + "Note", noteText);
+    }
+    document.getElementById(noteID).innerText = "Add Note";
+    binElem.style.height = "0px";
+    binElem.classList.toggle("arise");
+    localStorage.setItem("noteOpen", "false");
+    noteForget();
+  }
+}
+
+function noteListen() {
+  const notebins = ["incNotebin", "serNotebin", "rec0Notebin", "rec1Notebin", "rec2Notebin", "rec3Notebin", "rec4Notebin", "rec5Notebin"];
+  notebins.forEach(id => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.addEventListener("keydown", addListen);
+    }
+  });
+}
+
+function noteForget() {
+  const notebins = ["incNotebin", "serNotebin", "rec0Notebin", "rec1Notebin", "rec2Notebin", "rec3Notebin", "rec4Notebin", "rec5Notebin"];
+  notebins.forEach(id => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.removeEventListener("keydown", addListen);
+    }
+  });
+}
+
+function addListen(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    document.execCommand("insertLineBreak");
+  }
+}
+
+function displayRecs(z) {
+  if (document.getElementById('reportTable') != null) {
+    document.getElementById('outputDiv').removeChild(document.getElementById('reportTable'));
+    document.getElementById('msgDiv').innerHTML = "";
+    document.getElementById('alertDiv').innerHTML += "";
+  }
+  const objectArr = JSON.parse(localStorage.getItem("objectArr"));
+  const table = document.createElement('table');
+  table.classList.add('TheOutputtable');
+  table.id = "reportTable";
+  const header = table.createTHead().insertRow();
+  header.classList.add('headit');
+  header.insertCell(0).innerText = "Date";
+  header.insertCell(1).innerText = "Mileage";
+  header.insertCell(2).innerText = "Miles";
+  header.insertCell(3).innerText = "Days";
+  header.insertCell(4).innerText = "M/D";
+  header.insertCell(5).innerText = "WP";
+  header.insertCell(6).innerText = "DIS";
+  header.insertCell(7).innerText = "Notes";
+  const body = document.createElement('tbody');
+  table.appendChild(body);
+  let EIC = false;
+  let waitPeriod = false;
+  let HMPD = false;
+  let mileDis = false;
+  let hasMessage = false;
+  let displayMessage = false;
+  for (let i = 0; i < objectArr.length; i++) {
+    const row = body.insertRow();
+    row.classList.add('rowit');
+    let tempRec = objectArr[i];
+    let dateStr = tempRec.date;
+    let year = dateStr.substr(0,4);
+    let month = dateStr.substr(5,2);
+    let day = dateStr.substr(8,2);
+    let milesper;
+    let distance;
+    let overTime;
+    let outputDate = month + "-" + day + "-" + year;
+    tempRec.date = outputDate;
+    if (!tempRec.isInception) {
+      distance = parseInt(tempRec.milesfrom);
+      overTime = parseInt(tempRec.daysfrom);
+      milesper = Math.round(distance / overTime);
+    } else {
+      milesper = 0;
+    }
+    row.insertCell(0).innerText = outputDate;
+    row.insertCell(1).innerText = tempRec.mileage;
+    row.insertCell(2).innerText = tempRec.milesfrom;
+    row.insertCell(3).innerText = tempRec.daysfrom;
+    row.insertCell(4).innerText = milesper;
+    if (tempRec.waitperiod) {
+      row.insertCell(5).innerText = "\u26D4";
+    } else {
+      row.insertCell(5).innerText = "\u2714";
+    }
+    if (tempRec.discrepancy) {
+      row.insertCell(6).innerText = "\u26D4";
+    } else {
+      row.insertCell(6).innerText = "\u2714";
+    }
+    if (tempRec.notes != null) {
+      row.insertCell(7).innerText = "True";
+    } else {
+      row.insertCell(7).innerText = "False";
+    }
+    document.getElementById('outputDiv').appendChild(table);
+    if (tempRec.isService) {
+      if (overTime < 90 || distance < 700) {
+        document.getElementById('alertDiv').innerHTML += "\u2757 ALERT: EARLY IN COVERAGE \u2757<br>";
+        hasMessage = true;
+        EIC = true;
+      }
+    }
+    if (tempRec.waitperiod && !waitPeriod) {
+      document.getElementById('alertDiv').innerHTML += "\u2757 ALERT: WAITING PERIOD \u2757<br>";
+      hasMessage = true;
+      waitPeriod = true;
+    }
+    if (tempRec.discrepancy && !mileDis) {
+      document.getElementById('alertDiv').innerHTML += "\u2757 ALERT: MILEAGE DISCREPANCY \u2757<br>";
+      hasMessage = true;
+      mileDis = true;
+    }
+    if (milesper > 200 && !HMPD) {
+      document.getElementById('alertDiv').innerHTML += "\u2757 ALERT: HMPD \u2757<br>";
+      hasMessage = true;
+      HMPD = true;
+    }
+    if (z == '0' || z == '2' || z == '3') {
+      displayOutput();
+      if (hasMessage && !displayMessage) {
+        let currentAlert = document.getElementById('alertDiv').innerHTML;
+        displayMessage = true;
+      }
+    }
+  }
+  let allCells = document.getElementsByTagName("td");
+  for (let i = 0; i < allCells.length; i++) {
+    if (allCells[i].innerText == "\u2714") {
+      allCells[i].style.color = "green";
+    }
+  }
+  priorMileage();
+  if (z == '1' || z == '2' || z == '3') {
+    noteOutput(z);
+    return;
+  }
+}
+
+function priorMileage() {
+  const table = document.querySelector(".TheOutputtable");
+  const objectArr = JSON.parse(localStorage.getItem("objectArr"));
+  for (let i = 0; i < objectArr.length; i++) {
+    if(objectArr[i].isPrior) {
+      let x = i + 1;
+      table.rows[x].cells[2].style.color = "red";
+      table.rows[x].cells[3].style.color = "red";
+    }
+  }
+}
+
+function showMsg() {
+  document.getElementById('msgDiv').style.opacity = 1;
+}
+
+function inceptEst(spot) {
+  document.getElementById('trackerMsg').innerHTML = "";
+  document.getElementById('trackerMini').innerHTML = "";
+  let elemId = localStorage.getItem("IDforCor");
+  let recMileage1 = localStorage.getItem(elemId + "mileage");
+  let recDate = localStorage.getItem(elemId + "date");
+  let serMileage1 = localStorage.getItem("sermileage");
+  let serDate = localStorage.getItem("serdate");
+  let incMileage1 = localStorage.getItem("InceptionMiles");
+  let incDate = localStorage.getItem("InceptionDate");
+  if (elemId == null || recMileage1 == null || recDate == null || serMileage1 == null || serDate == null || incMileage1 == null || incDate == null) {
+    document.getElementById('trackerMsg').innerHTML += "Information is incomplete. Try Again";
+    return;
+  }
+  let recMileage = parseInt(recMileage1);
+  let serMileage = parseInt(serMileage1);
+  let incMileage = parseInt(incMileage1);
+  let daysBtwnRecs = dayCalc(recDate, serDate);
+  let milesBtwnRecs = serMileage - recMileage;
+  let milesperday = milesBtwnRecs / daysBtwnRecs;
+  let daysBtwnMaintSale = dayCalc(recDate, incDate);
+  let estimatedInception = (milesperday * daysBtwnMaintSale) + recMileage;
+  let milesIn = serMileage - estimatedInception;
+  let daysIn = dayCalc(incDate, serDate);
+
+  if (spot == 'both') {
+    displayOutput();
+    let msgDiv = document.getElementById('msgDiv');
+    msgDiv.style.opacity = 1;
+    updateInnerHTML(msgDiv);
+  } else if (spot == 'all') {
+    let splitR = document.getElementById('splitR');
+    document.getElementById('splitL').style.display = "inline-block";
+    splitR.style.display = "inline-block";
+    updateInnerHTML(splitR);
+  } else {
+    let outputDiv2 = document.getElementById('outputDiv2');
+    let outputDiv3 = document.getElementById('outputDiv3');
+    outputDiv2.classList.add("arise");
+    outputDiv2.style.height = "700px";
+    outputDiv3.style.opacity = 1;
+    updateInnerHTML(outputDiv3);
+  }
+  function updateInnerHTML(element) {
+    element.innerHTML += "<b>The inception mileage is " + estimatedInception.toFixed() + "</b><br>";
+    element.innerHTML += "Elapsed Days Claim/Maint: " + daysBtwnRecs.toFixed() + "<br>";
+    element.innerHTML += "Elapsed Miles Claim/Maint: " + milesBtwnRecs.toFixed() + "<br>";
+    element.innerHTML += "Miles Per Day (Average): " + milesperday.toFixed() + "<br>";
+    element.innerHTML += "Elapsed Days Maint/Sale: " + daysBtwnMaintSale.toFixed() + "<br>";
+    element.innerHTML += "Miles Elapsed in Contract: " + milesIn.toFixed() + "<br>";
+    element.innerHTML += "Days Elapsed In Contract: " + daysIn.toFixed();
+  }
+}
+
+function noteOutput(z) {
+  let msgDiv = document.getElementById('msgDiv');
+  let outputDiv3 = document.getElementById('outputDiv3');
+  let splitL = document.getElementById('splitL');
+  let whereOut;
+  if (z == '1') {
+    whereOut = outputDiv3;
+  } else if (z == '2') {
+    whereOut = msgDiv;
+  } else if (z == '3') {
+    whereOut = splitL;
+  }
+  const objectArr = JSON.parse(localStorage.getItem("objectArr"));
+  for (let i = 0; i < objectArr.length; i++) {
+    if (i != 0) { whereOut.innerText += "\r"; }
+    whereOut.innerText += "Date: " + objectArr[i].date;
+    if (objectArr[i].isInception) {
+      whereOut.innerText += " Inception\r";
+    } else if (objectArr[i].isService) {
+      whereOut.innerText += " Claim\r";
+    } else {
+      whereOut.innerText += "\r";
+    }
+    whereOut.innerText += "Mileage: " + objectArr[i].mileage + "\r";
+    if (objectArr[i].notes == null) { objectArr[i].notes = "None"; }
+    whereOut.innerText += "Notes: " + objectArr[i].notes + "\r";
+  }
+  hideTable();
+  if (z == '1') {
+    outputDiv2.classList.toggle("arise");
+    outputDiv2.style.height = "700px";
+  } else if (z == '2') {
+    whereOut.style.opacity = '1';
+  }
+  if (z == '3') {
+    let msgDiv = document.getElementById('msgDiv');
+    document.getElementById('outputDiv').style.top = "25px";
+    document.getElementById('outputDiv').style.left = "25px";
+    document.getElementById('outputDiv').style.height = "90%";
+    document.getElementById('outputDiv').style.width = "90%";
+    splitL.style.opacity = '0';
+    msgDiv.style.opacity = '1';
+    msgDiv.innerHTML = "Click to show note format";
+  }
+}
+
+document.addEventListener('click', function(e) {
+  let msgDiv = document.getElementById('msgDiv');
+  let splitL = document.getElementById('splitL');
+  if (msgDiv.contains(e.target) && splitL.style.opacity == '0') {
+    splitL.style.opacity = '1';
+  } else if (msgDiv.contains(e.target) && splitL.style.opacity == '1') {
+    splitL.style.opacity = '0';
+  }
+});
+
+function displayOutput() {
+  hideTable();
+  let outputDiv = document.getElementById('outputDiv');
+  outputDiv.classList.add("arise");
+  outputDiv.style.height = "700px";
+}
+
+function closeOutput() {
+  document.getElementById('splitL').innerHTML = "";
+  document.getElementById('splitR').innerHTML = "";
+  document.getElementById('splitL').style.display = "none";
+  document.getElementById('splitR').style.display = "none";
+  document.getElementById('msgDiv').innerHTML = "";
+  document.getElementById('alertDiv').innerHTML = "";
+  document.getElementById('msgDiv').style.opacity = 0;
+  let outputDiv = document.getElementById('outputDiv');
+  outputDiv.classList.remove("arise");
+  outputDiv.style.height = "0px";
+  outputDiv.style.width = "800px";
+  outputDiv.style.top = "130px";
+  outputDiv.style.left = "50px";
+  showTable();
+}
+
+function closeOutput2() {
+  document.getElementById('msgDiv').innerHTML = "";
+  document.getElementById('alertDiv').innerHTML = "";
+  let outputDiv2 = document.getElementById('outputDiv2');
+  outputDiv3.innerHTML = "";
+  outputDiv2.classList.remove("arise");
+  outputDiv2.style.height = "0px";
+  showTable();
+}
+
+function resetReport() {
+  document.getElementById('msgDiv').innerHTML = "";
+  document.getElementById('alertDiv').innerHTML = "";
+  document.getElementById('trackerMsg').innerText = "";
+  document.getElementById('trackerMini').innerText = "";
+  document.getElementById('splitL').innerHTML = "";
+  document.getElementById('splitR').innerHTML = "";
+  document.getElementById('whichA').checked = false;
+  document.getElementById('whichB').checked = false;
+  document.getElementById('whichC').checked = false;
+  let addLineCount = localStorage.getItem("addLineCount");
+  let LineCount = parseInt(addLineCount);
+  let inputElems = document.querySelectorAll(".tracker");
+  let elemArr = Array.from(inputElems);
+  for (let i = 0; i < elemArr.length; i++) {
+    if(elemArr[i].value != null) {
+      if(elemArr[i].checked) {
+        elemArr[i].checked = false;
+      } else {
+        elemArr[i].value = "";
+      }
+    }
+  }
+  for (; LineCount > 0; LineCount--) {
+    let rowId = "recTab" + LineCount;
+    document.getElementById(rowId).style.visibility = "hidden";
+  }
+  const recordArr = JSON.parse(localStorage.getItem("recordArr"));
+  for (let i = 0; i < recordArr.length; i++) {
+    let recName = recordArr[i];
+    localStorage.removeItem(recName + "spot");
+  }
+  localStorage.removeItem("serdate");
+  localStorage.removeItem("sermileage");
+  localStorage.removeItem("IDforCor");
+  localStorage.removeItem("InceptionMiles");
+  localStorage.removeItem("InceptionDate");
+  localStorage.removeItem("incNote");
+  localStorage.removeItem("serNote");
+  for (let i = 0; i < 6; i++) {
+    let elemId = "rec" + i;
+    localStorage.removeItem(elemId + "Note");
+    document.getElementById(elemId + "Notebin").innerText = "";
+  }
+  const blankArr = [];
+  localStorage.setItem("objectArr", JSON.stringify(blankArr));
+  localStorage.setItem("recordArr", JSON.stringify(blankArr));
+  localStorage.setItem("addLineCount", "0");
+  localStorage.setItem("savedRecs", "0");
+  setDate();
+}

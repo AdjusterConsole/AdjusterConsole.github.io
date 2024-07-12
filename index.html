@@ -162,6 +162,33 @@ body {
   --fancy-dark: #6d7174;
   --fancy-background: #B6BDC1;
   --div-width: 10px;
+  --altboxshad: 
+    0px 10px 25px -5px rgba(0,0,0,0.6),
+    0px 20px 45px -5px rgba(0,0,0,0.55),
+    0px 30px 65px -5px rgba(0,0,0,0.5);
+
+  --altboxshad2: 
+    inset 0px 0px 5px  rgba(0,0,0,0.8),
+    inset 0px 0px 15px rgba(0,0,0,0.5),
+    inset 0px 0px 35px rgba(0,0,0,0.2),
+    0px 10px 25px -5px rgba(0,0,0,0.6),
+    0px 20px 45px -5px rgba(0,0,0,0.55),
+    0px 30px 65px -5px rgba(0,0,0,0.5);
+
+}
+
+#disclaimer {
+  text-align: center;
+  position: absolute;
+  display: inline-block;
+  padding: 5px 10px;
+  font-size: 14px;
+  bottom: 10px;
+  left: 70px;
+  background: none;
+  box-shadow: none;
+  border: 1px solid var(--fancy-background);
+  color: var(--fancy-background);
 }
 
 </style>
@@ -210,7 +237,6 @@ body {
   <div class="lonelyInput noShow" style="display:none;">
   </div>
 </div>
-
 
                                                 <!-- Menu -->
 
@@ -394,7 +420,6 @@ body {
   <button id="presetGreen" class="picker" onclick="setColor('green')">Green Preset</button>
   <button id="presetPink" class="picker" onclick="setColor('pink')">Pink Preset</button>
   <button id="ConsoleDefault" class="picker" onclick="setColor('ACDF')">Console Clrs</button>
-
 </div>
 
                                               <!-- Main Buttons -->
@@ -2115,96 +2140,117 @@ TIME:&nbsp&nbsp</textarea>
 
                                                 <!-- Labor Script Div -->
 
-<div id="laborscriptDiv" class="ls_main" style="display:none;">
-  <div class="ls_sub">
-    <h3 class="head_labor">Labor Rate Script</h3>
-    <div class="left_div revert">
-      <p>
+<div id="laborscriptDiv" class="ls_outer hide">
+  <div class="ls_main">
+    <h3 class="labor_heading">Labor Rate Script</h3>
+    <div class="labor_div_100">
+      <div class="labor_div_60">
         Ask the RF:<br>What is the current posted labor rate at your Repair Facility?
-      </p>
-      <p>
-        Optional:<br>
-        Are they requesting more than the Labor Rate in CMS?
-      </p>
-    </div>
-    <div class="side_div revert">
-      <p>
+      </div>
+      <div class="labor_div_40">
         <label for="asking">RF Posted Labor Rate:</label><br>
         $<input type="number" id="asking" step=".01" required><br>
-      </p>
-      <p>
-        <label for="current">Labor Rate in CMS:</label><br>
-        $<input type="number" id="current" step=".01">
-      </p>
-      <div class="side_sub revert">
-        <div class="drop_sub menu_sub revert">
-          <select id="radius" required>
-            <option selected value="">Radius</option>
-            <option value="5">5</option>
-            <option value="10">10</option>
-            <option value="25">25</option>
-          </select><br>
-          <select id="type" required>
-            <option selected value="">Facility Type</option>
-            <option value="All">All</option>
-            <option value="Independent">Independent</option>
-            <option value="Domestic">Domestic</option>
-            <option value="European">European</option>
-            <option value="Asian">Asian</option>
-          </select><br>
-          <select id="quant" required>
-            <option selected value="">Facilities</option>
-            <option value="5">5</option>
-            <option value="10">10</option>
-            <option value="25">25</option>
-            <option value="50">50</option>
-            <option value="100">100</option>
-            <option value="All">All</option>
-          </select><br>
-        </div>
-        <div class="drop_sub label_sub revert">
-          <label for="radius">Radius:</label><br>
-          <label for="type">Facility Type:</label><br>
-          <label for="quant">Number of Facilities:</label>
-        </div>
-      </div>
-      <p class="aveRatep">
-        <label for="aveRate">Average Labor Rate:</label><br>
-        $<input type="number" id="aveRate" step=".01" required>
-      </p>
-      <button id="myScript" class="script_btn D R P" onclick="laborScript()">My Response</button>
-      <div id="responseDiv" class="flt_lft revert" style="display:none;">
-        <div id="responseDiv_text" class="revert">The response is:<br></div>
-        <button id="yesScript" class="script_btn D R P" onclick="negotiateScript('y')">Yes</button>
-        <button id="noScript" class="script_btn D R P" onclick="negotiateScript('n')">No</button>
-        <div id="rf_offer_div" class="revert">
-          <div id="sub_offer_div" class="sub_offer revert"><label for="custom">The RF offered: </label><br>
-          $<input type="number" id="custom" step=".01"></div>
-          <button id="acceptScript" class="script_btn D R P" onclick="negotiateScript('a')">Accept</button>
-        </div>
-      <button id="resetScript" class="script_btn D R P" onclick="negotiateScript('r')">Reset</button>
       </div>
     </div>
-    <button id="exitScript" class="script_btn D R P" onclick="negotiateScript('r');openScript()">Exit</button>
-    <button id="instructScript" class="script_btn D R P" onclick="instructScript()">Instructions</button>  <br>
-    <div id="instructL" class="instructLabor">
-      <b>Instructions:</b><br>
-      <ul>
-        <li>Enter the Repair Facility response into RF Posted Labor Rate.</li>
-        <li>*Optional: Enter the labor rate that is currently in CMS.*</li>
-        <li>Select the options for Radius, Facility Type, and Number of Facilities that you used for searching SWIS.</li>
-        <li>Enter the Average Labor Rate SWIS output.</li>
-        <li>Click 'My Response'.</li>
-        <li>It will show a dialog box containing the appropriate response or question.</li>
-        <li>Use the 'Yes' and 'No' buttons to input their response back.</li>
-        <li>*Optional: If they make an offer, enter it into the box and click 'Accept'.*</li>
-        <li>When completed, click 'Exit'.</li>
-        <li>The completed note is already in your clipboard ready to be pasted.</li>
-        <li>Use reset to clear the form and start over if needed.</li>
-      </ul>
-    </div> 
-  </div>
+    <div class="labor_div_100">
+      <div class="labor_div_60">
+        Optional:<br>
+        Are they requesting more than the Labor Rate in CMS?
+      </div>
+      <div class="labor_div_40">
+        <label for="current">Labor Rate in CMS:</label><br>
+        $<input type="number" id="current" step=".01">
+      </div>
+    </div>
+    <div class="labor_div_90">
+      <div class="labor_div_30 NumberBtn">
+        Radius:
+        <div class="labor_width">
+          <button id="radius5" class="laboropt" onclick="radiusSelect(5, this.id)">5</button>
+          <button id="radius10" class="laboropt" onclick="radiusSelect(10, this.id)">10</button>
+          <button id="radius25" class="laboropt" onclick="radiusSelect(25, this.id)">25</button>
+        </div>
+      </div>
+      <div class="labor_div_30 Type">
+        Facility Type:
+        <div class="labor_widther">
+          <button id="typeAll" class="laboropt" onclick="typeSelect('All', this.id)">All</button>
+          <button id="typeIndy" class="laboropt" onclick="typeSelect('Independant', this.id)">Independant</button>
+          <button id="typeDom" class="laboropt" onclick="typeSelect('Domestic', this.id)">Domestic</button>
+          <button id="typeEuro" class="laboropt" onclick="typeSelect('European', this.id)">European</button>
+          <button id="typeAsian" class="laboropt" onclick="typeSelect('Asian', this.id)">Asian</button>
+        </div>
+      </div>
+      <div class="labor_div_30 NumberBtn">
+        Number of Facilities:
+        <div class="labor_width">
+          <button id="quant5" class="laboropt" onclick="quantSelect(5, this.id)">5</button>
+          <button id="quant10" class="laboropt" onclick="quantSelect(10, this.id)">10</button>
+          <button id="quant25" class="laboropt" onclick="quantSelect(25, this.id)">25</button>
+          <button id="quant50" class="laboropt" onclick="quantSelect(50, this.id)">50</button>
+          <button id="quant100" class="laboropt" onclick="quantSelect(100, this.id)">100</button>
+          <button id="quantAll" class="laboropt" onclick="quantSelect('All', this.id)">All</button>
+        </div>
+      </div>
+    </div>
+    <div class="labor_div_100">
+      <label for="aveRate">Average Labor Rate:</label>
+      $<input type="number" id="aveRate" step=".01">
+      <div>
+        <button id="myScript" class="script_button" onclick="laborScript()">My Response</button>
+      </div>
+    </div>
+    <div id="responseDiv">
+      <div class="response_inner">
+        <div id="responseDiv_text">The response is:<br></div>
+        <div id="answerBtns">
+          <div>
+            <button id="yesScript" class="script_button" onclick="negotiateScript('y')">Yes</button>
+          </div>
+          <div>
+            <button id="noScript" class="script_button" onclick="negotiateScript('n')">No</button>
+          </div>
+        </div>
+      </div>
+      <div id="rf_offer_div">
+        <div>
+          <label for="custom">The RF offered: </label><br>
+          $<input type="number" id="custom" step=".01">
+        </div>
+        <div>
+          <button id="acceptScript" class="script_button" onclick="negotiateScript('a')">Accept</button>
+        </div>
+      </div>
+    </div>
+    <div class="labor_div_button_holder">
+      <div>
+        <button id="instructScript" class="script_button" onclick="instructScript()">Instructions</button>
+      </div>
+      <div>
+        <button id="exitScript" class="script_button" onclick="negotiateScript('e')">Exit</button>
+      </div>
+      <div>
+        <button id="resetScript" class="script_button" onclick="negotiateScript('r')">Reset</button>
+      </div>
+    </div>
+  </div> 
 </div>
+<div id="instructL" class="instructLabor hide">
+  <b>Instructions:</b><br>
+  <ul>
+    <li>Enter the Repair Facility response into RF Posted Labor Rate.</li>
+    <li>*Optional: Enter the labor rate that is currently in CMS.*</li>
+    <li>Select the options for Radius, Facility Type, and Number of Facilities that you used for searching SWIS.</li>
+    <li>Enter the Average Labor Rate SWIS output.</li>
+    <li>Click 'My Response'.</li>
+    <li>It will show a dialog box containing the appropriate response or question.</li>
+    <li>Use the 'Yes' and 'No' buttons to input their response back.</li>
+    <li>*Optional: If they make an offer, enter it into the box and click 'Accept'.*</li>
+    <li>When completed, click 'Exit'.</li>
+    <li>The completed note is already in your clipboard ready to be pasted.</li>
+    <li>Use reset to clear the form and start over if needed.</li>
+  </ul>
+</div> 
 
                                                 <!-- CH Statement Questions -->
 
@@ -2317,7 +2363,8 @@ TIME:&nbsp&nbsp</textarea>
      <button id="advanceState" class="wefwefwef" onclick="advanceState()">Next</button>
   </div>
 </div>
-                                                <!-- Trans Auth -->
+  
+                                              <!-- Trans Auth -->
 
 <div id="module_trans_backing" class="module_backing">
   <div id="module_trans_main" class="module_main">
@@ -2455,9 +2502,7 @@ TIME:&nbsp&nbsp</textarea>
     <button id="sizeDefault" class="bones" onclick="sizeSubmit('d')">Default</button>
   <button id="sizeCancel" class="bones" onclick="sizeSubmit()">Exit</button>
 </div>
-<div id="pdiv" class="noShow"><p></div>
-<script type="module" src="JavaScript/firebase.js?v=20240707202844"></script>
-<script type="module" src="JavaScript/script.js?v=20240707202844"></script>
+
 <script src="JavaScript/snipDiv.js?v=20240707202844"></script>
 <script src="JavaScript/keyEvents.js?v=20240707202844"></script>
 <script src="JavaScript/OGLAYOUTJS.js?v=20240707202844"></script>

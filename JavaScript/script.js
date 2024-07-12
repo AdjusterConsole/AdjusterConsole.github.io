@@ -1,1 +1,109 @@
-const _0x565fb1=_0x259f;function _0x259f(_0x25f7bc,_0x35ccb2){const _0x56e315=_0x56e3();return _0x259f=function(_0x259f7e,_0x15d006){_0x259f7e=_0x259f7e-0x197;let _0x386cea=_0x56e315[_0x259f7e];return _0x386cea;},_0x259f(_0x25f7bc,_0x35ccb2);}(function(_0x13158f,_0x332cc2){const _0x2df8dd=_0x259f,_0x312cbe=_0x13158f();while(!![]){try{const _0x2dab75=parseInt(_0x2df8dd(0x1c3))/0x1*(-parseInt(_0x2df8dd(0x1b4))/0x2)+parseInt(_0x2df8dd(0x1c0))/0x3+-parseInt(_0x2df8dd(0x197))/0x4+parseInt(_0x2df8dd(0x1c8))/0x5*(-parseInt(_0x2df8dd(0x1a0))/0x6)+-parseInt(_0x2df8dd(0x1b1))/0x7*(-parseInt(_0x2df8dd(0x199))/0x8)+-parseInt(_0x2df8dd(0x1ab))/0x9+parseInt(_0x2df8dd(0x1c4))/0xa;if(_0x2dab75===_0x332cc2)break;else _0x312cbe['push'](_0x312cbe['shift']());}catch(_0x13c054){_0x312cbe['push'](_0x312cbe['shift']());}}}(_0x56e3,0xd9a3e));import{downloadFile}from'./firebase.js';function _0x56e3(){const _0x40f90c=['partName','partNumber','length','left3','Labor\x20Rate:\x20','textarea2','laborDescription','partsData','No\x20file\x20selected.','textarea5','1831734RmoQQX','textarea4','addEventListener','11093jbdQpd','25274920OZBfmC','priceEach','hours','Part\x20Name:\x20','20yJlUWi','toString','getElementById','Error\x20parsing\x20JSON\x20file:\x20','Description:\x20','hasOwnProperty','next1','2221760TBgFoE','Part\x20Number:\x20','88cmVtQA','result','totals','quantity','toFixed','getItem','Parts\x0a','339804ZQoyMd','innerHTML','claim_info','laborRate','parse','Please\x20enter\x20the\x20reference\x20key:','.json','RF\x20Price:\x20$','value','repeat','downloadMostRecent','12723984jYWzzt','application/json','setItem','stringify','Next<br>','next3','511189jVjHLc','target','Hours:\x20','154oGQfxW','left1'];_0x56e3=function(){return _0x40f90c;};return _0x56e3();}document[_0x565fb1(0x1ca)](_0x565fb1(0x1aa))[_0x565fb1(0x1c2)]('click',async()=>{const _0x47a7e9=_0x565fb1,_0x546aad=prompt(_0x47a7e9(0x1a5));if(!_0x546aad){alert('No\x20reference\x20key\x20provided.');return;}const _0x1371e5=await downloadFile(_0x546aad);if(_0x1371e5){const _0x1f7ec7={'target':{'files':[new File([JSON[_0x47a7e9(0x1ae)](_0x1371e5)],_0x546aad+_0x47a7e9(0x1a6),{'type':_0x47a7e9(0x1ac)})]}};processUploadedFilefb(_0x1f7ec7);}else alert('No\x20file\x20found\x20or\x20an\x20error\x20occurred.');});function processUploadedFilefb(_0x42bd3f){const _0x48d8d2=_0x565fb1,_0x5e4fdb=_0x42bd3f[_0x48d8d2(0x1b2)]['files'][0x0];if(!_0x5e4fdb){alert(_0x48d8d2(0x1be));return;}const _0x225e0b=new FileReader();_0x225e0b['onload']=function(_0x2e946f){const _0x544afa=_0x48d8d2;try{const _0x1b246a=JSON[_0x544afa(0x1a4)](_0x2e946f[_0x544afa(0x1b2)][_0x544afa(0x19a)]);if(_0x1b246a[_0x544afa(0x1a2)]&&_0x1b246a[_0x544afa(0x1a2)][_0x544afa(0x1b8)]>0x0){const _0x2a56aa=_0x1b246a[_0x544afa(0x1a2)][0x0],_0x31ae3f=formatJson(_0x2a56aa);document['getElementById'](_0x544afa(0x1bb))[_0x544afa(0x1a8)]=_0x31ae3f;const _0x3c6217=localStorage[_0x544afa(0x19e)]('countLefts');document[_0x544afa(0x1ca)]('left2')[_0x544afa(0x1a1)]='Remaining<br>'+_0x3c6217,document[_0x544afa(0x1ca)](_0x544afa(0x1b9))['innerHTML']='Remaining<br>'+_0x3c6217;const _0x30e803=parseInt(_0x3c6217)*0x4;localStorage[_0x544afa(0x1ad)]('countAlls',_0x30e803),localStorage[_0x544afa(0x1ad)]('countPNs',_0x3c6217),localStorage[_0x544afa(0x1ad)]('countPrices',_0x3c6217);const _0x43a8bd=_0x30e803[_0x544afa(0x1c9)]();document[_0x544afa(0x1ca)](_0x544afa(0x1b5))['innerHTML']='Remaining<br>'+_0x43a8bd;}else alert('Invalid\x20JSON\x20structure.');}catch(_0x48d885){alert(_0x544afa(0x1cb)+_0x48d885['message']);}},_0x225e0b['readAsText'](_0x5e4fdb);}function formatJson(_0x5b909d,_0x42223f=0x0){const _0x3adb00=_0x565fb1;let _0x24d8b0='';for(let _0xd1b98f in _0x5b909d){if(_0x5b909d['hasOwnProperty'](_0xd1b98f)){const _0x4a9930=_0x5b909d[_0xd1b98f];let _0x17dab3='\x20'[_0x3adb00(0x1a9)](_0x42223f);switch(_0xd1b98f){case _0x3adb00(0x1bd):_0x24d8b0+=_0x17dab3+_0x3adb00(0x19f),_0x4a9930['forEach'](_0x4d5f47=>{_0x24d8b0+=formatParts(_0x4d5f47,_0x42223f+0x2);});break;case'laborData':_0x24d8b0+=_0x17dab3+'Labor:\x0a',_0x4a9930['forEach'](_0x2395b0=>{const _0x3a0673=_0x3adb00;_0x24d8b0+='\x20'[_0x3a0673(0x1a9)](_0x42223f+0x2)+_0x3a0673(0x1cc)+_0x2395b0[_0x3a0673(0x1bc)]+'\x0a',_0x24d8b0+='\x20'[_0x3a0673(0x1a9)](_0x42223f+0x2)+_0x3a0673(0x1b3)+_0x2395b0[_0x3a0673(0x1c6)]+'\x0a\x0a';});break;case _0x3adb00(0x19b):_0x24d8b0+=_0x17dab3+'Totals:\x0a';for(let _0x4318fa in _0x4a9930){_0x4a9930[_0x3adb00(0x1cd)](_0x4318fa)&&(_0x24d8b0+=''+'\x20'['repeat'](_0x42223f+0x2)+_0x4318fa+':\x20'+_0x4a9930[_0x4318fa]+'\x0a');}break;case _0x3adb00(0x1a3):_0x24d8b0+=_0x17dab3+_0x3adb00(0x1ba)+_0x4a9930+'\x0a';break;default:_0x24d8b0+=''+_0x17dab3+_0xd1b98f+':\x20'+_0x4a9930+'\x0a';break;}}}return _0x24d8b0;}function formatParts(_0x3295b3,_0x259ec4){const _0x3f2625=_0x565fb1;let _0x5a5e87='';_0x5a5e87+='\x20'[_0x3f2625(0x1a9)](_0x259ec4)+_0x3f2625(0x198)+_0x3295b3[_0x3f2625(0x1b7)]+'\x0a',_0x5a5e87+='\x20'[_0x3f2625(0x1a9)](_0x259ec4)+_0x3f2625(0x1c7)+_0x3295b3[_0x3f2625(0x1b6)]+'\x0a',_0x5a5e87+='\x20'[_0x3f2625(0x1a9)](_0x259ec4)+'Quantity:\x20'+_0x3295b3['quantity']+'\x0a',_0x5a5e87+='\x20'['repeat'](_0x259ec4)+_0x3f2625(0x1a7)+parseFloat(_0x3295b3[_0x3f2625(0x1c5)])[_0x3f2625(0x19d)](0x2)+'\x0a\x0a',document[_0x3f2625(0x1ca)](_0x3f2625(0x1bf))[_0x3f2625(0x1a8)]+=_0x3295b3['partNumber']+'\x0a'+_0x3295b3[_0x3f2625(0x1b6)]+'\x0a'+_0x3295b3[_0x3f2625(0x19c)]+'\x0a'+parseFloat(_0x3295b3[_0x3f2625(0x1c5)])[_0x3f2625(0x19d)](0x2)+'\x0a',document['getElementById'](_0x3f2625(0x1c1))[_0x3f2625(0x1a8)]+=parseFloat(_0x3295b3[_0x3f2625(0x1c5)])[_0x3f2625(0x19d)](0x2)+'\x0a',document['getElementById']('textarea3')[_0x3f2625(0x1a8)]+=_0x3295b3[_0x3f2625(0x1b7)]+'\x0a';let _0x3d551a=parseInt(localStorage[_0x3f2625(0x19e)]('countLefts'))+0x1;return _0x3d551a===0x1&&(document[_0x3f2625(0x1ca)](_0x3f2625(0x1ce))[_0x3f2625(0x1a1)]=_0x3f2625(0x1af)+_0x3295b3[_0x3f2625(0x1b7)],document[_0x3f2625(0x1ca)]('next2')['innerHTML']=_0x3f2625(0x1af)+_0x3295b3[_0x3f2625(0x1b7)],document[_0x3f2625(0x1ca)](_0x3f2625(0x1b0))[_0x3f2625(0x1a1)]='Next<br>'+parseFloat(_0x3295b3[_0x3f2625(0x1c5)])[_0x3f2625(0x19d)](0x2)),localStorage[_0x3f2625(0x1ad)]('countLefts',_0x3d551a),_0x5a5e87;}
+import { downloadFile } from './firebase.js';
+
+document.getElementById('downloadMostRecent').addEventListener('click', async () => {
+  const referenceKey = prompt('Please enter the reference key:');
+  if (!referenceKey) {
+    alert('No reference key provided.');
+    return;
+  }
+
+  const jsonContent = await downloadFile(referenceKey);
+  if (jsonContent) {
+    const fakeEvent = { target: { files: [new File([JSON.stringify(jsonContent)], `${referenceKey}.json`, { type: "application/json" })] } };
+    processUploadedFilefb(fakeEvent);
+  } else {
+    alert("No file found or an error occurred.");
+  }
+});
+
+function processUploadedFilefb(event) {
+  const file = event.target.files[0];
+  if (!file) {
+    alert("No file selected.");
+    return;
+  }
+  const reader = new FileReader();
+  reader.onload = function(e) {
+    try {
+      const jsonContent = JSON.parse(e.target.result);
+      if (jsonContent.claim_info && jsonContent.claim_info.length > 0) {
+        const claimInfo = jsonContent.claim_info[0]; 
+        const output = formatJson(claimInfo); 
+        document.getElementById('textarea2').value = output;
+        const countLefts = localStorage.getItem("countLefts");
+        document.getElementById('left2').innerHTML = 'Remaining<br>' + countLefts;
+        document.getElementById('left3').innerHTML = 'Remaining<br>' + countLefts; 
+        const countInts = parseInt(countLefts) * 4;
+        localStorage.setItem("countAlls", countInts);
+        localStorage.setItem("countPNs", countLefts);
+        localStorage.setItem("countPrices", countLefts);
+        const countStrs = countInts.toString();
+        document.getElementById('left1').innerHTML = 'Remaining<br>' + countStrs;
+      } else {
+        alert("Invalid JSON structure.");
+      }
+    } catch (error) {
+      alert("Error parsing JSON file: " + error.message);
+    }
+  };
+  reader.readAsText(file);
+}
+
+function formatJson(jsonContent, indent = 0) {
+  let result = '';
+  for (let key in jsonContent) {
+    if (jsonContent.hasOwnProperty(key)) {
+      const value = jsonContent[key];
+      let indentation = ' '.repeat(indent);
+      switch (key) {
+        case 'partsData':
+          result += `${indentation}Parts\n`;
+          value.forEach(part => {
+            result += formatParts(part, indent + 2);
+          });
+          break;
+        case 'laborData':
+          result += `${indentation}Labor:\n`;
+          value.forEach(labor => {
+            result += `${' '.repeat(indent + 2)}Description: ${labor.laborDescription}\n`;
+            result += `${' '.repeat(indent + 2)}Hours: ${labor.hours}\n\n`;
+          });
+          break;
+        case 'totals':
+          result += `${indentation}Totals:\n`;
+          for (let totalKey in value) {
+            if (value.hasOwnProperty(totalKey)) {
+              result += `${' '.repeat(indent + 2)}${totalKey}: ${value[totalKey]}\n`;
+            }
+          }
+          break;
+        case 'laborRate':
+          result += `${indentation}Labor Rate: ${value}\n`;
+          break;
+        default:
+          result += `${indentation}${key}: ${value}\n`;
+          break;
+      }
+    }
+  }
+  return result;
+}
+
+function formatParts(part, indent) {
+  let result = '';
+  result += `${' '.repeat(indent)}Part Number: ${part.partNumber}\n`;
+  result += `${' '.repeat(indent)}Part Name: ${part.partName}\n`;
+  result += `${' '.repeat(indent)}Quantity: ${part.quantity}\n`;
+  result += `${' '.repeat(indent)}RF Price: $${parseFloat(part.priceEach).toFixed(2)}\n\n`;
+  document.getElementById('textarea5').value += part.partNumber + '\n' + part.partName + '\n' + part.quantity + '\n' + parseFloat(part.priceEach).toFixed(2) + '\n';
+  document.getElementById('textarea4').value += parseFloat(part.priceEach).toFixed(2) + '\n';
+  document.getElementById('textarea3').value += part.partNumber + '\n';
+  let countLefts = parseInt(localStorage.getItem("countLefts")) + 1;
+  if (countLefts === 1) {
+    document.getElementById('next1').innerHTML = 'Next<br>' + part.partNumber;
+    document.getElementById('next2').innerHTML = 'Next<br>' + part.partNumber;
+    document.getElementById('next3').innerHTML = 'Next<br>' + parseFloat(part.priceEach).toFixed(2);
+  }
+  localStorage.setItem("countLefts", countLefts);
+  return result;
+}

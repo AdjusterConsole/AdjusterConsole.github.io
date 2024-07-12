@@ -1,1 +1,1336 @@
-const _0x5e8b9c=_0xaf0a;(function(_0x5cdd15,_0x2f4ee0){const _0xc1dad2=_0xaf0a,_0x409c7e=_0x5cdd15();while(!![]){try{const _0x22ab7b=-parseInt(_0xc1dad2(0x206))/0x1*(-parseInt(_0xc1dad2(0x16a))/0x2)+parseInt(_0xc1dad2(0x183))/0x3+-parseInt(_0xc1dad2(0x14e))/0x4*(parseInt(_0xc1dad2(0x1e1))/0x5)+parseInt(_0xc1dad2(0x20f))/0x6+parseInt(_0xc1dad2(0x19b))/0x7+-parseInt(_0xc1dad2(0x189))/0x8+parseInt(_0xc1dad2(0x13d))/0x9;if(_0x22ab7b===_0x2f4ee0)break;else _0x409c7e['push'](_0x409c7e['shift']());}catch(_0x1bb8e0){_0x409c7e['push'](_0x409c7e['shift']());}}}(_0x170b,0x1ce62));function setVer(){const _0x186a60=_0xaf0a,_0x3d6c72=document['querySelectorAll'](_0x186a60(0x223)),_0x532070=document[_0x186a60(0x1b5)](_0x186a60(0x1cc)),_0x185418=localStorage[_0x186a60(0x1dc)](_0x186a60(0x177));if(_0x185418==='1'){localStorage[_0x186a60(0x143)](_0x186a60(0x177),'2'),document['getElementById'](_0x186a60(0x13f))['innerText']=_0x186a60(0x21c),document[_0x186a60(0x142)]('textarea2')[_0x186a60(0x1c0)][_0x186a60(0x176)](_0x186a60(0xe3)),document[_0x186a60(0x142)]('textarea1')[_0x186a60(0x1c0)][_0x186a60(0x176)](_0x186a60(0xe3)),document[_0x186a60(0x142)](_0x186a60(0xdf))[_0x186a60(0x1c0)][_0x186a60(0x176)](_0x186a60(0x1e0)),document[_0x186a60(0x142)](_0x186a60(0x103))[_0x186a60(0x1c0)][_0x186a60(0x176)](_0x186a60(0x1e0));for(let _0x12e664=0x0;_0x12e664<_0x3d6c72[_0x186a60(0x1fc)];_0x12e664++){_0x3d6c72[_0x12e664]['classList']['add'](_0x186a60(0x1e0));}for(let _0x300b9e=0x0;_0x300b9e<_0x532070['length'];_0x300b9e++){_0x532070[_0x300b9e][_0x186a60(0x1c0)][_0x186a60(0x176)](_0x186a60(0xe3));}return;}else{if(_0x185418=='2'){localStorage[_0x186a60(0x143)](_0x186a60(0x177),'1'),document[_0x186a60(0x142)](_0x186a60(0x13f))[_0x186a60(0x10f)]='Original',document[_0x186a60(0x142)]('textarea2')['classList'][_0x186a60(0x168)]('origText'),document['getElementById'](_0x186a60(0x1d2))[_0x186a60(0x1c0)][_0x186a60(0x168)]('origText'),document[_0x186a60(0x142)](_0x186a60(0xdf))['classList'][_0x186a60(0x168)]('orig'),document[_0x186a60(0x142)](_0x186a60(0x103))['classList'][_0x186a60(0x168)](_0x186a60(0x1e0));for(let _0x1c51a8=0x0;_0x1c51a8<_0x3d6c72[_0x186a60(0x1fc)];_0x1c51a8++){_0x3d6c72[_0x1c51a8][_0x186a60(0x1c0)][_0x186a60(0x168)]('orig');}for(let _0x5716b0=0x0;_0x5716b0<_0x532070['length'];_0x5716b0++){_0x532070[_0x5716b0][_0x186a60(0x1c0)]['remove'](_0x186a60(0xe3));}return;}else localStorage[_0x186a60(0x143)](_0x186a60(0x177),'1'),setVer();}}function _0x170b(){const _0x57ec86=['trans_ans8b','push','statNoteinner','parts\x20and\x20labor.','back','ans1','butswap','ans6','trans_ans8i','onload','chno11','statePage','Was\x20there\x20any\x20noise,\x20smoke,\x20or\x20smell?','.3\x20for\x20code\x20pull\x20','partname1','fileUploaderDiv','focus','[class$=\x22dispStat\x22]','state6','Inspection\x20Review\x0dReason\x20for\x20inspection:\x0dLabor\x20rate:\x0dMileage:\x0dFluid\x20condition:\x0dModifications/Collision/Commercial:\x0dInspector\x20findings/photo\x20review:','state13','Will\x20inform\x20Contract\x20Holder\x20of\x20non-covered\x20components','stat4note','opacity','setSelectionRange','substr','left','disEdit','No\x0d\x0d','state13ans','The\x20Repair\x20facility\x20has\x20been\x20notified.\x0a','stat1','colorState','totalspark','LOCK1','round','Font','trsnActive','R/R\x20','innerText','serdate','viewNum','reduce','ftrans_ansNum','scrollHeight','width','sparkplus','trans_ans3b','What\x20is\x20the\x20preferred\x20method\x20of\x20contact?\x20\x20\x20','trans_ans8e','rec0Rcrdspot','TGAFSABTN','Snippings','When\x20did\x20the\x20issue\x20first\x20occur?','toString','trans_ans8a','contact1','No\x20inspection\x20needed\x20as\x20the\x20Repair\x20Facility\x20diagnostic\x20matches\x20Contract\x20Holder\x20concern.\x0dThe\x20repair\x20Facility\x20sent\x20supporting\x20photos\x20showing\x20excessive\x20metal\x20debris\x20present.','ans3','.4\x20for\x20pinpoint\x20test.\x20','No\x20records\x20requested\x20as\x20history\x20will\x20not\x20change\x20claim\x20decision.\x0dVehicle\x20is\x20not\x20in\x20waiting\x20period.\x20No\x20prior\x20related\x20claims.\x0dNo\x20recalls,\x20TSBs,\x20or\x20unresolved\x20mileage\x20concerns.\x0dContract\x20Holder\x20is\x20in\x20sequence\x20','match','stat3','textarea5','stat4and5CommonNote','q11ansY','toldem','chyes11','\x20and\x20','ans4','state1','statNote','SOLO','input[name=\x22trans_ans1\x22]:checked','chyes7','invisible','PTpage','Need\x20to\x20review\x20shipping\x20option\x20with\x20Contract\x20Holder.','transferTemplate','state6ans','trim','trans_ans4b','sermileage','.X\x20for\x20line\x20pressure\x20test\x20','fluid','332973uULqcg','from','swapper','Add','ans9','getElementById','setItem','split','LINK','toFixed','state4','hasOwnProperty','state','quest11','height','note','partname','3012OvAgxg','\x20hours\x20to\x20R/R\x20transmission.\x0d','textarea2','optionalNote','trans_ans3c','Evac\x20and\x20Recharge\x0dRF\x20Asking:\x20\x20\x20\x0dPD\x20Approved:\x20\x20\x201.4\x0d\x0d','objectArr','Any\x20additional\x20comments\x20or\x20notes:','RFIBND','SHOW','chno5','mode','Rev','Diag\x0dRF\x20Asking:\x20\x20\x20\x0dPD\x20Approved:\x20\x20\x20\x0d\x0d','Technician\x20states:\x0d\x0dPart\x20failure\x0dPart\x20failure\x0dPart\x20failure\x0d\x0dPlease\x20have\x20the\x20technician\x20demonstrate\x20the\x20failures\x20listed\x20above.\x0d\x0dNotate\x20if\x20rust,\x20corrosion,\x20or\x20any\x20outside\x20influence\x20is\x20the\x20cause\x20of\x20failure.\x0dNotate\x20available\x20fluid\x20levels\x20and\x20conditions.\x0dFor\x20electrical\x20components,\x20have\x20technician\x20verify\x20power\x20and\x20ground.\x0d\x0dPlease\x20take\x20pictures\x20of\x20the\x20following:\x0d','TGAFOBTN','shadowGen/shadIndex.html','Requesting\x20Contract\x20Holder\x20statement\x20regarding\x20issues.\x0dRequesting\x20past\x2012\x20months\x20of\x20service\x20records\x20from\x20the\x20Contract\x20Holder.\x0dSent\x20records\x20request\x20using\x20SRS\x20action\x20button.\x0dWill\x20call\x20the\x20Contract\x20Holder\x20to\x20inform.','yes','msrp','true','rec5Rcrdspot','serRcrdspot','menuOpen','♦\x20Settings\x20♦','trans_ans8j','remove','advanceState','8KvVhYu','trans_ans4a','Parts\x20and\x20labor\x20are\x20keyed\x20in\x20and\x20verified.\x0a','time_owned','newpartcount','state8ans','input[name=\x22trans_ans2\x22]:checked','PA\x20PN:\x20\x20\x20\x0dPA\x20List:\x20\x20\x20\x0dPA\x20Cost:\x20\x20\x20\x0dCore:\x20NA\x0d\x0d','getElementsByName','cancel','\x20with\x20Contract\x20Holder.','EDITarea','add','currentVer','substring','TPDiv','done11','select','none','getSelection','incRcrdspot','Del','.2\x20for\x20data\x20monitoring\x20','time_unit','Part:\x20','224337GMSfUm','rfprice','module_trans_4','chno7','The\x20stuck\x20piston\x20rings\x20can\x20be\x20attributed\x20to\x20the\x20carbon.\x0dCarbon\x20is\x20an\x20exclusion\x20on\x20this\x20policy.\x0dThe\x20engine\x20portion\x20of\x20this\x20claim\x20will\x20be\x20denied.\x0d','contact2','1106168KxgdGk','rec0date','Has\x20the\x20cause\x20of\x20failure\x20been\x20identified?\x20\x20\x20','quest','statement','fontSize','After\x20reviewing\x20all\x20relevant\x20documentation,\x20we\x20are\x20moving\x20forward\x20with\x20verified\x20failures.','trans_ans3d','done3','Diag\x20completed:\x20','some','slice','chyes5','authMode','quest3','input[type=\x22checkbox\x22]','stmt_temp_rad','Reviewed\x20inspection\x20photos\x20and\x20report.\x0dReviewed\x20photos\x20sent\x20by\x20repair\x20facility.\x0dVerified\x20vin.\x0dVerified\x20mileage.\x0dNo\x20indication\x20of\x20commercial\x20use.\x0dNo\x20indication\x20of\x20modification.\x0d\x0d','89782VYgZTi','trans_ans8g','updated','oldAuth','block','trans_ans7','q3ansN','Need\x20to\x20review\x20OOPC\x20of\x20$','transauthPage','trans_ans8k','The\x20following\x20items\x20and\x20conditions\x20are\x20not\x20covered\x20by\x20this\x20CONTRACT:\x0d\x0d','Width','stringify','stat5note','cust','Is\x20the\x20Repair\x20Facility\x20able\x20to\x20diagnose\x20to\x20cause\x20of\x20failure\x20and\x20overhaul\x20if\x20needed?\x20\x20\x20','mySidenav','20px','Count','module_trans_backing','newauthSelect','Verified\x20internal\x20failure\x20to\x20the\x20transmission\x20using\x20the\x20Repair\x20Facility\x20supplied\x20diagnostic\x20and\x20photos.\x0dThe\x20transmission\x20has\x20coverage\x20under\x20the\x20terms\x20of\x20the\x20contract.\x0dVerified\x20OEM\x20parts\x20using\x20Forte\x20and\x20AM\x20parts\x20using\x20PA.\x0dUsed\x20in-house\x20sourcing\x20to\x20determine\x20the\x20MCE\x20option.\x0dThe\x20MCE\x20option\x20is\x20a\x20','There\x20were\x20denied\x20items\x20on\x20this\x20claim.\x0dReview\x20denial\x20note\x20for\x20more\x20details','input[type=\x22radio\x22]','menuState','addLineCount','getElementsByClassName','href','Gave\x20authorization\x20info\x20and\x20payment\x20instructions\x20to\x20','How\x20long\x20have\x20you\x20owned\x20the\x20vehicle?','initial','partnum','Did\x20the\x20Repair\x20Facility\x20tow\x20the\x20vehicle?\x20\x20\x20','trans_ans8f','custBtn','Pro\x20Demand\x20shows\x20','auth_module','classList','module_trans_8qdiv','ENDN','resrcDiv','flush','ans10','q3ansExplain','q11ansExplain','log','70px','rec0mileage','noteOpen','intakeboxes','div6','state8','state1ans','Verified\x20OEM\x20PN:\x20\x20\x20\x0dVerified\x20MSRP:\x20\x20\x20\x0dRF\x20Price:\x20\x20\x20\x0d\x0d','stat4','textarea1','trans_ans8c','innerHTML','We\x20are\x20waiting\x20for\x20the\x20Contract\x20Holders\x20statement\x20as\x20it\x20may\x20influence\x20the\x20claim\x20outcome.\x0a','allBTN','trans_ans3a','ptRad','parts.','Display','\x20and\x20shipping\x20option\x20with\x20Contract\x20Holder.','getItem','It\x27s\x20Been\x20Done','I\x20was\x20unable\x20to\x20reach\x20the\x20Contract\x20Holder\x20but\x20I\x20left\x20a\x20VM\x20and\x20tasked\x20callbacks.\x0a','inline-block','orig','735FSiXfn','next','An\x20inspection\x20was\x20sent\x20to\x20verify\x20failures.\x0dI\x20have\x20reviewed\x20report\x20and\x20inspection\x20photos.\x0dThe\x20inspection\x20review\x20note\x20is\x20completed.','STCB','textContent','module_trans_8adiv','contains','no3','stat8','checked','savedRecs','copy','Were\x20there\x20any\x20warning\x20lights?','stat2','newAuth','Diag\x20on\x20','trans','stat5','rec3Rcrdspot','BULK:\x20\x20\x20\x0dRF\x20Price:\x20\x20\x20\x0dFPS\x20Allows:\x20\x20\x20\x0d\x0d','Contact\x20Name:\x20','querySelector','top','trans_ans8h','Verified\x20MSRP:\x20','stat9','nr3','length','RFIBDH','RF\x20Asking:\x20\x20\x20\x0dPD\x20Approved:\x20\x20\x20\x0d\x0d','normal','stat6','Height','scrollTop','style','chyes3','module_trans_7','11765jaQqRr','EDIT','Per\x20the\x20leak-down\x20test\x20performed,\x20we\x20have\x20air\x20bypass\x20from\x20piston\x20rings\x20(air\x20escaping\x20to\x20crank\x20case).\x0dWe\x20know\x20the\x20piston\x20rings\x20are\x20stuck,\x20and\x20have\x20made\x20marks/scoring\x20on\x20the\x20cylinder\x20walls.\x0d','state4ans','module_trans_1','♦\x20Close\x20♦','Need\x20to\x20review\x20OOPC\x20when\x20OOPC\x20is\x20determined','value','Yes\x20-\x20','1174020ZmOoHd','Do\x20you\x20know\x20the\x20approximate\x20mileage\x20when\x20you\x20purchased\x20it?','TGAFOSABTN','holder1','trans_ans9a','querySelectorAll','All\x20failures.\x0dAll\x204\x20sides\x20of\x20vehicle,\x20vin,\x20and\x20odometer.\x0dInspection\x20stickers\x20and\x20oil\x20change\x20stickers.\x0dWheels,\x20tires,\x20and\x20rotors.\x0dAny\x20dash\x20light\x20that\x20are\x20on,\x20current\x20or\x20history\x20DTCs,\x20and\x20any\x20freeze\x20frame\x20data\x20available.\x0dAny\x20signs\x20of\x20commercial\x20use\x20or\x20modifications.\x0dAny\x20rust,\x20corrosion,\x20or\x20collision\x20damage.\x0dAny\x20other\x20information\x20relevant\x20to\x20the\x20failures.\x0d\x0dIf\x20the\x20failure\x20is\x20related\x20to\x20drivability\x20or\x20verification\x20is\x20noise\x20based,\x20please\x20provide\x20video\x20verification.\x0d\x0dPlease\x20contact\x20the\x20Repair\x20Facility\x201-2\x20hours\x20before\x20arrival.\x0d\x0dContact\x20Name:\x0dEmail:\x0dDirect\x20Line:','BtnBuilder','rec2Rcrdspot','false','removeItem','ans7','Can\x20a\x20test\x20drive\x20be\x20performed\x20if\x20needed?\x20\x20\x20','Neumorphic','chState_div','Requesting\x20photos\x20from\x20Repair\x20Facility\x20to\x20verify\x20failure\x20and\x20avoid\x20inspection\x20delay.\x0dInforming\x20Repair\x20Facility\x20to\x20include\x20pics\x20of\x20all\x204\x20corners\x20of\x20the\x20vehicle,\x20VIN\x20plate,\x20odometer,\x20and\x20pictures\x20of\x20the\x20failure.\x0dSent\x20request\x20via\x20SRS\x20action\x20button.','\x20hours\x20to\x20the\x20flush\x20the\x20cooler.\x0d','display','approx_mile','stmt_temp_ta','button','YES','forEach','textarea4','Was\x20the\x20vehicle\x20towed\x20to\x20the\x20repair\x20facility?','PRIN','spark','state2ans','inherit','Diag','RF\x20AM\x20PN:\x20\x20\x20\x0dRF\x20Price:\x20\x20\x20\x0dPA\x20PN:\x20\x20\x20\x0dPA\x20List:\x20\x20\x20\x0dPA\x20Cost:\x20\x20\x20\x0dCore:\x20NA\x0d\x0d','\x20@\x20.3\x20each\x20is\x20','sizeEdit','stat7','Were\x20there\x20any\x20prior\x20related\x20issues?','parse','origText','.X\x20for\x20pan\x20drop\x20','trans_ans4c','Does\x20the\x20Repair\x20Facility\x20have\x20an\x20itemized\x20estimate\x20available?\x20\x20\x20','open_nav'];_0x170b=function(){return _0x57ec86;};return _0x170b();}function removeBlankLines(_0x396746){return _0x396746['replace'](/^\s*$/gm,'');}function shadMaker(){const _0x2ac695=_0xaf0a;window['location'][_0x2ac695(0x1b6)]=_0x2ac695(0x15e);}function checkOpen(){const _0x1b07b8=_0xaf0a;if(!document['getElementById'](_0x1b07b8(0xf7))[_0x1b07b8(0x1c0)][_0x1b07b8(0x1e7)]('hideFile'))return!![];const _0x14a161=[document[_0x1b07b8(0x142)](_0x1b07b8(0x179)),document[_0x1b07b8(0x142)]('statNote'),document[_0x1b07b8(0x142)](_0x1b07b8(0x11c)),document['getElementById'](_0x1b07b8(0x1fd)),document[_0x1b07b8(0x142)](_0x1b07b8(0x156)),document[_0x1b07b8(0x142)](_0x1b07b8(0x15d)),document[_0x1b07b8(0x142)]('TGAFOABTN'),document['getElementById'](_0x1b07b8(0x11b)),document[_0x1b07b8(0x142)](_0x1b07b8(0x211)),document[_0x1b07b8(0x142)](_0x1b07b8(0x1bf)),document[_0x1b07b8(0x142)](_0x1b07b8(0x1c3))];return _0x14a161[_0x1b07b8(0x193)](_0x26faa2=>_0x26faa2['style'][_0x1b07b8(0x220)]===_0x1b07b8(0x1df));}function getContact(_0x28b6d1){const _0x2d67da=_0xaf0a,_0x342a45=parseInt(_0x28b6d1),_0x808000=document[_0x2d67da(0x142)]('textarea1'),_0x592bd=_0x808000[_0x2d67da(0x20d)][_0x2d67da(0x144)]('\x0a'),_0x54e85c=_0x592bd[_0x2d67da(0x194)](0x0,_0x342a45)[_0x2d67da(0x112)]((_0x4410e9,_0x38d580)=>_0x4410e9+_0x38d580['length']+0x1,0x0),_0x91c6d4=_0x54e85c+_0x592bd[_0x342a45][_0x2d67da(0x1fc)];_0x808000[_0x2d67da(0xf8)](),_0x808000[_0x2d67da(0x100)](_0x54e85c,_0x91c6d4);const _0x5d2bfa=_0x808000[_0x2d67da(0x20d)][_0x2d67da(0x178)](_0x54e85c,_0x91c6d4)[_0x2d67da(0x138)]();return _0x5d2bfa['slice'](0x9)[_0x2d67da(0x138)]();}function MENU(){const _0x4c9dec=_0xaf0a,_0x436715=document[_0x4c9dec(0x142)](_0x4c9dec(0x10a)),_0x5d57c6=document[_0x4c9dec(0x142)](_0x4c9dec(0x216)),_0x503cd4=document[_0x4c9dec(0x142)]('appearance'),_0x58d6b6=localStorage['getItem'](_0x4c9dec(0x165));if(_0x58d6b6===_0x4c9dec(0x218)){_0x436715[_0x4c9dec(0x10f)]=_0x4c9dec(0x20b),_0x503cd4[_0x4c9dec(0x203)][_0x4c9dec(0x1f7)]='45px',_0x503cd4['style'][_0x4c9dec(0xff)]='1',_0x5d57c6['style']['top']=_0x4c9dec(0x1c9),_0x5d57c6[_0x4c9dec(0x203)][_0x4c9dec(0xff)]='1',localStorage[_0x4c9dec(0x143)](_0x4c9dec(0x165),_0x4c9dec(0x162));return;}else{if(_0x58d6b6==='true'){_0x5d57c6[_0x4c9dec(0x203)][_0x4c9dec(0x1f7)]=_0x4c9dec(0x1ac),_0x5d57c6[_0x4c9dec(0x203)]['opacity']='0',_0x503cd4[_0x4c9dec(0x203)][_0x4c9dec(0x1f7)]='20px',_0x503cd4[_0x4c9dec(0x203)][_0x4c9dec(0xff)]='0',_0x436715[_0x4c9dec(0x10f)]=_0x4c9dec(0x166),localStorage[_0x4c9dec(0x143)](_0x4c9dec(0x165),_0x4c9dec(0x218));return;}}localStorage[_0x4c9dec(0x143)](_0x4c9dec(0x165),'false'),MENU();}function transAuth(){const _0x104d0f=_0xaf0a;document['getElementById'](_0x104d0f(0x1ae))[_0x104d0f(0x1c0)][_0x104d0f(0x176)](_0x104d0f(0x10d)),localStorage[_0x104d0f(0x143)](_0x104d0f(0x1a3),'1'),localStorage[_0x104d0f(0x219)](_0x104d0f(0xdc));}function showtransOop(){const _0x5ba1f5=_0xaf0a;document[_0x5ba1f5(0x142)](_0x5ba1f5(0x1c1))[_0x5ba1f5(0x1c0)][_0x5ba1f5(0x168)](_0x5ba1f5(0x133)),document['getElementById'](_0x5ba1f5(0x1e6))[_0x5ba1f5(0x1c0)]['remove']('invisible');}function hidetransOop(){const _0x4c22c0=_0xaf0a;document[_0x4c22c0(0x142)](_0x4c22c0(0x1c1))[_0x4c22c0(0x1c0)][_0x4c22c0(0x176)]('invisible'),document[_0x4c22c0(0x142)](_0x4c22c0(0x1e6))[_0x4c22c0(0x1c0)][_0x4c22c0(0x176)](_0x4c22c0(0x133));}function requestorNo(_0x4fad37){const _0x18d4ec=_0xaf0a;_0x4fad37==='y'&&(document[_0x18d4ec(0x142)](_0x18d4ec(0x190))[_0x18d4ec(0x1ea)]&&(document[_0x18d4ec(0x142)](_0x18d4ec(0x190))[_0x18d4ec(0x1ea)]=![])),_0x4fad37==='n'&&(document[_0x18d4ec(0x142)]('trans_ans3c')['checked']&&(document[_0x18d4ec(0x142)]('trans_ans3c')['checked']=![]),document[_0x18d4ec(0x142)](_0x18d4ec(0x117))[_0x18d4ec(0x1ea)]&&(document[_0x18d4ec(0x142)]('trans_ans3b')[_0x18d4ec(0x1ea)]=![]),document[_0x18d4ec(0x142)](_0x18d4ec(0x1d7))[_0x18d4ec(0x1ea)]&&(document[_0x18d4ec(0x142)](_0x18d4ec(0x1d7))[_0x18d4ec(0x1ea)]=![]));}function uncheck_All(){const _0x23ed17=_0xaf0a,_0xaeaf8a=document['querySelectorAll'](_0x23ed17(0x198));_0xaeaf8a[_0x23ed17(0x225)](function(_0x316848){const _0x2b4975=_0x23ed17;_0x316848[_0x2b4975(0x1ea)]=![];});const _0x15f2a4=document[_0x23ed17(0x214)](_0x23ed17(0x1b2));_0x15f2a4[_0x23ed17(0x225)](function(_0x2ff296){_0x2ff296['checked']=![];});const _0x332ff4=document['getElementsByName'](_0x23ed17(0x113));_0x332ff4[_0x23ed17(0x225)](function(_0x6c1ac7){const _0xf119d9=_0x23ed17;_0x6c1ac7[_0xf119d9(0x20d)]='';});const _0x41d5dd=localStorage['getItem'](_0x23ed17(0x196));_0x41d5dd===_0x23ed17(0x1ef)?document[_0x23ed17(0x142)](_0x23ed17(0x1af))[_0x23ed17(0x1ea)]=!![]:document[_0x23ed17(0x142)](_0x23ed17(0x1af))[_0x23ed17(0x1ea)]=![];}function noncovcomp(_0x15f793){const _0x314623=_0xaf0a;_0x15f793==='y'&&(document[_0x314623(0x142)](_0x314623(0x19c))[_0x314623(0x1ea)]&&(document[_0x314623(0x142)]('trans_ans8g')['checked']=![])),_0x15f793==='n'&&(document[_0x314623(0x142)](_0x314623(0x119))['checked']&&(document['getElementById'](_0x314623(0x119))[_0x314623(0x1ea)]=![]),document[_0x314623(0x142)](_0x314623(0x1bc))[_0x314623(0x1ea)]&&(document['getElementById'](_0x314623(0x1bc))[_0x314623(0x1ea)]=![]));}function saveDiag(_0x5819d7,_0x223aa9){const _0xf50a46=_0xaf0a;let _0x59963b=JSON[_0xf50a46(0xe2)](localStorage[_0xf50a46(0x1dc)](_0xf50a46(0xdc)));const _0x2722d9=document[_0xf50a46(0x142)](_0xf50a46(0x109));!_0x59963b&&(_0x59963b={'trans':![],'diag':![],'flush':![],'press':![],'pan':![],'pull':![],'data':![],'spark':0x0,'point':![]});if(_0x5819d7===_0xf50a46(0x116))_0x59963b[_0xf50a46(0xd9)]+=0x1,_0x2722d9[_0xf50a46(0x1d4)]=_0x59963b[_0xf50a46(0xd9)];else{if(_0x5819d7==='sparkminus'&&_0x59963b[_0xf50a46(0xd9)]>0x0)_0x59963b['spark']-=0x1,_0x2722d9['innerHTML']=_0x59963b[_0xf50a46(0xd9)];else{if(_0x5819d7&&_0x5819d7!==_0xf50a46(0x1e2)){if(_0x59963b[_0xf50a46(0x148)](_0x5819d7)&&_0x59963b[_0x5819d7]===![]){_0x59963b[_0x5819d7]=!![];var _0x5993ec=document[_0xf50a46(0x142)](_0x223aa9);_0x5993ec[_0xf50a46(0x1d4)]=_0xf50a46(0x17f),_0x5993ec[_0xf50a46(0x1c0)][_0xf50a46(0x176)](_0xf50a46(0xee));}else{if(_0x59963b['hasOwnProperty'](_0x5819d7)&&_0x59963b[_0x5819d7]===!![]){_0x59963b[_0x5819d7]=![];var _0x5993ec=document[_0xf50a46(0x142)](_0x223aa9);_0x5993ec['innerHTML']=_0xf50a46(0x140),_0x5993ec[_0xf50a46(0x1c0)][_0xf50a46(0x168)](_0xf50a46(0xee));}}}}}localStorage[_0xf50a46(0x143)](_0xf50a46(0xdc),JSON[_0xf50a46(0x1a7)](_0x59963b));if(_0x5819d7===_0xf50a46(0x1e2)){const _0x1afd7e=localStorage[_0xf50a46(0x1dc)](_0xf50a46(0x1a3));if(_0x1afd7e==='1')document[_0xf50a46(0x142)](_0xf50a46(0x20a))[_0xf50a46(0x1c0)][_0xf50a46(0x168)](_0xf50a46(0x10d)),document['getElementById'](_0xf50a46(0x185))[_0xf50a46(0x1c0)][_0xf50a46(0x176)](_0xf50a46(0x10d)),localStorage[_0xf50a46(0x143)](_0xf50a46(0x1a3),'2');else{if(_0x1afd7e==='2')document[_0xf50a46(0x142)](_0xf50a46(0x185))[_0xf50a46(0x1c0)][_0xf50a46(0x168)](_0xf50a46(0x10d)),document['getElementById'](_0xf50a46(0x205))['classList'][_0xf50a46(0x176)]('trsnActive'),localStorage[_0xf50a46(0x143)](_0xf50a46(0x1a3),'3');else{if(_0x1afd7e==='3'){finishtransAuth();return;}}}}if(_0x5819d7===_0xf50a46(0xec)){const _0x5ebd86=localStorage[_0xf50a46(0x1dc)](_0xf50a46(0x1a3));if(_0x5ebd86==='3')document[_0xf50a46(0x142)](_0xf50a46(0x205))['classList'][_0xf50a46(0x168)](_0xf50a46(0x10d)),document[_0xf50a46(0x142)](_0xf50a46(0x185))[_0xf50a46(0x1c0)][_0xf50a46(0x176)](_0xf50a46(0x10d)),localStorage[_0xf50a46(0x143)](_0xf50a46(0x1a3),'2');else{if(_0x5ebd86==='2')document[_0xf50a46(0x142)](_0xf50a46(0x185))[_0xf50a46(0x1c0)][_0xf50a46(0x168)](_0xf50a46(0x10d)),document['getElementById'](_0xf50a46(0x20a))['classList'][_0xf50a46(0x176)](_0xf50a46(0x10d)),localStorage[_0xf50a46(0x143)](_0xf50a46(0x1a3),'1');else{if(_0x5ebd86==='1')return;}}}if(_0x5819d7===_0xf50a46(0x173)){uncheck_All(),document['getElementById'](_0xf50a46(0x205))[_0xf50a46(0x1c0)][_0xf50a46(0x168)]('trsnActive'),document[_0xf50a46(0x142)]('module_trans_4')[_0xf50a46(0x1c0)][_0xf50a46(0x168)](_0xf50a46(0x10d)),document[_0xf50a46(0x142)](_0xf50a46(0x20a))[_0xf50a46(0x1c0)][_0xf50a46(0x176)](_0xf50a46(0x10d)),document['getElementById'](_0xf50a46(0x1ae))[_0xf50a46(0x1c0)][_0xf50a46(0x168)](_0xf50a46(0x10d));return;}}function finishtransAuth(){const _0x5e83d5=_0xaf0a,_0x5c552f=getContact('0');let _0x495fba=![],_0x2fc5a7=![],_0xcbd1df=![],_0x20faa5=![],_0x243e1c=JSON[_0x5e83d5(0xe2)](localStorage['getItem'](_0x5e83d5(0xdc)));for(let _0x3087d0 in _0x243e1c){_0x3087d0!==_0x5e83d5(0x1f1)&&_0x3087d0!=='diag'&&_0x3087d0!==_0x5e83d5(0x1c4)&&((_0x3087d0!==_0x5e83d5(0xd9)&&_0x243e1c[_0x3087d0]===!![]||_0x3087d0===_0x5e83d5(0xd9)&&_0x243e1c[_0x3087d0]>0x0)&&(_0x495fba=!![],_0x2fc5a7=!![]));}const _0x3b79cf=document[_0x5e83d5(0x142)](_0x5e83d5(0x16b))[_0x5e83d5(0x20d)],_0x37e811=document[_0x5e83d5(0x142)](_0x5e83d5(0x139))['value'],_0x3bf654=document['getElementById'](_0x5e83d5(0xe5))[_0x5e83d5(0x20d)],_0x2beb8a=document[_0x5e83d5(0x1f6)](_0x5e83d5(0x131)),_0x20627e=document[_0x5e83d5(0x1f6)](_0x5e83d5(0x170)),_0x9712ca=parseInt(document[_0x5e83d5(0x142)]('trans_ans4')[_0x5e83d5(0x20d)]),_0x4d5146=document[_0x5e83d5(0x142)](_0x5e83d5(0x1a0))['value'],_0xa524b0=0.3*_0x243e1c[_0x5e83d5(0xd9)],_0x473674={'trans':'Pro\x20Demand\x20shows\x20'+_0x3b79cf+_0x5e83d5(0x14f),'diag':_0x5e83d5(0x1be)+_0x37e811+'\x20hours\x20for\x20diagnostics.\x0d','flush':_0x5e83d5(0x1be)+_0x3bf654+_0x5e83d5(0x21f),'press':_0x5e83d5(0x13b),'pan':_0x5e83d5(0xe4),'pull':_0x5e83d5(0xf5),'data':_0x5e83d5(0x180),'spark':'\x20Electrical\x20tests:\x20'+_0x243e1c[_0x5e83d5(0xd9)]+_0x5e83d5(0xde)+Math[_0x5e83d5(0x10b)](_0xa524b0)+'\x20','point':_0x5e83d5(0x123)},_0x58faa6=_0x5e83d5(0x121),_0x1e61aa=_0x5e83d5(0x1e3),_0xdf5f32='Requested\x20and\x20reviewed\x20photos\x20from\x20Repair\x20Facility.\x0dPhoto\x20review\x20note\x20is\x20completed.',_0x4fb13c=_0x5e83d5(0x124)+_0x4d5146+'.',_0xda5fb0='Requested\x20and\x20reviewed\x20records\x20and\x20statement.\x0dRecord\x20review\x20note\x20is\x20completed.',_0x54d17f=_0x5e83d5(0x18f),_0x460976='Verified\x20labor,\x20fluid\x20type,\x20and\x20capacities\x20in\x20ProDemand.\x0d',_0x31fc7c=_0x5e83d5(0x1a2),_0x4bcdce=_0x5e83d5(0x20c),_0x212fd3=_0x5e83d5(0x174),_0x2fe4f1=_0x5e83d5(0x1db),_0x1f7e51='OOPC\x20is\x20due\x20to\x20differences\x20in\x20',_0x43acc5=_0x5e83d5(0x135),_0x1d1918='Have\x20not\x20given\x20authorization\x20info\x20to\x20the\x20Repair\x20Facility\x20at\x20this\x20time.',_0x20bce1='Contract\x20Holder\x20has\x20no\x20OOPC\x20besides\x20deductible.',_0x1e5824=_0x5e83d5(0x1b7),_0x5a6100=_0x5e83d5(0xfd),_0x5dc110=_0x5e83d5(0x1b1);let _0x23c38b=_0x5e83d5(0x1b0);if(_0x2beb8a[_0x5e83d5(0x20d)]===null){uncheck_All();return;}_0x23c38b+=_0x2beb8a[_0x5e83d5(0x20d)]+'\x20unit\x20from\x20'+_0x20627e[_0x5e83d5(0x20d)]+'\x20for\x20$'+_0x9712ca['toFixed'](0x2)+'.\x0d'+_0x460976;for(let _0x21fd2c in _0x243e1c){_0x243e1c[_0x5e83d5(0x148)](_0x21fd2c)&&((_0x21fd2c!==_0x5e83d5(0xd9)&&_0x243e1c[_0x21fd2c]===!![]||_0x21fd2c===_0x5e83d5(0xd9)&&_0x243e1c[_0x21fd2c]>0x0)&&(_0x23c38b+=_0x473674[_0x21fd2c],_0x495fba&&_0x21fd2c==='flush'&&(_0x23c38b+=_0x5e83d5(0x192),_0x495fba=![])));}_0x2fc5a7&&(_0x23c38b+='\x0d');document['getElementById']('trans_ans3d')[_0x5e83d5(0x1ea)]==!![]&&(_0x23c38b+=_0x58faa6+'\x0d'+_0x4fb13c+'\x0d');document[_0x5e83d5(0x142)](_0x5e83d5(0x1d7))['checked']==!![]&&(_0x23c38b+=_0x1e61aa+'\x0d',_0xcbd1df=!![],_0x20faa5=!![]);document[_0x5e83d5(0x142)](_0x5e83d5(0x117))[_0x5e83d5(0x1ea)]==!![]&&(_0x23c38b+=_0xdf5f32+'\x0d',_0xcbd1df=!![],_0x20faa5=!![]);document['getElementById'](_0x5e83d5(0x152))['checked']==!![]&&(_0x23c38b+=_0xda5fb0+'\x0d',_0xcbd1df=!![]);_0x20faa5&&(_0x23c38b+=_0x4fb13c+'\x0d');_0xcbd1df&&(_0x23c38b+=_0x54d17f+'\x0d');const _0x36c954=document[_0x5e83d5(0x142)](_0x5e83d5(0x213));if(!_0x36c954[_0x5e83d5(0x1ea)]){if(document[_0x5e83d5(0x142)]('trans_ans8d')[_0x5e83d5(0x1ea)])_0x23c38b+=_0x20bce1+'\x0d'+_0x1e5824+_0x5c552f+'\x0d';else{if(document[_0x5e83d5(0x142)](_0x5e83d5(0xe8))[_0x5e83d5(0x1ea)])_0x23c38b+=_0x43acc5+'\x0d'+_0x1d1918+'\x0d';else{if(document[_0x5e83d5(0x142)](_0x5e83d5(0x11f))['checked']||document[_0x5e83d5(0x142)]('trans_ans8c')['checked']){const _0x303d3a=document[_0x5e83d5(0x142)](_0x5e83d5(0x1f8)),_0x480d7f=document[_0x5e83d5(0x142)](_0x5e83d5(0xf0)),_0x7814b2=document[_0x5e83d5(0x142)](_0x5e83d5(0x167)),_0x11e0a7=document['getElementById'](_0x5e83d5(0x1a4))['value'],_0x363775=parseFloat(_0x11e0a7);if(isNaN(_0x363775)){alert('Please\x20enter\x20a\x20valid\x20amount\x20for\x20OOPC');return;}const _0x39a927=_0x363775[_0x5e83d5(0x146)](0x2),_0x2663c7=_0x39a927[_0x5e83d5(0x11e)]();let _0x23d606;_0x7814b2[_0x5e83d5(0x1ea)]&&(_0x23d606=_0x5e83d5(0xeb)),_0x480d7f[_0x5e83d5(0x1ea)]&&(_0x23d606='labor.'),_0x303d3a[_0x5e83d5(0x1ea)]&&(_0x23d606=_0x5e83d5(0x1d9)),_0x23c38b+=_0x31fc7c+_0x2663c7,_0x23c38b+=(document[_0x5e83d5(0x142)](_0x5e83d5(0x1d3))['checked']?_0x2fe4f1:_0x212fd3)+'\x0d',_0x23c38b+=_0x1f7e51+_0x23d606+'\x0d'+_0x1d1918+'\x0d',document[_0x5e83d5(0x142)](_0x5e83d5(0x11f))[_0x5e83d5(0x1ea)]=![],document[_0x5e83d5(0x142)]('trans_ans8c')['checked']=![];}}}}(document[_0x5e83d5(0x142)](_0x5e83d5(0x11f))[_0x5e83d5(0x1ea)]||document['getElementById']('trans_ans8c')[_0x5e83d5(0x1ea)])&&(_0x36c954['checked']&&(_0x23c38b+=_0x4bcdce));_0x36c954[_0x5e83d5(0x1ea)]=![],document[_0x5e83d5(0x142)]('trans_ans8a')[_0x5e83d5(0x1ea)]=![],document[_0x5e83d5(0x142)](_0x5e83d5(0x1d3))[_0x5e83d5(0x1ea)]=![];const _0xf419f4=document[_0x5e83d5(0x142)](_0x5e83d5(0x119));_0xf419f4['checked']&&(_0x23c38b+=noncovAuth1+'\x0d',_0xf419f4[_0x5e83d5(0x1ea)]=![]);const _0x6b4fe=document[_0x5e83d5(0x142)](_0x5e83d5(0x1bc));_0x6b4fe['checked']&&(_0x23c38b+=noncovAuth2,_0x6b4fe[_0x5e83d5(0x1ea)]=![]);copy(_0x23c38b),document[_0x5e83d5(0x142)](_0x5e83d5(0x1ae))[_0x5e83d5(0x1c0)][_0x5e83d5(0x168)]('trsnActive'),uncheck_All();return;}function STMTTEMP(){const _0xf96886=_0xaf0a,_0x28f680=document[_0xf96886(0x142)]('statement');if(_0x28f680[_0xf96886(0x203)][_0xf96886(0x220)]==_0xf96886(0x17c)){_0x28f680[_0xf96886(0x203)][_0xf96886(0x220)]=_0xf96886(0x1b9),localStorage['setItem'](_0xf96886(0xf3),'1');let _0x5dec39=localStorage['getItem'](_0xf96886(0x159));checkOpen()&&ShowTemps();}else return;}function cancelState(){const _0x2d2686=_0xaf0a,_0x2bcef0=document[_0x2d2686(0x1b5)]('stmt_temp_ta');for(i=0x0;i<_0x2bcef0['length'];i++){_0x2bcef0[i]['value']='';}const _0x116bf0=document[_0x2d2686(0x1b5)]('stmt_temp_rad');for(i=0x0;i<_0x116bf0[_0x2d2686(0x1fc)];i++){_0x116bf0[i][_0x2d2686(0x1ea)]=![];}document[_0x2d2686(0x142)](_0x2d2686(0x16d))[_0x2d2686(0x20d)]='',document[_0x2d2686(0x142)](_0x2d2686(0x181))['value']='',document['getElementById']('approx_mile')[_0x2d2686(0x20d)]='',document['getElementById'](_0x2d2686(0xfc))['style']['display']='none',document[_0x2d2686(0x142)](_0x2d2686(0x12e))['style'][_0x2d2686(0x220)]=_0x2d2686(0xdb),document[_0x2d2686(0x142)]('statement')[_0x2d2686(0x203)][_0x2d2686(0x220)]=_0x2d2686(0x17c);const _0x37b5e1=document[_0x2d2686(0x1b5)](_0x2d2686(0x21d));for(i=0x0;i<_0x37b5e1['length'];i++){_0x37b5e1[i][_0x2d2686(0x203)][_0x2d2686(0x220)]='none';}document[_0x2d2686(0x142)]('state1')['style'][_0x2d2686(0x220)]=_0x2d2686(0xdb),document['getElementById'](_0x2d2686(0x18d))[_0x2d2686(0x203)][_0x2d2686(0x220)]=_0x2d2686(0x17c);}function advanceState(_0x101cea){const _0x97d060=_0xaf0a,_0x503ec5=parseInt(localStorage[_0x97d060(0x1dc)](_0x97d060(0xf3))),_0x3ddd54='state'+_0x503ec5;let _0x3d2bc2=_0x503ec5+0x1,_0x30d552;(_0x101cea=='chno3'||_0x101cea==_0x97d060(0x158)||_0x101cea==_0x97d060(0x186)||_0x101cea==_0x97d060(0xf2))&&(_0x3d2bc2=_0x503ec5+0x2);(_0x3d2bc2=='3'||_0x3d2bc2=='5'||_0x3d2bc2=='7'||_0x3d2bc2=='11')&&(document[_0x97d060(0x142)](_0x97d060(0x169))['style']['display']=_0x97d060(0x17c));(_0x3d2bc2=='4'||_0x3d2bc2=='6'||_0x3d2bc2=='8'||_0x3d2bc2=='9'||_0x3d2bc2=='12'||_0x3d2bc2=='13')&&(document[_0x97d060(0x142)](_0x97d060(0x169))['style'][_0x97d060(0x220)]=_0x97d060(0x1df));console['log'](_0x503ec5,_0x3d2bc2);if(_0x3d2bc2>0xd){stateFinish();return;}_0x30d552=_0x97d060(0x149)+_0x3d2bc2,console[_0x97d060(0x1c8)](_0x30d552),document[_0x97d060(0x142)](_0x3ddd54)[_0x97d060(0x203)][_0x97d060(0x220)]='none',document[_0x97d060(0x142)](_0x30d552)[_0x97d060(0x203)]['display']=_0x97d060(0xdb),localStorage[_0x97d060(0x143)](_0x97d060(0xf3),_0x3d2bc2);}function backState(){const _0x24a017=_0xaf0a,_0x149c85=localStorage[_0x24a017(0x1dc)](_0x24a017(0xf3));if(_0x149c85=='1')return;const _0x36d2f7=_0x24a017(0x149)+_0x149c85;let _0x40386b=parseInt(_0x149c85);_0x40386b==0xd||_0x40386b==0x9||_0x40386b==0x7||_0x40386b==0x5?_0x40386b=_0x40386b-0x2:_0x40386b=_0x40386b-0x1;(_0x40386b=='3'||_0x40386b=='5'||_0x40386b=='7'||_0x40386b=='11')&&(document[_0x24a017(0x142)](_0x24a017(0x169))[_0x24a017(0x203)]['display']='none');(_0x40386b=='2'||_0x40386b=='4'||_0x40386b=='6'||_0x40386b=='8'||_0x40386b=='9'||_0x40386b=='10'||_0x40386b=='12'||_0x40386b=='13')&&(document[_0x24a017(0x142)](_0x24a017(0x169))['style']['display']=_0x24a017(0x1df));const _0x1afb45=_0x24a017(0x149)+_0x40386b;localStorage[_0x24a017(0x143)]('statePage',_0x40386b),document[_0x24a017(0x142)]('state12')['style']['display']=_0x24a017(0x17c),document[_0x24a017(0x142)](_0x24a017(0x1ce))[_0x24a017(0x203)][_0x24a017(0x220)]=_0x24a017(0x17c),document['getElementById'](_0x24a017(0xfa))[_0x24a017(0x203)]['display']=_0x24a017(0x17c),document[_0x24a017(0x142)](_0x24a017(0x147))[_0x24a017(0x203)][_0x24a017(0x220)]=_0x24a017(0x17c),document['getElementById'](_0x36d2f7)['style']['display']='none',document[_0x24a017(0x142)](_0x1afb45)[_0x24a017(0x203)][_0x24a017(0x220)]='block';}function stateFinish(){const _0x345539=_0xaf0a;let _0x3c6502='';const _0x3eb5ba='Can\x20you\x20describe\x20what\x20happened?',_0x53a955=_0x345539(0x11d),_0x605407=_0x345539(0xe1),_0x3ac2a8='What\x20were\x20they\x20and\x20when\x20did\x20they\x20occur?',_0x32f557=_0x345539(0x1ed),_0x6b08c1='Please\x20describe:',_0x1125ee=_0x345539(0xf4),_0x1f19f2='Please\x20describe:',_0x5d23e9=_0x345539(0x1b8),_0x11110b=_0x345539(0x210),_0x524ee2=_0x345539(0xd7),_0x1c004e='Where\x20was\x20it\x20towed\x20from\x20and\x20what\x20tow\x20company\x20did\x20you\x20use?',_0x2fd463=_0x345539(0x155);let _0x1fa249=document['getElementById'](_0x345539(0x1cf))[_0x345539(0x20d)],_0x5e4332=document[_0x345539(0x142)](_0x345539(0xda))[_0x345539(0x20d)];const _0x3fda5d=document[_0x345539(0x142)](_0x345539(0x204))[_0x345539(0x1ea)];let _0x2f353a=document[_0x345539(0x142)](_0x345539(0x209))['value'];const _0x465ff1=document[_0x345539(0x142)](_0x345539(0x195))[_0x345539(0x1ea)];let _0x48be64=document[_0x345539(0x142)](_0x345539(0x137))[_0x345539(0x20d)];const _0x26e631=document['getElementById'](_0x345539(0x132))[_0x345539(0x1ea)];let _0x298ddc=document[_0x345539(0x142)](_0x345539(0x16f))['value'],_0x39e0de=document['getElementById'](_0x345539(0x16d))['value'],_0x5166b8=document[_0x345539(0x142)](_0x345539(0x181))[_0x345539(0x20d)],_0xed414=document[_0x345539(0x142)](_0x345539(0x221))['value'];const _0x998968=document[_0x345539(0x142)](_0x345539(0x12b))['checked'];let _0x1ebd0f=document[_0x345539(0x142)]('state12ans')[_0x345539(0x20d)],_0x835cee=document['getElementById'](_0x345539(0x105))[_0x345539(0x20d)];_0x3c6502=_0x3eb5ba+'\x0d'+_0x1fa249+'\x0d\x0d'+_0x53a955+'\x0d'+_0x5e4332+'\x0d\x0d'+_0x605407+'\x0d';_0x3fda5d?_0x3c6502+=_0x345539(0x20e)+_0x2f353a+'\x0d\x0d'+_0x32f557+'\x0d':_0x3c6502+='No\x0d\x0d'+_0x32f557+'\x0d';_0x465ff1?_0x3c6502+=_0x345539(0x20e)+_0x48be64+'\x0d\x0d'+_0x1125ee+'\x0d':_0x3c6502+=_0x345539(0x104)+_0x1125ee+'\x0d';_0x26e631?_0x3c6502+=_0x345539(0x20e)+_0x298ddc+'\x0d\x0d'+_0x5d23e9+'\x0d':_0x3c6502+='No\x0d\x0d'+_0x5d23e9+'\x0d';_0x3c6502+=_0x39e0de+'\x20'+_0x5166b8+'\x0d\x0d'+_0x11110b+'\x0d';_0xed414==''||_0xed414==null?_0x3c6502+=_0x345539(0x104)+_0x524ee2+'\x0d':_0x3c6502+=_0xed414+'\x0d\x0d'+_0x524ee2+'\x0d';_0x998968?_0x3c6502+='Yes\x20-\x20'+_0x1ebd0f+'\x0d\x0d'+_0x2fd463+'\x0d':_0x3c6502+=_0x345539(0x104)+_0x2fd463+'\x0d';_0x3c6502+=_0x835cee;const _0x3de8d7=document[_0x345539(0x1b5)](_0x345539(0x222));for(i=0x0;i<_0x3de8d7['length'];i++){_0x3de8d7[i][_0x345539(0x20d)]='';}const _0x120e9c=document[_0x345539(0x1b5)](_0x345539(0x199));for(i=0x0;i<_0x120e9c[_0x345539(0x1fc)];i++){_0x120e9c[i][_0x345539(0x1ea)]=![];}document[_0x345539(0x142)](_0x345539(0x16d))[_0x345539(0x20d)]='',document[_0x345539(0x142)](_0x345539(0x181))[_0x345539(0x20d)]='',document[_0x345539(0x142)](_0x345539(0x221))[_0x345539(0x20d)]='',copy(_0x3c6502),document[_0x345539(0x142)](_0x345539(0xfc))[_0x345539(0x203)][_0x345539(0x220)]=_0x345539(0x17c),document['getElementById'](_0x345539(0x12e))[_0x345539(0x203)][_0x345539(0x220)]=_0x345539(0xdb),document['getElementById'](_0x345539(0x18d))[_0x345539(0x203)][_0x345539(0x220)]=_0x345539(0x17c);}function statNOTE(){const _0x2b3387=_0xaf0a,_0x136c2b=document[_0x2b3387(0x142)](_0x2b3387(0x12f)),_0x3cd38e=document[_0x2b3387(0x142)](_0x2b3387(0xea));if(_0x136c2b[_0x2b3387(0x203)][_0x2b3387(0x220)]=='inline-block'||checkOpen()){_0x136c2b['style'][_0x2b3387(0x220)]=_0x2b3387(0x17c);return;}_0x136c2b[_0x2b3387(0x203)][_0x2b3387(0x220)]=_0x2b3387(0x1df);}function cancelStat(){const _0x2bba4b=_0xaf0a;uncheck_All(),document[_0x2bba4b(0x142)](_0x2bba4b(0x151))[_0x2bba4b(0x20d)]='';const _0x2860d0=document[_0x2bba4b(0x142)](_0x2bba4b(0x12f)),_0x483638=document[_0x2bba4b(0x142)](_0x2bba4b(0xea));_0x2860d0[_0x2bba4b(0x203)][_0x2bba4b(0x220)]=_0x2bba4b(0x17c);}function highlander(_0x3f55ed){const _0x715f09=_0xaf0a;document[_0x715f09(0x142)](_0x3f55ed)[_0x715f09(0x1ea)]=![];}function submitStat(){const _0x2f67f6=_0xaf0a,_0x4f0e12=[_0x2f67f6(0x107),_0x2f67f6(0x1ee),_0x2f67f6(0x126),_0x2f67f6(0x1d1),_0x2f67f6(0x1f2),_0x2f67f6(0x200),_0x2f67f6(0xe0),_0x2f67f6(0x1e9),_0x2f67f6(0x1fa)],_0x1b885a={'stat1note':'We\x20are\x20waiting\x20on\x20the\x20inspection\x20to\x20verify\x20failure.\x0a','stat2note':'We\x20are\x20waiting\x20on\x20records\x20from\x20the\x20Contract\x20Holder\x20to\x20determine\x20Pre-X.\x0a','stat3note':_0x2f67f6(0x1d5),'stat4note':'verify\x20failure.','stat5note':'correct\x20VIN\x20or\x20mileage\x20issue.','stat6note':_0x2f67f6(0x106),'stat7note':'The\x20Contract\x20Holder\x20has\x20been\x20notified.\x0a','stat8note':_0x2f67f6(0x1de),'stat9note':_0x2f67f6(0x16c),'stat4and5CommonNote':'We\x20are\x20waiting\x20on\x20photos\x20from\x20the\x20Repair\x20Facility\x20to\x20'};let _0x481849='';_0x4f0e12[_0x2f67f6(0x194)](0x0,0x3)[_0x2f67f6(0x225)](_0x125d3e=>{const _0x138d1f=_0x2f67f6;document[_0x138d1f(0x142)](_0x125d3e)[_0x138d1f(0x1ea)]&&(_0x481849+=_0x1b885a[_0x125d3e+_0x138d1f(0x14c)]);});const _0x23f9b0=document[_0x2f67f6(0x142)](_0x2f67f6(0x1d1))[_0x2f67f6(0x1ea)],_0x5a75fa=document[_0x2f67f6(0x142)](_0x2f67f6(0x1f2))[_0x2f67f6(0x1ea)],_0x220b98=document[_0x2f67f6(0x142)](_0x2f67f6(0x1fa))[_0x2f67f6(0x1ea)];if(_0x23f9b0||_0x5a75fa){_0x481849+=_0x1b885a[_0x2f67f6(0x128)];if(_0x23f9b0&&_0x5a75fa)_0x481849+=_0x1b885a[_0x2f67f6(0xfe)]+_0x2f67f6(0x12c)+_0x1b885a['stat5note']+'\x0a';else{if(_0x23f9b0)_0x481849+=_0x1b885a[_0x2f67f6(0xfe)]+'\x0a';else _0x5a75fa&&(_0x481849+=_0x1b885a[_0x2f67f6(0x1a8)]+'\x0a');}}_0x4f0e12[_0x2f67f6(0x194)](0x6)[_0x2f67f6(0x225)](_0x40cac7=>{const _0x198acf=_0x2f67f6;document['getElementById'](_0x40cac7)[_0x198acf(0x1ea)]&&(_0x481849+=_0x1b885a[_0x40cac7+_0x198acf(0x14c)]);});const _0x1a2736=document[_0x2f67f6(0x142)](_0x2f67f6(0x151))['value'][_0x2f67f6(0x138)]();_0x1a2736!==''&&(_0x481849+=_0x1a2736+'\x0a'),copy(_0x481849),cancelStat();}function EVACRECH(_0x3d5394){const _0x101e8f=_0xaf0a,_0x593678=_0x101e8f(0x153),_0x3778bc=localStorage[_0x101e8f(0x1dc)](_0x3d5394+_0x101e8f(0x207)),_0x599c55=document['getElementById'](_0x101e8f(0x150));_0x3778bc==null?(_0x599c55[_0x101e8f(0x20d)]+=_0x593678,document['getElementById'](_0x101e8f(0x175))[_0x101e8f(0x20d)]=_0x593678):(_0x599c55[_0x101e8f(0x20d)]+=_0x3778bc,document[_0x101e8f(0x142)](_0x101e8f(0x175))['value']=_0x3778bc),_0x599c55['scrollTop']=_0x599c55[_0x101e8f(0x114)];}function ALIGNMENT(_0x233f68){const _0x22d11c=_0xaf0a,_0x13cbb9='Alignment\x0dRF\x20Asking:\x20\x20\x20\x0dPD\x20Approved:\x20\x20\x20\x0d\x0d',_0x32704f=localStorage[_0x22d11c(0x1dc)](_0x233f68+_0x22d11c(0x207)),_0x55824c=document[_0x22d11c(0x142)]('textarea2');_0x32704f==null?(_0x55824c[_0x22d11c(0x20d)]+=_0x13cbb9,document[_0x22d11c(0x142)](_0x22d11c(0x175))[_0x22d11c(0x20d)]=_0x13cbb9):(_0x55824c[_0x22d11c(0x20d)]+=_0x32704f,document[_0x22d11c(0x142)](_0x22d11c(0x175))[_0x22d11c(0x20d)]=_0x32704f),_0x55824c[_0x22d11c(0x202)]=_0x55824c['scrollHeight'];}function DIAG(){const _0x2c871c=_0xaf0a,_0xb3055f=document[_0x2c871c(0x142)](_0x2c871c(0x150));_0xb3055f[_0x2c871c(0x20d)]+=_0x2c871c(0x15b),_0xb3055f['scrollTop']=_0xb3055f[_0x2c871c(0x114)];}function LABOR(_0x161d5d){const _0x412e43=_0xaf0a,_0x84755d=document[_0x412e43(0x142)]('textarea2');_0x84755d[_0x412e43(0x20d)]+='R/R\x20\x0dRF\x20Asking:\x20\x20\x20\x0dPD\x20Approved:\x20\x20\x20\x0d\x0d',_0x84755d[_0x412e43(0x202)]=_0x84755d['scrollHeight'];}function BULK(_0x5bafd1){const _0x24ae12=_0xaf0a,_0x3468cf=localStorage[_0x24ae12(0x1dc)](_0x5bafd1+_0x24ae12(0x207)),_0x1b1966=document[_0x24ae12(0x142)](_0x24ae12(0x150));_0x3468cf==null?(_0x1b1966[_0x24ae12(0x20d)]+=_0x24ae12(0x1f4),document[_0x24ae12(0x142)](_0x24ae12(0x175))[_0x24ae12(0x20d)]=_0x24ae12(0x1f4)):(_0x1b1966[_0x24ae12(0x20d)]+=_0x3468cf,document['getElementById']('EDITarea')[_0x24ae12(0x20d)]=_0x3468cf),_0x1b1966['scrollTop']=_0x1b1966[_0x24ae12(0x114)];}function OEMOVER(){const _0x5e2ff0=_0xaf0a;let _0x3dc6c9=document[_0x5e2ff0(0x142)](_0x5e2ff0(0x150))[_0x5e2ff0(0x20d)];const _0x5198eb=document[_0x5e2ff0(0x142)](_0x5e2ff0(0x150));_0x3dc6c9=_0x3dc6c9[_0x5e2ff0(0x194)](0x0,-0x1),_0x5198eb['value']=_0x3dc6c9,_0x5198eb[_0x5e2ff0(0x20d)]+='PA\x20PN:\x20\x20\x20\x0dPA\x20List:\x20\x20\x20\x0dPA\x20Cost:\x20\x20\x20\x0dCore:\x20NA\x0d\x0d',_0x5198eb[_0x5e2ff0(0x202)]=_0x5198eb[_0x5e2ff0(0x114)];}function NEWAM(){const _0x1e59e4=_0xaf0a,_0x38cbf0=document[_0x1e59e4(0x142)]('textarea2');_0x38cbf0[_0x1e59e4(0x20d)]+=_0x1e59e4(0xdd),_0x38cbf0[_0x1e59e4(0x202)]=_0x38cbf0['scrollHeight'];}function NEWOEM(){const _0x2c0b55=_0xaf0a,_0x5c13ad=document[_0x2c0b55(0x142)](_0x2c0b55(0x150));_0x5c13ad[_0x2c0b55(0x20d)]+=_0x2c0b55(0x1d0),_0x5c13ad[_0x2c0b55(0x202)]=_0x5c13ad[_0x2c0b55(0x114)];}function REVIEW(_0x17fe7a){const _0xf00c6a=_0xaf0a,_0x1767e0='Reviewed\x20photos\x20sent\x20by\x20repair\x20facility.\x0dVerified\x20vin.\x0dVerified\x20mileage.\x0dNo\x20indication\x20of\x20commercial\x20use.\x0dNo\x20indication\x20of\x20modification.\x0d\x0d',_0x579663=localStorage[_0xf00c6a(0x1dc)](_0x17fe7a+_0xf00c6a(0x207));_0x579663==null?(document['getElementById'](_0xf00c6a(0x127))[_0xf00c6a(0x20d)]=_0x1767e0,document[_0xf00c6a(0x142)](_0xf00c6a(0x175))['value']=_0x1767e0):(document[_0xf00c6a(0x142)](_0xf00c6a(0x127))[_0xf00c6a(0x20d)]=_0x579663,document[_0xf00c6a(0x142)](_0xf00c6a(0x175))[_0xf00c6a(0x20d)]=_0x579663);const _0x2866b8=document[_0xf00c6a(0x142)](_0xf00c6a(0x127))[_0xf00c6a(0x20d)];copy(_0x2866b8);const _0x246b95=localStorage['getItem'](_0xf00c6a(0x159));checkOpen()&&ShowTemps();}function inspREVIEW(){const _0x3b9952=_0xaf0a,_0x306ff3=_0x3b9952(0xfb);copy(_0x306ff3);}function carfaxREVIEW(){const _0x5b8ddf='CARFAX\x20Report\x20Review:\x0d1.)\x20What\x20I\x20was\x20looking\x20for:\x0d2.)\x20Red\x20flags\x20or\x20Mileage\x20Discrepancy:\x0d3.)\x20Does\x20it\x20relate\x20to\x20the\x20claim:\x0d4.)\x20What\x20is\x20needed\x20now:';copy(_0x5b8ddf);}function RECREQ(_0x23c666){const _0x28f882=_0xaf0a,_0x746ae1=_0x28f882(0x15f),_0x402b13=localStorage[_0x28f882(0x1dc)](_0x23c666+_0x28f882(0x207));_0x402b13==null?(document['getElementById'](_0x28f882(0x127))[_0x28f882(0x20d)]=_0x746ae1,document[_0x28f882(0x142)](_0x28f882(0x175))['value']=_0x746ae1):(document[_0x28f882(0x142)]('textarea5')[_0x28f882(0x20d)]=_0x402b13,document['getElementById'](_0x28f882(0x175))[_0x28f882(0x20d)]=_0x402b13);const _0x29df6d=document[_0x28f882(0x142)](_0x28f882(0x127))['value'];copy(_0x29df6d);}function NOANSREC(_0x37ad22){const _0x58541d=_0xaf0a,_0x25fd50='Called\x20Contract\x20Holder\x20to\x20request\x20records.\x0dCalled\x20Contract\x20Holder\x20to\x20request\x20statement.\x0dNo\x20answer\x20–\x20left\x20voicemail.\x0dTasked\x20to\x20CS\x20callbacks.',_0x17b7c7=localStorage['getItem'](_0x37ad22+'EDIT');_0x17b7c7==null?(document[_0x58541d(0x142)]('textarea5')['value']=_0x25fd50,document['getElementById']('EDITarea')[_0x58541d(0x20d)]=_0x25fd50):(document[_0x58541d(0x142)](_0x58541d(0x127))['value']=_0x17b7c7,document[_0x58541d(0x142)](_0x58541d(0x175))[_0x58541d(0x20d)]=_0x17b7c7);const _0x25d313=document[_0x58541d(0x142)]('textarea5')['value'];copy(_0x25d313);}function INSPTEMP(_0x2f9df6){const _0x39c792=_0xaf0a;let _0x4f8b61=_0x39c792(0x15c);_0x4f8b61+=_0x39c792(0x215);const _0x2f8d0a=localStorage['getItem'](_0x2f9df6+_0x39c792(0x207));_0x2f8d0a==null?(document['getElementById'](_0x39c792(0x127))['value']=_0x4f8b61,document['getElementById'](_0x39c792(0x175))[_0x39c792(0x20d)]=_0x4f8b61):(document[_0x39c792(0x142)]('textarea5')[_0x39c792(0x20d)]=_0x2f8d0a,document['getElementById'](_0x39c792(0x175))[_0x39c792(0x20d)]=_0x2f8d0a);const _0x4b4e99=document[_0x39c792(0x142)](_0x39c792(0x127))[_0x39c792(0x20d)];copy(_0x4b4e99),checkOpen()&&ShowTemps();}function PTXFER(){const _0xdc4f0c=_0xaf0a,_0x11f24d=document['getElementById'](_0xdc4f0c(0x136));_0x11f24d[_0xdc4f0c(0x203)]['display']=_0xdc4f0c(0x1df);const _0x37b468=getContact('1'),_0x407d6d=getContact('0');document[_0xdc4f0c(0x142)](_0xdc4f0c(0x120))[_0xdc4f0c(0x20d)]=_0x407d6d,document[_0xdc4f0c(0x142)](_0xdc4f0c(0x188))[_0xdc4f0c(0x20d)]=_0x37b468,localStorage[_0xdc4f0c(0x143)]('PTpage','1'),document[_0xdc4f0c(0x142)]('quest1')[_0xdc4f0c(0x203)]['display']=_0xdc4f0c(0x19f),checkOpen()&&ShowTemps();}function ShowTemps(){const _0x3f7a3c=_0xaf0a,_0x6388d5=document['getElementById'](_0x3f7a3c(0x179));if(_0x6388d5[_0x3f7a3c(0x203)][_0x3f7a3c(0x220)]==_0x3f7a3c(0x1df)||checkOpen()){_0x6388d5[_0x3f7a3c(0x203)][_0x3f7a3c(0x220)]=_0x3f7a3c(0x17c);return;}_0x6388d5[_0x3f7a3c(0x203)]['display']=_0x3f7a3c(0x1df);}function advancePT(_0x5aab41){const _0x14f579=_0xaf0a,_0x1505c2=parseInt(localStorage['getItem'](_0x14f579(0x134))),_0x56a187=_0x5aab41[_0x14f579(0x125)](/(\d+)/),_0x2b5b5d=_0x56a187[0x0],_0x38bb6c=_0x14f579(0x18c)+_0x2b5b5d,_0x414840=parseInt(_0x2b5b5d)+0x1,_0x46e257='quest'+_0x414840;if(_0x5aab41==_0x14f579(0x1e8)||_0x5aab41==_0x14f579(0x1fb)){document['getElementById'](_0x14f579(0x1a1))['style']['display']='block',document[_0x14f579(0x142)](_0x14f579(0x197))[_0x14f579(0x203)][_0x14f579(0x220)]=_0x14f579(0x17c);return;}_0x5aab41==_0x14f579(0x191)&&(document['getElementById'](_0x14f579(0x1a1))[_0x14f579(0x203)]['display']=_0x14f579(0x17c));if(_0x5aab41=='yes11'){document[_0x14f579(0x142)](_0x14f579(0x129))['style'][_0x14f579(0x220)]=_0x14f579(0x19f),document['getElementById'](_0x14f579(0x14a))['style']['display']=_0x14f579(0x17c);return;}if(_0x5aab41=='no11'||_0x5aab41==_0x14f579(0x17a)){document['getElementById']('q11ansY')['style'][_0x14f579(0x220)]=_0x14f579(0x17c),submitTEMP();return;}localStorage[_0x14f579(0x143)](_0x14f579(0x134),_0x414840),document['getElementById'](_0x38bb6c)[_0x14f579(0x203)][_0x14f579(0x220)]=_0x14f579(0x17c),document[_0x14f579(0x142)](_0x46e257)[_0x14f579(0x203)][_0x14f579(0x220)]=_0x14f579(0x19f);}function backTEMP(){const _0x1f9553=_0xaf0a,_0x22d54a=localStorage['getItem']('PTpage');if(_0x22d54a=='1')return;const _0x261245=_0x1f9553(0x18c)+_0x22d54a,_0x36f53b=parseInt(_0x22d54a)-0x1,_0x322c5e='quest'+_0x36f53b;localStorage[_0x1f9553(0x143)]('PTpage',_0x36f53b),document['getElementById'](_0x1f9553(0x1a1))[_0x1f9553(0x203)][_0x1f9553(0x220)]=_0x1f9553(0x17c),document['getElementById'](_0x1f9553(0x129))['style'][_0x1f9553(0x220)]='none',document[_0x1f9553(0x142)](_0x261245)[_0x1f9553(0x203)][_0x1f9553(0x220)]=_0x1f9553(0x17c),document['getElementById'](_0x322c5e)[_0x1f9553(0x203)][_0x1f9553(0x220)]=_0x1f9553(0x19f);}function submitTEMP(){const _0x130402=_0xaf0a,_0x13bc8c=_0x130402(0x1aa),_0x1a0d7b='Has\x20the\x20Repair\x20Facility\x20ever\x20serviced\x20the\x20vehicle\x20before?\x20\x20\x20',_0x1b8bb1=_0x130402(0x21b),_0x44b9f9=_0x130402(0x1bb),_0x35c904=_0x130402(0x18b),_0x5091d0=_0x130402(0xe6),_0x3b5df9='Has\x20the\x20Repair\x20Facility\x27s\x20info\x20and\x20contact\x20info\x20been\x20verified?\x20\x20\x20',_0x34f9eb=_0x130402(0x118),_0x3f8035='Have\x20the\x20PT\x20claim\x20expectations\x20been\x20reviewed\x20with\x20the\x20Repair\x20Facility\x20contact?\x20\x20\x20',_0x523f9f='Have\x20you\x20provided\x20the\x20Repair\x20Facility\x20with\x20the\x20assigned\x20adjusters\x20name,\x20direct\x20extension,\x20and\x20e-mail?\x20\x20\x20',_0x245a66='Is\x20there\x20any\x20other\x20relevant\x20info\x20that\x20will\x20assist\x20the\x20adjuster?\x20\x20\x20',_0x3e553b=document[_0x130402(0x172)](_0x130402(0xed)),_0x41c18e=document[_0x130402(0x172)]('ans2'),_0x5dc71b=document['getElementsByName'](_0x130402(0x122)),_0x4f3034=document[_0x130402(0x172)](_0x130402(0x12d)),_0x3ed5ad=document[_0x130402(0x172)]('ans5'),_0x1e32f8=document['getElementsByName'](_0x130402(0xef)),_0x320a0f=document[_0x130402(0x172)](_0x130402(0x21a)),_0xa9aab7=document[_0x130402(0x172)]('ans8'),_0x3d47a9=document[_0x130402(0x172)](_0x130402(0x141)),_0x325bbc=document[_0x130402(0x172)](_0x130402(0x1c5)),_0x539264=document[_0x130402(0x172)]('ans11');let _0x4f3cc9,_0x1bad32,_0x37e4da,_0x2310bc,_0x5b9a14,_0x19a42a,_0x45c6dc,_0x1c1563,_0x516282,_0x4b0e5e,_0x15f453,_0x3a0a3c=[];for(i=0x0;i<_0x3e553b['length'];i++){_0x3e553b[i][_0x130402(0x1ea)]&&(_0x4f3cc9=_0x3e553b[i][_0x130402(0x20d)],_0x3a0a3c[_0x130402(0xe9)](_0x3e553b[i]));}for(i=0x0;i<_0x41c18e['length'];i++){_0x41c18e[i]['checked']&&(_0x1bad32=_0x41c18e[i]['value'],_0x3a0a3c[_0x130402(0xe9)](_0x41c18e[i]));}for(i=0x0;i<_0x5dc71b['length'];i++){_0x5dc71b[i][_0x130402(0x1ea)]&&(_0x37e4da=_0x5dc71b[i][_0x130402(0x20d)],_0x3a0a3c[_0x130402(0xe9)](_0x5dc71b[i]));}for(i=0x0;i<_0x4f3034[_0x130402(0x1fc)];i++){_0x4f3034[i][_0x130402(0x1ea)]&&(_0x2310bc=_0x4f3034[i][_0x130402(0x20d)],_0x3a0a3c[_0x130402(0xe9)](_0x4f3034[i]));}for(i=0x0;i<_0x3ed5ad[_0x130402(0x1fc)];i++){_0x3ed5ad[i]['checked']&&(_0x5b9a14=_0x3ed5ad[i][_0x130402(0x20d)],_0x3a0a3c[_0x130402(0xe9)](_0x3ed5ad[i]));}for(i=0x0;i<_0x1e32f8[_0x130402(0x1fc)];i++){_0x1e32f8[i][_0x130402(0x1ea)]&&(_0x19a42a=_0x1e32f8[i][_0x130402(0x20d)],_0x3a0a3c['push'](_0x1e32f8[i]));}for(i=0x0;i<_0x320a0f[_0x130402(0x1fc)];i++){_0x320a0f[i]['checked']&&(_0x45c6dc=_0x320a0f[i][_0x130402(0x20d)],_0x3a0a3c[_0x130402(0xe9)](_0x320a0f[i]));}for(i=0x0;i<_0xa9aab7[_0x130402(0x1fc)];i++){_0xa9aab7[i][_0x130402(0x1ea)]&&(_0x1c1563=_0xa9aab7[i][_0x130402(0x20d)],_0x3a0a3c[_0x130402(0xe9)](_0xa9aab7[i]));}for(i=0x0;i<_0x3d47a9['length'];i++){_0x3d47a9[i][_0x130402(0x1ea)]&&(_0x516282=_0x3d47a9[i][_0x130402(0x20d)],_0x3a0a3c[_0x130402(0xe9)](_0x3d47a9[i]));}for(i=0x0;i<_0x325bbc['length'];i++){_0x325bbc[i][_0x130402(0x1ea)]&&(_0x4b0e5e=_0x325bbc[i][_0x130402(0x20d)],_0x3a0a3c[_0x130402(0xe9)](_0x325bbc[i]));}for(i=0x0;i<_0x539264['length'];i++){_0x539264[i][_0x130402(0x1ea)]&&(_0x15f453=_0x539264[i][_0x130402(0x20d)],_0x3a0a3c[_0x130402(0xe9)](_0x539264[i]));}let _0x3c02e5=document[_0x130402(0x142)]('q11ansExplain')[_0x130402(0x20d)],_0x5ddfd1=document[_0x130402(0x142)](_0x130402(0x1c6))['value'];const _0x1c9236=_0x130402(0x1f5)+document['getElementById'](_0x130402(0x120))[_0x130402(0x20d)],_0x287b3c='Contact\x20Info:\x20'+document[_0x130402(0x142)](_0x130402(0x188))[_0x130402(0x20d)];for(i=0x0;i<_0x3a0a3c[_0x130402(0x1fc)];i++){_0x3a0a3c[i][_0x130402(0x1ea)]=![];}document[_0x130402(0x142)](_0x130402(0x127))[_0x130402(0x20d)]=_0x13bc8c+_0x4f3cc9+'\x0d'+_0x1a0d7b+_0x1bad32+'\x0d'+_0x1b8bb1+_0x37e4da+'\x0d';_0x37e4da!='YES'&&(document[_0x130402(0x142)](_0x130402(0x127))['value']+=_0x5ddfd1+'\x0d');document['getElementById'](_0x130402(0x127))[_0x130402(0x20d)]+=_0x44b9f9+_0x2310bc+'\x0d'+_0x35c904+_0x5b9a14+'\x0d'+_0x5091d0+_0x19a42a+'\x0d'+_0x3b5df9+_0x45c6dc+'\x0d'+_0x34f9eb+_0x1c1563+'\x0d'+_0x1c9236+'\x0d'+_0x287b3c+'\x0d'+_0x3f8035+_0x516282+'\x0d'+_0x523f9f+_0x4b0e5e+'\x0d'+_0x245a66+_0x15f453+'\x0d';_0x15f453==_0x130402(0x224)&&(document[_0x130402(0x142)](_0x130402(0x127))[_0x130402(0x20d)]+=_0x3c02e5);let _0x39ccca=document[_0x130402(0x142)](_0x130402(0x127))[_0x130402(0x20d)];copy(_0x39ccca),document[_0x130402(0x142)](_0x130402(0x1c6))[_0x130402(0x20d)]='',document[_0x130402(0x142)](_0x130402(0x1c7))[_0x130402(0x20d)]='',document['getElementById'](_0x130402(0x120))[_0x130402(0x20d)]='',document['getElementById'](_0x130402(0x188))[_0x130402(0x20d)]='';const _0x1b097e=document[_0x130402(0x142)](_0x130402(0x136));_0x1b097e['style'][_0x130402(0x220)]=_0x130402(0x17c);}function cancelPT(){const _0x4e7806=_0xaf0a,_0x73d352=document[_0x4e7806(0x142)](_0x4e7806(0x136));_0x73d352['style'][_0x4e7806(0x220)]=_0x4e7806(0x17c);const _0x257b50=document[_0x4e7806(0x1b5)]('ptQuest');for(const _0x204d66 of _0x257b50){_0x204d66[_0x4e7806(0x203)][_0x4e7806(0x220)]=_0x4e7806(0x17c);}const _0x4554f1=document['getElementsByClassName'](_0x4e7806(0x1d8));for(const _0x2d581b of _0x4554f1){_0x2d581b[_0x4e7806(0x1ea)]=![];}}function PICREQ(_0x34eb4f){const _0x4dd328=_0xaf0a,_0x2bffdd=_0x4dd328(0x21e),_0x2f1703=localStorage[_0x4dd328(0x1dc)](_0x34eb4f+'EDIT');_0x2f1703==null?(document['getElementById'](_0x4dd328(0x127))['value']=_0x2bffdd,document[_0x4dd328(0x142)](_0x4dd328(0x175))[_0x4dd328(0x20d)]=_0x2bffdd):(document[_0x4dd328(0x142)](_0x4dd328(0x127))[_0x4dd328(0x20d)]=_0x2f1703,document[_0x4dd328(0x142)](_0x4dd328(0x175))[_0x4dd328(0x20d)]=_0x2f1703);const _0x536ee3=document[_0x4dd328(0x142)]('textarea5')[_0x4dd328(0x20d)];copy(_0x536ee3);}function FLUIDLEAK(){const _0x56637f=_0xaf0a,_0x113047=document[_0x56637f(0x142)](_0x56637f(0x1cd));_0x113047[_0x56637f(0x203)][_0x56637f(0x220)]!=_0x56637f(0x17c)?(_0x113047[_0x56637f(0x203)][_0x56637f(0x220)]=_0x56637f(0x17c),document['getElementById'](_0x56637f(0x13c))[_0x56637f(0x1e5)]='$'):(_0x113047[_0x56637f(0x203)][_0x56637f(0x220)]=_0x56637f(0x1df),document[_0x56637f(0x142)](_0x56637f(0x13c))['textContent']='X');}function _0xaf0a(_0x15cf9e,_0xb52a2c){const _0x170bac=_0x170b();return _0xaf0a=function(_0xaf0ac6,_0x436e64){_0xaf0ac6=_0xaf0ac6-0xd7;let _0x52b813=_0x170bac[_0xaf0ac6];return _0x52b813;},_0xaf0a(_0x15cf9e,_0xb52a2c);}function CopyIntakeForm(_0x1d4b77){const _0x1aa8fb=_0xaf0a,_0x4200ab=document['getElementById'](_0x1aa8fb(0x1d2)),_0x4d4657=_0x4200ab[_0x1aa8fb(0x20d)][_0x1aa8fb(0x144)]('\x0a'),_0x40809f=parseInt(_0x1d4b77),_0x497a70=_0x4d4657['slice'](0x0,_0x40809f)['reduce']((_0x5acd18,_0x153676)=>_0x5acd18+_0x153676['length']+0x1,0x0),_0x327653=_0x497a70+_0x4d4657[_0x40809f][_0x1aa8fb(0x1fc)];_0x4200ab[_0x1aa8fb(0xf8)](),_0x4200ab[_0x1aa8fb(0x100)](_0x497a70,_0x327653);const _0x403357=window[_0x1aa8fb(0x17d)]();document['getElementById'](_0x1aa8fb(0x226))['value']=_0x403357;const _0x2fb253=document[_0x1aa8fb(0x142)](_0x1aa8fb(0x226))['value'],_0x5b9d0e=_0x2fb253[_0x1aa8fb(0x194)](0x9);document['getElementById']('textarea4')[_0x1aa8fb(0x20d)]=_0x5b9d0e[_0x1aa8fb(0x138)]();const _0x393067=document[_0x1aa8fb(0x142)](_0x1aa8fb(0x226))[_0x1aa8fb(0x20d)];copy(_0x393067);}function CopyForm(_0x1da593){const _0x215a7d=_0xaf0a,_0x3f60f4=document[_0x215a7d(0x142)](_0x1da593);_0x3f60f4[_0x215a7d(0x17b)](),document['execCommand'](_0x215a7d(0x1ec));}function FormToTA(){const _0x158f3e=_0xaf0a,_0x1c691b=document[_0x158f3e(0x142)](_0x158f3e(0xf6))[_0x158f3e(0x20d)],_0x4db8c5=document[_0x158f3e(0x142)](_0x158f3e(0x1ba))[_0x158f3e(0x20d)],_0x16a17e=document[_0x158f3e(0x142)]('rfprice')['value'],_0x5efbdb=document['getElementById'](_0x158f3e(0x161))[_0x158f3e(0x20d)],_0x4f4a32=document[_0x158f3e(0x142)](_0x158f3e(0x150));if(_0x5efbdb){const _0x424109=parseInt(_0x5efbdb);_0x4f4a32[_0x158f3e(0x20d)]+=_0x158f3e(0x182),_0x4f4a32[_0x158f3e(0x20d)]+=_0x1c691b+'\x0d',_0x4f4a32[_0x158f3e(0x20d)]+='Verified\x20OEM\x20PN:\x20',_0x4f4a32[_0x158f3e(0x20d)]+=_0x4db8c5+'\x0d',_0x4f4a32[_0x158f3e(0x20d)]+=_0x158f3e(0x1f9),_0x4f4a32[_0x158f3e(0x20d)]+=_0x5efbdb+'\x0d',_0x4f4a32[_0x158f3e(0x20d)]+='RF\x20Price:\x20',_0x4f4a32['value']+=_0x16a17e+'\x0d',_0x424109>0xfa?(_0x4f4a32[_0x158f3e(0x20d)]+=_0x158f3e(0x171),_0x4f4a32[_0x158f3e(0x202)]=_0x4f4a32['scrollHeight']):(_0x4f4a32[_0x158f3e(0x20d)]+='\x0d',_0x4f4a32[_0x158f3e(0x202)]=_0x4f4a32['scrollHeight']);}else _0x4f4a32[_0x158f3e(0x20d)]+=_0x158f3e(0x182),_0x4f4a32[_0x158f3e(0x20d)]+=_0x1c691b+'\x0d',_0x4f4a32[_0x158f3e(0x20d)]+='RF\x20AM\x20PN:\x20\x20',_0x4f4a32[_0x158f3e(0x20d)]+=_0x4db8c5+'\x0d',_0x4f4a32[_0x158f3e(0x20d)]+='RF\x20Price:\x20',_0x4f4a32[_0x158f3e(0x20d)]+=_0x16a17e+'\x0d',_0x4f4a32[_0x158f3e(0x20d)]+=_0x158f3e(0x171),_0x4f4a32[_0x158f3e(0x202)]=_0x4f4a32[_0x158f3e(0x114)];}function AnotherOne(){const _0xa4116f=_0xaf0a,_0x31947e=localStorage[_0xa4116f(0x1dc)](_0xa4116f(0x16e));let _0x56dadf=parseInt(_0x31947e);_0x56dadf<0x7&&(document[_0xa4116f(0x142)](_0xa4116f(0x14d)+_0x56dadf)[_0xa4116f(0x203)][_0xa4116f(0x220)]=_0xa4116f(0x1df),_0x56dadf++,localStorage[_0xa4116f(0x143)]('newpartcount',_0x56dadf));}function NextPart(){const _0x59265b=_0xaf0a,_0x1f177a=localStorage[_0x59265b(0x1dc)](_0x59265b(0x16e));let _0x25ad7b=parseInt(_0x1f177a);document['getElementById'](_0x59265b(0x1ba))['value']='',document[_0x59265b(0x142)](_0x59265b(0x184))[_0x59265b(0x20d)]='',document['getElementById']('msrp')['value']='',partMover=_0x25ad7b-0x1;for(let _0x2e9d59=0x1;_0x2e9d59<partMover;_0x2e9d59++){let _0x5e5a44=_0x2e9d59+0x1,_0x1fe5be=document[_0x59265b(0x142)](_0x59265b(0x14d)+_0x5e5a44),_0x50e1a1=document['getElementById'](_0x59265b(0x14d)+_0x2e9d59);_0x50e1a1['value']=_0x1fe5be[_0x59265b(0x20d)];}_0x25ad7b>0x2&&(_0x25ad7b=_0x25ad7b-0x1,document[_0x59265b(0x142)]('partname'+partMover)['value']='',document[_0x59265b(0x142)](_0x59265b(0x14d)+partMover)[_0x59265b(0x203)][_0x59265b(0x220)]=_0x59265b(0x17c),localStorage['setItem'](_0x59265b(0x16e),_0x25ad7b));}function SENDLABOR1(){const _0x59bee8=_0xaf0a,_0x196ac4=_0x59bee8(0x1fe),_0x507617=document[_0x59bee8(0x142)](_0x59bee8(0xf6))[_0x59bee8(0x20d)],_0x51ae4f=document['getElementById']('textarea2');_0x51ae4f[_0x59bee8(0x20d)]+=_0x59bee8(0x10e),_0x51ae4f['value']+=_0x507617+'\x0d',_0x51ae4f['value']+=_0x196ac4,_0x51ae4f['scrollTop']=_0x51ae4f[_0x59bee8(0x114)];}function SENDDIAG1(){const _0x53c39e=_0xaf0a,_0x329081='RF\x20Asking:\x20\x20\x20\x0dPD\x20Approved:\x20\x20\x20\x0d\x0d',_0x486f4b=document[_0x53c39e(0x142)]('partname1')[_0x53c39e(0x20d)],_0xef98e7=document[_0x53c39e(0x142)]('textarea2');_0xef98e7[_0x53c39e(0x20d)]+=_0x53c39e(0x1f0),_0xef98e7[_0x53c39e(0x20d)]+=_0x486f4b+'\x0d',_0xef98e7[_0x53c39e(0x20d)]+=_0x329081,_0xef98e7[_0x53c39e(0x202)]=_0xef98e7[_0x53c39e(0x114)];}function ClearIntake(){const _0x11431c=_0xaf0a;document['getElementById']('partname1')[_0x11431c(0x20d)]='',document[_0x11431c(0x142)]('partnum')[_0x11431c(0x20d)]='',document[_0x11431c(0x142)]('rfprice')[_0x11431c(0x20d)]='',document[_0x11431c(0x142)]('msrp')[_0x11431c(0x20d)]='';}function COPYNOTE(){const _0x3b47a7=_0xaf0a,_0x12e527=document['getElementById'](_0x3b47a7(0x150))[_0x3b47a7(0x20d)];copy(_0x12e527);}function toggleConductor(_0x3db468){const _0x186806=_0xaf0a,_0x36562b=document[_0x186806(0x214)]('[class$=\x22dispStat\x22]'),_0x49f39d=Array['from'](_0x36562b),_0x390f39=document['getElementById'](_0x3db468);if(_0x3db468=='s9'){for(i=0x0;i<_0x49f39d['length'];i++){const _0x36cb8b=_0x49f39d[i],_0x26b9b3=_0x49f39d[i]['id'];_0x390f39[_0x186806(0x1ea)]==!![]?(_0x36cb8b['style'][_0x186806(0x220)]=_0x186806(0x1df),localStorage[_0x186806(0x143)](_0x26b9b3+_0x186806(0x157),_0x186806(0x1df)),localStorage[_0x186806(0x143)]('allBTN',_0x186806(0x1df))):(_0x36cb8b[_0x186806(0x203)][_0x186806(0x220)]='none',localStorage['setItem'](_0x26b9b3+_0x186806(0x157),_0x186806(0x17c)),localStorage[_0x186806(0x143)](_0x186806(0x1d6),_0x186806(0x17c)));}return;}else{const _0x518a2c=document['getElementsByClassName'](_0x3db468+'dispStat'),_0xba3e15=_0x518a2c[0x0],_0x5058d4=_0x518a2c[0x0]['id'];_0x390f39[_0x186806(0x1ea)]==!![]?(_0xba3e15[_0x186806(0x203)][_0x186806(0x220)]=_0x186806(0x1df),localStorage[_0x186806(0x143)](_0x5058d4+_0x186806(0x157),_0x186806(0x1df))):(_0xba3e15['style'][_0x186806(0x220)]=_0x186806(0x17c),localStorage[_0x186806(0x143)](_0x5058d4+'SHOW',_0x186806(0x17c)));}}window[_0x5e8b9c(0xf1)]=function PutItBack(){const _0x52835e=_0x5e8b9c,_0x3ed97d=localStorage[_0x52835e(0x1dc)](_0x52835e(0x196));if(_0x3ed97d===_0x52835e(0x1ef))document['getElementById'](_0x52835e(0x1af))['checked']=!![];else(_0x3ed97d===_0x52835e(0x19e)||_0x3ed97d==null)&&(document['getElementById']('newauthSelect')['checked']=![]);localStorage['setItem'](_0x52835e(0x111),_0x52835e(0x1ff));const _0x378d9b=_0x52835e(0x212),_0x2838d6=document['getElementById'](_0x378d9b),_0x460db9=localStorage['getItem']('Im\x20The\x20Boss');localStorage[_0x52835e(0x143)](_0x52835e(0x12a),_0x52835e(0x218)),localStorage['setItem'](_0x52835e(0x165),_0x52835e(0x218)),localStorage['setItem'](_0x52835e(0x16e),'2'),localStorage[_0x52835e(0x143)](_0x52835e(0x1b3),0x0),localStorage[_0x52835e(0x143)](_0x52835e(0x108),0x0);_0x460db9==null&&(localStorage[_0x52835e(0x143)]('Im\x20The\x20Boss',_0x52835e(0x1dd)),localStorage[_0x52835e(0x143)](_0x378d9b+_0x52835e(0x1e4),'0'),localStorage[_0x52835e(0x143)](_0x378d9b+_0x52835e(0xd8),'0'),localStorage[_0x52835e(0x143)](_0x378d9b+_0x52835e(0x145),'0'),localStorage[_0x52835e(0x143)](_0x378d9b+_0x52835e(0x1c2),'0'),localStorage[_0x52835e(0x143)](_0x378d9b+_0x52835e(0x130),'0'),localStorage[_0x52835e(0x143)](_0x378d9b+_0x52835e(0x1ad),'0'));const _0x6e56f2=localStorage[_0x52835e(0x1dc)](_0x378d9b+_0x52835e(0x1ad)),_0x41a996=parseInt(_0x6e56f2);for(i=0x0;i<_0x41a996;i++){const _0x27da37=i['toString'](),_0x5b955b=_0x52835e(0x1a9)+_0x27da37,_0xf01366=localStorage[_0x52835e(0x1dc)](_0x5b955b),_0x3398af=_0x52835e(0x1bd)+_0x27da37,_0x5f2b8c=document['getElementById'](_0x5b955b);_0x5f2b8c['id']=_0xf01366;}for(i=0x0;i<0xa;i++){const _0xceeb56=i[_0x52835e(0x11e)](),_0x22733d=_0x52835e(0x1bd)+_0xceeb56,_0x5931fa=localStorage['getItem'](_0x22733d+_0x52835e(0x157));_0x5931fa==null&&localStorage['setItem'](_0x22733d+'SHOW','none');}const _0x1db021=document[_0x52835e(0x214)]('*[id]'),_0x4e0a73=Array[_0x52835e(0x13e)](_0x1db021);for(i=0x0;i<_0x4e0a73[_0x52835e(0x1fc)];i++){const _0x4b9d67=_0x4e0a73[i]['id'],_0x269cc2=document[_0x52835e(0x142)](_0x4b9d67);if(localStorage[_0x52835e(0x1dc)](_0x4b9d67+_0x52835e(0x10c))!=null){const _0x59a3fe=localStorage['getItem'](_0x4b9d67+_0x52835e(0x10c));_0x269cc2[_0x52835e(0x203)][_0x52835e(0x18e)]=_0x59a3fe;}if(localStorage['getItem'](_0x4b9d67+_0x52835e(0x1f7))!=null){const _0x58a648=localStorage[_0x52835e(0x1dc)](_0x4b9d67+_0x52835e(0x1f7)),_0x21c0ba=localStorage[_0x52835e(0x1dc)](_0x4b9d67+_0x52835e(0x102));_0x269cc2[_0x52835e(0x203)]['left']=_0x21c0ba,_0x269cc2[_0x52835e(0x203)][_0x52835e(0x1f7)]=_0x58a648;}if(localStorage[_0x52835e(0x1dc)](_0x4b9d67+_0x52835e(0x1a6))!=null){const _0x592bd2=localStorage[_0x52835e(0x1dc)](_0x4b9d67+_0x52835e(0x1a6)),_0x32a053=localStorage[_0x52835e(0x1dc)](_0x4b9d67+_0x52835e(0x201));_0x269cc2['style'][_0x52835e(0x115)]=_0x592bd2,_0x269cc2[_0x52835e(0x203)][_0x52835e(0x14b)]=_0x32a053;}if(localStorage[_0x52835e(0x1dc)](_0x4b9d67+_0x52835e(0x1da))!=null){const _0x1d1a47=localStorage[_0x52835e(0x1dc)](_0x4b9d67+_0x52835e(0x1da));_0x269cc2[_0x52835e(0x1d4)]=_0x1d1a47;}}const _0xb2f0ef=document['querySelectorAll'](_0x52835e(0xf9)),_0x47224b=Array['from'](_0xb2f0ef);for(i=0x0;i<_0x47224b['length'];i++){const _0x162ab2=_0x47224b[i]['id'],_0x206e89=document['getElementById'](_0x162ab2),_0x25e644=_0x206e89['className'],_0x14eb50=_0x25e644[_0x52835e(0x101)](-0xa,0x2),_0xe8ff8d=document[_0x52835e(0x142)](_0x14eb50),_0x1cdaac=_0x206e89[_0x52835e(0x203)][_0x52835e(0x220)],_0x94ac95=localStorage['getItem'](_0x162ab2+_0x52835e(0x157));_0x94ac95==null||_0x94ac95==_0x52835e(0x1df)?(_0xe8ff8d['checked']=!![],_0x206e89[_0x52835e(0x203)][_0x52835e(0x220)]=_0x52835e(0x1df)):(_0xe8ff8d[_0x52835e(0x1ea)]=![],_0x206e89['style'][_0x52835e(0x220)]=_0x52835e(0x17c));}const _0x1a3444=localStorage[_0x52835e(0x1dc)](_0x52835e(0x1d6)),_0x119df6=document[_0x52835e(0x142)]('s9');_0x1a3444==_0x52835e(0x1df)||_0x1a3444==null?_0x119df6[_0x52835e(0x1ea)]=!![]:_0x119df6[_0x52835e(0x1ea)]=![];localStorage['setItem']('pageNum','0'),resetColors(),trackerBlank();const _0x530f13=_0x52835e(0x19a);localStorage[_0x52835e(0x143)](_0x52835e(0x15a),_0x530f13),localStorage[_0x52835e(0x143)](_0x52835e(0x159),'2'),localStorage[_0x52835e(0x143)](_0x52835e(0x177),'1'),localStorage['setItem']('countLefts','0'),modePT();};function trackerBlank(){const _0x1ada18=_0x5e8b9c,_0x1d9d9a=[];localStorage[_0x1ada18(0x143)]('recordArr',JSON[_0x1ada18(0x1a7)](_0x1d9d9a));const _0xf96078=[];localStorage[_0x1ada18(0x143)](_0x1ada18(0x154),JSON[_0x1ada18(0x1a7)](_0xf96078)),localStorage[_0x1ada18(0x143)](_0x1ada18(0x1b4),'0'),localStorage[_0x1ada18(0x143)](_0x1ada18(0x1eb),'0'),localStorage[_0x1ada18(0x219)](_0x1ada18(0x164)),localStorage[_0x1ada18(0x219)](_0x1ada18(0x17e)),localStorage['removeItem'](_0x1ada18(0x11a)),localStorage[_0x1ada18(0x219)]('rec1Rcrdspot'),localStorage[_0x1ada18(0x219)](_0x1ada18(0x217)),localStorage[_0x1ada18(0x219)](_0x1ada18(0x1f3)),localStorage['removeItem']('rec4Rcrdspot'),localStorage[_0x1ada18(0x219)](_0x1ada18(0x163)),localStorage[_0x1ada18(0x219)]('InceptionMiles'),localStorage['removeItem']('InceptionDate'),localStorage['removeItem'](_0x1ada18(0x13a)),localStorage[_0x1ada18(0x219)](_0x1ada18(0x110)),localStorage[_0x1ada18(0x219)](_0x1ada18(0x1ca)),localStorage[_0x1ada18(0x219)](_0x1ada18(0x18a)),localStorage['setItem'](_0x1ada18(0x1cb),_0x1ada18(0x218));}function openNav(){const _0x32b7c4=_0x5e8b9c;if(checkOpen())return;document[_0x32b7c4(0x142)](_0x32b7c4(0x1ab))[_0x32b7c4(0x1c0)]['add'](_0x32b7c4(0xe7));}function closeNav(){const _0x2dffa8=_0x5e8b9c;document[_0x2dffa8(0x142)](_0x2dffa8(0x1ab))['classList'][_0x2dffa8(0x168)]('open_nav');}function opentransAuth(){const _0x1930e5=_0x5e8b9c;if(checkOpen())return;document[_0x1930e5(0x142)](_0x1930e5(0x1ae))['classList'][_0x1930e5(0x176)]('trsnActive'),document[_0x1930e5(0x142)](_0x1930e5(0x20a))[_0x1930e5(0x1c0)][_0x1930e5(0x176)](_0x1930e5(0x10d));}function closetransAuth(){const _0x38bf6c=_0x5e8b9c;document[_0x38bf6c(0x142)](_0x38bf6c(0x1ae))[_0x38bf6c(0x1c0)][_0x38bf6c(0x168)]('trsnActive'),document[_0x38bf6c(0x142)]('module_trans_7')['classList'][_0x38bf6c(0x168)](_0x38bf6c(0x10d)),document[_0x38bf6c(0x142)](_0x38bf6c(0x185))[_0x38bf6c(0x1c0)][_0x38bf6c(0x168)](_0x38bf6c(0x10d));}function closeUpdate(){const _0x2b6be2=_0x5e8b9c;document['getElementById']('updated')[_0x2b6be2(0x203)]['display']=_0x2b6be2(0x17c),localStorage[_0x2b6be2(0x143)](_0x2b6be2(0x19d),_0x2b6be2(0x160));}function ringDeny(){const _0x264e0d=_0x5e8b9c;let _0x36dd0d='After\x20review\x20of\x20borescope\x20provided\x20photos,\x20there\x20are\x20obvious\x20signs\x20of\x20excessive\x20carbon.\x0dThis\x20carbon\x20is\x20a\x20biproduct\x20of\x20a\x20fuel/spark\x20related\x20issue.\x0d';_0x36dd0d+=_0x264e0d(0x208),_0x36dd0d+=_0x264e0d(0x187),_0x36dd0d+=_0x264e0d(0x1a5),_0x36dd0d+='17.\x20BREAKDOWNS\x20resulting\x20from\x20engine\x20sludge,\x20carbon,\x20pre-ignition,\x20detonation,\x20varnish,\x20corrosion,\x20foreign\x20objects,\x20dirt,\x20dust,\x20liquid,\x20cracked\x20rubber\x20and/or\x20neoprene\x20parts,\x20dry-rot,\x20road\x20chemicals,\x20lack\x20of\x20proper\x20fluids\x20or\x20use\x20of\x20additives\x20or\x20fuel\x20grades\x20not\x20recommended\x20by\x20the\x20manufacturer.',copy(_0x36dd0d);}
+//Restricted Use License
+//
+//This code is provided under the following terms and conditions:
+//
+//1. You are not allowed to use, copy, modify, merge, publish, distribute, sublicense, or sell copies of this code in any form, modified or unmodified, without express written permission from the author.
+//
+//2. You are not allowed to use this code for any illegal or unethical purpose.
+//
+//3. This license applies to all versions of the code previously released, as well as all future versions. Any prior statements made about permission given are hereby revoked.
+//
+//4. This code is provided "as is", without warranty of any kind, express or implied. The author shall not be liable for any damages arising from the use of this code.
+//
+//By using this code, you agree to abide by these terms and conditions. Failure to comply with these terms may result in legal action.
+//
+//For inquiries regarding licensing or permission to use this code in ways not covered by this license, please contact the author at adjusterconsole@gmail.com.
+
+function setVer() {
+  const buttons = document.querySelectorAll('button');
+  const intakeboxes = document.getElementsByClassName('intakeboxes');
+
+  const currentVer = localStorage.getItem('currentVer');
+  if (currentVer === '1') {
+    localStorage.setItem('currentVer', '2');
+    document.getElementById('swapper').innerText = 'Neumorphic';
+    document.getElementById('textarea2').classList.add('origText');
+    document.getElementById('textarea1').classList.add('origText');
+    document.getElementById('sizeEdit').classList.add('orig');
+    document.getElementById('disEdit').classList.add('orig');
+
+    for(let i = 0; i < buttons.length; i++) {
+      buttons[i].classList.add('orig');
+    }
+    for(let i = 0; i < intakeboxes.length; i++) {
+      intakeboxes[i].classList.add('origText');
+    }
+    return;
+  } else if (currentVer == '2') {
+    localStorage.setItem('currentVer', '1');
+    document.getElementById('swapper').innerText = 'Original';
+    document.getElementById('textarea2').classList.remove('origText');
+    document.getElementById('textarea1').classList.remove('origText');
+    document.getElementById('sizeEdit').classList.remove('orig');
+    document.getElementById('disEdit').classList.remove('orig');
+    for(let i = 0; i < buttons.length; i++) {
+      buttons[i].classList.remove('orig');
+    }
+    for(let i = 0; i < intakeboxes.length; i++) {
+      intakeboxes[i].classList.remove('origText');
+    }
+    return;
+  } else {
+    localStorage.setItem('currentVer', '1');
+    setVer();
+  }
+}
+
+function removeBlankLines(text) { 
+   return text.replace(/^\s*$/gm, ''); 
+}
+
+function shadMaker() {
+  window.location.href = "shadowGen/shadIndex.html";
+}
+
+function checkOpen() {
+  if (!document.getElementById("fileUploaderDiv").classList.contains('hideFile')) return true;
+  const elements = [
+    document.getElementById("TPDiv"),
+    document.getElementById("statNote"),
+    document.getElementById("Snippings"),
+    document.getElementById("RFIBDH"),
+    document.getElementById("RFIBND"),
+    document.getElementById("TGAFOBTN"),
+    document.getElementById("TGAFOABTN"),
+    document.getElementById("TGAFSABTN"),
+    document.getElementById("TGAFOSABTN"),
+    document.getElementById("auth_module"),
+    document.getElementById("resrcDiv"),
+  ];
+  return elements.some(el => el.style.display === "inline-block");
+}
+
+function getContact(whichInfo) {
+  const whichOne = parseInt(whichInfo);
+  const textarea = document.getElementById('textarea1');
+  const lines = textarea.value.split('\n');
+  const start = lines.slice(0, whichOne).reduce((acc, curr) => acc + curr.length + 1, 0);
+  const end = start + lines[whichOne].length;
+  textarea.focus();
+  textarea.setSelectionRange(start, end);
+  const tempStr = textarea.value.substring(start, end).trim();
+  return tempStr.slice(9).trim();
+}
+
+function MENU() {
+  const theMenu = document.getElementById("LOCK1");
+  const BtnBuilder = document.getElementById("BtnBuilder");
+  const appearance = document.getElementById("appearance");
+  const menuOpen = localStorage.getItem("menuOpen");
+
+  if (menuOpen === 'false') {
+    theMenu.innerText = "\u2666 Close \u2666";
+    appearance.style.top = "45px";
+    appearance.style.opacity = '1';
+    BtnBuilder.style.top = "70px";
+    BtnBuilder.style.opacity = '1';
+    localStorage.setItem("menuOpen", "true");
+    return;
+  } else if (menuOpen === 'true') {
+    BtnBuilder.style.top = "20px";
+    BtnBuilder.style.opacity = '0';
+    appearance.style.top = "20px";
+    appearance.style.opacity = '0';
+    theMenu.innerText = "\u2666 Settings \u2666";
+    localStorage.setItem("menuOpen", "false");
+    return;
+  }
+  localStorage.setItem("menuOpen", "false");
+  MENU();
+}
+
+function transAuth() {
+  document.getElementById("module_trans_backing").classList.add("trsnActive");
+  localStorage.setItem('transauthPage', '1');
+  localStorage.removeItem("Diag");
+}
+
+function showtransOop() {
+  document.getElementById("module_trans_8qdiv").classList.remove("invisible");
+  document.getElementById("module_trans_8adiv").classList.remove("invisible");
+}
+
+function hidetransOop() {
+  document.getElementById("module_trans_8qdiv").classList.add("invisible");
+  document.getElementById("module_trans_8adiv").classList.add("invisible");
+}
+
+function requestorNo(x) {
+  if (x === 'y') {
+    if (document.getElementById("trans_ans3d").checked) {
+      document.getElementById("trans_ans3d").checked = false;
+    }
+  }
+  if (x === 'n') {
+    if (document.getElementById("trans_ans3c").checked) {
+      document.getElementById("trans_ans3c").checked = false;
+    }
+    if (document.getElementById("trans_ans3b").checked) {
+      document.getElementById("trans_ans3b").checked = false;
+    }
+    if (document.getElementById("trans_ans3a").checked) {
+      document.getElementById("trans_ans3a").checked = false;
+    }
+  }
+}
+
+function uncheck_All() {
+  const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+  checkboxes.forEach(function(checkbox) {
+    checkbox.checked = false;
+  });
+
+  const radios = document.querySelectorAll('input[type="radio"]');
+    radios.forEach(function(radio) {
+    radio.checked = false;
+  });
+
+  const trans_ansNum = document.getElementsByName("ftrans_ansNum");
+  trans_ansNum.forEach(function(inputNumber) {
+    inputNumber.value = '';
+  });
+  const authMode = localStorage.getItem('authMode');
+  if (authMode === 'newAuth') { 
+    document.getElementById('newauthSelect').checked = true;
+  } else {
+    document.getElementById('newauthSelect').checked = false;
+  }
+}
+
+function noncovcomp(x) {
+  if (x === 'y') {
+    if (document.getElementById("trans_ans8g").checked) {
+      document.getElementById("trans_ans8g").checked = false;
+    }
+  }
+  if (x === 'n') {
+    if (document.getElementById("trans_ans8e").checked) {
+      document.getElementById("trans_ans8e").checked = false;
+    }
+    if (document.getElementById("trans_ans8f").checked) {
+      document.getElementById("trans_ans8f").checked = false;
+    }
+  }
+}
+
+function saveDiag(property,id) {
+  let Diag = JSON.parse(localStorage.getItem('Diag'));
+  const totalspark = document.getElementById("totalspark");
+  if (!Diag) {
+    Diag = {
+      trans: false,
+      diag: false,
+      flush: false,
+      press: false,
+      pan: false,
+      pull: false,
+      data: false,
+      spark: 0,
+      point: false
+    };
+  }
+  if (property === 'sparkplus') {
+    Diag.spark += 1;
+    totalspark.innerHTML = Diag.spark;
+  } else if (property === 'sparkminus' && Diag.spark > 0) {
+    Diag.spark -= 1;
+    totalspark.innerHTML = Diag.spark;
+  } else if (property && property !== 'next') {
+    if (Diag.hasOwnProperty(property) && Diag[property] === false) {
+      Diag[property] = true;
+      var elem = document.getElementById(id);
+      elem.innerHTML = "Del";
+      elem.classList.add("butswap");
+    } else if (Diag.hasOwnProperty(property) && Diag[property] === true) {
+      Diag[property] = false;
+      var elem = document.getElementById(id);
+      elem.innerHTML = "Add";
+      elem.classList.remove("butswap");
+    }
+  }
+  localStorage.setItem('Diag', JSON.stringify(Diag));
+  if (property === 'next') {
+    const transauthPage = localStorage.getItem('transauthPage');
+    if (transauthPage === '1') {
+      document.getElementById('module_trans_1').classList.remove('trsnActive');
+      document.getElementById('module_trans_4').classList.add('trsnActive');
+      localStorage.setItem('transauthPage', '2');
+    } else if (transauthPage === '2') {
+      document.getElementById('module_trans_4').classList.remove('trsnActive');
+      document.getElementById('module_trans_7').classList.add('trsnActive');
+      localStorage.setItem('transauthPage', '3');
+    } else if (transauthPage === '3') {
+      finishtransAuth();
+      return;
+    }
+  }
+  if (property === 'back') {
+    const transauthPage = localStorage.getItem('transauthPage');
+    if (transauthPage === '3') {
+      document.getElementById('module_trans_7').classList.remove('trsnActive');
+      document.getElementById('module_trans_4').classList.add('trsnActive');
+      localStorage.setItem('transauthPage', '2');
+    } else if (transauthPage === '2') {
+      document.getElementById('module_trans_4').classList.remove('trsnActive');
+      document.getElementById('module_trans_1').classList.add('trsnActive');
+      localStorage.setItem('transauthPage', '1');
+    } else if (transauthPage === '1') {
+      return;
+    }
+  }
+  if (property === 'cancel') {
+    uncheck_All();
+    document.getElementById('module_trans_7').classList.remove('trsnActive');
+    document.getElementById('module_trans_4').classList.remove('trsnActive');
+    document.getElementById('module_trans_1').classList.add('trsnActive');
+    document.getElementById("module_trans_backing").classList.remove("trsnActive");
+    return;
+  }
+}
+
+function finishtransAuth() {
+  const rfName = getContact('0');
+  let isDiag = false;
+  let isDiag2 = false;
+  let addOn = false;
+  let addOnrec = false;
+  let Diag = JSON.parse(localStorage.getItem('Diag'));
+  for (let property in Diag) {
+    if (property !== 'trans' && property !== 'diag' && property !== 'flush') {
+      if ((property !== 'spark' && Diag[property] === true) || (property === 'spark' && Diag[property] > 0)) {
+        isDiag = true;
+        isDiag2 = true;
+      }
+    }
+  }
+  const transLabor = document.getElementById("trans_ans4a").value;
+  const diagLabor = document.getElementById("trans_ans4b").value;
+  const flushLabor = document.getElementById("trans_ans4c").value;
+  const trans_Ans_1 = document.querySelector('input[name="trans_ans1"]:checked');
+  const trans_Ans_2 = document.querySelector('input[name="trans_ans2"]:checked');
+  const cost = parseInt(document.getElementById("trans_ans4").value);
+  const trans_ans7 = document.getElementById("trans_ans7").value;
+  const testElec = .3 * Diag.spark;
+  const propertyStrings = {
+    trans: "Pro Demand shows " + transLabor + " hours to R/R transmission.\r",
+    diag: "Pro Demand shows " +  diagLabor + " hours for diagnostics.\r",
+    flush: "Pro Demand shows " +  flushLabor + " hours to the flush the cooler.\r",
+    press: ".X for line pressure test ",
+    pan: ".X for pan drop ",
+    pull: ".3 for code pull ",
+    data: ".2 for data monitoring ",
+    spark: " Electrical tests: " + Diag.spark + " @ .3 each is " + Math.round(testElec) + " ",
+    point: ".4 for pinpoint test. "
+    };
+  const transAuth1 = "No inspection needed as the Repair Facility diagnostic matches Contract Holder concern.\rThe repair Facility sent supporting photos showing excessive metal debris present.";
+  const transAuth2 = "An inspection was sent to verify failures.\rI have reviewed report and inspection photos.\rThe inspection review note is completed.";
+  const transAuth3 = "Requested and reviewed photos from Repair Facility.\rPhoto review note is completed.";
+  const recordsTrans1 = "No records requested as history will not change claim decision.\rVehicle is not in waiting period. No prior related claims.\rNo recalls, TSBs, or unresolved mileage concerns.\rContract Holder is in sequence " + trans_ans7 + ".";
+  const recordsTrans2 = "Requested and reviewed records and statement.\rRecord review note is completed.";
+  const requestedTrans1 = "After reviewing all relevant documentation, we are moving forward with verified failures.";
+  const beenVerified = "Verified labor, fluid type, and capacities in ProDemand.\r";
+  const oopcsTrans1 = "Need to review OOPC of $";
+  const oopcsTrans1a = "Need to review OOPC when OOPC is determined";
+  const oopcsTrans2a = " with Contract Holder.";
+  const oopcsTrans2b = " and shipping option with Contract Holder.";
+  const oopcsTrans2c = "OOPC is due to differences in ";
+  const oopcsTrans3 = "Need to review shipping option with Contract Holder.";
+  const oopcsTrans3a = "Have not given authorization info to the Repair Facility at this time.";
+  const oopcsTrans4 = "Contract Holder has no OOPC besides deductible.";
+  const oopcsTrans4a = "Gave authorization info and payment instructions to ";
+  const noncovTrans1 = "Will inform Contract Holder of non-covered components";
+  const noncovTrans2 = "There were denied items on this claim.\rReview denial note for more details";
+  let outputString = "Verified internal failure to the transmission using the Repair Facility supplied diagnostic and photos.\rThe transmission has coverage under the terms of the contract.\rVerified OEM parts using Forte and AM parts using PA.\rUsed in-house sourcing to determine the MCE option.\rThe MCE option is a ";
+
+  if (trans_Ans_1.value === null) {
+    uncheck_All();
+    return;
+  }
+  outputString += trans_Ans_1.value + " unit from " + trans_Ans_2.value + " for $" + cost.toFixed(2) + ".\r" + beenVerified;
+  for (let property in Diag) {
+    if (Diag.hasOwnProperty(property)) {
+      if ((property !== 'spark' && Diag[property] === true) || (property === 'spark' && Diag[property] > 0)) {
+        outputString += propertyStrings[property];
+        if (isDiag && property === 'flush') {
+          outputString += "Diag completed: ";
+          isDiag = false;
+        }
+      }
+    }
+  }
+  if (isDiag2) {
+    outputString += "\r";
+  }
+  if (document.getElementById("trans_ans3d").checked == true) {
+    outputString += transAuth1 + "\r" + recordsTrans1 + "\r";
+  } 
+  if (document.getElementById("trans_ans3a").checked == true) {
+    outputString += transAuth2 + "\r";
+    addOn = true;
+    addOnrec = true;
+  } 
+  if (document.getElementById("trans_ans3b").checked == true) {
+    outputString += transAuth3 + "\r";
+    addOn = true;
+    addOnrec = true;
+  } 
+  if (document.getElementById("trans_ans3c").checked == true) {
+    outputString += recordsTrans2 + "\r";
+    addOn = true;
+  } 
+  if(addOnrec) {
+    outputString += recordsTrans1 + "\r";
+  }
+  if(addOn) {
+    outputString += requestedTrans1 + "\r";
+  }
+  const trans_ans9a = document.getElementById("trans_ans9a");
+  if (!trans_ans9a.checked) {
+    if (document.getElementById("trans_ans8d").checked) {
+      outputString += oopcsTrans4 + "\r" + oopcsTrans4a + rfName + "\r";
+    } else if (document.getElementById("trans_ans8b").checked) {
+      outputString += oopcsTrans3 + "\r" + oopcsTrans3a + "\r";
+    } else if (document.getElementById("trans_ans8a").checked || document.getElementById("trans_ans8c").checked) {
+      const oopcCausep = document.getElementById("trans_ans8h");
+      const oopcCausel = document.getElementById("trans_ans8i");
+      const oopcCauseb = document.getElementById("trans_ans8j");
+      const oopcAmt1 = document.getElementById("trans_ans8k").value;
+      const num = parseFloat(oopcAmt1);
+      if (isNaN(num)) {
+        alert("Please enter a valid amount for OOPC");
+        return;
+      }
+      const oopcAmt2 = num.toFixed(2);
+      const oopcAmt = oopcAmt2.toString();
+      let oopcCausedBy;
+      if (oopcCauseb.checked) { oopcCausedBy = "parts and labor."; }
+      if (oopcCausel.checked) { oopcCausedBy = "labor."; }
+      if (oopcCausep.checked) { oopcCausedBy = "parts."; }
+      outputString += oopcsTrans1 + oopcAmt;
+      outputString += (document.getElementById("trans_ans8c").checked ? oopcsTrans2b : oopcsTrans2a) + "\r";
+      outputString += oopcsTrans2c + oopcCausedBy + "\r" + oopcsTrans3a + "\r";
+      document.getElementById("trans_ans8a").checked = false;
+      document.getElementById("trans_ans8c").checked = false;
+    }
+  }
+  if (document.getElementById("trans_ans8a").checked || document.getElementById("trans_ans8c").checked) {
+    if (trans_ans9a.checked) {
+      outputString += oopcsTrans1a;
+    }
+  }
+  trans_ans9a.checked = false;
+  document.getElementById("trans_ans8a").checked = false;
+  document.getElementById("trans_ans8c").checked = false;
+  const noncovComps = document.getElementById("trans_ans8e");
+  if (noncovComps.checked) {
+    outputString += noncovAuth1 + "\r";
+    noncovComps.checked = false;     
+  }
+  const deniedComps = document.getElementById("trans_ans8f");
+  if (deniedComps.checked) {
+    outputString += noncovAuth2;
+    deniedComps.checked = false;
+  }
+  copy(outputString);
+  document.getElementById("module_trans_backing").classList.remove("trsnActive");
+  uncheck_All();
+  return;
+}
+
+function STMTTEMP() {
+  const statement = document.getElementById("statement");
+  if (statement.style.display == "none") {
+    statement.style.display = "initial";
+    localStorage.setItem("statePage", "1");
+    let mode = localStorage.getItem("mode");
+    if(checkOpen()) {
+      ShowTemps();
+    }
+  } else {
+    return;
+  }
+}
+
+function cancelState() {
+  const stmttempta = document.getElementsByClassName("stmt_temp_ta");
+  for (i = 0; i < stmttempta.length; i++) {
+    stmttempta[i].value = "";
+  }
+  const stmt_temp_rad = document.getElementsByClassName("stmt_temp_rad");
+  for (i = 0; i < stmt_temp_rad.length; i++) {
+    stmt_temp_rad[i].checked = false;
+  }
+  document.getElementById("time_owned").value = "";
+  document.getElementById("time_unit").value = "";
+  document.getElementById("approx_mile").value = "";
+  document.getElementById("state13").style.display = "none";
+  document.getElementById("state1").style.display = "inherit";
+  document.getElementById("statement").style.display = "none";
+  const chState_div = document.getElementsByClassName("chState_div");
+  for (i = 0; i < chState_div.length; i++) {
+    chState_div[i].style.display = "none";  
+  }
+  document.getElementById("state1").style.display = "inherit";
+  document.getElementById("statement").style.display = "none";
+}
+
+function advanceState(btnId) {
+  const page = parseInt(localStorage.getItem("statePage"));
+  const pageId = "state" + page;
+  let nextPage = page + 1;
+  let nextPageId;
+  
+  if (btnId == "chno3" || btnId == "chno5" || btnId == "chno7" || btnId == "chno11") {
+    nextPage = page + 2;
+  }
+  if (nextPage == "3" || nextPage == "5" || nextPage == "7" || nextPage == "11") {
+    document.getElementById("advanceState").style.display = "none";
+  }
+  if (nextPage == "4" || nextPage == "6" || nextPage == "8" || nextPage == "9" || nextPage == "12" || nextPage == "13") {
+    document.getElementById("advanceState").style.display = "inline-block";
+  }
+  console.log(page, nextPage);
+  if (nextPage > 13) {
+    stateFinish();
+    return;
+  }
+  nextPageId = "state" + nextPage;
+  console.log(nextPageId);
+  document.getElementById(pageId).style.display = "none";
+  document.getElementById(nextPageId).style.display = "inherit";
+  localStorage.setItem("statePage", nextPage);
+}
+
+function backState() {
+  const page = localStorage.getItem("statePage");
+  if (page == "1") { return; }
+  const pageId = "state" + page;
+  let pageInt = parseInt(page);
+  if (pageInt == 13 || pageInt == 9 || pageInt == 7 || pageInt == 5) {
+    pageInt = pageInt - 2;
+  } else {
+    pageInt = pageInt - 1;
+  }
+  if (pageInt == "3" || pageInt == "5" || pageInt == "7" || pageInt == "11") {
+    document.getElementById("advanceState").style.display = "none";
+  }
+  if (pageInt == "2" || pageInt == "4" || pageInt == "6" || pageInt == "8" || pageInt == "9" || pageInt == "10" || pageInt == "12" || pageInt == "13") {
+    document.getElementById("advanceState").style.display = "inline-block";
+  }
+  const nextId = "state" + pageInt;
+  localStorage.setItem("statePage", pageInt);
+  document.getElementById("state12").style.display = "none";
+  document.getElementById("state8").style.display = "none";
+  document.getElementById("state6").style.display = "none";
+  document.getElementById("state4").style.display = "none";
+  document.getElementById(pageId).style.display = "none";
+  document.getElementById(nextId).style.display = "block";
+}
+
+function stateFinish() {
+  let text = '';
+  const stateQ1 = "Can you describe what happened?";
+  const stateQ2 = "When did the issue first occur?";
+  const stateQ3 = "Were there any prior related issues?";
+  const stateQ4 = "What were they and when did they occur?";
+  const stateQ5 = "Were there any warning lights?";
+  const stateQ6 = "Please describe:";
+  const stateQ7 = "Was there any noise, smoke, or smell?";
+  const stateQ8 = "Please describe:";
+  const stateQ9 = "How long have you owned the vehicle?";
+  const stateQ10 = "Do you know the approximate mileage when you purchased it?";
+  const stateQ11= "Was the vehicle towed to the repair facility?";
+  const stateQ12 = "Where was it towed from and what tow company did you use?";
+  const stateQ13 = "Any additional comments or notes:";
+  let state1ans = document.getElementById("state1ans").value;
+  let state2ans = document.getElementById("state2ans").value;
+  const state3ans = document.getElementById("chyes3").checked;
+  let state4ans = document.getElementById("state4ans").value;
+  const state5ans = document.getElementById("chyes5").checked;
+  let state6ans = document.getElementById("state6ans").value;
+  const state7ans = document.getElementById("chyes7").checked;
+  let state8ans = document.getElementById("state8ans").value;
+  let state9ansa = document.getElementById("time_owned").value;
+  let state9ansb = document.getElementById("time_unit").value;
+  let state10ans = document.getElementById("approx_mile").value;
+  const state11ans = document.getElementById("chyes11").checked;
+  let state12ans = document.getElementById("state12ans").value;
+  let state13ans = document.getElementById("state13ans").value;
+  text = stateQ1 + "\r" + state1ans + "\r\r" + stateQ2 + "\r" + state2ans + "\r\r" + stateQ3 + "\r";
+  if (state3ans) {
+    text += "Yes - " + state4ans + "\r\r" + stateQ5 + "\r";
+  } else {
+    text += "No\r\r" + stateQ5 + "\r";
+  }
+  if (state5ans) {
+    text += "Yes - " + state6ans + "\r\r" + stateQ7 + "\r";
+  } else {
+    text += "No\r\r" + stateQ7 + "\r";
+  }
+  if (state7ans) {
+    text += "Yes - " + state8ans + "\r\r" + stateQ9 + "\r";
+  } else {
+    text += "No\r\r" + stateQ9 + "\r";
+  }
+  text += state9ansa + " " + state9ansb + "\r\r" + stateQ10 + "\r";
+  if (state10ans == "" || state10ans == null) {
+    text += "No\r\r" + stateQ11 + "\r";
+  } else {
+    text += state10ans + "\r\r" + stateQ11 + "\r";
+  }
+  if (state11ans) {
+    text += "Yes - " + state12ans + "\r\r" + stateQ13 + "\r";
+  } else {
+    text += "No\r\r" + stateQ13 + "\r";
+  }
+  text += state13ans;
+  const stmttempta = document.getElementsByClassName("stmt_temp_ta");
+  for (i = 0; i < stmttempta.length; i++) {
+    stmttempta[i].value = "";
+  }
+  const stmt_temp_rad = document.getElementsByClassName("stmt_temp_rad");
+  for (i = 0; i < stmt_temp_rad.length; i++) {
+    stmt_temp_rad[i].checked = false;
+  }
+  document.getElementById("time_owned").value = "";
+  document.getElementById("time_unit").value = "";
+  document.getElementById("approx_mile").value = "";
+  copy(text);
+  document.getElementById("state13").style.display = "none";
+  document.getElementById("state1").style.display = "inherit";
+  document.getElementById("statement").style.display = "none";
+}
+
+function statNOTE() {
+  const statNote = document.getElementById("statNote");
+  const statNoteinner = document.getElementById("statNoteinner");
+  if (statNote.style.display == "inline-block" || checkOpen()) {
+    statNote.style.display = "none";
+    return;
+  }
+  statNote.style.display = "inline-block";
+}
+
+function cancelStat() {
+  uncheck_All();
+  document.getElementById("optionalNote").value = "";
+  const statNote = document.getElementById("statNote");
+  const statNoteinner = document.getElementById("statNoteinner");
+  statNote.style.display = "none";
+}
+
+function highlander(elemId) {
+  document.getElementById(elemId).checked = false;
+}
+
+function submitStat() {
+  const checkboxes = ['stat1', 'stat2', 'stat3', 'stat4', 'stat5', 'stat6', 'stat7', 'stat8', 'stat9'];
+  const noteStrings = {
+    'stat1note': 'We are waiting on the inspection to verify failure.\n',
+    'stat2note': 'We are waiting on records from the Contract Holder to determine Pre-X.\n',
+    'stat3note': 'We are waiting for the Contract Holders statement as it may influence the claim outcome.\n',
+    'stat4note': 'verify failure.',
+    'stat5note': 'correct VIN or mileage issue.',
+    'stat6note': 'The Repair facility has been notified.\n',
+    'stat7note': 'The Contract Holder has been notified.\n',
+    'stat8note': 'I was unable to reach the Contract Holder but I left a VM and tasked callbacks.\n',
+    'stat9note': 'Parts and labor are keyed in and verified.\n',
+    'stat4and5CommonNote': 'We are waiting on photos from the Repair Facility to '
+  };
+  let output = '';
+  checkboxes.slice(0, 3).forEach(id => {
+    if (document.getElementById(id).checked) {
+      output += noteStrings[id + 'note'];
+    }
+  });
+  const stat4Checked = document.getElementById('stat4').checked;
+  const stat5Checked = document.getElementById('stat5').checked;
+  const stat9Checked = document.getElementById('stat9').checked;
+  if (stat4Checked || stat5Checked) {
+    output += noteStrings['stat4and5CommonNote'];
+    if (stat4Checked && stat5Checked) {
+      output += noteStrings['stat4note'] + ' and ' + noteStrings['stat5note'] + '\n';
+    } else if (stat4Checked) {
+      output += noteStrings['stat4note'] + '\n';
+    } else if (stat5Checked) {
+      output += noteStrings['stat5note'] + '\n';
+    }
+  }
+  checkboxes.slice(6).forEach(id => {
+    if (document.getElementById(id).checked) {
+      output += noteStrings[id + 'note'];
+    }
+  });
+  const optionalText = document.getElementById('optionalNote').value.trim();
+  if (optionalText !== '') {
+    output += optionalText + '\n';
+  }
+  copy(output);
+  cancelStat();
+}
+
+function EVACRECH(btnID) {
+  const EvacRechrge = "Evac and Recharge\rRF Asking:   \rPD Approved:   1.4\r\r";
+  const Check = localStorage.getItem(btnID + "EDIT");
+  const textarea = document.getElementById("textarea2");
+  if (Check == null) {
+    textarea.value += EvacRechrge;
+    document.getElementById("EDITarea").value = EvacRechrge;
+  } else {
+    textarea.value += Check;
+    document.getElementById("EDITarea").value = Check;
+  }
+  textarea.scrollTop = textarea.scrollHeight;
+}
+
+function ALIGNMENT(btnID) {
+  const Alignment = "Alignment\rRF Asking:   \rPD Approved:   \r\r";
+  const Check = localStorage.getItem(btnID + "EDIT");
+  const textarea = document.getElementById("textarea2");
+  if (Check == null) {
+   textarea.value += Alignment;
+   document.getElementById("EDITarea").value = Alignment;
+  } else {
+    textarea.value += Check;
+    document.getElementById("EDITarea").value = Check;
+  }
+  textarea.scrollTop = textarea.scrollHeight;
+}
+
+function DIAG() {
+  const textarea = document.getElementById("textarea2");
+  textarea.value += "Diag\rRF Asking:   \rPD Approved:   \r\r";
+  textarea.scrollTop = textarea.scrollHeight;
+}
+
+function LABOR(boxNum) {
+  const textarea = document.getElementById("textarea2");
+  textarea.value += "R/R \rRF Asking:   \rPD Approved:   \r\r";
+  textarea.scrollTop = textarea.scrollHeight;
+}
+
+function BULK(btnID) {
+  const Check = localStorage.getItem(btnID + "EDIT");
+  const textarea = document.getElementById("textarea2");
+  if (Check == null) {
+    textarea.value += "BULK:   \rRF Price:   \rFPS Allows:   \r\r";
+    document.getElementById("EDITarea").value = "BULK:   \rRF Price:   \rFPS Allows:   \r\r";
+  } else {
+    textarea.value += Check;
+    document.getElementById("EDITarea").value = Check;
+  }
+  textarea.scrollTop = textarea.scrollHeight;
+}
+
+function OEMOVER() {
+  let textareaVal = document.getElementById("textarea2").value;
+  const textarea = document.getElementById("textarea2");
+  textareaVal = textareaVal.slice(0,-1);
+  textarea.value = textareaVal;
+  textarea.value += "PA PN:   \rPA List:   \rPA Cost:   \rCore: NA\r\r";
+  textarea.scrollTop = textarea.scrollHeight;
+}
+
+function NEWAM() {
+  const textarea = document.getElementById("textarea2");
+  textarea.value += "RF AM PN:   \rRF Price:   \rPA PN:   \rPA List:   \rPA Cost:   \rCore: NA\r\r";
+  textarea.scrollTop = textarea.scrollHeight;
+}
+
+function NEWOEM() {
+  const textarea = document.getElementById("textarea2");
+  textarea.value += "Verified OEM PN:   \rVerified MSRP:   \rRF Price:   \r\r";
+  textarea.scrollTop = textarea.scrollHeight;
+}
+
+function REVIEW(btnID) {
+  const Rev = "Reviewed photos sent by repair facility.\rVerified vin.\rVerified mileage.\rNo indication of commercial use.\rNo indication of modification.\r\r";
+  const Check = localStorage.getItem(btnID + "EDIT");
+  if (Check == null) {
+    document.getElementById("textarea5").value = Rev;
+    document.getElementById("EDITarea").value = Rev;
+  } else {
+    document.getElementById("textarea5").value = Check;
+    document.getElementById("EDITarea").value = Check;
+  }
+  const outputString = document.getElementById("textarea5").value;
+  copy(outputString);
+  const mode = localStorage.getItem("mode");
+  if(checkOpen()) {
+    ShowTemps();
+  }
+}
+
+function inspREVIEW() {
+  const Rev = "Inspection Review\rReason for inspection:\rLabor rate:\rMileage:\rFluid condition:\rModifications/Collision/Commercial:\rInspector findings/photo review:";
+  copy(Rev);
+}
+
+function carfaxREVIEW() {
+  const Rev = "CARFAX Report Review:\r1.) What I was looking for:\r2.) Red flags or Mileage Discrepancy:\r3.) Does it relate to the claim:\r4.) What is needed now:";
+  copy(Rev);
+}
+
+function RECREQ(btnID) {
+  const RecReq = "Requesting Contract Holder statement regarding issues.\rRequesting past 12 months of service records from the Contract Holder.\rSent records request using SRS action button.\rWill call the Contract Holder to inform.";
+  const Check = localStorage.getItem(btnID + "EDIT");
+  if (Check == null) {
+    document.getElementById("textarea5").value = RecReq;
+    document.getElementById("EDITarea").value = RecReq;
+  } else {
+    document.getElementById("textarea5").value = Check;
+    document.getElementById("EDITarea").value = Check;
+  }
+  const outputString = document.getElementById("textarea5").value;
+  copy(outputString);
+}
+
+function NOANSREC(btnID) {
+  const NoAns = "Called Contract Holder to request records.\rCalled Contract Holder to request statement.\rNo answer – left voicemail.\rTasked to CS callbacks.";
+  const Check = localStorage.getItem(btnID + "EDIT");
+  if (Check == null) {
+    document.getElementById("textarea5").value = NoAns;
+    document.getElementById("EDITarea").value = NoAns;
+  } else {
+    document.getElementById("textarea5").value = Check;
+    document.getElementById("EDITarea").value = Check;
+  }
+  const outputString = document.getElementById("textarea5").value;
+  copy(outputString);
+}
+
+function INSPTEMP(btnID) {
+  let InsTemp = "Technician states:\r\rPart failure\rPart failure\rPart failure\r\rPlease have the technician demonstrate the failures listed above.\r\rNotate if rust, corrosion, or any outside influence is the cause of failure.\rNotate available fluid levels and conditions.\rFor electrical components, have technician verify power and ground.\r\rPlease take pictures of the following:\r";
+  InsTemp += "All failures.\rAll 4 sides of vehicle, vin, and odometer.\rInspection stickers and oil change stickers.\rWheels, tires, and rotors.\rAny dash light that are on, current or history DTCs, and any freeze frame data available.\rAny signs of commercial use or modifications.\rAny rust, corrosion, or collision damage.\rAny other information relevant to the failures.\r\rIf the failure is related to drivability or verification is noise based, please provide video verification.\r\rPlease contact the Repair Facility 1-2 hours before arrival.\r\rContact Name:\rEmail:\rDirect Line:";
+  const Check = localStorage.getItem(btnID + "EDIT");
+  if (Check == null) {
+    document.getElementById("textarea5").value = InsTemp;
+    document.getElementById("EDITarea").value = InsTemp;
+  } else {
+    document.getElementById("textarea5").value = Check;
+    document.getElementById("EDITarea").value = Check;
+  }
+  const outputString = document.getElementById("textarea5").value;
+  copy(outputString);
+  if(checkOpen()) {
+    ShowTemps();
+  }
+}
+
+function PTXFER() {
+  const showTemp = document.getElementById("transferTemplate");
+  showTemp.style.display = "inline-block";
+  const rfEmail = getContact('1');
+  const rfName = getContact('0');
+  document.getElementById("contact1").value = rfName;
+  document.getElementById("contact2").value = rfEmail;
+  localStorage.setItem("PTpage", "1");
+  document.getElementById("quest1").style.display = "block";
+  if(checkOpen()) {
+    ShowTemps();
+  }
+}
+
+function ShowTemps() {
+  const TPDiv = document.getElementById("TPDiv");
+  if (TPDiv.style.display == "inline-block" || checkOpen()) {
+    TPDiv.style.display = "none";
+    return;
+  }
+  TPDiv.style.display = "inline-block";
+}
+
+function advancePT(radioId) {
+  const page = parseInt(localStorage.getItem("PTpage"));
+  const num = radioId.match(/(\d+)/);
+  const single = num[0];
+  const curId = "quest" + single;
+  const nextIdnum = parseInt(single) + 1;
+  const nextId = "quest" + nextIdnum;
+  if (radioId == "no3" || radioId == "nr3") {
+    document.getElementById("q3ansN").style.display = "block";
+    document.getElementById("quest3").style.display = "none";
+    return;
+  }
+  if (radioId == "done3") {
+    document.getElementById("q3ansN").style.display = "none";
+  }
+  if (radioId == "yes11") {
+    document.getElementById("q11ansY").style.display = "block";
+    document.getElementById("quest11").style.display = "none";
+    return;
+  }
+  if (radioId == "no11" || radioId == "done11") {
+    document.getElementById("q11ansY").style.display = "none";
+    submitTEMP();
+    return;
+  }
+  localStorage.setItem("PTpage", nextIdnum);
+  document.getElementById(curId).style.display = "none";
+  document.getElementById(nextId).style.display = "block";
+}
+
+function backTEMP() {
+  const page = localStorage.getItem("PTpage");
+  if (page == "1") { return; }
+  const curId = "quest" + page;
+  const newpage = parseInt(page) - 1;
+  const nextId = "quest" + newpage;
+  localStorage.setItem("PTpage", newpage);
+  document.getElementById("q3ansN").style.display = "none";
+  document.getElementById("q11ansY").style.display = "none";
+  document.getElementById(curId).style.display = "none";
+  document.getElementById(nextId).style.display = "block";
+}
+
+function submitTEMP() {
+  const PtTransfer1 = "Is the Repair Facility able to diagnose to cause of failure and overhaul if needed?   ";
+  const PtTransfer2 = "Has the Repair Facility ever serviced the vehicle before?   ";
+  const PtTransfer3 = "Can a test drive be performed if needed?   ";
+  const PtTransfer4 = "Did the Repair Facility tow the vehicle?   ";
+  const PtTransfer5 = "Has the cause of failure been identified?   ";
+  const PtTransfer6 = "Does the Repair Facility have an itemized estimate available?   ";
+  const PtTransfer7 = "Has the Repair Facility's info and contact info been verified?   ";
+  const PtTransfer8 = "What is the preferred method of contact?   ";
+  const PtTransfer9  = "Have the PT claim expectations been reviewed with the Repair Facility contact?   ";
+  const PtTransfer10 = "Have you provided the Repair Facility with the assigned adjusters name, direct extension, and e-mail?   ";
+  const PtTransfer11 = "Is there any other relevant info that will assist the adjuster?   ";
+  const q1 = document.getElementsByName("ans1");
+  const q2 = document.getElementsByName("ans2");
+  const q3 = document.getElementsByName("ans3");
+  const q4 = document.getElementsByName("ans4");
+  const q5 = document.getElementsByName("ans5");
+  const q6 = document.getElementsByName("ans6");
+  const q7 = document.getElementsByName("ans7");
+  const q8 = document.getElementsByName("ans8");
+  const q9 = document.getElementsByName("ans9");
+  const q10 = document.getElementsByName("ans10");
+  const q11 = document.getElementsByName("ans11");
+  let ans1, ans2, ans3, ans4, ans5, ans6, ans7, ans8, ans9, ans10, ans11;
+  let checkedArr = [];
+  for (i = 0; i < q1.length; i++) {
+    if (q1[i].checked) {
+      ans1 = q1[i].value;
+      checkedArr.push(q1[i]);
+    }
+  }
+  for (i = 0; i < q2.length; i++) {
+    if (q2[i].checked) {
+      ans2 = q2[i].value;
+      checkedArr.push(q2[i]);
+    }
+  }
+  for (i = 0; i < q3.length; i++) {
+    if (q3[i].checked) {
+      ans3 = q3[i].value;
+      checkedArr.push(q3[i]);
+    }
+  }
+  for (i = 0; i < q4.length; i++) {
+    if (q4[i].checked) {
+      ans4 = q4[i].value;
+      checkedArr.push(q4[i]);
+    }
+  }
+  for (i = 0; i < q5.length; i++) {
+    if (q5[i].checked) {
+      ans5 = q5[i].value;
+      checkedArr.push(q5[i]);
+    }
+  }
+  for (i = 0; i < q6.length; i++) {
+    if (q6[i].checked) {
+      ans6 = q6[i].value;
+      checkedArr.push(q6[i]);
+    }
+  }
+  for (i = 0; i < q7.length; i++) {
+    if (q7[i].checked) {
+      ans7 = q7[i].value;
+      checkedArr.push(q7[i]);
+    }
+  }
+  for (i = 0; i < q8.length; i++) {
+    if (q8[i].checked) {
+      ans8 = q8[i].value;
+      checkedArr.push(q8[i]);
+    }
+  }
+  for (i = 0; i < q9.length; i++) {
+    if (q9[i].checked) {
+      ans9 = q9[i].value;
+      checkedArr.push(q9[i]);
+    }
+  }
+  for (i = 0; i < q10.length; i++) {
+    if (q10[i].checked) {
+      ans10 = q10[i].value;
+      checkedArr.push(q10[i]);
+    }
+  }
+  for (i = 0; i < q11.length; i++) {
+    if (q11[i].checked) {
+      ans11 = q11[i].value;
+      checkedArr.push(q11[i]);
+    }
+  }
+  let q11ansExplain = document.getElementById("q11ansExplain").value;
+  let q3ansExplain = document.getElementById("q3ansExplain").value;
+  const contact1 = "Contact Name: " + document.getElementById("contact1").value;
+  const contact2 = "Contact Info: " + document.getElementById("contact2").value;
+  for (i = 0; i < checkedArr.length; i++) {
+    checkedArr[i].checked = false;
+  }
+  document.getElementById("textarea5").value = PtTransfer1 + ans1 + "\r" +  PtTransfer2 + ans2 + "\r" + PtTransfer3 + ans3 + "\r";
+  if (ans3 != "YES") {
+    document.getElementById("textarea5").value += q3ansExplain + "\r";
+  }
+  document.getElementById("textarea5").value += PtTransfer4 + ans4 + "\r" +  PtTransfer5 + ans5 + "\r" +  PtTransfer6 + ans6 + "\r" +  PtTransfer7 + ans7 + "\r" +  PtTransfer8 + ans8 + "\r" + contact1 + "\r" + contact2 + "\r" + PtTransfer9 + ans9 + "\r" + PtTransfer10 + ans10 + "\r" + PtTransfer11 + ans11 + "\r";
+  if (ans11 == "YES") {
+    document.getElementById("textarea5").value += q11ansExplain;
+  }
+  let outputString = document.getElementById("textarea5").value;
+  copy(outputString);
+  document.getElementById("q3ansExplain").value = "";
+  document.getElementById("q11ansExplain").value = "";
+  document.getElementById("contact1").value = "";
+  document.getElementById("contact2").value = "";
+  const showTemp = document.getElementById("transferTemplate");
+  showTemp.style.display = "none";
+}
+
+function cancelPT() {
+  const showTemp = document.getElementById("transferTemplate");
+  showTemp.style.display = "none";
+  const questDivs = document.getElementsByClassName("ptQuest");
+  for (const x of questDivs) {
+    x.style.display = "none";
+  }
+  const questRadios = document.getElementsByClassName("ptRad");
+  for (const x of questRadios) {
+    x.checked = false;
+  }
+}
+
+function PICREQ(btnID) {
+  const PicReq = "Requesting photos from Repair Facility to verify failure and avoid inspection delay.\rInforming Repair Facility to include pics of all 4 corners of the vehicle, VIN plate, odometer, and pictures of the failure.\rSent request via SRS action button.";
+  const Check = localStorage.getItem(btnID + "EDIT");
+  if (Check == null) {
+    document.getElementById("textarea5").value = PicReq;
+   document.getElementById("EDITarea").value = PicReq;
+  } else {
+    document.getElementById("textarea5").value = Check;
+   document.getElementById("EDITarea").value = Check;
+  }
+  const outputString = document.getElementById("textarea5").value;
+  copy(outputString);
+}
+
+function FLUIDLEAK() {
+  const fluids = document.getElementById("div6");
+  if (fluids.style.display != "none") {
+    fluids.style.display = "none";
+    document.getElementById("fluid").textContent = "$";
+  } else {
+    fluids.style.display = "inline-block";
+    document.getElementById("fluid").textContent = "X";
+  }
+}
+
+function CopyIntakeForm(index) {
+  const textarea = document.getElementById('textarea1');
+  const lines = textarea.value.split('\n');
+  const lineIndex = parseInt(index);
+  const start = lines.slice(0, lineIndex).reduce((acc, curr) => acc + curr.length + 1, 0);
+  const end = start + lines[lineIndex].length;
+  textarea.focus();
+  textarea.setSelectionRange(start, end);
+  const tempStr = window.getSelection();
+  document.getElementById("textarea4").value = tempStr;
+  const fullString = document.getElementById("textarea4").value;
+  const contactString = fullString.slice(9);
+  document.getElementById("textarea4").value = contactString.trim();
+  const outputString = document.getElementById("textarea4").value;
+  copy(outputString);
+}
+
+function CopyForm(index){
+  const textarea = document.getElementById(index);
+  textarea.select();
+  document.execCommand("copy");
+}
+
+function FormToTA() {
+  const partname = document.getElementById('partname1').value;
+  const partnum = document.getElementById('partnum').value;
+  const rfprice = document.getElementById('rfprice').value;
+  const msrp = document.getElementById('msrp').value;
+  const textarea = document.getElementById("textarea2");
+  if (msrp) {
+    const overCheck = parseInt(msrp);
+    textarea.value += "Part: ";
+    textarea.value += partname + "\r";
+    textarea.value += "Verified OEM PN: ";
+    textarea.value += partnum + "\r";
+    textarea.value += "Verified MSRP: ";
+    textarea.value += msrp + "\r";
+    textarea.value += "RF Price: ";
+    textarea.value += rfprice + "\r";
+    if (overCheck > 250) {
+      textarea.value += "PA PN:   \rPA List:   \rPA Cost:   \rCore: NA\r\r";
+      textarea.scrollTop = textarea.scrollHeight;
+      } else {
+        textarea.value += "\r";
+        textarea.scrollTop = textarea.scrollHeight;
+      }
+  } else {
+    textarea.value += "Part: ";
+    textarea.value += partname + "\r";
+    textarea.value += "RF AM PN:  ";
+    textarea.value += partnum + "\r";
+    textarea.value += "RF Price: ";
+    textarea.value += rfprice + "\r";
+    textarea.value += "PA PN:   \rPA List:   \rPA Cost:   \rCore: NA\r\r";
+    textarea.scrollTop = textarea.scrollHeight;
+  }
+}
+
+function AnotherOne() {
+  const newpartcountStr = localStorage.getItem("newpartcount");
+  let newpartcount = parseInt(newpartcountStr);
+  if (newpartcount < 7){
+    document.getElementById("partname" + newpartcount).style.display = "inline-block";
+    newpartcount++;
+    localStorage.setItem("newpartcount",newpartcount);
+  }
+}
+
+function NextPart() {
+  const newpartcountStr = localStorage.getItem("newpartcount");
+  let newpartcount = parseInt(newpartcountStr);
+  document.getElementById('partnum').value = "";
+  document.getElementById('rfprice').value = "";
+  document.getElementById('msrp').value = "";
+  partMover = newpartcount - 1;
+  for (let i = 1; i < partMover; i++) {
+    let d = i + 1;
+    let upper = document.getElementById("partname" + d);
+    let lower = document.getElementById("partname" + i);
+    lower.value = upper.value;
+  }
+  if (newpartcount > 2) {
+    newpartcount = newpartcount - 1;
+    document.getElementById("partname" + partMover).value = "";
+    document.getElementById("partname" + partMover).style.display = "none";
+    localStorage.setItem("newpartcount",newpartcount);
+  }
+}
+
+function SENDLABOR1() {
+  const Labor = "RF Asking:   \rPD Approved:   \r\r";
+  const partname = document.getElementById('partname1').value;
+  const textarea = document.getElementById("textarea2");
+  textarea.value += "R/R ";
+  textarea.value += partname + "\r";
+  textarea.value += Labor;
+  textarea.scrollTop = textarea.scrollHeight;
+}
+
+function SENDDIAG1() {
+  const Labor = "RF Asking:   \rPD Approved:   \r\r";
+  const partname = document.getElementById('partname1').value;
+  const textarea = document.getElementById("textarea2");
+  textarea.value += "Diag on ";
+  textarea.value += partname + "\r";
+  textarea.value += Labor;
+  textarea.scrollTop = textarea.scrollHeight;
+}
+
+function ClearIntake() {
+  document.getElementById("partname1").value = "";
+  document.getElementById("partnum").value = "";
+  document.getElementById("rfprice").value = "";
+  document.getElementById("msrp").value = "";
+}
+
+function COPYNOTE() {
+  const outputString = document.getElementById("textarea2").value;
+  copy(outputString);
+}
+
+function toggleConductor(boxId) {
+  const showNode = document.querySelectorAll('[class$="dispStat"]');
+  const showList = Array.from(showNode);
+  const checkBox = document.getElementById(boxId);
+  if (boxId == "s9") {
+    for (i = 0; i < showList.length; i++) {
+      const affectedElem = showList[i];
+      const affectedId = showList[i].id;
+      if (checkBox.checked == true) {
+        affectedElem.style.display = "inline-block";
+        localStorage.setItem(affectedId + "SHOW", "inline-block");
+        localStorage.setItem("allBTN", "inline-block");
+      } else {
+        affectedElem.style.display = "none";
+        localStorage.setItem(affectedId + "SHOW", "none");
+        localStorage.setItem("allBTN", "none");
+      }
+    }
+  return;
+  } else {
+    const displayElemNode = document.getElementsByClassName(boxId + "dispStat");
+    const affectedElem = displayElemNode[0];
+    const affectedId = displayElemNode[0].id;
+    if (checkBox.checked == true){
+      affectedElem.style.display = "inline-block";
+      localStorage.setItem(affectedId + "SHOW", "inline-block");
+    } else {
+      affectedElem.style.display = "none";
+      localStorage.setItem(affectedId + "SHOW", "none");
+    }
+  }
+}
+
+window.onload = function PutItBack() {
+  const authMode = localStorage.getItem('authMode');
+  if (authMode === 'newAuth') {
+    document.getElementById('newauthSelect').checked = true;
+  } else if (authMode === 'oldAuth' || authMode == null) {
+    document.getElementById('newauthSelect').checked = false;
+  }
+  localStorage.setItem("viewNum", "normal");
+  const selected = "holder1";
+  const selectedElem = document.getElementById(selected);
+  const didItRun = localStorage.getItem('Im The Boss');
+  localStorage.setItem("toldem", "false");
+  localStorage.setItem("menuOpen", "false");
+  localStorage.setItem("newpartcount","2");
+  localStorage.setItem("menuState", 0);
+  localStorage.setItem("colorState", 0);
+  if (didItRun == null) {
+    localStorage.setItem("Im The Boss", "It's Been Done");
+    localStorage.setItem(selected + "STCB", '0');
+    localStorage.setItem(selected + "PRIN", '0');
+    localStorage.setItem(selected + "LINK", '0');
+    localStorage.setItem(selected + "ENDN", '0');
+    localStorage.setItem(selected + "SOLO", '0');
+    localStorage.setItem(selected + "Count", '0');
+  }
+  const but = localStorage.getItem(selected + "Count");
+  const buttonCount = parseInt(but);
+  for (i = 0; i < buttonCount; i++) {
+    const count = i.toString();
+    const currID = "cust" + count;
+    const newID = localStorage.getItem(currID);
+    const currdivID = "custBtn" + count;
+    const buttonX = document.getElementById(currID);
+    buttonX.id = newID;
+  }
+  for (i = 0; i < 10; i++) {
+    const count = i.toString();
+    const curdivID = "custBtn" + count;
+    const thsDisp = localStorage.getItem(curdivID + "SHOW");
+    if (thsDisp == null) {
+      localStorage.setItem(curdivID + "SHOW", "none");
+    }
+  }
+  const idNode = document.querySelectorAll('*[id]');
+  const idList =  Array.from(idNode);
+  for (i = 0; i < idList.length; i++) {
+    const selectedID = idList[i].id;
+    const selectedElem = document.getElementById(selectedID);
+    if (localStorage.getItem(selectedID + "Font") != null) {
+      const fSize = localStorage.getItem(selectedID + "Font");
+      selectedElem.style.fontSize = fSize;
+    }
+    if (localStorage.getItem(selectedID + "top") != null) {
+      const top = localStorage.getItem(selectedID + "top");
+      const left = localStorage.getItem(selectedID + "left");
+      selectedElem.style.left = left;
+      selectedElem.style.top = top;
+    }
+    if (localStorage.getItem(selectedID + "Width") != null) {
+      const setWidth = localStorage.getItem(selectedID + "Width");
+      const setHeight = localStorage.getItem(selectedID + "Height");
+      selectedElem.style.width = setWidth;
+      selectedElem.style.height = setHeight;
+    }
+    if (localStorage.getItem(selectedID + "Display") != null) {
+      const setTEXT = localStorage.getItem(selectedID + "Display");
+      selectedElem.innerHTML = setTEXT;
+    }
+  }
+  const showNode = document.querySelectorAll('[class$="dispStat"]');
+  const showList = Array.from(showNode);
+  for (i = 0; i < showList.length; i++) {
+    const selectedID = showList[i].id;
+    const selectedElem = document.getElementById(selectedID);
+    const elemClass = selectedElem.className;
+    const boxId = elemClass.substr(-10, 2);
+    const checkBox = document.getElementById(boxId);
+    const currDisp = selectedElem.style.display;
+    const setDisp = localStorage.getItem(selectedID + "SHOW");
+    if (setDisp == null || setDisp == "inline-block") {
+      checkBox.checked = true;
+      selectedElem.style.display = "inline-block";
+    } else {
+      checkBox.checked = false;
+      selectedElem.style.display = "none";
+    }
+  }
+  const mainDisp = localStorage.getItem("allBTN");
+  const checkbox = document.getElementById("s9");
+  if (mainDisp == "inline-block" || mainDisp == null) {
+    checkbox.checked = true;
+  } else {
+    checkbox.checked = false;
+  }
+  localStorage.setItem("pageNum", "0");
+  resetColors();
+  trackerBlank();
+  const Rev = "Reviewed inspection photos and report.\rReviewed photos sent by repair facility.\rVerified vin.\rVerified mileage.\rNo indication of commercial use.\rNo indication of modification.\r\r";
+  localStorage.setItem("Rev", Rev);
+  localStorage.setItem("mode", '2');
+  localStorage.setItem('currentVer', '1');
+  localStorage.setItem("countLefts", '0');
+  modePT();
+}
+
+function trackerBlank() {
+  const recordArr = [];
+  localStorage.setItem("recordArr", JSON.stringify(recordArr));
+  const objectArr = [];
+  localStorage.setItem("objectArr", JSON.stringify(objectArr));
+  localStorage.setItem("addLineCount", "0");
+  localStorage.setItem("savedRecs", "0");
+  localStorage.removeItem("serRcrdspot");
+  localStorage.removeItem("incRcrdspot");
+  localStorage.removeItem("rec0Rcrdspot");
+  localStorage.removeItem("rec1Rcrdspot");
+  localStorage.removeItem("rec2Rcrdspot");
+  localStorage.removeItem("rec3Rcrdspot");
+  localStorage.removeItem("rec4Rcrdspot");
+  localStorage.removeItem("rec5Rcrdspot");
+  localStorage.removeItem("InceptionMiles");
+  localStorage.removeItem("InceptionDate");
+  localStorage.removeItem("sermileage");
+  localStorage.removeItem("serdate");
+  localStorage.removeItem("rec0mileage");
+  localStorage.removeItem("rec0date");
+  localStorage.setItem("noteOpen", "false");
+}
+
+function openNav() {
+  if (checkOpen()) { return; }
+  document.getElementById("mySidenav").classList.add("open_nav");
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").classList.remove("open_nav");
+}
+
+function opentransAuth() {
+  if (checkOpen()) { return; }
+  document.getElementById("module_trans_backing").classList.add("trsnActive");
+  document.getElementById("module_trans_1").classList.add("trsnActive");
+}
+
+function closetransAuth() {
+  document.getElementById("module_trans_backing").classList.remove("trsnActive");
+  document.getElementById("module_trans_7").classList.remove("trsnActive");
+  document.getElementById("module_trans_4").classList.remove("trsnActive");
+}
+
+function closeUpdate() {
+  document.getElementById("updated").style.display = "none";
+  localStorage.setItem("updated", "yes");
+}
+
+function ringDeny() {
+  let text = "After review of borescope provided photos, there are obvious signs of excessive carbon.\rThis carbon is a biproduct of a fuel/spark related issue.\r";
+  text += "Per the leak-down test performed, we have air bypass from piston rings (air escaping to crank case).\rWe know the piston rings are stuck, and have made marks/scoring on the cylinder walls.\r";
+  text += "The stuck piston rings can be attributed to the carbon.\rCarbon is an exclusion on this policy.\rThe engine portion of this claim will be denied.\r";
+  text += "The following items and conditions are not covered by this CONTRACT:\r\r";
+  text += "17. BREAKDOWNS resulting from engine sludge, carbon, pre-ignition, detonation, varnish, corrosion, foreign objects, dirt, dust, liquid, cracked rubber and/or neoprene parts, dry-rot, road chemicals, lack of proper fluids or use of additives or fuel grades not recommended by the manufacturer.";
+  copy(text);
+}
