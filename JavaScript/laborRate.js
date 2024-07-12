@@ -38,31 +38,13 @@ function setZero() {
   document.getElementById('current').value = '';
   document.getElementById('custom').value = '';
   document.getElementById('aveRate').value = '';
-  let priorRadius = localStorage.getItem('radius');
-  let priorIdr = localStorage.getItem('selectedIdR');
-  if (priorIdr) {
-    if (document.getElementById(priorIdr).classList.contains('selected'))  {
-      document.getElementById(priorIdr).classList.remove('selected');
-      localStorage.removeItem('radius');
-      localStorage.removeItem('selectedIdR');
-    }
-  }
-  let priorType = localStorage.getItem('type');
-  let priorIdt = localStorage.getItem('selectedIdT');
-  if (priorType) {
-    if (document.getElementById(priorIdt).classList.contains('selected')) {
-      document.getElementById(priorIdt).classList.remove('selected');
-      localStorage.removeItem('type');
-      localStorage.removeItem('selectedIdT');
-    }
-  }
-  let priorQuant = localStorage.getItem('quant');
-  let priorIdq = localStorage.getItem('selectedIdQ');
-  if (priorQuant) {
-    if (document.getElementById(priorIdq).classList.contains('selected')) {
-      document.getElementById(priorIdq).classList.remove('selected');
-      localStorage.removeItem('quant');
-      localStorage.removeItem('selectedIdQ');
+  localStorage.removeItem('selectedIdR');
+  localStorage.removeItem('selectedIdQ');
+  localStorage.removeItem('selectedIdT');
+  const allopts = document.getElementsByClassName('laboropt');
+  for (i = 0; i < allopts.length; i++) {
+    if (allopts[i].classList.contains('selected')) {
+      allopts[i].classList.remove('selected');
     }
   }
 }
