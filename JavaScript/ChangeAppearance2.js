@@ -15,23 +15,23 @@
 // For inquiries regarding licensing or permission to use this code in ways not covered by this license, please contact the author at AdjusterConsole@gmail.com.
 
 function colorObject() {
-  this.background = "#2d4252";
-  this.accent = "#7c878f";
-  this.shadow1 = "#688da6";
-  this.shadow2 = "#1c2a35";
-  this.shadow3 = "#425e70";
-  this.shadow4 = "#0e1315";
+  this.background = "#0d274a";
+  this.accent = "#1d4d8b";
+  this.shadow1 = "#1d4d8b";
+  this.shadow2 = "#153e75";
+  this.shadow3 = "#08172b";
+  this.shadow4 = "#030912";
   this.username = '';
   this.glow = "#ffffff";
   this.text = "#ffffff";
   this.outline = "#000000";
-  this.hover = "#7C878F32";
-  this.active = "#7C878F60";
-  this.light = "#ffffff";
-  this.medlight = "#c3cacf";
-  this.meddark = "#a4aaae";
-  this.dark = "#6d7174";
-  this.lightbackground = "#B6BDC1";
+  this.hover = "#1D4D8B32";
+  this.active = "#1D4D8B60";
+  this.light = "#b8def5";
+  this.medlight = "#aed1e5";
+  this.meddark = "#86a1b1";
+  this.dark = "#728d9d";
+  this.lightbackground = "#92b1c3";
 }
 
 function sanitizeInput(value) {
