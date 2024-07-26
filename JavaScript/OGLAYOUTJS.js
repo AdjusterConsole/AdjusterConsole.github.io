@@ -1268,6 +1268,7 @@ window.onload = function PutItBack() {
   localStorage.setItem("pageNum", "0");
   resetColors();
   trackerBlank();
+  localStorage.removeItem('Diag');
   const Rev = "Reviewed inspection photos and report.\rReviewed photos sent by repair facility.\rVerified vin.\rVerified mileage.\rNo indication of commercial use.\rNo indication of modification.\r\r";
   localStorage.setItem("Rev", Rev);
   localStorage.setItem("mode", '2');
@@ -1319,6 +1320,7 @@ function closetransAuth() {
   document.getElementById("module_trans_backing").classList.remove("trsnActive");
   document.getElementById("module_trans_7").classList.remove("trsnActive");
   document.getElementById("module_trans_4").classList.remove("trsnActive");
+  localStorage.removeItem('Diag');
 }
 
 function closeUpdate() {
