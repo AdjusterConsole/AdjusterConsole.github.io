@@ -260,7 +260,7 @@ function saveColors() {
 
 function resetColors() {
   if (localStorage.getItem("colorSet2") === null) {
-    setColor("default");
+    setColor("ACDF");
   } else {
     const colorSet = JSON.parse(localStorage.getItem("colorSet2"));
     setPicker();
