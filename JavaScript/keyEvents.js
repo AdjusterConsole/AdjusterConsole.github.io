@@ -1,3 +1,19 @@
+//Restricted Use License
+//
+//This code is provided under the following terms and conditions:
+//
+//1. You are not allowed to use, copy, modify, merge, publish, distribute, sublicense, or sell copies of this code in any form, modified or unmodified, without express written permission from the author.
+//
+//2. You are not allowed to use this code for any illegal or unethical purpose.
+//
+//3. This license applies to all versions of the code previously released, as well as all future versions. Any prior statements made about permission given are hereby revoked.
+//
+//4. This code is provided "as is", without warranty of any kind, express or implied. The author shall not be liable for any damages arising from the use of this code.
+//
+//By using this code, you agree to abide by these terms and conditions. Failure to comply with these terms may result in legal action.
+//
+//For inquiries regarding licensing or permission to use this code in ways not covered by this license, please contact the author at adjusterconsole@gmail.com.
+
 document.addEventListener('keyup', function(e) {
   if (e.ctrlKey && e.altKey && e.shiftKey && e.key === 'P') {
     let mode = localStorage.getItem("mode");
@@ -20,6 +36,9 @@ document.addEventListener('keyup', function(e) {
   }
   if (e.ctrlKey && e.altKey && e.shiftKey && e.key === 'M') {
     downloadAndProcessLatestFile();
+  }
+  if (e.ctrlKey && e.altKey && e.shiftKey && e.key === 'K') {
+    saintMullet();
   }
 });
 
@@ -172,3 +191,39 @@ function stopWatch() {
     setTimeout(stopWatch, 1000); 
   } 
 }
+
+function saintMullet() {
+  console.log('Key combination pressed');
+
+  const img = document.createElement('img');
+  img.src = 'SaintMullet.png'; // Image located in the root folder
+  img.style.position = 'fixed';
+  img.style.top = '50%';
+  img.style.left = '50%';
+  img.style.transform = 'translate(-50%, -50%) scale(0.1)';
+  img.style.transition = 'transform 0.2s ease';
+  img.style.visibility = 'hidden'; // Hide the image initially
+  img.style.zIndex = '9999999999';
+  document.body.appendChild(img);
+  console.log('Image element created and appended');
+  setTimeout(() => {
+    img.style.visibility = 'visible'; // Make the image visible
+    const sizes = ['scale(0.1)', 'scale(1)', 'scale(0.1)', 'scale(1)', 'scale(0.1)', 'scale(1)', 'scale(0.1)', 'scale(1)'];
+    let index = 0;
+
+    function animate() {
+      img.style.transform = `translate(-50%, -50%) ${sizes[index]}`;
+      index++;
+      if (index < sizes.length) {
+        setTimeout(animate, 200);
+      } else {
+        setTimeout(() => {
+          img.remove();
+        }, 200);
+      }
+    }
+
+  animate();
+  }, 100); // Delay to ensure visibility change is registered
+}
+

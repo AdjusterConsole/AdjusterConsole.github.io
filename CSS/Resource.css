@@ -253,8 +253,8 @@ genopHeadimg {
 
 .answerSlide.active {
   width: 93%;
-  box-shadow: -5px -5px 16px var(--fancy-dark), 5px 5px 16px var(--fancy-light);
-  background: linear-gradient(315deg, var(--fancy-meddark), var(--fancy-medlight));
+  background: var(--btn-background2);
+  box-shadow: var(--box-shadow2);
   opacity: 1;
 }
 
@@ -639,8 +639,8 @@ td.lastCell {
   padding: 15px;
   border: none;
   outline: none;
-  box-shadow: -5px -5px 16px var(--fancy-dark), 5px 5px 16px var(--fancy-light);
-  background: linear-gradient(315deg, var(--fancy-meddark), var(--fancy-medlight));
+  background: var(--btn-background2);
+  box-shadow: var(--box-shadow2);
   overflow: hidden;
 }
 
@@ -669,8 +669,8 @@ td.lastCell {
   padding: 25px;
   border: none;
   outline: none;
-  box-shadow: -5px -5px 16px var(--fancy-dark), 5px 5px 16px var(--fancy-light);
-  background: linear-gradient(315deg, var(--fancy-meddark), var(--fancy-medlight));
+  background: var(--btn-background2);
+  box-shadow: var(--box-shadow2);
   overflow: hidden;
 }
 
@@ -683,8 +683,8 @@ td.lastCell {
   padding: 25px;
   border: none;
   outline: none;
-  box-shadow: -5px -5px 16px var(--fancy-dark), 5px 5px 16px var(--fancy-light);
-  background: linear-gradient(315deg, var(--fancy-meddark), var(--fancy-medlight));
+  background: var(--btn-background2);
+  box-shadow: var(--box-shadow2);
   overflow: hidden;
 }
 
@@ -783,8 +783,8 @@ tbody tr.rowit {
 }
 
 .noteBins.arise {
-  box-shadow: -5px -5px 16px var(--fancy-dark), 5px 5px 16px var(--fancy-light);
-  background: linear-gradient(315deg, var(--fancy-meddark), var(--fancy-medlight));
+  background: var(--btn-background2);
+  box-shadow: var(--box-shadow2);
   overflow: hidden;
   transition: .4s;
   opacity: 1;
@@ -816,8 +816,8 @@ tbody tr.rowit {
   position: absolute;
   display: inline-block;
   text-align: right;
-  box-shadow: -5px -5px 16px var(--fancy-dark), 5px 5px 16px var(--fancy-light);
-  background: linear-gradient(315deg, var(--fancy-meddark), var(--fancy-medlight));
+  background: var(--btn-background2);
+  box-shadow: var(--box-shadow2);
   overflow: hidden;
   transition: .4s;
   opacity: 1;
@@ -830,8 +830,8 @@ tbody tr.rowit {
 .both {
   display: none;
   position: absolute;
-  background: linear-gradient(315deg, var(--fancy-meddark), var(--fancy-medlight));
-  box-shadow: -5px -5px 16px var(--fancy-dark), 5px 5px 16px var(--fancy-light);
+  background: var(--btn-background2);
+  box-shadow: var(--box-shadow2);
   overflow: hidden;
   transition: .4s;
   padding: 20px;
