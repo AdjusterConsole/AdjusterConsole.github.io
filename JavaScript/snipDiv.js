@@ -245,7 +245,7 @@ function NAV() {
 
 function NAN() {
   setButtonDisplay(["Snippings"], "inline-block");
-  setElementValue(["Snippings"], localStorage.getItem("VMREASON") + "There was no answer.\r There was no voicemail available\rI have tasked Customer Service to callback.\r");
+  setElementValue(["Snippings"], localStorage.getItem("VMREASON") + "There was no answer.\rThere was no voicemail available\rI have tasked Customer Service to callback.\r");
   copyText();
   auth_Close();
   setVMpos();
@@ -304,6 +304,6 @@ function RESET() {
   RESETNOTE();
   cancelState();
   cancelStat();
-  cancelNewauth();
+  cancel_auth();
   cancelPT();
 }

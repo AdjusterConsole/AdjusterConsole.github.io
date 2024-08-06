@@ -8,16 +8,16 @@
 <meta name="referrer" content="no-referrer">
 
 
-<link rel="stylesheet" href="CSS/Common.css?v=156348415154628">
-<link rel="stylesheet" href="CSS/Stable.css?v=156348415154628">
-<link rel="stylesheet" href="CSS/auth_module.css?v=156348415154628">
-<link rel="stylesheet" href="CSS/Buttons.css?v=156348415154628">
-<link rel="stylesheet" href="CSS/AppearOpts.css?v=156348415154628">
-<link rel="stylesheet" href="CSS/Resource.css?v=156348415154628">
-<link rel="stylesheet" href="CSS/contextMenu.css?v=156348415154628">
-<link rel="stylesheet" href="CSS/laborRateScript.css?v=156348415154628">
+<link rel="stylesheet" href="CSS/Common.css?v=20240707202844">
+<link rel="stylesheet" href="CSS/Stable.css?v=20240707202844">
+<link rel="stylesheet" href="CSS/auth_module.css?v=20240707202844">
+<link rel="stylesheet" href="CSS/Buttons.css?v=20240707202844">
+<link rel="stylesheet" href="CSS/AppearOpts.css?v=20240707202844">
+<link rel="stylesheet" href="CSS/Resource.css?v=20240707202844">
+<link rel="stylesheet" href="CSS/contextMenu.css?v=20240707202844">
+<link rel="stylesheet" href="CSS/laborRateScript.css?v=20240707202844">
 	<title>Adjuster Console</title>
-<link rel="manifest" href="manifest.webmanifest?v=156348415154628">
+
 <style>
 
 /*Restricted Use License
@@ -81,7 +81,7 @@ body {
    -1px 1px var(--glow-outline-color),
     1px -1px var(--glow-outline-color);
   top: 535px;
-  left: 665px;
+  left: 645px;
   z-index:-1;
 }
 
@@ -145,23 +145,32 @@ body {
 }
 
 :root {
-  --my-background-color: #0d274a;
-  --my-accent-color: #1d4d8b;
-  --my-shadow-color1: #1d4d8b;
-  --my-shadow-color2: #153e75;
-  --my-shadow-color3: #08172b;
-  --my-shadow-color4: #030912;
-  --my-glow-color: #FFFFFF;
+  --my-background-color: #2d4252;
+  --my-accent-color: #7c878f;
+  --my-shadow-color1: #688da6;
+  --my-shadow-color2: #1c2a35;
+  --my-shadow-color3: #425e70;
+  --my-shadow-color4: #0e1315;
+  --my-glow-color: #ffffff;
   --glow-txt-color: #FFFFFF;
   --glow-outline-color: #000000;
-  --hover-color: #1D4D8B32;
-  --active-color: #1D4D8B60;
-  --fancy-light: #b8def5;
-  --fancy-medlight: #aed1e5;
-  --fancy-meddark: #86a1b1;
-  --fancy-dark: #728d9d;
-  --fancy-background: #92b1c3;
-  --div-width: 10px;
+  --hover-color: #7C878F32;
+  --active-color: #7C878F60;
+  --fancy-light: #ffffff;
+  --fancy-medlight: #c3cacf;
+  --fancy-meddark: #a4aaae;
+  --fancy-dark: #6d7174;
+  --fancy-background: #B6BDC1;
+
+  --box-shadow1: 2px 2px 6px 0px var(--my-shadow-color4), -2px -2px 6px 0px var(--my-shadow-color1);
+  --btn-background: linear-gradient(145deg, var(--my-shadow-color3), var(--my-shadow-color2));
+
+  --box-shadow1x: inset -2px -2px 6px 0px var(--my-shadow-color1), inset 2px 2px 6px 0px var(--my-shadow-color4);
+  --btn-backgroundx: linear-gradient(145deg, var(--my-shadow-color2), var(--my-shadow-color3));
+
+  --box-shadow2: -5px -5px 16px 0px var(--fancy-dark), 5px 5px 16px 0px var(--fancy-light);
+  --btn-background2: linear-gradient(315deg, var(--fancy-meddark), var(--fancy-medlight));
+
   --altboxshad: 
     0px 10px 25px -5px rgba(0,0,0,0.6),
     0px 20px 45px -5px rgba(0,0,0,0.55),
@@ -173,6 +182,7 @@ body {
     0px 10px 25px -5px rgba(0,0,0,0.6),
     0px 20px 45px -5px rgba(0,0,0,0.55),
     0px 30px 65px -5px rgba(0,0,0,0.5);
+  --div-width: 10px;
 }
 
 #disclaimer {
@@ -338,11 +348,11 @@ body {
   <button class="navbtn" onclick="diagCenter();openInfo2(event, 'Electrical');closeNav()">Electrical</button>
   <button class="navEnder navbtn" onclick="diagCenter();openInfo2(event, 'Fuel');closeNav()">Fuel</button>
   <button class="navHeader navbtn" onclick="ShowTemps();closeNav()">Templates</button>
-  <button class="navbtn" onclick="PTXFER();ShowTemps();closeNav()">PT Transfer</button>
-  <button class="navbtn" onclick="STMTTEMP('T2');ShowTemps();closeNav()">CH Statement</button>
-  <button class="navbtn" onclick="REVIEW('T3');ShowTemps();closeNav()">Insp/Pic Review</button>
-  <button class="navbtn" onclick="INSPTEMP('T4');ShowTemps();closeNav()">Inspection Template</button>
-  <button class="navbtn" onclick="showAuth();closeNav()">Authorization</button>
+  <button class="navbtn" onclick="PTXFER();closeNav()">PT Transfer</button>
+  <button class="navbtn" onclick="STMTTEMP('T2');closeNav()">CH Statement</button>
+  <button class="navbtn" onclick="REVIEW('T3');closeNav()">Insp/Pic Review</button>
+  <button class="navbtn" onclick="INSPTEMP('T4');closeNav()">Inspection Template</button>
+  <button class="navbtn" onclick="authStart();closeNav()">Authorization</button>
   <button class="navbtn" onclick="statNOTE();closeNav()">Status</button>
 </div>
 
@@ -350,23 +360,23 @@ body {
 
 <div id="appearDiv" style="display:none;" class="backing">
   <div id="BGpick" class="noShow">
-    <label for="background-picker">Page Background color:</label><br>
+    <label for="background-picker">Background:</label><br>
     <input id="background-picker" type="color">
   </div>
   <div id="ACpick" class="noShow">
-    <label for="accent-picker">Page Accent Color:</label><br>
+    <label for="accent-picker">Accent:</label><br>
     <input id="accent-picker" type="color">
   </div>
   <div id="shad2Pick" class="noShow">
-    <label for="shad2-picker">Gradient Start:</label><br>
+    <label for="shad2-picker">Gradient1:</label><br>
     <input id="shad2-picker" type="color">
   </div>
   <div id="shad3Pick" class="noShow">
-    <label for="shad3-picker">Gradient End:</label><br>
+    <label for="shad3-picker">Gradient2:</label><br>
     <input id="shad3-picker" type="color">
   </div>
   <div id="shad1Pick" class="noShow">
-    <label for="shad1-picker">Highlight: </label><br>
+    <label for="shad1-picker">Highlight:</label><br>
     <input id="shad1-picker" type="color">
   </div>
   <div id="shad4Pick" class="noShow">
@@ -375,23 +385,23 @@ body {
   </div>
   <div id="secondaries" class="noShow">
   <div id="bg2Pick" class="noShow">
-    <label for="bg2-picker">Secondary Background Color:</label><br>
+    <label for="bg2-picker">Background 2:</label><br>
     <input id="bg2-picker" type="color">
   </div>
   <div id="flPick" class="noShow">
-    <label for="fl-picker">Secondary Highlight:</label><br>
+    <label for="fl-picker">Highlight 2:</label><br>
     <input id="fl-picker" type="color">
   </div>
   <div id="fdPick" class="noShow">
-    <label for="fd-picker">Secondary Shadow:</label><br>
+    <label for="fd-picker">Shadow 2:</label><br>
     <input id="fd-picker" type="color">
   </div>
   <div id="mlPick" class="noShow">
-    <label for="ml-picker">Seccondary Gradient Start:</label><br>
+    <label for="ml-picker">Gradient1 2:</label><br>
     <input id="ml-picker" type="color">
   </div>
   <div id="mdPick" class="noShow">
-    <label for="md-picker">Seccondary Gradient End:</label><br>
+    <label for="md-picker">Gradient2 2:</label><br>
     <input id="md-picker" type="color" value="#a4aaae">
   </div>
   </div>
@@ -411,6 +421,91 @@ body {
     <label for="nameGlow">Glow Color:</label><br>
     <input id="nameGlow" type="color">
   </div>
+
+  <div class="prop-wrapper">
+    <div class="css-property">
+      <label for="x-offset">X-Offset</label>
+      <div class="input-with-buttons">
+        <button id="xOffsetDecrement">-</button>
+        <input type="number" id="x-offset" value="2">
+        <button id="xOffsetIncrement">+</button>
+      </div>
+    </div>
+    <div class="css-property">
+      <label for="yOffset">Y-Offset</label>
+      <div class="input-with-buttons">
+        <button id="yOffsetDecrement">-</button>
+        <input type="number" id="y-offset" value="2">
+        <button id="yOffsetIncrement">+</button>
+      </div>
+    </div>
+    <div class="css-property">
+      <label for="blur">Blur:</label>
+      <div class="input-with-buttons">
+        <button id="blurDecrement">-</button>
+        <input type="number" id="blur" value="6">
+        <button id="blurIncrement">+</button>
+      </div>
+    </div>
+    <div class="css-property">
+      <label for="spread">Spread:</label>
+      <div class="input-with-buttons">
+        <button id="spreadDecrement">-</button>
+        <input type="number" id="spread" value="0">
+        <button id="spreadIncrement">+</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="prop-wrapper2">
+    <div class="css-property">
+      <label for="x-offset2">X-Offset 2</label>
+      <div class="input-with-buttons">
+        <button id="xOffsetDecrement2">-</button>
+        <input type="number" id="x-offset2" value="5">
+        <button id="xOffsetIncrement2">+</button>
+      </div>
+    </div>
+    <div class="css-property">
+      <label for="yOffset2">Y-Offset 2</label>
+      <div class="input-with-buttons">
+        <button id="yOffsetDecrement2">-</button>
+        <input type="number" id="y-offset2" value="5">
+        <button id="yOffsetIncrement2">+</button>
+      </div>
+    </div>
+    <div class="css-property">
+      <label for="blur2">Blur 2:</label>
+      <div class="input-with-buttons">
+        <button id="blurDecrement2">-</button>
+        <input type="number" id="blur2" value="16">
+        <button id="blurIncrement2">+</button>
+      </div>
+    </div>
+    <div class="css-property">
+      <label for="spread2">Spread 2:</label>
+      <div class="input-with-buttons">
+        <button id="spreadDecrement2">-</button>
+        <input type="number" id="spread2" value="0">
+        <button id="spreadIncrement2">+</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="toggleBox">
+      <label for="shadDouble">Dual<Br>Shadows</label>
+    <input type="checkbox" id="shadDouble" onclick="getPicker()" checked>
+  </div>
+
+  <div class="displayPreview" id="displayPreviewDiv">
+    <button class="previewBtn" id="previewBtn"></button>
+  </div>
+
+  <div class="previewDiv" id="previewDiv">
+    <button class="previewBtn2" id="previewBtn2"></button>
+  </div>
+
+
   <button id="setColors" class="picker" onclick="saveColors()">Save and Exit</button>
   <button id="exitColor" class="picker" onclick="exitColor()">Exit</button>
   <button id="defaultColors" class="picker" onclick="setColor('default')">Default Preset</button>
@@ -2501,17 +2596,16 @@ TIME:&nbsp&nbsp</textarea>
     <button id="sizeDefault" class="bones" onclick="sizeSubmit('d')">Default</button>
   <button id="sizeCancel" class="bones" onclick="sizeSubmit()">Exit</button>
 </div>
-<script type="module" src="JavaScript/firebase.js?v=156348415154628"></script>
-<script type="module" src="JavaScript/script.js?v=156348415154628"></script>
-<script src="JavaScript/snipDiv.js?v=156348415154628"></script>
-<script src="JavaScript/keyEvents.js?v=156348415154628"></script>
-<script src="JavaScript/OGLAYOUTJS.js?v=156348415154628"></script>
-<script src="JavaScript/dual_claim_authorization.js?v=156348415154628"></script>
-<script src="JavaScript/ChangeAppearance2.js?v=156348415154628"></script>
-<script src="JavaScript/commonScript.js?v=156348415154628"></script>
-<script src="JavaScript/jsonParse.js?v=156348415154628"></script>
-<script src="JavaScript/ContextMenu.js?v=156348415154628"></script>
-<script src="JavaScript/laborRate.js?v=156348415154628"></script>
-<script src="JavaScript/trackerScript.js?v=156348415154628"></script>
+
+<script src="JavaScript/snipDiv.js?v=20240707202844"></script>
+<script src="JavaScript/keyEvents.js?v=20240707202844"></script>
+<script src="JavaScript/OGLAYOUTJS.js?v=20240707202844"></script>
+<script src="JavaScript/dual_claim_authorization.js?v=20240707202844"></script>
+<script src="JavaScript/ChangeAppearance2.js?v=20240707202844"></script>
+<script src="JavaScript/commonScript.js?v=20240707202844"></script>
+<script src="JavaScript/jsonParse.js?v=20240707202844"></script>
+<script src="JavaScript/ContextMenu.js?v=20240707202844"></script>
+<script src="JavaScript/laborRate.js?v=20240707202844"></script>
+<script src="JavaScript/trackerScript.js?v=20240707202844"></script>
 </body>
 </html>

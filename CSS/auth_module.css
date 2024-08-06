@@ -56,8 +56,8 @@ For inquiries regarding licensing or permission to use this code in ways not cov
 .auth_style {
   margin: auto;
   padding: 15px;
-  background: linear-gradient(315deg, var(--fancy-meddark), var(--fancy-medlight));
-  box-shadow: -5px -5px 16px var(--fancy-dark), 5px 5px 16px var(--fancy-light);
+  background: var(--btn-background2);
+  box-shadow: var(--box-shadow2);
 }
 
 .float_auth {

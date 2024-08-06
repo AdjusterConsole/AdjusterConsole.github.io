@@ -83,16 +83,13 @@ For inquiries regarding licensing or permission to use this code in ways not cov
   display: inline-block;
   border-radius: 20px;
   background: var(--fancy-background);
-  box-shadow:
-    inset 0px 0px 4px black,
-    inset 0px 0px 22px black,
-    20px 10px 70px 20px black;
+  box-shadow: var(--altboxshad2);
   overflow: hidden;
 }
 
 .newStyle {
-  background: linear-gradient(315deg, var(--fancy-meddark), var(--fancy-medlight));
-  box-shadow: -5px -5px 16px var(--fancy-dark), 5px 5px 16px var(--fancy-light);
+  background: var(--btn-background2);
+  box-shadow: var(--box-shadow2);
   overflow: hidden;
   transition: .4s;
 }

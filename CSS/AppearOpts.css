@@ -27,7 +27,6 @@ For inquiries regarding licensing or permission to use this code in ways not cov
   z-index: -1;
 }
 
-
 textarea {
   font-family: arial, sans-serif;
   line-height: 1.3;
@@ -39,9 +38,6 @@ textarea {
   position: absolute;
   outline: 2px solid var(--my-accent-color);
   border-radius: 15px;
-  box-shadow:
-    7px 7px 16px var(--my-shadow-color4),
-   -7px -7px 16pxvar(--my-shadow-color1);
 }
 
 textarea.origText {
@@ -69,8 +65,8 @@ button {
   border: none;
   border-radius: 15px;
   color: var(--glow-txt-color);
-  background: linear-gradient(145deg, var(--my-shadow-color3), var(--my-shadow-color2));
-  box-shadow:  2px 2px 6px var(--my-shadow-color4), -2px -2px 6px var(--my-shadow-color1);
+  background: var(--btn-background);
+  box-shadow: var(--box-shadow1);
   text-shadow:
     1px 1px 1px var(--glow-outline-color),
    -1px -1px 1px var(--glow-outline-color),
@@ -80,8 +76,8 @@ button {
 
 button:active {
   transition: all 0.2s ease;
-  background: linear-gradient(145deg, var(--my-shadow-color2), var(--my-shadow-color3));
-  box-shadow: inset -2px -2px 6px var(--my-shadow-color1), inset 2px 2px 6px var(--my-shadow-color4);
+  background: var(--btn-backgroundx);
+  box-shadow: var(--box-shadow1x);
 }
 
 div#original.default button.orig {
@@ -142,61 +138,53 @@ div#original.default button.orig {
 #defaultColors {
   position: absolute;
   display: inline-block;
-  top: 515px;
-  left: 90px;
+  bottom: 65px;
+  left: 15px;
 }
 
 #presetGrey {
   position: absolute;
   display: inline-block;
-  top: 565px;
-  left: 90px;
+  bottom: 15px;
+  left: 15px;
 }
 
 #presetRed {
   position: absolute;
   display: inline-block;
-  top: 615px;
-  left: 90px;
+  bottom: 15px;
+  left: 170px;
 }
 
 #presetGreen {
   position: absolute;
   display: inline-block;
-  top: 665px;
-  left: 90px;
+  bottom: 65px;
+  left: 170px;
 }
 
 #presetPink {
   position: absolute;
   display: inline-block;
-  top: 715px;
-  left: 90px;
+  bottom: 65px;
+  left: 325px;
 }
 
 #ConsoleDefault {
   position: absolute;
   display: inline-block;
-  top: 765px;
-  left: 90px;
-}
-
-#shadMaker {
-  position: absolute;
-  display: inline-block;
-  top: 815px;
-  left: 90px;
+  bottom: 15px;
+  left: 325px;
 }
 
 #appearDiv {
   font-size: 18px;
-  top: 15px;
-  left: 150px;
-  height: 870px;
-  width: 600px;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
   position: absolute;
   display: inline-block;
-  padding: 15px;
   z-index: 9;
 }
 
@@ -204,9 +192,9 @@ div#original.default button.orig {
   position: absolute;
   display: inline-block;
   margin: 0px;
-  top: 25px;
-  left: 10px;
-  width: 300px;
+  top: 125px;
+  left: 40px;
+  width: 100px;
   text-align: center;
 }
 
@@ -214,9 +202,9 @@ div#original.default button.orig {
   position: absolute;
   display: inline-block;
   margin: 0px;
-  top: 110px;
-  left: 10px;
-  width: 300px;
+  top: 210px;
+  left: 40px;
+  width: 100px;
   text-align: center;
 }
 
@@ -224,9 +212,9 @@ div#original.default button.orig {
   position: absolute;
   display: inline-block;
   margin: 0px;
-  top: 195px;
-  left: 10px;
-  width: 300px;
+  top: 295px;
+  left: 40px;
+  width: 100px;
   text-align: center;
 }
 
@@ -234,9 +222,9 @@ div#original.default button.orig {
   position: absolute;
   display: inline-block;
   margin: 0px;
-  top: 280px;
-  left: 10px;
-  width: 300px;
+  top: 380px;
+  left: 40px;
+  width: 100px;
   text-align: center;
 }
 
@@ -244,9 +232,9 @@ div#original.default button.orig {
   position: absolute;
   display: inline-block;
   margin: 0px;
-  top: 365px;
-  left: 10px;
-  width: 300px;
+  top: 465px;
+  left: 40px;
+  width: 100px;
   text-align: center;
 }
 
@@ -254,9 +242,9 @@ div#original.default button.orig {
   position: absolute;
   display: inline-block;
   margin: 0px;
-  top: 450px;
-  left: 10px;
-  width: 300px;
+  top: 550px;
+  left: 40px;
+  width: 100px;
   text-align: center;
 }
 
@@ -264,9 +252,9 @@ div#original.default button.orig {
   position: absolute;
   display: inline-block;
   margin: 0px;
-  top: 25px;
-  right: 10px;
-  width: 300px;
+  top: 125px;
+  right: 40px;
+  width: 135px;
   text-align: center;
 }
 
@@ -274,19 +262,9 @@ div#original.default button.orig {
   position: absolute;
   display: inline-block;
   margin: 0px;
-  top: 110px;
-  right: 10px;
-  width: 300px;
-  text-align: center;
-}
-
-#fdPick {
-  position: absolute;
-  display: inline-block;
-  margin: 0px;
-  top: 195px;
-  right: 10px;
-  width: 300px;
+  top: 210px;
+  right: 40px;
+  width: 135px;
   text-align: center;
 }
 
@@ -294,9 +272,9 @@ div#original.default button.orig {
   position: absolute;
   display: inline-block;
   margin: 0px;
-  top: 280px;
-  right: 10px;
-  width: 300px;
+  top: 295px;
+  right: 40px;
+  width: 135px;
   text-align: center;
 }
 
@@ -304,9 +282,19 @@ div#original.default button.orig {
   position: absolute;
   display: inline-block;
   margin: 0px;
-  top: 365px;
-  right: 10px;
-  width: 300px;
+  top: 380px;
+  right: 40px;
+  width: 135px;
+  text-align: center;
+}
+
+#fdPick {
+  position: absolute;
+  display: inline-block;
+  margin: 0px;
+  top: 465px;
+  right: 40px;
+  width: 135px;
   text-align: center;
 }
 
@@ -314,9 +302,9 @@ div#original.default button.orig {
   position: absolute;
   display: inline-block;
   margin: 0px;
-  top: 450px;
-  right: 10px;
-  width: 300px;
+  top: 635px;
+  left: 20px;
+  width: 135px;
   text-align: center;
 }
 
@@ -324,9 +312,9 @@ div#original.default button.orig {
   position: absolute;
   display: inline-block;
   margin: 0px;
-  top: 535px;
-  right: 10px;
-  width: 300px;
+  top: 550px;
+  right: 40px;
+  width: 135px;
   text-align: center;
 }
 
@@ -334,9 +322,9 @@ div#original.default button.orig {
   position: absolute;
   display: inline-block;
   margin: 0px;
-  top: 620px;
-  right: 10px;
-  width: 300px;
+  top: 635px;
+  right: 40px;
+  width: 135px;
   text-align: center;
 }
 
@@ -344,8 +332,148 @@ div#original.default button.orig {
   position: absolute;
   display: inline-block;
   margin: 0px;
-  width: 300px;
-  top: 705px;
-  right: 10px;
+  width: 135px;
+  top: 720px;
+  left: 20px;
   text-align: center;
+}
+
+#userName {
+  width: 100px;
+}
+
+.input-with-buttons {
+  display: flex;
+  align-items: center;
+  background: none;
+  box-shadow: none;
+}
+
+.input-with-buttons button {
+  padding: 5px 10px;
+  display: initial;
+  position: initial;
+  font-size: 14px;
+  cursor: pointer;
+  background: #ddd;
+  color: black;
+  box-shadow: none;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  text-shadow: none;
+  &:hover {
+    background: #ccc;
+    box-shadow: none;
+    text-shadow: none;
+  }
+  &:active {
+    background: #A8A8A8;
+    text-shadow: none;
+    box-shadow: none;
+    transform: scale(.9);
+  }
+}
+
+.input-with-buttons input[type="number"] {
+  width: 35px;
+  padding: 5px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-align: center;
+  margin: 0 5px;
+}
+
+.css-property {
+  background: none;
+  box-shadow: none;
+  margin: 15px;
+}
+
+.prop-wrapper {
+  position: absolute;
+  display: flex;
+  top: 15px;
+  left: 170px;
+  background: none;
+  box-shadow: none;
+}
+
+.prop-wrapper2 {
+  position: absolute;
+  display: flex;
+  bottom: 180px;
+  left: 170px;
+  background: none;
+  box-shadow: none;
+}
+
+.toggleBox {
+  position: absolute;
+  display: inline-block;
+  top: 35px;
+  left: 30px;
+  background: none;
+  box-shadow: none;
+}
+
+.toggleBox input {
+  height: 16px;
+  width: 16px;
+}
+
+.displayPreview {
+  width:  450px;
+  height: 300px;
+  top: 100px;
+  left: 220px;
+  position: absolute;
+  display: inline-block;
+  background: var(--my-background-color);
+  box-shadow: none;
+  border: 2px solid var(--my-accent-color);
+  border-radius: 15px;
+}
+
+.previewBtn {
+  height: 80px;
+  width: 160px;
+  top: 115px;
+  left: 145px;
+  position: absolute;
+  display: inline-block;
+}
+
+.previewDiv {
+  width:  400px;
+  height: 270px;
+  top: 450px;
+  left: 250px;
+  position: absolute;
+  display: inline-block;
+  box-shadow: var(--box-shadow2);
+  background: var(--btn-background2);
+}
+
+.previewBtn2 {
+  height: 80px;
+  width: 160px;
+  top: calc(50% - 40px);
+  left: calc(50% - 80px);
+  position: absolute;
+  display: inline-block;
+  background: none;
+  box-shadow: none;
+  border: 2px solid var(--my-accent-color);
+  &:hover {
+    background: var(--hover-color);
+    box-shadow: none;
+    text-shadow: none;
+  }
+  &:active {
+    background: var(--active-color);
+    text-shadow: none;
+    box-shadow: none;
+  }
 }

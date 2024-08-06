@@ -103,9 +103,7 @@ option, select {
   margin: 200px 125px;
   padding: 15px;
   background: var(--fancy-background);
-  box-shadow:
-   inset 0px 0px 10px 4px var(--my-shadow-color2),
-   0px 12px 70px 14px black;
+  box-shadow: var(--altboxshad2);
   overflow: hidden;
 }
 
@@ -125,8 +123,8 @@ option, select {
   margin: auto;
   width: 70%;
   height: 50%; 
-  background: linear-gradient(315deg, var(--fancy-meddark), var(--fancy-medlight));
-  box-shadow: -5px -5px 16px var(--fancy-dark), 5px 5px 16px var(--fancy-light);
+  background: var(--btn-background2);
+  box-shadow: var(--box-shadow2);
 }
 
 .CS_top {
@@ -277,7 +275,7 @@ option, select {
 
 #swap1 {
   right: 0px;
-  top: 400px;
+  top: 450px;
   height: 60px;
   width: 40px;
   vertical-align: middle;
@@ -655,8 +653,8 @@ input:checked + .slider:before {
   margin: auto;
   width: 75%;
   height: 65%; 
-  background: linear-gradient(315deg, var(--fancy-meddark), var(--fancy-medlight));
-  box-shadow: -5px -5px 16px var(--fancy-dark), 5px 5px 16px var(--fancy-light);
+  background: var(--btn-background2);
+  box-shadow: var(--box-shadow2);
 }
 
 .module_top {
@@ -987,17 +985,4 @@ input:checked + .slider:before {
   width: 120px;
   height: 70px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 

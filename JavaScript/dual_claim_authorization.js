@@ -14,13 +14,15 @@
 //
 //For inquiries regarding licensing or permission to use this code in ways not covered by this license, please contact the author at adjusterconsole@gmail.com.
 
-document.getElementById("newAuthstarter").addEventListener('click', function(e) {
+document.getElementById("newAuthstarter").addEventListener('click', authStart); 
+
+function authStart() {
     if (document.getElementById("newauthSelect").checked) {
       auth_run('new');
     } else {
       auth_run('old');
     }
-});
+}
 
 function check_Ready() {
   const new_partsboxes = ['nauth1', 'nauth2', 'nauth3', 'nauth4', 'nauth5'];
@@ -92,8 +94,6 @@ function saveAuth() {
   }
 }
 
-
-
 function cancel_auth() {
   uncheck_All();
   resetChecks();
@@ -133,7 +133,6 @@ function show_oopc_option(x) {
   }
 }
 
-
 function auth_initialize(version) {
   if (!check_Ready()) { return; }
   
@@ -145,7 +144,7 @@ function auth_initialize(version) {
   const auth1Note = "Repair Facility Contact name: ";
   const auth2Note = "Verified failures using Repair Facility diagnostic";
   const auth3Note = " and inspection report";
-  const auth4Note = " and RF supplied photos";
+  const auth4Note = " and Repair Facility supplied photos";
   const auth5Note = "Contract has coverage for failed components.\r";
   const auth6Note = "Verified OEM parts using Forte and AM parts using PA.\r";
   const auth7Note = "Verified labor using Pro Demand.\r";
@@ -154,7 +153,7 @@ function auth_initialize(version) {
   const auth10Note = "Using Repair Facility parts at or under sourcing MCE.\r";
   const auth11Note = "Using sourcing MCE as a credit toward Repair Facility parts.\r";
   const auth12Note = "Using sourcing MCE as a credit toward Repair Facility parts or shipping in.\r";
-  const auth13Note = "Using Repair Facility's parts. Adjusted price to reasonable amount near MCE.\rThis was done considering all factors including claim delays, shipping costs, liability for future failures, time and mileage in coverage, number of prior claims and their cost, etc.\r";
+  const auth13Note = "Using Repair Facility's parts. The Price was adjusted to a reasonable amount near MCE.\rThis was done considering all factors including claim delays, shipping costs, liability for future failures, time and mileage in coverage, number of prior claims and their cost, etc.\r";
   const auth14Note = "No inspection needed as Repair Facility diagnostic matches CH concern.\r";
   const auth15Note = "Sent inspection to verify failures.\rReviewed report and inspection photos.\rInspection review note is completed.\r";
   const auth16Note = "Requested and reviewed photos from Repair Facility.\rPhoto review note is completed.\r";

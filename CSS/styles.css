@@ -1,0 +1,463 @@
+/*Restricted Use License Common
+
+This code is provided under the following terms and conditions:
+
+1. You are not allowed to use, copy, modify, merge, publish, distribute, sublicense, or sell copies of this code in any form, modified or unmodified, without express written permission from the author.
+
+2. You are not allowed to use this code for any illegal or unethical purpose.
+
+3. This license applies to all versions of the code previously released, as well as all future versions. Any prior statements made about permission given are hereby revoked.
+
+4. This code is provided "as is", without warranty of any kind, express or implied. The author shall not be liable for any damages arising from the use of this code.
+
+By using this code, you agree to abide by these terms and conditions. Failure to comply with these terms may result in legal action.
+
+For inquiries regarding licensing or permission to use this code in ways not covered by this license, please contact the author at AdjusterConsole@gmail.com.  */
+
+.container * {
+  all: revert;
+}
+
+.container div {
+  box-shadow: none;
+  background: none;
+}
+
+.container {
+  position: absolute;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  top: 0px;
+  left: 0px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-sizing: border-box;
+}
+
+.container h1{
+  text-align: center;
+  margin-top:0px;
+}
+
+.container .input-group {
+  float: left;
+  width: 25%;
+  margin-left: 5px;
+  margin-bottom: 15px;
+  margin-top: 55px;
+  clear: left;
+}
+
+.container .nameInputDiv.input-group {
+  position: absolute;
+  display: inline-block;
+  top: 30px;
+  left: 20px;
+  margin-top:0px;
+}
+
+.container .button-class {
+  position: absolute;
+  width: 275px;
+  top: 50px;
+  right: 20px
+}
+
+.button-class button {
+  width: 45%;
+  margin: 10px 5px;
+}
+
+.container label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.container .hex-input {
+  display: flex;
+  align-items: center;
+  width: 120px;
+  margin-bottom: 10px;
+}
+
+.container input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-right: 10px;
+}
+
+.container .rgb-inputs {
+  display: flex;
+  align-items: center;
+  width: calc(80% + 10px); 
+}
+
+.picker-inputs input[type="color"] {
+  margin-bottom: 10px;
+}
+
+.rgb-inputs input[type="text"] {
+  width: 100%;
+}
+
+.container .rgb-label {
+  margin-right: 5px;
+  width: 20px; 
+}
+
+.container #moreButton {
+  left: 34px;
+  top: 220px;
+  position: absolute;
+}
+
+.container .slider-container {
+  position: absolute;
+  bottom: 240px;
+  right: 20px;
+  width: 30%;
+  height: auto;
+}
+
+.container .slider-inner {
+  display: block;
+  height: 80px;
+  width: 100%;
+}
+
+.container .slider-left {
+  width: 100%;
+}
+
+.container .slider-right {
+  width: 100%;
+}
+
+.container .slider {
+  appearance: none;
+  width: 90%;
+  height: 8px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  transition: opacity .15s ease-in-out;
+  margin-bottom: 15px;
+}
+
+.container .slider:hover {
+  opacity: 1;
+}
+
+.container .slider::-webkit-slider-thumb {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #2196F3;
+  cursor: pointer;
+}
+
+.container .slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #2196F3;
+  cursor: pointer;
+}
+
+.container .isButtons {
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: 2px solid black;
+  background: rgba(0,0,0,.3);
+  box-shadow:
+    0px 2px 5px rgba(0,0,0,0.2),
+    0px 5px 7px rgba(0,0,0,0.3),
+    0px 10px 10px rgba(0,0,0,0.4);
+  color: white;
+  text-shadow:
+    1px 1px 1px black,
+    -1px -1px 1px black,
+    -1px 1px 1px black,
+    1px -1px 1px black;
+&:hover {
+  background: rgba(0,0,0,.5);
+  }
+&:active {
+  transform: scale(.98);
+  }
+}
+
+.container .controlButtonClass {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 320px;
+  bottom: 30px;
+  right: 30px;
+}
+
+.container .modifier-buttons {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 180px;
+  bottom: 370px;
+  right: 220px;
+}
+
+.container .isButtons.controllers {
+  width: 150px;
+  height: 50px;
+}
+
+.container .color-box-box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  position: absolute;
+  left: 10px;
+  bottom: 180px;
+  width: 420px;
+}
+
+.container .box {
+  margin: 5px;
+  padding: 5px;
+  width: 20%;
+  text-align: center;
+  display: inline-block;
+  border-radius: 8px;
+}
+
+.container .color {
+  text-align: center;
+  width: 100px;
+  height: 30px;
+  border-radius: 8px;
+  border: 1px solid black;
+}
+
+.container .color-name {
+  text-align: center;
+  font-size: 10px;
+  color: white;
+  text-shadow:
+    1px 1px 1px black,
+    -1px -1px 1px black,
+    -1px 1px 1px black,
+    1px -1px 1px black;
+}
+
+.container #colorPicker {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}
+
+.container .css-generator {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.container .css-wrapper {
+  position: absolute;
+  top: 230px;
+  right: 30px;
+  width: 130px;
+}
+
+.container .css-generator h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.container .css-property {
+  margin-bottom: 10px;
+}
+
+.container .input-with-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.input-with-buttons button {
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: #ddd;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+}
+
+.input-with-buttons button:hover {
+  background-color: #ccc;
+}
+
+.input-with-buttons input[type="number"] {
+  width: 35px;
+  padding: 5px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-align: center;
+  margin: 0 5px;
+}
+
+.css-property textarea {
+  position: absolute;
+  display: inline-block;
+  width: 55%;
+  margin: 15px;
+  top: 760px;
+}
+
+.container .output-box {
+  display: block;
+  height:  80px;
+  width:  160px;
+  top: 270px;
+  left: 350px;
+  position: absolute;
+  display: inline-block;
+  border-radius: 8px;
+}
+
+.container #userName {
+  width: 150px;
+}
+
+.container .auxColors {
+  display: block;
+  margin: 5px;
+}
+
+.container .presetButtonClass {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  width: 400px;
+  flex-direction: row;
+  justify-content: space-between;
+  gap:20px;
+  left: 20px;
+  bottom:20px;
+}
+
+.presetButtonClass button {
+  width: 120px;
+}
+
+.container .checkboxToggles {
+  position: absolute;
+  display: inline-block;
+  bottom: 120px;
+  right: 270px;
+  font-size: 18px;
+  white-space: nowrap;
+}
+
+.container .switch {
+  position: relative;
+  display: inline-block;
+  width: 29px;
+  height: 15px;
+}
+
+.container .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.container .slider1 {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+}
+
+.container .sd {
+  display: block;
+  margin: 5px;
+  margin-left: 0px;
+  float: left;
+}
+
+.container .slider1:before {
+  position: absolute;
+  content: "";
+  height: 13px;
+  width: 13px;
+  left: 1px;
+  bottom: 1px;
+  background-color: white;
+  transition: .4s;
+}
+
+input:checked + .slider1 {
+  background-color: #2196F3;
+}
+
+input:focus + .slider1 {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider1:before {
+  transform: translateX(13px);
+}
+
+.slider1.round {
+  border-radius: 13px;
+}
+
+.slider1.round:before {
+  border-radius: 50%;
+}
+
+.container .spacer {
+margin-left: 35px;
+}
+
+.container .switches {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
