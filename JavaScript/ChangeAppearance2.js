@@ -102,6 +102,8 @@ function getPicker() {
   previewDiv.style.boxShadow = colorSet.boxShadow2;
   document.getElementById('previewBtn2').style.borderColor = colorSet.accent;
 
+  document.getElementById('appearDiv').style.background = colorSet.lightbackground;
+
   localStorage.setItem("colorSet2", JSON.stringify(colorSet)); 
 }
 
