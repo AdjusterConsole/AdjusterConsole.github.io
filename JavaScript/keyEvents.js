@@ -40,6 +40,9 @@ document.addEventListener('keyup', function(e) {
   if (e.ctrlKey && e.altKey && e.shiftKey && e.key === 'F') {
     saintMullet();
   }
+ if (e.ctrlKey && e.altKey && e.shiftKey && e.key === 'K') {
+    forteFun();
+  }
 });
 
 //document.addEventListener('contextmenu', function(e) {
@@ -192,7 +195,20 @@ function stopWatch() {
   } 
 }
 
+function forteFun() {
+  localstorage.setItem('forteFun', 'fun');
+  setTimeout(endFun, 4000);
+}
+
+function endFun() {
+  localstorage.setItem('forteFun', 'nofun');
+}
+
 function saintMullet() {
+  const isItFun = localstorage.getItem('forteFun');
+  if (isItFun !== 'fun') {
+    return;
+  }
   const img = document.createElement('img');
   img.src = 'ForteGuy.png'; 
   img.style.position = 'fixed';
