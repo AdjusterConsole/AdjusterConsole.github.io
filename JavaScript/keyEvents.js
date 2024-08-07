@@ -37,7 +37,7 @@ document.addEventListener('keyup', function(e) {
   if (e.ctrlKey && e.altKey && e.shiftKey && e.key === 'M') {
     downloadAndProcessLatestFile();
   }
-  if (e.ctrlKey && e.altKey && e.shiftKey && e.key === 'K') {
+  if (e.ctrlKey && e.altKey && e.shiftKey && e.key === 'F') {
     saintMullet();
   }
 });
