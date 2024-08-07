@@ -188,7 +188,7 @@ div#original.default button.orig {
   z-index: 9;
 }
 
-#appearDiv * {
+.whatIsLife {
   color: var(--glow-txt-color);
   text-shadow:
     1px 1px 1px var(--glow-outline-color),
@@ -367,10 +367,10 @@ div#original.default button.orig {
   background: #ddd;
   color: black;
   box-shadow: none;
+  text-shadow: none;
   border: none;
   outline: none;
   border-radius: 4px;
-  text-shadow: none;
   &:hover {
     background: #ccc;
     box-shadow: none;
@@ -378,8 +378,8 @@ div#original.default button.orig {
   }
   &:active {
     background: #A8A8A8;
-    text-shadow: none;
     box-shadow: none;
+    text-shadow: none;
     transform: scale(.9);
   }
 }
