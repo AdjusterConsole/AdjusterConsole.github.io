@@ -188,6 +188,15 @@ div#original.default button.orig {
   z-index: 9;
 }
 
+#appearDiv * {
+  color: var(--glow-txt-color);
+  text-shadow:
+    1px 1px 1px var(--glow-outline-color),
+   -1px -1px 1px var(--glow-outline-color),
+   -1px 1px 1px var(--glow-outline-color),
+    1px -1px 1px var(--glow-outline-color);
+}
+
 #BGpick {
   position: absolute;
   display: inline-block;
