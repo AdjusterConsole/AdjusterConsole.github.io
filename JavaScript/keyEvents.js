@@ -193,24 +193,20 @@ function stopWatch() {
 }
 
 function saintMullet() {
-  console.log('Key combination pressed');
-
   const img = document.createElement('img');
-  img.src = 'SaintMullet.png'; // Image located in the root folder
+  img.src = 'ForteGuy.png'; 
   img.style.position = 'fixed';
   img.style.top = '50%';
   img.style.left = '50%';
   img.style.transform = 'translate(-50%, -50%) scale(0.1)';
   img.style.transition = 'transform 0.2s ease';
-  img.style.visibility = 'hidden'; // Hide the image initially
+  img.style.visibility = 'hidden'; 
   img.style.zIndex = '9999999999';
   document.body.appendChild(img);
-  console.log('Image element created and appended');
   setTimeout(() => {
-    img.style.visibility = 'visible'; // Make the image visible
+    img.style.visibility = 'visible'; 
     const sizes = ['scale(0.1)', 'scale(1)', 'scale(0.1)', 'scale(1)', 'scale(0.1)', 'scale(1)', 'scale(0.1)', 'scale(1)'];
     let index = 0;
-
     function animate() {
       img.style.transform = `translate(-50%, -50%) ${sizes[index]}`;
       index++;
@@ -222,8 +218,7 @@ function saintMullet() {
         }, 200);
       }
     }
-
   animate();
-  }, 100); // Delay to ensure visibility change is registered
+  }, 100);
 }
 
