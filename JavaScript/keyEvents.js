@@ -196,16 +196,16 @@ function stopWatch() {
 }
 
 function forteFun() {
-  localstorage.setItem('forteFun', 'fun');
+  localStorage.setItem('forteFun', 'fun');
   setTimeout(endFun, 4000);
 }
 
 function endFun() {
-  localstorage.setItem('forteFun', 'nofun');
+  localStorage.setItem('forteFun', 'nofun');
 }
 
 function saintMullet() {
-  const isItFun = localstorage.getItem('forteFun');
+  const isItFun = localStorage.getItem('forteFun');
   if (isItFun !== 'fun') {
     return;
   }
