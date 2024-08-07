@@ -104,6 +104,11 @@ function getPicker() {
 
   document.getElementById('appearDiv').style.background = colorSet.lightbackground;
 
+  const forTheGram = document.getElementsByClassName('whatIsLife');
+  for(let i = 0; i < forTheGram.length; i++) {
+    forTheGram[i].style.color = colorSet.text;
+    forTheGram[i].style.textShadow = `1px 1px 1px ${colorSet.outline}, -1px -1px 1px ${colorSet.outline}, -1px 1px 1px ${colorSet.outline}, 1px -1px 1px ${colorSet.outline}`;
+  }
   localStorage.setItem("colorSet2", JSON.stringify(colorSet)); 
 }
 
@@ -435,6 +440,10 @@ document.getElementById("md-picker").addEventListener('input', getPicker);
 document.getElementById("fd-picker").addEventListener('input', getPicker);
 document.getElementById("bg2-picker").addEventListener('input', getPicker);
 
+document.getElementById("nameGlow").addEventListener('input', getPicker);
+document.getElementById("nameColor").addEventListener('input', getPicker);
+document.getElementById("outlineColor").addEventListener('input', getPicker);
+
 xOffsetInput.addEventListener('input', getPicker);
 yOffsetInput.addEventListener('input', getPicker);
 blurInput.addEventListener('input', getPicker);
@@ -502,6 +511,10 @@ document.getElementById("ml-picker").removeEventListener('input', getPicker);
 document.getElementById("md-picker").removeEventListener('input', getPicker);
 document.getElementById("fd-picker").removeEventListener('input', getPicker);
 document.getElementById("bg2-picker").removeEventListener('input', getPicker);
+
+document.getElementById("nameGlow").removeEventListener('input', getPicker);
+document.getElementById("nameColor").removeEventListener('input', getPicker);
+document.getElementById("outlineColor").removeEventListener('input', getPicker);
 
 xOffsetInput.removeEventListener('input', getPicker);
 yOffsetInput.removeEventListener('input', getPicker);
