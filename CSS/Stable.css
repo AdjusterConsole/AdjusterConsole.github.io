@@ -649,3 +649,12 @@ input[type="color"] {
 .exit-effect {
   animation: blurAndFade 1.5s ease-in-out forwards;
 }
+
+.splashImg {
+  width: 103%;
+  height: 103%;
+  position: fixed;
+  top: -15px;
+  left: -15px;
+  z-index: 1000; 
+}
