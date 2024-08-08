@@ -1179,7 +1179,7 @@ window.onload = function PutItBack() {
   splashImage.style.position = "fixed";
   splashImage.style.top = "-15px";
   splashImage.style.left = "-15px";
-  splashImage.style.zIndex = "1000"; /
+  splashImage.style.zIndex = "1000"; 
   document.body.appendChild(splashImage);
 
   setTimeout(function() {
