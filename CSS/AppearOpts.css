@@ -404,7 +404,7 @@ div#original.default button.orig {
   position: absolute;
   display: flex;
   top: 15px;
-  left: 170px;
+  left: 190px;
   background: none;
   box-shadow: none;
 }
@@ -412,8 +412,8 @@ div#original.default button.orig {
 .prop-wrapper2 {
   position: absolute;
   display: flex;
-  bottom: 180px;
-  left: 170px;
+  top: 750px;
+  left: 190px;
   background: none;
   box-shadow: none;
 }
@@ -436,7 +436,7 @@ div#original.default button.orig {
   width:  450px;
   height: 300px;
   top: 100px;
-  left: 220px;
+  left: 240px;
   position: absolute;
   display: inline-block;
   background: var(--my-background-color);
@@ -458,7 +458,7 @@ div#original.default button.orig {
   width:  400px;
   height: 270px;
   top: 450px;
-  left: 250px;
+  left: 270px;
   position: absolute;
   display: inline-block;
   box-shadow: var(--box-shadow2);
