@@ -1172,6 +1172,24 @@ function toggleConductor(boxId) {
 }
 
 window.onload = function PutItBack() {
+  var splashImage = document.createElement("img");
+  splashImage.src = "splashLogo.png";
+  splashImage.style.width = "103%";
+  splashImage.style.height = "103%";
+  splashImage.style.position = "fixed";
+  splashImage.style.top = "-15px";
+  splashImage.style.left = "-15px";
+  splashImage.style.zIndex = "1000"; /
+  document.body.appendChild(splashImage);
+
+  setTimeout(function() {
+    splashImage.classList.add("exit-effect");
+  }, 500);
+      
+  splashImage.addEventListener('transitionend', function() {
+    document.body.removeChild(splashImage);
+  });
+
   const authMode = localStorage.getItem('authMode');
   if (authMode === 'newAuth') {
     document.getElementById('newauthSelect').checked = true;
