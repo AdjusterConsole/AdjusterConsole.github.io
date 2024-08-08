@@ -523,7 +523,7 @@ th:empty, td:empty {
 }
 
 .inptTbl input {
-  background: var(--fancy-background);
+  background: none;
   font-weight: 700;
   font-size: 17px;
   width: 150px;

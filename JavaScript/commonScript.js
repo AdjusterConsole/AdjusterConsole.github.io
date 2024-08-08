@@ -26,6 +26,8 @@ function openInfo2(evt, cityName) {
   }
   document.getElementById(cityName).style.display = "block";
   evt.currentTarget.className += " active";
+  resetMD();
+  resetGuide();
 }
 
 function closeResource2() {
@@ -314,6 +316,7 @@ function resetMD() {
   const mileRadios = document.getElementsByClassName("mdguide");
   for (let i = 0; i < mileRadios.length; i++) {
     mileRadios[i].checked = false;
+    mileRadios[i].disabled = false;
   }
   document.getElementById('mileageCalc').style.display = "none";
   document.getElementById('crReview').style.display = "none";
@@ -321,6 +324,13 @@ function resetMD() {
   document.getElementById('proceed').style.display = "none";
   document.getElementById('under90hmpd').style.display = "none";
   document.getElementById('MileDiscrep1').style.display = "block";
+}
+
+function mileageRadio(name) {
+  let usedBtn = document.getElementsByName(name);
+  for (let i = 0; i < usedBtn.length; i++) {
+    usedBtn[i].disabled = true;
+  }
 }
 
 function resetGuide() {

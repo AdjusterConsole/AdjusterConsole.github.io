@@ -494,7 +494,7 @@ body {
   </div>
 
   <div class="toggleBox">
-      <label for="shadDouble" class="whatIsLife">Dual<Br>Shadows</label>
+      <label for="shadDouble">Dual<Br>Shadows</label>
     <input type="checkbox" id="shadDouble" onclick="getPicker()" checked>
   </div>
 
@@ -1213,31 +1213,31 @@ TIME:&nbsp&nbsp</textarea>
     <h3 class="headerTab">Mileage Discrepancies</h3>
     <div id="MileDiscrep1" class="mileage noShow">
       <p><b>Is the contract a Term contract or a Month-to-Month Contract?</b>
-        <input type="radio" class="mdguide" id="md1" name="discrep1"><label for="md1" style="float:right;" required><b>Term</b></label><br>
-        <input type="radio" class="mdguide" id="md2" name="discrep1"><label for="md2" style="float:right;" required><b>M-2-M</b></label>
+        <input type="radio" class="mdguide" id="md1" name="discrep1" onclick="mileageRadio(this.name)"><label for="md1" style="float:right;" required><b>Term</b></label><br>
+        <input type="radio" class="mdguide" id="md2" name="discrep1" onclick="mileageRadio(this.name)"><label for="md2" style="float:right;" required><b>M-2-M</b></label>
       </p><br>
       <p><b>Is the vehicle over 90 days in coverage?</b>
-        <input type="radio" class="mdguide" id="md3" name="discrep2"><label for="md3" style="float:right;" required><b>Yes</b></label><br>
-        <input type="radio" class="mdguide" id="md4" name="discrep2"><label for="md4" style="float:right;" required><b>No</b></label>
+        <input type="radio" class="mdguide" id="md3" name="discrep2" onclick="mileageRadio(this.name)"><label for="md3" style="float:right;" required><b>Yes</b></label><br>
+        <input type="radio" class="mdguide" id="md4" name="discrep2" onclick="mileageRadio(this.name)"><label for="md4" style="float:right;" required><b>No</b></label>
       </p><br>
       <p><b>What kind of mileage discrepancy is being reviewed?</b><br>
-        <input type="radio" class="mdguide" id="md5" name="discrep3"><label id="md5" style="float:right;" required><b>Negative Mileage</b></label><br>
-        <input type="radio" class="mdguide" id="md6" name="discrep3"><label id="md6" style="float:right;" required><b>Proven Inaccurate Start Mileage</b></label><br>
-        <input type="radio" class="mdguide" id="md7" name="discrep3"><label id="md7" style="float:right;" required><b>Mileage Unknown/Rollback/Inop ODO</b></label><br>
-        <input type="radio" class="mdguide" id="md8" name="discrep3"><label id="md8" style="float:right;" required><b>High Mileage Per Day</b></label>
+        <input type="radio" class="mdguide" id="md5" name="discrep3" onclick="mileageRadio(this.name)"><label id="md5" style="float:right;" required><b>Negative Mileage</b></label><br>
+        <input type="radio" class="mdguide" id="md6" name="discrep3" onclick="mileageRadio(this.name)"><label id="md6" style="float:right;" required><b>Proven Inaccurate Start Mileage</b></label><br>
+        <input type="radio" class="mdguide" id="md7" name="discrep3" onclick="mileageRadio(this.name)"><label id="md7" style="float:right;" required><b>Mileage Unknown/Rollback/Inop ODO</b></label><br>
+        <input type="radio" class="mdguide" id="md8" name="discrep3" onclick="mileageRadio(this.name)"><label id="md8" style="float:right;" required><b>High Mileage Per Day</b></label>
       </p><br>
     </div>
     <div id="under90hmpd" class="mileage noShow" style="display:none;">
       <p><b>Does the contract have the <b>Commercial</b> or <b>Ride Share</b> surcharge?</b>
-        <input type="radio" onclick="proceed()" class="mdguide" id="md9" name="discrep4"><label for="md9" style="float:right;" required><b>Yes</b></label><br>
-        <input type="radio" onclick="noride()" class="mdguide" id="md10" name="discrep4"><label for="md10" style="float:right;" required><b>No</b></label>
+        <input type="radio" onclick="proceed()" class="mdguide" id="md9" name="discrep4" onclick="mileageRadio(this.name)><label for="md9" style="float:right;" required><b>Yes</b></label><br>
+        <input type="radio" onclick="noride()" class="mdguide" id="md10" name="discrep4" onclick="mileageRadio(this.name)><label for="md10" style="float:right;" required><b>No</b></label>
       </p>
     </div>
     <div id="norideshare" class="mileage noShow" style="display:none;">
       <p>Contact the customer and ask about usage for potential Commercial/Rideshare use.<br>
       <b>Did the customer admit to commercial or Ride Share use?</b>
-        <input type="radio" onclick="crReview()" class="mdguide" id="md11" name="discrep4"><label for="md11" style="float:right;" required><b>Yes</b></label><br>
-        <input type="radio" onclick="mileageCalc()" class="mdguide" id="md12" name="discrep4"><label for="md12" style="float:right;" required><b>No</b></label>
+        <input type="radio" onclick="crReview()" class="mdguide" id="md11" name="discrep5" onclick="mileageRadio(this.name)><label for="md11" style="float:right;" required><b>Yes</b></label><br>
+        <input type="radio" onclick="mileageCalc()" class="mdguide" id="md12" name="discrep5" onclick="mileageRadio(this.name)><label for="md12" style="float:right;" required><b>No</b></label>
       </p>
     </div>
     <div id="proceed" class="mileage noShow" style="display:none;">
@@ -2598,15 +2598,15 @@ TIME:&nbsp&nbsp</textarea>
   <button id="sizeCancel" class="bones" onclick="sizeSubmit()">Exit</button>
 </div>
 
-<script src="JavaScript/snipDiv.js?v=1515545151514"></script>
-<script src="JavaScript/keyEvents.js?v=1515545151514"></script>
-<script src="JavaScript/OGLAYOUTJS.js?v=1515545151514"></script>
-<script src="JavaScript/dual_claim_authorization.js?v=1515545151514"></script>
-<script src="JavaScript/ChangeAppearance2.js?v=1515545151514"></script>
-<script src="JavaScript/commonScript.js?v=1515545151514"></script>
-<script src="JavaScript/jsonParse.js?v=1515545151514"></script>
-<script src="JavaScript/ContextMenu.js?v=1515545151514"></script>
-<script src="JavaScript/laborRate.js?v=1515545151514"></script>
-<script src="JavaScript/trackerScript.js?v=1515545151514"></script>
+<script src="JavaScript/snipDiv.js?v=1292383766234"></script>
+<script src="JavaScript/keyEvents.js?v=1292383766234"></script>
+<script src="JavaScript/OGLAYOUTJS.js?v=1292383766234"></script>
+<script src="JavaScript/dual_claim_authorization.js?v=1292383766234"></script>
+<script src="JavaScript/ChangeAppearance2.js?v=1292383766234"></script>
+<script src="JavaScript/commonScript.js?v=1292383766234"></script>
+<script src="JavaScript/jsonParse.js?v=1292383766234"></script>
+<script src="JavaScript/ContextMenu.js?v=1292383766234"></script>
+<script src="JavaScript/laborRate.js?v=1292383766234"></script>
+<script src="JavaScript/trackerScript.js?v=1292383766234"></script>
 </body>
 </html>
