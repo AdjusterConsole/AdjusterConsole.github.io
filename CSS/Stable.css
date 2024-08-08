@@ -640,9 +640,12 @@ input[type="color"] {
     opacity: 1;
     filter: blur(5px);
   }
-  100% {
+  99% {
     opacity: 0;
     filter: blur(10px);
+  }
+  100% {
+    z-index: -999999;
   }
 }
 
