@@ -1176,7 +1176,7 @@ window.onload = function PutItBack() {
 
   setTimeout(function() {
     splashImage.classList.add("exit-effect");
-  }, 500);
+  }, 1000);
       
   splashImage.addEventListener('transitionend', function() {
     document.body.removeChild(splashImage);
