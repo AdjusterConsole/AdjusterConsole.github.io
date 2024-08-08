@@ -1177,12 +1177,7 @@ window.onload = function PutItBack() {
   setTimeout(function() {
     splashImage.classList.add("exit-effect");
   }, 1000);
-      
-  splashImage.addEventListener('transitionend', function() {
-    document.body.removeChild(splashImage);
-  });
-
-
+  
   const authMode = localStorage.getItem('authMode');
   if (authMode === 'newAuth') {
     document.getElementById('newauthSelect').checked = true;
