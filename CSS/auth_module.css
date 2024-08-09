@@ -86,7 +86,7 @@ For inquiries regarding licensing or permission to use this code in ways not cov
   background: none;
   box-shadow: none;
   border: 2px solid var(--my-accent-color);
-  border-radius: 5px;
+  border-radius: var(--radius2);
   bottom: 0px;
 &:hover {
     background: rgba(0,0,0,0.15);

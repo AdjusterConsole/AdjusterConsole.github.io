@@ -714,7 +714,7 @@ input:checked + .slider:before {
   margin: 5px 5px 5px 75px;
   border: none;
   background: none;
-  border-radius: 5px;
+  border-radius: var(--radius2);
   padding: 10px 15px;
   box-shadow: none;
   font-size: 17px;
@@ -750,7 +750,7 @@ input:checked + .slider:before {
   position: relative;
   margin-bottom: 7px;
   padding: 3px 10px 3px 10px;
-  border-radius: 5px;
+  border-radius: var(--radius2);
   text-shadow: none;
   color: var(--my-glow-outline);
   border: 2px solid var(--my-accent-color);

@@ -26,7 +26,7 @@ f {
 
 div {
   background: var(--my-accent-color);
-  border-radius: 5px;
+  border-radius: var(--radius2);
   box-shadow:
   inset 0px 0px 10px 4px var(--my-shadow-color2),
   0px 12px 70px 14px black;
@@ -202,7 +202,7 @@ input[type="color"] {
   padding: 10px;
   margin: 0px;
   border: none;
-  border-radius: 15px;
+  border-radius: var(--radius);
   color: var(--glow-txt-color);
   background: var(--btn-background);
   box-shadow: var(--box-shadow1);
@@ -466,7 +466,7 @@ input[type="color"] {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 5px;
+  border-radius: var(--radius2);
   transition: top 0.4s ease-in-out;
   box-shadow:none;
   z-index:1000000;

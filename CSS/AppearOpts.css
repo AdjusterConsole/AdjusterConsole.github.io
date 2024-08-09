@@ -37,11 +37,11 @@ textarea {
   display: inline-block;
   position: absolute;
   outline: 2px solid var(--my-accent-color);
-  border-radius: 15px;
+  border-radius: var(--radius);
 }
 
 textarea.origText {
- border-radius: 5px;
+ border-radius: var(--radius2);
  outline: none;
   box-shadow:
   inset -1px -1px 2px var(--my-shadow-color2),
@@ -63,7 +63,7 @@ button {
   padding: 10px;
   margin: 0px;
   border: none;
-  border-radius: 15px;
+  border-radius: var(--radius);
   color: var(--glow-txt-color);
   background: var(--btn-background);
   box-shadow: var(--box-shadow1);
@@ -81,7 +81,7 @@ button:active {
 }
 
 div#original.default button.orig {
-  border-radius: 5px;
+  border-radius: var(--radius2);
   color: black;
   background: linear-gradient(165deg,
     var(--my-accent-color) 8%,
@@ -112,7 +112,7 @@ div#original.default button.orig {
   border: 2px solid var(--my-accent-color);
   background: none;
   box-shadow: none;
-  border-radius: 5px;
+  border-radius: var(--radius2);
 }
 
 #setColors {
@@ -399,7 +399,7 @@ div#original.default button.orig {
 }
 
 .input-with-buttons input[type="number"] {
-  width: 35px;
+  width: 38px;
   padding: 5px;
   font-size: 14px;
   border: 1px solid #ccc;
@@ -432,6 +432,24 @@ div#original.default button.orig {
   box-shadow: none;
 }
 
+.prop-wrapper3 {
+  position: absolute;
+  display: flex;
+  top: 100px;
+  left: calc(50% - 140px);
+  background: none;
+  box-shadow: none;
+}
+
+.prop-wrapper4 {
+  position: absolute;
+  display: flex;
+  top: 665px;
+  left: calc(50% - 140px);
+  background: none;
+  box-shadow: none;
+}
+
 .toggleBox {
   position: absolute;
   display: inline-block;
@@ -456,7 +474,7 @@ div#original.default button.orig {
   background: var(--my-background-color);
   box-shadow: none;
   border: 2px solid var(--my-accent-color);
-  border-radius: 15px;
+  border-radius: var(--radius);
 }
 
 .previewBtn {
