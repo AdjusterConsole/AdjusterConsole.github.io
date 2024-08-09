@@ -112,6 +112,7 @@ function getPicker() {
   previewDiv.style.boxShadow = colorSet.boxShadow2;
   previewDiv.style.borderRadius = colorSet.radius2;
   document.getElementById('previewBtn2').style.borderColor = colorSet.accent;
+  document.getElementById('previewBtn2').style.borderRadius = colorSet.radius2;
 
   document.getElementById('appearDiv').style.background = colorSet.lightbackground;
 
