@@ -38,6 +38,10 @@ function colorObject() {
   this.boxShadow1x = 'inset -2px -2px 6px 0px var(--my-shadow-color1), inset 2px 2px 6px 0px var(--my-shadow-color4)';
   this.btnBackground2 = 'linear-gradient(315deg, var(--fancy-meddark), var(--fancy-medlight))';
   this.boxShadow2 = '-5px -5px 16px 0px var(--fancy-dark), 5px 5px 16px 0px var(--fancy-light)';
+  this.radius = '15px';
+  this.radius2 = '5px';
+  this.angle = '145deg';
+  this.angle2 = '315deg';
 }
 
 function sanitizeInput(value) {
@@ -64,16 +68,21 @@ function getPicker() {
   colorSet.meddark = sanitizeInput(document.getElementById("md-picker").value);
   colorSet.dark = sanitizeInput(document.getElementById("fd-picker").value);
   colorSet.lightbackground = sanitizeInput(document.getElementById("bg2-picker").value);
+  colorSet.radius = parseInt(sanitizeInput(document.getElementById("radius").value)) + 'px';
+  colorSet.radius2 = parseInt(sanitizeInput(document.getElementById("radius2").value)) + 'px';
+  colorSet.angle = parseInt(sanitizeInput(document.getElementById("angle").value)) + 'deg';
+  colorSet.angle2 = parseInt(sanitizeInput(document.getElementById("angle2").value)) + 'deg';
 
   const xOffset = sanitizeInput(document.getElementById("x-offset").value);
   const yOffset = sanitizeInput(document.getElementById("y-offset").value);
   const blur = sanitizeInput(document.getElementById("blur").value);
   const spread = sanitizeInput(document.getElementById("spread").value);
+
   const shadDouble = document.getElementById("shadDouble");
 
-  colorSet.btnBackground = `linear-gradient(145deg, ${colorSet.shadow3}, ${colorSet.shadow2})`;
-  colorSet.btnBackgroundx = `linear-gradient(145deg, ${colorSet.shadow2}, ${colorSet.shadow3})`;
-  colorSet.btnBackground2 = `linear-gradient(315deg, ${colorSet.meddark}, ${colorSet.medlight})`;
+  colorSet.btnBackground = `linear-gradient(${colorSet.angle}, ${colorSet.shadow3}, ${colorSet.shadow2})`;
+  colorSet.btnBackgroundx = `linear-gradient(${colorSet.angle}, ${colorSet.shadow2}, ${colorSet.shadow3})`;
+  colorSet.btnBackground2 = `linear-gradient(${colorSet.angle2}, ${colorSet.meddark}, ${colorSet.medlight})`;
 
   colorSet.boxShadow1 = `${xOffset}px ${yOffset}px ${blur}px ${spread}px ${colorSet.shadow4}`; 
   if(shadDouble.checked) {
@@ -95,11 +104,13 @@ function getPicker() {
   const previewBtn = document.getElementById('previewBtn');
   previewBtn.style.background = colorSet.btnBackground;
   previewBtn.style.boxShadow = colorSet.boxShadow1;
+  previewBtn.style.borderRadius = colorSet.radius;
   document.getElementById('displayPreviewDiv').style.background = colorSet.background;
 
   const previewDiv = document.getElementById('previewDiv');
   previewDiv.style.background = colorSet.btnBackground2;
   previewDiv.style.boxShadow = colorSet.boxShadow2;
+  previewDiv.style.borderRadius = colorSet.radius2;
   document.getElementById('previewBtn2').style.borderColor = colorSet.accent;
 
   document.getElementById('appearDiv').style.background = colorSet.lightbackground;
@@ -122,17 +133,26 @@ function setPicker() {
   document.getElementById("shad2-picker").value = colorSet.shadow2 || '';
   document.getElementById("shad3-picker").value = colorSet.shadow3 || '';
   document.getElementById("shad4-picker").value = colorSet.shadow4 || '';
-  if (colorSet.username != null) {
-    document.getElementById("userName").value = colorSet.username;
-  }
+
   document.getElementById("nameGlow").value = colorSet.glow || '';
   document.getElementById("nameColor").value = colorSet.text || '';
   document.getElementById("outlineColor").value = colorSet.outline || '';
+
   document.getElementById("fl-picker").value = colorSet.light || '';
   document.getElementById("ml-picker").value = colorSet.medlight || '';
   document.getElementById("md-picker").value = colorSet.meddark || '';
   document.getElementById("fd-picker").value = colorSet.dark || '';
   document.getElementById("bg2-picker").value = colorSet.lightbackground || '';
+
+  document.getElementById("radius").value = parseInt(colorSet.radius);
+  document.getElementById("radius2").value = parseInt(colorSet.radius2);
+
+  document.getElementById("angle").value = parseInt(colorSet.angle);
+  document.getElementById("angle2").value = parseInt(colorSet.angle2);
+
+  if (colorSet.username != null) {
+    document.getElementById("userName").value = colorSet.username;
+  }
 
   if (colorSet.boxShadow1) {
     const boxShadow1Parts = colorSet.boxShadow1.split(' ');
@@ -181,6 +201,12 @@ function setProperty() {
   document.documentElement.style.setProperty('--box-shadow2', colorSet.boxShadow2 || '');
   document.documentElement.style.setProperty('--btn-background2', colorSet.btnBackground2 || '');
 
+  document.documentElement.style.setProperty('--radius', colorSet.radius || '');
+  document.documentElement.style.setProperty('--radius2', colorSet.radius2 || '');
+
+  document.documentElement.style.setProperty('--angle', colorSet.angle || '');
+  document.documentElement.style.setProperty('--angle2', colorSet.angle2 || '');
+
   if (colorSet.username != null) {
     document.getElementById("userName").value = colorSet.username;
     document.getElementById("glowDiv").innerHTML = sanitizeInput(colorSet.username);
@@ -214,7 +240,11 @@ function setColor(colors) {
         btnBackgroundx: "linear-gradient(145deg, var(--my-shadow-color2), var(--my-shadow-color3))",
         boxShadow1x: 'inset -2px -2px 6px 0px var(--my-shadow-color1), inset 2px 2px 6px 0px var(--my-shadow-color4)',
         btnBackground2: 'linear-gradient(315deg, var(--fancy-meddark), var(--fancy-medlight))',
-        boxShadow2: '-5px -5px 16px 0px var(--fancy-dark), 5px 5px 16px 0px var(--fancy-light)'
+        boxShadow2: '-5px -5px 16px 0px var(--fancy-dark), 5px 5px 16px 0px var(--fancy-light)',
+        angle: '145deg',
+        angle2: '315deg',
+        radius: '15px',
+        radius2: '5px'
       });
       break;
     case "grey":
@@ -240,7 +270,11 @@ function setColor(colors) {
         btnBackgroundx: "linear-gradient(145deg, var(--my-shadow-color2), var(--my-shadow-color3))",
         boxShadow1x: 'inset -2px -2px 6px 0px var(--my-shadow-color1), inset 2px 2px 6px 0px var(--my-shadow-color4)',
         btnBackground2: 'linear-gradient(315deg, var(--fancy-meddark), var(--fancy-medlight))',
-        boxShadow2: '-5px -5px 16px 0px var(--fancy-dark), 5px 5px 16px 0px var(--fancy-light)'
+        boxShadow2: '-5px -5px 16px 0px var(--fancy-dark), 5px 5px 16px 0px var(--fancy-light)',
+        angle: '145deg',
+        angle2: '315deg',
+        radius: '15px',
+        radius2: '5px'
       });
       break;
     case "red":
@@ -266,7 +300,11 @@ function setColor(colors) {
         btnBackgroundx: "linear-gradient(145deg, var(--my-shadow-color2), var(--my-shadow-color3))",
         boxShadow1x: 'inset -2px -2px 6px 0px var(--my-shadow-color1), inset 2px 2px 6px 0px var(--my-shadow-color4)',
         btnBackground2: 'linear-gradient(315deg, var(--fancy-meddark), var(--fancy-medlight))',
-        boxShadow2: '-5px -5px 16px 0px var(--fancy-dark), 5px 5px 16px 0px var(--fancy-light)'
+        boxShadow2: '-5px -5px 16px 0px var(--fancy-dark), 5px 5px 16px 0px var(--fancy-light)',
+        angle: '145deg',
+        angle2: '315deg',
+        radius: '15px',
+        radius2: '5px'
       });
       break;
     case "green":
@@ -292,7 +330,11 @@ function setColor(colors) {
         btnBackgroundx: "linear-gradient(145deg, var(--my-shadow-color2), var(--my-shadow-color3))",
         boxShadow1x: 'inset -2px -2px 6px 0px var(--my-shadow-color1), inset 2px 2px 6px 0px var(--my-shadow-color4)',
         btnBackground2: 'linear-gradient(315deg, var(--fancy-meddark), var(--fancy-medlight))',
-        boxShadow2: '-5px -5px 16px 0px var(--fancy-dark), 5px 5px 16px 0px var(--fancy-light)'
+        boxShadow2: '-5px -5px 16px 0px var(--fancy-dark), 5px 5px 16px 0px var(--fancy-light)',
+        angle: '145deg',
+        angle2: '315deg',
+        radius: '15px',
+        radius2: '5px'
       });
       break;
     case "pink":
@@ -318,7 +360,11 @@ function setColor(colors) {
         btnBackgroundx: "linear-gradient(145deg, var(--my-shadow-color2), var(--my-shadow-color3))",
         boxShadow1x: 'inset -2px -2px 6px 0px var(--my-shadow-color1), inset 2px 2px 6px 0px var(--my-shadow-color4)',
         btnBackground2: 'linear-gradient(315deg, var(--fancy-meddark), var(--fancy-medlight))',
-        boxShadow2: '-5px -5px 16px 0px var(--fancy-dark), 5px 5px 16px 0px var(--fancy-light)'
+        boxShadow2: '-5px -5px 16px 0px var(--fancy-dark), 5px 5px 16px 0px var(--fancy-light)',
+        angle: '145deg',
+        angle2: '315deg',
+        radius: '15px',
+        radius2: '5px'
       });
       break;
     case "ACDF":
@@ -344,7 +390,11 @@ function setColor(colors) {
         btnBackgroundx: 'linear-gradient(145deg, var(--my-shadow-color2), var(--my-shadow-color3))',
         boxShadow1x: 'inset -2px -2px 6px 0px var(--my-shadow-color1), inset 2px 2px 6px 0px var(--my-shadow-color4)',
         btnBackground2: 'linear-gradient(315deg, var(--fancy-meddark), var(--fancy-medlight))',
-        boxShadow2: '-5px -5px 16px 0px var(--fancy-dark), 5px 5px 16px 0px var(--fancy-light)'
+        boxShadow2: '-5px -5px 16px 0px var(--fancy-dark), 5px 5px 16px 0px var(--fancy-light)',
+        angle: '145deg',
+        angle2: '315deg',
+        radius: '15px',
+        radius2: '5px'
       });
       break;
     case "random":
@@ -371,7 +421,11 @@ function setColor(colors) {
         btnBackgroundx: `linear-gradient(145deg, ${randomColor()}, ${randomColor()})`,
         boxShadow1x: `inset -2px -2px 6px 0px ${randomColor()}, inset 2px 2px 6px 0px ${randomColor()}`,
         btnBackground2: `linear-gradient(315deg, ${randomColor()}, ${randomColor()})`,
-        boxShadow2: `-5px -5px 16px 0px ${randomColor()}, 5px 5px 16px 0px ${randomColor()}`
+        boxShadow2: `-5px -5px 16px 0px ${randomColor()}, 5px 5px 16px 0px ${randomColor()}`,
+        angle: '145deg',
+        angle2: '315deg',
+        radius: '15px',
+        radius2: '5px'
       });
       break;
   }
@@ -430,6 +484,8 @@ const xOffsetInput = document.getElementById('x-offset');
 const yOffsetInput = document.getElementById('y-offset');
 const blurInput = document.getElementById('blur');
 const spreadInput = document.getElementById('spread');
+const radiusInput = document.getElementById('radius');
+const angleInput = document.getElementById('angle');
 const xOffsetDecrementBtn = document.getElementById('xOffsetDecrement');
 const xOffsetIncrementBtn = document.getElementById('xOffsetIncrement');
 const yOffsetDecrementBtn = document.getElementById('yOffsetDecrement');
@@ -438,11 +494,17 @@ const blurDecrementBtn = document.getElementById('blurDecrement');
 const blurIncrementBtn = document.getElementById('blurIncrement');
 const spreadDecrementBtn = document.getElementById('spreadDecrement');
 const spreadIncrementBtn = document.getElementById('spreadIncrement');
+const radiusDecrementBtn = document.getElementById('radiusDecrement');
+const radiusIncrementBtn = document.getElementById('radiusIncrement');
+const angleDecrementBtn = document.getElementById('angleDecrement');
+const angleIncrementBtn = document.getElementById('angleIncrement');
 
 const xOffsetInput2 = document.getElementById('x-offset2');
 const yOffsetInput2 = document.getElementById('y-offset2');
 const blurInput2 = document.getElementById('blur2');
 const spreadInput2 = document.getElementById('spread2');
+const radiusInput2 = document.getElementById('radius2');
+const angleInput2 = document.getElementById('angle2');
 const xOffsetDecrementBtn2 = document.getElementById('xOffsetDecrement2');
 const xOffsetIncrementBtn2 = document.getElementById('xOffsetIncrement2');
 const yOffsetDecrementBtn2 = document.getElementById('yOffsetDecrement2');
@@ -451,6 +513,10 @@ const blurDecrementBtn2 = document.getElementById('blurDecrement2');
 const blurIncrementBtn2 = document.getElementById('blurIncrement2');
 const spreadDecrementBtn2 = document.getElementById('spreadDecrement2');
 const spreadIncrementBtn2 = document.getElementById('spreadIncrement2');
+const radiusDecrementBtn2 = document.getElementById('radiusDecrement2');
+const radiusIncrementBtn2 = document.getElementById('radiusIncrement2');
+const angleDecrementBtn2 = document.getElementById('angleDecrement2');
+const angleIncrementBtn2 = document.getElementById('angleIncrement2');
 
 
 document.getElementById("background-picker").addEventListener('input', getPicker);
@@ -474,6 +540,8 @@ xOffsetInput.addEventListener('input', getPicker);
 yOffsetInput.addEventListener('input', getPicker);
 blurInput.addEventListener('input', getPicker);
 spreadInput.addEventListener('input', getPicker);
+radiusInput.addEventListener('input', getPicker);
+angleInput.addEventListener('input', getPicker);
 xOffsetDecrementBtn.addEventListener('click', () => adjustValue(xOffsetInput, -1));
 xOffsetIncrementBtn.addEventListener('click', () => adjustValue(xOffsetInput, 1));
 yOffsetDecrementBtn.addEventListener('click', () => adjustValue(yOffsetInput, -1));
@@ -482,11 +550,17 @@ blurDecrementBtn.addEventListener('click', () => adjustValue(blurInput, -1));
 blurIncrementBtn.addEventListener('click', () => adjustValue(blurInput, 1));
 spreadDecrementBtn.addEventListener('click', () => adjustValue(spreadInput, -1));
 spreadIncrementBtn.addEventListener('click', () => adjustValue(spreadInput, 1));
+radiusDecrementBtn.addEventListener('click', () => adjustValue(radiusInput, -1));
+radiusIncrementBtn.addEventListener('click', () => adjustValue(radiusInput, 1));
+angleDecrementBtn.addEventListener('click', () => adjustValue(angleInput, -1));
+angleIncrementBtn.addEventListener('click', () => adjustValue(angleInput, 1));
 
 xOffsetInput2.addEventListener('input', getPicker);
 yOffsetInput2.addEventListener('input', getPicker);
 blurInput2.addEventListener('input', getPicker);
 spreadInput2.addEventListener('input', getPicker);
+radiusInput2.addEventListener('input', getPicker);
+angleInput2.addEventListener('input', getPicker);
 xOffsetDecrementBtn2.addEventListener('click', () => adjustValue(xOffsetInput2, -1));
 xOffsetIncrementBtn2.addEventListener('click', () => adjustValue(xOffsetInput2, 1));
 yOffsetDecrementBtn2.addEventListener('click', () => adjustValue(yOffsetInput2, -1));
@@ -495,6 +569,10 @@ blurDecrementBtn2.addEventListener('click', () => adjustValue(blurInput2, -1));
 blurIncrementBtn2.addEventListener('click', () => adjustValue(blurInput2, 1));
 spreadDecrementBtn2.addEventListener('click', () => adjustValue(spreadInput2, -1));
 spreadIncrementBtn2.addEventListener('click', () => adjustValue(spreadInput2, 1));
+radiusDecrementBtn2.addEventListener('click', () => adjustValue(radiusInput2, -1));
+radiusIncrementBtn2.addEventListener('click', () => adjustValue(radiusInput2, 1));
+angleDecrementBtn2.addEventListener('click', () => adjustValue(angleInput2, -1));
+angleIncrementBtn2.addEventListener('click', () => adjustValue(angleInput2, 1));
 }
 
 function stopListening() {
@@ -502,6 +580,8 @@ const xOffsetInput = document.getElementById('x-offset');
 const yOffsetInput = document.getElementById('y-offset');
 const blurInput = document.getElementById('blur');
 const spreadInput = document.getElementById('spread');
+const radiusInput = document.getElementById('radius');
+const angleInput = document.getElementById('angle');
 const xOffsetDecrementBtn = document.getElementById('xOffsetDecrement');
 const xOffsetIncrementBtn = document.getElementById('xOffsetIncrement');
 const yOffsetDecrementBtn = document.getElementById('yOffsetDecrement');
@@ -510,11 +590,17 @@ const blurDecrementBtn = document.getElementById('blurDecrement');
 const blurIncrementBtn = document.getElementById('blurIncrement');
 const spreadDecrementBtn = document.getElementById('spreadDecrement');
 const spreadIncrementBtn = document.getElementById('spreadIncrement');
+const radiusDecrementBtn = document.getElementById('radiusDecrement');
+const radiusIncrementBtn = document.getElementById('radiusIncrement');
+const angleDecrementBtn = document.getElementById('angleDecrement');
+const angleIncrementBtn = document.getElementById('angleIncrement');
 
 const xOffsetInput2 = document.getElementById('x-offset2');
 const yOffsetInput2 = document.getElementById('y-offset2');
 const blurInput2 = document.getElementById('blur2');
 const spreadInput2 = document.getElementById('spread2');
+const radiusInput2 = document.getElementById('radius2');
+const angleInput2 = document.getElementById('angle');
 const xOffsetDecrementBtn2 = document.getElementById('xOffsetDecrement2');
 const xOffsetIncrementBtn2 = document.getElementById('xOffsetIncrement2');
 const yOffsetDecrementBtn2 = document.getElementById('yOffsetDecrement2');
@@ -523,6 +609,10 @@ const blurDecrementBtn2 = document.getElementById('blurDecrement2');
 const blurIncrementBtn2 = document.getElementById('blurIncrement2');
 const spreadDecrementBtn2 = document.getElementById('spreadDecrement2');
 const spreadIncrementBtn2 = document.getElementById('spreadIncrement2');
+const radiusDecrementBtn2 = document.getElementById('radiusDecrement2');
+const radiusIncrementBtn2 = document.getElementById('radiusIncrement2');
+const angleDecrementBtn2 = document.getElementById('angleDecrement2');
+const angleIncrementBtn2 = document.getElementById('angleIncrement2');
 
 
 document.getElementById("background-picker").removeEventListener('input', getPicker);
@@ -546,6 +636,8 @@ xOffsetInput.removeEventListener('input', getPicker);
 yOffsetInput.removeEventListener('input', getPicker);
 blurInput.removeEventListener('input', getPicker);
 spreadInput.removeEventListener('input', getPicker);
+radiusInput.removeEventListener('input', getPicker);
+angleInput.removeEventListener('input', getPicker);
 xOffsetDecrementBtn.removeEventListener('click', () => adjustValue(xOffsetInput, -1));
 xOffsetIncrementBtn.removeEventListener('click', () => adjustValue(xOffsetInput, 1));
 yOffsetDecrementBtn.removeEventListener('click', () => adjustValue(yOffsetInput, -1));
@@ -554,11 +646,17 @@ blurDecrementBtn.removeEventListener('click', () => adjustValue(blurInput, -1));
 blurIncrementBtn.removeEventListener('click', () => adjustValue(blurInput, 1));
 spreadDecrementBtn.removeEventListener('click', () => adjustValue(spreadInput, -1));
 spreadIncrementBtn.removeEventListener('click', () => adjustValue(spreadInput, 1));
+radiusDecrementBtn.removeEventListener('click', () => adjustValue(radiusInput, -1));
+radiusIncrementBtn.removeEventListener('click', () => adjustValue(radiusInput, 1));
+angleDecrementBtn.removeEventListener('click', () => adjustValue(angleInput, -1));
+angleIncrementBtn.removeEventListener('click', () => adjustValue(angleInput, 1));
 
 xOffsetInput2.removeEventListener('input', getPicker);
 yOffsetInput2.removeEventListener('input', getPicker);
 blurInput2.removeEventListener('input', getPicker);
 spreadInput2.removeEventListener('input', getPicker);
+radius2Input.removeEventListener('input', getPicker);
+angleInput2.removeEventListener('input', getPicker);
 xOffsetDecrementBtn2.removeEventListener('click', () => adjustValue(xOffsetInput2, -1));
 xOffsetIncrementBtn2.removeEventListener('click', () => adjustValue(xOffsetInput2, 1));
 yOffsetDecrementBtn2.removeEventListener('click', () => adjustValue(yOffsetInput2, -1));
@@ -567,4 +665,8 @@ blurDecrementBtn2.removeEventListener('click', () => adjustValue(blurInput2, -1)
 blurIncrementBtn2.removeEventListener('click', () => adjustValue(blurInput2, 1));
 spreadDecrementBtn2.removeEventListener('click', () => adjustValue(spreadInput2, -1));
 spreadIncrementBtn2.removeEventListener('click', () => adjustValue(spreadInput2, 1));
+radiusDecrementBtn2.removeEventListener('click', () => adjustValue(radiusInput2, -1));
+radiusIncrementBtn2.removeEventListener('click', () => adjustValue(radiusInput2, 1));
+angleDecrementBtn2.removeEventListener('click', () => adjustValue(angleInput2, -1));
+angleIncrementBtn2.removeEventListener('click', () => adjustValue(angleInput2, 1));
 }

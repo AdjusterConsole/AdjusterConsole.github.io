@@ -111,7 +111,7 @@ For inquiries regarding licensing or permission to use this code in ways not cov
 .labor_div_30 button {
   font-size: 14px;
   padding: 4px;
-  border-radius: 5px;
+  border-radius: var(--radius2);
   background: none;
   box-shadow: none;
   border: 2px solid var(--my-accent-color);
@@ -141,7 +141,7 @@ For inquiries regarding licensing or permission to use this code in ways not cov
 .script_button {
   display: inherit;
   position: initial;
-  border-radius: 5px;
+  border-radius: var(--radius2);
   background: none;
   box-shadow: none;
   margin: 5px;

@@ -47,7 +47,7 @@ For inquiries regarding licensing or permission to use this code in ways not cov
   box-shadow: none;
   position: initial;
   display: initial;
-  border-radius: 5px;
+  border-radius: var(--radius2);
   width: var(--div-width);
 }
 
@@ -87,7 +87,7 @@ For inquiries regarding licensing or permission to use this code in ways not cov
   display: none;
   background: none;
   box-shadow: none;
-  border-radius: 5px;
+  border-radius: var(--radius2);
   padding: 25px;
 }
 
@@ -320,7 +320,7 @@ li {
   position: absolute;
   padding: 18px 16px;
   display: inline-block;
-  border-radius: 5px;
+  border-radius: var(--radius2);
   width: 170px;
 }
 
