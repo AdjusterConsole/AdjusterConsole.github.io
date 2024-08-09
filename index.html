@@ -3,21 +3,22 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
-<meta http-equiv="Strict-Transport-Security" content="max-age=3600; includeSubDomains; preload">
+<meta http-equiv="Strict-Transport-Security" content="max-age=0; includeSubDomains; preload">
 <meta http-equiv="X-Content-Type-Options" content="nosniff">
 <meta name="referrer" content="no-referrer">
 
 
-<link rel="stylesheet" href="CSS/Common.css?v=1564843611854352">
-<link rel="stylesheet" href="CSS/Stable.css?v=1564843611854352">
-<link rel="stylesheet" href="CSS/auth_module.css?v=1564843611854352">
-<link rel="stylesheet" href="CSS/Buttons.css?v=1564843611854352">
-<link rel="stylesheet" href="CSS/AppearOpts.css?v=1564843611854352">
-<link rel="stylesheet" href="CSS/Resource.css?v=1564843611854352">
-<link rel="stylesheet" href="CSS/contextMenu.css?v=1564843611854352">
-<link rel="stylesheet" href="CSS/laborRateScript.css?v=1564843611854352">
+<link rel="stylesheet" href="CSS/Common.css?v=1294353245334">
+<link rel="stylesheet" href="CSS/Stable.css?v=1294353245334">
+<link rel="stylesheet" href="CSS/auth_module.css?v=1294353245334">
+<link rel="stylesheet" href="CSS/Buttons.css?v=1294353245334">
+<link rel="stylesheet" href="CSS/AppearOpts.css?v=1294353245334">
+<link rel="stylesheet" href="CSS/Resource.css?v=1294353245334">
+<link rel="stylesheet" href="CSS/contextMenu.css?v=1294353245334">
+<link rel="stylesheet" href="CSS/laborRateScript.css?v=1294353245334">
 	<title>Adjuster Console</title>
-<link rel="manifest" href="manifest.webmanifest?v=1564843611854352">
+<link rel="manifest" href="manifest.webmanifest?v=1294353245334">
+
 <style>
 
 /*Restricted Use License
@@ -161,15 +162,19 @@ body {
   --fancy-meddark: #86a1b1;
   --fancy-dark: #728d9d;
   --fancy-background: #92b1c3;
+  --radius: 15px;
+  --radius2: 5px;
+  --angle: 145deg;
+  --angle2: 315deg;
 
   --box-shadow1: 2px 2px 6px 0px var(--my-shadow-color4), -2px -2px 6px 0px var(--my-shadow-color1);
-  --btn-background: linear-gradient(145deg, var(--my-shadow-color3), var(--my-shadow-color2));
+  --btn-background: linear-gradient(var(--angle), var(--my-shadow-color3), var(--my-shadow-color2));
 
   --box-shadow1x: inset -2px -2px 6px 0px var(--my-shadow-color1), inset 2px 2px 6px 0px var(--my-shadow-color4);
-  --btn-backgroundx: linear-gradient(145deg, var(--my-shadow-color2), var(--my-shadow-color3));
+  --btn-backgroundx: linear-gradient(var(--angle), var(--my-shadow-color2), var(--my-shadow-color3));
 
   --box-shadow2: -5px -5px 16px 0px var(--fancy-dark), 5px 5px 16px 0px var(--fancy-light);
-  --btn-background2: linear-gradient(315deg, var(--fancy-meddark), var(--fancy-medlight));
+  --btn-background2: linear-gradient(var(--angle2), var(--fancy-meddark), var(--fancy-medlight));
 
   --altboxshad: 
     0px 10px 25px -5px rgba(0,0,0,0.6),
@@ -444,7 +449,7 @@ body {
       <label for="blur" class="whatIsLife">Blur:</label>
       <div class="input-with-buttons">
         <button id="blurDecrement">-</button>
-        <input type="number" id="blur" value="6">
+        <input type="number" id="blur" value="6" min="0">
         <button id="blurIncrement">+</button>
       </div>
     </div>
@@ -479,7 +484,7 @@ body {
       <label for="blur2" class="whatIsLife">Blur 2:</label>
       <div class="input-with-buttons">
         <button id="blurDecrement2">-</button>
-        <input type="number" id="blur2" value="16">
+        <input type="number" id="blur2" value="16" min="0">
         <button id="blurIncrement2">+</button>
       </div>
     </div>
@@ -489,6 +494,44 @@ body {
         <button id="spreadDecrement2">-</button>
         <input type="number" id="spread2" value="0">
         <button id="spreadIncrement2">+</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="prop-wrapper3">
+    <div class="css-property">
+      <label for="radius" class="whatIsLife">Radius</label>
+      <div class="input-with-buttons">
+        <button id="radiusDecrement">-</button>
+        <input type="number" id="radius" value="15" min="0">
+        <button id="radiusIncrement">+</button>
+      </div>
+    </div>
+    <div class="css-property">
+      <label for="angle" class="whatIsLife">Angle</label>
+      <div class="input-with-buttons">
+        <button id="angleDecrement">-</button>
+        <input type="number" id="angle" value="145" min="0" max="360">
+        <button id="angleIncrement">+</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="prop-wrapper4">
+    <div class="css-property">
+      <label for="radius2" class="whatIsLife">Radius 2</label>
+      <div class="input-with-buttons">
+        <button id="radiusDecrement2">-</button>
+        <input type="number" id="radius2" value="5" min="0">
+        <button id="radiusIncrement2">+</button>
+      </div>
+    </div>
+    <div class="css-property">
+      <label for="angle2" class="whatIsLife">Angle 2</label>
+      <div class="input-with-buttons">
+        <button id="angleDecrement2">-</button>
+        <input type="number" id="angle2" value="315" min="0" max="360">
+        <button id="angleIncrement2">+</button>
       </div>
     </div>
   </div>
@@ -514,8 +557,8 @@ body {
   <button id="presetRed" class="picker" onclick="setColor('red')">Red Preset</button>
   <button id="presetGreen" class="picker" onclick="setColor('green')">Green Preset</button>
   <button id="presetPink" class="picker" onclick="setColor('pink')">Pink Preset</button>
-  <button id="ConsoleDefault" class="picker" onclick="setColor('ACDF')">Console Clrs</button>
   <button id="presetRandom" class="picker" onclick="setColor('random')">Random</button>
+  <button id="ConsoleDefault" class="picker" onclick="setColor('ACDF')">Console Clrs</button>
 </div>
 
                                               <!-- Main Buttons -->
@@ -2599,15 +2642,15 @@ TIME:&nbsp&nbsp</textarea>
   <button id="sizeCancel" class="bones" onclick="sizeSubmit()">Exit</button>
 </div>
 
-<script src="JavaScript/snipDiv.js?v=1564843611854352"></script>
-<script src="JavaScript/keyEvents.js?v=1564843611854352"></script>
-<script src="JavaScript/OGLAYOUTJS.js?v=1564843611854352"></script>
-<script src="JavaScript/dual_claim_authorization.js?v=1564843611854352"></script>
-<script src="JavaScript/ChangeAppearance2.js?v=1564843611854352"></script>
-<script src="JavaScript/commonScript.js?v=1564843611854352"></script>
-<script src="JavaScript/jsonParse.js?v=1564843611854352"></script>
-<script src="JavaScript/ContextMenu.js?v=1564843611854352"></script>
-<script src="JavaScript/laborRate.js?v=1564843611854352"></script>
-<script src="JavaScript/trackerScript.js?v=1564843611854352"></script>
+<script src="JavaScript/snipDiv.js?v=1294353245334"></script>
+<script src="JavaScript/keyEvents.js?v=1294353245334"></script>
+<script src="JavaScript/OGLAYOUTJS.js?v=1294353245334"></script>
+<script src="JavaScript/dual_claim_authorization.js?v=1294353245334"></script>
+<script src="JavaScript/ChangeAppearance2.js?v=1294353245334"></script>
+<script src="JavaScript/commonScript.js?v=1294353245334"></script>
+<script src="JavaScript/jsonParse.js?v=1294353245334"></script>
+<script src="JavaScript/ContextMenu.js?v=1294353245334"></script>
+<script src="JavaScript/laborRate.js?v=1294353245334"></script>
+<script src="JavaScript/trackerScript.js?v=1294353245334"></script>
 </body>
 </html>
