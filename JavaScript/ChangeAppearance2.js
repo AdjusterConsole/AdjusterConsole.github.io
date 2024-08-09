@@ -399,7 +399,44 @@ function setColor(colors) {
       });
       break;
     case "random":
+      const xoffset = document.getElementById("x-offset");
+      const yoffset = document.getElementById("y-offset");
+      const blur = document.getElementById("blur");
+      const spread = document.getElementById("spread");
+
+      const xoffset2 = document.getElementById("x-offset2");
+      const yoffset2 = document.getElementById("y-offset2");
+      const blur2 = document.getElementById("blur2");
+      const spread2 = document.getElementById("spread2");
+
+      xoffset.value = Math.floor((Math.random() * 31) - 15);
+      yoffset.value = Math.floor((Math.random() * 31) - 15);
+      blur.value = Math.floor(Math.random() * (51));
+      spread.value = Math.floor((Math.random() * 21) - 10);
+
+      xoffset2.value = Math.floor((Math.random() * 31) - 15);
+      yoffset2.value = Math.floor((Math.random() * 31) - 15);
+      blur2.value = Math.floor(Math.random() * (51));
+      spread2.value = Math.floor((Math.random() * 21) - 10);
+
+      xoffsetValue = xoffset.value + 'px';
+      yoffsetValue = yoffset.value + 'px';
+      blurValue = blur.value;
+      spreadValue = spread.value;
+
+      xoffset2Value = xoffset2.value + 'px';
+      yoffset2Value = yoffset2.value + 'px';
+      blur2Value = blur2.value;
+      spread2Value = spread2.value;
+
+      const angleA = Math.floor(Math.random() * (361));
+      const angleB = Math.floor(Math.random() * (361));
+
+      const radiusA = Math.floor(Math.random() * (51));
+      const radiusB = Math.floor(Math.random() * (51));
+
       const randomColor = () => `#${Math.floor(Math.random()*16777215).toString(16).padStart(6, '0')}`;
+
       Object.assign(colorSet, {
         background: randomColor(),
         accent: randomColor(),
@@ -418,15 +455,15 @@ function setColor(colors) {
         dark: randomColor(),
         lightbackground: randomColor(),
         btnBackground: `linear-gradient(145deg, ${randomColor()}, ${randomColor()})`,
-        boxShadow1: `2px 2px 6px 0px ${randomColor()}, -2px -2px 6px 0px ${randomColor()}`,
+        boxShadow1: `${xoffsetValue} ${yoffsetValue} ${blurValue} ${spreadValue} ${randomColor()}, ${-xoffsetValue} ${-yoffsetValue} ${blurValue} ${spreadValue} ${randomColor()}`,
         btnBackgroundx: `linear-gradient(145deg, ${randomColor()}, ${randomColor()})`,
-        boxShadow1x: `inset -2px -2px 6px 0px ${randomColor()}, inset 2px 2px 6px 0px ${randomColor()}`,
+        boxShadow1x: `inset ${-xoffsetValue} ${-yoffsetValue} ${blurValue} ${spreadValue} ${randomColor()}, inset ${xoffsetValue} ${yoffsetValue} ${blurValue} ${spreadValue} ${randomColor()}`,
         btnBackground2: `linear-gradient(315deg, ${randomColor()}, ${randomColor()})`,
-        boxShadow2: `-5px -5px 16px 0px ${randomColor()}, 5px 5px 16px 0px ${randomColor()}`,
-        angle: '145deg',
-        angle2: '315deg',
-        radius: '15px',
-        radius2: '5px'
+        boxShadow2: `${xoffset2Value} ${yoffset2Value} ${blur2Value} ${spread2Value} ${randomColor()}, ${-xoffset2Value} ${-yoffset2Value} ${blur2Value} ${spread2Value} ${randomColor()}`,
+        angle: angleA,
+        angle2: angleB,
+        radius: radiusA,
+        radius2: radiusB
       });
       break;
   }
