@@ -321,7 +321,7 @@ function setColor(colors) {
         boxShadow2: '-5px -5px 16px 0px var(--fancy-dark), 5px 5px 16px 0px var(--fancy-light)'
       });
       break;
-   case "ACDF":
+    case "ACDF":
       Object.assign(colorSet, {
         background: "#0D274A",
         accent: "#1D4D8B",
@@ -329,7 +329,6 @@ function setColor(colors) {
         shadow2: "#153E75",
         shadow3: "#08172B",
         shadow4: "#030912",
-        username: '',
         glow: "#ffffff",
         text: "#ffffff",
         outline: "#000000",
@@ -348,6 +347,33 @@ function setColor(colors) {
         boxShadow2: '-5px -5px 16px 0px var(--fancy-dark), 5px 5px 16px 0px var(--fancy-light)'
       });
       break;
+    case "random":
+      const randomColor = () => `#${Math.floor(Math.random()*16777215).toString(16).padStart(6, '0')}`;
+      Object.assign(colorSet, {
+        background: randomColor(),
+        accent: randomColor(),
+        shadow1: randomColor(),
+        shadow2: randomColor(),
+        shadow3: randomColor(),
+        shadow4: randomColor(),
+        glow: randomColor(),
+        text: randomColor(),
+        outline: randomColor(),
+        hover: `${randomColor()}32`,
+        active: `${randomColor()}60`,
+        light: randomColor(),
+        medlight: randomColor(),
+        meddark: randomColor(),
+        dark: randomColor(),
+        lightbackground: randomColor(),
+        btnBackground: `linear-gradient(145deg, ${randomColor()}, ${randomColor()})`,
+        boxShadow1: `2px 2px 6px 0px ${randomColor()}, -2px -2px 6px 0px ${randomColor()}`,
+        btnBackgroundx: `linear-gradient(145deg, ${randomColor()}, ${randomColor()})`,
+        boxShadow1x: `inset -2px -2px 6px 0px ${randomColor()}, inset 2px 2px 6px 0px ${randomColor()}`,
+        btnBackground2: `linear-gradient(315deg, ${randomColor()}, ${randomColor()})`,
+        boxShadow2: `-5px -5px 16px 0px ${randomColor()}, 5px 5px 16px 0px ${randomColor()}`
+      });
+      break;
   }
 
   localStorage.setItem("colorSet1", JSON.stringify(colorSet));
@@ -356,6 +382,7 @@ function setColor(colors) {
   setProperty();
   getPicker();
 }
+
 
 function adjustValue(input, increment) {
   let value = parseInt(input.value) + increment;
@@ -371,7 +398,6 @@ function personalize() {
 
 function exitColor() {
   document.getElementById("appearDiv").style.display = "none";
-  location.reload();
   stopListening();
 }
 

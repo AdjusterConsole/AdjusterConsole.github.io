@@ -163,6 +163,20 @@ div#original.default button.orig {
   left: 170px;
 }
 
+#presetRandom {
+  position: absolute;
+  display: inline-block;
+  bottom: 65px;
+  left: 480px;
+}
+
+#presetRandom2 {
+  position: absolute;
+  display: inline-block;
+  bottom: 15px;
+  left: 480px;
+}
+
 #presetPink {
   position: absolute;
   display: inline-block;
@@ -404,7 +418,7 @@ div#original.default button.orig {
   position: absolute;
   display: flex;
   top: 15px;
-  left: 190px;
+  left: calc(50% - 280px);
   background: none;
   box-shadow: none;
 }
@@ -413,7 +427,7 @@ div#original.default button.orig {
   position: absolute;
   display: flex;
   top: 750px;
-  left: 190px;
+  left: calc(50% - 280px);
   background: none;
   box-shadow: none;
 }
@@ -433,10 +447,10 @@ div#original.default button.orig {
 }
 
 .displayPreview {
-  width:  450px;
-  height: 300px;
-  top: 100px;
-  left: 240px;
+  width:  250px;
+  height: 150px;
+  top: calc(50% - 220px);
+  left: calc(50% - 125px);
   position: absolute;
   display: inline-block;
   background: var(--my-background-color);
@@ -448,17 +462,17 @@ div#original.default button.orig {
 .previewBtn {
   height: 80px;
   width: 160px;
-  top: 115px;
-  left: 145px;
+  top: calc(50% - 40px);
+  left: calc(50% - 80px);
   position: absolute;
   display: inline-block;
 }
 
 .previewDiv {
-  width:  400px;
-  height: 270px;
-  top: 450px;
-  left: 270px;
+  width:  250px;
+  height: 150px;
+  top: calc(50% - 10px);
+  left: calc(50% - 125px);
   position: absolute;
   display: inline-block;
   box-shadow: var(--box-shadow2);
