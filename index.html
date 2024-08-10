@@ -8,14 +8,15 @@
 <meta name="referrer" content="no-referrer">
 
 
-<link rel="stylesheet" href="CSS/Common.css?v=12457637652434">
-<link rel="stylesheet" href="CSS/Stable.css?v=12457637652434">
-<link rel="stylesheet" href="CSS/auth_module.css?v=12457637652434">
-<link rel="stylesheet" href="CSS/Buttons.css?v=12457637652434">
-<link rel="stylesheet" href="CSS/AppearOpts.css?v=12457637652434">
-<link rel="stylesheet" href="CSS/Resource.css?v=12457637652434">
-<link rel="stylesheet" href="CSS/contextMenu.css?v=12457637652434">
-<link rel="stylesheet" href="CSS/laborRateScript.css?v=12457637652434">
+<link rel="stylesheet" href="CSS/Common.css?v=1292314158764">
+<link rel="stylesheet" href="CSS/Stable.css?v=1292314158764">
+<link rel="stylesheet" href="CSS/auth_module.css?v=1292314158764">
+<link rel="stylesheet" href="CSS/Buttons.css?v=1292314158764">
+<link rel="stylesheet" href="CSS/AppearOpts.css?v=1292314158764">
+<link rel="stylesheet" href="CSS/Resource.css?v=1292314158764">
+<link rel="stylesheet" href="CSS/contextMenu.css?v=1292314158764">
+<link rel="stylesheet" href="CSS/laborRateScript.css?v=1292314158764">
+<link rel="stylesheet" href="CSS/PTSpecific.css?v=1292314158764">
 	<title>Adjuster Console</title>
 <link rel="manifest" href="manifest.webmanifest?v=12457637652434">
 
@@ -214,43 +215,34 @@ body {
 
                                                 <!-- Auto Copy -->
 
-<div id="fileUploaderDiv" class="noShow hideFile">
-  <div class="noShow">
-    <div class="noShow copyTrio rightHead">
-      <button class="autoCopiers" id="autocopy">Auto Copy</button>
-      <button class="autoCopiers" id="pncopy">PN Copy</button>
-      <button class="autoCopiers" id="pricecopy">Price Copy</button>
-    </div>
-    <div class="noShow copyTrio">
-      <div id="next1" class="noShow autoCopiers">
-        Next<br>--
-      </div>
-      <div id="next2" class="noShow autoCopiers">
-        Next<br>--
-      </div>
-      <div id="next3" class="noShow autoCopiers">
-        Next<br>--
-      </div>
-    </div>
-    <div class="noShow copyTrio">
-      <div id="left1" class="noShow autoCopiers">
-        Remaining<br>--
-      </div>
-      <div id="left2" class="noShow autoCopiers">
-        Remaining<br>--
-      </div>
-      <div id="left3" class="noShow autoCopiers">
-        Remaining<br>--
-      </div>
-    </div>
-    <div class="noShow copyTrio last">
-        <button class="autoCopiers" id="downloadMostRecent">Enter Key</button> 
-        <label for="fileInput"><input type="file" id="fileInput" accept=".json">
-        <button class="autoCopiers" id="resetFile">Reset</button>
-    </div>
+<div id="fileUploaderDiv" class="noShow slideFilein">
+  <div class="auto_copy_inners">
+    <button id="autocopy">Auto Copy</button>
+    <div id="copy1">Copied<br>--</div>
+    <div id="next1">Next<br>--</div>
+    <div id="left1">Remaining<br>--</div>
   </div>
-  <div class="lonelyInput noShow" style="display:none;">
+
+  <div class="auto_copy_inners">
+    <button id="pncopy">PN Copy</button>
+    <div id="copy2">Copied<br>--</div>
+    <div id="next2">Next<br>--</div>
+    <div id="left2">Remaining<br>--</div>
   </div>
+
+  <div class="auto_copy_inners">
+    <button id="pricecopy">Price Copy</button>
+    <div id="copy3">Copied<br>--</div>
+    <div id="next3">Next<br>--</div>
+    <div id="left3">Remaining<br>--</div>
+  </div>
+
+  <div class="auto_copy_innerslast">
+<!--    <button class="autoCopiers" id="downloadMostRecent">Enter Key</button>   -->
+    <button class="autoCopiers" id="resetFile">Reset</button>
+    <label for="fileInput"><input type="file" id="fileInput" accept=".json"></label>
+  </div>
+<button id="closeAutoCopy" onclick="autoEnable()">X</button> 
 </div>
 
                                                 <!-- Menu -->
@@ -427,7 +419,6 @@ body {
     <label for="nameGlow">Glow Color:</label><br>
     <input id="nameGlow" type="color">
   </div>
-
   <div class="prop-wrapper">
     <div class="css-property">
       <label for="x-offset" class="whatIsLife">X-Offset</label>
@@ -462,7 +453,6 @@ body {
       </div>
     </div>
   </div>
-
   <div class="prop-wrapper2">
     <div class="css-property">
       <label for="x-offset2" class="whatIsLife">X-Offset 2</label>
@@ -497,7 +487,6 @@ body {
       </div>
     </div>
   </div>
-
   <div class="prop-wrapper3">
     <div class="css-property">
       <label for="radius" class="whatIsLife">Radius</label>
@@ -516,7 +505,6 @@ body {
       </div>
     </div>
   </div>
-
   <div class="prop-wrapper4">
     <div class="css-property">
       <label for="radius2" class="whatIsLife">Radius 2</label>
@@ -535,21 +523,16 @@ body {
       </div>
     </div>
   </div>
-
   <div class="toggleBox">
-      <label for="shadDouble">Dual<Br>Shadows</label>
+    <label for="shadDouble">Dual<Br>Shadows</label>
     <input type="checkbox" id="shadDouble" onclick="getPicker()" checked>
   </div>
-
   <div class="displayPreview" id="displayPreviewDiv">
     <button class="previewBtn" id="previewBtn"></button>
   </div>
-
   <div class="previewDiv" id="previewDiv">
     <button class="previewBtn2" id="previewBtn2"></button>
   </div>
-
-
   <button id="setColors" class="picker" onclick="saveColors()">Save and Exit</button>
   <button id="exitColor" class="picker" onclick="exitColor()">Exit</button>
   <button id="defaultColors" class="picker" onclick="setColor('default')">Default Preset</button>
@@ -583,7 +566,7 @@ body {
 
 <div id="TPDiv" class="noShow" style="display: none">
   <button id="T1" class="D R P" name="name" onclick="PTXFER()" oncontextmenu="customMenu(this.id, event)"><b>PT TRANSFER</b> TEMPLATE</button>
-  <button id="T2" class="D R P C" onclick="STMTTEMP(this.id)" oncontextmenu="customMenu(this.id, event)">CH <b>STATEMENT</b> QUESTIONS</button>
+  <button id="T2" class="D R P C" onclick="STMTTEMP()" oncontextmenu="customMenu(this.id, event)">CH <b>STATEMENT</b> QUESTIONS</button>
   <button id="T3" class="D R P C" onclick="REVIEW(this.id)" oncontextmenu="customMenu(this.id, event)">INPS/PIC <b>REVIEW</b> NOTE</button>
   <button id="T4" class="D R P C" onclick="INSPTEMP(this.id)" oncontextmenu="customMenu(this.id, event)"><b>INSPECTION</b> TEMPLATE</button>
 </div>
@@ -593,11 +576,30 @@ body {
 <div id="PTModeDiv" class="noShow" style="display: none">
   <button class="D R P" id="transAuthBtn" onclick="transAuth()" oncontextmenu="customMenu(this.id, event)">Trans Auth</button>
   <button class="D R P" id="ringfailDeny" onclick="ringDeny()" oncontextmenu="customMenu(this.id, event)">Denial-Carbon<br>Piston Rings</button>
-  <button class="D R P" id="T21" onclick="STMTTEMP(this.id)" oncontextmenu="customMenu(this.id, event)"><b>STATEMENT</b> QUESTIONS</button>
-  <button class="D R P" id="T31" onclick="INSPTEMP(this.id)" oncontextmenu="customMenu(this.id, event)"><b>INSPECTION</b> TEMPLATE</button>
-  <button class="D R P" id="T41" onclick="inspREVIEW(this.id)" oncontextmenu="customMenu(this.id, event)">INPSECT <b>REVIEW</b></button>
-  <button class="D R P" id="T51" onclick="REVIEW(this.id)" oncontextmenu="customMenu(this.id, event)">PICTURE <b>REVIEW</b></button>
-  <button class="D R P" id="T61" onclick="carfaxREVIEW(this.id)" oncontextmenu="customMenu(this.id, event)">CARFAX <b>REVIEW</b></button>
+
+  <button class="D R P" id="denials" onclick="showDenials()" oncontextmenu="customMenu(this.id, event)">Denials</button>
+  <button class="D R P" id="reviews" onclick="showReviews()" oncontextmenu="customMenu(this.id, event)">Reviews</button>
+  <button class="D R P" id="requests" onclick="showRequests()" oncontextmenu="customMenu(this.id, event)">Requests</button>
+
+  <button class="D R P" id="prompt" onclick="copyTextFunc(this.id)" oncontextmenu="customMenu(this.id, event)">AI prompt</button>
+
+  <div id="denialBtnDiv" class="denialBtns hideit">
+    <button class="D R P" id="conopdeny" onclick="copyTextFunc(this.id)" oncontextmenu="customMenu(this.id, event)">Continued Operation</button>
+    <button class="D R P" id="sludgedeny" onclick="copyTextFunc(this.id)" oncontextmenu="customMenu(this.id, event)">Carbon/Sludge<br>Lack of Lube</button>
+    <button class="D R P" id="waitdeny" onclick="copyTextFunc(this.id)" oncontextmenu="customMenu(this.id, event)">Waiting Period<br>PreExisting</button>
+  </div>
+  <div id="reviewBtnDiv" class="reviewBtns hideit">
+    <button class="D R P" id="T41" onclick="copyTextFunc(this.id)" oncontextmenu="customMenu(this.id, event)">INPSECT REVIEW</button>
+    <button class="D R P" id="T51" onclick="copyTextFunc(this.id)" oncontextmenu="customMenu(this.id, event)">PICTURE REVIEW</button>
+    <button class="D R P" id="T61" onclick="copyTextFunc(this.id)" oncontextmenu="customMenu(this.id, event)">CARFAX REVIEW</button>
+  </div>
+  <div id="requestBtnDiv" class="requestBtns hideit">
+    <button id="T71" class="D R P" onclick="copyTextFunc(this.id)" oncontextmenu="customMenu(this.id, event)">Picture Request</button>
+    <button id="T81" class="D R P" onclick="copyTextFunc(this.id)" oncontextmenu="customMenu(this.id, event)">Records Request</button>
+    <button id="T91" class="D R P" onclick="copyTextFunc(this.id)" oncontextmenu="customMenu(this.id, event)">Records Rqst<br>No Answer</button>
+    <button id="T101" class="D R P" onclick="copyTextFunc(this.id)" oncontextmenu="customMenu(this.id, event)">Statement Questions</button>
+    <button id="T31" class="D R P" onclick="copyTextFunc(this.id)" oncontextmenu="customMenu(this.id, event)">Inspection Template</button>
+  </div>
 </div>
 
                                                 <!-- Parts Intake -->
@@ -2642,15 +2644,16 @@ TIME:&nbsp&nbsp</textarea>
   <button id="sizeCancel" class="bones" onclick="sizeSubmit()">Exit</button>
 </div>
 
-<script src="JavaScript/snipDiv.js?v=12457637652434"></script>
-<script src="JavaScript/keyEvents.js?v=12457637652434"></script>
-<script src="JavaScript/OGLAYOUTJS.js?v=12457637652434"></script>
-<script src="JavaScript/dual_claim_authorization.js?v=12457637652434"></script>
-<script src="JavaScript/ChangeAppearance2.js?v=12457637652434"></script>
-<script src="JavaScript/commonScript.js?v=12457637652434"></script>
-<script src="JavaScript/jsonParse.js?v=12457637652434"></script>
-<script src="JavaScript/ContextMenu.js?v=12457637652434"></script>
-<script src="JavaScript/laborRate.js?v=12457637652434"></script>
-<script src="JavaScript/trackerScript.js?v=12457637652434"></script>
+<script src="JavaScript/snipDiv.js?v=1292314158764"></script>
+<script src="JavaScript/keyEvents.js?v=1292314158764"></script>
+<script src="JavaScript/OGLAYOUTJS.js?v=1292314158764"></script>
+<script src="JavaScript/dual_claim_authorization.js?v=1292314158764"></script>
+<script src="JavaScript/ChangeAppearance2.js?v=1292314158764"></script>
+<script src="JavaScript/commonScript.js?v=1292314158764"></script>
+<script src="JavaScript/jsonParse.js?v=1292314158764"></script>
+<script src="JavaScript/ContextMenu.js?v=1292314158764"></script>
+<script src="JavaScript/laborRate.js?v=1292314158764"></script>
+<script src="JavaScript/trackerScript.js?v=1292314158764"></script>
+<script src="JavaScript/powertrain.js?v=20240707202844"></script>
 </body>
 </html>
