@@ -173,8 +173,8 @@ I want you to output the information in the following JSON format as a downloada
 ]
   
 
-In the estimate, part names will have an orange dot to the left, quantity will have a red dot to the left, part numbers will have a yellow dot to the left and prices will have a green dot to the left.
-Each line is an individual part and should have its own entry in the JSON output file.`;
+In the estimate, part numbers will have a red dot to the left, part names will have an orange dot to the left, quantity will have a yellow dot to the left and prices will have a green dot to the left.
+Each line is an individual part and should have its own entry in the JSON output file. Do not include the dollar sign in the part price.`;
     copy(text);
     break;
 
@@ -184,6 +184,82 @@ Each line is an individual part and should have its own entry in the JSON output
   }
 }
 
+function closeChart() {
+    document.getElementById('imageContainer').classList.remove('showImg');
+    document.getElementById('closeChartBtn').classList.remove('showImg');
+}
+
+function flowchart() {
+    const imageContainer = document.getElementById('imageContainer');
+    const flowchartImg = document.getElementById('flowchartImg');
+
+    flowchartImg.setAttribute('draggable', false);
+    flowchartImg.addEventListener('dragstart', function(event) {
+        event.preventDefault();
+    });
+
+    // Initialize transform values
+    let scale = 1;
+    let translateX = 0;
+    let translateY = 0;
+
+    let isDragging = false;
+    let startX, startY;
+
+    // Function to update the image transform
+    function updateTransform() {
+        flowchartImg.style.transform = `translate(${translateX}px, ${translateY}px) scale(${scale})`;
+    }
+
+    function showImage() {
+        imageContainer.classList.add('showImg');
+        document.getElementById('closeChartBtn').classList.add('showImg');
+        translateX = 0;
+        translateY = 0;
+        updateTransform();
+    }
+
+    imageContainer.addEventListener('wheel', function(event) {
+        event.preventDefault();
+
+        // Calculate scale change
+        const scaleChange = event.deltaY < 0 ? 1.1 : 1 / 1.1;
+
+        // Adjust translateX and translateY to zoom in/out based on the center of the viewport
+        translateX -= (0 - translateX) * (scaleChange - 1);
+        translateY -= (0 - translateY) * (scaleChange - 1);
+
+        // Apply the new scale
+        scale *= scaleChange;
+
+        updateTransform();
+    });
+
+    // Mouse down event to start dragging
+    flowchartImg.addEventListener('mousedown', function(event) {
+        isDragging = true;
+        startX = event.clientX - translateX;
+        startY = event.clientY - translateY;
+        imageContainer.classList.add('dragging');
+    });
+
+    // Mouse move event to drag the image
+    document.addEventListener('mousemove', function(event) {
+        if (isDragging) {
+            translateX = event.clientX - startX;
+            translateY = event.clientY - startY;
+            updateTransform();
+        }
+    });
+
+    // Mouse up event to stop dragging
+    document.addEventListener('mouseup', function() {
+        isDragging = false;
+        imageContainer.classList.remove('dragging');
+    });
+
+    showImage();
+}
 
 
 

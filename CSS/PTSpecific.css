@@ -14,6 +14,29 @@ By using this code, you agree to abide by these terms and conditions. Failure to
 
 For inquiries regarding licensing or permission to use this code in ways not covered by this license, please contact the author at AdjusterConsole@gmail.com.  */
 
+#PTModeDiv {
+  display: none;
+  background: none;
+  box-shadow: none;
+  position: absolute;
+}
+
+#transAuthBtn {
+  left: 20px;
+  top:  415px;
+  white-space: nowrap;
+  width: 150px;
+  height: 45px;
+}
+
+#ringfailDeny {
+  left: 20px;
+  top:  480px;
+  white-space: nowrap;
+  width: 150px;
+  height: 65px;
+}
+
 .partsContain.away {
   position: absolute;
   background: none;
@@ -86,6 +109,70 @@ For inquiries regarding licensing or permission to use this code in ways not cov
   top: 230px;
   left: 385px;
   width: 120px;
+}
+
+#flowchartBtn {
+  position: absolute;
+  display: inline-block;
+  top: 170px;
+  left: 215px;
+  width: 120px;
+}
+
+.closeChart {
+  display: none;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 20px; 
+  background: none;
+  border: 2px solid red;
+  cursor: pointer;
+  z-index: 2000;
+  overflow: visible;
+  box-shadow: none;
+  border-radius: var(--radius2);
+}
+
+.closeChart:hover {
+   background: var(--hover-color);
+}
+
+.closeChart:active {
+   background: var(--active-color);
+   box-shadow: none;
+}
+
+.closeChart.showImg {
+  display: inline-block;
+}
+
+#imageContainer {
+  display: none;
+  position: absolute; 
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  z-index: 999;
+  cursor: grab;
+  overflow: hidden; 
+}
+
+#imageContainer.showImg {
+  display: block;
+  overflow: hidden;
+}
+
+#imageContainer img {
+  position: relative;
+  max-width: none; /* Remove constraints to allow scaling */
+  max-height: none;
+  transform-origin: center center;
+  overflow: hidden;
+}
+
+#imageContainer.dragging {
+  cursor: grabbing;
 }
 
 .denialBtns {
@@ -268,12 +355,4 @@ button.autoCopiers {
    -1px -1px 1px var(--glow-outline-color),
    -1px 1px 1px var(--glow-outline-color),
     1px -1px 1px var(--glow-outline-color);
-}
-
-#ringfailDeny {
-  left: 20px;
-  top:  420px;
-  white-space: nowrap;
-  width: 150px;
-  height: 65px;
 }

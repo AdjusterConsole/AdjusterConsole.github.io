@@ -16,14 +16,7 @@
 
 document.addEventListener('keyup', function(e) {
   if (e.ctrlKey && e.altKey && e.shiftKey && e.key === 'P') {
-    let mode = localStorage.getItem("mode");
-    if (mode === '2') {
-      localStorage.setItem('mode', '1');
-      modePT();
-    } else {
-      localStorage.setItem('mode', '2');
-      modePT();
-    }
+
   }
   if (e.ctrlKey && e.altKey && e.shiftKey && e.key === 'L') {
     window.location.href = 'https://theadjusterconsole.github.io/';
@@ -50,17 +43,28 @@ function autoEnable() {
   document.getElementById("fileUploaderDiv").classList.toggle('slideFileout');
 }
 
+function modePTmenu() {
+  let mode = localStorage.getItem("mode");
+  if (mode === '2') {
+    localStorage.setItem('mode', '1');
+    modePT();
+  } else {
+    localStorage.setItem('mode', '2');
+    modePT();
+  }
+}
+
 function modePT() {
   let mode = localStorage.getItem("mode");
   if (mode === '1') {
     document.getElementById("ITSBRITTNEY").style.display = "none";
     document.getElementById("openScript").style.display = "none";
     document.getElementById("PTModeDiv").style.display = "inline-block";
-    document.getElementById("newauthSelect").style.top = "200px";
+    document.getElementById("newauthSelect").style.top = "275px";
     document.getElementById("newauthSelect").style.left = "50px";
-    document.getElementById("newauthLabel").style.top = "200px";
+    document.getElementById("newauthLabel").style.top = "275px";
     document.getElementById("newauthLabel").style.left = "70px";
-    document.getElementById("newAuthstarter").style.top = "230px";
+    document.getElementById("newAuthstarter").style.top = "305px";
     document.getElementById("newAuthstarter").style.left = "20px";
     document.getElementById("statusNote").style.left = "200px";
     document.getElementById("statusNote").style.top = "230px";
@@ -70,7 +74,7 @@ function modePT() {
     document.getElementById("tools").style.display = "none";
     document.getElementById("T0").style.display = "none";
     document.getElementById("Request").style.display = "none";
-
+    document.getElementById("ptcon").innerHTML = "&#x2666; Gen Console &#x2666;";
     return;
   } 
   if (mode === '2') {
@@ -93,6 +97,7 @@ function modePT() {
     document.getElementById("T0").style.display = "";
     document.getElementById("Request").style.left = "";
     document.getElementById("Request").style.top = "";
+    document.getElementById("ptcon").innerHTML = "&#x2666; PT Console &#x2666;";
     return;
   }
  alert("You Broke It.");

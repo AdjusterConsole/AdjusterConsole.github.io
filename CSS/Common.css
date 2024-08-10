@@ -915,13 +915,7 @@ input:checked + .slider:before {
   margin-left: 5px;
 }
 
-#transAuthBtn {
-  left: 20px;
-  top:  340px;
-  white-space: nowrap;
-  width: 150px;
-  height: 45px;
-}
+
 
 .module_top.last_top.invisible {
   opacity: 0;
@@ -929,20 +923,5 @@ input:checked + .slider:before {
 
 .module_bot.last_bot3.invisible {
   opacity: 0;
-}
-
-#PTModeDiv {
-  display: none;
-  background: none;
-  box-shadow: none;
-  position: absolute;
-}
-
-#ringfailDeny {
-  left: 20px;
-  top:  420px;
-  white-space: nowrap;
-  width: 150px;
-  height: 65px;
 }
 

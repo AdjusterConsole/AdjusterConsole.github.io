@@ -92,6 +92,7 @@ function MENU() {
   const theMenu = document.getElementById("LOCK1");
   const BtnBuilder = document.getElementById("BtnBuilder");
   const appearance = document.getElementById("appearance");
+  const ptcon = document.getElementById("ptcon");
   const menuOpen = localStorage.getItem("menuOpen");
 
   if (menuOpen === 'false') {
@@ -100,6 +101,8 @@ function MENU() {
     appearance.style.opacity = '1';
     BtnBuilder.style.top = "70px";
     BtnBuilder.style.opacity = '1';
+    ptcon.style.top = "95px";
+    ptcon.style.opacity = '1';
     localStorage.setItem("menuOpen", "true");
     return;
   } else if (menuOpen === 'true') {
@@ -107,6 +110,8 @@ function MENU() {
     BtnBuilder.style.opacity = '0';
     appearance.style.top = "20px";
     appearance.style.opacity = '0';
+    ptcon.style.top = "20px";
+    ptcon.style.opacity = '0';
     theMenu.innerText = "\u2666 Settings \u2666";
     localStorage.setItem("menuOpen", "false");
     return;
