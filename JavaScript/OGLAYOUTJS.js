@@ -58,12 +58,8 @@ function removeBlankLines(text) {
    return text.replace(/^\s*$/gm, ''); 
 }
 
-function shadMaker() {
-  window.location.href = "shadowGen/shadIndex.html";
-}
-
 function checkOpen() {
-  if (!document.getElementById("fileUploaderDiv").classList.contains('hideFile')) return true;
+  if (!document.getElementById("fileUploaderDiv").classList.contains('slideFilein')) return true;
   const elements = [
     document.getElementById("TPDiv"),
     document.getElementById("statNote"),

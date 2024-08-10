@@ -30,19 +30,18 @@ function processUploadedFile(event) {
   reader.onload = function(e) {
     try {
       const jsonContent = JSON.parse(e.target.result);
-      if (jsonContent.claim_info && jsonContent.claim_info.length > 0) {
-        const claimInfo = jsonContent.claim_info[0]; // Isolate claim_info
-        const output = formatJsons(claimInfo); // Pass only claim_info to formatJson
+      if (Array.isArray(jsonContent) && jsonContent.length > 0) {
+        const output = formatJsons(jsonContent); // Pass the entire array to formatJsons
         document.getElementById('textarea2').value = output;
-        const countLefts = localStorage.getItem("countLefts");
-        document.getElementById('left2').innerHTML = 'Remaining<br>' + countLefts;
-        document.getElementById('left3').innerHTML = 'Remaining<br>' + countLefts; 
-        const countInts = parseInt(countLefts) * 4;
+        const countLefts = jsonContent.length; // Set the countLefts based on the number of parts
+        localStorage.setItem("countLefts", countLefts);
+        const countInts = countLefts * 4;
         localStorage.setItem("countAlls", countInts);
         localStorage.setItem("countPNs", countLefts);
         localStorage.setItem("countPrices", countLefts);
-        const countStrs = countInts.toString();
-        document.getElementById('left1').innerHTML = 'Remaining<br>' + countStrs;
+        document.getElementById('left1').innerHTML = 'Remaining<br>' + countInts;
+        document.getElementById('left2').innerHTML = 'Remaining<br>' + countLefts;
+        document.getElementById('left3').innerHTML = 'Remaining<br>' + countLefts;
       } else {
         alert("Invalid JSON structure.");
       }
@@ -53,44 +52,11 @@ function processUploadedFile(event) {
   reader.readAsText(file);
 }
 
-
 function formatJsons(jsonContent, indent = 0) {
   let result = '';
-  for (let key in jsonContent) {
-    if (jsonContent.hasOwnProperty(key)) {
-      const value = jsonContent[key];
-      let indentation = ' '.repeat(indent);
-      switch (key) {
-        case 'partsData':
-          result += `${indentation}Parts\n`;
-          value.forEach(part => {
-            result += formatPart(part, indent + 2);
-          });
-          break;
-        case 'laborData':
-          result += `${indentation}Labor:\n`;
-          value.forEach(labor => {
-            result += `${' '.repeat(indent + 2)}Description: ${labor.laborDescription}\n`;
-            result += `${' '.repeat(indent + 2)}Hours: ${labor.hours}\n\n`;
-          });
-          break;
-        case 'totals':
-          result += `${indentation}Totals:\n`;
-          for (let totalKey in value) {
-            if (value.hasOwnProperty(totalKey)) {
-              result += `${' '.repeat(indent + 2)}${totalKey}: ${value[totalKey]}\n`;
-            }
-          }
-          break;
-        case 'laborRate':
-          result += `${indentation}Labor Rate: ${value}\n`;
-          break;
-        default:
-          result += `${indentation}${key}: ${value}\n`;
-          break;
-      }
-    }
-  }
+  jsonContent.forEach(part => {
+    result += formatPart(part, indent);
+  });
   return result;
 }
 
@@ -120,6 +86,9 @@ function resetAutoCopyComponents() {
   localStorage.setItem("countPrices", '0');
   setElementValue([ 
     'fileInput', 'textarea5', 'textarea4', 'textarea3', 'textarea2' ], "");
+  document.getElementById('copy1').innerHTML = "Copied<br>--";
+  document.getElementById('copy2').innerHTML = "Copied<br>--";
+  document.getElementById('copy3').innerHTML = "Copied<br>--";
   document.getElementById('next1').innerHTML = "Next<br>--";
   document.getElementById('next2').innerHTML = "Next<br>--";
   document.getElementById('next3').innerHTML = "Next<br>--";
@@ -150,6 +119,7 @@ function autoCopyAndDelete() {
         const NextLine = lines[1].trim() || '';
         const updatedText = lines.slice(1).join('\n');
         document.getElementById('textarea5').value = updatedText;
+        document.getElementById('copy1').innerHTML = "Copied<br>" + firstLine;
         document.getElementById('next1').innerHTML = "Next<br>" + NextLine;
         document.getElementById('left1').innerHTML = "Remaining<br>" + countAlls;
         localStorage.setItem("countAlls", countAlls);
@@ -179,6 +149,7 @@ function partnumberCopyAndDelete() {
         const NextLine = lines[1].trim() || '';
         const updatedText = lines.slice(1).join('\n');
         document.getElementById('textarea3').value = updatedText;
+        document.getElementById('copy2').innerHTML = "Copied<br>" + firstLine;
         document.getElementById('next2').innerHTML = "Next<br>" + NextLine;
         document.getElementById('left2').innerHTML = "Remaining<br>" + countPNs;
         localStorage.setItem("countPNs", countPNs);
@@ -208,6 +179,7 @@ function partpriceCopyAndDelete() {
         const NextLine = lines[1].trim() || '';
         const updatedText = lines.slice(1).join('\n');
         document.getElementById('textarea4').value = updatedText;
+        document.getElementById('copy3').innerHTML = "Copied<br>" + firstLine;
         document.getElementById('next3').innerHTML = "Next<br>" + NextLine;
         document.getElementById('left3').innerHTML = "Remaining<br>" + countPrices;
         localStorage.setItem("countPrices", countPrices);
@@ -217,7 +189,6 @@ function partpriceCopyAndDelete() {
     }
   }
 }
-
 
 function setElementValue(elementIds, value) {
   elementIds.forEach(id => {

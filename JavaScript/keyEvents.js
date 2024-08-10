@@ -45,15 +45,9 @@ document.addEventListener('keyup', function(e) {
   }
 });
 
-//document.addEventListener('contextmenu', function(e) {
-//  e.preventDefault();
-//  openNav();
-//});
-
 function autoEnable() {
-  document.getElementById("ITSBRITTNEY").classList.toggle('hide');
-  document.getElementById("fileUploaderDiv").classList.toggle('hideFile');
-  document.getElementById("snipbox").classList.toggle('hide');
+  document.getElementById("fileUploaderDiv").classList.toggle('slideFilein');
+  document.getElementById("fileUploaderDiv").classList.toggle('slideFileout');
 }
 
 function modePT() {
@@ -75,14 +69,15 @@ function modePT() {
     document.getElementById("SOPs").style.display = "none";
     document.getElementById("tools").style.display = "none";
     document.getElementById("T0").style.display = "none";
-    document.getElementById("Request").style.left = "400px";
-    document.getElementById("Request").style.top = "50px";
+    document.getElementById("Request").style.display = "none";
+
     return;
   } 
   if (mode === '2') {
     document.getElementById("ITSBRITTNEY").style.display = "inline-block";
     document.getElementById("openScript").style.display = "inline-block";
     document.getElementById("PTModeDiv").style.display = "none";
+    document.getElementById("Request").style.display = "";
     document.getElementById("newAuthstarter").style.top = "";
     document.getElementById("newAuthstarter").style.left = "";
     document.getElementById("newauthSelect").style.top = "";
@@ -237,4 +232,3 @@ function saintMullet() {
   animate();
   }, 100);
 }
-
