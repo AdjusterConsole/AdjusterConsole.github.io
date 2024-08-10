@@ -8,17 +8,17 @@
 <meta name="referrer" content="no-referrer">
 
 
-<link rel="stylesheet" href="CSS/Common.css?v=1292314158764">
-<link rel="stylesheet" href="CSS/Stable.css?v=1292314158764">
-<link rel="stylesheet" href="CSS/auth_module.css?v=1292314158764">
-<link rel="stylesheet" href="CSS/Buttons.css?v=1292314158764">
-<link rel="stylesheet" href="CSS/AppearOpts.css?v=1292314158764">
-<link rel="stylesheet" href="CSS/Resource.css?v=1292314158764">
-<link rel="stylesheet" href="CSS/contextMenu.css?v=1292314158764">
-<link rel="stylesheet" href="CSS/laborRateScript.css?v=1292314158764">
-<link rel="stylesheet" href="CSS/PTSpecific.css?v=1292314158764">
+<link rel="stylesheet" href="CSS/Common.css?v=76536525364345">
+<link rel="stylesheet" href="CSS/Stable.css?v=76536525364345">
+<link rel="stylesheet" href="CSS/auth_module.css?v=76536525364345">
+<link rel="stylesheet" href="CSS/Buttons.css?v=76536525364345">
+<link rel="stylesheet" href="CSS/AppearOpts.css?v=76536525364345">
+<link rel="stylesheet" href="CSS/Resource.css?v=76536525364345">
+<link rel="stylesheet" href="CSS/contextMenu.css?v=76536525364345">
+<link rel="stylesheet" href="CSS/laborRateScript.css?v=76536525364345">
+<link rel="stylesheet" href="CSS/PTSpecific.css?v=76536525364345">
 	<title>Adjuster Console</title>
-<link rel="manifest" href="manifest.webmanifest?v=12457637652434">
+<link rel="manifest" href="manifest.webmanifest?v=76536525364345">
 
 <style>
 
@@ -51,6 +51,9 @@ body {
   background-repeat: repeat;
   background-attachment: fixed;
   background-size: 100% 100%;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
 .textareamain {
@@ -209,6 +212,11 @@ body {
 </head>
 <body>
 <img src="splashLogo.png" class="splashImg" id="splashImage">
+<button id="closeChartBtn" class="closeChart" onclick="closeChart()">X</button>
+<div id="imageContainer">
+  <img src="ClaimsReview.jpg" class="flowchart" id="flowchartImg">
+</div>
+
 <div id="disclaimer">Confidential and Prorietary<br>For Internal AAS Use Only</div>
 <div id="copy-notification">Copied!</div>
 <button id="swapper" class="swapVer" onclick="setVer()">Original</button>
@@ -251,6 +259,7 @@ body {
   <button id="LOCK1" class="astext" onclick="MENU()">&#x2666; Settings &#x2666;</button>
   <button id="appearance" class="astext menu" onclick="personalize()">&#x2666; Appearance &#x2666;</button>
   <button id="BtnBuilder" class="astext menu" onclick="BuilderShow()">&#x2666; Toggle On/Off &#x2666;</button>
+  <button id="ptcon" class="astext menu" onclick="modePTmenu()">&#x2666; PT Console &#x2666;</button>
 </div>
 
                                                 <!-- SOP Menu -->
@@ -582,6 +591,10 @@ body {
   <button class="D R P" id="requests" onclick="showRequests()" oncontextmenu="customMenu(this.id, event)">Requests</button>
 
   <button class="D R P" id="prompt" onclick="copyTextFunc(this.id)" oncontextmenu="customMenu(this.id, event)">AI prompt</button>
+
+  <button class="D R P" id="flowchartBtn" onclick="flowchart()" oncontextmenu="customMenu(this.id, event)">Flow Chart</button>
+
+
 
   <div id="denialBtnDiv" class="denialBtns hideit">
     <button class="D R P" id="conopdeny" onclick="copyTextFunc(this.id)" oncontextmenu="customMenu(this.id, event)">Continued Operation</button>
@@ -2644,16 +2657,16 @@ TIME:&nbsp&nbsp</textarea>
   <button id="sizeCancel" class="bones" onclick="sizeSubmit()">Exit</button>
 </div>
 
-<script src="JavaScript/snipDiv.js?v=1292314158764"></script>
-<script src="JavaScript/keyEvents.js?v=1292314158764"></script>
-<script src="JavaScript/OGLAYOUTJS.js?v=1292314158764"></script>
-<script src="JavaScript/dual_claim_authorization.js?v=1292314158764"></script>
-<script src="JavaScript/ChangeAppearance2.js?v=1292314158764"></script>
-<script src="JavaScript/commonScript.js?v=1292314158764"></script>
-<script src="JavaScript/jsonParse.js?v=1292314158764"></script>
-<script src="JavaScript/ContextMenu.js?v=1292314158764"></script>
-<script src="JavaScript/laborRate.js?v=1292314158764"></script>
-<script src="JavaScript/trackerScript.js?v=1292314158764"></script>
-<script src="JavaScript/powertrain.js?v=20240707202844"></script>
+<script src="JavaScript/snipDiv.js?v=76536525364345"></script>
+<script src="JavaScript/keyEvents.js?v=76536525364345"></script>
+<script src="JavaScript/OGLAYOUTJS.js?v=76536525364345"></script>
+<script src="JavaScript/dual_claim_authorization.js?v=76536525364345"></script>
+<script src="JavaScript/ChangeAppearance2.js?v=76536525364345"></script>
+<script src="JavaScript/commonScript.js?v=76536525364345"></script>
+<script src="JavaScript/jsonParse.js?v=76536525364345"></script>
+<script src="JavaScript/ContextMenu.js?v=76536525364345"></script>
+<script src="JavaScript/laborRate.js?v=76536525364345"></script>
+<script src="JavaScript/trackerScript.js?v=76536525364345"></script>
+<script src="JavaScript/powertrain.js?v=76536525364345"></script>
 </body>
 </html>
