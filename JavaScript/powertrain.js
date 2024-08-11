@@ -14,6 +14,10 @@
 //
 //For inquiries regarding licensing or permission to use this code in ways not covered by this license, please contact the author at AdjusterConsole@gmail.com.
 
+let myTimeout1;
+let myTimeout2;
+let myTimeout3;
+
 function slideOpen() {
   let slideOpen = localStorage.getItem('slideOpen');
   if (slideOpen == 'true') {
@@ -24,51 +28,64 @@ function slideOpen() {
 }
 
 function showDenials() {
-  const denyDiv = document.getElementById("denialBtnDiv");
-  if (!slideOpen()) {
-    denyDiv.classList.toggle('showit');
-    denyDiv.classList.toggle('hideit');
-    localStorage.setItem('slideOpen', true);
-    if (slideOpen()) {
-      setTimeout(function() {
-        denyDiv.classList.toggle('showit');
-        denyDiv.classList.toggle('hideit');
-        localStorage.setItem('slideOpen', false);
-      },3000);
-    }
+  const denyDiv = document.getElementById('denialBtnDiv');
+  if (slideOpen()) {
+    closeSlide();
+  } 
+  denyDiv.classList.add('showit');
+  denyDiv.classList.remove('hideit');
+  localStorage.setItem('slideOpen', true);
+  localStorage.setItem('whichSlide', 'denialBtnDiv');
+  if (myTimeout2) {
+    clearTimeout(myTimeout2);
   }
+  if (myTimeout3) {
+    clearTimeout(myTimeout3);
+  }
+  myTimeout1 = setTimeout(closeSlide,3000);
 }
 
 function showReviews() {
-  const reviewDiv = document.getElementById("reviewBtnDiv");
-  if (!slideOpen()) {
-    reviewDiv.classList.toggle('showit');
-    reviewDiv.classList.toggle('hideit');
-    localStorage.setItem('slideOpen', true);
-    if (slideOpen()) {
-      setTimeout(function() {
-        reviewDiv.classList.toggle('showit');
-        reviewDiv.classList.toggle('hideit');
-        localStorage.setItem('slideOpen', false);
-      },3000);
-    }
+  const reviewDiv = document.getElementById('reviewBtnDiv');
+  if (slideOpen()) {
+    closeSlide();
+  } 
+  reviewDiv.classList.add('showit');
+  reviewDiv.classList.remove('hideit');
+  localStorage.setItem('slideOpen', true);
+  localStorage.setItem('whichSlide', 'reviewBtnDiv');
+  if (myTimeout1) {
+    clearTimeout(myTimeout1);
   }
+  if (myTimeout3) {
+    clearTimeout(myTimeout3);
+  }
+  myTimeout2 = setTimeout(closeSlide,3000);
 }
 
 function showRequests() {
-  const requestDiv = document.getElementById("requestBtnDiv");
-  if (!slideOpen()) {
-    requestDiv.classList.toggle('showit');
-    requestDiv.classList.toggle('hideit');
-    localStorage.setItem('slideOpen', true);
-    if (slideOpen()) {
-      setTimeout(function() {
-        requestDiv.classList.toggle('showit');
-        requestDiv.classList.toggle('hideit');
-        localStorage.setItem('slideOpen', false);
-      },3000);
-    }
+  const requestDiv = document.getElementById('requestBtnDiv');
+  if (slideOpen()) {
+    closeSlide();
+  } 
+  requestDiv.classList.add('showit');
+  requestDiv.classList.remove('hideit');
+  localStorage.setItem('slideOpen', true);
+  localStorage.setItem('whichSlide', 'requestBtnDiv');
+  if (myTimeout1) {
+    clearTimeout(myTimeout1);
   }
+  if (myTimeout2) {
+    clearTimeout(myTimeout2);
+  }
+  myTimeout3 = setTimeout(closeSlide,3000);
+}
+
+function closeSlide() {
+  const whichSlideId = localStorage.getItem('whichSlide');
+  const openSlide = document.getElementById(whichSlideId);
+  openSlide.classList.remove('showit');
+  openSlide.classList.add('hideit');
 }
 
 function ringDeny() {
