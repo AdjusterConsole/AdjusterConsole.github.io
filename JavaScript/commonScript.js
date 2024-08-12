@@ -472,7 +472,8 @@ function showSOP(id) {
     "./SOP/Info/Text_Notifications.pdf",
     "./SOP/Info/PT_First_Contact.pdf",
     "./SOP/Info/State_Tax.pdf",
-    "./SOP/Info/Employee_Handbook.pdf"
+    "./SOP/Info/Employee_Handbook.pdf",
+    "./SOP/HowTo/Check_Available_PTO.pdf"
         ];
   const index = parseInt(id.substring(3)) - 1;
   const src = sources[index];
