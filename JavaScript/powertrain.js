@@ -116,52 +116,62 @@ function copyTextFunc(id) {
     case 'conopdeny':
     text = '21. Negligence:\ra. Continuing to operate YOUR VEHICLE and not protecting YOUR VEHICLE from\rfurther damage after a BREAKDOWN may result in no COVERAGE for any\radditional damage.\r';
     copy(text);
+    closeSlide();
     break;
 
     case 'sludgedeny':
     text = '17. BREAKDOWNS resulting from engine sludge, carbon, pre-ignition, detonation, varnish,\rcorrosion, foreign objects, dirt, dust, liquid, cracked rubber and/or neoprene parts, dry-rot,\rroad chemicals, lack of proper fluids or use of additives or fuel grades not recommended by\rthe manufacturer\r';
     copy(text);
+    closeSlide();
     break;
 
     case 'waitdeny':
     text = '3. Pre-existing conditions: BREAKDOWNS that occurred prior to the CONTRACT purchase\rdate or during the WAITING PERIOD.\r\r21. WAITING PERIOD: the amount of time AND miles the VEHICLE must be driven after the\rCONTRACT effective date before BREAKDOWN COVERAGE begins, as specified on the\rDECLARATIONS PAGE.\r';
     copy(text);
+    closeSlide();
     break;
 
     case 'T31':
     text = 'Technician states:\r\rPart failure\rPart failure\rPart failure\r\rPlease have the technician demonstrate the failures listed above.\r\rNotate if rust, corrosion, or any outside influence is the cause of failure.\rNotate available fluid levels and conditions.\rFor electrical components, have technician verify power and ground.\r\rPlease take pictures of the following:\r';
     text += 'All failures.\rAll 4 sides of vehicle, vin, and odometer.\rInspection stickers and oil change stickers.\rWheels, tires, and rotors.\rAny dash light that are on, current or history DTCs, and any freeze frame data available.\rAny signs of commercial use or modifications.\rAny rust, corrosion, or collision damage.\rAny other information relevant to the failures.\r\rIf the failure is related to drivability or verification is noise based, please provide video verification.\r\rPlease contact the Repair Facility 1-2 hours before arrival.\r\rContact Name:\rEmail:\rDirect Line:\r';
     copy(text);
+    closeSlide();
     break;
 
     case 'T41':
     text = 'Inspection Review\rReason for inspection:\rLabor rate:\rMileage:\rFluid condition:\rModifications/Collision/Commercial:\rInspector findings/photo review:';
     copy(text);
+    closeSlide();
     break;
 
     case 'T51':
     text = 'Reviewed photos sent by repair facility.\rVerified vin.\rVerified mileage.\rNo indication of commercial use.\rNo indication of modification.\r\r';
     copy(text);
+    closeSlide();
     break;
 
     case 'T61':
     text = 'CARFAX Report Review:\r1.) What I was looking for:\r2.) Red flags or Mileage Discrepancy:\r3.) Does it relate to the claim:\r4.) What is needed now:';
     copy(text);
+    closeSlide();
     break;
 
     case 'T71':
     text = 'Requesting photos from Repair Facility to verify failure and avoid inspection delay.\rInforming Repair Facility to include pics of all 4 corners of the vehicle, VIN plate, odometer, and pictures of the failure.\rSent request via SRS action button.\r';
     copy(text);
+    closeSlide();
     break;
 
     case 'T81':
     text = 'Requesting Contract Holder statement regarding issues.\rRequesting past 12 months of service records from the Contract Holder.\rSent records request using SRS action button.\rWill call the Contract Holder to inform.\r';
     copy(text);
+    closeSlide();
     break;
 
     case 'T91':
     text = 'Called Contract Holder to request records.\rCalled Contract Holder to request statement.\rNo answer – left voicemail.\rTasked to CS callbacks.';
     copy(text);
+    closeSlide();
     break;
 
     case 'prompt':
@@ -197,6 +207,7 @@ Each line is an individual part and should have its own entry in the JSON output
 
     case 'T101':
     STMTTEMP();
+    closeSlide();
     break;
   }
 }
