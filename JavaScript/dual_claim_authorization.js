@@ -232,8 +232,8 @@ function auth_initialize(version) {
   const both = document.getElementById(prefix + 'auth11').checked;
   const none = document.getElementById(prefix + 'auth12').checked;
   const oopcamount = parseInt(document.getElementById(prefix + 'auth20').value);
-  const noncovered = document.getElementById(prefix + 'auth14').checked;
-  const denied = document.getElementById(prefix + 'auth15').checked;
+  const noncovered = document.getElementById(prefix + 'auth13').checked;
+  const denied = document.getElementById(prefix + 'auth14').checked;
 
   if (oopc || both) {
     const partoop = document.getElementById(prefix + 'auth17').checked;
