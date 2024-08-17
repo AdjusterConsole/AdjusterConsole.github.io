@@ -102,7 +102,7 @@ function cancel_auth() {
 
   document.getElementById('auth25').value = '$100.00';
   document.getElementById('nauth25').value = '$100.00';
-  document.getElementById('oopc_option').style.opacity = "0";
+  show_oopc_option();
 
   document.getElementById("authParts").style.display = "inline-block";
   setButtonDisplay([ 'OOPoptDiv', 'newAuthstyle', 'authOopcs', 'authRequests' ], "none");
@@ -171,8 +171,11 @@ function auth_initialize(version) {
   const auth25Note = "Have not given authorization info to the Repair Facility at this time.\r";
   const auth26Note = "Contract Holder has no OOPC besides deductible.\r";
   const auth27Note = "Gave authorization info and payment instructions to ";
+
   const auth28Note = "Will inform Contract Holder of non-covered components.\r";
+
   const auth29Note = "There were denied items on this claim.\rReview denial note for more details.\r";
+
   const auth30Note = "Haven't determined OOPC at this time.\rWill review with RF prior to calling Contract Holder.\r"; 
   
   let output = '';
