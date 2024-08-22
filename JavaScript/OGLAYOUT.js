@@ -1,5 +1,6 @@
 
 window.onload = function PutItBack() {
+  localStorage.clear();
   var splashImage = document.getElementById('splashImage');
 
   setTimeout(function() {
