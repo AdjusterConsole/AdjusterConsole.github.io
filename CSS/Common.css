@@ -915,8 +915,6 @@ input:checked + .slider:before {
   margin-left: 5px;
 }
 
-
-
 .module_top.last_top.invisible {
   opacity: 0;
 }
