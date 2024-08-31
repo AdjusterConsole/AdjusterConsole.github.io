@@ -1,0 +1,371 @@
+/*
+COPYRIGHT © Jesse Williams 2024 – ALL RIGHTS RESERVED WORLDWIDE
+This website and its content, including but not limited to the 'A' logo and 'AdjusterConsole', are protected by copyright law.
+You are granted a limited, non-exclusive, non-transferable, revocable license to access and use the materials on this website solely for personal use.
+By accessing or using this website, you agree to the following terms and conditions:
+Restrictions on Use
+You may not, without the express written permission of the author, Jesse Williams:
+Copy, download, reproduce, distribute, publish, display, perform, modify, create derivative works from, transmit, or otherwise exploit any part of this website or its content, in whole or in part.
+Use this website or its content for any illegal, unethical, or unauthorized purposes.
+Access or use any proprietary information, documents, or content not owned by Jesse Williams in a way that is not expressly authorized.
+This license applies to all versions of the code and content previously released, as well as all future versions.
+Any prior statements made regarding permission to use are hereby revoked.
+Third-Party Trademarks and Proprietary Information
+All trademarks, service marks, proprietary information, and/or documents not owned by Jesse Williams that appear on this website are the property of their respective owners, who may or may not be affiliated with, connected to, or sponsored by Jesse Williams. Such proprietary information, documents, and content should be treated as confidential and used solely for their intended and expressly authorized purposes.
+Unauthorized use, distribution, or disclosure of such proprietary information is strictly prohibited.
+Disclaimer of Warranties
+This website, its content, and the code provided are offered "as is", without any warranty of any kind, either express or implied.
+The author makes no representations or warranties regarding the accuracy, completeness, or suitability of the website or its content for any particular purpose.
+Limitation of Liability
+To the fullest extent permitted by law, Jesse Williams shall not be liable for any direct, indirect, incidental, special, consequential, or punitive damages arising out of or relating to your use of or inability to use the website or its content, even if advised of the possibility of such damages.IndemnificationYou agree to indemnify, defend, and hold harmless Jesse Williams from any claims, liabilities, damages, losses, or expenses (including reasonable attorney's fees) arising from your use of the website or its content, or your violation of these terms and conditions.Amendments to the TermsThese terms and conditions may be updated or modified at any time without prior notice. It is your responsibility to review these terms regularly. By continuing to use this website, you agree to any changes.
+Governing Law and Jurisdiction
+These terms and conditions are governed by and construed in accordance with the laws of the United States of America.
+Any disputes arising under or related to these terms and conditions shall be resolved exclusively in the courts of United States of America.
+Contact Information for Licensing Inquiries
+For inquiries regarding licensing or permission to use this code in ways not covered by this license, please contact the author at AdjusterConsole@gmail.com.
+By using this website or its content, you acknowledge that you have read, understood, and agree to be bound by these terms and conditions.
+Failure to comply with these terms may result in legal action.
+*/
+
+#PTModeDiv {
+  display: none;
+  background: none;
+  box-shadow: none;
+  position: absolute;
+}
+
+#transAuthBtn {
+  left: 20px;
+  top:  415px;
+  white-space: nowrap;
+  width: 150px;
+  height: 45px;
+}
+
+#ringfailDeny {
+  left: 20px;
+  top:  480px;
+  white-space: nowrap;
+  width: 150px;
+  height: 65px;
+}
+
+.partsContain.away {
+  position: absolute;
+  background: none;
+  box-shadow: none;
+  bottom: 0px;
+  left: -550px;
+  transition: all .3s ease;
+}
+
+.partsContain.home {
+  position: absolute;
+  background: none;
+  box-shadow: none;
+  bottom: 0px;
+  left: 0px;
+  transition: all .3s ease;
+}
+
+#hideTA {
+  bottom: 400px;
+  left: 10px;
+  position: absolute;
+  display: inline-block;
+  width: 120px;
+}
+
+#autoBtn {
+  position: absolute;
+  display: inline-block;
+  bottom: 400px;
+  left: 150px;
+  width: 120px;
+}
+
+#trackerBTN {
+  position: absolute;
+  display: inline-block;
+  top: 415px;
+  right: 220px;
+  width: 120px;
+}
+
+#denials {
+  position: absolute;
+  display: inline-block;
+  top: 50px;
+  left: 385px;
+  width: 120px;
+}
+
+#reviews {
+  position: absolute;
+  display: inline-block;
+  top: 110px;
+  left: 385px;
+  width: 120px;
+}
+
+#requests {
+  position: absolute;
+  display: inline-block;
+  top: 170px;
+  left: 385px;
+  width: 120px;
+}
+
+#prompt {
+  position: absolute;
+  display: inline-block;
+  top: 230px;
+  left: 385px;
+  width: 120px;
+}
+
+#flowchartBtn {
+  position: absolute;
+  display: inline-block;
+  top: 170px;
+  left: 215px;
+  width: 120px;
+}
+
+.closeChart {
+  display: none;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 20px; 
+  background: none;
+  border: 2px solid red;
+  cursor: pointer;
+  z-index: 2000;
+  overflow: visible;
+  box-shadow: none;
+  border-radius: var(--radius2);
+}
+
+.closeChart:hover {
+   background: var(--hover-color);
+}
+
+.closeChart:active {
+   background: var(--active-color);
+   box-shadow: none;
+}
+
+.closeChart.showImg {
+  display: inline-block;
+}
+
+#imageContainer {
+  display: none;
+  position: absolute; 
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  z-index: 999;
+  cursor: grab;
+  overflow: hidden; 
+}
+
+#imageContainer.showImg {
+  display: block;
+  overflow: hidden;
+}
+
+#imageContainer img {
+  position: relative;
+  max-width: none; /* Remove constraints to allow scaling */
+  max-height: none;
+  transform-origin: center center;
+  overflow: hidden;
+}
+
+#imageContainer.dragging {
+  cursor: grabbing;
+}
+
+.denialBtns {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  align-items: space-between;
+  left: 530px;
+  background: none;
+  box-shadow: none;
+  transition: all .3s ease;
+}
+
+.reviewBtns {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  align-items: space-between;
+  left: 530px;
+  background: none;
+  box-shadow: none;
+  transition: all .3s ease;
+}
+
+.requestBtns {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  align-items: space-between;
+  left: 530px;
+  background: none;
+  box-shadow: none;
+  transition: all .3s ease;
+}
+
+.denialBtns.showit, .reviewBtns.showit, .requestBtns.showit {
+  top: 20px;
+  transition: all .3s ease;
+}
+
+.denialBtns.hideit, .reviewBtns.hideit {
+  top: -315px;
+  transition: all .3s ease;
+}
+
+.requestBtns.hideit {
+  top: -455px;
+  transition: all .3s ease;
+}
+
+.denialBtns button {
+  white-space: wrap;
+  display: initial;
+  position: initial;
+  margin: 10px;
+  padding: 10px 25px;
+  width: 160px;
+  font-size: 17px;
+}
+
+.reviewBtns button {
+  white-space: wrap;
+  display: initial;
+  position: initial;
+  margin: 10px;
+  padding: 10px 25px;
+  width: 160px;
+  font-size: 17px;
+}
+
+.requestBtns button {
+  white-space: wrap;
+  display: initial;
+  position: initial;
+  margin: 10px;
+  padding: 10px 25px;
+  width: 160px;
+  font-size: 17px;
+}
+
+#fileUploaderDiv {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  top: 150px;
+  border: 2px solid var(--my-accent-color);
+  width: 600px;
+  padding: 40px;
+  z-index: 7;
+  background: var(--my-background-color);
+  box-shadow: none;
+  transition: all .3s ease;
+  border-radius: 15px;
+}
+
+#fileUploaderDiv.slideFilein {
+  left: -740px;
+  transition: all .3s ease;
+}
+
+#fileUploaderDiv.slideFileout {
+  left: 30px;
+  transition: all .3s ease;
+  box-shadow: var(--altboxshad);
+}
+
+.auto_copy_inners {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  background: none;
+  box-shadow: none;
+  width: 600px;
+  justify-content: space-evenly;
+}
+
+.auto_copy_inners div {
+  display: flex;
+  width: 120px;
+  background: none;
+  box-shadow: none;
+  color: var(--glow-txt-color);
+  text-shadow:
+    1px 1px 1px var(--glow-outline-color),
+   -1px -1px 1px var(--glow-outline-color),
+   -1px 1px 1px var(--glow-outline-color),
+    1px -1px 1px var(--glow-outline-color);
+  justify-content: center;
+  text-align: center;
+}
+
+.auto_copy_inners button {
+  display: initial;
+  position: initial;
+  margin-bottom: 20px;
+  width: 130px;
+  height: 50px;
+}
+
+button.autoCopiers {
+  display: initial;
+  position: initial;
+  width: 130px;
+  height: 40px;
+}
+
+#fileUploaderDiv label {
+  width: 130px;
+}
+
+.auto_copy_innerslast input {
+  color: transparent;
+}
+
+.auto_copy_innerslast {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: none;
+  box-shadow: none;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+#closeAutoCopy {
+  position: absolute;
+  display: inline-block;
+  top: 5px;
+  right: 8px;
+  padding: 3px 5px;
+  border-radius: 5px;
+  border: 1px solid var(--glow-txt-color);
+  background: none;
+  box-shadow: none;
+  font-size: 18px;
+  color: var(--glow-txt-color);
+  text-shadow:
+    1px 1px 1px var(--glow-outline-color),
+   -1px -1px 1px var(--glow-outline-color),
+   -1px 1px 1px var(--glow-outline-color),
+    1px -1px 1px var(--glow-outline-color);
+}
