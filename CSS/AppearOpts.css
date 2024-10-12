@@ -53,17 +53,6 @@ textarea {
   border-radius: var(--radius);
 }
 
-textarea.origText {
- border-radius: var(--radius2);
- outline: none;
-  box-shadow:
-  inset -1px -1px 2px var(--my-shadow-color2),
-  inset -3px -3px 2px var(--my-shadow-color1),
-  inset 1px 1px 2px var(--my-shadow-color2),
-  inset 3px 3px 2px var(--my-shadow-color1),
-  3px 3px 7px black;
-}
-
 button {
   overflow: hidden;
   overflow-wrap: normal;
@@ -91,32 +80,6 @@ button:active {
   transition: all 0.2s ease;
   background: var(--btn-backgroundx);
   box-shadow: var(--box-shadow1x);
-}
-
-div#original.default button.orig {
-  border-radius: var(--radius2);
-  color: black;
-  background: linear-gradient(165deg,
-    var(--my-accent-color) 8%,
-    white 20%,
-    white 80%,
-    var(--my-accent-color) 92%);
-  text-shadow: 0px 0px 1px;
-  box-shadow:
-  inset -1px -1px 2px black,
-  inset -3px -3px 2px white,
-  inset 1px 1px 2px var(--my-shadow-color4),
-  inset 3px 3px 2px var(--my-shadow-color1),
-  3px 3px 7px black;
-&:active {
-    transform: translateY(1px);
-      box-shadow:
-      inset -1px -1px 2px black,
-      inset -3px -3px 2px white,
-      inset 1px 1px 2px var(--my-shadow-color1),
-      inset 3px 3px 2px var(--my-shadow-color2),
-      2px 2px 2px black;
-  }
 }
 
 .picker {

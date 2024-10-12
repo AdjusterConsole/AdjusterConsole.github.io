@@ -6,7 +6,9 @@
 <meta http-equiv="Strict-Transport-Security" content="max-age=0; includeSubDomains; preload">
 <meta http-equiv="X-Content-Type-Options" content="nosniff">
 <meta name="referrer" content="no-referrer">
-
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Herr+Von+Muellerhoff&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="CSS/Common.css?v=651651651682">
 <link rel="stylesheet" href="CSS/Stable.css?v=651651651682">
@@ -18,6 +20,7 @@
 <link rel="stylesheet" href="CSS/contextMenu.css?v=651651651682">
 <link rel="stylesheet" href="CSS/laborRateScript.css?v=651651651682">
 <link rel="stylesheet" href="CSS/PTSpecific.css?v=651651651682">
+<link rel="stylesheet" href="CSS/Instructions.css?v=651651651682">
 	<title>Adjuster Console</title>
 <!--<link rel="manifest" href="manifest.webmanifest?v=651651651682">-->
 
@@ -93,13 +96,13 @@ body {
   position: absolute;
   display: inline-block;
   color: var(--glow-txt-color);
-  font-size: 18px;
+  font-size: 17px;
   text-shadow:
     1px 1px var(--glow-outline-color),
    -1px -1px var(--glow-outline-color),
    -1px 1px var(--glow-outline-color),
     1px -1px var(--glow-outline-color);
-  top: 535px;
+  top: 515px;
   left: 645px;
   z-index:-1;
 }
@@ -253,7 +256,6 @@ Failure to comply with these terms may result in legal action.</b></p>
 <div onclick="hideDisclaimer('x')" class="noShow" id="understand">I have read and understand these terms and conditions</div>
 </div>
 <div id="copy-notification">Copied!</div>
-<button id="swapper" class="swapVer" onclick="setVer()">Original</button>
 
                                                 <!-- Auto Copy -->
 
@@ -294,6 +296,7 @@ Failure to comply with these terms may result in legal action.</b></p>
   <button id="appearance" class="astext menu" onclick="personalize()">&#x2666; Appearance &#x2666;</button>
   <button id="BtnBuilder" class="astext menu" onclick="BuilderShow()">&#x2666; Toggle On/Off &#x2666;</button>
   <button id="ptcon" class="astext menu" onclick="modePTmenu()">&#x2666; PT Console &#x2666;</button>
+  <button id="tutorials" class="astext menu" onclick="showInstructions()">&#x2666; Help &#x2666;</button>
 </div>
 
                                                 <!-- SOP Menu -->
@@ -619,15 +622,32 @@ Failure to comply with these terms may result in legal action.</b></p>
 
 <div id="PTModeDiv" class="noShow" style="display: none">
   <button class="D R P" id="transAuthBtn" onclick="transAuth()" oncontextmenu="customMenu(this.id, event)">Trans Auth</button>
-  <button class="D R P" id="ringfailDeny" onclick="ringDeny()" oncontextmenu="customMenu(this.id, event)">Denial-Carbon<br>Piston Rings</button>
 
   <button class="D R P" id="denials" onclick="showDenials()" oncontextmenu="customMenu(this.id, event)">Denials</button>
   <button class="D R P" id="reviews" onclick="showReviews()" oncontextmenu="customMenu(this.id, event)">Reviews</button>
   <button class="D R P" id="requests" onclick="showRequests()" oncontextmenu="customMenu(this.id, event)">Requests</button>
 
   <button class="D R P" id="prompt" onclick="copyTextFunc(this.id)" oncontextmenu="customMenu(this.id, event)">AI prompt</button>
+  <button class="D R P" id="autoCopyBtn" onclick="autoEnable()" oncontextmenu="customMenu(this.id, event)">AutoCopy</button>
 
   <button class="D R P" id="flowchartBtn" onclick="flowchart()" oncontextmenu="customMenu(this.id, event)">Flow Chart</button>
+  
+  <button class="D R P" id="xferred" onclick="xferred()" oncontextmenu="customMenu(this.id, event)">Xferred</button>
+  <button class="D R P" id="toGen" onclick="copyTextFunc(this.id)" oncontextmenu="customMenu(this.id, event)">To Gen</button>
+  <button class="D R P" id="newClaim" onclick="copyTextFunc(this.id)" oncontextmenu="customMenu(this.id, event)">New Claims</button>
+  
+  <button class="D R P" id="inform" onclick="inform()" oncontextmenu="customMenu(this.id, event)">Called CH<Br>To Inform of</button>
+  
+  <button class="D R P" id="reasonAuth" onclick="reason('1')" oncontextmenu="customMenu(this.id, event)">Auth</button>
+  <button class="D R P" id="reasonDenial" onclick="reason('2')" oncontextmenu="customMenu(this.id, event)">Denial</button>
+  <button class="D R P" id="reasonStatus" onclick="reason('3')" oncontextmenu="customMenu(this.id, event)">Status</button>
+  
+  <button class="D R P" id="result1" onclick="result('1')" oncontextmenu="customMenu(this.id, event)">CH understood</button>
+  <button class="D R P" id="result2" onclick="result('2')" oncontextmenu="customMenu(this.id, event)">No Ans<br>Left VM</button>
+  <button id="otherFPS" class="P astext" style="display: inline-block" onclick="FLUIDLEAK()" oncontextmenu="customMenu(this.id, event)">$</button>
+  <button class="D R P" id="authEmail" onclick="copyTextFunc(this.id)" oncontextmenu="customMenu(this.id, event)">Auth Email</button>
+  
+  
 
 
 
@@ -825,8 +845,8 @@ Failure to comply with these terms may result in legal action.</b></p>
   <div id="quest9" class="newStyle ptQuest" style="display:none;">
     <div class="PT qs"><b>Have the PT claim expectations been reviewed with the repair facility contact?</b></div>
     <div class="PT as">
-      <label for="yes9"">YES</label><input type="radio" onclick="advancePT(this.id)" class="Mradio ptRad"  id="yes9" name="ans9" value="YES"><br>
-      <label for="no9"">NO</label><input type="radio" onclick="advancePT(this.id)" class="Mradio ptRad" id="no9" name="ans9" value="NO">
+      <label for="yes9"">YES</label><input type="radio" onclick="advancePT(this.id)" class="Mradio ptRad"  id="yes9" name="ans9" value="YES"></label><br>
+      <label for="no9"">NO</label><input type="radio" onclick="advancePT(this.id)" class="Mradio ptRad" id="no9" name="ans9" value="NO"></label>
     </div>
   </div>
   <div id="quest10" class="newStyle ptQuest" style="display:none;">
@@ -891,7 +911,6 @@ Failure to comply with these terms may result in legal action.</b></p>
 
                                                 <!-- New Auth Note -->
 
-<input type="checkbox" id="newauthSelect" onclick="saveAuth();"><label for="newauthSelect" class="justtheone" id="newauthLabel">New Auth</label><br>
 <div id="auth_module" class="auth_container">
   <div id="auth_display" class="auth_main">
     <div id="auth_inner" class="auth_style">
@@ -977,7 +996,7 @@ Failure to comply with these terms may result in legal action.</b></p>
     <p class="bodyTab">
     <input type="checkbox" id="auth6" name="authreqs" class="FNA largerCheckbox"><label for="auth6"><b>Inspection</b></label><br>
     <input type="checkbox" id="auth7" name="authreqs" class="FNA largerCheckbox"><label for="auth7"><b>Photos</b></label><br>
-    <input type="checkbox" id="auth8" name="authreqs" class="FNA largerCheckbox"><label for="auth8"><b>Records</b></label><br><br>
+    <input type="checkbox" id="auth8" name="authreqs" class="FNA largerCheckbox"><label for="auth8"><b>Records</b></label></p><br><br>
     <button id="cancelNewauth" class="wefwefwef" onclick="cancel_auth()">Cancel</button>
     <button id="authMove2" class="wefwefwef" onclick="moveAuth2()">Continue</button>
   </div>
@@ -1019,7 +1038,7 @@ Failure to comply with these terms may result in legal action.</b></p>
             <option value="$250.00">$250.00</option>
             <option value="$500.00">$500.00</option>
           </select>
-        </div>
+    </div>
     <div id="authbtns" class="noShow">
       <button id="cancelNewauth" class="wefwefwef" onclick="cancel_auth()">Cancel</button>
       <button id="finishAuth"  class="wefwefwef" onclick="auth_initialize(1)">Finish</button>
@@ -1169,16 +1188,15 @@ TIME:&nbsp&nbsp</textarea>
 
 <div id="NUMBERS2" class="noShow">
   <div id="NUMBERS" class="div4 noShow">
-  <b>PAYMENTS FAX<br>303-456-1039<br><br>
-    RECORDS FAX<br>303-420-4722<br><br>
-    CarShield<br>800-430-1705<br><br>
-    ROADSIDE ASSISTANCE<br>866-222-7869<br><br>
-    GENERAL<br>800-531-1925</b>
+  <b>Payments<br>555-555-5555<br><br>
+    Towing<br>555-555-5555<br><br>
+	Rental<br>555-555-5555<br><br>
+    Main<br>555-555-5555</b>
   </div>
 </div>
 
 <div id="myInfo" class="infoOfme" style="display:none;">Created By Jesse Williams - 2024</div>
-<div id="glowDiv" class="neon noShow P" oncontextmenu="customMenu(this.id, event)"></div>
+<div id="glowDiv" class="neon noShow P R" oncontextmenu="customMenu(this.id, event)"></div>
 
                                           <!-- Tools and Policy -->
 
@@ -1208,7 +1226,7 @@ TIME:&nbsp&nbsp</textarea>
     <p style="text-align:center;margin-top:10px;">And Their Answers or Where to Find Them.</p>
     <div class="questionContain">
       <div class="questions noShow" id="quest1" onclick="showAnswer(this.id)">
-        &blacklozenge; Where can I find tracking information about a PA order?
+        &blacklozenge; Where can I find tracking information?
       </div>
       <div class="questions noShow" id="quest2" onclick="showAnswer(this.id)">
         &blacklozenge; Am I supposed to open a claim or can this end in interaction?
@@ -1217,24 +1235,19 @@ TIME:&nbsp&nbsp</textarea>
         &blacklozenge; Only some of the authorized repairs are going to be completed.<br>
         How do I make the estimate match the invoice?
       </div>
-      <div class="questions noShow" id="quest4" onclick="showAnswer(this.id)">
-        &blacklozenge; I have a CH on the phone and they don't want to pay OOPC.<br>
-        They want to get the work done at another repair facility.<br>
-        Where do I send them?<br>
-      </div>
       <div class="questions noShow" id="quest5" onclick="showAnswer(this.id)">
         &blacklozenge; The Repair Facility is saying they didn't get paid.<br>
-        It shows they were paid in CMS?<br>
+        It shows they were paid in our system.<br>
         How can I help?<br>
       </div>
     </div>
     <div id="anstoquest1" class="answerSlide noShow">
       <ul>
         <li>Note the claim number.</li>
-        <li>Go to the Parts Authority home tab.</li>
-        <li>Click 'Track Orders and Invoices'.</li>
-        <li>Select the 'P.O. Number' search option</li>
-        <li>Input the claim number into the search box and click 'Search'.</li>
+        <li>Go to the home tab.</li>
+        <li>Click 'Track Orders'.</li>
+        <li>Select the search option</li>
+        <li>Input the number into the search box and click 'Search'.</li>
         <li>Click on the order number.</li>
         <li>This will show relevant info such as the tracking number, address shipped to, etc.</li>
         <li>Clicking on the tracking number will show you current shipment status.</li>
@@ -1258,34 +1271,15 @@ TIME:&nbsp&nbsp</textarea>
     </div>
     <div id="anstoquest3" class="answerSlide noShow">
       <ul>
-        <li>Reauthorize the claim using the 'Reauthorize' button in the actions tab of CMS.</li>
-        <li>Go to the estimate in CMS and lock the claim.</li>
-        <li>Open the authorized section of the estimate and find the items that are no longed needed.</li>
+        <li>Go to the estimate.</li>
+        <li>Open the authorized section of the estimate.</li>
         <li>Select the checkbox next to each of those items.</li>
-        <li>Click 'Modify Claim Item'.</li>
-        <li>For part line items, set the Repair Facility, AAS, and Authorized prices to $0.00.</li>
-        <li>For labor line items, set the Repair Facility, AAS, and Authorized labor hours to 0.0.</li>
+        <li>Click 'Modify'.</li>
+        <li>For part line items: set the Authorized prices to $0.00.</li>
+        <li>For labor line items: set the Authorized labor hours to 0.0.</li>
         <li>Click 'Save' in the bottom right corner when finished with each item.</li>
       </ul>
       <p class="QandA" style="margin-left:0px;text-align:center;"><b>IMPORTANT - Do NOT change any PART line item to a QUANTITY of 0.</b></p>
-    </div>
-    <div id="anstoquest4" class="answerSlide noShow">
-      <p class="QandA">There are 2 things the CH will need.
-      The first is a list of Repair facilities that work with us:</p>
-      <ul>
-        <li>The CH will go to americanautoshield.com</li>
-        <li>At the TOP of the home page, just to the right of center, is a button labelled 'Claims'.</li>
-        <li>When they click on that, there is a drop-down menu with a link to 'Find a preferred repair facility'.</li>
-        <li>That link will take them to the PRF page where they can find a list of repair facilities.</li>
-      </ul>
-      <p class="QandA">The second is 2 questions:</p>
-      <ul>
-        <li>Do you use Mitchell ProDemand?</li>
-        <li>Do you allow parts to be shipped in?</li>
-      </ul>
-      <p class="QandA">The CH will call Repair Facilities and ask them those questions.<br>
-      A repair facility that uses ProDemand and allows us to ship parts is most likely to have no OOPC.<br><br>
-      PepBoys as a national chain uses Mitchell and, generally, allows parts to be shipped in.</p>
     </div>
     <div id="anstoquest5" class="answerSlide noShow"><br>
       <p class="QandA">'Paid' status in CMS just means that the card was sent<br>
@@ -2732,8 +2726,216 @@ TIME:&nbsp&nbsp</textarea>
   </div>
   <button id="infoDone" class="infoBtn bones D S P" onclick="createButton()">Submit</button>
   <button id="infoCancel" class="infoBtn bones D S P" onclick="buttonCancel()">Cancel</button>
+
   </div>
 </div>
+
+<div id="helpDiv">
+	<a href="javascript:void(0)" class="closebtn" onclick="closeHelp()">&times;</a>
+	<h2>Help</h2>
+	<div id="page1" class="helpPage show">
+		<h3>General Input</h3>
+		<p>
+			The text area in the upper left is for Repair Facility contact info.<br>
+			The Payment line is for the email or fax used for payment<br>
+			Distance and Time are Miles and Days in coverage.<br>
+			The bolded words can be clicked to copy that line.<br>
+			Clicking Payment would copy the payment method, for example.
+		</p>
+		<h3>Side Navigation Menu</h3>
+		<p>
+			Clicking the hamburger icon will open the Side Navigation menu.<br>
+			All of the items in Tools and Policy can be accessed through the menu.<br>
+			The headers can be clicked to get to the general area, as well.<br>
+			Click anywhere to close the menu.
+		</p>
+		<h3>SOP Collection</h3>
+		<p>
+			Clicking Browse SOPs will pull up all available SOPs.<br>
+			Clicking an SOP will open it in an internal window.<br>
+			Click the Close button in the top right to exit the SOP window.
+			Clicking anywhere will close the SOP menu.
+		</p>
+
+	</div>
+	
+	<div id="page2" class="helpPage hide">
+		<h3>Parts and Labor:</h3>
+		<p>
+			The section which includes Add Box, Clear, Next, Part, Labor, and Diag buttons along with the Part Name, Part Number, RF Price, and OEM MSRP text boxes is the Intake section.<br>
+			When entering the estimate into the claim, the Parts intake section can assist with verification, organization, and can automate certain aspects that greatly speed up the process.<br>
+			The failed component goes in the Part Name box<br>
+			The repair facility part number and price go in the associated boxes.<br>
+			For additional components, click Add Box and another parts box will appear.<br>
+			For aftermarket parts, leave the MSRP box blank.<br>
+			After entering the info, click Part to send an aftermarket template to the text area.<br>
+			Filling out the MSRP box will send a completed OEM template.<br>
+			If the MSRP is over $250.00, the aftermarket sourcing template will be added on to the OEM template.<br>
+			Labor and Diag will send their respective templates to the text area.<br>
+			Clicking Next will shift all additional parts boxes down, clear the template, insert the next part into the primary part box and remove the unused part box.<br>
+			Clicking Clear will reset the Part Name, Part Number, and both price boxes, but not the other part boxes.<br>
+			This is useful when entering gaskets or other related parts that are required but not main failures.<br>
+		</p>
+		<p>
+			The other parts and labor buttons to the right of the lower text area has blank versions of all the same templates with a few additional, as well.<br>
+			Evac and Recharge and Align send a labor template for those operations.<br>
+			The Bulk Fluid button will send a blank bulk fluid template to the text area.<br>
+			If you are not sure of the price of the fluids, click the $ sign to display the current SOP fluid pricing sheet.<br>
+			Click the X to close.<br>
+			Copy P&L will copy the entire text area and send it to the clipboard.<br>
+			Reset will clear all templates, close all windows, and reset the whole program to starting position.<br>
+		</p>
+	</div>
+	
+	<div id="page3" class="helpPage hide">
+		<h3>Authorization:</h3>
+		<p>
+			Clicking the Authorize Claim button will start the Auth note builder.<br>
+			Select which parts were used at what pricing, if anything was requested, and if there were any out of pocket costs, shipping, noncovered, or denied components or concerns.<br>
+			If there was out of pocket costs, enter the amount in the pop up along with the reason.<br>
+			The repair facility contact name and payment information will be automatically imported from the upper text area and inserted into the note.<br>
+			Once Finish is clicked, the note is copied to the clipboard.
+		</p>
+		<h3>Status Note:</h3>
+		<p>
+			Clicking the Status Note button will show the status note builder.<br>
+			Select the relevant options using the checkboxes and input any custom additions in the text area.<br>
+			Click Submit when finished.
+		</p>
+		<h3>PT Transfer:</h3>
+		<p>
+			Clicking Templates then PT Transfer will start the Powertrain Transfer template.<br>
+			Answer the questions as they are presented.<br>
+			The repair facility contact name and payment information will be automatically imported from the upper text area and inserted into the note.<br>
+			The note is copied to the clipboard when the template is finished.
+		</p>
+		<h3><h3>CH Statement:</h3>
+		<p>
+			Clicking Templates then CH Statement will start the Contract Holder Statement template.<br>
+			Answer the questions as they are presented.<br>
+			The note is copied to the clipboard when the template is finished.
+		</p>
+
+	</div>
+	
+	<div id="page4" class="helpPage hide">
+		<h3>Dynamic Note Creation:</h3>
+		<p>
+			The set of buttons labelled 'RF Inbound' and 'Called CH' are used to build 20+ dynamic notes in 3 clicks or less.<br>
+			They emcompass a large swath of common situations that adjusters encounter on a daily basis.<br>
+			Click through and read the labels clicked in order like a sentence.<br>
+			The note generated can be edited or pasted as is depending on the situation.<br>
+			The display box will automatically close after 5 seconds.
+		</p>
+		
+		<h3>Straight to Clipboard Notes:</h3>
+		<p>
+			The other template buttons as well as the request buttons all set a specific note to the clipboard.
+		</p>
+		<h3>Appearance</h3>
+		<p>
+			Accessed through the settings menu, the appearance option screen allows you to customize the whole color scheme from shadows and background to gradient colors and angles.<br>
+			There are several preset color schemes, as well.
+		</p>
+	</div>
+		
+	<div id="page5" class="helpPage hide">
+		<h3>Policy:</h3>
+		<p>
+			The Policy button is a grouping of general infomation relevant to day to day operations.<br>
+			Click on the tabs at the top to display the information.
+		</p>
+
+		<h3>Tools:</h3>
+		<p>The Tools button displays a set of tabs, each with it's own tool.</p>
+		
+		<h4>Quick Answers</h4>
+		<p>
+			The Quick Answers tab lists questions which display the answer when clicked.<br>
+			The questions are a quick reference on where and how to accomplish some uncommon situations.
+		</p>
+		
+		<h4>Mileage Discrepancy</h4>
+		<p>
+			The Mileage Discrep tab is an interactive tool that provides the correct actions to take per SOP for various mileage issues that occur.
+		</p>
+		<h4>Parts Pricing</h4>
+		<p>
+			The Parts Pricing tab is a similarly interactive tool which will guide adjusters through which part to price, from where, and at what pricing.
+		</p>
+		<h4>Diagnostic</h4>
+		<p>
+			The Diagnostic tab provides diagnostic assistance with some general operating principles, as well.<br>
+			Click the picture to enlarge and revert.
+		</p>
+	</div>	
+		
+		
+	<div id="page6" class="helpPage hide">
+		<h4>Tracker Tool</h4>
+		<p>
+			The Tracker Tool tab is a tool that helps consolidate, organize, and analyze contract holder service records.<br>
+			There is a dedicated line for inception and the Service Claim record as well as 5 additional records.<br>
+			Each can be individually saved or deleted and they have their own collapsable note.<br>
+			The options available can be run in any combination.
+		</p>
+		<p>
+			Check for Issues will sort records by age and display in order.<br>
+			The tool will set an alert if there are any mileage discrepencies, high mileage per day, early into coverage, or waiting period concerns.<br>
+			It shows miles and days to or from inception, the average mileage per day, individual alerts, and the notes input by the adjuster.
+		</p>
+		<p>
+			The Inception Estimate uses the inception info, service claim info, and the record which has the checkbox activated when saved to estimate the inception mileage.<br>
+			It will, also, output pertinent information related to the calculations.
+		</p>
+		<p>
+			Format for Note will display the entered info in a note friendly format which includes all records sorted and labelled clearly, any alerts found, as well as notes previously entered by the adjuster.
+		</p>
+		<p>
+			All information is per SOP guidelines.
+		</p>
+	</div>
+	
+	<div id="page7" class="helpPage hide">
+		<h3>Right-Click Menu: </h3>
+
+		<h4>New Buttons:</h4>
+		<p>
+			Selecting Custom Button from the right-click menu will allow new buttons to be made.<br>
+			Select the type of button to determine the action the button will take.<br>
+			The Button Display is the text that will appear on the button.<br>
+			The Note Content is what the button will output.<br>
+			Clicking Submit will create the button.<br>
+			Right-clicking the button and selecting Delete Custom will remove the button.
+		</p>
+
+		<h4>Display, Content, Size, and Position:</h4>
+		<p>
+			These options will modify only the button selected.<br>
+			Use the menus and options available to modify the button.<br>
+			Clicking Default will reset the button to the original position.
+		</p>
+		<h3>Toggle list</h3>
+		<p>
+			Selecting this from the Settings menu or the right-click menu will display a row of sliders that control the visibility of each button or a set of buttons.<br>
+			There is also a slider for all buttons.
+		</p>
+
+		<h4>Master Reset:</h4>
+		<p>
+			The Master Reset option will reset the entire program and all options to defaults.
+		</p>
+
+		<h3>Storage:</h3>
+		<p>
+			All settings and custom colors are saved regardless of browser open/closed, computer restarts, or updates.
+		</p>
+	</div>
+	
+	<button id="helpNext" class="helpBtn" onclick="helpNext()">Next</button>
+	<button id="helpPrev" class="helpBtn" onclick="helpPrev()">Previous</button>
+</div>
+
 <script src="JavaScript/snipDiv.js?v=651651651682"></script>
 <script src="JavaScript/keyEvents.js?v=651651651682"></script>
 <script src="JavaScript/OGLAYOUTJS.js?v=651651651682"></script>

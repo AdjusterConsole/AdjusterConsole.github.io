@@ -25,46 +25,6 @@
 //By using this website or its content, you acknowledge that you have read, understood, and agree to be bound by these terms and conditions.
 //Failure to comply with these terms may result in legal action.
 
-function setVer() {
-  const buttons = document.querySelectorAll('button');
-  const intakeboxes = document.getElementsByClassName('intakeboxes');
-
-  const currentVer = localStorage.getItem('currentVer');
-  if (currentVer === '1') {
-    localStorage.setItem('currentVer', '2');
-    document.getElementById('swapper').innerText = 'Neumorphic';
-    document.getElementById('textarea2').classList.add('origText');
-    document.getElementById('textarea1').classList.add('origText');
-    document.getElementById('sizeEdit').classList.add('orig');
-    document.getElementById('disEdit').classList.add('orig');
-
-    for(let i = 0; i < buttons.length; i++) {
-      buttons[i].classList.add('orig');
-    }
-    for(let i = 0; i < intakeboxes.length; i++) {
-      intakeboxes[i].classList.add('origText');
-    }
-    return;
-  } else if (currentVer == '2') {
-    localStorage.setItem('currentVer', '1');
-    document.getElementById('swapper').innerText = 'Original';
-    document.getElementById('textarea2').classList.remove('origText');
-    document.getElementById('textarea1').classList.remove('origText');
-    document.getElementById('sizeEdit').classList.remove('orig');
-    document.getElementById('disEdit').classList.remove('orig');
-    for(let i = 0; i < buttons.length; i++) {
-      buttons[i].classList.remove('orig');
-    }
-    for(let i = 0; i < intakeboxes.length; i++) {
-      intakeboxes[i].classList.remove('origText');
-    }
-    return;
-  } else {
-    localStorage.setItem('currentVer', '1');
-    setVer();
-  }
-}
-
 function removeBlankLines(text) { 
    return text.replace(/^\s*$/gm, ''); 
 }
@@ -104,6 +64,7 @@ function MENU() {
   const BtnBuilder = document.getElementById("BtnBuilder");
   const appearance = document.getElementById("appearance");
   const ptcon = document.getElementById("ptcon");
+  const tutorials = document.getElementById("tutorials");
   const menuOpen = localStorage.getItem("menuOpen");
 
   if (menuOpen === 'false') {
@@ -114,6 +75,8 @@ function MENU() {
     BtnBuilder.style.opacity = '1';
     ptcon.style.top = "95px";
     ptcon.style.opacity = '1';
+	tutorials.style.top = "120px";
+    tutorials.style.opacity = '1';
     localStorage.setItem("menuOpen", "true");
     return;
   } else if (menuOpen === 'true') {
@@ -123,6 +86,8 @@ function MENU() {
     appearance.style.opacity = '0';
     ptcon.style.top = "20px";
     ptcon.style.opacity = '0';
+	tutorials.style.top = "20px";
+    tutorials.style.opacity = '0';
     theMenu.innerText = "\u2666 Settings \u2666";
     localStorage.setItem("menuOpen", "false");
     return;
@@ -554,8 +519,8 @@ window.onload = function PutItBack() {
   }
   resetColors();
   trackerBlank();
-  let mode = localStorage.getItem("mode");
   
+  let mode = localStorage.getItem("mode");
   if (!mode) {
 	localStorage.setItem('mode', '2');
     mode = '2';
@@ -571,7 +536,6 @@ function setStorage() {
   localStorage.setItem("colorState", 0);
   localStorage.setItem("pageNum", "0");
   localStorage.removeItem('Diag');
-  localStorage.setItem('currentVer', '1');
   localStorage.setItem("countLefts", '0');
 }
 
@@ -620,4 +584,66 @@ function ringDeny() {
   text += "The following items and conditions are not covered by this CONTRACT:\r\r";
   text += "17. BREAKDOWNS resulting from engine sludge, carbon, pre-ignition, detonation, varnish, corrosion, foreign objects, dirt, dust, liquid, cracked rubber and/or neoprene parts, dry-rot, road chemicals, lack of proper fluids or use of additives or fuel grades not recommended by the manufacturer.";
   copy(text);
+}
+
+function showInstructions() {
+  document.getElementById('helpDiv').classList.add('show');
+  
+}
+
+function closeHelp() {
+    document.querySelectorAll('.helpPage, #helpDiv').forEach(element => {
+        element.classList.remove('show');
+    });
+    const page1 = document.getElementById('page1');
+    if (page1) {
+        page1.classList.add('show');
+    }
+}
+
+function helpNext() {
+	const helpPages = document.querySelectorAll('.helpPage');
+    const currentPage = Array.from(helpPages).find(page => page.classList.contains('show'));
+    if (currentPage) {
+        const currentId = currentPage.id;
+        currentPage.classList.remove('show');
+        currentPage.classList.add('hide');
+        const lastChar = currentId.slice(-1);
+        const nextPageNum = parseInt(lastChar) + 1;
+        const nextId = 'page' + nextPageNum;
+        const nextPage = document.getElementById(nextId);
+        if (nextPage) {
+            nextPage.classList.remove('hide');
+            nextPage.classList.add('show');
+            document.getElementById("helpPrev").disabled = false;
+            if (!document.getElementById(`page${nextPageNum + 1}`)) {
+                document.getElementById("helpNext").disabled = true;
+            }
+        }
+    }
+}
+
+function helpPrev() {
+	const helpPages = document.querySelectorAll('.helpPage');
+    const currentPage = Array.from(helpPages).find(page => page.classList.contains('show'));
+    if (currentPage) {
+        const currentId = currentPage.id;
+        currentPage.classList.remove('show');
+        currentPage.classList.add('hide');
+        const lastChar = currentId.slice(-1);
+        const prevPageNum = parseInt(lastChar) - 1;
+        if (prevPageNum >= 1) {
+            const prevId = 'page' + prevPageNum;
+            const prevPage = document.getElementById(prevId);
+
+            if (prevPage) {
+                prevPage.classList.remove('hide');
+                prevPage.classList.add('show');
+                document.getElementById("helpNext").disabled = false;
+                if (prevPageNum === 1) {
+                    document.getElementById("helpPrev").disabled = true;
+                }
+            }
+        }
+    }
 }

@@ -368,13 +368,13 @@ option, select {
 
 #sopnav2.open_sop {
   height: 95%;
-  z-index: 1001;
+  z-index: 999;
   padding-top: 35px;
 }
 
 #sopnav3.open_sop {
   height: 95%;
-  z-index: 1001;
+  z-index: 999;
   padding-top: 35px;
 }
 
@@ -432,7 +432,7 @@ option, select {
   height: 100%;
   background: rgba(0, 0, 0, 0.8);
   box-shadow: none;
-  z-index: 1000;
+  z-index: 998;
   padding: 20px;
   box-sizing: border-box;
 }
@@ -453,7 +453,7 @@ option, select {
   border: none;
   padding: 10px 15px;
   cursor: pointer;
-  z-index: 1001;
+  z-index: 999;
 }
 
 .nav_tag {

@@ -483,6 +483,10 @@ input.largerRadio {
   transition: all .3s ease;
 }
 
+#tutorials {
+  transition: all .4s ease;
+}
+
 .intakeboxes {
   font-size: 14px;
   overflow: hidden;
