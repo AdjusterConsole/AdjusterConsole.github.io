@@ -529,6 +529,19 @@ function resetColors() {
 }
 
 //function startListening() {
+document.getElementById("shadDouble").addEventListener('click', setDouble);
+
+function setDouble() {
+  const shadDouble = document.getElementById("shadDouble");
+  const doubleBubble = localStorage.getItem("doubleBubble");
+  
+  if (shadDouble.checked) {
+    localStorage.setItem('doubleBubble', 'true');
+  } else {
+    localStorage.setItem('doubleBubble', 'false');
+  }
+}
+
 const xOffsetInput = document.getElementById('x-offset');
 const yOffsetInput = document.getElementById('y-offset');
 const blurInput = document.getElementById('blur');

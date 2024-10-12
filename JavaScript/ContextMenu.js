@@ -207,6 +207,7 @@ function submitDisp(x) {
     localStorage.removeItem(verifiedID + "Font");
     var disEdit = document.getElementById("disEdit");
     disEdit.style.display = "none";
+	location.reload();
     return;
   }
   if (x == 'b') {
@@ -377,6 +378,7 @@ function sizeSubmit(x) {
   if (x == "d") {
     localStorage.removeItem(verifiedID + "Width");
     localStorage.removeItem(verifiedID + "Height");
+	location.reload();
   }
 }
 
@@ -494,5 +496,6 @@ function posSubmit(x) {
   if (x == "d") {
     localStorage.removeItem(verifiedID + "top");
     localStorage.removeItem(verifiedID + "left");
+	location.reload();
   }
 }

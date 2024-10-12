@@ -42,12 +42,12 @@ Failure to comply with these terms may result in legal action.
   height: 45px;
 }
 
-#ringfailDeny {
+#flowchartBtn {
+  position: absolute;
+  display: inline-block;
+  top: 490px;
   left: 20px;
-  top:  480px;
-  white-space: nowrap;
   width: 150px;
-  height: 65px;
 }
 
 .partsContain.away {
@@ -73,14 +73,6 @@ Failure to comply with these terms may result in legal action.
   left: 10px;
   position: absolute;
   display: inline-block;
-  width: 120px;
-}
-
-#autoBtn {
-  position: absolute;
-  display: inline-block;
-  bottom: 400px;
-  left: 150px;
   width: 120px;
 }
 
@@ -112,22 +104,30 @@ Failure to comply with these terms may result in legal action.
   position: absolute;
   display: inline-block;
   top: 170px;
-  left: 385px;
   width: 120px;
+  left: 385px;
+}
+
+#authEmail {
+  position: absolute;
+  display: inline-block;
+  top: 230px;
+  width: 120px;
+  left: 385px;
 }
 
 #prompt {
   position: absolute;
   display: inline-block;
-  top: 230px;
-  left: 385px;
+  top: 190px;
+  left: 215px;
   width: 120px;
 }
 
-#flowchartBtn {
+#autoCopyBtn {
   position: absolute;
   display: inline-block;
-  top: 170px;
+  top: 250px;
   left: 215px;
   width: 120px;
 }
@@ -368,4 +368,88 @@ button.autoCopiers {
    -1px -1px 1px var(--glow-outline-color),
    -1px 1px 1px var(--glow-outline-color),
     1px -1px 1px var(--glow-outline-color);
+}
+
+#xferred {
+  position: absolute;
+  display: inline-block;
+  top: 575px;
+  left: 415px;
+  width: 120px;
+}
+
+#toGen {
+  position: absolute;
+  display: none;
+  top: 575px;
+  left: 415px;
+  width: 120px;
+}
+
+#newClaim {
+  position: absolute;
+  display: none;
+  top: 635px;
+  left: 415px;
+  width: 120px;
+}
+
+#inform {
+  position: absolute;
+  display: inline-block;
+  top: 695px;
+  left: 415px;
+  width: 120px;
+}
+
+#reasonAuth {
+  position: absolute;
+  display: none;
+  top: 695px;
+  left: 415px;
+  width: 120px;
+}
+
+#reasonDenial {
+  position: absolute;
+  display: none;
+  top: 755px;
+  left: 415px;
+  width: 120px;
+}
+
+#reasonStatus {
+  position: absolute;
+  display: none;
+  top: 815px;
+  left: 415px;
+  width: 120px;
+}
+
+#result1 {
+  position: absolute;
+  display: none;
+  top: 695px;
+  left: 415px;
+  width: 120px;
+}
+
+#result2 {
+  position: absolute;
+  display: none;
+  top: 785px;
+  left: 415px;
+  width: 120px;
+}
+
+#otherFPS {
+  font-size: 24px;
+  top: 900px;
+  left: 590px;
+  color: var(--glow-outline-color);
+  text-shadow:
+    1px 1px 1px var(--glow-txt-color),
+   -1px -1px 1px var(--glow-txt-color),
+   -1px 1px 1px var(--glow-txt-color),
+    1px -1px 1px var(--glow-txt-color);
 }

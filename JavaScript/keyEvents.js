@@ -38,9 +38,6 @@ document.addEventListener('keyup', function(e) {
   if (e.ctrlKey && e.altKey && e.shiftKey && e.key === 'A') {
     autoEnable();
   }
-  if (e.ctrlKey && e.altKey && e.shiftKey && e.key === 'M') {
-    downloadAndProcessLatestFile();
-  }
   if (e.ctrlKey && e.altKey && e.shiftKey && e.key === 'F') {
     saintMullet();
   }
@@ -56,11 +53,14 @@ function autoEnable() {
 
 function modePTmenu() {
   let mode = localStorage.getItem("mode");
+  
   if (mode === '2') {
     localStorage.setItem('mode', '1');
+	console.log('set2as1');
     modePT();
   } else {
     localStorage.setItem('mode', '2');
+	console.log('setnot2');
     modePT();
   }
 }
@@ -71,47 +71,54 @@ function modePT() {
     document.getElementById("ITSBRITTNEY").style.display = "none";
     document.getElementById("openScript").style.display = "none";
     document.getElementById("PTModeDiv").style.display = "inline-block";
-    document.getElementById("newauthSelect").style.top = "275px";
-    document.getElementById("newauthSelect").style.left = "50px";
-    document.getElementById("newauthLabel").style.top = "275px";
-    document.getElementById("newauthLabel").style.left = "70px";
     document.getElementById("newAuthstarter").style.top = "305px";
     document.getElementById("newAuthstarter").style.left = "20px";
-    document.getElementById("statusNote").style.left = "200px";
-    document.getElementById("statusNote").style.top = "230px";
+    document.getElementById("statusNote").style.display = "none";
     document.getElementById("snipbox").style.left = "-135px";
     document.getElementById("snipbox").style.top = "325px";
+    document.getElementById("R15").style.left = "25px";
+    document.getElementById("R15").style.top = "285px";
+	const element = document.getElementById("R15");
+    const styles = window.getComputedStyle(element);
+    const width = styles.getPropertyValue("width");
+	document.getElementById("R15").style.width = parseInt(width) - 5;
     document.getElementById("SOPs").style.display = "none";
     document.getElementById("tools").style.display = "none";
     document.getElementById("T0").style.display = "none";
-    document.getElementById("Request").style.display = "none";
-    document.getElementById("ptcon").innerHTML = "&#x2666; Gen Console &#x2666;";
+    document.getElementById("otherFPS").style.display = "inline-block";
+    document.getElementById("subPL2").style.display = "none";
+    document.getElementById("subPL1").style.display = "none";
+	document.getElementById("R2").style.display = "none";
+	document.getElementById("Request").style.display = "none";
+	document.getElementById("ptcon").innerHTML = "&#x2666; Gen Console &#x2666;";
     return;
-  } 
-  if (mode === '2') {
+  } else if (mode === '2') {
     document.getElementById("ITSBRITTNEY").style.display = "inline-block";
     document.getElementById("openScript").style.display = "inline-block";
     document.getElementById("PTModeDiv").style.display = "none";
-    document.getElementById("Request").style.display = "";
-    document.getElementById("newAuthstarter").style.top = "";
-    document.getElementById("newAuthstarter").style.left = "";
-    document.getElementById("newauthSelect").style.top = "";
-    document.getElementById("newauthSelect").style.left = "";
-    document.getElementById("newauthLabel").style.top = "";
-    document.getElementById("newauthLabel").style.left = "";
-    document.getElementById("statusNote").style.left = "";
-    document.getElementById("statusNote").style.top = "";
-    document.getElementById("snipbox").style.left = "";
-    document.getElementById("snipbox").style.top = "";
-    document.getElementById("SOPs").style.display = "";
-    document.getElementById("tools").style.display = "";
-    document.getElementById("T0").style.display = "";
-    document.getElementById("Request").style.left = "";
-    document.getElementById("Request").style.top = "";
+    document.getElementById("Request").style.display = '';
+    document.getElementById("newAuthstarter").style.top = '';
+    document.getElementById("newAuthstarter").style.left = '';
+    document.getElementById("statusNote").style.display = '';
+    document.getElementById("snipbox").style.left = '';
+    document.getElementById("snipbox").style.top = '';
+    document.getElementById("SOPs").style.display = '';
+    document.getElementById("tools").style.display = '';
+	document.getElementById("R15").style.top = '';
+	document.getElementById("R15").style.width = '';
+	document.getElementById("R15").style.left = '';
+    document.getElementById("T0").style.display = '';
+	document.getElementById("otherFPS").style.display = 'none';
+    document.getElementById("subPL2").style.display = '';
+    document.getElementById("subPL1").style.display = '';
+	document.getElementById("R2").style.display = '';
+    document.getElementById("Request").style.left = '';
+    document.getElementById("Request").style.top = '';
     document.getElementById("ptcon").innerHTML = "&#x2666; PT Console &#x2666;";
     return;
+  } else {
+    alert("You Broke It.");
   }
- alert("You Broke It.");
 }
 
 function whiteRabbit() {

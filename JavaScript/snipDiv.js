@@ -307,14 +307,25 @@ function BuilderShow() {
   }
 }
 
+function resetOB() {
+	document.getElementById('result1').style.display = '';
+	document.getElementById('result2').style.display = '';
+	document.getElementById('inform').style.display = '';
+	document.getElementById('reasonAuth').style.display = '';
+	document.getElementById('reasonDenial').style.display = '';
+	document.getElementById('reasonStatus').style.display = '';
+	xferClose();
+}
+
 function RESET() {
   localStorage.setItem("newpartcount","2");
   document.getElementById("textarea1").value = "CONTACT:   \rPAYMENT:   \rZIPCODE:   \rMILEAGE:   \rDISTANCE:   \rTIME:   ";
   setElementValue(["partname1","partname2","partname3","partname4", "partname5", "partname6", "partname7", "partnum", "rfprice", "msrp", "textarea2", "textarea3"], "");
-  setButtonDisplay(["partname2", "partname3", "partname4", "partname5", "partname6", "partname7", "transferTemplate", "statNote", "newAuthstyle", "TPDiv"], "none");
+  setButtonDisplay(["partname2", "partname3", "partname4", "partname5", "partname6", "partname7", "transferTemplate", "statNote", "newAuthstyle", "TPDiv", "div6"], "none");
   RESETNOTE();
   cancelState();
   cancelStat();
   cancel_auth();
   cancelPT();
+  resetOB();
 }

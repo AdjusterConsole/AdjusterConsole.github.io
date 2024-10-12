@@ -519,6 +519,7 @@ div#original.default button.orig {
   display: inline-block;
   background: none;
   box-shadow: none;
+  border-radius: var(--radius2);
   border: 2px solid var(--my-accent-color);
   &:hover {
     background: var(--hover-color);
