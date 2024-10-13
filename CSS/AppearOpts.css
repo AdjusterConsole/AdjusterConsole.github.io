@@ -28,470 +28,474 @@ Failure to comply with these terms may result in legal action.
 */
 
 #logoDiv {
-  position: absolute;
-  bottom: 480px;
-  left: 675px;
-  z-index: -1;
+	position: absolute;
+	bottom: 480px;
+	left: 675px;
+	z-index: -1;
 }
 
 #logo {
-  height: 70%;
-  width: 70%;
-  z-index: -1;
+	height: 70%;
+	width: 70%;
+	z-index: -1;
 }
 
 textarea {
-  font-family: arial, sans-serif;
-  line-height: 1.3;
-  margin: 10px;
-  resize: none;
-  font-size: 15px;
-  border: none;
-  display: inline-block;
-  position: absolute;
-  outline: 2px solid var(--my-accent-color);
-  border-radius: var(--radius);
+	font-family: arial, sans-serif;
+	line-height: 1.3;
+	margin: 10px;
+	resize: none;
+	font-size: 15px;
+	border: none;
+	display: inline-block;
+	position: absolute;
+	outline: 2px solid var(--my-accent-color);
+	border-radius: var(--radius);
 }
 
 button {
-  overflow: hidden;
-  overflow-wrap: normal;
-  font-size: 17px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  position: absolute;
-  display: inline-block;
-  outline: none;
-  padding: 10px;
-  margin: 0px;
-  border: none;
-  border-radius: var(--radius);
-  color: var(--glow-txt-color);
-  background: var(--btn-background);
-  box-shadow: var(--box-shadow1);
-  text-shadow:
-    1px 1px 1px var(--glow-outline-color),
-   -1px -1px 1px var(--glow-outline-color),
-   -1px 1px 1px var(--glow-outline-color),
-    1px -1px 1px var(--glow-outline-color);
+	overflow: hidden;
+	overflow-wrap: normal;
+	font-size: 17px;
+	cursor: pointer;
+	transition: all 0.2s ease;
+	position: absolute;
+	display: inline-block;
+	outline: none;
+	padding: 10px;
+	margin: 0px;
+	border: none;
+	border-radius: var(--radius);
+	color: var(--glow-txt-color);
+	background: var(--btn-background);
+	box-shadow: var(--box-shadow1);
+	text-shadow:
+		1px 1px 1px var(--glow-outline-color),
+		-1px -1px 1px var(--glow-outline-color),
+		-1px 1px 1px var(--glow-outline-color),
+		1px -1px 1px var(--glow-outline-color);
 }
 
 button:active {
-  transition: all 0.2s ease;
-  background: var(--btn-backgroundx);
-  box-shadow: var(--box-shadow1x);
+	transition: all 0.2s ease;
+	background: var(--btn-backgroundx);
+	box-shadow: var(--box-shadow1x);
 }
 
 .picker {
-  font-size: 16px;
-  width: 140px;
-  border: 2px solid var(--my-accent-color);
-  background: none;
-  box-shadow: none;
-  border-radius: var(--radius2);
+	font-size: 16px;
+	width: 140px;
+	border: 2px solid var(--my-accent-color);
+	background: none;
+	box-shadow: none;
+	border-radius: var(--radius2);
 }
 
 #setColors {
-  position: absolute;
-  display: inline-block;
-  bottom: 5px;
-  right: 5px;
-  padding: 14px 18px;
-  border-bottom: none;
-  border-right: none;
+	position: absolute;
+	display: inline-block;
+	bottom: 5px;
+	right: 5px;
+	padding: 14px 18px;
+	border-bottom: none;
+	border-right: none;
 }
 
 #exitColor {
-  position: absolute;
-  display: inline-block;
-  bottom: 5px;
-  right: 145px;
-  padding: 14px 18px;
-  border-bottom: none;
-  border-right: none;
+	position: absolute;
+	display: inline-block;
+	bottom: 5px;
+	right: 145px;
+	padding: 14px 18px;
+	border-bottom: none;
+	border-right: none;
 }
 
 #defaultColors {
-  position: absolute;
-  display: inline-block;
-  bottom: 65px;
-  left: 15px;
+	position: absolute;
+	display: inline-block;
+	bottom: 65px;
+	left: 15px;
 }
 
 #presetGrey {
-  position: absolute;
-  display: inline-block;
-  bottom: 15px;
-  left: 15px;
+	position: absolute;
+	display: inline-block;
+	bottom: 15px;
+	left: 15px;
 }
 
 #presetRed {
-  position: absolute;
-  display: inline-block;
-  bottom: 15px;
-  left: 170px;
+	position: absolute;
+	display: inline-block;
+	bottom: 15px;
+	left: 170px;
 }
 
 #presetGreen {
-  position: absolute;
-  display: inline-block;
-  bottom: 65px;
-  left: 170px;
+	position: absolute;
+	display: inline-block;
+	bottom: 65px;
+	left: 170px;
 }
 
 #presetRandom {
-  position: absolute;
-  display: inline-block;
-  bottom: 65px;
-  left: 480px;
+	position: absolute;
+	display: inline-block;
+	bottom: 65px;
+	left: 480px;
 }
 
 #presetRandom2 {
-  position: absolute;
-  display: inline-block;
-  bottom: 15px;
-  left: 480px;
+	position: absolute;
+	display: inline-block;
+	bottom: 15px;
+	left: 480px;
 }
 
 #presetPink {
-  position: absolute;
-  display: inline-block;
-  bottom: 65px;
-  left: 325px;
+	position: absolute;
+	display: inline-block;
+	bottom: 65px;
+	left: 325px;
 }
 
 #ConsoleDefault {
-  position: absolute;
-  display: inline-block;
-  bottom: 15px;
-  left: 325px;
+	position: absolute;
+	display: inline-block;
+	bottom: 15px;
+	left: 325px;
 }
 
 #appearDiv {
-  font-size: 18px;
-  top: 0px;
-  left: 0px;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  display: inline-block;
-  z-index: 9;
+	font-size: 18px;
+	top: 0px;
+	left: 0px;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	display: none;
+	z-index: 9;
 }
 
 .whatIsLife {
-  color: var(--glow-txt-color);
-  text-shadow:
-    1px 1px 1px var(--glow-outline-color),
-   -1px -1px 1px var(--glow-outline-color),
-   -1px 1px 1px var(--glow-outline-color),
-    1px -1px 1px var(--glow-outline-color);
+	color: var(--glow-txt-color);
+	text-shadow:
+		1px 1px 1px var(--glow-outline-color),
+		-1px -1px 1px var(--glow-outline-color),
+		-1px 1px 1px var(--glow-outline-color),
+		1px -1px 1px var(--glow-outline-color);
 }
 
 #BGpick {
-  position: absolute;
-  display: inline-block;
-  margin: 0px;
-  top: 125px;
-  left: 40px;
-  width: 100px;
-  text-align: center;
+	position: absolute;
+	display: inline-block;
+	margin: 0px;
+	top: 125px;
+	left: 40px;
+	width: 100px;
+	text-align: center;
 }
 
 #shad1Pick {
-  position: absolute;
-  display: inline-block;
-  margin: 0px;
-  top: 210px;
-  left: 40px;
-  width: 100px;
-  text-align: center;
+	position: absolute;
+	display: inline-block;
+	margin: 0px;
+	top: 210px;
+	left: 40px;
+	width: 100px;
+	text-align: center;
 }
 
 #shad2Pick {
-  position: absolute;
-  display: inline-block;
-  margin: 0px;
-  top: 295px;
-  left: 40px;
-  width: 100px;
-  text-align: center;
+	position: absolute;
+	display: inline-block;
+	margin: 0px;
+	top: 295px;
+	left: 40px;
+	width: 100px;
+	text-align: center;
 }
 
 #shad3Pick {
-  position: absolute;
-  display: inline-block;
-  margin: 0px;
-  top: 380px;
-  left: 40px;
-  width: 100px;
-  text-align: center;
+	position: absolute;
+	display: inline-block;
+	margin: 0px;
+	top: 380px;
+	left: 40px;
+	width: 100px;
+	text-align: center;
 }
 
 #shad4Pick {
-  position: absolute;
-  display: inline-block;
-  margin: 0px;
-  top: 465px;
-  left: 40px;
-  width: 100px;
-  text-align: center;
+	position: absolute;
+	display: inline-block;
+	margin: 0px;
+	top: 465px;
+	left: 40px;
+	width: 100px;
+	text-align: center;
 }
 
 #ACpick {
-  position: absolute;
-  display: inline-block;
-  margin: 0px;
-  top: 550px;
-  left: 40px;
-  width: 100px;
-  text-align: center;
+	position: absolute;
+	display: inline-block;
+	margin: 0px;
+	top: 550px;
+	left: 40px;
+	width: 100px;
+	text-align: center;
 }
 
 #bg2Pick {
-  position: absolute;
-  display: inline-block;
-  margin: 0px;
-  top: 125px;
-  right: 40px;
-  width: 135px;
-  text-align: center;
+	position: absolute;
+	display: inline-block;
+	margin: 0px;
+	top: 125px;
+	right: 40px;
+	width: 135px;
+	text-align: center;
 }
 
 #flPick {
-  position: absolute;
-  display: inline-block;
-  margin: 0px;
-  top: 210px;
-  right: 40px;
-  width: 135px;
-  text-align: center;
+	position: absolute;
+	display: inline-block;
+	margin: 0px;
+	top: 210px;
+	right: 40px;
+	width: 135px;
+	text-align: center;
 }
 
 #mlPick {
-  position: absolute;
-  display: inline-block;
-  margin: 0px;
-  top: 295px;
-  right: 40px;
-  width: 135px;
-  text-align: center;
+	position: absolute;
+	display: inline-block;
+	margin: 0px;
+	top: 295px;
+	right: 40px;
+	width: 135px;
+	text-align: center;
 }
 
 #mdPick {
-  position: absolute;
-  display: inline-block;
-  margin: 0px;
-  top: 380px;
-  right: 40px;
-  width: 135px;
-  text-align: center;
+	position: absolute;
+	display: inline-block;
+	margin: 0px;
+	top: 380px;
+	right: 40px;
+	width: 135px;
+	text-align: center;
 }
 
 #fdPick {
-  position: absolute;
-  display: inline-block;
-  margin: 0px;
-  top: 465px;
-  right: 40px;
-  width: 135px;
-  text-align: center;
+	position: absolute;
+	display: inline-block;
+	margin: 0px;
+	top: 465px;
+	right: 40px;
+	width: 135px;
+	text-align: center;
 }
 
 #namecolorLabelDiv {
-  position: absolute;
-  display: inline-block;
-  margin: 0px;
-  top: 635px;
-  left: 20px;
-  width: 135px;
-  text-align: center;
+	position: absolute;
+	display: inline-block;
+	margin: 0px;
+	top: 635px;
+	left: 20px;
+	width: 135px;
+	text-align: center;
 }
 
 #nameOutlineDiv {
-  position: absolute;
-  display: inline-block;
-  margin: 0px;
-  top: 550px;
-  right: 40px;
-  width: 135px;
-  text-align: center;
+	position: absolute;
+	display: inline-block;
+	margin: 0px;
+	top: 550px;
+	right: 40px;
+	width: 135px;
+	text-align: center;
 }
 
 #glowLabelDiv {
-  position: absolute;
-  display: inline-block;
-  margin: 0px;
-  top: 635px;
-  right: 40px;
-  width: 135px;
-  text-align: center;
+	position: absolute;
+	display: inline-block;
+	margin: 0px;
+	top: 635px;
+	right: 40px;
+	width: 135px;
+	text-align: center;
 }
 
 #nameLabelDiv {
-  position: absolute;
-  display: inline-block;
-  margin: 0px;
-  width: 135px;
-  top: 720px;
-  left: 20px;
-  text-align: center;
+	position: absolute;
+	display: inline-block;
+	margin: 0px;
+	width: 135px;
+	top: 720px;
+	left: 20px;
+	text-align: center;
 }
 
 #userName {
-  width: 100px;
+	width: 100px;
 }
 
 .input-with-buttons {
-  display: flex;
-  align-items: center;
-  background: none;
-  box-shadow: none;
+	display: flex;
+	align-items: center;
+	background: none;
+	box-shadow: none;
 }
 
 .input-with-buttons button {
-  padding: 5px 10px;
-  display: initial;
-  position: initial;
-  font-size: 14px;
-  cursor: pointer;
-  background: #ddd;
-  color: black;
-  box-shadow: none;
-  text-shadow: none;
-  border: none;
-  outline: none;
-  border-radius: 4px;
-  &:hover {
-    background: #ccc;
-    box-shadow: none;
-    text-shadow: none;
-  }
-  &:active {
-    background: #A8A8A8;
-    box-shadow: none;
-    text-shadow: none;
-    transform: scale(.9);
-  }
+	padding: 5px 10px;
+	display: initial;
+	position: initial;
+	font-size: 14px;
+	cursor: pointer;
+	background: #ddd;
+	color: black;
+	box-shadow: none;
+	text-shadow: none;
+	border: none;
+	outline: none;
+	border-radius: 4px;
+
+	&:hover {
+		background: #ccc;
+		box-shadow: none;
+		text-shadow: none;
+	}
+
+	&:active {
+		background: #A8A8A8;
+		box-shadow: none;
+		text-shadow: none;
+		transform: scale(.9);
+	}
 }
 
 .input-with-buttons input[type="number"] {
-  width: 38px;
-  padding: 5px;
-  font-size: 14px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  text-align: center;
-  margin: 0 5px;
+	width: 38px;
+	padding: 5px;
+	font-size: 14px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	text-align: center;
+	margin: 0 5px;
 }
 
 .css-property {
-  background: none;
-  box-shadow: none;
-  margin: 15px;
+	background: none;
+	box-shadow: none;
+	margin: 15px;
 }
 
 .prop-wrapper {
-  position: absolute;
-  display: flex;
-  top: 15px;
-  left: calc(50% - 280px);
-  background: none;
-  box-shadow: none;
+	position: absolute;
+	display: flex;
+	top: 15px;
+	left: calc(50% - 280px);
+	background: none;
+	box-shadow: none;
 }
 
 .prop-wrapper2 {
-  position: absolute;
-  display: flex;
-  top: 750px;
-  left: calc(50% - 280px);
-  background: none;
-  box-shadow: none;
+	position: absolute;
+	display: flex;
+	top: 750px;
+	left: calc(50% - 280px);
+	background: none;
+	box-shadow: none;
 }
 
 .prop-wrapper3 {
-  position: absolute;
-  display: flex;
-  top: 100px;
-  left: calc(50% - 140px);
-  background: none;
-  box-shadow: none;
+	position: absolute;
+	display: flex;
+	top: 100px;
+	left: calc(50% - 140px);
+	background: none;
+	box-shadow: none;
 }
 
 .prop-wrapper4 {
-  position: absolute;
-  display: flex;
-  top: 665px;
-  left: calc(50% - 140px);
-  background: none;
-  box-shadow: none;
+	position: absolute;
+	display: flex;
+	top: 665px;
+	left: calc(50% - 140px);
+	background: none;
+	box-shadow: none;
 }
 
 .toggleBox {
-  position: absolute;
-  display: inline-block;
-  top: 35px;
-  left: 30px;
-  background: none;
-  box-shadow: none;
+	position: absolute;
+	display: inline-block;
+	top: 35px;
+	left: 30px;
+	background: none;
+	box-shadow: none;
 }
 
 .toggleBox input {
-  height: 16px;
-  width: 16px;
+	height: 16px;
+	width: 16px;
 }
 
 .displayPreview {
-  width:  250px;
-  height: 150px;
-  top: calc(50% - 220px);
-  left: calc(50% - 125px);
-  position: absolute;
-  display: inline-block;
-  background: var(--my-background-color);
-  box-shadow: none;
-  border: 2px solid var(--my-accent-color);
-  border-radius: var(--radius);
+	width: 250px;
+	height: 150px;
+	top: calc(50% - 220px);
+	left: calc(50% - 125px);
+	position: absolute;
+	display: inline-block;
+	background: var(--my-background-color);
+	box-shadow: none;
+	border: 2px solid var(--my-accent-color);
+	border-radius: var(--radius);
 }
 
 .previewBtn {
-  height: 80px;
-  width: 160px;
-  top: calc(50% - 40px);
-  left: calc(50% - 80px);
-  position: absolute;
-  display: inline-block;
+	height: 80px;
+	width: 160px;
+	top: calc(50% - 40px);
+	left: calc(50% - 80px);
+	position: absolute;
+	display: inline-block;
 }
 
 .previewDiv {
-  width:  250px;
-  height: 150px;
-  top: calc(50% - 10px);
-  left: calc(50% - 125px);
-  position: absolute;
-  display: inline-block;
-  box-shadow: var(--box-shadow2);
-  background: var(--btn-background2);
+	width: 250px;
+	height: 150px;
+	top: calc(50% - 10px);
+	left: calc(50% - 125px);
+	position: absolute;
+	display: inline-block;
+	box-shadow: var(--box-shadow2);
+	background: var(--btn-background2);
 }
 
 .previewBtn2 {
-  height: 80px;
-  width: 160px;
-  top: calc(50% - 40px);
-  left: calc(50% - 80px);
-  position: absolute;
-  display: inline-block;
-  background: none;
-  box-shadow: none;
-  border-radius: var(--radius2);
-  border: 2px solid var(--my-accent-color);
-  &:hover {
-    background: var(--hover-color);
-    box-shadow: none;
-    text-shadow: none;
-  }
-  &:active {
-    background: var(--active-color);
-    text-shadow: none;
-    box-shadow: none;
-  }
+	height: 80px;
+	width: 160px;
+	top: calc(50% - 40px);
+	left: calc(50% - 80px);
+	position: absolute;
+	display: inline-block;
+	background: none;
+	box-shadow: none;
+	border-radius: var(--radius2);
+	border: 2px solid var(--my-accent-color);
+
+	&:hover {
+		background: var(--hover-color);
+		box-shadow: none;
+		text-shadow: none;
+	}
+
+	&:active {
+		background: var(--active-color);
+		text-shadow: none;
+		box-shadow: none;
+	}
 }

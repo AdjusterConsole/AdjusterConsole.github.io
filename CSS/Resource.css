@@ -28,841 +28,848 @@ Failure to comply with these terms may result in legal action.
 */
 
 .tab {
-  overflow: hidden;
-  border: none;
-  background: none;
-  text-shadow: none;
-  box-shadow: none;
-  border-radius: 5px;
+	overflow: hidden;
+	border: none;
+	background: none;
+	text-shadow: none;
+	box-shadow: none;
+	border-radius: 5px;
 }
 
 .tab.hide {
-  display: none;
+	display: none;
 }
 
 .tab button {
-  background: none;
-  float: left;
-  border-bottom: 2px solid var(--my-accent-color);
-  border-right: 2px solid var(--my-accent-color);
-  outline: none;
-  cursor: pointer;
-  padding: 11px 15px;
-  transition: 0.5s;
-  transition: width 0s;
-  font-size: 17px;
-  font-weight: bold;
-  text-shadow:   
-    1px 1px 1px var(--glow-outline-color), 
-   -1px -1px 1px var(--glow-outline-color), 
-   -1px 1px 1px var(--glow-outline-color), 
-    1px -1px 1px var(--glow-outline-color);
-  box-shadow: none;
-  position: initial;
-  display: initial;
-  border-radius: var(--radius2);
-  width: var(--div-width);
+	background: none;
+	float: left;
+	border-bottom: 2px solid var(--my-accent-color);
+	border-right: 2px solid var(--my-accent-color);
+	outline: none;
+	cursor: pointer;
+	padding: 11px 15px;
+	transition: 0.5s;
+	transition: width 0s;
+	font-size: 17px;
+	font-weight: bold;
+	text-shadow:
+		1px 1px 1px var(--glow-outline-color),
+		-1px -1px 1px var(--glow-outline-color),
+		-1px 1px 1px var(--glow-outline-color),
+		1px -1px 1px var(--glow-outline-color);
+	box-shadow: none;
+	position: initial;
+	display: initial;
+	border-radius: var(--radius2);
+	width: var(--div-width);
 }
 
 .tablinks.edgeButton {
-  border-right: none;
+	border-right: none;
 }
 
 .tablinks2.edgeButton {
-  border-right: none;
+	border-right: none;
 }
 
 .tab button.tablinks2 {
-  width: var(--div-width2);
+	width: var(--div-width2);
 }
 
 #diagDiv {
-  position: absolute;
-  display: inline-block;
-  height: 98%;
-  width: 98%;
-  margin: auto;
-  background: var(--fancy-background);
-  z-index: 6;
-  overflow: hidden;
-  top: 5px;
-  left: 5px;
+	position: absolute;
+	display: inline-block;
+	height: 98%;
+	width: 98%;
+	margin: auto;
+	background: var(--fancy-background);
+	z-index: 6;
+	overflow: hidden;
+	top: 5px;
+	left: 5px;
 }
 
 #diagHelp {
-  display: inline-block;
-  position: absolute;
-  bottom: 25px;
-  right: 100px;
+	display: inline-block;
+	position: absolute;
+	bottom: 25px;
+	right: 100px;
 }
 
 .diagcontent {
-  display: none;
-  background: none;
-  box-shadow: none;
-  border-radius: var(--radius2);
-  padding: 25px;
+	display: none;
+	background: none;
+	box-shadow: none;
+	border-radius: var(--radius2);
+	padding: 25px;
 }
 
 .diagTop {
-  height: 30%;
-  display: inline-block;
-  width: 100%;
-  background: none;
-  box-shadow: none;
-  padding-bottom: 10px;
+	height: 30%;
+	display: inline-block;
+	width: 100%;
+	background: none;
+	box-shadow: none;
+	padding-bottom: 10px;
 }
 
 .left.diagTop {
-  float: left;
-  width: 55%;
+	float: left;
+	width: 55%;
 }
 
 .right.diagTop {
-  float: right;
-  background: none;
-  box-shadow: none;
-  background-repeat: no-repeat;
-  width: 44%;
+	float: right;
+	background: none;
+	box-shadow: none;
+	background-repeat: no-repeat;
+	width: 44%;
 }
 
 .diagImg {
-  float: right;
-  width: 100%;
-  height: 100%;
+	float: right;
+	width: 100%;
+	height: 100%;
 }
 
 .imageDepot {
-  position: absolute;
-  top: 50px;
-  display: none;
-  height: 98%;
-  width: 98%;
-  z-index: 6;
-  margin: auto;
-  background: none;
-  box-shadow: none;
+	position: absolute;
+	top: 50px;
+	display: none;
+	height: 98%;
+	width: 98%;
+	z-index: 6;
+	margin: auto;
+	background: none;
+	box-shadow: none;
 }
 
 .depotImg {
-  display: none;
-  margin: auto;
-  object-fit: contain;
-  z-index: 7;
+	display: none;
+	margin: auto;
+	object-fit: contain;
+	z-index: 7;
 }
 
 .diagHeader {
-  text-align: center;
-  font-weight: bold;
-  margin-top: 0px;
+	text-align: center;
+	font-weight: bold;
+	margin-top: 0px;
 }
 
 .diagMid {
-  position: relative;
-  height: 35%;
-  width: 100%;
-  background: none;
-  box-shadow: none;
-  margin: auto;
+	position: relative;
+	height: 35%;
+	width: 100%;
+	background: none;
+	box-shadow: none;
+	margin: auto;
 }
 
 textarea.diag {
-  position: absolute;
-  display: inline-block;
-  bottom: 70px;
-  left: 230px;
-  height: 100px;
-  width: 400px;
-  padding: 10px;
-  resize: none;
+	position: absolute;
+	display: inline-block;
+	bottom: 70px;
+	left: 230px;
+	height: 100px;
+	width: 400px;
+	padding: 10px;
+	resize: none;
 }
 
 .diagBot {
-  height: 25%;
-  width: 100%;
-  background: none;
-  box-shadow: none;
-  position: absolute;
-  bottom: -55px;
+	height: 25%;
+	width: 100%;
+	background: none;
+	box-shadow: none;
+	position: absolute;
+	bottom: -55px;
 }
 
 .diagNotes1 {
-  width: 100%;
-  height: 20%;
-  background: none;
-  box-shadow: none;
+	width: 100%;
+	height: 20%;
+	background: none;
+	box-shadow: none;
 }
 
 table.diagtable {
-  font-size: 14px;
-  border-collapse: collapse;
-  width: 100%;
-  background: none;
-  box-shadow: none;
+	font-size: 14px;
+	border-collapse: collapse;
+	width: 100%;
+	background: none;
+	box-shadow: none;
 }
 
 th.diag {
-  text-align: left;
-  margin-right: 15px;
-  border-bottom: 2px solid black;
+	text-align: left;
+	margin-right: 15px;
+	border-bottom: 2px solid black;
 }
 
 td.diag {
-  outline: 2px solid var(--my-background-color);
-  width: 50%;
-  background: white;
-  border-radius: 5px;
-  padding: 7px;
+	outline: 2px solid var(--my-background-color);
+	width: 50%;
+	background: white;
+	border-radius: 5px;
+	padding: 7px;
 }
 
-genopHead {
-  display: block;
-  text-align: center;
-  font-weight: bold;
+genophead {
+	display: block;
+	text-align: center;
+	font-weight: bold;
 }
 
-genopHeadimg {
-  display: block;
-  text-align: center;
-  font-weight: bold;
-  margin: auto auto 10px auto;
+genopheadimg {
+	display: block;
+	text-align: center;
+	font-weight: bold;
+	margin: auto auto 10px auto;
 }
 
 #exitRcrce2 {
-  display: inline-block;
-  position: absolute;
-  bottom: 5px;
-  right: 5px;
-  border-left: 2px solid var(--my-accent-color);
+	display: inline-block;
+	position: absolute;
+	bottom: 5px;
+	right: 5px;
+	border-left: 2px solid var(--my-accent-color);
 }
 
 #clearDiag {
-  display: inline-block;
-  position: absolute;
-  bottom: 65px;
-  right: 5px;
-  border-left: 2px solid var(--my-accent-color);
+	display: inline-block;
+	position: absolute;
+	bottom: 65px;
+	right: 5px;
+	border-left: 2px solid var(--my-accent-color);
 }
 
 #copyDiag {
-  display: inline-block;
-  position: absolute;
-  bottom: 5px;
-  left: 5px;
-  border-right: 2px solid var(--my-accent-color);
+	display: inline-block;
+	position: absolute;
+	bottom: 5px;
+	left: 5px;
+	border-right: 2px solid var(--my-accent-color);
 }
 
 .answerSlide {
-  display: inline-block;
-  position: absolute;
-  width: 0%;
-  overflow: hidden;
-  white-space: nowrap;
-  transition: .5s;
-  z-index: 15;
-  margin-top: 25px;
-  opacity: 0;
+	display: inline-block;
+	position: absolute;
+	width: 0%;
+	overflow: hidden;
+	white-space: nowrap;
+	transition: .5s;
+	z-index: 15;
+	margin-top: 25px;
+	opacity: 0;
 }
 
 .answerSlide.active {
-  width: 93%;
-  background: var(--btn-background2);
-  box-shadow: var(--box-shadow2);
-  opacity: 1;
+	width: 93%;
+	background: var(--btn-background2);
+	box-shadow: var(--box-shadow2);
+	opacity: 1;
 }
 
 .questions {
-  margin-left: 15px;
-  margin-bottom: 15px;
+	margin-left: 15px;
+	margin-bottom: 15px;
 }
 
 .QandA {
-  margin-left: 15px;
+	margin-left: 15px;
+}
+
+.QandA.oddBall {
+	margin-left: 0px;
+	text-align: center;
 }
 
 li {
-  margin: 5px;
+	margin: 5px;
 }
 
 #mileagebtn {
-  right: 5px;
-  bottom: 5px;
-  border-left: 2px solid var(--my-accent-color);
-  width: 120px;
-  padding: 14px 10px;
+	right: 5px;
+	bottom: 5px;
+	border-left: 2px solid var(--my-accent-color);
+	width: 120px;
+	padding: 14px 10px;
 }
 
 #resetMD {
-  right: 125px;
-  bottom: 5px;
-  border-left: 2px solid var(--my-accent-color);
-  width: 120px;
-  padding: 14px 10px;
+	right: 125px;
+	bottom: 5px;
+	border-left: 2px solid var(--my-accent-color);
+	width: 120px;
+	padding: 14px 10px;
 }
 
 .mdguide {
-  float: right;
-  margin-right: 60px;
-  margin-left: 10px;
-  margin-top: 5px;
-  padding: 5px;
+	float: right;
+	margin-right: 60px;
+	margin-left: 10px;
+	margin-top: 5px;
+	padding: 5px;
 }
 
 .authGuideradio {
-  float: right;
-  margin-right: 60px;
-  margin-left: 10px;
-  margin-top: 5px;
-  padding: 5px;
+	float: right;
+	margin-right: 60px;
+	margin-left: 10px;
+	margin-top: 5px;
+	padding: 5px;
 }
 
 .wefwefwef {
-  border-top: 2px solid var(--my-accent-color);
-  background: none;
-  outline: none;
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.5s;
-  font-size: 17px;
-  text-shadow:   
-    1px 1px 1px var(--glow-outline-color), 
-   -1px -1px 1px var(--glow-outline-color), 
-   -1px 1px 1px var(--glow-outline-color), 
-    1px -1px 1px var(--glow-outline-color);
-  box-shadow: none;
-  position: absolute;
-  padding: 18px 16px;
-  display: inline-block;
-  border-radius: var(--radius2);
-  width: 170px;
+	border-top: 2px solid var(--my-accent-color);
+	background: none;
+	outline: none;
+	font-weight: bold;
+	cursor: pointer;
+	transition: 0.5s;
+	font-size: 17px;
+	text-shadow:
+		1px 1px 1px var(--glow-outline-color),
+		-1px -1px 1px var(--glow-outline-color),
+		-1px 1px 1px var(--glow-outline-color),
+		1px -1px 1px var(--glow-outline-color);
+	box-shadow: none;
+	position: absolute;
+	padding: 18px 16px;
+	display: inline-block;
+	border-radius: var(--radius2);
+	width: 170px;
 }
 
 #resetPA {
-  right: 5px;
-  bottom: 5px;
-  border-left: 2px solid var(--my-accent-color);
-  width: 120px;
-  padding: 14px 10px;
+	right: 5px;
+	bottom: 5px;
+	border-left: 2px solid var(--my-accent-color);
+	width: 120px;
+	padding: 14px 10px;
 }
 
 #exitRec {
-  left: 5px;
-  bottom: 5px;
-  border-right: 2px solid var(--my-accent-color);
-  width: 120px;
-  padding: 14px 10px;
+	left: 5px;
+	bottom: 5px;
+	border-right: 2px solid var(--my-accent-color);
+	width: 120px;
+	padding: 14px 10px;
 }
 
 #resetRep {
-  border-left: 2px solid var(--my-accent-color);
-  right: 175px;
-  bottom: 5px;
+	border-left: 2px solid var(--my-accent-color);
+	right: 175px;
+	bottom: 5px;
 }
 
 #inceptEst {
-  border-left: 2px solid var(--my-accent-color);
-  right: 515px;
-  bottom: 5px;
+	border-left: 2px solid var(--my-accent-color);
+	right: 515px;
+	bottom: 5px;
 }
 
 #inceptInstruct {
-  font-size: 14px;
-  bottom: 0px;
-  white-space: nowrap;
+	font-size: 14px;
+	bottom: 0px;
+	white-space: nowrap;
 }
 
 #genRep {
-  border-left: 2px solid var(--my-accent-color);
-  right: 345px;
-  bottom: 5px;
+	border-left: 2px solid var(--my-accent-color);
+	right: 345px;
+	bottom: 5px;
 }
 
 #checkIt {
-  border-left: 2px solid var(--my-accent-color);
-  right: 5px;
-  bottom: 5px;
+	border-left: 2px solid var(--my-accent-color);
+	right: 5px;
+	bottom: 5px;
 }
 
 .tab button:hover {
-  background: var(--hover-color);
+	background: var(--hover-color);
 }
 
 .tab button.active {
-  background: var(--active-color);
+	background: var(--active-color);
 }
 
 .tab button:active {
-  background: var(--active-color);
-  box-shadow: none;
-  transform: translateY(0px);
+	background: var(--active-color);
+	box-shadow: none;
+	transform: translateY(0px);
 }
 
 .wefwefwef:hover {
-  background: var(--active-color);
+	background: var(--active-color);
 }
 
 .wefwefwef:active {
-  background: var(--active-color);
-  box-shadow: none;
-  transform: translateY(0px);
+	background: var(--active-color);
+	box-shadow: none;
+	transform: translateY(0px);
 }
 
 #trackerMsg {
-  background: none;
-  box-shadow: none;
-  outline: none;
-  color: red;
-  font-weight: 850;
-  font-size: 18px;
+	background: none;
+	box-shadow: none;
+	outline: none;
+	color: red;
+	font-weight: 850;
+	font-size: 18px;
+	margin-bottom: 15px;
 }
 
 .tabcontent {
-  display: none;
-  background: none;
-  box-shadow: none;
-  border-radius: 5px;
-  padding: 25px;
+	display: none;
+	background: none;
+	box-shadow: none;
+	border-radius: 5px;
+	padding: 25px;
 }
 
 .bodyTab {
-  margin-left: 25px;
-  line-height: 1.5;
+	margin-left: 25px;
+	line-height: 1.5;
 }
 
 .bodyTab2 {
-  margin-left: 50px;
-  line-height: 1.5;
+	margin-left: 50px;
+	line-height: 1.5;
 }
 
 .headerTab {
-  text-align: center;
-  font-weight: bold;
-  font-size: 20px;
-  margin: 0px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 20px;
+	margin: 0px;
 }
 
 #SOPs {
-  left: 705px;
-  top: 15px;
-  width: 130px;
-  height: 70px;
-  font-size: 22px;
+	left: 705px;
+	top: 15px;
+	width: 130px;
+	height: 70px;
+	font-size: 22px;
 }
 
 #tools {
-  left: 705px;
-  top: 105px;
-  width: 130px;
-  height: 70px;
-  font-size: 22px;
+	left: 705px;
+	top: 105px;
+	width: 130px;
+	height: 70px;
+	font-size: 22px;
 }
 
 .authGuide {
-  width: 100%;
+	width: 100%;
 }
 
 .cover {
-  top: 0px;
-  left: 0px;
-  background: var(--fancy-background);
-  box-shadow: none;
-  overflow: hidden;
-  z-index: 11;
-  position: absolute;
-  display: inline-block;
+	top: 0px;
+	left: 0px;
+	background: var(--fancy-background);
+	box-shadow: none;
+	overflow: hidden;
+	z-index: 11;
+	position: absolute;
+	display: inline-block;
 }
 
 .cover.noShow {
-  top: -10px;
-  left: -10px;
-  width: 0%;
-  height: 0%;
-  background: none;
-  box-shadow: none;
-  transition: .2s;
-  z-index: -1;
+	top: -10px;
+	left: -10px;
+	width: 0%;
+	height: 0%;
+	background: none;
+	box-shadow: none;
+	transition: .2s;
+	z-index: -1;
 }
 
 #resrcDiv {
-  top: 5px;
-  left: 5px;
-  position: absolute;
-  display: inline-block;
-  margin: auto;
-  height: 98%;
-  width: 98%;
-  background: var(--fancy-background);
-  z-index: 6;
-  overflow: hidden;
-}  
-
-.tabcontent table {
-  overflow: hidden;
-  font-size: 17px;
-  width: 75%;
-  text-align: center;
-  border-collapse: collapse;
-  border-spacing: 0;
+	top: 5px;
+	left: 5px;
+	position: absolute;
+	display: none;
+	margin: auto;
+	height: 98%;
+	width: 98%;
+	background: var(--fancy-background);
+	z-index: 6;
+	overflow: hidden;
 }
 
-th:empty, td:empty {
-    border: none;
+.tabcontent table {
+	overflow: hidden;
+	font-size: 17px;
+	width: 75%;
+	text-align: center;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+th:empty,
+td:empty {
+	border: none;
 }
 
 .inptTbl {
-  text-align: center;
-  padding: 5px;
-  border: 1px solid var(--my-background-color);
+	text-align: center;
+	padding: 5px;
+	border: 1px solid var(--my-background-color);
 }
 
 .inptTbl.tblRadio input {
-  width: 50px;
+	width: 50px;
 }
 
 #inputTable {
-  border: none;
-  border-collapse: separate;
-  background: transparent;
+	border: none;
+	border-collapse: separate;
+	background: transparent;
 }
 
 #tableDiv {
-  margin-left: 70px;
+	margin-left: 70px;
 }
 
 .noteBins.arise.tableSize {
-  height: 375px;
-  width: 80%;
-  position: initial;
+	height: 375px;
+	width: 80%;
+	position: initial;
 }
 
 .inptTbl input {
-  background: none;
-  font-weight: 700;
-  font-size: 17px;
-  width: 150px;
-  text-align: center;
+	background: none;
+	font-weight: 700;
+	font-size: 17px;
+	width: 150px;
+	text-align: center;
 }
 
 td.lastCell {
-  border: none;
-  outline: none;
-  text-align: center;
-  font-size: 17px;
+	border: none;
+	outline: none;
+	text-align: center;
+	font-size: 17px;
 }
 
 .wider {
-  width: 200px;
-  border: none;
-  outline: none;
+	width: 200px;
+	border: none;
+	outline: none;
 }
 
 #infosetDiv {
-  display: inline-block;
-  position: absolute;
-  left: 10px;
-  bottom: 10px;
-  margin: 5px;
-  padding: 5px;
+	display: inline-block;
+	position: absolute;
+	left: 10px;
+	bottom: 10px;
+	margin: 5px;
+	padding: 5px;
 }
 
 .min {
-  position: initial;
-  border: none;
-  outline: none;
-  background: none;
-  box-shadow: none;
-  padding: 0px;
-  margin-bottom: 2px;
-  margin-left: 10px;
-  text-align: right;
-  white-space: nowrap;
-  overflow: visible;
-  transition: .15s;
+	position: initial;
+	border: none;
+	outline: none;
+	background: none;
+	box-shadow: none;
+	padding: 0px;
+	margin-bottom: 2px;
+	margin-left: 10px;
+	text-align: right;
+	white-space: nowrap;
+	overflow: visible;
+	transition: .15s;
 }
 
 .min:active {
-  color: var(--glow-outline-color);
-  transform: translateY(1px);
-  box-shadow: none;
-  transition: .15s;
+	color: var(--glow-outline-color);
+	transform: translateY(1px);
+	box-shadow: none;
+	transition: .15s;
 }
 
 .tracker {
-  border: none;
-  outline: none;
+	border: none;
+	outline: none;
 }
 
 #reportData {
-  display: inline-block;
-  position: absolute;
-  left: 300px;
-  bottom: 100px;
-  width: 100%;
-  height: 300px;
-  background: white;
-  z-index: 10000000;
+	display: inline-block;
+	position: absolute;
+	left: 300px;
+	bottom: 100px;
+	width: 100%;
+	height: 300px;
+	background: white;
+	z-index: 10000000;
 }
 
 #descripDiv {
-  display: inline-block;
-  position: absolute;
-  left: 0px;
-  bottom: 10px;
-  width: 100px;
+	display: inline-block;
+	position: absolute;
+	left: 0px;
+	bottom: 10px;
+	width: 100px;
 }
 
 #dateDiv {
-  display: inline-block;
-  position: absolute;
-  left: 120px;
-  bottom: 0px;
-  width: 180px;
+	display: inline-block;
+	position: absolute;
+	left: 120px;
+	bottom: 0px;
+	width: 180px;
 }
 
 #mileDiv {
-  display: inline-block;
-  position: absolute;
-  left: 320px;
-  bottom: 0px;
-  width: 260px;
+	display: inline-block;
+	position: absolute;
+	left: 320px;
+	bottom: 0px;
+	width: 260px;
 }
 
 .decrLab {
-  margin-top: 30px;
+	margin-top: 30px;
 }
 
 #infoDispDiv {
-  bottom: 15px;
-  left: 15px;
+	bottom: 15px;
+	left: 15px;
 }
 
 .output {
-  display: inline-block;
-  position: absolute;
-  width: initial;
-  padding: 0px;
-  font-size: 12px;
-  border: none;
-  outline: none;
-  margin: 0px;
+	display: inline-block;
+	position: absolute;
+	width: initial;
+	padding: 0px;
+	font-size: 12px;
+	border: none;
+	outline: none;
+	margin: 0px;
 }
 
 .questionContain {
-  height: auto;
-  padding: 15px;
-  border: none;
-  outline: none;
-  background: var(--btn-background2);
-  box-shadow: var(--box-shadow2);
-  overflow: hidden;
+	height: auto;
+	padding: 15px;
+	border: none;
+	outline: none;
+	background: var(--btn-background2);
+	box-shadow: var(--box-shadow2);
+	overflow: hidden;
 }
 
 .o {
-  padding:0px;
-  border: none;
-  outline: none;
-  margin: 0px;
-  width: initial;
+	padding: 0px;
+	border: none;
+	outline: none;
+	margin: 0px;
+	width: initial;
 }
 
 #msgDiv {
-  padding: 25px;
-  display: inline-block;
-  position: absolute;
-  bottom: 15px;
-  opacity: 0;
+	padding: 25px;
+	display: inline-block;
+	position: absolute;
+	bottom: 15px;
+	opacity: 0;
 }
 
 .innerLeft {
-  margin-top: 25px;
-  margin-left: 35px;
-  float: left;
-  width: 35%;
-  height: auto;
-  padding: 25px;
-  border: none;
-  outline: none;
-  background: var(--btn-background2);
-  box-shadow: var(--box-shadow2);
-  overflow: hidden;
+	margin-top: 25px;
+	margin-left: 35px;
+	float: left;
+	width: 35%;
+	height: auto;
+	padding: 25px;
+	border: none;
+	outline: none;
+	background: var(--btn-background2);
+	box-shadow: var(--box-shadow2);
+	overflow: hidden;
 }
 
 .innerRight {
-  margin-top: 25px;
-  margin-right: 35px;
-  float: right;
-  width: 35%;
-  height: auto;
-  padding: 25px;
-  border: none;
-  outline: none;
-  background: var(--btn-background2);
-  box-shadow: var(--box-shadow2);
-  overflow: hidden;
+	margin-top: 25px;
+	margin-right: 35px;
+	float: right;
+	width: 35%;
+	height: auto;
+	padding: 25px;
+	border: none;
+	outline: none;
+	background: var(--btn-background2);
+	box-shadow: var(--box-shadow2);
+	overflow: hidden;
 }
 
-#alertDiv  {
-  text-align: center;
-  color: red;
+#alertDiv {
+	text-align: center;
+	color: red;
 }
 
 #closeOutput {
-  right: 5px;
-  bottom: 5px;
-  border-left: 2px solid var(--my-accent-color);
+	right: 5px;
+	bottom: 5px;
+	border-left: 2px solid var(--my-accent-color);
 }
 
 #closeOutput2 {
-  right: 5px;
-  bottom: 5px;
-  border-left: 2px solid var(--my-accent-color);
+	right: 5px;
+	bottom: 5px;
+	border-left: 2px solid var(--my-accent-color);
 }
 
 
 #reportTable.TheOutputtable {
-  table-layout: fixed;
-  width: 95%;
-  border: none;
-  outline: none;
-  text-align: center;
-  border-collapse: collapse;
-  border-spacing: 0;
+	table-layout: fixed;
+	width: 95%;
+	border: none;
+	outline: none;
+	text-align: center;
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
-.headit  {
-  border: none;
-  outline: none;
+.headit {
+	border: none;
+	outline: none;
 }
 
 tr.rowit td {
-  border-top: 1px solid black;
-  outline: none;
-  max-height: 25px;
-  word-wrap: break-word;
+	border-top: 1px solid black;
+	outline: none;
+	max-height: 25px;
+	word-wrap: break-word;
 }
 
 tbody tr.rowit {
-  max-height: 25px;
+	max-height: 25px;
 }
 
 .headit td {
-  border-top: none;
+	border-top: none;
 }
 
 .noteBins.outputDiv {
-  padding: 15px;
-  border: none;
-  outline: none;
-  position: absolute;
-  width: 800px;
-  top: 130px;
-  left: 50px;
-  overflow: hidden;
-  transition: .4s;
-  box-shadow: none;
-  background: none;
-  z-index: 15;
-  height: 0px;
-  opacity: 0;
-  pointer-events: none;
+	padding: 15px;
+	border: none;
+	outline: none;
+	position: absolute;
+	width: 800px;
+	top: 130px;
+	left: 50px;
+	overflow: hidden;
+	transition: .4s;
+	box-shadow: none;
+	background: none;
+	z-index: 15;
+	height: 0px;
+	opacity: 0;
+	pointer-events: none;
 }
 
 .noteBins {
-  padding: 15px;
-  border: none;
-  outline: none;
-  position: absolute;
-  width: 350px;
-  overflow: hidden;
-  box-shadow: none;
-  background: none;
-  z-index: 15;
-  height: 0px;
-  opacity: 0;
-  pointer-events: none;
-  transition: .4s;
+	padding: 15px;
+	border: none;
+	outline: none;
+	position: absolute;
+	width: 350px;
+	overflow: hidden;
+	box-shadow: none;
+	background: none;
+	z-index: 15;
+	height: 0px;
+	opacity: 0;
+	pointer-events: none;
+	transition: .4s;
 }
 
 .tabcontent .noteBins {
-  top: 550px;
-  left: 180px;
+	top: 550px;
+	left: 180px;
 }
 
 .tabcontent.noteBins.arise {
-  margin-left: 30px;
-  margin-top: 20px;
-  width: 90%;
-  height: auto;
+	margin-left: 30px;
+	margin-top: 20px;
+	width: 90%;
+	height: auto;
 }
 
 .noteBins.arise {
-  background: var(--btn-background2);
-  box-shadow: var(--box-shadow2);
-  overflow: hidden;
-  transition: .4s;
-  opacity: 1;
-  height: 150px;
-  z-index: 15;
-  position: absolute;
-  pointer-events: auto;
+	background: var(--btn-background2);
+	box-shadow: var(--box-shadow2);
+	overflow: hidden;
+	transition: .4s;
+	opacity: 1;
+	height: 150px;
+	z-index: 15;
+	position: absolute;
+	pointer-events: auto;
 }
 
 #MileDiscrep1.mileage.noteBins.arise {
-  top: 100px;
-  left: 35px;
-  width: 90%;
-  height: auto;
+	top: 100px;
+	left: 35px;
+	width: 90%;
+	height: auto;
 }
 
 .repOpt {
-  margin: 10px;
-  margin-top: 10px;
+	margin: 10px;
+	margin-top: 10px;
 }
 
 
 #boxHolder {
-  width: 250px;
-  height: 175px;
-  bottom: 120px;
-  right: 35px;
-  padding: 15px;
-  position: absolute;
-  display: inline-block;
-  text-align: right;
-  background: var(--btn-background2);
-  box-shadow: var(--box-shadow2);
-  overflow: hidden;
-  transition: .4s;
-  opacity: 1;
+	width: 250px;
+	height: 175px;
+	bottom: 120px;
+	right: 35px;
+	padding: 15px;
+	position: absolute;
+	display: inline-block;
+	text-align: right;
+	background: var(--btn-background2);
+	box-shadow: var(--box-shadow2);
+	overflow: hidden;
+	transition: .4s;
+	opacity: 1;
 }
 
 .justOne {
-  text-align: left;
+	text-align: left;
 }
 
 .both {
-  display: none;
-  position: absolute;
-  background: var(--btn-background2);
-  box-shadow: var(--box-shadow2);
-  overflow: hidden;
-  transition: .4s;
-  padding: 20px;
-  margin: 15px;
+	display: none;
+	position: absolute;
+	background: var(--btn-background2);
+	box-shadow: var(--box-shadow2);
+	overflow: hidden;
+	transition: .4s;
+	padding: 20px;
+	margin: 15px;
 }
 
 .both.leftSide {
-  bottom: 95px;
-  left: 15px;
-  width: 35%;
+	bottom: 95px;
+	left: 15px;
+	width: 35%;
 }
 
 .both.rightSide {
-  bottom: 95px;
-  right: 15px;
-  width: 44%;
+	bottom: 95px;
+	right: 15px;
+	width: 44%;
 }
 
 .teslatab {
-  margin-left: 30px;
+	margin-left: 30px;
 }

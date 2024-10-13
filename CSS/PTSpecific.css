@@ -28,428 +28,432 @@ Failure to comply with these terms may result in legal action.
 */
 
 #PTModeDiv {
-  display: none;
-  background: none;
-  box-shadow: none;
-  position: absolute;
+	display: none;
+	background: none;
+	box-shadow: none;
+	position: absolute;
 }
 
 #transAuthBtn {
-  left: 20px;
-  top:  415px;
-  white-space: nowrap;
-  width: 150px;
-  height: 45px;
+	left: 20px;
+	top: 415px;
+	white-space: nowrap;
+	width: 150px;
+	height: 45px;
 }
 
 #flowchartBtn {
-  position: absolute;
-  display: inline-block;
-  top: 490px;
-  left: 20px;
-  width: 150px;
+	position: absolute;
+	display: inline-block;
+	top: 490px;
+	left: 20px;
+	width: 150px;
 }
 
 .partsContain.away {
-  position: absolute;
-  background: none;
-  box-shadow: none;
-  bottom: 0px;
-  left: -550px;
-  transition: all .3s ease;
+	position: absolute;
+	background: none;
+	box-shadow: none;
+	bottom: 0px;
+	left: -550px;
+	transition: all .3s ease;
 }
 
 .partsContain.home {
-  position: absolute;
-  background: none;
-  box-shadow: none;
-  bottom: 0px;
-  left: 0px;
-  transition: all .3s ease;
+	position: absolute;
+	background: none;
+	box-shadow: none;
+	bottom: 0px;
+	left: 0px;
+	transition: all .3s ease;
 }
 
 #hideTA {
-  bottom: 400px;
-  left: 10px;
-  position: absolute;
-  display: inline-block;
-  width: 120px;
+	bottom: 400px;
+	left: 10px;
+	position: absolute;
+	display: inline-block;
+	width: 120px;
 }
 
 #trackerBTN {
-  position: absolute;
-  display: inline-block;
-  top: 415px;
-  right: 220px;
-  width: 120px;
+	position: absolute;
+	display: inline-block;
+	top: 415px;
+	right: 220px;
+	width: 120px;
 }
 
 #denials {
-  position: absolute;
-  display: inline-block;
-  top: 50px;
-  left: 385px;
-  width: 120px;
+	position: absolute;
+	display: inline-block;
+	top: 50px;
+	left: 385px;
+	width: 120px;
 }
 
 #reviews {
-  position: absolute;
-  display: inline-block;
-  top: 110px;
-  left: 385px;
-  width: 120px;
+	position: absolute;
+	display: inline-block;
+	top: 110px;
+	left: 385px;
+	width: 120px;
 }
 
 #requests {
-  position: absolute;
-  display: inline-block;
-  top: 170px;
-  width: 120px;
-  left: 385px;
+	position: absolute;
+	display: inline-block;
+	top: 170px;
+	width: 120px;
+	left: 385px;
 }
 
 #authEmail {
-  position: absolute;
-  display: inline-block;
-  top: 230px;
-  width: 120px;
-  left: 385px;
+	position: absolute;
+	display: inline-block;
+	top: 230px;
+	width: 120px;
+	left: 385px;
 }
 
 #prompt {
-  position: absolute;
-  display: inline-block;
-  top: 190px;
-  left: 215px;
-  width: 120px;
+	position: absolute;
+	display: inline-block;
+	top: 190px;
+	left: 215px;
+	width: 120px;
 }
 
 #autoCopyBtn {
-  position: absolute;
-  display: inline-block;
-  top: 250px;
-  left: 215px;
-  width: 120px;
+	position: absolute;
+	display: inline-block;
+	top: 250px;
+	left: 215px;
+	width: 120px;
 }
 
 .closeChart {
-  display: none;
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  font-size: 20px; 
-  background: none;
-  border: 2px solid red;
-  cursor: pointer;
-  z-index: 2000;
-  overflow: visible;
-  box-shadow: none;
-  border-radius: var(--radius2);
+	display: none;
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	font-size: 20px;
+	background: none;
+	border: 2px solid red;
+	cursor: pointer;
+	z-index: 2000;
+	overflow: visible;
+	box-shadow: none;
+	border-radius: var(--radius2);
 }
 
 .closeChart:hover {
-   background: var(--hover-color);
+	background: var(--hover-color);
 }
 
 .closeChart:active {
-   background: var(--active-color);
-   box-shadow: none;
+	background: var(--active-color);
+	box-shadow: none;
 }
 
 .closeChart.showImg {
-  display: inline-block;
+	display: inline-block;
 }
 
 #imageContainer {
-  display: none;
-  position: absolute; 
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); 
-  z-index: 999;
-  cursor: grab;
-  overflow: hidden; 
+	display: none;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 999;
+	cursor: grab;
+	overflow: hidden;
 }
 
 #imageContainer.showImg {
-  display: block;
-  overflow: hidden;
+	display: block;
+	overflow: hidden;
 }
 
 #imageContainer img {
-  position: relative;
-  max-width: none; /* Remove constraints to allow scaling */
-  max-height: none;
-  transform-origin: center center;
-  overflow: hidden;
+	position: relative;
+	max-width: none;
+	/* Remove constraints to allow scaling */
+	max-height: none;
+	transform-origin: center center;
+	overflow: hidden;
 }
 
 #imageContainer.dragging {
-  cursor: grabbing;
+	cursor: grabbing;
 }
 
 .denialBtns {
-  display: flex;
-  position: absolute;
-  flex-direction: column;
-  align-items: space-between;
-  left: 530px;
-  background: none;
-  box-shadow: none;
-  transition: all .3s ease;
+	display: flex;
+	position: absolute;
+	flex-direction: column;
+	align-items: space-between;
+	left: 530px;
+	background: none;
+	box-shadow: none;
+	transition: all .3s ease;
 }
 
 .reviewBtns {
-  display: flex;
-  position: absolute;
-  flex-direction: column;
-  align-items: space-between;
-  left: 530px;
-  background: none;
-  box-shadow: none;
-  transition: all .3s ease;
+	display: flex;
+	position: absolute;
+	flex-direction: column;
+	align-items: space-between;
+	left: 530px;
+	background: none;
+	box-shadow: none;
+	transition: all .3s ease;
 }
 
 .requestBtns {
-  display: flex;
-  position: absolute;
-  flex-direction: column;
-  align-items: space-between;
-  left: 530px;
-  background: none;
-  box-shadow: none;
-  transition: all .3s ease;
+	display: flex;
+	position: absolute;
+	flex-direction: column;
+	align-items: space-between;
+	left: 530px;
+	background: none;
+	box-shadow: none;
+	transition: all .3s ease;
 }
 
-.denialBtns.showit, .reviewBtns.showit, .requestBtns.showit {
-  top: 20px;
-  transition: all .3s ease;
+.denialBtns.showit,
+.reviewBtns.showit,
+.requestBtns.showit {
+	top: 20px;
+	transition: all .3s ease;
 }
 
-.denialBtns.hideit, .reviewBtns.hideit {
-  top: -315px;
-  transition: all .3s ease;
+.denialBtns.hideit,
+.reviewBtns.hideit {
+	top: -315px;
+	transition: all .3s ease;
 }
 
 .requestBtns.hideit {
-  top: -455px;
-  transition: all .3s ease;
+	top: -455px;
+	transition: all .3s ease;
 }
 
 .denialBtns button {
-  white-space: wrap;
-  display: initial;
-  position: initial;
-  margin: 10px;
-  padding: 10px 25px;
-  width: 160px;
-  font-size: 17px;
+	white-space: wrap;
+	display: initial;
+	position: initial;
+	margin: 10px;
+	padding: 10px 25px;
+	width: 160px;
+	font-size: 17px;
 }
 
 .reviewBtns button {
-  white-space: wrap;
-  display: initial;
-  position: initial;
-  margin: 10px;
-  padding: 10px 25px;
-  width: 160px;
-  font-size: 17px;
+	white-space: wrap;
+	display: initial;
+	position: initial;
+	margin: 10px;
+	padding: 10px 25px;
+	width: 160px;
+	font-size: 17px;
 }
 
 .requestBtns button {
-  white-space: wrap;
-  display: initial;
-  position: initial;
-  margin: 10px;
-  padding: 10px 25px;
-  width: 160px;
-  font-size: 17px;
+	white-space: wrap;
+	display: initial;
+	position: initial;
+	margin: 10px;
+	padding: 10px 25px;
+	width: 160px;
+	font-size: 17px;
 }
 
 #fileUploaderDiv {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  top: 150px;
-  border: 2px solid var(--my-accent-color);
-  width: 600px;
-  padding: 40px;
-  z-index: 7;
-  background: var(--my-background-color);
-  box-shadow: none;
-  transition: all .3s ease;
-  border-radius: 15px;
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	top: 150px;
+	border: 2px solid var(--my-accent-color);
+	width: 600px;
+	padding: 40px;
+	z-index: 7;
+	background: var(--my-background-color);
+	box-shadow: none;
+	transition: all .3s ease;
+	border-radius: 15px;
 }
 
 #fileUploaderDiv.slideFilein {
-  left: -740px;
-  transition: all .3s ease;
+	left: -740px;
+	transition: all .3s ease;
 }
 
 #fileUploaderDiv.slideFileout {
-  left: 30px;
-  transition: all .3s ease;
-  box-shadow: var(--altboxshad);
+	left: 30px;
+	transition: all .3s ease;
+	box-shadow: var(--altboxshad);
 }
 
 .auto_copy_inners {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  background: none;
-  box-shadow: none;
-  width: 600px;
-  justify-content: space-evenly;
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	background: none;
+	box-shadow: none;
+	width: 600px;
+	justify-content: space-evenly;
 }
 
 .auto_copy_inners div {
-  display: flex;
-  width: 120px;
-  background: none;
-  box-shadow: none;
-  color: var(--glow-txt-color);
-  text-shadow:
-    1px 1px 1px var(--glow-outline-color),
-   -1px -1px 1px var(--glow-outline-color),
-   -1px 1px 1px var(--glow-outline-color),
-    1px -1px 1px var(--glow-outline-color);
-  justify-content: center;
-  text-align: center;
+	display: flex;
+	width: 120px;
+	background: none;
+	box-shadow: none;
+	color: var(--glow-txt-color);
+	text-shadow:
+		1px 1px 1px var(--glow-outline-color),
+		-1px -1px 1px var(--glow-outline-color),
+		-1px 1px 1px var(--glow-outline-color),
+		1px -1px 1px var(--glow-outline-color);
+	justify-content: center;
+	text-align: center;
 }
 
 .auto_copy_inners button {
-  display: initial;
-  position: initial;
-  margin-bottom: 20px;
-  width: 130px;
-  height: 50px;
+	display: initial;
+	position: initial;
+	margin-bottom: 20px;
+	width: 130px;
+	height: 50px;
 }
 
 button.autoCopiers {
-  display: initial;
-  position: initial;
-  width: 130px;
-  height: 40px;
+	display: initial;
+	position: initial;
+	width: 130px;
+	height: 40px;
 }
 
 #fileUploaderDiv label {
-  width: 130px;
+	width: 130px;
 }
 
 .auto_copy_innerslast input {
-  color: transparent;
+	color: transparent;
 }
 
 .auto_copy_innerslast {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  background: none;
-  box-shadow: none;
-  width: 100%;
-  justify-content: space-evenly;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	background: none;
+	box-shadow: none;
+	width: 100%;
+	justify-content: space-evenly;
 }
 
 #closeAutoCopy {
-  position: absolute;
-  display: inline-block;
-  top: 5px;
-  right: 8px;
-  padding: 3px 5px;
-  border-radius: 5px;
-  border: 1px solid var(--glow-txt-color);
-  background: none;
-  box-shadow: none;
-  font-size: 18px;
-  color: var(--glow-txt-color);
-  text-shadow:
-    1px 1px 1px var(--glow-outline-color),
-   -1px -1px 1px var(--glow-outline-color),
-   -1px 1px 1px var(--glow-outline-color),
-    1px -1px 1px var(--glow-outline-color);
+	position: absolute;
+	display: inline-block;
+	top: 5px;
+	right: 8px;
+	padding: 3px 5px;
+	border-radius: 5px;
+	border: 1px solid var(--glow-txt-color);
+	background: none;
+	box-shadow: none;
+	font-size: 18px;
+	color: var(--glow-txt-color);
+	text-shadow:
+		1px 1px 1px var(--glow-outline-color),
+		-1px -1px 1px var(--glow-outline-color),
+		-1px 1px 1px var(--glow-outline-color),
+		1px -1px 1px var(--glow-outline-color);
 }
 
 #xferred {
-  position: absolute;
-  display: inline-block;
-  top: 575px;
-  left: 415px;
-  width: 120px;
+	position: absolute;
+	display: inline-block;
+	top: 575px;
+	left: 415px;
+	width: 120px;
 }
 
 #toGen {
-  position: absolute;
-  display: none;
-  top: 575px;
-  left: 415px;
-  width: 120px;
+	position: absolute;
+	display: none;
+	top: 575px;
+	left: 415px;
+	width: 120px;
 }
 
 #newClaim {
-  position: absolute;
-  display: none;
-  top: 635px;
-  left: 415px;
-  width: 120px;
+	position: absolute;
+	display: none;
+	top: 635px;
+	left: 415px;
+	width: 120px;
 }
 
 #inform {
-  position: absolute;
-  display: inline-block;
-  top: 695px;
-  left: 415px;
-  width: 120px;
+	position: absolute;
+	display: inline-block;
+	top: 695px;
+	left: 415px;
+	width: 120px;
 }
 
 #reasonAuth {
-  position: absolute;
-  display: none;
-  top: 695px;
-  left: 415px;
-  width: 120px;
+	position: absolute;
+	display: none;
+	top: 695px;
+	left: 415px;
+	width: 120px;
 }
 
 #reasonDenial {
-  position: absolute;
-  display: none;
-  top: 755px;
-  left: 415px;
-  width: 120px;
+	position: absolute;
+	display: none;
+	top: 755px;
+	left: 415px;
+	width: 120px;
 }
 
 #reasonStatus {
-  position: absolute;
-  display: none;
-  top: 815px;
-  left: 415px;
-  width: 120px;
+	position: absolute;
+	display: none;
+	top: 815px;
+	left: 415px;
+	width: 120px;
 }
 
 #result1 {
-  position: absolute;
-  display: none;
-  top: 695px;
-  left: 415px;
-  width: 120px;
+	position: absolute;
+	display: none;
+	top: 695px;
+	left: 415px;
+	width: 120px;
 }
 
 #result2 {
-  position: absolute;
-  display: none;
-  top: 785px;
-  left: 415px;
-  width: 120px;
+	position: absolute;
+	display: none;
+	top: 785px;
+	left: 415px;
+	width: 120px;
 }
 
 #otherFPS {
-  font-size: 24px;
-  top: 900px;
-  left: 590px;
-  color: var(--glow-outline-color);
-  text-shadow:
-    1px 1px 1px var(--glow-txt-color),
-   -1px -1px 1px var(--glow-txt-color),
-   -1px 1px 1px var(--glow-txt-color),
-    1px -1px 1px var(--glow-txt-color);
+	font-size: 24px;
+	top: 900px;
+	left: 590px;
+	color: var(--glow-outline-color);
+	text-shadow:
+		1px 1px 1px var(--glow-txt-color),
+		-1px -1px 1px var(--glow-txt-color),
+		-1px 1px 1px var(--glow-txt-color),
+		1px -1px 1px var(--glow-txt-color);
 }

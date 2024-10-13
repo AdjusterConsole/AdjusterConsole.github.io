@@ -28,222 +28,224 @@ Failure to comply with these terms may result in legal action.
 */
 
 .ls_outer {
-  position: absolute;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  margin: 0px;
-  top: 0px;
-  left: 0px;
-  z-index: 6;
-  background: none;
-  box-shadow: none;
-  border: none;
-  outline: none;
+	position: absolute;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	top: 0px;
+	left: 0px;
+	z-index: 6;
+	background: none;
+	box-shadow: none;
+	border: none;
+	outline: none;
 }
 
 .ls_outer.hide {
-  display: none;
+	display: none;
 }
 
 .ls_outer.show {
-  display: flex;
+	display: flex;
 }
 
 .ls_main div {
-  background: none;
-  box-shadow: none;
-  border: none;
-  outline: none;
+	background: none;
+	box-shadow: none;
+	border: none;
+	outline: none;
 }
 
 .ls_main {
-  height: 85%;
-  width: 85%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  padding: 25px;
-  border-radius: 20px;
-  background: var(--fancy-background);
-  box-shadow: var(--altboxshad2);
-  overflow: hidden;
-  align-items: center;
+	height: 85%;
+	width: 85%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	padding: 25px;
+	border-radius: 20px;
+	background: var(--fancy-background);
+	box-shadow: var(--altboxshad2);
+	overflow: hidden;
+	align-items: center;
 }
 
 .labor_heading {
-  text-align: center;
-  width: 100%;
+	text-align: center;
+	width: 100%;
 }
 
 .labor_div_100 {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  justify-content: center;
-  align-items: baseline;
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	justify-content: center;
+	align-items: baseline;
 }
 
 .labor_div_60 {
-  width: 40%;
-  margin: 15px;
+	width: 40%;
+	margin: 15px;
 }
 
 .labor_div_40 {
-  width: 25%;
-  margin: 15px;
+	width: 25%;
+	margin: 15px;
 }
 
 .ls_main input[type=number] {
-  width: 100px;
-  font-size: 18px;
+	width: 100px;
+	font-size: 18px;
 }
 
 .labor_div_100 label {
-  margin-right: 15px;
+	margin-right: 15px;
 }
 
 .labor_div_90 {
-  display: flex;
-  flex-direction: row;
-  width: 80%;
-  justify-content: space-evenly;
-  align-items: flex-start;
+	display: flex;
+	flex-direction: row;
+	width: 80%;
+	justify-content: space-evenly;
+	align-items: flex-start;
 }
 
 .labor_div_30 {
-  width: 30%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+	width: 30%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 .labor_div_30 button {
-  font-size: 14px;
-  padding: 4px;
-  border-radius: var(--radius2);
-  background: none;
-  box-shadow: none;
-  border: 2px solid var(--my-accent-color);
-  outline: none;
-  display: inherit;
-  position: initial;
-  text-align: center;
-  width: 100%;
-  margin-top: 2px;
-&:hover {
-    background: rgba(0,0,0,0.2);
-  }
+	font-size: 14px;
+	padding: 4px;
+	border-radius: var(--radius2);
+	background: none;
+	box-shadow: none;
+	border: 2px solid var(--my-accent-color);
+	outline: none;
+	display: inherit;
+	position: initial;
+	text-align: center;
+	width: 100%;
+	margin-top: 2px;
+
+	&:hover {
+		background: rgba(0, 0, 0, 0.2);
+	}
 }
 
 .labor_div_30 button.selected {
-  background: rgba(0,0,0,0.5);
+	background: rgba(0, 0, 0, 0.5);
 }
 
 .labor_width {
-  width: 40px;
+	width: 40px;
 }
 
 .labor_widther {
-  width: 120px;
+	width: 120px;
 }
 
 .script_button {
-  display: inherit;
-  position: initial;
-  border-radius: var(--radius2);
-  background: none;
-  box-shadow: none;
-  margin: 5px;
-  text-align: center;
-  width: 130px;
-  border: 2px solid var(--my-accent-color);
-&:hover {
-    background: rgba(0,0,0,0.2);
-  }
+	display: inherit;
+	position: initial;
+	border-radius: var(--radius2);
+	background: none;
+	box-shadow: none;
+	margin: 5px;
+	text-align: center;
+	width: 130px;
+	border: 2px solid var(--my-accent-color);
+
+	&:hover {
+		background: rgba(0, 0, 0, 0.2);
+	}
 }
 
 div.labor_div_button_holder {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  position: absolute;
-  bottom: 60px;
-  width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	position: absolute;
+	bottom: 60px;
+	width: 100%;
 }
 
 #responseDiv {
-  opacity: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border: 2px solid var(--my-accent-color);
-  height: 33%;
-  width: 100%;
-  padding: 10px 0px 0px 0px;
+	opacity: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border: 2px solid var(--my-accent-color);
+	height: 33%;
+	width: 100%;
+	padding: 10px 0px 0px 0px;
 }
 
 #answerBtns {
-  display: flex;
-  flex-direction: row;
-  width: 300px;
+	display: flex;
+	flex-direction: row;
+	width: 300px;
 }
 
 .response_inner {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  width: 420px;
-  height: 250px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	width: 420px;
+	height: 250px;
 }
 
 #rf_offer_div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: absolute;
-  bottom: 140px;
-  left: 80px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: absolute;
+	bottom: 140px;
+	left: 80px;
 }
 
 .instructLabor.hide {
-  display: none;
+	display: none;
 }
 
 .instructLabor.show {
-  display: inline-block;
+	display: inline-block;
 }
 
 .instructLabor {
-  position: absolute;
-  display: inline-block;
-  padding: 25px;
-  border-radius: 20px;
-  background: var(--fancy-background);
-  box-shadow: var(--altboxshad2);
-  z-index: 8;
-  top: 450px;
+	position: absolute;
+	display: inline-block;
+	padding: 25px;
+	border-radius: 20px;
+	background: var(--fancy-background);
+	box-shadow: var(--altboxshad2);
+	z-index: 8;
+	top: 450px;
 }
 
 #openScript {
-  font-size: 17px;
-  left: 250px;
-  top: 170px;
+	font-size: 17px;
+	left: 250px;
+	top: 170px;
 }
 
 #noScript {
-  opacity: 0;
+	opacity: 0;
 }
 
 #yesScript {
-  opacity: 0;
+	opacity: 0;
 }
 
 #myScript {
-  margin-left: 25px;
-  margin-top: 25px;
+	margin-left: 25px;
+	margin-top: 25px;
 }

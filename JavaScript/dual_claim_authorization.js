@@ -25,191 +25,194 @@
 //By using this website or its content, you acknowledge that you have read, understood, and agree to be bound by these terms and conditions.
 //Failure to comply with these terms may result in legal action.
 
-document.getElementById('newAuthstarter').addEventListener('click', auth_run); 
+document.getElementById('newAuthstarter').addEventListener('click', auth_run);
 
 function check_Ready() {
-  const new_partsboxes = ['nauth1', 'nauth2', 'nauth3', 'nauth4', 'nauth5'];
-  const new_oop = document.getElementById('nauth9').checked;
-  const new_both = document.getElementById('nauth11').checked;
-  const new_oop_known = document.getElementById('nauth21').checked;
-  const new_oop_amt = document.getElementById('nauth20').value;
+	const new_partsboxes = ['nauth1', 'nauth2', 'nauth3', 'nauth4', 'nauth5'];
+	const new_oop = document.getElementById('nauth9').checked;
+	const new_both = document.getElementById('nauth11').checked;
+	const new_oop_known = document.getElementById('nauth21').checked;
+	const new_oop_amt = document.getElementById('nauth20').value;
 
-  let check_Parts = false;
+	let check_Parts = false;
 
-  new_partsboxes.forEach(id => {
-    if (document.getElementById(id).checked) {
-      check_Parts = true;
-    }
-  });
-  if (new_oop || new_both) {
-    if (!new_oop_known && new_oop_amt === '') {
-      alert('Enter OOPC amount or declare unknown.');
-      return false;
-    }
-  } 
-  if (!check_Parts) { 
-    if (!confirm('No part options selected. Continue?')) { return false; }
-  }
- return true;
+	new_partsboxes.forEach(id => {
+		if (document.getElementById(id).checked) {
+			check_Parts = true;
+		}
+	});
+	if (new_oop || new_both) {
+		if (!new_oop_known && new_oop_amt === '') {
+			alert('Enter OOPC amount or declare unknown.');
+			return false;
+		}
+	}
+	if (!check_Parts) {
+		if (!confirm('No part options selected. Continue?')) {
+			return false;
+		}
+	}
+	return true;
 }
 
 function auth_run() {
-  if (!checkOpen()) {
-    document.getElementById('auth_module').classList.add('show');
-    document.getElementById('nauth12').checked = true;
-  }
+	if (!checkOpen()) {
+		document.getElementById('auth_module').classList.add('show');
+		document.getElementById('nauth12').checked = true;
+	}
 }
 
 function cancel_auth() {
-  uncheck_All();
-  document.getElementById('nauth12').checked = true;
-  document.getElementById('nauth20').value = '';
-  document.getElementById('nauth25').value = '$100.00';
-  show_oopc_option();
-  document.getElementById('newAuthstyle').style.display = 'none';
-  if (document.getElementById('auth_module').classList.contains('show')){
-    document.getElementById('auth_module').classList.remove('show');
-  }
+	uncheck_All();
+	document.getElementById('nauth12').checked = true;
+	document.getElementById('nauth20').value = '';
+	document.getElementById('nauth25').value = '$100.00';
+	show_oopc_option();
+	if (document.getElementById('auth_module').classList.contains('show')) {
+		document.getElementById('auth_module').classList.remove('show');
+	}
 }
 
 function show_oopc_option(x) {
-  if (x) {
-    document.getElementById('oopc_option').style.opacity = '1';
-    document.getElementById('oopc_option2').style.opacity = '1';
-  } else {
-    document.getElementById('oopc_option').style.opacity = '0';
-    document.getElementById('oopc_option2').style.opacity = '0';
-  }
+	if (x) {
+		document.getElementById('oopc_option').style.opacity = '1';
+		document.getElementById('oopc_option2').style.opacity = '1';
+	} else {
+		document.getElementById('oopc_option').style.opacity = '0';
+		document.getElementById('oopc_option2').style.opacity = '0';
+	}
 }
 
 function auth_initialize() {
-  if (!check_Ready()) { return; }
+	if (!check_Ready()) {
+		return;
+	}
 
-  const contact_name = getContact('0');
-  const contact_email = getContact('1');
+	const contact_name = getContact('0');
+	const contact_email = getContact('1');
 
-  const auth1Note = 'Repair Facility Contact name: ';
-  const auth2Note = 'Verified failures using Repair Facility diagnostic';
-  const auth3Note = ' and inspection report';
-  const auth4Note = ' and Repair Facility supplied photos';
-  const auth5Note = 'Contract has coverage for failed components.\r';
-  const auth6Note = 'Verified OEM parts using Forte and AM parts using PA.\r';
-  const auth7Note = 'Verified labor using Pro Demand.\r';
-  const auth8Note = 'Verified payment info with Repair Facility contact at: ';   
-  const auth9Note = 'Using Repair Facility OEM parts at or under $250.00.\r';
-  const auth10Note = 'Using Repair Facility parts at or under sourcing MCE.\r';
-  const auth11Note = 'Using sourcing MCE as a credit toward Repair Facility parts.\r';
-  const auth12Note = 'Using sourcing MCE as a credit toward Repair Facility parts or shipping in.\r';
-  const auth13Note = `Using Repair Facility's parts. The Price was adjusted to a reasonable amount near MCE.\rThis was done considering all factors including claim delays, shipping costs, liability for future failures, time and mileage in coverage, number of prior claims and their cost, etc.\r`;
-  const auth14Note = 'No inspection needed as Repair Facility diagnostic matches CH concern.\r';
-  const auth15Note = 'Sent inspection to verify failures.\rReviewed report and inspection photos.\rInspection review note is completed.\r';
-  const auth16Note = 'Requested and reviewed photos from Repair Facility.\rPhoto review note is completed.\r';
-  const auth17Note = 'No records requested as history will not change claim decision.\r';
-  const auth17aNote = 'No prior related claims.\r';
-  const auth17bNote = 'No TSBs or recalls associated.\r';
-  const auth17cNote = 'No mileage or VIN concerns.\r';
-  const auth18Note = 'Requested and reviewed records and statement.\rRecord review note is completed.\r';
-  const auth19Note = 'After reviewing all relevant documentation, we are moving forward with verified failures.\r';
-  const auth20Note = 'Need to review OOPC of $';
-  const auth21Note = ' with Contract Holder.\r';
-  const auth22Note = ' and shipping option with Contract Holder.\r';
-  const auth23Note = 'OOPC is due to differences in ';
-  const auth24Note = 'Need to review shipping option with Contract Holder.\r';
-  const auth25Note = 'Have not given authorization info to the Repair Facility at this time.\r';
-  const auth26Note = 'Contract Holder has no OOPC besides deductible.\r';
-  const auth27Note = 'Gave authorization info and payment instructions to ';
-  const auth28Note = 'Will inform Contract Holder of non-covered components.\r';
-  const auth29Note = 'There were denied items on this claim.\rReview denial note for more details.\r';
-  const auth30Note = `Haven't determined OOPC at this time.\rWill review with RF prior to calling Contract Holder.\r`; 
-  
-  let output = '';
+	const auth1Note = 'Repair Facility Contact name: ';
+	const auth2Note = 'Verified failures using Repair Facility diagnostic';
+	const auth3Note = ' and inspection report';
+	const auth4Note = ' and Repair Facility supplied photos';
+	const auth5Note = 'Contract has coverage for failed components.\r';
+	const auth6Note = 'Verified OEM parts using Forte and AM parts using PA.\r';
+	const auth7Note = 'Verified labor using Pro Demand.\r';
+	const auth8Note = 'Verified payment info with Repair Facility contact at: ';
+	const auth9Note = 'Using Repair Facility OEM parts at or under $250.00.\r';
+	const auth10Note = 'Using Repair Facility parts at or under sourcing MCE.\r';
+	const auth11Note = 'Using sourcing MCE as a credit toward Repair Facility parts.\r';
+	const auth12Note = 'Using sourcing MCE as a credit toward Repair Facility parts or shipping in.\r';
+	const auth13Note = `Using Repair Facility's parts. The Price was adjusted to a reasonable amount near MCE.\rThis was done considering all factors including claim delays, shipping costs, liability for future failures, time and mileage in coverage, number of prior claims and their cost, etc.\r`;
+	const auth14Note = 'No inspection needed as Repair Facility diagnostic matches CH concern.\r';
+	const auth15Note = 'Sent inspection to verify failures.\rReviewed report and inspection photos.\rInspection review note is completed.\r';
+	const auth16Note = 'Requested and reviewed photos from Repair Facility.\rPhoto review note is completed.\r';
+	const auth17Note = 'No records requested as history will not change claim decision.\r';
+	const auth17aNote = 'No prior related claims.\r';
+	const auth17bNote = 'No TSBs or recalls associated.\r';
+	const auth17cNote = 'No mileage or VIN concerns.\r';
+	const auth18Note = 'Requested and reviewed records and statement.\rRecord review note is completed.\r';
+	const auth19Note = 'After reviewing all relevant documentation, we are moving forward with verified failures.\r';
+	const auth20Note = 'Need to review OOPC of $';
+	const auth21Note = ' with Contract Holder.\r';
+	const auth22Note = ' and shipping option with Contract Holder.\r';
+	const auth23Note = 'OOPC is due to differences in ';
+	const auth24Note = 'Need to review shipping option with Contract Holder.\r';
+	const auth25Note = 'Have not given authorization info to the Repair Facility at this time.\r';
+	const auth26Note = 'Contract Holder has no OOPC besides deductible.\r';
+	const auth27Note = 'Gave authorization info and payment instructions to ';
+	const auth28Note = 'Will inform Contract Holder of non-covered components.\r';
+	const auth29Note = 'There were denied items on this claim.\rReview denial note for more details.\r';
+	const auth30Note = `Haven't determined OOPC at this time.\rWill review with RF prior to calling Contract Holder.\r`;
 
-  output += auth1Note + contact_name + '\r' + auth2Note;
+	let output = '';
 
-  const inspection = document.getElementById('nauth6').checked;
-  const photos = document.getElementById('nauth7').checked;
-  const records = document.getElementById('nauth8').checked;
-  const stop17b = document.getElementById('nauth15').checked;
-  const stop17a = document.getElementById('nauth16').checked;
-  const stop17c = document.getElementById('nauth16a').checked;
+	output += auth1Note + contact_name + '\r' + auth2Note;
 
-  let needed = false;
-  if (inspection || photos || records) needed = true;
+	const inspection = document.getElementById('nauth6').checked;
+	const photos = document.getElementById('nauth7').checked;
+	const records = document.getElementById('nauth8').checked;
+	const stop17b = document.getElementById('nauth15').checked;
+	const stop17a = document.getElementById('nauth16').checked;
+	const stop17c = document.getElementById('nauth16a').checked;
 
-  output += inspection ? auth3Note : '';
-  output += photos ? auth4Note : '';
-  output += '.\r' + auth5Note + auth6Note + auth7Note + auth8Note + contact_email + '.\r';
+	let needed = false;
+	if (inspection || photos || records) needed = true;
 
-  const parts1 = document.getElementById('nauth1').checked;
-  const parts2 = document.getElementById('nauth2').checked;
-  const parts3 = document.getElementById('nauth3').checked;
-  const parts4 = document.getElementById('nauth4').checked;
-  const parts5 = document.getElementById('nauth5').checked;
+	output += inspection ? auth3Note : '';
+	output += photos ? auth4Note : '';
+	output += '.\r' + auth5Note + auth6Note + auth7Note + auth8Note + contact_email + '.\r';
 
-  output += parts1 ? auth9Note : '';
-  output += parts2 ? auth10Note : '';
-  output += parts3 ? auth11Note : '';
-  output += parts4 ? auth12Note : '';
-  output += parts5 ? auth13Note : '';
- 
-  let auth17zNote = 'Vehicle is not in waiting period.\rLack of maintenance will not be a provable exclusion.\r';
-  if (!stop17a) auth17zNote += auth17aNote;
-  if (!stop17b) auth17zNote += auth17bNote;
-  if (!stop17c) auth17zNote += auth17cNote;
+	const parts1 = document.getElementById('nauth1').checked;
+	const parts2 = document.getElementById('nauth2').checked;
+	const parts3 = document.getElementById('nauth3').checked;
+	const parts4 = document.getElementById('nauth4').checked;
+	const parts5 = document.getElementById('nauth5').checked;
 
-  if (needed) {
-    output += inspection ? auth15Note : auth14Note;
-    output += photos ? auth16Note : '';
-    output += records ? auth18Note : auth17Note;
-    output += auth17zNote;
-    output += auth19Note;
-  } else {
-    output += auth14Note + auth17Note + auth17zNote;
-  }
+	output += parts1 ? auth9Note : '';
+	output += parts2 ? auth10Note : '';
+	output += parts3 ? auth11Note : '';
+	output += parts4 ? auth12Note : '';
+	output += parts5 ? auth13Note : '';
 
-  const deductibleValue = document.getElementById('nauth25').value;
-  if (deductibleValue === '$0.00') {
-    output += 'The Contract Holder has no deductible.\r';
-  } else {
-    output += `The Contract Holder has a deductible of ${deductibleValue}.\r`;
-  }
-  
-  const oopc = document.getElementById('nauth9').checked;
-  const shipping = document.getElementById('nauth10').checked;
-  const both = document.getElementById('nauth11').checked;
-  const none = document.getElementById('nauth12').checked;
-  const oopcamount = parseInt(document.getElementById('nauth20').value);
-  const noncovered = document.getElementById('nauth13').checked;
-  const denied = document.getElementById('nauth14').checked;
+	let auth17zNote = 'Vehicle is not in waiting period.\rLack of maintenance will not be a provable exclusion.\r';
+	if (!stop17a) auth17zNote += auth17aNote;
+	if (!stop17b) auth17zNote += auth17bNote;
+	if (!stop17c) auth17zNote += auth17cNote;
 
-  if (oopc || both) {
-    const partoop = document.getElementById('nauth17').checked;
-    const laboroop = document.getElementById('nauth18').checked;
-    const bothoop = document.getElementById('nauth19').checked;
-    const amountUnknown = document.getElementById('nauth21').checked;
-    
-    if (amountUnknown) {
-      output += auth30Note;
-      output += shipping ? auth24Note : '';
-    } else {
-      output += oopcamount ? auth20Note + oopcamount.toFixed(2) : '';
-      output += shipping ? auth22Note : auth21Note;
-      output += auth23Note;
-      if (bothoop) output += 'parts and labor ';
-      if (partoop) output += 'parts ';
-      if (laboroop) output += 'labor ';
-      output += 'and does NOT include the deductible.\r';
-    }
-    output += auth25Note;
-  }
-  
-  if (!oopc && shipping) output += auth24Note + auth26Note + auth25Note;
+	if (needed) {
+		output += inspection ? auth15Note : auth14Note;
+		output += photos ? auth16Note : '';
+		output += records ? auth18Note : auth17Note;
+		output += auth17zNote;
+		output += auth19Note;
+	} else {
+		output += auth14Note + auth17Note + auth17zNote;
+	}
 
-  const auth27NoteA = auth26Note + auth27Note + contact_name + '.\r';
-  output += none ? auth27NoteA : '';
-  output += noncovered ? auth28Note : '';
-  output += denied ? auth29Note : '';
-  
-  copy(output);
-  cancel_auth();
+	const deductibleValue = document.getElementById('nauth25').value;
+	if (deductibleValue === '$0.00') {
+		output += 'The Contract Holder has no deductible.\r';
+	} else {
+		output += `The Contract Holder has a deductible of ${deductibleValue}.\r`;
+	}
+
+	const oopc = document.getElementById('nauth9').checked;
+	const shipping = document.getElementById('nauth10').checked;
+	const both = document.getElementById('nauth11').checked;
+	const none = document.getElementById('nauth12').checked;
+	const oopcamount = parseInt(document.getElementById('nauth20').value);
+	const noncovered = document.getElementById('nauth13').checked;
+	const denied = document.getElementById('nauth14').checked;
+
+	if (oopc || both) {
+		const partoop = document.getElementById('nauth17').checked;
+		const laboroop = document.getElementById('nauth18').checked;
+		const bothoop = document.getElementById('nauth19').checked;
+		const amountUnknown = document.getElementById('nauth21').checked;
+
+		if (amountUnknown) {
+			output += auth30Note;
+			output += shipping ? auth24Note : '';
+		} else {
+			output += oopcamount ? auth20Note + oopcamount.toFixed(2) : '';
+			output += shipping ? auth22Note : auth21Note;
+			output += auth23Note;
+			if (bothoop) output += 'parts and labor ';
+			if (partoop) output += 'parts ';
+			if (laboroop) output += 'labor ';
+			output += 'and does NOT include the deductible.\r';
+		}
+		output += auth25Note;
+	}
+
+	if (!oopc && shipping) output += auth24Note + auth26Note + auth25Note;
+
+	const auth27NoteA = auth26Note + auth27Note + contact_name + '.\r';
+	output += none ? auth27NoteA : '';
+	output += noncovered ? auth28Note : '';
+	output += denied ? auth29Note : '';
+
+	copy(output);
+	cancel_auth();
 }
