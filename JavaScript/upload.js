@@ -1,8 +1,3 @@
-const functions = require('firebase-functions');
-const fetch = require('node-fetch');
-const FormData = require('form-data');
-
-
 document.getElementById('uploadForm').addEventListener('submit', async (event) => {
     event.preventDefault();
 
