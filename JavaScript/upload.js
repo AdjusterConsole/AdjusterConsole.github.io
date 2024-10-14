@@ -1,40 +1,35 @@
 document.getElementById("uploadForm").addEventListener("submit", async (event) => {
-    event.preventDefault(); // Prevent default form submission
+    event.preventDefault(); // Prevent form submission
 
     const fileInput = document.getElementById("fileInputai");
     console.log("File input:", fileInput);
 
-    const file = fileInput.files[0]; // Get the first file
+    const file = fileInput.files[0]; // Get the selected file
     console.log("Selected file:", file);
-    
+
     if (!file) {
-        console.error("No file selected for upload.");
         alert("Please select a file to upload.");
         return;
     }
 
     console.log("Sending file to Cloud Function...");
 
-    // Create a FormData object
-    const formData = new FormData();
-    formData.append('file', file, file.name); // Append the file to the FormData object
-
     try {
         const response = await fetch('https://us-central1-parser-bbd01.cloudfunctions.net/handleWebhook', {
             method: 'POST',
-            body: formData, // Send the FormData
+            headers: {
+                'Content-Type': file.type, // Set content type to the file type
+            },
+            body: file, // Directly send the file
         });
 
         if (!response.ok) {
-            console.error("Failed to upload document. Status:", response.status);
-            alert("Failed to upload document.");
-            return;
+            throw new Error(`Failed to upload document. Status: ${response.status}`);
         }
 
         const jsonResponse = await response.json();
-        console.log("Upload successful:", jsonResponse);
+        console.log('Upload successful:', jsonResponse);
     } catch (error) {
-        console.error("Error during file upload process:", error);
-        alert("Error during file upload process.");
+        console.error('Error during file upload process:', error);
     }
 });
