@@ -1,35 +1,38 @@
-document.getElementById("uploadForm").addEventListener("submit", async (event) => {
-    event.preventDefault(); // Prevent form submission
+document.getElementById('uploadForm').addEventListener('submit', async (event) => {
+    event.preventDefault(); // Prevent the form from submitting normally
 
-    const fileInput = document.getElementById("fileInputai");
-    console.log("File input:", fileInput);
-
+    const fileInput = document.getElementById('fileInput');
     const file = fileInput.files[0]; // Get the selected file
+
+    console.log("File input:", fileInput);
     console.log("Selected file:", file);
 
     if (!file) {
-        alert("Please select a file to upload.");
+        console.error('No file selected for upload.');
+        alert('Please select a file to upload.');
         return;
     }
 
-    console.log("Sending file to Cloud Function...");
+    console.log('Sending file to Cloud Function...');
 
     try {
-        const response = await fetch('https://us-central1-parser-bbd01.cloudfunctions.net/handleWebhook', {
+        const formData = new FormData();
+        formData.append('file', file);
+
+        const response = await fetch('https://us-central1-parser-bbd01.cloudfunctions.net/api/handleWebhook', {
             method: 'POST',
-            headers: {
-                'Content-Type': file.type, // Set content type to the file type
-            },
-            body: file, // Directly send the file
+            body: formData,
         });
 
         if (!response.ok) {
-            throw new Error(`Failed to upload document. Status: ${response.status}`);
+            throw new Error(`HTTP error! status: ${response.status}`);
         }
 
-        const jsonResponse = await response.json();
-        console.log('Upload successful:', jsonResponse);
+        const responseData = await response.json();
+        console.log('Upload successful:', responseData);
+        alert('File uploaded successfully!');
     } catch (error) {
         console.error('Error during file upload process:', error);
+        alert('Failed to upload document. Please try again.');
     }
 });
