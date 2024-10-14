@@ -1,64 +1,40 @@
-    function convertToBase64(file) {
-        return new Promise((resolve, reject) => {
-            const reader = new FileReader();
-            reader.onload = () => {
-                console.log("File successfully converted to base64.");
-                resolve(reader.result);
-            };
-            reader.onerror = error => {
-                console.error("Error converting file to base64:", error);
-                reject(error);
-            };
-            reader.readAsDataURL(file); // Converts file to base64
-        });
+document.getElementById("uploadForm").addEventListener("submit", async (event) => {
+    event.preventDefault(); // Prevent default form submission
+
+    const fileInput = document.getElementById("fileInput");
+    console.log("File input:", fileInput);
+
+    const file = fileInput.files[0]; // Get the first file
+    console.log("Selected file:", file);
+    
+    if (!file) {
+        console.error("No file selected for upload.");
+        alert("Please select a file to upload.");
+        return;
     }
 
-    // Handle file upload
-    document.getElementById('uploadForm').addEventListener('submit', async function(e) {
-        e.preventDefault();
+    console.log("Sending file to Cloud Function...");
 
-        // Get the selected file
-        const fileInput = document.getElementById('fileInputai');
-        const file = fileInput.files[0];
+    // Create a FormData object
+    const formData = new FormData();
+    formData.append('file', file, file.name); // Append the file to the FormData object
 
-        console.log("File input:", fileInput);
-        console.log("Selected file:", file);
+    try {
+        const response = await fetch('https://us-central1-parser-bbd01.cloudfunctions.net/handleWebhook', {
+            method: 'POST',
+            body: formData, // Send the FormData
+        });
 
-        if (!file) {
-            console.error("No file selected for upload.");
-            alert("Please select a file to upload.");
+        if (!response.ok) {
+            console.error("Failed to upload document. Status:", response.status);
+            alert("Failed to upload document.");
             return;
         }
 
-        try {
-            console.log("Converting file to base64...");
-            const base64File = await convertToBase64(file);
-            console.log("Sending file to Cloud Function...");
-
-            // Send base64 file to Cloud Function
-            const response = await fetch('https://us-central1-parser-bbd01.cloudfunctions.net/handleWebhook', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    file: base64File, // Sending the base64 file
-                    filename: file.name, // Optionally send the file name
-                }),
-            });
-
-            if (!response.ok) {
-                console.error("Failed to upload document. Status:", response.status, response.statusText);
-                throw new Error('Failed to upload document.');
-            }
-
-            const result = await response.json();
-            console.log('Upload successful. Server response:', result);
-            alert("File uploaded successfully!");
-
-        } catch (error) {
-            console.error("Error during file upload process:", error);
-            alert("An error occurred while uploading the file.");
-        }
-    });
-
+        const jsonResponse = await response.json();
+        console.log("Upload successful:", jsonResponse);
+    } catch (error) {
+        console.error("Error during file upload process:", error);
+        alert("Error during file upload process.");
+    }
+});
