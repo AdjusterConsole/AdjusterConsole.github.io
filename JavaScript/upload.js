@@ -1,31 +1,42 @@
-document.getElementById('uploadForm').addEventListener('submit', async (event) => {
-    event.preventDefault();
+// Function to convert file to base64
+function convertToBase64(file) {
+    return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onload = () => resolve(reader.result);
+        reader.onerror = error => reject(error);
+        reader.readAsDataURL(file); // Converts file to base64
+    });
+}
 
-    const fileInput = document.getElementById('file');
-    const file = fileInput.files[0];
+// Handle file upload
+document.querySelector('#uploadForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const file = document.querySelector('#fileInput').files[0];
+    
+    if (file) {
+        try {
+            const base64File = await convertToBase64(file);
 
-    if (!file) {
-        alert('Please upload a file.');
-        return;
-    }
+            // Send base64 file to Cloud Function
+            const response = await fetch('https://us-central1-parser-bbd01.cloudfunctions.net/handleWebhook', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    file: base64File, // Sending the base64 file
+                    filename: file.name, // Optionally send the file name
+                }),
+            });
 
-    const formData = new FormData();
-    formData.append('file', file); // Append only the file to FormData
+            if (!response.ok) {
+                throw new Error('Failed to upload document.');
+            }
 
-    try {
-        const response = await fetch('https://us-central1-parser-bbd01.cloudfunctions.net/handleWebhook', {
-            method: 'POST',
-            body: formData
-        });
-
-        if (response.ok) {
-            const result = await response.json(); // Get the response from the server
-            console.log('Document uploaded successfully. Response:', result);
-        } else {
-            throw new Error('Failed to upload document.');
+            const result = await response.json();
+            console.log('Upload successful:', result);
+        } catch (error) {
+            console.error('Error:', error);
         }
-    } catch (error) {
-        console.error('Error:', error);
-        alert('There was an error uploading the document.');
     }
 });
