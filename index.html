@@ -22,7 +22,6 @@
     <link rel="stylesheet" href="CSS/laborRateScript.css?v=651651651682">
     <link rel="stylesheet" href="CSS/PTSpecific.css?v=651651651682">
     <link rel="stylesheet" href="CSS/Instructions.css?v=651651651682">
-	<link rel="stylesheet" href="CSS/parser.css?v=651651651682">
     <title>Adjuster Console</title>
     <link rel="manifest" href="manifest.webmanifest?v=651651651682">
 
@@ -636,8 +635,7 @@ Failure to comply with these terms may result in legal action.
             <button class="D R P" id="requests" onclick="showRequests()" oncontextmenu="customMenu(this.id, event)">Requests</button>
 
             <button class="D R P" id="prompt" onclick="copyTextFunc(this.id)" oncontextmenu="customMenu(this.id, event)">AI prompt</button>
-			<button class="D R P" id="autoCopyBtn" onclick="showDocUpload()" oncontextmenu="customMenu(this.id, event)">AI Upload</button>
-            <!--<button class="D R P" id="autoCopyBtn" onclick="autoEnable()" oncontextmenu="customMenu(this.id, event)">AutoCopy</button>-->
+            <button class="D R P" id="autoCopyBtn" onclick="autoEnable()" oncontextmenu="customMenu(this.id, event)">AutoCopy</button>
 
             <button class="D R P" id="flowchartBtn" onclick="flowchart()" oncontextmenu="customMenu(this.id, event)">Flow Chart</button>
 
@@ -674,17 +672,6 @@ Failure to comply with these terms may result in legal action.
                 <button id="T31" class="D R P" onclick="copyTextFunc(this.id)" oncontextmenu="customMenu(this.id, event)">Inspection Template</button>
             </div>
         </div>
-		
-		<!-- Document Parser -->
-		
-		<div id="parseForm" class="noShow">
-		    <h4>Upload Estimate for Processing</h4>
-			<form id="uploadForm">
-				<input type="file" id="fileInputai" accept=".pdf,.doc,.docx,.txt,.jpg,.png" required>
-				<br>
-				<button type="submit">Upload File</button>
-			</form>
-		</div>
 
         <!-- Parts Intake -->
 
@@ -2861,8 +2848,6 @@ TIME:&nbsp&nbsp</textarea>
     <script src="JavaScript/trackerScript.js?v=651651651682"></script>
     <script src="JavaScript/powertrain.js?v=651651651682"></script>
     <script src="JavaScript/NewButton.js?v=651651651682"></script>
-	<script src="JavaScript/upload.js?v=651651651682"></script>
-	
 </body>
 
 </html>
