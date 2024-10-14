@@ -18,7 +18,7 @@
         e.preventDefault();
 
         // Get the selected file
-        const fileInput = document.getElementById('fileInput');
+        const fileInput = document.getElementById('fileInputai');
         const file = fileInput.files[0];
 
         console.log("File input:", fileInput);
