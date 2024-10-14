@@ -13,7 +13,7 @@ document.getElementById('uploadForm').addEventListener('submit', async (event) =
     formData.append('file', file); // Append only the file to FormData
 
     try {
-        const response = await fetch('https://us-central1-parser-bbd01.cloudfunctions.net/handleWebhook' {
+        const response = await fetch('https://us-central1-parser-bbd01.cloudfunctions.net/handleWebhook', {
             method: 'POST',
             body: formData
         });
