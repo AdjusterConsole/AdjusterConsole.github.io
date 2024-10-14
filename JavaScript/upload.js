@@ -1,24 +1,24 @@
-const fileInput = document.getElementById('fileInput');
-const uploadForm = document.getElementById('uploadForm');
+document.getElementById('uploadForm').addEventListener('submit', async (event) => {
+    event.preventDefault(); // Prevent the form from submitting normally
 
-uploadForm.addEventListener('submit', async (event) => {
-    event.preventDefault();
+    const fileInput = document.getElementById('fileInput');
+    const file = fileInput.files[0]; // Get the selected file
 
-    const file = fileInput.files[0];
     console.log("File input:", fileInput);
     console.log("Selected file:", file);
 
     if (!file) {
-        console.error("No file selected for upload.");
-        alert("Please select a file to upload.");
+        console.error('No file selected for upload.');
+        alert('Please select a file to upload.');
         return;
     }
 
-    const formData = new FormData();
-    formData.append('file', file);
+    console.log('Sending file to Cloud Function...');
 
     try {
-        console.log("Sending file to Cloud Function...");
+        const formData = new FormData();
+        formData.append('file', file);
+
         const response = await fetch('https://us-central1-parser-bbd01.cloudfunctions.net/api/handleWebhook', {
             method: 'POST',
             body: formData,
@@ -28,11 +28,11 @@ uploadForm.addEventListener('submit', async (event) => {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
 
-        const result = await response.text();
-        console.log("File uploaded successfully:", result);
-        alert("File uploaded successfully!");
+        const responseData = await response.json();
+        console.log('Upload successful:', responseData);
+        alert('File uploaded successfully!');
     } catch (error) {
-        console.error("Error during file upload process:", error);
-        alert("Error uploading document.");
+        console.error('Error during file upload process:', error);
+        alert('Failed to upload document. Please try again.');
     }
 });
