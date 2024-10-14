@@ -1,7 +1,7 @@
 document.getElementById("uploadForm").addEventListener("submit", async (event) => {
     event.preventDefault(); // Prevent default form submission
 
-    const fileInput = document.getElementById("fileInput");
+    const fileInput = document.getElementById("fileInputai");
     console.log("File input:", fileInput);
 
     const file = fileInput.files[0]; // Get the first file
