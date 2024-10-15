@@ -23,7 +23,7 @@ document.getElementById('uploadForm').addEventListener('submit', async (event) =
     });
 
     if (!uploadResponse.ok) {
-      throw new Error(`Error: ${uploadResponse.statusText}`);
+      throw new Error(`Upload failed: ${uploadResponse.statusText}`);
     }
 
     const uploadResult = await uploadResponse.json();
@@ -33,29 +33,52 @@ document.getElementById('uploadForm').addEventListener('submit', async (event) =
     const documentID = uploadResult.attachments[0].DocumentID;
     console.log('DocumentID:', documentID);
 
-    // Step 2: Use the DocumentID to fetch the document data
-    const documentResponse = await fetch(`https://api.parseur.com/document/${documentID}`, {
-      method: 'GET',
-      headers: {
-        'Authorization': 'Token e2d94dfb673fd7d30ac213cab9fc167f7d3d8557', // Replace this later with GitHub Secret
-      },
-    });
+    // Step 2: Poll the document data for the result property
+    const maxAttempts = 5;
+    const delay = 2000; // 2 seconds delay between requests
 
-    if (!documentResponse.ok) {
-      throw new Error(`Error: ${documentResponse.statusText}`);
+    let attempt = 0;
+    let documentResult;
+
+    // Function to delay execution for a given time (in ms)
+    const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+    while (attempt < maxAttempts) {
+      attempt++;
+
+      // Step 3: Use the DocumentID to fetch the document data (Auth required)
+      const documentResponse = await fetch(`https://api.parseur.com/document/${documentID}`, {
+        method: 'GET',
+        headers: {
+          'Authorization': 'Token e2d94dfb673fd7d30ac213cab9fc167f7d3d8557', // Auth header for GET request
+        },
+      });
+
+      if (!documentResponse.ok) {
+        throw new Error(`GET request failed: ${documentResponse.statusText}`);
+      }
+
+      documentResult = await documentResponse.json();
+      console.log(`Attempt ${attempt}: Document result:`, JSON.stringify(documentResult, null, 2));
+
+      // Check if the result property exists
+      if (documentResult.result) {
+        console.log('Result found:', JSON.stringify(documentResult.result, null, 2));
+        alert('File uploaded and document processed successfully!');
+        return; // Exit the loop and function since result is found
+      }
+
+      // If result not found, wait 2 seconds before the next attempt
+      if (attempt < maxAttempts) {
+        console.log(`No result found. Waiting for ${delay / 1000} seconds before trying again...`);
+        await wait(delay);
+      }
     }
 
-    const documentResult = await documentResponse.json();
-    console.log('Document result:', JSON.stringify(documentResult, null, 2));
-
-    // Step 3: Output the "result" property from the document response
-    if (documentResult.result) {
-      console.log('Result:', JSON.stringify(documentResult.result, null, 2));
-    } else {
-      console.log('No result property found in the document response.');
-    }
-
-    alert('File uploaded and document processed successfully!');
+    // If after 5 attempts no result is found, log the message
+    console.log('No Result Property found after 5 attempts.');
+    alert('File uploaded, but no result property found after 5 attempts.');
+    
   } catch (error) {
     console.error('Error:', error);
     alert('Failed to upload and process the document.');
