@@ -3,7 +3,7 @@
 document.getElementById('uploadForm').addEventListener('submit', async (event) => {
     event.preventDefault(); // Prevent the form from submitting normally
 
-    const fileInput = document.getElementById('fileInput');
+    const fileInput = document.getElementById('fileInputai');
     const file = fileInput.files[0]; // Get the selected file
 
     console.log("File input:", fileInput);
