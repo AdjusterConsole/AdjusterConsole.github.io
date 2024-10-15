@@ -14,10 +14,10 @@ document.getElementById('uploadForm').addEventListener('submit', async (event) =
 
   try {
     // Step 1: Upload the file via POST request
-    const uploadResponse = await fetch('https://api.parseur.com/parser/84913/upload', {
+    const uploadResponse = await fetch('https://api.parseur.com/parser/85090/upload', {
       method: 'POST',
       headers: {
-        'Authorization': 'Token e2d94dfb673fd7d30ac213cab9fc167f7d3d8557', // Replace this later with GitHub Secret
+        'Authorization': 'Token 6d69bbc3546b1aa625c70e2a7da47c9ecce770d8', // Replace this later with GitHub Secret
       },
       body: formData,
     });
@@ -37,7 +37,7 @@ document.getElementById('uploadForm').addEventListener('submit', async (event) =
     await wait(delay);
 
     // Step 3: Make the GET request to download the last document
-    const documentResponse = await fetch('https://api.parseur.com/parser/84913/download/my.mailbox.json?last_document_only=true', {
+    const documentResponse = await fetch('https://api.parseur.com/parser/85090/download/my.mailbox.json?last_document_only=true', {
       method: 'GET'
     });
 
