@@ -35,7 +35,10 @@ document.getElementById('uploadForm').addEventListener('submit', async (event) =
 
     // Step 2: Use the DocumentID to fetch the document data
     const documentResponse = await fetch(`https://api.parseur.com/document/${documentID}`, {
-      method: 'GET'
+      method: 'GET',
+      headers: {
+        'Authorization': 'Token e2d94dfb673fd7d30ac213cab9fc167f7d3d8557', // Replace this later with GitHub Secret
+      },
     });
 
     if (!documentResponse.ok) {
