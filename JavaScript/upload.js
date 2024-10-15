@@ -28,8 +28,7 @@ document.getElementById('uploadForm').addEventListener('submit', async (event) =
     const result = await response.json();
     console.log(result);
 
-    // Display the result in the div#result
-    document.getElementById('result').innerText = JSON.stringify(result, null, 2);
+    console.log(JSON.stringify(result, null, 2));
 
     alert('File uploaded successfully!');
   } catch (error) {
