@@ -1,41 +1,39 @@
-// upload.js
-
 document.getElementById('uploadForm').addEventListener('submit', async (event) => {
-    event.preventDefault(); // Prevent the form from submitting normally
+  event.preventDefault();
 
-    const fileInput = document.getElementById('fileInputai');
-    const file = fileInput.files[0]; // Get the selected file
+  const fileInput = document.getElementById('fileInputai');
+  const file = fileInput.files[0];
 
-    console.log("File input:", fileInput);
-    console.log("Selected file:", file);
+  if (!file) {
+    alert('Please select a file!');
+    return;
+  }
 
-    if (!file) {
-        console.error('No file selected for upload.');
-        alert('Please select a file to upload.');
-        return;
+  const formData = new FormData();
+  formData.append('file', file);
+
+  try {
+    const response = await fetch('https://api.parseur.com/parser/84913/upload', {
+      method: 'POST',
+      headers: {
+        'Authorization': 'Token e2d94dfb673fd7d30ac213cab9fc167f7d3d8557', // Replace this later with GitHub Secret
+      },
+      body: formData,
+    });
+
+    if (!response.ok) {
+      throw new Error(`Error: ${response.statusText}`);
     }
 
-    console.log('Sending file to Cloud Function...');
+    const result = await response.json();
+    console.log(result);
 
-    try {
-        const formData = new FormData();
-        formData.append('file', file);
+    // Display the result in the div#result
+    document.getElementById('result').innerText = JSON.stringify(result, null, 2);
 
-        const response = await fetch('https://us-central1-parser-bbd01.cloudfunctions.net/api/handleWebhook', {
-            method: 'POST',
-            body: formData,
-            // No need to set headers; the browser will set the appropriate 'Content-Type' for FormData
-        });
-
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-        }
-
-        const responseData = await response.json();
-        console.log('Upload successful:', responseData);
-        alert('File uploaded successfully!');
-    } catch (error) {
-        console.error('Error during file upload process:', error);
-        alert('Failed to upload document. Please try again.');
-    }
+    alert('File uploaded successfully!');
+  } catch (error) {
+    console.error('Error:', error);
+    alert('Failed to upload file.');
+  }
 });
