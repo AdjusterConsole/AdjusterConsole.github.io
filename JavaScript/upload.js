@@ -38,10 +38,7 @@ document.getElementById('uploadForm').addEventListener('submit', async (event) =
 
     // Step 3: Make the GET request to download the last document
     const documentResponse = await fetch('https://api.parseur.com/parser/84913/download/my.mailbox.json?last_document_only=true', {
-      method: 'GET',
-      headers: {
-        'Authorization': 'Token e2d94dfb673fd7d30ac213cab9fc167f7d3d8557', // Replace this later with GitHub Secret if needed
-      },
+      method: 'GET'
     });
 
     if (!documentResponse.ok) {
