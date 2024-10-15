@@ -1,0 +1,25 @@
+#parseForm {
+	display: block;
+	position: absolute;
+	top: -300px;
+	left: 450px;
+	height: 200px;
+	background: var(--fancy-background);
+	box-shadow: var(--altboxshad2);
+	transition: all .5s;
+	padding: 30px;
+	text-align: center;
+}
+
+#parseForm.show {
+	top: 35px;
+	transition: all .5s;
+}
+
+#parseForm button {
+	background: none;
+	border: 2px solid var(--my-background-color);
+	margin: 15px;
+	padding: 10px 15px;
+	box-shadow: none;
+}

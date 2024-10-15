@@ -29,6 +29,10 @@ function removeBlankLines(text) {
 	return text.replace(/^\s*$/gm, '');
 }
 
+function showDocUpload() {
+	document.getElementById('parseForm').classList.toggle('show');
+}
+
 function checkOpen() {
 	if (!document.getElementById("fileUploaderDiv").classList.contains('slideFilein')) return true;
 	const elements = [
