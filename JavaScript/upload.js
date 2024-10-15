@@ -33,16 +33,21 @@ document.getElementById('uploadForm').addEventListener('submit', async (event) =
     const documentID = uploadResult.attachments[0].DocumentID;
     console.log('DocumentID:', documentID);
 
-    // Step 2: Poll the document data for the result property
+    // Step 2: Initial 5-second delay before the first GET request
+    const initialDelay = 5000; // 5 seconds
     const maxAttempts = 5;
     const delay = 2000; // 2 seconds delay between requests
-
-    let attempt = 0;
-    let documentResult;
 
     // Function to delay execution for a given time (in ms)
     const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
+    console.log(`Waiting for ${initialDelay / 1000} seconds before making the first request...`);
+    await wait(initialDelay); // Initial 5-second delay
+
+    let attempt = 0;
+    let documentResult;
+
+    // Polling loop: Try up to maxAttempts
     while (attempt < maxAttempts) {
       attempt++;
 
@@ -54,15 +59,20 @@ document.getElementById('uploadForm').addEventListener('submit', async (event) =
         },
       });
 
-      if (!documentResponse.ok) {
-        throw new Error(`GET request failed: ${documentResponse.statusText}`);
+      // Log the entire GET response for debugging
+      const responseText = await documentResponse.text(); // Fetch response as text for logging
+      console.log(`Attempt ${attempt}: GET response:`, responseText);
+
+      // Parse the response as JSON (if the server returns JSON)
+      try {
+        documentResult = JSON.parse(responseText); // Safely parse JSON
+      } catch (err) {
+        console.error(`Error parsing response for attempt ${attempt}:`, err);
+        documentResult = null; // Set to null if parsing fails
       }
 
-      documentResult = await documentResponse.json();
-      console.log(`Attempt ${attempt}: Document result:`, JSON.stringify(documentResult, null, 2));
-
-      // Check if the result property exists
-      if (documentResult.result) {
+      // Check if the result property exists in the parsed response
+      if (documentResult && documentResult.result) {
         console.log('Result found:', JSON.stringify(documentResult.result, null, 2));
         alert('File uploaded and document processed successfully!');
         return; // Exit the loop and function since result is found
