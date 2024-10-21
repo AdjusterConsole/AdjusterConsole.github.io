@@ -22,7 +22,6 @@
     <link rel="stylesheet" href="CSS/laborRateScript.css?v=651651651682">
     <link rel="stylesheet" href="CSS/PTSpecific.css?v=651651651682">
     <link rel="stylesheet" href="CSS/Instructions.css?v=651651651682">
-	<link rel="stylesheet" href="CSS/parser.css?v=651651651682">
     <title>Adjuster Console</title>
     <link rel="manifest" href="manifest.webmanifest?v=651651651682">
 
@@ -636,8 +635,7 @@ Failure to comply with these terms may result in legal action.
             <button class="D R P" id="requests" onclick="showRequests()" oncontextmenu="customMenu(this.id, event)">Requests</button>
 
             <button class="D R P" id="prompt" onclick="copyTextFunc(this.id)" oncontextmenu="customMenu(this.id, event)">AI prompt</button>
-			<button class="D R P" id="autoCopyBtn" onclick="showDocUpload()" oncontextmenu="customMenu(this.id, event)">AI Upload</button>
-            <!--<button class="D R P" id="autoCopyBtn" onclick="autoEnable()" oncontextmenu="customMenu(this.id, event)">AutoCopy</button>-->
+            <button class="D R P" id="autoCopyBtn" onclick="autoEnable()" oncontextmenu="customMenu(this.id, event)">AutoCopy</button>
 
             <button class="D R P" id="flowchartBtn" onclick="flowchart()" oncontextmenu="customMenu(this.id, event)">Flow Chart</button>
 
@@ -674,17 +672,6 @@ Failure to comply with these terms may result in legal action.
                 <button id="T31" class="D R P" onclick="copyTextFunc(this.id)" oncontextmenu="customMenu(this.id, event)">Inspection Template</button>
             </div>
         </div>
-		
-		<!-- Document Parser -->
-		
-		<div id="parseForm" class="noShow">
-		    <h4>Upload Estimate for Processing</h4>
-			<form id="uploadForm">
-				<input type="file" id="fileInputai" accept=".pdf,.doc,.docx,.txt,.jpg,.png" required>
-				<br>
-				<button type="submit">Upload File</button>
-			</form>
-		</div>
 
         <!-- Parts Intake -->
 
@@ -1253,13 +1240,13 @@ TIME:&nbsp&nbsp</textarea>
             <div id="proceed" class="mileage noShow noDisp">
                 <p class="bodyTab">
                     Proceed with the claim as normal.<br>
-                    Do not send to Client Relations.
+                    Do not send to Review Team.
                 </p>
             </div>
             <div id="crReview" class="mileage noShow noDisp">
                 <p class="bodyTab">
-                    Task to Client Relations to review.<br>
-                    Refer to the <b>Tasking to Client Relations</b> Job Aid.<br>
+                    Task to Review Team to review.<br>
+                    Refer to the <b>Tasking to Review Team</b> Job Aid.<br>
                 </p>
             </div>
             <div id="mileageCalc" class="mileage noShow noDisp">
@@ -1267,7 +1254,7 @@ TIME:&nbsp&nbsp</textarea>
                 <p class="bodyTab">
                     Verify the breakdown mileage with the Repair Facility.<br>
                     If the Repair Facility has any records the fit the required criteria, request them.<br>
-                    If the RF doesn't have a record available to be used immediately, request verifiable records from the customer.<br>
+                    If the Repair Facility doesn't have a record available to be used immediately, request verifiable records from the customer.<br>
                     If none are available or they are uncooperative, a CARFAX report may be used.<br>
                     Records should be as close to date of sale as possible</p>
                 <ul>
@@ -1275,7 +1262,7 @@ TIME:&nbsp&nbsp</textarea>
                     <li>Must be prior to date of sale</li>
                 </ul>
                 <p class="bodyTab">
-                    Perform a mileage calculation using the AAS SOP available in the Knowledge Base.
+                    Perform a mileage calculation using the SOP available.
                 </p>
             </div>
             <div id="buttons" class="noShow">
@@ -1287,7 +1274,7 @@ TIME:&nbsp&nbsp</textarea>
         <!-- Price Guide -->
 
         <div id="PAPrice" class="tabcontent">
-            <h3 class="headerTab">Parts Pricing - PA and Sourcing</h3>
+            <h3 class="headerTab">Parts Pricing - AM and Sourcing</h3>
             <div id="authGuide1" class="authGuide noShow">
                 <p class="bodyTab"><b>Is the Repair Facility part OEM or AM?</b>
                     <input type="radio" onclick="goGuide('am',this.name)" class="authGuideradio" id="AM1" name="guide1" value="AM"><label for="AM1" class="floatRight"><b>AM</b></label><br>
@@ -1299,12 +1286,12 @@ TIME:&nbsp&nbsp</textarea>
                         <input type="radio" onclick="goGuide('oeunder',this.name)" class="authGuideradio" id="under1" name="guide2" value="under"><label for="under1" class="floatRight"><b>No</b></label>
                     </p>
                     <div id="oeunder" class="authGuide noShow noDisp">
-                        <p class="bodyTab"><b>Is the RF charging more than OEM MSRP?</b>
+                        <p class="bodyTab"><b>Is the Repair Facility charging more than OEM MSRP?</b>
                             <input type="radio" onclick="goGuide('rfovrmsrp',this.name)" class="authGuideradio" id="rfovli34" name="gui"><label for="rfovli34" class="floatRight"><b>Yes</b></label><br>
                             <input type="radio" onclick="goGuide('rfundmsrp',this.name)" class="authGuideradio" id="rfundli34" name="gui"><label for="rfundli34" class="floatRight"><b>No</b></label>
                         </p>
                         <div id="rfovrmsrp" class="authGuide noShow noDisp">
-                            <p class="bodyTab"><b>If the RF won't match, is shipping an option?</b>
+                            <p class="bodyTab"><b>If the Repair Facility won't match, is shipping an option?</b>
                                 <input type="radio" onclick="goGuide('mayship3',this.name)" class="authGuideradio" id="yyyship" name="guid234" value="yes"><label for="yship" class="floatRight"><b>Yes</b></label><br>
                                 <input type="radio" onclick="goGuide('noship3',this.name)" class="authGuideradio" id="nnnship" name="guid234" value="no"><label for="nship" class="floatRight"><b>No</b></label>
                             </p>
@@ -1314,34 +1301,25 @@ TIME:&nbsp&nbsp</textarea>
             </div>
             <div id="authGuideAM" class="authGuide noShow noDisp" style="display:none">
                 <p><b>PA Sourcing</b></p>
-                <p class="bodyTab">Enter the CH VIN into PA<br>
+                <p class="bodyTab">Enter the CH VIN into AM<br>
                     If the RF is using OEM, search using the OEM part number<br>
-                    If the RF is using AM, seach using the part name<br><br>
-                    Filter results to show only <b>BETTER</b> or above Quality Rating.<br>
-                    Sort by clicking 'price' near the top-right of the screen.<br><br>
-                    First option will be any results that have an OES or OEM tag.<br>
-                    If there are no parts with an OEM or OES tag, filter results to<br>
-                    show only <b>BEST</b> or above Quality Rating.<br><br>
-                    <b>Remember:</b><br>
-                    Sort by price again after changing any filter options.<br>
-                    We can only use pricing from parts that are in stock.<br>
-                    If RF is using OEM and there are no options searching by<br>
-                    the OEM part number, search again using part name
+                    If the RF is using AM, search using the part name<br><br>
+                    Follow the instructions listed here as a reminder of procedure
                 </p>
-                <p class="bodyTab"><b>Does PA have options?</b>
+                <p class="bodyTab"><b>Does AM have options?</b>
                     <input type="radio" onclick="goGuide('pricing',this.name)" class="authGuideradio" id="paopt1" name="guide3" value="yespa"><label for="paopt1" class="floatRight"><b>Yes</b></label><br>
                     <input type="radio" onclick="goGuide('sourcing',this.name)" class="authGuideradio" id="noopt1" name="guide3" value="nopa"><label for="noopt1" class="floatRight"><b>No</b></label>
                 </p>
             </div>
             <div id="paGuide" class="authGuide noShow noDisp">
-                <p><b>PA Pricing</b></p>
-                <p class="bodyTab"><b>Is the PA LIST price over $250.00?</b>
+                <p><b>AM Pricing</b></p>
+                <p class="bodyTab"><b>Is the AM LIST price over $250.00?</b>
                     <input type="radio" onclick="goGuide('listover',this.name)" class="authGuideradio" id="listov" name="guide4" value="over"><label for="listov" class="floatRight"><b>Yes</b></label><br>
                     <input type="radio" onclick="goGuide('listunder',this.name)" class="authGuideradio" id="listund" name="guide4" value="under"><label for="listund" class="floatRight"><b>No</b></label>
                 </p>
                 <div id="listUnder" class="noShow authGuide noDisp">
-                    <p class="bodyTab2"><b>This is your part.</b><br>- PA List is your MSRP.</p>
-                    <p class="bodyTab"><b>Is the RF charging more than PA List?</b>
+                    <p class="bodyTab2"><b>This is your part.</b><br>- AM List is your MSRP.</p>
+                    <p class="bodyTab"><b>Is the RF charging more than AM List?</b>
                         <input type="radio" onclick="goGuide('rfovrlist',this.name)" class="authGuideradio" id="rfovli" name="guide5" value="over"><label for="rfovli" class="floatRight"><b>Yes</b></label><br>
                         <input type="radio" onclick="goGuide('rfundlist',this.name)" class="authGuideradio" id="rfundli" name="guide5" value="under"><label for="rfundli" class="floatRight"><b>No</b></label>
                     </p>
@@ -1353,13 +1331,13 @@ TIME:&nbsp&nbsp</textarea>
                     </div>
                 </div>
                 <div id="listOver" class="noShow authGuide noDisp">
-                    <p class="bodyTab"><b>Is PA cost over $250.00?</b><br>Either way, note the MCE PA part.
+                    <p class="bodyTab"><b>Is AM cost over $250.00?</b><br>Either way, note the MCE AM part.
                         <input type="radio" onclick="goGuide('sourcing',this.name)" class="authGuideradio" id="costo" name="guide7" value="over"><label for="costovr" class="floatRight"><b>Yes</b></label><br>
                         <input type="radio" onclick="goGuide('costund',this.name)" class="authGuideradio" id="costu" name="guide7" value="under"><label for="costund" class="floatRight"><b>No</b></label>
                     </p>
                     <div id="costund" class="noShow authGuide noDisp">
-                        <p class="bodyTab2"><b>This is your part.</b><br>- PA List is your MSRP.<br>- PA Cost is MCE.</p>
-                        <p class="bodyTab"><b>Is RF charging more than PA Cost</b>
+                        <p class="bodyTab2"><b>This is your part.</b><br>- AM List is your MSRP.<br>- AM Cost is MCE.</p>
+                        <p class="bodyTab"><b>Is RF charging more than AM Cost</b>
                             <input type="radio" onclick="goGuide('rfovrcost',this.name)" class="authGuideradio" id="rfovco" name="guide8" value="over"><label for="rfovco" class="floatRight"><b>Yes</b></label><br>
                             <input type="radio" onclick="goGuide('rfundcost',this.name)" class="authGuideradio" id="rfundco" name="guide8" value="under"><label for="rfundco" class="floatRight"><b>No</b></label>
                         </p>
@@ -1375,18 +1353,10 @@ TIME:&nbsp&nbsp</textarea>
             <div id="IHSourcing" class="noShow authGuide noDisp">
                 <p><b>In House Sourcing</b></p>
                 <p class="bodyTab">
-                    First, key in the MCE part from PA and source using the 'Parts Authority' button in CMS.<br><br>
-                    <b>AM</b> - Obtain the OEM part number from ProDemand, PA, or Forte.<br>
-                    Key in another instance of the part using the OEM PN as the RF part number.<br>
-                    <b>OEM and AM</b> - Go to the estimate page and select the part.<br>
-                    Click the 'Source Parts' button<br><br>
-                    On the Estimate Adjudication page, click the down arrow next to the sourced part.<br>
-                    Select 'Choose Source'.<br>
-                    On the right side, the column listed under 'Total' will show the total cost of each source.<br><br>
-                    MCE is the best pricing available from all vendors.<br>
-                    If MCE is over $1000.00, allow 2 hours for sourcing to complete.<br>
-                    If there are no PA options and nothing returns from in house, auth MSRP.<br><br>
-                    Before shippping or calling the CH for OOPC, always give the RF a chance to match
+                    There is a specific set of instructions to follow.<br>
+					Those instructions are listed right here.<br>
+					If you follow the instructions in this section,<br>
+					you will consistantly make the correct decision.
                 </p>
             </div>
             <button id="resetPA" class="wefwefwef" onclick="resetGuide()">Reset</button>
@@ -1603,8 +1573,8 @@ TIME:&nbsp&nbsp</textarea>
         <!-- Parts Res -->
 
         <div id="partsRes" class="tabcontent noteBins arise">
-            <h3 class="headerTab margBot">Parts Resolution</h3><br>
-            <p class="center marginTop"><b>What Qualifies as a Parts Resolution?</b></p>
+            <h3 class="headerTab margBot">Parts Return</h3><br>
+            <p class="center marginTop"><b>What Qualifies as a Parts Return?</b></p>
             <ul>
                 <li>The wrong part was ordered or delivered.</li>
                 <li>The part was delivered broken/inoperable</li>
@@ -1612,20 +1582,17 @@ TIME:&nbsp&nbsp</textarea>
                 <li>The part has failed after 30 days but within warranty period<br>(typically within 12 months/12,000 miles of repair)</li>
                 <li>The part was not installed and is no longer required</li>
             </ul><br><br>
-            <p class="center marginTop"><b>How is a Parts Resolution Done?</b></p>
+            <p class="center marginTop"><b>How is a Parts Return Done?</b></p>
             <ul>
                 <li>Note the RF contact name, mileage, labor rate, and labor time for the part.</li>
-                <li>Select the 'Parts' tab in CMS and click 'Parts Ordered'.</li>
-                <li>Click the checkbox next to the part. Select 'Parts Resolution'.</li>
-                <li>Select the repair facility and click 'Next'.</li>
+                <li>Select the 'Parts' tab and click 'Part Ordered'.</li>
+                <li>Click the checkbox next to the part. Select 'Parts Return'.</li>
+                <li>Select the repair facility.</li>
                 <li>Select the repair facility contact.</li>
-                <li>Enter the mileage, labor rate and hours, if the part was installed, and the case reason.</li>
-                <li>Select that you have notified the RF about contact time.</li>
+                <li>Enter the mileage, labor rate and hours.</li>
+                <li>Select that you have notified the customer</li>
                 <li>Enter a detailed description of why the part was wrong or how it failed.</li>
-                <li>Be as specific as possible, especially for incorrect parts.</li>
-                <li>Click 'Next' then 'Finish'</li>
-                <li>Upload anything the RF sent in to documents.</li>
-                <li>Notate the claim</li>
+                <li>Click 'Finish'</li>
             </ul>
         </div>
 
@@ -1644,7 +1611,7 @@ TIME:&nbsp&nbsp</textarea>
                 <li>Repair Facility Contact Name</li>
                 <li>Failed Component(s)</li>
             </ul>
-            <p class="bodyTab">E-mail this information to Jude.Deangelis@americanautoshield.com<br>
+            <p class="bodyTab">E-mail this information to John.Doe@yourOrganization.com<br>
                 Advise the Repair Facility that the team that handles Tesla claims will reach out with-in 24 hours.
             </p>
         </div>
@@ -1671,9 +1638,9 @@ TIME:&nbsp&nbsp</textarea>
         <!-- 2790 Xfer -->
 
         <div id="xfer2790" class="tabcontent noteBins arise">
-            <h3 class="headerTab">2790</h3>
+            <h3 class="headerTab">2024</h3>
             <p><b>Don't let the big red banner scare you off.</b></p>
-            <p class="bodyTab">A transfer to 2790 is only required in order to start a new claim.<br>
+            <p class="bodyTab">A transfer to 2024 is only required in order to start a new claim.<br>
                 If they already have a claim, read the notes.
             </p>
             <p class="bodyTab">The notes will indicate if any adjuster can continue the claim or if<br>
@@ -1711,14 +1678,14 @@ TIME:&nbsp&nbsp</textarea>
         <!-- MBI Claims -->
 
         <div id="MBIClaims" class="tabcontent noteBins arise">
-            <h3 class="headerTab">MBI Claims</h3>
+            <h3 class="headerTab">Claims</h3>
             <p><b>Important</b></p>
             <p>
                 Do <b>NOT</b> request any disassembly or teardown unless notated to do so in the claim.<br>
                 Do <b>NOT</b> disclose any information about coverage.
             </p>
             <p class="bodyTab">
-                If a Repair Facility calls in and the contract is an MBI variant,<br>
+                If a Repair Facility calls in and the contract is an GL6 variant,<br>
                 do not disclose any information about coverage whatsoever.<br>
                 Do not bother pulling the contract to check or verify.
             </p>
@@ -1728,8 +1695,8 @@ TIME:&nbsp&nbsp</textarea>
                 on all items regardless of coverage.
             </p>
             <p class="bodyTab">
-                Once all items are keyed in and verified, click the Assign to MBI<br>
-                button in the actions tab of CMS. Once it has reassigned to an MBI<br>
+                Once all items are keyed in and verified, click the Assign to GL6<br>
+                button in your system. Once it has reassigned to an GL6<br>
                 adjuster, task that adjuster. Tell the Repair Facility that the claim is under<br>
                 review and that an adjuster will reach out to them within 24 hours.
             </p>
@@ -2346,9 +2313,9 @@ TIME:&nbsp&nbsp</textarea>
         <b>Instructions:</b><br>
         <ul>
             <li>Enter the Repair Facility response into RF Posted Labor Rate.</li>
-            <li>*Optional: Enter the labor rate that is currently in CMS.*</li>
+            <li>*Optional: Enter the labor rate that is currently in system.*</li>
             <li>Select the options for Radius, Facility Type, and Number of Facilities that you used for searching SWIS.</li>
-            <li>Enter the Average Labor Rate SWIS output.</li>
+            <li>Enter the Average Labor Rate output.</li>
             <li>Click 'My Response'.</li>
             <li>It will show a dialog box containing the appropriate response or question.</li>
             <li>Use the 'Yes' and 'No' buttons to input their response back.</li>
@@ -2861,8 +2828,6 @@ TIME:&nbsp&nbsp</textarea>
     <script src="JavaScript/trackerScript.js?v=651651651682"></script>
     <script src="JavaScript/powertrain.js?v=651651651682"></script>
     <script src="JavaScript/NewButton.js?v=651651651682"></script>
-	<script src="JavaScript/upload.js?v=651651651682"></script>
-	
 </body>
 
 </html>

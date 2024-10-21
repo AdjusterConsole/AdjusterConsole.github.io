@@ -60,7 +60,7 @@ Failure to comply with these terms may result in legal action.
 }
 
 .ls_main {
-	height: 85%;
+	height: 90%;
 	width: 85%;
 	display: flex;
 	flex-direction: column;
@@ -173,7 +173,7 @@ div.labor_div_button_holder {
 	flex-direction: row;
 	justify-content: space-around;
 	position: absolute;
-	bottom: 60px;
+	bottom: 40px;
 	width: 100%;
 }
 
@@ -182,7 +182,6 @@ div.labor_div_button_holder {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	border: 2px solid var(--my-accent-color);
 	height: 33%;
 	width: 100%;
 	padding: 10px 0px 0px 0px;
