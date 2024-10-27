@@ -128,45 +128,47 @@ function deleteCustom() {
 }
 
 function editDisplay() {
-	var lastID = localStorage.getItem("lastCalled");
-	var selectedButton = document.getElementById(lastID);
-	if (!selectedButton.classList.contains('D')) {
-		alert("That function is not available on this button");
-		localStorage.setItem("lastCalled", "noError");
-		return;
-	}
-	localStorage.setItem("verifyCalled", lastID);
-	
+  var lastID = localStorage.getItem("lastCalled");
+  var selectedButton = document.getElementById(lastID);
+  if (!selectedButton.classList.contains('D')) {
+    alert("That function is not available on this button");
+    localStorage.setItem("lastCalled", "noError");
+    return;
+  }
+  localStorage.setItem("verifyCalled", lastID);
+  var disEdit = document.getElementById("disEdit");
+  disEdit.style.display = "inline-block";
+  var mimic = document.getElementById("mimic");
+  var styleGive = window.getComputedStyle(selectedButton);
 
+  mimic.style.lineHeight = styleGive.lineHeight;
 
-	mimic.style.lineHeight = styleGive.lineHeight;
+  var currentDisplay = localStorage.getItem(lastID + "Display");
+  if (currentDisplay == null) {
+    mimic.innerHTML = document.getElementById(lastID).innerHTML;
+  } else {
+    mimic.innerHTML = currentDisplay;
+  }
+  var fontSize = styleGive.fontSize;
+  document.getElementById("fontSizer").innerText = "Font Size: " + fontSize;
+  selectedButton.style.fontSize = fontSize;
+  mimic.style.fontSize = styleGive.fontSize;
+  mimic.style.width = styleGive.width;
+  mimic.style.height = styleGive.height;
+  mimic.style.textShadow = styleGive.textShadow;
+  mimic.style.boxShadow = styleGive.boxShadow;
+  mimic.style.color = styleGive.color;
+  mimic.style.padding = styleGive.padding;
+  mimic.style.borderRadius = styleGive.borderRadius;
+  mimic.style.border = styleGive.border;
+  mimic.style.margin = styleGive.margin;
+  mimic.style.background = styleGive.background;
+  divWidth = disEdit.offsetWidth;
+  disWidth = parseInt(divWidth);
+  cisWidth = parseInt(styleGive.width);
+  mimic.style.left = (((disWidth - cisWidth) / 2) - 20) + "px";
 
-	var currentDisplay = localStorage.getItem(lastID + "Display");
-	if (currentDisplay == null) {
-		mimic.innerHTML = document.getElementById(lastID).innerHTML;
-	} else {
-		mimic.innerHTML = currentDisplay;
-	}
-	var fontSize = styleGive.fontSize;
-	document.getElementById("fontSizer").innerText = "Font Size: " + fontSize;
-	selectedButton.style.fontSize = fontSize;
-	mimic.style.fontSize = styleGive.fontSize;
-	mimic.style.width = styleGive.width;
-	mimic.style.height = styleGive.height;
-	mimic.style.textShadow = styleGive.textShadow;
-	mimic.style.boxShadow = styleGive.boxShadow;
-	mimic.style.color = styleGive.color;
-	mimic.style.padding = styleGive.padding;
-	mimic.style.borderRadius = styleGive.borderRadius;
-	mimic.style.border = styleGive.border;
-	mimic.style.margin = styleGive.margin;
-	mimic.style.background = styleGive.background;
-	divWidth = disEdit.offsetWidth;
-	disWidth = parseInt(divWidth);
-	cisWidth = parseInt(styleGive.width);
-	mimic.style.left = (((disWidth - cisWidth) / 2) - 20) + "px";
-
-	localStorage.setItem(lastID + "color", styleGive.color);
+  localStorage.setItem(lastID + "color", styleGive.color);
 }
 
 function submitDisp(x) {
