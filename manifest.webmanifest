@@ -4,7 +4,7 @@
 	"icons": [{
 			"purpose": "any",
 			"sizes": "96x96 128x128 256x256 512x512",
-			"src": "https://adjusterconsole1.github.io/Images/Other/acLogo.svg",
+			"src": "https://adjusterconsole.github.io/Images/Other/acLogo.svg",
 			"type": "image/png"
 		}
 	],
@@ -14,6 +14,6 @@
 	"lang": "en-US",
 	"name": "AdjusterConsole",
 	"short_name": "AC",
-	"start_url": "adjusterconsole1.github.io",
+	"start_url": "/",
 	"description": "Move Forward"
 }
